@@ -32,6 +32,13 @@ CBOE_BASE = "https://cdn.cboe.com/api/global/us_indices/daily_prices/{sym}_Histo
 # are therefore a cross-index PROXY for NDX surface slope; the horizon-matched
 # NDX equivalent needs paid options data (ThetaData / ORATS / CBOE DataShop).
 SHORT_DATED = ("VIX9D", "VIX1D", "VIX")
+SIGNAL_ASSETS = {
+    "hyg": "HYG",  # high-yield credit
+    "tlt": "TLT",  # long-duration Treasuries
+    "gld": "GLD",  # gold
+    "uso": "USO",  # crude oil
+    "uup": "UUP",  # broad US dollar
+}
 POLYGON_AGGS = "https://api.polygon.io/v2/aggs/ticker/{t}/range/{m}/minute/{s}/{e}"
 FMP_EARNINGS = "https://financialmodelingprep.com/api/v3/historical/earning_calendar/{t}"
 
@@ -48,6 +55,37 @@ def fetch_daily_ohlc(cfg: dict) -> pd.DataFrame:
     out = cfg["paths"]["raw"] / "daily_ohlc.parquet"
     df.to_parquet(out)
     print(f"wrote {out} ({len(df)} rows, {df.index.min().date()} .. {df.index.max().date()})")
+    return df
+
+
+def fetch_signal_inputs(cfg: dict) -> pd.DataFrame:
+    """Fetch the five fixed cross-asset ETF closes for signal_study.yaml.
+
+    ETFs are used instead of back-adjusted continuous futures so today's stored
+    history is not rewritten by a future roll. All trade to the 16:00 ET equity
+    close used as the study's decision time. Missing dates remain missing.
+    """
+    import yfinance as yf
+
+    prices = {}
+    for name, ticker in SIGNAL_ASSETS.items():
+        h = yf.Ticker(ticker).history(start="2001-01-01", auto_adjust=False)
+        if h is None or h.empty:
+            raise RuntimeError(f"{ticker}: no history returned")
+        col = "Adj Close" if "Adj Close" in h.columns else "Close"
+        s = h[col].astype(float)
+        s.index = pd.to_datetime(s.index).tz_localize(None).normalize()
+        prices[name] = s[~s.index.duplicated(keep="last")].sort_index()
+        time.sleep(0.2)
+    df = pd.DataFrame(prices).sort_index()
+    if list(df.columns) != list(SIGNAL_ASSETS):
+        raise RuntimeError("cross-asset input does not match frozen asset order")
+    df.index.name = "date"
+    out = cfg["paths"]["raw"] / "cross_asset_daily.parquet"
+    df.to_parquet(out)
+    print(f"wrote {out} ({len(df)} rows, {df.index.min().date()} .. "
+          f"{df.index.max().date()})")
+    fetch_short_dated_iv(cfg)
     return df
 
 
@@ -518,6 +556,8 @@ if __name__ == "__main__":
     elif cmd == "pit-weights":
         w = load_index_weights(cfg)
         build_pit_weights(cfg, list(w), w)
+    elif cmd == "signal-inputs":
+        fetch_signal_inputs(cfg)
     elif cmd == "merge-earnings":
         merge_earnings(cfg)
     elif cmd == "earnings-fmp":
