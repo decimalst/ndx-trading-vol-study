@@ -22,8 +22,18 @@ from . import config, metrics, models
 
 PROTOCOL_PATH = config.ROOT / "signal_study.yaml"
 BASELINE = "safe_har_iv_lev"
-SIGNAL_COLUMNS = ("iv_term_slope", "xasset_stress")
+SIGNAL_COLUMNS = ("iv_term_slope", "xasset_stress", "qqq_market_stress")
 DEFAULT_ASSETS = ("hyg", "tlt", "gld", "uso", "uup")
+CANDIDATE_SIGNALS = {
+    BASELINE: (),
+    "term_slope": ("iv_term_slope",),
+    "cross_asset": ("xasset_stress",),
+    "market_state": ("qqq_market_stress",),
+    "term_cross": ("iv_term_slope", "xasset_stress"),
+    "term_market": ("iv_term_slope", "qqq_market_stress"),
+    "cross_market": ("xasset_stress", "qqq_market_stress"),
+    "full": ("iv_term_slope", "xasset_stress", "qqq_market_stress"),
+}
 
 
 def load_protocol(path: str | pathlib.Path | None = None) -> dict:
@@ -52,7 +62,7 @@ def validate_protocol(protocol: dict, main_cfg: dict) -> None:
     candidates = list(protocol["models"]["candidates"])
     if protocol["models"]["baseline"] != BASELINE:
         raise ValueError(f"baseline must remain {BASELINE}")
-    if candidates != ["term_slope", "cross_asset", "combined"]:
+    if candidates != list(CANDIDATE_SIGNALS)[1:]:
         raise ValueError("candidate set or order changed from the frozen protocol")
 
 
@@ -128,12 +138,42 @@ def build_signal_features(trading_index: pd.DatetimeIndex,
     cboe_delay = int(protocol["information_set"]["cboe_daily_close_delay_sessions"])
     out["iv_term_slope"] = align_daily_observations(slope, idx, cboe_delay)
     out.index.name = "date"
-    return out.loc[:, SIGNAL_COLUMNS]
+    return out.loc[:, SIGNAL_COLUMNS[:2]]
+
+
+def build_market_state(master: pd.DataFrame, daily_ohlc: pd.DataFrame,
+                       protocol: dict) -> pd.Series:
+    """QQQ-native stress from positive volume and overnight-share surprises.
+
+    Both observations are known by the 16:00 origin. Their rolling mean and
+    scale end at t-1, making the current surprises point-in-time safe.
+    """
+    idx = pd.DatetimeIndex(master.index)
+    daily = daily_ohlc.copy()
+    daily.index = pd.to_datetime(daily.index).tz_localize(None).normalize()
+    daily.columns = [str(c).lower() for c in daily.columns]
+    if "volume" not in daily:
+        raise ValueError("daily OHLC input requires volume")
+    volume = np.log(daily["volume"].where(daily["volume"] > 0)).reindex(idx)
+    share = (master["var_overnight"] / master["rv_total"].replace(0.0, np.nan)) \
+        .clip(lower=0.0, upper=1.0).reindex(idx)
+    window = int(protocol["market_state"]["scale_window"])
+    min_obs = int(protocol["market_state"]["min_scale_observations"])
+
+    def _safe_z(s: pd.Series) -> pd.Series:
+        mu = s.rolling(window, min_periods=min_obs).mean().shift(1)
+        sd = s.rolling(window, min_periods=min_obs).std(ddof=1).shift(1)
+        return (s - mu) / sd.replace(0.0, np.nan)
+
+    z_volume = _safe_z(volume).clip(lower=0.0)
+    z_overnight = _safe_z(share).clip(lower=0.0)
+    stress = np.sqrt((z_volume.pow(2) + z_overnight.pow(2)) / 2.0)
+    stress.name = "qqq_market_stress"
+    return stress
 
 
 def _design(master: pd.DataFrame, signals: pd.DataFrame, candidate: str) -> pd.DataFrame:
-    allowed = {BASELINE, "term_slope", "cross_asset", "combined"}
-    if candidate not in allowed:
+    if candidate not in CANDIDATE_SIGNALS:
         raise ValueError(f"unknown candidate: {candidate}")
     d = pd.DataFrame(index=master.index)
     d["const"] = 1.0
@@ -149,10 +189,8 @@ def _design(master: pd.DataFrame, signals: pd.DataFrame, candidate: str) -> pd.D
     # Cboe daily index values can contain 16:00-16:15 information. The complete
     # one-session delay makes the feature safe for a 16:00 QQQ forecast origin.
     d["liv_safe"] = np.log(master["vxn"].where(master["vxn"] > 0)).shift(1)
-    if candidate in ("term_slope", "combined"):
-        d["iv_term_slope"] = signals["iv_term_slope"].reindex(d.index)
-    if candidate in ("cross_asset", "combined"):
-        d["xasset_stress"] = signals["xasset_stress"].reindex(d.index)
+    for col in CANDIDATE_SIGNALS[candidate]:
+        d[col] = signals[col].reindex(d.index)
     d["y_next"] = master["log_rv"].shift(-1)
     return d
 
@@ -286,6 +324,8 @@ def _load_inputs(main_cfg: dict, protocol: dict) -> tuple[pd.DataFrame, pd.DataF
     short_path = raw / "short_dated_iv.parquet"
     signals = build_signal_features(master.index, pd.read_parquet(cross_path),
                                     pd.read_parquet(short_path), protocol)
+    daily = pd.read_parquet(raw / "daily_ohlc.parquet")
+    signals["qqq_market_stress"] = build_market_state(master, daily, protocol)
     return master, signals
 
 
@@ -417,4 +457,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
