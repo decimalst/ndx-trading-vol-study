@@ -143,6 +143,53 @@ class WalkForwardTests(unittest.TestCase):
         )
         pd.testing.assert_frame_equal(first, second)
 
+    def test_same_date_cboe_vxn_close_cannot_change_origin_forecast(self) -> None:
+        master = _master()
+        idx = master.index
+        signals = pd.DataFrame(
+            {"iv_term_slope": np.linspace(-0.2, 0.2, len(idx)),
+             "xasset_stress": np.linspace(0.1, 0.8, len(idx))},
+            index=idx,
+        )
+        origin = idx[80]
+        first = signal_study.run_walk_forward(
+            master, signals, pd.DatetimeIndex([origin]), _main_cfg(),
+            "safe_har_iv_lev"
+        )
+        changed = master.copy()
+        changed.loc[origin, "vxn"] = 1_000_000.0
+        second = signal_study.run_walk_forward(
+            changed, signals, pd.DatetimeIndex([origin]), _main_cfg(),
+            "safe_har_iv_lev"
+        )
+        pd.testing.assert_frame_equal(first, second)
+
+
+class SelectionTests(unittest.TestCase):
+    def test_no_discovery_improvement_locks_no_winner(self) -> None:
+        idx = pd.bdate_range("2020-01-02", periods=3)
+        losses = {
+            "safe_har_iv_lev": pd.Series([0.2, 0.2, 0.2], index=idx),
+            "term_slope": pd.Series([0.3, 0.2, 0.2], index=idx),
+            "cross_asset": pd.Series([0.2, 0.2, 0.2], index=idx),
+            "combined": pd.Series([0.4, 0.1, 0.2], index=idx),
+        }
+        winner, summary = signal_study.select_discovery_winner(losses, _study_cfg())
+        self.assertIsNone(winner)
+        self.assertEqual(summary["n_common"], 3)
+
+    def test_selection_uses_one_common_origin_set(self) -> None:
+        idx = pd.bdate_range("2020-01-02", periods=4)
+        losses = {
+            "safe_har_iv_lev": pd.Series([0.5, 0.5, 0.5, 0.5], index=idx),
+            "term_slope": pd.Series([0.1, 0.1, 9.0], index=idx[:3]),
+            "cross_asset": pd.Series([0.4, 0.4, 0.4], index=idx[1:]),
+            "combined": pd.Series([0.45, 0.45, 0.45, 0.45], index=idx),
+        }
+        winner, summary = signal_study.select_discovery_winner(losses, _study_cfg())
+        self.assertEqual(summary["n_common"], 2)
+        self.assertEqual(winner, "cross_asset")
+
 
 class DiscoveryLockTests(unittest.TestCase):
     def test_protocol_change_invalidates_discovery_lock(self) -> None:
@@ -172,4 +219,3 @@ class DiscoveryLockTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
