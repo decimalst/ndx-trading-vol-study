@@ -1,0 +1,20 @@
+{
+  "checks": {
+    "cvar_not_worse": true,
+    "drawdown_not_worse": true,
+    "known_adverse_rejected": true,
+    "mean_positive": true,
+    "participation_at_least_70pct": false
+  },
+  "known_adverse_origins": [
+    "2020-02-18",
+    "2020-02-19",
+    "2020-02-21"
+  ],
+  "mechanism_pass": false,
+  "participation": 0.6328188464662875,
+  "phase_count": 21,
+  "richness_threshold": 0.3868128140717335,
+  "window_first": "2016-01-04",
+  "window_last": "2025-10-17"
+}

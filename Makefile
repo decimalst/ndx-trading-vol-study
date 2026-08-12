@@ -18,8 +18,29 @@ test-signal-safety:
 test-nport-weights:
 	$(PY) -m unittest tests.test_nport_weights
 
+test-historical-weights:
+	$(PY) -m unittest tests.test_historical_weights
+
+test-skew-carry:
+	$(PY) -m unittest tests.test_skew_carry
+
 fetch-nport-weights: test-nport-weights
 	$(PY) -m src.nport_weights fetch
+
+# Public QQQ annual reports (2004-2018) + existing N-PORT + official Nasdaq
+# membership snapshots. Both parser/timing suites must pass before networking.
+fetch-historical-weights: test-nport-weights test-historical-weights
+	$(PY) -m src.historical_weights fetch
+
+# Frozen post-hoc mechanism diagnostic; never reads the clean window.
+fetch-skew-data: test-skew-carry
+	$(PY) -m src.skew_carry fetch
+
+skew-carry: test-skew-carry
+	$(PY) -m src.skew_carry run
+
+verify-skew-carry:
+	$(PY) -m src.verify_skew_carry
 
 fetch-free:
 	$(PY) -m src.fetch free

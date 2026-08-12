@@ -1,0 +1,10 @@
+{
+  "anchor_close": 159.03,
+  "anchor_date": "2018-08-13",
+  "fetched_at_utc": "2026-08-12T06:08:02.978922+00:00",
+  "first_date": "1990-01-02",
+  "last_date": "2026-08-11",
+  "rows": 9203,
+  "sha256": "becbf3f7510de66a736495df29a84ba1911d362402f05f6c46dedd5e9b971492",
+  "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/SKEW_History.csv"
+}

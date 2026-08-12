@@ -1,0 +1,67 @@
+# Mechanism diagnostic written before SKEW was fetched or scored.
+# This is not a new holdout: February 2020 motivated the repair.
+protocol_version: 1
+status: diagnostic_only_post_hoc_mechanism_test
+decision_time: "16:00 America/New_York"
+
+window:
+  start: "2016-01-04"
+  end: "2025-10-17"
+  clean_start: "2025-11-03"
+  forbid_clean_origins: true
+
+source:
+  symbol: SKEW
+  construction: "30-day SPX option-implied statistical skewness; SPX proxy for NDX"
+  url: "https://cdn.cboe.com/api/global/us_indices/daily_prices/SKEW_History.csv"
+  close_delay_sessions: 1
+  no_forward_fill: true
+  historical_anchor:
+    date: "2018-08-13"
+    close: 159.03
+    tolerance: 0.01
+  anchor_source: >
+    Cboe's Defining the Decade article states that SKEW closed at 159.03 on
+    2018-08-13. The fetch fails closed if the downloadable history no longer
+    matches, guarding against an undocumented retrospective methodology rewrite.
+
+original_rule:
+  definition: >
+    Preserve src.carry exactly: short the 30-calendar-day variance proxy when
+    richness = log(VXN expected variance) - HAR cumulative log-variance forecast
+    exceeds the median over the registered diagnostic window.
+  threshold: diagnostic_window_median
+  inherited_limits: >
+    The original diagnostic rule estimates this median over the full window and
+    uses the same-date published VXN daily close at a 16:00 origin. Those choices
+    are preserved only to diagnose the observed rule. A future validation must
+    freeze +0.386812814 and use one-session-lagged Cboe data or timestamped
+    pre-close quotes.
+
+repair:
+  rule: >
+    Take an original-rule trade only when the most recently available SKEW
+    close is at or below its trailing 80th percentile. Because the daily Cboe
+    close is delayed one session, the value used at t is SKEW(t-1); the rolling
+    threshold at t is estimated through the prior aligned observation and thus
+    through raw SKEW(t-2).
+  trailing_sessions: 252
+  min_observations: 126
+  high_quantile: 0.80
+  missing_value_action: flat
+
+evaluation:
+  step_sessions: 21
+  all_phase_offsets: true
+  comparison: skew_repaired_vs_original_richness_rule
+  known_adverse_origins: ["2020-02-18", "2020-02-19", "2020-02-21"]
+  success_requires:
+    - "all three known adverse origins are rejected by the SKEW gate"
+    - "average 5% CVaR across 21 phases is no worse than richness-only"
+    - "average max drawdown across 21 phases is no worse than richness-only"
+    - "average repaired mean P&L remains positive"
+    - "repaired rule retains at least 70% of richness-only trades"
+  interpretation: >
+    PASS means the proposed mechanism is historically coherent, not validated.
+    The rule was proposed after observing the 2020 failure and must be frozen
+    for genuinely future data before any performance claim.

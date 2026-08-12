@@ -612,6 +612,39 @@ daily index history. It begins too late for most of discovery and contains only
 27 slow snapshots, so inserting it after seeing the signal results would be
 post-hoc contamination. It is stored for a future, separately frozen holdout.
 
+An attempted annual backfill to 2004 was later paused before completion. The
+2004 and 2005 schedules parse and reconcile under pre-written regressions, but
+the next SEC archive request repeatedly returned HTTP 403. No combined dataset
+or concentration feature was promoted; see `PAUSED_HISTORICAL_WEIGHTS.md`.
+
+## SKEW repairs the observed tail mechanism, but fails its frozen usability gate
+
+The carry rule's identified defect suggested exactly one post-hoc diagnostic:
+retain the original richness signal, but veto a trade when one-session-lagged
+Cboe SKEW is above its trailing 252-session 80th percentile. The rule and a
+70%-participation floor were frozen before SKEW was fetched or joined to P&L.
+
+Across all 21 non-overlapping phase offsets, the SKEW veto rejected the three
+known pre-COVID adverse entries and improved the average 5% CVaR from -22.71 to
+-10.90, worst trade from -49.63 to -14.32, and maximum drawdown from 55.13 to
+19.18. Mean P&L rose from +2.38 to +2.80 vol points. But it retained only 63.3%
+of richness trades versus the frozen 70% minimum, so the strict verdict is
+**FAIL**.
+
+The diagnostic still identifies something real about the failure mechanism.
+Richness selected 61.8% of high-SKEW origins versus 45.1% of lower-SKEW origins;
+36.7% of richness trades occurred in a high-SKEW regime. Lagged SKEW's
+correlation with lagged VXN was only -0.270, so the veto is not another ATM-level
+copy. The backward-looking rule calls variance rich disproportionately often
+while option wings are already expensive—the adverse-selection story is
+supported, but the simple veto is too indiscriminate under the registered
+criterion.
+
+This cannot validate a strategy: February 2020 motivated the rule, and the
+original carry frame itself used a full-window median and same-date published
+VXN daily close. Future validation must freeze the historical cutoff and use
+lagged Cboe inputs or timestamped pre-close quotes.
+
 ---
 
 # Standing summary — what is true at the end
@@ -648,8 +681,10 @@ positive in a separate holdout but did not confirm (DM p = 0.1016).
 
 **The variance risk premium is real and structurally hard to harvest.** ~3.9–4.2
 vol points, visible to anyone charting VXN minus trailing RV. Conditional
-selection does not improve on unconditional carry, and the selection rule loads
-up immediately before regime breaks.
+selection does not pass against unconditional carry. A post-hoc SKEW veto
+supports the adverse-selection mechanism and dramatically improves historical
+tail aggregates, but fails its frozen 70%-participation floor (63.3%) and is not
+out-of-sample evidence.
 
 **Four clean negatives and three self-withdrawn positives.** The version of this
 project that found significance would very likely have been wrong. What is worth

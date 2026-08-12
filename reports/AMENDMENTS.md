@@ -318,3 +318,44 @@ tests passed, then all 27 public QQQ N-PORT snapshots were downloaded (2,746
 holdings, report dates 2019-09-30 through 2026-03-31, disclosure lag 50–62
 days). They are aligned by SEC acceptance timestamp and stored for future use;
 no weight signal was scored on the spent holdout.
+
+---
+
+## 2026-08-12 (seventh) — paused annual backfill; one SKEW carry diagnostic
+
+### Historical holdings backfill paused
+
+The proposed 2004-2018 QQQ annual-report parser and Nasdaq public-membership
+XLSX parser were written behind ten pre-run contracts. Real 2004 and 2005
+fixed-width variants exposed parser gaps; each stopped the run, received a
+regression test, and then reconciled exactly to disclosed total investments.
+The subsequent SEC archive request repeatedly returned HTTP 403 despite bounded
+backoff. The user paused collection. No combined output was promoted and the
+code remains disconnected from every model. Full state and restart rules are in
+`reports/PAUSED_HISTORICAL_WEIGHTS.md`.
+
+### SKEW-conditioned carry
+
+A single post-hoc mechanism diagnostic was frozen before SKEW acquisition. It
+preserved the failed richness rule and vetoed trades when one-session-lagged
+Cboe SKEW exceeded a trailing 252-session 80th percentile estimated through the
+prior observation. No VVIX fallback or threshold search was permitted. Twelve
+pre-run tests covered the clean fence, Cboe schema and historical anchor,
+lagging, rolling-threshold timing, missing values, rule application, and phase
+sampling.
+
+The official file supplied 9,203 rows from 1990-01-02 through 2026-08-11 and
+retained Cboe's independently published 2018-08-13 close of 159.03. Source hash:
+`becbf3f7510de66a736495df29a84ba1911d362402f05f6c46dedd5e9b971492`.
+
+Strict frozen verdict: **FAIL**. The veto rejected all three known adverse
+pre-COVID entries and improved average phase mean (+2.381 to +2.800), CVaR
+(-22.711 to -10.897), worst trade (-49.629 to -14.317), and drawdown (55.127 to
+19.179), but retained only 63.3% of richness trades versus the registered 70%
+floor. An independent implementation reproduced timing, masks, 21 phase
+metrics, tail statistics, and verdict inputs.
+
+This is not a strategy backtest. It is motivated by the already-observed 2020
+failure and inherits the old carry study's full-window richness median and
+same-date VXN daily close. A future version must freeze +0.386812814 and use
+lagged Cboe data or timestamped pre-close quotes.

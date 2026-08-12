@@ -177,6 +177,25 @@ first, then writes 27 SEC filing snapshots plus a quarterly concentration
 summary. These are not exact daily Nasdaq-100 weights and are not fed into the
 completed signal holdout.
 
+An experimental 2004-2018 annual-report backfill plus official Nasdaq
+membership parser was started test-first and then paused before a complete
+dataset was produced. It remains disconnected from every model. See
+[`reports/PAUSED_HISTORICAL_WEIGHTS.md`](reports/PAUSED_HISTORICAL_WEIGHTS.md)
+for the exact passing contracts, parser repairs, SEC 403 stop, and safe restart
+conditions.
+
+The failed carry rule also has one frozen post-hoc mechanism diagnostic:
+`make skew-carry`, documented in
+[`reports/SKEW_CARRY_PROTOCOL.md`](reports/SKEW_CARRY_PROTOCOL.md). It tests a
+single lagged Cboe SKEW veto and mechanically excludes clean origins. Its strict
+verdict is FAIL because it retained 63.3% of eligible trades versus a registered
+70% floor, despite rejecting the three known pre-COVID adverse entries and
+improving the descriptive tail aggregates. This is not a validated strategy.
+
+The resulting ranked research program, verified public cross-asset/surface
+coverage, and pre-run safety gate are recorded in
+[`reports/NEXT_RESEARCH_PROGRAM.md`](reports/NEXT_RESEARCH_PROGRAM.md).
+
 ## Known limitations
 
 - GK-based RV is noisier than 5-min RV; QLIKE is chosen partly because it is
