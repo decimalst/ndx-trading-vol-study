@@ -12,6 +12,9 @@ setup: .venv/bin/python
 smoke:
 	$(PY) -m tests.test_smoke
 
+test-signal-safety:
+	$(PY) -m unittest tests.test_signal_safety
+
 fetch-free:
 	$(PY) -m src.fetch free
 
@@ -78,3 +81,14 @@ pit-weights:
 # pre-registered conditional-vs-unconditional carry study (diagnostic window only)
 carry:
 	$(PY) -m src.carry
+
+# Diagnostic-only orthogonal-signal study. Both empirical stages are gated on
+# the pre-written safety suite; confirmation also requires the discovery lock.
+fetch-signal-inputs:
+	$(PY) -m src.fetch signal-inputs
+
+signals-discover: test-signal-safety
+	$(PY) -m src.signal_study discover
+
+signals-confirm: test-signal-safety
+	$(PY) -m src.signal_study confirm

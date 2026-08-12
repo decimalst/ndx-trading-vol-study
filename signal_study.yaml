@@ -1,0 +1,79 @@
+# Diagnostic-only orthogonal-signal study.
+# Written 2026-08-12 before implementation, data fetch, or any signal result.
+# This file is separate from the frozen clean-phase config.yaml. The clean
+# window is not available to either stage of this study.
+
+protocol_version: 1
+decision_time: "16:00 America/New_York"
+target: "log_rv(t+1), scored as QLIKE on rv_total(t+1)"
+
+windows:
+  discovery_start: "2016-01-04"
+  discovery_end: "2021-12-31"
+  confirmation_start: "2022-01-03"
+  confirmation_end: "2025-10-17"
+
+information_set:
+  baseline: >
+    log-HAR-RV plus daily/weekly/monthly negative-return terms and log(VXN).
+    Cboe's published daily VXN close can include calculations through 16:15 ET,
+    after the QQQ 16:00 close that starts the next target interval, so VXN is
+    delayed by one complete trading session in this study.
+  qqq_and_cross_asset_close_delay_sessions: 0
+  cboe_daily_close_delay_sessions: 1
+  no_forward_fill: true
+
+cross_asset:
+  prices:
+    hyg: HYG       # credit
+    tlt: TLT       # duration / rates
+    gld: GLD       # gold
+    uso: USO       # crude oil
+    uup: UUP       # US dollar
+  feature: >
+    One xasset_stress value: RMS of each asset's close-to-close log-return
+    z-score. Each z-score uses a 252-session rolling mean and standard deviation
+    shifted one session, so today's return never estimates its own scale.
+  scale_window: 252
+  min_scale_observations: 126
+
+options_term:
+  feature: "log(VIX9D / VIX), delayed one complete trading session"
+  note: >
+    This is an SPX proxy because Cboe publishes no free VXN9D or VXN1D history.
+    VIX1D is excluded because its history begins in 2022 and would consume the
+    confirmation period without a discovery sample.
+
+models:
+  baseline: safe_har_iv_lev
+  candidates:
+    - term_slope
+    - cross_asset
+    - combined
+
+selection:
+  loss: qlike
+  rule: >
+    On the discovery window, compare every candidate with the baseline on the
+    common set of origins. Lock the candidate with the lowest mean QLIKE only
+    if it strictly improves on baseline; otherwise lock no winner and do not
+    spend the confirmation window.
+  tie_break_order: [term_slope, cross_asset, combined]
+
+confirmation:
+  one_locked_test_only: true
+  alpha: 0.05
+  success_requires:
+    - "lower mean QLIKE than baseline"
+    - "two-sided Diebold-Mariano p < 0.05"
+    - "paired per-origin win rate > 0.50"
+    - "interval independence p > 0.05"
+  report_regardless_of_outcome: true
+
+fences:
+  clean_start: "2025-11-03"
+  forbid_clean_origins: true
+  forbid_clean_scoring: true
+  outputs_dir: "data/signal_study"
+  reports_dir: "reports/signal_study"
+
