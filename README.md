@@ -1,9 +1,95 @@
-# NDX Realized-Variance Forecasting Experiment
+# NDX volatility forecasting: what the market already knows
 
-Tests whether Chronos-2 (zero-shot, arXiv 2510.15821), fed known-future calendar
-covariates, forecasts Nasdaq-100 realized variance better than classical
-baselines — and whether any of it adds information beyond what the options
-market already prices. Research code; nothing here is trading or financial advice.
+This repository documents a leakage-controlled research project on Nasdaq-100
+realized volatility. I started with a straightforward question: can a modern
+time-series model, plus calendar and market data known at the forecast origin,
+predict QQQ/NDX variance better than classical models—and, more importantly,
+better than the options market already does through VXN?
+
+The short answer is: **volatility is forecastable, but the forecastable part is
+largely already priced.** A compact HAR model using VXN is difficult to beat.
+Across roughly ten designs spanning QQQ/NDX and SPX—with underlying-price,
+option-implied, and cross-sectional/holdings evidence—additional signals were
+usually redundant, non-stationary, contaminated by how they were discovered,
+or too weak to survive a frozen holdout. These designs are not statistically
+independent, so their count is not a meta-test; their breadth is the important
+result.
+
+This is research code and a record of negative as well as positive evidence. It
+is not a trading recommendation or financial advice.
+
+## What I did
+
+I built a point-in-time forecasting harness with explicit leakage fences,
+rolling or expanding fits, proper loss functions, event slices, interval tests,
+and independent recomputation of the most important verdicts. Before empirical
+runs, tests froze source identity, publication lags, target completion, model
+comparisons, and holdout boundaries.
+
+The project then moved through several questions:
+
+1. Compare persistence, EWMA, HAR, Chronos-2, and TiRex-2 on QQQ realized
+   variance.
+2. Add VXN so every model competes against the information already embedded in
+   30-day implied volatility.
+3. Test FOMC, CPI, payroll, earnings, leverage, cross-asset, liquidity-adjacent,
+   overnight, and term-structure features without using future information.
+4. Examine volatility carry and whether lagged SKEW repairs its adverse
+   selection.
+5. Change the target to SPX jump variation and change the model frame to a
+   two-state QQQ transition model.
+6. Repair the HMM comparison with prior-only Platt calibration and ask the fair
+   incremental question: does calibrated state probability add to a supervised
+   model trained on the same rows?
+7. Reconstruct point-in-time QQQ holdings from SEC N-PORT and specify a properly
+   matched future SPX correlation-premium study.
+
+## Results in plain English
+
+| Question | What happened | Interpretation | Details |
+|---|---|---|---|
+| Can foundation models beat a simple volatility model? | No. Chronos-2 and TiRex-2 did not beat HAR-IV, the HAR model that also sees VXN. | Model complexity did not add information beyond a small linear model plus the option-implied level. | [Clean results](reports/results_clean.md), [full findings](reports/FINDINGS.md) |
+| Do macro calendars and earnings improve the forecast? | Not reliably. The well-powered earnings comparison was flat, and the concentration defence pointed the wrong way. | Widely known scheduled information appears priced or too small at this horizon. | [Diagnostic results](reports/results_diagnostic.md), [holdings audit](reports/qqq_nport_audit.md) |
+| Does short-end term slope help? | It improved QLIKE by 5.3%/7.0% in 2022-2023 but only 0.2%/0.9% in 2024-2025. | The interesting hypothesis is regime-conditional: slope may matter when the front end is dislocated. That yearly pattern is now inspected, so it is prospective-only. | [Independent signal verification](reports/signal_study/verification.md) |
+| Does SKEW repair short-vol carry? | Historically it raised mean P&L and improved CVaR, worst loss, and drawdown while keeping 63.3% of entries. | The registered participation gate failed, but the decisive problem is contamination: February 2020 motivated the rule and remains in the sample. | [SKEW diagnostic](reports/skew_carry_diagnostic.md), [protocol](reports/SKEW_CARRY_PROTOCOL.md) |
+| Does the SPX jump target reveal a surface signal? | No under the registered comparison. Lagged SKEW worsened the five-minute Oxford-Man RV/BPV proxy model. | This was not based on the local hourly bars, but it still lacks realized quarticity for a formal BNS jump test. | [Target findings](reports/TARGET_REGIME_FINDINGS.md), [jump report](reports/jump_target.md) |
+| Does a two-state HMM predict transitions? | Calibration helped substantially; adding the calibrated state to the supervised benchmark slightly worsened both Brier and log loss. | The HMM summarizes and ranks the current state, but supplied no detectable incremental transition information beyond RV history. | [Repair result](reports/regime_repair.md), [repair protocol](reports/REGIME_REPAIR_PROTOCOL.md) |
+| Can COR1M be compared with QQQ realized correlation? | No—the universes do not match. | The clean study moves to SPX, where COR1M, DSPX, and VIXEQ match by construction. It awaits exact historical top-50 weights and returns. | [SPX data contract](reports/SPX_DISPERSION_DATA_CONTRACT.md) |
+
+The most defensible overall conclusion is not that variance is unpredictable.
+It is that **historical data describes the current volatility regime much
+better than it anticipates the transition into the next one, while options
+already price most of the forecastable conditional mean.** That shifts the
+economic question from “can I forecast this better?” toward “is there a risk
+premium I am willing and able to bear?” The latter is a portfolio decision, not
+something a lower forecasting loss establishes on its own.
+
+## Where to start
+
+- [Standing findings](reports/FINDINGS.md) — the current conclusions and the
+  evidence hierarchy.
+- [Clean-window results](reports/results_clean.md) — the original QQQ forecast
+  comparison.
+- [Orthogonal-signal verification](reports/signal_study/verification.md) — the
+  sealed term-slope holdout and year-by-year stability.
+- [Target and regime findings](reports/TARGET_REGIME_FINDINGS.md) — SPX jumps,
+  QQQ latent states, and the calibrated incremental repair.
+- [Research amendments](reports/AMENDMENTS.md) — what changed after results were
+  observed and why none of those changes silently rewrote a baseline.
+- [Next research program](reports/NEXT_RESEARCH_PROGRAM.md) — prospective-only
+  hypotheses and data worth purchasing.
+- [Paused historical-weight work](reports/PAUSED_HISTORICAL_WEIGHTS.md) — exact
+  state of the incomplete public-data reconstruction and safe restart rules.
+
+## How to read the verdicts
+
+`FAIL` means a registered criterion was not met; it does not always mean the
+mechanism was useless. The term-slope series was non-stationary, the SKEW veto
+was contaminated despite improving every risk outcome, and the original HMM
+comparison was calibration-confounded. Those qualifications are recorded, but
+the frozen verdicts are never rewritten after seeing results. Likewise, a
+descriptive improvement is not called a tradable strategy without a genuinely
+unseen transition and an implementable portfolio/risk test.
 
 ## Pre-registered hypotheses
 
