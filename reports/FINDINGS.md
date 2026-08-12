@@ -884,3 +884,60 @@ two-state filter nor a rich continuous foundation representation contributes
 transition information beyond direct RV features. What remains binding is the
 information set and the definition of the economic risk, not another model
 class.
+
+## Post-program free-source diagnostics (2026-08-12)
+
+This extension is deliberately outside the evidence hierarchy of the sealed NDX
+clean window. Its protocols were frozen before their respective source
+transforms and scores, but the assets, targets, and historical windows had
+already been inspected elsewhere. Results are therefore **post-program
+diagnostics**, not new clean confirmations.
+
+**Weekly CFTC positioning does not clear the incremental gate.** One
+conservatively delayed Nasdaq TFF release was mapped to each eligible calm QQQ
+origin. Across 591 origins, the RV-history benchmark scored 0.8308 AUC and
+3.482x top-decile lift. Adding leveraged-money net/open-interest share scored
+0.8304 AUC and 3.681x lift. The lift gain is real in the saved ranking, but the
+registered rule required both metrics to improve, so the verdict is **FAIL**.
+An independent implementation passed 15 checks and reproduced all rows,
+labels, structural-break sensitivities, and metrics.
+
+**The free NQ minute file produced no predictive verdict.** The frozen pipeline
+retained 678 quality-eligible RTH sessions, but only 63 eligible training rows
+were available for the 2024 fold and 135 for 2025, below the pre-specified 180
+in both cases. The independently verified status is
+`VERIFIED_NO_EVALUABLE_FOLDS`, with zero forecast origins. This is a data-
+adequacy result—not evidence for or against the BNS jump/shape features—and the
+undocumented continuous-contract stitch remains a second binding limitation.
+
+**Free option-surface mirrors did not improve mean QLIKE.** The private Kaggle
+diagnostic delayed each close snapshot one full exchange session and compared
+ATM-only HAR information with fixed skew, term-slope, and gamma-weighted-volume
+features. On the governing SPY late-confirmation split, AUC moved 0.8298 to
+0.8349, but mean QLIKE worsened 1.5359 to 1.5492 and top-decile lift fell 3.787x
+to 3.683x; the block interval spans zero, so the verdict is `INCONCLUSIVE`.
+QQQ and AAPL likewise improved AUC while worsening mean QLIKE. Those two are
+mechanism diagnostics only, and gamma-weighted volume is not dealer GEX because
+the files contain no open interest. A second implementation passed 20 checks
+over 3,850 forecasts and verified timing and source hashes.
+
+**The frozen HF option-flow feature is not measurable on the advertised
+archive.** All 22 pinned shards through 2025-10 matched their immutable hashes
+and yielded 406 QQQ and 439 SPY activity days. But the registered
+`near_expiry_volume_share_7d` component is exactly zero on every day for both
+symbols, so its strictly-prior scale is zero and the fixed four-component
+composite is undefined. The protocol was not rewritten to drop or reweight the
+component; zero forecasts were scored. The independently reconstructed status
+is `INSUFFICIENT_DATA`, not a model null.
+
+The acquisition result matters independently of those scores. Official CFTC
+and Cboe files are distinguished from uploader mirrors; all ambiguous
+exchange-derived archives remain raw-local/quarantined; uploader license labels
+are not treated as proof of upstream redistribution rights. The auxiliary audit
+validated a 26,874-row, one-session-lag local Cboe close panel, quarantined the
+HF SPX mirror because 5,075 rows have zero opens, and verified the Zenodo TSLA
+file's pinned MD5/schema and 4,584,740 data rows. The last source really does
+contain bid/offer and open interest, contrary to the original listing, but its
+upstream provenance is undocumented, so it remains private-research-only and
+supports no new prediction claim. The complete state and source-by-source
+caveats are in [`FREE_DATA_SOURCES.md`](FREE_DATA_SOURCES.md).

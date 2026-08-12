@@ -512,3 +512,52 @@ is also a trapezoidal approximation over quantiles 0.1-0.9, not full-tail CRPS.
 The report and protocol now say both explicitly. No forecasts, corruption
 paths, or bootstrap draws changed, and the verifier recomputes curves,
 intervals, hashes, and the rendered report.
+
+---
+
+## 2026-08-12 (eleventh) — wider free-source acquisition and diagnostics
+
+This is another isolated post-program extension. It does not modify
+`config.yaml`, reopen the sealed NDX clean window, or revise any prior verdict.
+`free_data_sources.yaml` first froze source identities, revisions, storage
+budgets, raw-local policies, availability rules, and provenance classifications.
+Raw third-party archives are Git-ignored. Ambiguous exchange-derived mirrors
+remain private-research-only even when their uploader labels say CC0, MIT, or CC
+BY.
+
+Three empirical protocols were frozen before their own transforms and scores:
+
+- `free_signal_study.yaml` specified one conservatively delayed CFTC release per
+  QQQ origin, known publication-backlog exclusions, annual forward fits, and a
+  two-metric AUC/lift gate.
+- `nq_intraday_study.yaml` specified strict ET localization, the RTH window,
+  completeness and stitch guards, five-minute RV/BPV/tripower/BNS construction,
+  a 180-row training minimum, and no relaxation after source inspection.
+- `surface_data_study.yaml` specified exact exchange-session filtering, a full-
+  session surface lag, fixed ATM/skew/term/gamma-volume construction, and a
+  governing late SPY split. It also precluded calling gamma-weighted volume
+  dealer GEX because the mirrors lack open interest.
+
+The CFTC augmentation **failed** its frozen joint gate: AUC moved 0.8308 to
+0.8304 while top-decile lift moved 3.482x to 3.681x across 591 origins. The NQ
+study returned **no evaluable folds**, not a model null: its 2024/2025 training
+counts were 63/135 against the frozen 180 minimum. The surface augmentations
+were point-estimate worse on mean QLIKE for QQQ, AAPL, and both SPY splits; all
+registered verdicts are `INCONCLUSIVE`. Independent verifiers reproduced the
+CFTC score (15 checks), NQ no-fold outcome and data fences, and surface scores
+(20 checks over 3,850 forecasts).
+
+The remaining source gates were then completed without changing the frozen
+features. All 22 pinned HF option shards matched their hashes, but the registered
+near-expiry-volume-share component was exactly zero on every QQQ and SPY day;
+the fixed composite was therefore undefined and the verified result is
+`INSUFFICIENT_DATA` with zero forecasts, not a predictive null. The auxiliary
+audit also (i) produced a local-only 26,874-row Cboe close panel with a full-
+session availability lag, while quarantining 47 internally inconsistent
+historical VIX OHLC rows from any OHLC use; (ii) quarantined the HF SPX mirror
+because 5,075 opens are zero; and (iii) matched the Zenodo TSLA file's pinned
+MD5 and schema across 4,584,740 data rows. Zenodo does contain bid/offer and
+open interest, correcting the original source description, but undocumented
+upstream provenance keeps it private-research-only. None of these audits creates
+a new predictive result. See `reports/FREE_DATA_SOURCES.md` for the current
+acquisition and rights ledger.

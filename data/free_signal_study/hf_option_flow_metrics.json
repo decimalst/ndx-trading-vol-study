@@ -1,0 +1,139 @@
+{
+  "candidate_complete_score_origins": 0,
+  "evidence_class": "post_program_diagnostic",
+  "gate_counts": {
+    "minimum_training_origins": 0,
+    "missing_current": 198
+  },
+  "gate_reason": "the frozen four-component composite is undefined because at least one registered component has zero historical scale",
+  "input_hashes": {
+    "daily": "d36a21c38ac73ef36169d84dd61bfa9213f104f3724555dfdb3d4ea4257ebc2f",
+    "history": "bfb3b938a5ac41cabfb34f19b5cde073d8d3373faf244640d747c686ffabd156",
+    "inventory": "a5a4663439f6e59ad08c46bf43eedd858d3d26c80dfc61362b6d572f917af824",
+    "protocol": "dcdb6f6f05048607202ce610a03f8d4411d276d3813d7a082a80bf9f2139c8de",
+    "raw_months": {
+      "2024-01": "0eefb8163e8573930bc00f20f44db70fc99b7e988328a90e03f74e7c3eb28361",
+      "2024-02": "c6376e379d7ba065c1bbbafd945b75942aafb164e3df8cd2d3c5dd7694d82628",
+      "2024-03": "22b0e16ab16129c7a35695b83a2fbe4fc5e51d58543b23d2a91972a9a9c6e2c9",
+      "2024-04": "7e82902f55bb6c1f91d19d61ccb33f774e685a28ef57adca2b3086dd13df9bbc",
+      "2024-05": "40d324055ae99666aace2fab062ee88206f8f9177e9435ed066ff62c2d844bfc",
+      "2024-06": "3c7587442e5a77044862c8eeedce23ab5e22576dbc57e3482a543678a3217b92",
+      "2024-07": "247b0948c29e770cfa590d1f03e293be07fa38999017180b14c6f2bb919b408d",
+      "2024-08": "03c99b0380acb82cf06495b90230a5739b4865e4bdd21c0216ac18436c8ee245",
+      "2024-09": "4c90f37d7bdafb95164a62066f65bf0f6e50ad070274de104549f327872c5a0e",
+      "2024-10": "0e56cc4e7106ee5db4d64d32d168e76c3966f5950a452092df0763abfd69488d",
+      "2024-11": "1f417dab25979401273ee5b86e8b153c2cb0d829f50ede028c51d8ff41e822e2",
+      "2024-12": "edb146fe77400d656826d1afa3a3f8d975ae6e1ca054f6bf3c3dd2ae3f0250d8",
+      "2025-01": "432ca0782e7b7869f1bc1efa8acd37a08780c9c090763773c745cc87d203a4c0",
+      "2025-02": "2ff9347ab1d4c652842f10bc9105499f88dca7761c6b86b074e9f4cb242ea36a",
+      "2025-03": "67edde65bae159059a5c044eb1fef7781b480bee5139581dd7efba7f444593a9",
+      "2025-04": "a7136a657173ba6775cdb3a177c127a32b1f863900f70eb54f8101f55651d32e",
+      "2025-05": "3387fdddd75721baa6114af7a9c47b728446977f942ad66c86ae589752412ab4",
+      "2025-06": "d12cabf52e6850ccdbe164dbf63920db4142edeea0eadd3092192353e96c31b9",
+      "2025-07": "4f5013f3a591fb253d614d66a50c95dc601930453fb80ba67e416995b8d30a08",
+      "2025-08": "84fe104b8cbf2d1e9eddb860d5b8722c0bc732ab7eea67821bbf7040f1b7e78c",
+      "2025-09": "62f2d8ed740505e5112a33c263972ca057276abcf6612e98a323752e0a6ddad4",
+      "2025-10": "243bcd31ad40140602af96d71041d1855ff675dc5deafc94c35c672c5be36261"
+    },
+    "vxn": "61c4dec804140831dadb05d0cc34ee38a3d662d31c5b6fc258eae6918b455731"
+  },
+  "maximum_common_training_origins": 0,
+  "minimum_training_origins": 126,
+  "output_hashes": {
+    "forecasts": "dc0c057bca938d06473c70bdd10474d9e47bd21d6d0a46adae22e7abac3d3a37"
+  },
+  "registered_success": false,
+  "scored_origins": 0,
+  "source_quality": {
+    "activity_only": true,
+    "component_scale": {
+      "QQQ": {
+        "contract_volume_hhi": {
+          "finite_rows": 406,
+          "maximum": 0.8797164670669433,
+          "minimum": 0.012350131905925795,
+          "population_std": 0.12273852365719819,
+          "unique_values": 406
+        },
+        "log_put_call_volume_ratio": {
+          "finite_rows": 406,
+          "maximum": 3.4602722864445785,
+          "minimum": -3.269146374208067,
+          "population_std": 1.064361934553172,
+          "unique_values": 406
+        },
+        "log_trade_count": {
+          "finite_rows": 406,
+          "maximum": 9.708445431332793,
+          "minimum": 4.007333185232471,
+          "population_std": 1.1819103070824037,
+          "unique_values": 374
+        },
+        "near_expiry_volume_share_7d": {
+          "finite_rows": 406,
+          "maximum": 0.0,
+          "minimum": 0.0,
+          "population_std": 0.0,
+          "unique_values": 1
+        }
+      },
+      "SPY": {
+        "contract_volume_hhi": {
+          "finite_rows": 439,
+          "maximum": 0.8543975728920224,
+          "minimum": 0.010205806442609622,
+          "population_std": 0.11294085138392018,
+          "unique_values": 439
+        },
+        "log_put_call_volume_ratio": {
+          "finite_rows": 439,
+          "maximum": 3.4517802788498204,
+          "minimum": -3.1536494361767264,
+          "population_std": 0.8898519061067519,
+          "unique_values": 439
+        },
+        "log_trade_count": {
+          "finite_rows": 439,
+          "maximum": 9.791270249415089,
+          "minimum": 1.6094379124341003,
+          "population_std": 1.3544613083402899,
+          "unique_values": 401
+        },
+        "near_expiry_volume_share_7d": {
+          "finite_rows": 439,
+          "maximum": 0.0,
+          "minimum": 0.0,
+          "population_std": 0.0,
+          "unique_values": 1
+        }
+      }
+    },
+    "license": "other",
+    "no_gamma_or_open_interest_claim": true,
+    "symbols": {
+      "QQQ": {
+        "composite_rows": 0,
+        "daily_rows": 406,
+        "first_date": "2024-03-07",
+        "last_date": "2025-10-17"
+      },
+      "SPY": {
+        "composite_rows": 0,
+        "daily_rows": 439,
+        "first_date": "2024-01-18",
+        "last_date": "2025-10-17"
+      }
+    },
+    "upstream": "various unnamed sources",
+    "zero_scale_components": {
+      "QQQ": [
+        "near_expiry_volume_share_7d"
+      ],
+      "SPY": [
+        "near_expiry_volume_share_7d"
+      ]
+    }
+  },
+  "status": "INSUFFICIENT_DATA",
+  "verdict": "INSUFFICIENT_DATA"
+}

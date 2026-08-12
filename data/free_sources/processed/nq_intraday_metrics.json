@@ -1,0 +1,27 @@
+{
+  "augmented_auc": {
+    "phase_max": null,
+    "phase_mean": null,
+    "phase_min": null
+  },
+  "augmented_top_decile_lift": {
+    "phase_max": null,
+    "phase_mean": null,
+    "phase_min": null
+  },
+  "event_rate": null,
+  "evidence_class": "diagnostic_exploratory_unknown_stitch",
+  "n_forecasts": 0,
+  "price_history_auc": {
+    "phase_max": null,
+    "phase_mean": null,
+    "phase_min": null
+  },
+  "price_history_top_decile_lift": {
+    "phase_max": null,
+    "phase_mean": null,
+    "phase_min": null
+  },
+  "strict_verdict": "DIAGNOSTIC_ONLY",
+  "unknown_contract_stitch": true
+}

@@ -92,6 +92,7 @@ The project then moved through several questions:
 | Is transition proximity encoded in TiRex's latent state? | Descriptively yes: sparse k=1/k=5 reach 0.815/0.827 AUC, but the frozen ten-control design cannot attain p<0.0909. No rung improves the 0.870 RV-history benchmark when augmented. | The representation is a lossy re-encoding of information direct RV features already extract. Sparse coordinates are selected inside training folds and forward-scored; they are not one universal neuron. | [Latent probe](reports/representation_study/latent_probe.md), [result audit](reports/representation_study/latent_probe_result_audit.md) |
 | Does k=1 survive a formally attainable control test? | Yes in a separate post-result run: 0 of 99 matched controls reach its 0.815 AUC, giving corrected exact p=0.01. | The signal is genuinely encoded, but it is not novel: the selected fold-specific coordinates correlate most with 5/22-day volatility and prior-session VXN, and still trail direct RV history. | [99-control k=1 diagnostic](reports/representation_study/latent_k1_confirmation.md) |
 | Are the foundation pipelines fragile to injected context noise? | Chronos-2 and TiRex-2 degrade modestly on the registered grid. | This weakens surface-noise fragility as an explanation for their earlier null, but HAR comparisons mix preprocessing with architecture because the adaptation did not impose Eidos's common noisy-statistics renormalization. | [Noise diagnostic](reports/representation_study/noise_robustness.md) |
+| Did the wider free-data search uncover a robust new signal? | Not yet. CFTC positioning failed its two-metric gate; private QQQ/SPY/AAPL surface augmentations were point-estimate worse on mean QLIKE and formally inconclusive; NQ lacked enough training history; and the frozen HF option-flow composite was undefined because its near-expiry component had zero scale. | “Free to download,” trustworthy provenance, sufficient history, a measurable feature, and verified predictive value are separate gates. | [Free-source ledger](reports/FREE_DATA_SOURCES.md), [HF flow audit](reports/free_signal_study/hf_option_flow.md), [NQ data-adequacy audit](reports/nq_intraday_study.md), [surface diagnostic](reports/surface_data_study.md) |
 
 The most defensible overall conclusion is not that variance is unpredictable.
 It is that **price history ranks recurrent proximity to a volatility threshold,
@@ -106,6 +107,9 @@ something a lower forecasting loss establishes on its own.
 
 - [Standing findings](reports/FINDINGS.md) — the current conclusions and the
   evidence hierarchy.
+- [Free-data source ledger](reports/FREE_DATA_SOURCES.md) — official versus
+  uploader provenance, local/quarantine rules, acquisition state, and the
+  completed CFTC, NQ, and option-surface diagnostics.
 - [GBM functional-form study](reports/gbm_study/results.md) — frozen result,
   timing qualification, and [post-result QLIKE/SHAP audit](reports/gbm_study/post_result_diagnostics.md).
 - [Extended-history transition study](reports/representation_study/tail_classical.md) —
@@ -197,6 +201,15 @@ the post-publication subwindow as a robustness check.
 | SPX term surface | Cboe VIX9D, VIX, VIX3M | free | official 9-, 30-, and 93-calendar-day expected-volatility histories |
 | Single-name implied vol | Cboe VXAPL, VXAZN, VXGOG, VXIBM | free | fixed source family; analysis retains only historically eligible top-25 issuer-sessions |
 | Orthogonal signal inputs | Yahoo Finance ETFs + Cboe VIX/VIX9D histories | free | separate diagnostic-only study; Cboe closes delayed one session at the 16:00 ET forecast origin |
+| Wider free-source program | CFTC, Cboe, Kaggle, Hugging Face, and Zenodo | free to download; rights vary | raw mirrors remain local where upstream rights are unclear; see the [source ledger](reports/FREE_DATA_SOURCES.md) before using any derived panel |
+
+The source program also provides exact revision/hash inventories, disk
+preflight, local sidecar manifests, parsers, and compact audit artifacts. It
+does **not** treat uploader license labels as proof that exchange-derived data
+may be redistributed. The 478 GB Hugging Face companion stock repository is the
+only listed free source intentionally not downloaded: the frozen two-times
+preflight exceeds available disk, and its upstream APIs and corporate-action
+handling are undocumented.
 
 ### Calendar provenance
 

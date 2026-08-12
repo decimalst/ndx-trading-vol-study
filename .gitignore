@@ -8,6 +8,12 @@ __pycache__/
 .coverage
 htmlcov/
 
+# External market-data downloads are hash-audited locally but never committed.
+data/free_sources/raw/
+# Cboe close values are useful locally but their download terms do not permit
+# treating the normalized history as a redistributable repository artifact.
+data/free_sources/processed/cboe_daily_local.parquet
+
 # Resumable TiRex extraction/probe caches; consolidated, hash-audited artifacts
 # live beside these directories and are versioned.
 data/representation_study/latent_embedding_chunks/

@@ -1,0 +1,126 @@
+# Frozen 2026-08-12 before downloading the full free-source archives or
+# computing any CFTC/option-flow outcome aggregate.  This protocol opens no
+# origin in the sealed NDX clean window and does not modify any prior verdict.
+protocol_version: 1
+status: frozen_before_empirical_run
+evidence_class: post_program_diagnostic
+
+fences:
+  clean_start: "2025-11-03"
+  final_origin: "2025-10-17"
+  forbid_clean_origins: true
+  no_forward_fill: true
+  common_rows_required: true
+
+cftc_positioning:
+  source: data/free_sources/processed/cftc_nq_tff.parquet
+  asset: QQQ
+  official_dataset_id: gpe5-46if
+  contract_code: "20974+"
+  report: TFF futures only
+  feature: leveraged_money_net_open_interest_share
+  definition: "(leveraged_money_long - leveraged_money_short) / open_interest"
+  availability:
+    ordinary_rule: "report date plus 10 calendar days, then the first QQQ session on or after that conservative availability date"
+    rationale: >
+      CFTC positions are measured Tuesday and normally published Friday at
+      15:30 ET. Ten days is deliberately slower than the ordinary and holiday
+      schedules; known shutdown/cyber backlogs are removed entirely.
+    excluded_report_date_ranges:
+      - ["2018-12-18", "2019-03-01"]
+      - ["2023-01-24", "2023-03-21"]
+  structural_break:
+    date: "2023-05-05"
+    description: "CFTC began including associated e-micro contracts in consolidated 20974+"
+    handling: "report full sample plus fixed pre-break and post-break sensitivities; do not add a fitted break term"
+  target:
+    source: data/history_extension/qqq_price_only_daily.parquet
+    definition: "from a calm origin, any next-five-session log RV exceeds the annual training-fold 80th percentile"
+    horizon_sessions: 5
+    stress_quantile: 0.80
+    calm_origins_only: true
+  fitting:
+    first_score_year: 2013
+    refit: annual
+    minimum_training_releases: 100
+    ridge: 0.000001
+    baseline_features: [log_rv_d, log_rv_w, log_rv_m]
+    augmented_features: [log_rv_d, log_rv_w, log_rv_m, cftc_lev_net_z]
+    standardization: "training rows only"
+    one_origin_per_release: true
+  scoreboard:
+    primary: auc
+    secondary: top_decile_lift
+    top_fraction: 0.10
+    report_base_rate: true
+    success_requires: ["augmented AUC exceeds baseline", "augmented top-decile lift exceeds baseline"]
+  interpretation: >
+    A target-specific weekly diagnostic on an already inspected asset and
+    history, not pristine confirmation and not a daily trading signal.
+
+hf_option_flow:
+  source: data/free_sources/processed/hf_option_flow_daily.parquet
+  inventory: hf_option_flow_inventory.json
+  raw_root: data/free_sources/raw/huggingface/fabhaus_options
+  source_revision: 99d9d32f99e955ca1f5b7fa4e08606da72707fb0
+  symbols: [QQQ, SPY]
+  allowed_months: [
+    "2024-01", "2024-02", "2024-03", "2024-04", "2024-05", "2024-06",
+    "2024-07", "2024-08", "2024-09", "2024-10", "2024-11", "2024-12",
+    "2025-01", "2025-02", "2025-03", "2025-04", "2025-05", "2025-06",
+    "2025-07", "2025-08", "2025-09", "2025-10"
+  ]
+  bar_semantics:
+    timestamp: UTC interval start
+    available: "bar start plus five minutes"
+    session: "09:30 through 16:00 America/New_York; last admitted bar starts 15:55"
+    sparse_activity_only: true
+    no_absence_as_zero_without_complete_shard: true
+    exchange_session_filter: "retain only source dates present in the observed QQQ price-history session calendar; never roll weekend activity forward"
+  rejected_columns: [
+    macro_cpi, macro_inflation_rate_yoy, macro_treasury_yield_10y,
+    macro_treasury_yield_3m, macro_unemployment_rate
+  ]
+  features:
+    components:
+      - log_put_call_volume_ratio
+      - near_expiry_volume_share_7d
+      - contract_volume_hhi
+      - log_trade_count
+    composite: "equal-weight mean of expanding training-only z scores, with no sign or weight search"
+    minimum_training_scale_observations: 126
+  target:
+    QQQ: "next-session rv_total"
+    SPY: "source-quality and cross-asset descriptive control only; no QQQ target substitution"
+  fitting:
+    score_start: "2025-01-02"
+    score_end: "2025-10-17"
+    minimum_training_origins: 126
+    refit: expanding every origin
+    baseline_features: [log_rv_d, log_rv_w, log_rv_m, lagged_log_vxn]
+    candidate_feature: lagged_option_flow_composite
+    cboe_delay_sessions: 1
+    timing: "flow and VXN close measured on session t enter origin t+1; target is QQQ RV on t+2"
+    estimator: "expanding OLS on next-session log RV with intercept and Duan mean smearing"
+    common_training_rows: "baseline and augmented use identical candidate-complete rows with completed targets"
+    predictor_standardization: "each origin uses common training-row means and population standard deviations only"
+  scoreboard:
+    primary: qlike
+    secondary: [paired_win_rate, top_decile_realized_variance_lift]
+    uncertainty: "paired 21-session moving-block bootstrap, 5000 draws, seed 20260812"
+    success_requires: ["candidate mean QLIKE below baseline", "candidate paired win rate above 0.50"]
+  interpretation: >
+    Exploratory only. The archive is activity-only, identifies its upstream
+    bars only as various sources, and carries an `other` license. It cannot
+    measure NBBO, spreads, open interest, implied volatility, or dealer gamma.
+
+amendments:
+  - recorded_on: "2026-08-12"
+    stage: "after immutable acquisition, before any QQQ/SPY aggregate or predictive outcome was computed"
+    change: >
+      Made the already-frozen session, lag, training-only scaling, and identical-row
+      comparison rules executable: non-QQQ-calendar dates are omitted rather than
+      rolled forward; flow and VXN from t enter t+1; t+2 is the target; both OLS
+      models use common completed rows, training-only scaling, and Duan smearing.
+    gates_changed: false
+    minimum_training_origins_changed: false

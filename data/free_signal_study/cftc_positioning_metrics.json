@@ -1,0 +1,158 @@
+{
+  "delta_auc": -0.00041061016670773665,
+  "delta_top_decile_lift": 0.1989898989898986,
+  "evidence_class": "post_program_diagnostic",
+  "first_origin": "2013-01-03",
+  "folds": [
+    {
+      "feature_mean": 0.14625493361019493,
+      "feature_std": 0.09398335649901289,
+      "training_cutoff": "2012-12-31",
+      "training_releases": 127,
+      "year": 2013
+    },
+    {
+      "feature_mean": 0.17727672610351053,
+      "feature_std": 0.10005699685888622,
+      "training_cutoff": "2013-12-31",
+      "training_releases": 179,
+      "year": 2014
+    },
+    {
+      "feature_mean": 0.16619022137651387,
+      "feature_std": 0.0964048320889166,
+      "training_cutoff": "2014-12-31",
+      "training_releases": 230,
+      "year": 2015
+    },
+    {
+      "feature_mean": 0.1564995388333985,
+      "feature_std": 0.09520160811624023,
+      "training_cutoff": "2015-12-31",
+      "training_releases": 280,
+      "year": 2016
+    },
+    {
+      "feature_mean": 0.1487777138137376,
+      "feature_std": 0.10324786346152934,
+      "training_cutoff": "2016-12-30",
+      "training_releases": 328,
+      "year": 2017
+    },
+    {
+      "feature_mean": 0.14319430254491944,
+      "feature_std": 0.09917200389589319,
+      "training_cutoff": "2017-12-29",
+      "training_releases": 374,
+      "year": 2018
+    },
+    {
+      "feature_mean": 0.12043183601187032,
+      "feature_std": 0.11501129867770547,
+      "training_cutoff": "2018-12-31",
+      "training_releases": 420,
+      "year": 2019
+    },
+    {
+      "feature_mean": 0.10201364144870802,
+      "feature_std": 0.12584669341607846,
+      "training_cutoff": "2019-12-31",
+      "training_releases": 460,
+      "year": 2020
+    },
+    {
+      "feature_mean": 0.08681497666470281,
+      "feature_std": 0.13386541583911105,
+      "training_cutoff": "2020-12-31",
+      "training_releases": 497,
+      "year": 2021
+    },
+    {
+      "feature_mean": 0.06826864655943406,
+      "feature_std": 0.1431678727102613,
+      "training_cutoff": "2021-12-31",
+      "training_releases": 544,
+      "year": 2022
+    },
+    {
+      "feature_mean": 0.058227221709753925,
+      "feature_std": 0.14500653671983108,
+      "training_cutoff": "2022-12-30",
+      "training_releases": 582,
+      "year": 2023
+    },
+    {
+      "feature_mean": 0.04865678234386718,
+      "feature_std": 0.14559373760843924,
+      "training_cutoff": "2023-12-29",
+      "training_releases": 622,
+      "year": 2024
+    },
+    {
+      "feature_mean": 0.03286900166568901,
+      "feature_std": 0.15097106838300772,
+      "training_cutoff": "2024-12-31",
+      "training_releases": 672,
+      "year": 2025
+    }
+  ],
+  "last_origin": "2025-10-10",
+  "models": {
+    "augmented": {
+      "auc": 0.8303769401330376,
+      "base_rate": 0.16751269035532995,
+      "n": 591,
+      "positives": 99,
+      "top_decile_event_rate": 0.6166666666666667,
+      "top_decile_lift": 3.6813131313131313
+    },
+    "baseline": {
+      "auc": 0.8307875502997454,
+      "base_rate": 0.16751269035532995,
+      "n": 591,
+      "positives": 99,
+      "top_decile_event_rate": 0.5833333333333334,
+      "top_decile_lift": 3.4823232323232327
+    }
+  },
+  "registered_success": false,
+  "source_sha256": "776bcde3479bd8250f5a10a6d92fbf37473107d7d5562b8186b8b794e4a7c09d",
+  "structural_break_sensitivity": {
+    "post_micro_inclusion": {
+      "augmented": {
+        "auc": 0.762962962962963,
+        "base_rate": 0.14634146341463414,
+        "n": 123,
+        "positives": 18,
+        "top_decile_event_rate": 0.46153846153846156,
+        "top_decile_lift": 3.153846153846154
+      },
+      "baseline": {
+        "auc": 0.7619047619047619,
+        "base_rate": 0.14634146341463414,
+        "n": 123,
+        "positives": 18,
+        "top_decile_event_rate": 0.46153846153846156,
+        "top_decile_lift": 3.153846153846154
+      }
+    },
+    "pre_micro_inclusion": {
+      "augmented": {
+        "auc": 0.8554885634988995,
+        "base_rate": 0.17307692307692307,
+        "n": 468,
+        "positives": 81,
+        "top_decile_event_rate": 0.6595744680851063,
+        "top_decile_lift": 3.8108747044917255
+      },
+      "baseline": {
+        "auc": 0.8542763262832169,
+        "base_rate": 0.17307692307692307,
+        "n": 468,
+        "positives": 81,
+        "top_decile_event_rate": 0.6382978723404256,
+        "top_decile_lift": 3.687943262411348
+      }
+    }
+  }
+}

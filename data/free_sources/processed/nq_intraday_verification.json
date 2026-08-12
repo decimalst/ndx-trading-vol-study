@@ -1,0 +1,56 @@
+{
+  "checks": [
+    "frozen_protocol",
+    "all_manifest_hashes",
+    "strict_et_and_pretransform_fence",
+    "official_rth_and_terminal_session",
+    "daily_rv_bpv_tripower_bns_and_shape",
+    "stitch_neighborhood_flags",
+    "lagged_cboe_features_and_next_five_target",
+    "annual_models_and_identical_origins",
+    "five_phase_auc_and_top_decile_lift",
+    "origin_and_outcome_data_fences"
+  ],
+  "daily_sessions": 726,
+  "evidence_class": "diagnostic_exploratory_unknown_stitch",
+  "fold_diagnostics": [
+    {
+      "common_origin_test_rows": 69,
+      "common_origin_train_rows": 63,
+      "evaluable": false,
+      "failed_gates": [
+        "min_train_rows"
+      ],
+      "test_event_rows": 23,
+      "test_year": 2024,
+      "train_event_rows": 15
+    },
+    {
+      "common_origin_test_rows": 26,
+      "common_origin_train_rows": 135,
+      "evaluable": false,
+      "failed_gates": [
+        "min_train_rows"
+      ],
+      "test_event_rows": 15,
+      "test_year": 2025,
+      "train_event_rows": 38
+    }
+  ],
+  "forecast_origins": 0,
+  "frozen_min_train_rows": 180,
+  "hashes": {
+    "implementation": "65a4f878f2363a932007ec7b470791d913c34a5556f25b23cf7bb29cdba8ab36",
+    "protocol": "85bebefc8658091f0b5a180c345f61edc895f42b57156425cc8d38a568a1cab3",
+    "raw": "1577e60a7feab411e49da7a56c7052a64738cd1757cfd60aa11fd783ff43b60b",
+    "verifier": "e545c6bda1d25d2d738d3ecb431db8ec4be2349ded3af17c5449816de50a2bce"
+  },
+  "independent_implementation_imported": false,
+  "no_evaluable_folds": true,
+  "quality_eligible_sessions": 678,
+  "raw_rows": 1048575,
+  "retained_rth_rows": 278041,
+  "status": "VERIFIED_NO_EVALUABLE_FOLDS",
+  "stitch_excluded_sessions": 16,
+  "unknown_contract_stitch": true
+}

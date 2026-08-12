@@ -1,0 +1,30 @@
+{
+  "dataset": "fabhaus/equities_5m_options",
+  "source_revision": "99d9d32f99e955ca1f5b7fa4e08606da72707fb0",
+  "exact_complete_set": true,
+  "provenance": "Immutable Hugging Face repository tree metadata; LFS object SHA-256 and byte size",
+  "months": [
+    {"month": "2024-01", "path": "data/free_sources/raw/huggingface/fabhaus_options/2024-01.jsonl", "bytes": 14412690, "sha256": "0eefb8163e8573930bc00f20f44db70fc99b7e988328a90e03f74e7c3eb28361", "source_revision": "99d9d32f99e955ca1f5b7fa4e08606da72707fb0"},
+    {"month": "2024-02", "path": "data/free_sources/raw/huggingface/fabhaus_options/2024-02.jsonl", "bytes": 38965675, "sha256": "c6376e379d7ba065c1bbbafd945b75942aafb164e3df8cd2d3c5dd7694d82628", "source_revision": "99d9d32f99e955ca1f5b7fa4e08606da72707fb0"},
+    {"month": "2024-03", "path": "data/free_sources/raw/huggingface/fabhaus_options/2024-03.jsonl", "bytes": 57255815, "sha256": "22b0e16ab16129c7a35695b83a2fbe4fc5e51d58543b23d2a91972a9a9c6e2c9", "source_revision": "99d9d32f99e955ca1f5b7fa4e08606da72707fb0"},
+    {"month": "2024-04", "path": "data/free_sources/raw/huggingface/fabhaus_options/2024-04.jsonl", "bytes": 75375998, "sha256": "7e82902f55bb6c1f91d19d61ccb33f774e685a28ef57adca2b3086dd13df9bbc", "source_revision": "99d9d32f99e955ca1f5b7fa4e08606da72707fb0"},
+    {"month": "2024-05", "path": "data/free_sources/raw/huggingface/fabhaus_options/2024-05.jsonl", "bytes": 71912767, "sha256": "40d324055ae99666aace2fab062ee88206f8f9177e9435ed066ff62c2d844bfc", "source_revision": "99d9d32f99e955ca1f5b7fa4e08606da72707fb0"},
+    {"month": "2024-06", "path": "data/free_sources/raw/huggingface/fabhaus_options/2024-06.jsonl", "bytes": 91313715, "sha256": "3c7587442e5a77044862c8eeedce23ab5e22576dbc57e3482a543678a3217b92", "source_revision": "99d9d32f99e955ca1f5b7fa4e08606da72707fb0"},
+    {"month": "2024-07", "path": "data/free_sources/raw/huggingface/fabhaus_options/2024-07.jsonl", "bytes": 148163277, "sha256": "247b0948c29e770cfa590d1f03e293be07fa38999017180b14c6f2bb919b408d", "source_revision": "99d9d32f99e955ca1f5b7fa4e08606da72707fb0"},
+    {"month": "2024-08", "path": "data/free_sources/raw/huggingface/fabhaus_options/2024-08.jsonl", "bytes": 168192905, "sha256": "03c99b0380acb82cf06495b90230a5739b4865e4bdd21c0216ac18436c8ee245", "source_revision": "99d9d32f99e955ca1f5b7fa4e08606da72707fb0"},
+    {"month": "2024-09", "path": "data/free_sources/raw/huggingface/fabhaus_options/2024-09.jsonl", "bytes": 179876432, "sha256": "4c90f37d7bdafb95164a62066f65bf0f6e50ad070274de104549f327872c5a0e", "source_revision": "99d9d32f99e955ca1f5b7fa4e08606da72707fb0"},
+    {"month": "2024-10", "path": "data/free_sources/raw/huggingface/fabhaus_options/2024-10.jsonl", "bytes": 274730200, "sha256": "0e56cc4e7106ee5db4d64d32d168e76c3966f5950a452092df0763abfd69488d", "source_revision": "99d9d32f99e955ca1f5b7fa4e08606da72707fb0"},
+    {"month": "2024-11", "path": "data/free_sources/raw/huggingface/fabhaus_options/2024-11.jsonl", "bytes": 356408180, "sha256": "1f417dab25979401273ee5b86e8b153c2cb0d829f50ede028c51d8ff41e822e2", "source_revision": "99d9d32f99e955ca1f5b7fa4e08606da72707fb0"},
+    {"month": "2024-12", "path": "data/free_sources/raw/huggingface/fabhaus_options/2024-12.jsonl", "bytes": 424027787, "sha256": "edb146fe77400d656826d1afa3a3f8d975ae6e1ca054f6bf3c3dd2ae3f0250d8", "source_revision": "99d9d32f99e955ca1f5b7fa4e08606da72707fb0"},
+    {"month": "2025-01", "path": "data/free_sources/raw/huggingface/fabhaus_options/2025-01.jsonl", "bytes": 529623824, "sha256": "432ca0782e7b7869f1bc1efa8acd37a08780c9c090763773c745cc87d203a4c0", "source_revision": "99d9d32f99e955ca1f5b7fa4e08606da72707fb0"},
+    {"month": "2025-02", "path": "data/free_sources/raw/huggingface/fabhaus_options/2025-02.jsonl", "bytes": 696970410, "sha256": "2ff9347ab1d4c652842f10bc9105499f88dca7761c6b86b074e9f4cb242ea36a", "source_revision": "99d9d32f99e955ca1f5b7fa4e08606da72707fb0"},
+    {"month": "2025-03", "path": "data/free_sources/raw/huggingface/fabhaus_options/2025-03.jsonl", "bytes": 872413458, "sha256": "67edde65bae159059a5c044eb1fef7781b480bee5139581dd7efba7f444593a9", "source_revision": "99d9d32f99e955ca1f5b7fa4e08606da72707fb0"},
+    {"month": "2025-04", "path": "data/free_sources/raw/huggingface/fabhaus_options/2025-04.jsonl", "bytes": 1178389421, "sha256": "a7136a657173ba6775cdb3a177c127a32b1f863900f70eb54f8101f55651d32e", "source_revision": "99d9d32f99e955ca1f5b7fa4e08606da72707fb0"},
+    {"month": "2025-05", "path": "data/free_sources/raw/huggingface/fabhaus_options/2025-05.jsonl", "bytes": 1204135130, "sha256": "3387fdddd75721baa6114af7a9c47b728446977f942ad66c86ae589752412ab4", "source_revision": "99d9d32f99e955ca1f5b7fa4e08606da72707fb0"},
+    {"month": "2025-06", "path": "data/free_sources/raw/huggingface/fabhaus_options/2025-06.jsonl", "bytes": 1280625005, "sha256": "d12cabf52e6850ccdbe164dbf63920db4142edeea0eadd3092192353e96c31b9", "source_revision": "99d9d32f99e955ca1f5b7fa4e08606da72707fb0"},
+    {"month": "2025-07", "path": "data/free_sources/raw/huggingface/fabhaus_options/2025-07.jsonl", "bytes": 1786795419, "sha256": "4f5013f3a591fb253d614d66a50c95dc601930453fb80ba67e416995b8d30a08", "source_revision": "99d9d32f99e955ca1f5b7fa4e08606da72707fb0"},
+    {"month": "2025-08", "path": "data/free_sources/raw/huggingface/fabhaus_options/2025-08.jsonl", "bytes": 2194343595, "sha256": "84fe104b8cbf2d1e9eddb860d5b8722c0bc732ab7eea67821bbf7040f1b7e78c", "source_revision": "99d9d32f99e955ca1f5b7fa4e08606da72707fb0"},
+    {"month": "2025-09", "path": "data/free_sources/raw/huggingface/fabhaus_options/2025-09.jsonl", "bytes": 3244969693, "sha256": "62f2d8ed740505e5112a33c263972ca057276abcf6612e98a323752e0a6ddad4", "source_revision": "99d9d32f99e955ca1f5b7fa4e08606da72707fb0"},
+    {"month": "2025-10", "path": "data/free_sources/raw/huggingface/fabhaus_options/2025-10.jsonl", "bytes": 4928038054, "sha256": "243bcd31ad40140602af96d71041d1855ff675dc5deafc94c35c672c5be36261", "source_revision": "99d9d32f99e955ca1f5b7fa4e08606da72707fb0"}
+  ]
+}

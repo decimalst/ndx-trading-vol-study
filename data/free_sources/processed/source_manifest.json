@@ -1,0 +1,377 @@
+{
+  "evidence_class": "private_diagnostic_only",
+  "extra": {
+    "daily_surface": {
+      "name": "daily_surface.parquet",
+      "rows": 5800,
+      "sha256": "c3e63be532c2aa97c7013ecd41a2e60db2b08f72d9dc40b1afae11721e5639fe"
+    },
+    "parser_audits": {
+      "aapl": {
+        "coverage_after_calendar_filter": [
+          "2016-01-04",
+          "2023-03-31"
+        ],
+        "daily_rows_before_lag": 1813,
+        "expected_exchange_sessions_in_coverage": 1824,
+        "lagged_rows": 1813,
+        "members": [
+          {
+            "accepted_rows": 444510,
+            "duplicate_contract_rows": 0,
+            "input_rows": 1015352,
+            "member": "aapl_2016_2020.csv",
+            "rejected_invalid_core": 566654,
+            "rejected_invalid_quotes": 3375,
+            "rejected_non_session": 813,
+            "rejected_wrong_time": 0,
+            "symbol": "AAPL"
+          },
+          {
+            "accepted_rows": 200348,
+            "duplicate_contract_rows": 0,
+            "input_rows": 548163,
+            "member": "aapl_2021_2023.csv",
+            "rejected_invalid_core": 339054,
+            "rejected_invalid_quotes": 777,
+            "rejected_non_session": 7984,
+            "rejected_wrong_time": 0,
+            "symbol": "AAPL"
+          }
+        ],
+        "missing_exchange_session_count": 11,
+        "missing_exchange_sessions": [
+          "2016-04-18",
+          "2017-09-27",
+          "2019-03-01",
+          "2020-06-18",
+          "2020-09-29",
+          "2020-11-27",
+          "2020-12-24",
+          "2022-05-11",
+          "2022-06-17",
+          "2022-06-24",
+          "2022-12-16"
+        ],
+        "observed_exchange_sessions": 1813,
+        "raw_rows": 1563515,
+        "split_audit": {
+          "expected_range": [
+            3.5,
+            4.5
+          ],
+          "post_session": "2020-08-31",
+          "post_underlying": 128.76,
+          "pre_over_post_ratio": 3.877213420316869,
+          "pre_session": "2020-08-28",
+          "pre_underlying": 499.23,
+          "status": "audited_without_rewriting",
+          "within_expected_range": true
+        }
+      },
+      "qqq": {
+        "coverage_after_calendar_filter": [
+          "2021-01-04",
+          "2022-12-30"
+        ],
+        "daily_rows_before_lag": 499,
+        "expected_exchange_sessions_in_coverage": 503,
+        "lagged_rows": 499,
+        "members": [
+          {
+            "accepted_rows": 859119,
+            "duplicate_contract_rows": 0,
+            "input_rows": 1775749,
+            "member": "qqq_2020_2022.csv",
+            "rejected_invalid_core": 885132,
+            "rejected_invalid_quotes": 1880,
+            "rejected_non_session": 29618,
+            "rejected_wrong_time": 0,
+            "symbol": "QQQ"
+          }
+        ],
+        "missing_exchange_session_count": 4,
+        "missing_exchange_sessions": [
+          "2022-05-11",
+          "2022-06-17",
+          "2022-06-24",
+          "2022-12-16"
+        ],
+        "observed_exchange_sessions": 499,
+        "raw_rows": 1775749
+      },
+      "spy": {
+        "coverage_after_calendar_filter": [
+          "2010-01-04",
+          "2023-12-29"
+        ],
+        "daily_rows_before_lag": 3488,
+        "expected_exchange_sessions_in_coverage": 3522,
+        "lagged_rows": 3488,
+        "members": [
+          {
+            "accepted_rows": 75356,
+            "duplicate_contract_rows": 0,
+            "input_rows": 262978,
+            "member": "spy_eod_2010.parquet",
+            "rejected_invalid_core": 179262,
+            "rejected_invalid_quotes": 8360,
+            "rejected_non_session": 0,
+            "rejected_wrong_time": 0,
+            "symbol": "SPY"
+          },
+          {
+            "accepted_rows": 83568,
+            "duplicate_contract_rows": 0,
+            "input_rows": 285265,
+            "member": "spy_eod_2011.parquet",
+            "rejected_invalid_core": 200756,
+            "rejected_invalid_quotes": 941,
+            "rejected_non_session": 0,
+            "rejected_wrong_time": 0,
+            "symbol": "SPY"
+          },
+          {
+            "accepted_rows": 91980,
+            "duplicate_contract_rows": 0,
+            "input_rows": 340926,
+            "member": "spy_eod_2012.parquet",
+            "rejected_invalid_core": 245206,
+            "rejected_invalid_quotes": 908,
+            "rejected_non_session": 2832,
+            "rejected_wrong_time": 0,
+            "symbol": "SPY"
+          },
+          {
+            "accepted_rows": 119390,
+            "duplicate_contract_rows": 0,
+            "input_rows": 361258,
+            "member": "spy_eod_2013.parquet",
+            "rejected_invalid_core": 239859,
+            "rejected_invalid_quotes": 2009,
+            "rejected_non_session": 0,
+            "rejected_wrong_time": 0,
+            "symbol": "SPY"
+          },
+          {
+            "accepted_rows": 155469,
+            "duplicate_contract_rows": 0,
+            "input_rows": 421454,
+            "member": "spy_eod_2014.parquet",
+            "rejected_invalid_core": 264618,
+            "rejected_invalid_quotes": 1367,
+            "rejected_non_session": 0,
+            "rejected_wrong_time": 0,
+            "symbol": "SPY"
+          },
+          {
+            "accepted_rows": 184660,
+            "duplicate_contract_rows": 0,
+            "input_rows": 492643,
+            "member": "spy_eod_2015.parquet",
+            "rejected_invalid_core": 306109,
+            "rejected_invalid_quotes": 1874,
+            "rejected_non_session": 0,
+            "rejected_wrong_time": 0,
+            "symbol": "SPY"
+          },
+          {
+            "accepted_rows": 214681,
+            "duplicate_contract_rows": 0,
+            "input_rows": 544085,
+            "member": "spy_eod_2016.parquet",
+            "rejected_invalid_core": 326104,
+            "rejected_invalid_quotes": 3300,
+            "rejected_non_session": 0,
+            "rejected_wrong_time": 0,
+            "symbol": "SPY"
+          },
+          {
+            "accepted_rows": 234549,
+            "duplicate_contract_rows": 0,
+            "input_rows": 609530,
+            "member": "spy_eod_2017.parquet",
+            "rejected_invalid_core": 370237,
+            "rejected_invalid_quotes": 4744,
+            "rejected_non_session": 0,
+            "rejected_wrong_time": 0,
+            "symbol": "SPY"
+          },
+          {
+            "accepted_rows": 342451,
+            "duplicate_contract_rows": 0,
+            "input_rows": 755129,
+            "member": "spy_eod_2018.parquet",
+            "rejected_invalid_core": 405560,
+            "rejected_invalid_quotes": 4294,
+            "rejected_non_session": 2824,
+            "rejected_wrong_time": 0,
+            "symbol": "SPY"
+          },
+          {
+            "accepted_rows": 339086,
+            "duplicate_contract_rows": 0,
+            "input_rows": 834075,
+            "member": "spy_eod_2019.parquet",
+            "rejected_invalid_core": 488875,
+            "rejected_invalid_quotes": 6114,
+            "rejected_non_session": 0,
+            "rejected_wrong_time": 0,
+            "symbol": "SPY"
+          },
+          {
+            "accepted_rows": 489198,
+            "duplicate_contract_rows": 0,
+            "input_rows": 1164401,
+            "member": "spy_eod_2020.parquet",
+            "rejected_invalid_core": 668661,
+            "rejected_invalid_quotes": 6542,
+            "rejected_non_session": 0,
+            "rejected_wrong_time": 0,
+            "symbol": "SPY"
+          },
+          {
+            "accepted_rows": 541166,
+            "duplicate_contract_rows": 0,
+            "input_rows": 1277698,
+            "member": "spy_eod_2021.parquet",
+            "rejected_invalid_core": 736061,
+            "rejected_invalid_quotes": 471,
+            "rejected_non_session": 0,
+            "rejected_wrong_time": 0,
+            "symbol": "SPY"
+          },
+          {
+            "accepted_rows": 533054,
+            "duplicate_contract_rows": 0,
+            "input_rows": 1146980,
+            "member": "spy_eod_2022.parquet",
+            "rejected_invalid_core": 573337,
+            "rejected_invalid_quotes": 1319,
+            "rejected_non_session": 39270,
+            "rejected_wrong_time": 0,
+            "symbol": "SPY"
+          },
+          {
+            "accepted_rows": 428730,
+            "duplicate_contract_rows": 0,
+            "input_rows": 972162,
+            "member": "spy_eod_2023.parquet",
+            "rejected_invalid_core": 542259,
+            "rejected_invalid_quotes": 1173,
+            "rejected_non_session": 0,
+            "rejected_wrong_time": 0,
+            "symbol": "SPY"
+          }
+        ],
+        "missing_exchange_session_count": 34,
+        "missing_exchange_sessions": [
+          "2010-01-27",
+          "2010-01-28",
+          "2010-01-29",
+          "2010-02-01",
+          "2010-02-02",
+          "2010-02-03",
+          "2010-02-04",
+          "2010-02-05",
+          "2010-05-19",
+          "2010-11-15",
+          "2011-01-19",
+          "2011-01-20",
+          "2011-01-21",
+          "2011-01-24",
+          "2011-01-25",
+          "2011-08-22",
+          "2011-12-16",
+          "2012-02-29",
+          "2012-10-24",
+          "2014-01-02",
+          "2014-08-04",
+          "2016-04-18",
+          "2017-09-27",
+          "2019-03-01",
+          "2019-05-24",
+          "2019-06-07",
+          "2019-09-30",
+          "2020-06-18",
+          "2020-11-27",
+          "2020-12-24",
+          "2022-05-11",
+          "2022-06-17",
+          "2022-06-24",
+          "2022-12-16"
+        ],
+        "observed_exchange_sessions": 3488,
+        "raw_rows": 9468584
+      }
+    }
+  },
+  "protocol_sha256": "f9c3ca3ffc65efe7d51b31cacf2defd44494c97b81a0e3714ebe7aa61eb27a22",
+  "raw_redistribution": false,
+  "source_contracts": {
+    "aapl": {
+      "kaggle_license_label": "CC0: Public Domain",
+      "kaggle_slug": "kylegraupe/aapl-options-data-2016-2020",
+      "kaggle_version": 4,
+      "members": [
+        "aapl_2016_2020.csv",
+        "aapl_2021_2023.csv"
+      ],
+      "provenance": "undisclosed"
+    },
+    "qqq": {
+      "kaggle_license_label": "CC0: Public Domain",
+      "kaggle_slug": "kylegraupe/qqq-daily-option-chains-q1-2020-to-q4-2022",
+      "kaggle_version": 1,
+      "members": [
+        "qqq_2020_2022.csv"
+      ],
+      "provenance": "undisclosed"
+    },
+    "spy": {
+      "kaggle_license_label": "MIT",
+      "kaggle_slug": "dudesurfin/spy-options-eod-volatility-surface-2010-2023",
+      "kaggle_version": 2,
+      "members": [
+        "spy_eod_2010.parquet",
+        "spy_eod_2011.parquet",
+        "spy_eod_2012.parquet",
+        "spy_eod_2013.parquet",
+        "spy_eod_2014.parquet",
+        "spy_eod_2015.parquet",
+        "spy_eod_2016.parquet",
+        "spy_eod_2017.parquet",
+        "spy_eod_2018.parquet",
+        "spy_eod_2019.parquet",
+        "spy_eod_2020.parquet",
+        "spy_eod_2021.parquet",
+        "spy_eod_2022.parquet",
+        "spy_eod_2023.parquet"
+      ],
+      "provenance": "Uploader says raw data came from OptionsDX and was converted to Parquet"
+    }
+  },
+  "sources": {
+    "aapl": [
+      {
+        "bytes": 115834538,
+        "name": "aapl_options_v4.zip",
+        "sha256": "2772ca9a1c0d6852d56d0499624ccb421a1eda21e201c4e09fc8aa8b4c58380b"
+      }
+    ],
+    "qqq": [
+      {
+        "bytes": 132165529,
+        "name": "qqq_options_v1.zip",
+        "sha256": "25c1ebc91d49ba33e0337b4fc736e64c5c289183ae930db8977708e10f331ddc"
+      }
+    ],
+    "spy": [
+      {
+        "bytes": 509202154,
+        "name": "spy_options_v2.zip",
+        "sha256": "b9925943a6c7e909d03deb8d5e43a1c64956132c9b93c47d4262164273dcf999"
+      }
+    ]
+  }
+}

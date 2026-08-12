@@ -1,0 +1,50 @@
+{
+  "daily_panel": {
+    "first_session": "2022-12-27",
+    "last_session": "2025-10-17",
+    "path": "data/free_sources/processed/nq_rth_daily.parquet",
+    "quality_eligible": 678,
+    "rows": 726,
+    "sha256": "c6a07037c07acac36c5e7e93471e6fb4a6b9e47c9145e1185ad70d06b60a9b50",
+    "stitch_excluded": 16
+  },
+  "diagnostic_outputs": {
+    "forecasts": {
+      "path": "data/free_sources/processed/nq_intraday_forecasts.parquet",
+      "sha256": "113e8ae11973f061f00fc296026b2e86b777160f3767b056bc50e74f07ed984a"
+    },
+    "metrics": {
+      "path": "data/free_sources/processed/nq_intraday_metrics.json",
+      "sha256": "59b6c390067404e9313403d644fdefbf2f57441a34e1b08de33909d7002b75cb"
+    },
+    "phase_metrics": {
+      "path": "data/free_sources/processed/nq_intraday_phase_metrics.parquet",
+      "sha256": "1cb628aa9dbf11dfe30dc53f99f1f01416eb67053090bbe21056d6dbdbebe075"
+    }
+  },
+  "evidence_class": "diagnostic_exploratory_unknown_stitch",
+  "implementation": {
+    "path": "src/nq_intraday_study.py",
+    "sha256": "65a4f878f2363a932007ec7b470791d913c34a5556f25b23cf7bb29cdba8ab36"
+  },
+  "inputs": {
+    "skew": {
+      "path": "data/raw/skew_daily.parquet",
+      "sha256": "159deae9944941c92a454e80ff32d33eddc94e6e4f2e79a64678bd0429ade5a7"
+    },
+    "vxn": {
+      "path": "data/raw/vxn_daily.parquet",
+      "sha256": "61c4dec804140831dadb05d0cc34ee38a3d662d31c5b6fc258eae6918b455731"
+    }
+  },
+  "protocol": {
+    "path": "nq_intraday_study.yaml",
+    "sha256": "85bebefc8658091f0b5a180c345f61edc895f42b57156425cc8d38a568a1cab3"
+  },
+  "source": {
+    "path": "data/free_sources/raw/kaggle/nq/Dataset_NQ_1min_2022_2025.csv",
+    "raw_rows": 1048575,
+    "retained_rth_rows": 278041,
+    "sha256": "1577e60a7feab411e49da7a56c7052a64738cd1757cfd60aa11fd783ff43b60b"
+  }
+}

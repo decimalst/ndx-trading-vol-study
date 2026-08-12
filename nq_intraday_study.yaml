@@ -1,0 +1,133 @@
+# Frozen before implementation and before the Kaggle NQ file was downloaded or
+# inspected. This is an exploratory, target-specific diagnostic. The upstream
+# file does not identify contracts or document its continuous-futures stitch,
+# so no result may be described as a clean NQ futures backtest.
+
+protocol_version: 1
+specified_on: "2026-08-12"
+status: "diagnostic_exploratory_unknown_stitch"
+decision_time: "after 16:00 America/New_York"
+
+source:
+  provider: "Kaggle"
+  dataset_slug: "tgtanalytics/nq-futures-1min-bar-2022-2025"
+  dataset_url: "https://www.kaggle.com/datasets/tgtanalytics/nq-futures-1min-bar-2022-2025"
+  raw_path: "data/free_sources/raw/kaggle/nq/Dataset_NQ_1min_2022_2025.csv"
+  advertised_frequency: "one minute"
+  advertised_timezone: "America/New_York wall time"
+  advertised_coverage: ["2022-12-26", "2025-12-11"]
+  required_columns: ["timestamp_et", "open", "high", "low", "close", "volume"]
+  timestamp_aliases: ["timestamp et", "timestamp_et", "timestamp"]
+  timestamp_semantics: "start of the one-minute interval"
+  has_contract_identifier: false
+  has_roll_methodology: false
+  raw_must_remain_untracked: true
+
+fences:
+  data_start: "2022-12-26"
+  data_end: "2025-10-17"
+  sealed_ndx_clean_start: "2025-11-03"
+  forbid_rows_after_data_end_before_transforms: true
+  forbid_clean_origins: true
+  no_forward_fill: true
+
+session:
+  timezone: "America/New_York"
+  timestamp_ambiguity: "raise"
+  nonexistent_time: "raise"
+  weekdays_only: true
+  # CME coordinates U.S. equity-index futures price-limit hours with the cash
+  # session from 08:30-15:00 CT. The source calls this its RTH window. With
+  # interval-start labels, retain 09:30 through 15:59 ET.
+  rth_start_inclusive: "09:30:00"
+  rth_end_exclusive: "16:00:00"
+  expected_one_minute_bars: 390
+  reject_terminal_partial_session: true
+  exclude_incomplete_interior_sessions_from_statistics: true
+
+stitch_guard:
+  reason: >
+    The source has neither a contract identifier nor a documented roll rule.
+    Large discontinuities are conservatively treated as possible stitch or
+    bad-print neighborhoods. They are flags, not evidence of an actual roll.
+  overnight_absolute_log_gap: 0.03
+  within_rth_one_minute_absolute_log_return: 0.02
+  exclusion_radius_sessions: 1
+  never_include_cross_session_return_in_rv: true
+
+sampling:
+  endpoint_minutes: 5
+  anchor: "09:30 bar open"
+  endpoints: "close of each consecutive fifth one-minute bar"
+  expected_returns_per_complete_session: 78
+  phase_selection_for_primary_measure: 0
+
+jump_measure:
+  return_definition: "log(endpoint_close / prior_endpoint), anchored at the session open"
+  rv: "sum(r_i^2)"
+  mu_one: "sqrt(2/pi)"
+  bpv: "mu_one^-2 * n/(n-1) * sum_{i=2..n} abs(r_i)*abs(r_{i-1})"
+  mu_four_thirds: "2^(2/3) * Gamma(7/6) / sqrt(pi)"
+  tripower_quarticity: >
+    mu_four_thirds^-3 * n^2/(n-2) *
+    sum_{i=3..n} abs(r_i*r_{i-1}*r_{i-2})^(4/3)
+  bns_ratio_z: >
+    (1 - BPV/RV) /
+    sqrt((((pi/2)^2 + pi - 5) / n) * max(1, TQ/BPV^2))
+  jump_variation: "max(RV - BPV, 0)"
+  jump_share: "max(1 - BPV/RV, 0)"
+  significance_side: "upper one-sided"
+  alpha: 0.01
+  z_threshold: 2.3263478740408408
+
+intraday_shape:
+  first_hour_returns: 12
+  last_hour_returns: 12
+  outputs: ["first_hour_rv_share", "middle_rv_share", "last_hour_rv_share"]
+
+inputs:
+  vxn_path: "data/raw/vxn_daily.parquet"
+  skew_path: "data/raw/skew_daily.parquet"
+  cboe_close_delay_sessions: 1
+  cboe_join: "exact date to NQ RTH session, then one complete NQ session delay"
+  cboe_delay_session_universe: "quality-eligible complete NQ RTH sessions only"
+
+amendments:
+  - recorded_on: "2026-08-12"
+    stage: "after the first build returned zero forecast origins; before any diagnostic was scored"
+    change: >
+      Made the already-frozen phrase 'one complete NQ session delay' explicit:
+      an incomplete or stitch-excluded row cannot consume the VXN/SKEW delay.
+    gates_changed: false
+    min_train_rows_changed: false
+
+diagnostic:
+  target: "any BNS-significant session in the next five consecutive observed RTH sessions"
+  horizon_sessions: 5
+  score_only_when_all_target_sessions_are_quality_eligible: true
+  first_test_year: 2024
+  final_test_year: 2025
+  annual_forward_folds: true
+  training_target_must_complete_before_test_year: true
+  min_train_rows: 180
+  logistic_l2_c: 1.0
+  logistic_max_iter: 2000
+  baseline_features: ["log_rv", "log_rv_5", "log_rv_22", "bns_z", "jump_share_5"]
+  augmented_features:
+    ["log_rv", "log_rv_5", "log_rv_22", "bns_z", "jump_share_5",
+     "log_vxn_lag1", "log_skew_lag1"]
+  comparison: "augmented versus price_history on identical origins"
+  metrics: ["auc", "top_decile_lift"]
+  phase_step_sessions: 5
+  top_fraction: 0.10
+  no_candidate_selection: true
+  no_formal_trading_or_alpha_claim: true
+
+outputs:
+  processed_dir: "data/free_sources/processed"
+  daily_panel: "data/free_sources/processed/nq_rth_daily.parquet"
+  forecasts: "data/free_sources/processed/nq_intraday_forecasts.parquet"
+  phase_metrics: "data/free_sources/processed/nq_intraday_phase_metrics.parquet"
+  metrics: "data/free_sources/processed/nq_intraday_metrics.json"
+  manifest: "data/free_sources/processed/nq_intraday_manifest.json"
+  verification: "data/free_sources/processed/nq_intraday_verification.json"

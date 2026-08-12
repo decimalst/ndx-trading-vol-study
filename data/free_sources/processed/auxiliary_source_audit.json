@@ -1,0 +1,153 @@
+{
+  "cboe": {
+    "availability": "next locked QQQ session",
+    "panel_bytes": 263366,
+    "panel_commit_policy": "local_only_ignored",
+    "panel_rows": 26874,
+    "panel_sha256": "62f86e9656c181069dfefba8196f780e8468209f107a83b273b25e6b11bc7973",
+    "sources": {
+      "SKEW": {
+        "bytes": 202476,
+        "first_date": "1990-01-02",
+        "invalid_ohlc_rows": 0,
+        "last_date": "2026-08-11",
+        "rows": 9203,
+        "sha256": "becbf3f7510de66a736495df29a84ba1911d362402f05f6c46dedd5e9b971492",
+        "status": "strict_schema_validated",
+        "withheld_outside_locked_calendar": 0
+      },
+      "VIX": {
+        "bytes": 471391,
+        "first_date": "1990-01-02",
+        "invalid_ohlc_rows": 47,
+        "last_date": "2026-08-11",
+        "rows": 9248,
+        "sha256": "a34aabce269632f30904cf482986dd50b6d4cf51f2203dc51a0a9f460f3c90b2",
+        "status": "close_validated_ohlc_quarantined",
+        "withheld_outside_locked_calendar": 27
+      },
+      "VIX1D": {
+        "bytes": 53104,
+        "first_date": "2022-05-13",
+        "invalid_ohlc_rows": 0,
+        "last_date": "2026-08-11",
+        "rows": 1064,
+        "sha256": "e3642bd9dcddca1c9aaf740fe0121e2ea112ffc33dde278d235e15c6790b401b",
+        "status": "strict_schema_validated",
+        "withheld_outside_locked_calendar": 0
+      },
+      "VIX9D": {
+        "bytes": 199265,
+        "first_date": "2011-01-04",
+        "invalid_ohlc_rows": 0,
+        "last_date": "2026-08-11",
+        "rows": 3923,
+        "sha256": "0d6f600ee71bf6ffb5069d0c583cbe0b1ec97df6da4e4e439d5f0f22f5616abe",
+        "status": "strict_schema_validated",
+        "withheld_outside_locked_calendar": 0
+      },
+      "VVIX": {
+        "bytes": 108120,
+        "first_date": "2006-03-06",
+        "invalid_ohlc_rows": 0,
+        "last_date": "2026-08-11",
+        "rows": 5080,
+        "sha256": "f6bc726455fa3859c662875a005e97ba656b9536ae58fa6977ad24c6228e4f6a",
+        "status": "strict_schema_validated",
+        "withheld_outside_locked_calendar": 0
+      },
+      "VXN": {
+        "bytes": 217023,
+        "first_date": "2009-09-14",
+        "invalid_ohlc_rows": 0,
+        "last_date": "2026-08-11",
+        "rows": 4255,
+        "sha256": "753b5a406a7a888a9e4ca1a3e37a71fbb415a3883bc4b02ff20dbf0c5bdc6c98",
+        "status": "strict_schema_validated",
+        "withheld_outside_locked_calendar": 2
+      }
+    },
+    "status": "validated_official_local_only"
+  },
+  "cftc_209742": {
+    "availability_note": "generic acquisition panel uses report_date+7d; predictive CFTC protocol independently uses +10d and blackout exclusions",
+    "bytes": 785793,
+    "first_date": "2006-06-13",
+    "last_date": "2026-08-04",
+    "panel_bytes": 41848,
+    "panel_commit_policy": "processed_may_commit",
+    "panel_sha256": "415e907e903dd524dec2890561170f56d47c2d696b6393a7ba58b87f54452873",
+    "rows": 1052,
+    "sha256": "7d93386e5787b9cab7d03f73a56147ee48c73c1a325e25b4e904dff6a53d87b7",
+    "status": "validated_official_public_domain"
+  },
+  "hf_spx": {
+    "bytes": 1743930,
+    "declared_rows": 24167,
+    "declared_rows_match": true,
+    "failure": "HF SPX has nonpositive OHLC values",
+    "pinned_bytes_match": true,
+    "pinned_sha256_match": true,
+    "rows": 24167,
+    "sha256": "1d1be3b54b594991aa40265b27e29ac2d8845bdfa62dce1a626d30f6f5c09272",
+    "status": "quarantined_strict_ohlc_failure",
+    "zero_open_rows": 5075
+  },
+  "source_metadata_corrections": {
+    "hf_spx": [
+      {
+        "corrected_value": 24167,
+        "evidence": "Full CSV parse; the pinned file has no final newline, so line-count arithmetic understated data rows by one.",
+        "field": "rows",
+        "previous_value": 24166
+      }
+    ],
+    "zenodo_tsla": [
+      {
+        "corrected_value": "2023-08-31",
+        "evidence": "Full pinned-MD5 CSV schema audit replaced the earlier sample-derived boundary.",
+        "field": "sampled_window_end",
+        "previous_value": "2023-08-25"
+      }
+    ]
+  },
+  "zenodo_tsla": {
+    "bytes": 1035799239,
+    "expiries": 281,
+    "first_date": "2018-08-06",
+    "has_bid_offer": true,
+    "has_open_interest": true,
+    "last_date": "2023-08-31",
+    "md5": "63722cfae0ee22bfa5fabcd1720a3d7c",
+    "md5_pin_verified": true,
+    "quote_dates": 1277,
+    "rows": 4584740,
+    "schema_columns": [
+      "date",
+      "exdate",
+      "cp_flag",
+      "strike_price",
+      "best_bid",
+      "best_offer",
+      "volume",
+      "open_interest",
+      "impl_volatility",
+      "delta",
+      "gamma",
+      "vega",
+      "theta",
+      "current_price",
+      "time_to_maturity",
+      "historical_volatility",
+      "BS_price",
+      "avg_bid_offer",
+      "bspricediff",
+      "real_iv",
+      "r",
+      "SP/CP",
+      "predicted_iv"
+    ],
+    "sha256": "05a2992c0230be550d8fab0edf748d9b158d8388dbc18fa917729012c44b7650",
+    "status": "validated_private_research_only"
+  }
+}

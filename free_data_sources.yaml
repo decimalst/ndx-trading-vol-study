@@ -1,0 +1,482 @@
+protocol_version: 1
+frozen_on: "2026-08-12"
+status: "acquisition_only_no_download"
+
+storage:
+  raw_root: "data/free_sources/raw"
+  processed_root: "data/free_sources/processed"
+  manifest_suffix: ".manifest.json"
+  minimum_free_reserve_bytes: 5368709120
+  download_safety_multiplier: 2.0
+
+policies:
+  raw_commit_policy: "local_only_never_commit"
+  manifest_policy: "sha256_size_and_source_identity_required"
+  overwrite_policy: "refuse_unmanifested_or_hash_mismatched_existing_files"
+  dynamic_source_policy: "record_retrieval_timestamp_and_observed_hash; never trust an earlier hash"
+  provenance_policy: "unidentified or conflicting upstream rights remain private-research-only"
+  no_download_during_protocol_construction: true
+
+availability:
+  cftc_tff:
+    rule: "report_date_plus_7_calendar_days"
+    days: 7
+    rationale: "Tuesday positions are normally released Friday; seven calendar days is a conservative fail-closed research timestamp."
+  cboe_daily:
+    rule: "next_declared_exchange_session"
+    sessions: 1
+    rationale: "A daily close may first enter a model at the following declared exchange session."
+
+sources:
+  cftc_nq_tff:
+    source_id: "cftc:socrata:gpe5-46if"
+    family: "cftc_tff"
+    canonical_url: "https://publicreporting.cftc.gov/resource/gpe5-46if.csv"
+    landing_url: "https://dev.socrata.com/foundry/publicreporting.cftc.gov/gpe5-46if"
+    version: "socrata-asset-gpe5-46if-dynamic"
+    immutable: false
+    audited_at_utc: "2026-08-12T19:55:00Z"
+    audited_nasdaq_rows: 2531
+    contracts:
+      - code: "209742"
+        role: "pre-consolidation extension and renamed E-mini series"
+        first_date: "2006-06-13"
+        last_audited_date: "2026-08-04"
+      - code: "20974+"
+        role: "preferred consolidated Nasdaq-100 series from 2010 onward"
+        first_date: "2010-06-15"
+        last_audited_date: "2026-08-04"
+      - code: "209747"
+        role: "Micro E-mini diagnostic only; never add to consolidated positions"
+        first_date: "2020-08-04"
+        last_audited_date: "2026-08-04"
+    license_class: "us_government_public_domain"
+    provenance_class: "official_primary"
+    redistribution: "allowed_with_cftc_acknowledgement"
+    commit_policy: "raw_local_only_processed_may_commit"
+    availability_policy: "cftc_tff"
+    acquisition_enabled: true
+    downloads:
+      - output: "cftc/nq_tff_209742.csv"
+        expected_bytes: null
+        preflight_bytes: 8388608
+        command: >-
+          curl -fL -G https://publicreporting.cftc.gov/resource/gpe5-46if.csv
+          --data-urlencode '$select=*'
+          --data-urlencode '$where=cftc_contract_market_code="209742"'
+          --data-urlencode '$order=report_date_as_yyyy_mm_dd'
+          --data-urlencode '$limit=50000'
+          -o data/free_sources/raw/cftc/nq_tff_209742.csv
+      - output: "cftc/nq_tff_20974_plus.csv"
+        expected_bytes: null
+        preflight_bytes: 8388608
+        command: >-
+          curl -fL -G https://publicreporting.cftc.gov/resource/gpe5-46if.csv
+          --data-urlencode '$select=*'
+          --data-urlencode '$where=cftc_contract_market_code="20974+"'
+          --data-urlencode '$order=report_date_as_yyyy_mm_dd'
+          --data-urlencode '$limit=50000'
+          -o data/free_sources/raw/cftc/nq_tff_20974_plus.csv
+
+  cboe_vix:
+    source_id: "cboe:daily-index:VIX"
+    family: "cboe_daily"
+    canonical_url: "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+    version: "daily-live"
+    immutable: false
+    audited_at_utc: "2026-08-12T19:50:00Z"
+    audited_bytes: 471391
+    audited_sha256: "a34aabce269632f30904cf482986dd50b6d4cf51f2203dc51a0a9f460f3c90b2"
+    audited_first_date: "1990-01-02"
+    audited_last_date: "2026-08-11"
+    schema: "ohlc"
+    license_class: "cboe_personal_noncommercial_download"
+    provenance_class: "official_primary"
+    redistribution: "prohibited_without_cboe_permission"
+    commit_policy: "raw_local_only_derived_publication_requires_review"
+    availability_policy: "cboe_daily"
+    acquisition_enabled: true
+    download:
+      output: "cboe/VIX_History.csv"
+      expected_bytes: null
+      preflight_bytes: 471391
+      command: "curl -fL https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv -o data/free_sources/raw/cboe/VIX_History.csv"
+
+  cboe_vxn:
+    source_id: "cboe:daily-index:VXN"
+    family: "cboe_daily"
+    canonical_url: "https://cdn.cboe.com/api/global/us_indices/daily_prices/VXN_History.csv"
+    version: "daily-live"
+    immutable: false
+    audited_at_utc: "2026-08-12T19:50:00Z"
+    audited_bytes: 217023
+    audited_sha256: "753b5a406a7a888a9e4ca1a3e37a71fbb415a3883bc4b02ff20dbf0c5bdc6c98"
+    audited_first_date: "2009-09-14"
+    audited_last_date: "2026-08-11"
+    schema: "ohlc"
+    license_class: "cboe_personal_noncommercial_download"
+    provenance_class: "official_primary"
+    redistribution: "prohibited_without_cboe_permission"
+    commit_policy: "raw_local_only_derived_publication_requires_review"
+    availability_policy: "cboe_daily"
+    acquisition_enabled: true
+    download:
+      output: "cboe/VXN_History.csv"
+      expected_bytes: null
+      preflight_bytes: 217023
+      command: "curl -fL https://cdn.cboe.com/api/global/us_indices/daily_prices/VXN_History.csv -o data/free_sources/raw/cboe/VXN_History.csv"
+
+  cboe_vix1d:
+    source_id: "cboe:daily-index:VIX1D"
+    family: "cboe_daily"
+    canonical_url: "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX1D_History.csv"
+    version: "daily-live-revised-backtest-before-2023-04-24"
+    immutable: false
+    audited_at_utc: "2026-08-12T19:50:00Z"
+    audited_bytes: 53104
+    audited_sha256: "e3642bd9dcddca1c9aaf740fe0121e2ea112ffc33dde278d235e15c6790b401b"
+    audited_first_date: "2022-05-13"
+    audited_last_date: "2026-08-11"
+    schema: "ohlc"
+    license_class: "cboe_personal_noncommercial_download"
+    provenance_class: "official_primary_with_backtested_history"
+    redistribution: "prohibited_without_cboe_permission"
+    commit_policy: "raw_local_only_derived_publication_requires_review"
+    availability_policy: "cboe_daily"
+    acquisition_enabled: true
+    download:
+      output: "cboe/VIX1D_History.csv"
+      expected_bytes: null
+      preflight_bytes: 53104
+      command: "curl -fL https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX1D_History.csv -o data/free_sources/raw/cboe/VIX1D_History.csv"
+
+  cboe_vix9d:
+    source_id: "cboe:daily-index:VIX9D"
+    family: "cboe_daily"
+    canonical_url: "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX9D_History.csv"
+    version: "daily-live"
+    immutable: false
+    audited_at_utc: "2026-08-12T19:50:00Z"
+    audited_bytes: 199265
+    audited_sha256: "0d6f600ee71bf6ffb5069d0c583cbe0b1ec97df6da4e4e439d5f0f22f5616abe"
+    audited_first_date: "2011-01-04"
+    audited_last_date: "2026-08-11"
+    schema: "ohlc"
+    license_class: "cboe_personal_noncommercial_download"
+    provenance_class: "official_primary"
+    redistribution: "prohibited_without_cboe_permission"
+    commit_policy: "raw_local_only_derived_publication_requires_review"
+    availability_policy: "cboe_daily"
+    acquisition_enabled: true
+    download:
+      output: "cboe/VIX9D_History.csv"
+      expected_bytes: null
+      preflight_bytes: 199265
+      command: "curl -fL https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX9D_History.csv -o data/free_sources/raw/cboe/VIX9D_History.csv"
+
+  cboe_skew:
+    source_id: "cboe:daily-index:SKEW"
+    family: "cboe_daily"
+    canonical_url: "https://cdn.cboe.com/api/global/us_indices/daily_prices/SKEW_History.csv"
+    version: "daily-live"
+    immutable: false
+    audited_at_utc: "2026-08-12T19:50:00Z"
+    audited_bytes: 202476
+    audited_sha256: "becbf3f7510de66a736495df29a84ba1911d362402f05f6c46dedd5e9b971492"
+    audited_first_date: "1990-01-02"
+    audited_last_date: "2026-08-11"
+    schema: "close_only"
+    license_class: "cboe_personal_noncommercial_download"
+    provenance_class: "official_primary"
+    redistribution: "prohibited_without_cboe_permission"
+    commit_policy: "raw_local_only_derived_publication_requires_review"
+    availability_policy: "cboe_daily"
+    acquisition_enabled: true
+    download:
+      output: "cboe/SKEW_History.csv"
+      expected_bytes: null
+      preflight_bytes: 202476
+      command: "curl -fL https://cdn.cboe.com/api/global/us_indices/daily_prices/SKEW_History.csv -o data/free_sources/raw/cboe/SKEW_History.csv"
+
+  cboe_vvix:
+    source_id: "cboe:daily-index:VVIX"
+    family: "cboe_daily"
+    canonical_url: "https://cdn.cboe.com/api/global/us_indices/daily_prices/VVIX_History.csv"
+    version: "daily-live"
+    immutable: false
+    audited_at_utc: "2026-08-12T19:50:00Z"
+    audited_bytes: 108120
+    audited_sha256: "f6bc726455fa3859c662875a005e97ba656b9536ae58fa6977ad24c6228e4f6a"
+    audited_first_date: "2006-03-06"
+    audited_last_date: "2026-08-11"
+    schema: "close_only"
+    license_class: "cboe_personal_noncommercial_download"
+    provenance_class: "official_primary"
+    redistribution: "prohibited_without_cboe_permission"
+    commit_policy: "raw_local_only_derived_publication_requires_review"
+    availability_policy: "cboe_daily"
+    acquisition_enabled: true
+    download:
+      output: "cboe/VVIX_History.csv"
+      expected_bytes: null
+      preflight_bytes: 108120
+      command: "curl -fL https://cdn.cboe.com/api/global/us_indices/daily_prices/VVIX_History.csv -o data/free_sources/raw/cboe/VVIX_History.csv"
+
+  hf_spx:
+    source_id: "huggingface:misikoff/SPX"
+    family: "huggingface_csv"
+    canonical_url: "https://huggingface.co/datasets/misikoff/SPX"
+    revision: "498783fd0df5ad1f13c98e42329c60b8f8f9c6c1"
+    immutable: true
+    file: "^SPX.csv"
+    file_bytes: 1743930
+    file_sha256: "1d1be3b54b594991aa40265b27e29ac2d8845bdfa62dce1a626d30f6f5c09272"
+    rows: 24167
+    first_date: "1927-12-30"
+    last_date: "2024-03-15"
+    metadata_corrections:
+      - field: "rows"
+        previous_value: 24166
+        corrected_value: 24167
+        evidence: "Full CSV parse; the pinned file has no final newline, so line-count arithmetic understated data rows by one."
+    license_class: "uploader_claim_mit"
+    provenance_class: "upstream_undocumented"
+    redistribution: "forbidden_pending_provenance"
+    commit_policy: "raw_local_only_diagnostic_only"
+    acquisition_enabled: true
+    download:
+      output: "huggingface/misikoff_spx/^SPX.csv"
+      expected_bytes: 1743930
+      command: >-
+        hf download misikoff/SPX ^SPX.csv --repo-type dataset
+        --revision 498783fd0df5ad1f13c98e42329c60b8f8f9c6c1
+        --local-dir data/free_sources/raw/huggingface/misikoff_spx
+
+  hf_equities_5m_options:
+    source_id: "huggingface:fabhaus/equities_5m_options"
+    family: "huggingface_jsonl"
+    canonical_url: "https://huggingface.co/datasets/fabhaus/equities_5m_options"
+    revision: "99d9d32f99e955ca1f5b7fa4e08606da72707fb0"
+    immutable: true
+    repository_bytes: 60594909400
+    claimed_rows: 77400000
+    claimed_window: ["2024-01", "2026-03"]
+    pilot_file: "2024-01.jsonl"
+    pilot_file_bytes: 14412690
+    pilot_file_sha256: "0eefb8163e8573930bc00f20f44db70fc99b7e988328a90e03f74e7c3eb28361"
+    pilot_rows: 18830
+    pilot_actual_dates: ["2024-01-18", "2024-01-31"]
+    pilot_qqq_rows: 0
+    pilot_spy_rows: 604
+    license_class: "huggingface_other"
+    provenance_class: "upstream_bars_various_sources_unnamed"
+    redistribution: "forbidden_pending_provenance"
+    commit_policy: "raw_local_only_pilot_research"
+    acquisition_enabled: true
+    download:
+      output: "huggingface/fabhaus_options/2024-01.jsonl"
+      expected_bytes: 14412690
+      command: >-
+        hf download fabhaus/equities_5m_options 2024-01.jsonl --repo-type dataset
+        --revision 99d9d32f99e955ca1f5b7fa4e08606da72707fb0
+        --local-dir data/free_sources/raw/huggingface/fabhaus_options
+
+  hf_equities_5m_stockprices:
+    source_id: "huggingface:fabhaus/equities_5m_stockprices"
+    family: "huggingface_jsonl"
+    canonical_url: "https://huggingface.co/datasets/fabhaus/equities_5m_stockprices"
+    revision: "f17c0b0c3cf6a455994f93d6a85e76274172ab03"
+    immutable: true
+    repository_bytes: 478490536024
+    claimed_rows: 278700000
+    license_class: "huggingface_other"
+    provenance_class: "upstream_bars_several_unnamed_apis_unadjusted"
+    redistribution: "forbidden_pending_provenance"
+    commit_policy: "raw_local_only_do_not_bulk_download"
+    acquisition_enabled: false
+    disabled_reason: "478 GB, unnamed API rights, and unadjusted corporate actions; use an audited targeted underlying source instead."
+
+  zenodo_tsla_options:
+    source_id: "zenodo:10.5281/zenodo.15496947"
+    family: "zenodo_csv"
+    canonical_url: "https://doi.org/10.5281/zenodo.15496947"
+    api_url: "https://zenodo.org/api/records/15496947"
+    version: "v1"
+    record_id: 15496947
+    immutable: true
+    file: "1_sorted_tsla.csv"
+    file_bytes: 1035799239
+    file_md5: "63722cfae0ee22bfa5fabcd1720a3d7c"
+    rows: 4584740
+    validated_window: ["2018-08-06", "2023-08-31"]
+    metadata_corrections:
+      - field: "sampled_window_end"
+        previous_value: "2023-08-25"
+        corrected_value: "2023-08-31"
+        evidence: "Full pinned-MD5 CSV schema audit replaced the earlier sample-derived boundary."
+    license_class: "depositor_claim_cc_by_4_0"
+    provenance_class: "original_market_data_source_undocumented"
+    redistribution: "forbidden_pending_provenance"
+    commit_policy: "raw_local_only_quarantine"
+    acquisition_enabled: true
+    download:
+      output: "zenodo/15496947/1_sorted_tsla.csv"
+      expected_bytes: 1035799239
+      command: >-
+        curl -fL https://zenodo.org/api/records/15496947/files/1_sorted_tsla.csv/content
+        -o data/free_sources/raw/zenodo/15496947/1_sorted_tsla.csv
+
+  kaggle_qqq_options:
+    source_id: "kaggle:kylegraupe/qqq-daily-option-chains-q1-2020-to-q4-2022"
+    family: "kaggle_optionsdx_csv"
+    canonical_url: "https://www.kaggle.com/datasets/kylegraupe/qqq-daily-option-chains-q1-2020-to-q4-2022"
+    version: 1
+    immutable: true
+    archive_bytes: 132165529
+    logical_bytes: 628230647
+    rows: 1775749
+    actual_window: ["2021-01-04", "2022-12-30"]
+    license_class: "uploader_claim_cc0"
+    provenance_class: "upstream_undocumented_with_session_calendar_anomalies"
+    redistribution: "forbidden_pending_provenance"
+    commit_policy: "raw_local_only_quarantine"
+    acquisition_enabled: true
+    download:
+      output: "kaggle/qqq/qqq_options_v1.zip"
+      expected_bytes: 132165529
+      command: >-
+        curl -fL 'https://www.kaggle.com/api/v1/datasets/download/kylegraupe/qqq-daily-option-chains-q1-2020-to-q4-2022?datasetVersionNumber=1'
+        -o data/free_sources/raw/kaggle/qqq/qqq_options_v1.zip
+
+  kaggle_spy_options:
+    source_id: "kaggle:dudesurfin/spy-options-eod-volatility-surface-2010-2023"
+    family: "kaggle_optionsdx_parquet"
+    canonical_url: "https://www.kaggle.com/datasets/dudesurfin/spy-options-eod-volatility-surface-2010-2023"
+    version: 2
+    immutable: true
+    archive_bytes: 509202154
+    logical_bytes: 596256111
+    files: 14
+    actual_window: ["2010-01-01", "2023-12-31"]
+    license_class: "uploader_claim_mit"
+    provenance_class: "derived_from_optionsdx_redistribution_rights_unverified"
+    redistribution: "forbidden_pending_optionsdx_permission"
+    commit_policy: "raw_local_only_quarantine"
+    acquisition_enabled: true
+    download:
+      output: "kaggle/spy/spy_options_v2.zip"
+      expected_bytes: 509202154
+      command: >-
+        curl -fL 'https://www.kaggle.com/api/v1/datasets/download/dudesurfin/spy-options-eod-volatility-surface-2010-2023?datasetVersionNumber=2'
+        -o data/free_sources/raw/kaggle/spy/spy_options_v2.zip
+
+  kaggle_nq_1m:
+    source_id: "kaggle:tgtanalytics/nq-futures-1min-bar-2022-2025"
+    family: "kaggle_nq_csv"
+    canonical_url: "https://www.kaggle.com/datasets/tgtanalytics/nq-futures-1min-bar-2022-2025"
+    version: 1
+    immutable: true
+    archive_bytes: 19141759
+    logical_bytes: 72522264
+    rows: 1048575
+    actual_window: ["2022-12-26T18:01:00 America/New_York", "2025-12-11T20:52:00 America/New_York"]
+    license_class: "uploader_claim_cc0"
+    provenance_class: "continuous_contract_construction_undocumented_and_truncated"
+    redistribution: "forbidden_pending_provenance"
+    commit_policy: "raw_local_only_quarantine"
+    acquisition_enabled: true
+    download:
+      output: "kaggle/nq/nq_1m_v1.zip"
+      expected_bytes: 19141759
+      command: >-
+        curl -fL 'https://www.kaggle.com/api/v1/datasets/download/tgtanalytics/nq-futures-1min-bar-2022-2025?datasetVersionNumber=1'
+        -o data/free_sources/raw/kaggle/nq/nq_1m_v1.zip
+
+  kaggle_aapl_options:
+    source_id: "kaggle:kylegraupe/aapl-options-data-2016-2020"
+    family: "kaggle_optionsdx_csv"
+    canonical_url: "https://www.kaggle.com/datasets/kylegraupe/aapl-options-data-2016-2020"
+    version: 4
+    immutable: true
+    archive_bytes: 115834538
+    logical_bytes: 553058400
+    rows: 1563515
+    actual_window: ["2016-01-04", "2023-03-31"]
+    license_class: "uploader_claim_cc0"
+    provenance_class: "upstream_undocumented_with_session_calendar_anomalies"
+    redistribution: "forbidden_pending_provenance"
+    commit_policy: "raw_local_only_quarantine"
+    acquisition_enabled: true
+    download:
+      output: "kaggle/aapl/aapl_options_v4.zip"
+      expected_bytes: 115834538
+      command: >-
+        curl -fL 'https://www.kaggle.com/api/v1/datasets/download/kylegraupe/aapl-options-data-2016-2020?datasetVersionNumber=4'
+        -o data/free_sources/raw/kaggle/aapl/aapl_options_v4.zip
+
+schemas:
+  optionsdx:
+    columns:
+      - QUOTE_UNIXTIME
+      - QUOTE_READTIME
+      - QUOTE_DATE
+      - QUOTE_TIME_HOURS
+      - UNDERLYING_LAST
+      - EXPIRE_DATE
+      - EXPIRE_UNIX
+      - DTE
+      - C_DELTA
+      - C_GAMMA
+      - C_VEGA
+      - C_THETA
+      - C_RHO
+      - C_IV
+      - C_VOLUME
+      - C_LAST
+      - C_SIZE
+      - C_BID
+      - C_ASK
+      - STRIKE
+      - P_BID
+      - P_ASK
+      - P_SIZE
+      - P_LAST
+      - P_DELTA
+      - P_GAMMA
+      - P_VEGA
+      - P_THETA
+      - P_RHO
+      - P_IV
+      - P_VOLUME
+      - STRIKE_DISTANCE
+      - STRIKE_DISTANCE_PCT
+    warning: "C_SIZE and P_SIZE are quote-size strings, not open interest; these files cannot identify dealer GEX."
+  nq_1m:
+    columns: ["timestamp ET", open, high, low, close, volume, Vwap_RTH, Vwap_ETH]
+    timezone: "America/New_York"
+    warning: "No contract, expiry, or roll field; DST localization and continuous-contract provenance must fail closed."
+  zenodo_tsla:
+    columns:
+      - date
+      - exdate
+      - cp_flag
+      - strike_price
+      - best_bid
+      - best_offer
+      - volume
+      - open_interest
+      - impl_volatility
+      - delta
+      - gamma
+      - vega
+      - theta
+      - current_price
+      - time_to_maturity
+      - historical_volatility
+      - BS_price
+      - avg_bid_offer
+      - bspricediff
+      - real_iv
+      - r
+      - SP/CP
+      - predicted_iv
