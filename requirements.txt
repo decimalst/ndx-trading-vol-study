@@ -1,0 +1,12 @@
+numpy>=1.26
+pandas[pyarrow]>=2.1
+pyyaml>=6.0
+requests>=2.31
+scipy>=1.11
+statsmodels>=0.14
+yfinance>=0.2.40
+lxml>=5.0          # yfinance.get_earnings_dates() parses HTML with it
+matplotlib>=3.8
+# Chronos-2 (pulls torch; on CPU-only boxes install torch first from the
+# cpu index to avoid the CUDA wheel: pip install torch --index-url https://download.pytorch.org/whl/cpu)
+chronos-forecasting>=2.3

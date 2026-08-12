@@ -1,0 +1,141 @@
+# NDX realized-variance forecasting experiment
+# FREEZE THIS FILE before the clean-phase evaluation. Any change after
+# clean-phase results have been observed must be logged in reports/AMENDMENTS.md
+# and restarts the pre-registration clock.
+
+ticker: QQQ
+index_symbol: "^NDX"        # used for daily OHLC cross-check only
+bar_minutes: 5
+tz: America/New_York
+rth_start: "09:30"
+rth_end: "16:00"
+min_bars_per_day: 60        # of 78 five-minute RTH bars; below this the day is dropped (half days)
+
+# --- Walk-forward ---
+context_days: 1024          # trading days of history fed to Chronos-2 per origin
+min_train_days: 500         # min observations before HAR/persistence emit a forecast
+horizon_days: 1
+cum_horizon_cal_days: 30    # VXN-comparison horizon (30 calendar days)
+
+# --- Leakage boundary ---
+# Chronos-2 checkpoint published 2025-10-17 (arXiv 2510.15821 / HF amazon/chronos-2).
+# Anything before that date is potentially in or adjacent to the training corpus.
+diagnostic_start: "2016-01-04"
+diagnostic_end:   "2025-10-17"
+clean_start:      "2025-11-03"   # first Monday after a two-week buffer
+# clean_end: null                # open-ended; evaluation accrues forward
+
+quantiles: [0.05, 0.10, 0.25, 0.50, 0.75, 0.90, 0.95]
+
+# --- Pre-committed next evaluation -------------------------------------
+# Written 2026-08-11, immediately after the first clean-phase evaluation
+# returned a null on H1/H3 (reports/FINDINGS.md). Committed now, while there
+# is no result to protect, precisely so "let it accrue" cannot decay into
+# monthly peeking. Reaching a gate is permission to look, not permission to
+# stop at a favourable p.
+# --- Pre-specified concentration test (written 2026-08-12, BEFORE running) --
+# Motivation: the diagnostic window (n=2463, 157 heavy-earnings days) shows
+# har_iv_x vs har_iv DM = -0.031 (p=0.975) and paired win rates BELOW half
+# (har_x 71/157, har_iv_x 69/157), while the clean window showed 9/12 — the
+# earnings covariate looks null on the well-powered sample. The one testable
+# defence: NDX concentration is far higher now than 2016-2021, so the effect
+# should strengthen with concentration. This is a SINGLE test with a stated
+# decision criterion, specified before the plot is drawn.
+concentration_test:
+  primary_pair: [har_x, har]           # the pair that generated the hypothesis
+  sample: diagnostic heavy-earnings days (earnings_wt(t+1) >= 5.0), n=157
+  win: "QLIKE(har_x) < QLIKE(har) at the same origin"
+  regressor: >
+    contemporaneous tracked-basket weight: sum of point-in-time weights of the
+    13 tracked names (data/raw/pit_weights.parquet) at the origin date.
+    Caveat, accepted: basket membership is today's, so early-year concentration
+    of the era's own mega-caps is understated (survivorship in the regressor).
+  test: "day-level logistic regression win ~ concentration; one-sided H1: b>0"
+  alpha: 0.05
+  decision: >
+    b>0 with one-sided p<0.05 -> regime effect: clean-window earnings result
+    is worth accruing, weighted toward recent data. Otherwise -> the
+    clean-window 9/12 is treated as consistent with noise and the earnings
+    story rests entirely on the n=500 gate below. No re-specification of the
+    regressor or threshold after seeing results.
+  secondary_report_only: [har_iv_x vs har_iv same regression, yearly win-rate table]
+
+# --- Pre-registered carry study (written 2026-08-12, BEFORE implementation) --
+# The question the project actually opened with, and has never tested:
+# does CONDITIONAL selection beat UNCONDITIONAL carry? Forecasting variance
+# well is not the same as trading the premium. Distinct from the forecasting
+# freeze: different question, different evaluation, DIAGNOSTIC WINDOW ONLY.
+# The clean window is held untouched as out-of-sample confirmation at the gate.
+carry_study:
+  window: diagnostic          # 2016-01-04 .. 2025-10-17. NOT run on clean.
+  instrument_model: >
+    30-calendar-day variance swap, entered at origin t, held to expiry.
+    P&L to the SHORT, per unit variance notional, in 30-day total-variance
+    units: pnl = vxn_exp_var_30c(t) - fwd_var_30c(t). Also reported in
+    vega-equivalent vol points: (K^2 - RV^2) / (2K) annualised, K = VXN/100.
+  signal: >
+    richness(t) = log(vxn_exp_var_30c(t)) - log_cum_var_hat(t) from har_cum.
+    har_cum is an expanding-window RV-history forecast that does NOT consume
+    VXN, so the signal is genuinely "market implied vs my own forecast" and
+    not circular.
+  rule: short if richness(t) > threshold, else flat.
+  threshold: median          # trade the richer half. Fixed, not tuned.
+  inference_sample: >
+    NON-OVERLAPPING trades only: every 21st origin (~117 independent trades),
+    all 21 phase offsets reported. Overlapping series is descriptive only —
+    30-day targets overlap and inflate significance.
+  primary_criterion: >
+    Conditional beats unconditional on mean P&L per trade (two-sided, alpha
+    0.05, bootstrap over non-overlapping trades) AND does not worsen 5% CVaR.
+    Both required. Improving the mean while deepening the tail is a FAIL:
+    this is a short-convexity position and the tail is the entire risk.
+  must_report: [worst single trade, 5% CVaR, max drawdown, hit rate,
+                trades taken vs available, all 21 block phases]
+  known_limits: >
+    P&L proxy only: no transaction costs, no bid-ask, no margin or financing,
+    no gap risk, and NDX variance swaps are not retail-accessible — a real
+    implementation (strangles, VXN futures) has a materially worse tail than
+    this linear proxy. ~117 independent trades spanning 2016-2025 do include
+    Feb-Mar 2020, 2022 and Aug 2024, so the tail is partly observed, which is
+    more than the clean window offers. Not a backtest of a tradable strategy.
+
+next_evaluation:
+  at_origins: 500              # whichever comes first
+  at_date: "2027-06-30"
+  # Confirmatory test for the one slice that showed life (heavy earnings).
+  # Below these counts the slice stays descriptive no matter what it shows.
+  earnings_slice_confirmatory:
+    min_heavy_earnings_days: 40
+    test: "DM on QLIKE, har_x vs har AND chronos_cov vs chronos_uni, both required"
+    alpha: 0.05
+    note: >
+      Report the paired per-origin sign count alongside the DM statistic. At
+      n=8 the mean was carried ~50% by a single day (2025-11-19) even though
+      7/8 days individually improved; a mean-only reading of this slice is
+      not trustworthy at small n.
+
+ewma_lambda: 0.94
+days_to_event_cap: 15       # countdown features capped here
+event_decay_tau: 3.0        # HAR-X uses exp(-days_to_event / tau)
+# Heavy-earnings slice: ABSOLUTE cutoff, frozen 2026-08-12.
+# Was an in-sample 80th percentile of nonzero earnings weight, which is
+# recomputed every run and reshuffles when the underlying data changes — the
+# slice went from n=8 to n=7 purely from the point-in-time weight correction.
+# A moving definition sitting on top of the only result showing life is a
+# researcher degree of freedom, so it is now a fixed number: days on which at
+# least this much index weight reports. Frozen while there is no result to
+# protect. Do not tune it.
+heavy_earnings_min_wt: 5.0    # percent of NDX weight reporting
+heavy_earnings_quantile: 0.8  # legacy; used only if min_wt is absent
+
+chronos:
+  model_id: "amazon/chronos-2"
+  batch_origins: 32
+  device: auto              # auto -> cuda if available else cpu
+
+paths:
+  raw: data/raw
+  processed: data/processed
+  forecasts: data/forecasts
+  reports: reports
+  calendars: calendars
