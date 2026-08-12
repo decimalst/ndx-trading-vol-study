@@ -1,0 +1,75 @@
+# Frozen before downloading the Oxford-Man mirror or scoring either study.
+# Source-location amendment: the branch URL returned 404 before any bytes were
+# accepted. It was replaced, before scoring, with the last commit containing
+# the file. Confirmation now ends before that archive snapshot.
+protocol_version: 1
+status: target_and_regime_diagnostics
+decision_time: "16:00 America/New_York"
+
+jump_target:
+  source:
+    name: "Oxford-Man Institute Realized Library, static GitHub mirror"
+    url: "https://raw.githubusercontent.com/onnokleen/mfGARCH/308b795fa220a58dea6784fe8e2566bcf8dea334/data-raw/OxfordManRealizedVolatilityIndices.zip"
+    repository_commit: "308b795fa220a58dea6784fe8e2566bcf8dea334"
+    asset: SPX
+    accepted_symbols: [".SPX", "SPX", "SPX2"]
+    forbidden_symbols: [".IXIC", "IXIC"]
+    required_columns: [rv5, bv]
+    immutable_hash_required: true
+  windows:
+    training_start: "2004-01-01"
+    confirmation_start: "2014-01-02"
+    confirmation_end: "2017-12-29"
+    forbid_2022_and_later: true
+  target:
+    horizon_sessions: 5
+    material_jump_quantile: 0.90
+    definition: "jump_share = max(rv5 - bv, 0) / rv5; event if any next-five-session jump_share exceeds the training-fold 90th percentile"
+  inputs:
+    realized_history: [jump_share_d, jump_share_w, jump_share_m]
+    atm: "one-session-lagged VIX close"
+    surface: "one-session-lagged SKEW close"
+    no_forward_fill: true
+  fitting:
+    refit: annual
+    min_train_observations: 750
+    logistic_ridge: 0.000001
+  primary_comparison: surface_vs_atm
+  success_requires:
+    - "average five-phase Brier loss is lower for surface than ATM"
+    - "average five-phase log loss is lower for surface than ATM"
+  interpretation: >
+    This changes the target and uses a new external SPX realized-measure source,
+    but the surface hypothesis was motivated by prior NDX work. A pass is an
+    external mechanism confirmation, not an NDX trading result.
+
+regime_transition:
+  source: "existing point-in-time QQQ master_daily log_rv"
+  window:
+    start: "2016-01-04"
+    end: "2025-10-17"
+    clean_start: "2025-11-03"
+    forbid_clean_origins: true
+  target:
+    horizon_sessions: 5
+    stress_quantile: 0.80
+    score_only_calm_origins: true
+    definition: "any next-five-session log_rv exceeds the annual training-fold 80th percentile"
+  fitting:
+    refit: annual
+    min_train_observations: 1000
+    hmm_states: 2
+    hmm_max_iter: 200
+    hmm_tolerance: 0.0000001
+    logistic_ridge: 0.000001
+  models:
+    candidate: "two-state Gaussian HMM on log_rv; online filtered probabilities only"
+    benchmark: "logistic transition model on current, 5-session, and 22-session log_rv"
+  success_requires:
+    - "average five-phase Brier loss is lower for HMM than logistic"
+    - "average five-phase log loss is lower for HMM than logistic"
+    - "HMM top-probability quintile event rate exceeds bottom quintile"
+  interpretation: >
+    Diagnostic only. The NDX period has already been inspected for other
+    questions. This isolates modeling frame because both models consume only RV
+    history and all HMM states are forward-filtered with training-fold parameters.

@@ -1,0 +1,9 @@
+{
+  "fetched_at_utc": "2026-08-12T06:38:25.438887+00:00",
+  "first_date": "2000-01-03",
+  "last_date": "2018-06-27",
+  "rows": 4641,
+  "sha256": "e0dd80edc0c2cedac5ed3f72250ee4460e963b4efd458d68525a61bcc5c27ea2",
+  "source_symbol": ".SPX",
+  "url": "https://raw.githubusercontent.com/onnokleen/mfGARCH/308b795fa220a58dea6784fe8e2566bcf8dea334/data-raw/OxfordManRealizedVolatilityIndices.zip"
+}

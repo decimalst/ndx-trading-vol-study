@@ -1,0 +1,21 @@
+{
+  "bv_above_rv_fraction": 0.1689291101055807,
+  "checks": {
+    "surface_brier_below_atm": false,
+    "surface_logloss_below_atm": false
+  },
+  "event_rate": 0.3886113886113886,
+  "origins": 1001,
+  "pass": false,
+  "phase_average": {
+    "atm_brier": 0.2133442675528518,
+    "atm_logloss": 0.6143347257916274,
+    "event_rate": 0.3886069651741294,
+    "history_brier": 0.21421287937530858,
+    "history_logloss": 0.6165251404846732,
+    "n": 200.2,
+    "phase": 2.0,
+    "surface_brier": 0.2176459875506374,
+    "surface_logloss": 0.6257560485161668
+  }
+}

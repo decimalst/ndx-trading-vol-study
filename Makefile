@@ -24,6 +24,14 @@ test-historical-weights:
 test-skew-carry:
 	$(PY) -m unittest tests.test_skew_carry
 
+test-jump-target:
+	$(PY) -m unittest tests.test_jump_target
+
+test-regime-transition:
+	$(PY) -m unittest tests.test_regime_transition
+
+test-target-regime: test-jump-target test-regime-transition
+
 fetch-nport-weights: test-nport-weights
 	$(PY) -m src.nport_weights fetch
 
@@ -41,6 +49,20 @@ skew-carry: test-skew-carry
 
 verify-skew-carry:
 	$(PY) -m src.verify_skew_carry
+
+# Target-changing studies. Data acquisition/scoring cannot bypass their
+# pre-written source, timing, target, HMM-filtering, and clean-fence contracts.
+fetch-jump-target: test-jump-target
+	$(PY) -m src.jump_target fetch
+
+jump-target: test-jump-target
+	$(PY) -m src.jump_target run
+
+regime-transition: test-regime-transition
+	$(PY) -m src.regime_transition run
+
+verify-target-regime:
+	$(PY) -m src.verify_target_regime
 
 fetch-free:
 	$(PY) -m src.fetch free

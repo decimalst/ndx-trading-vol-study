@@ -645,6 +645,31 @@ original carry frame itself used a full-window median and same-date published
 VXN daily close. Future validation must freeze the historical cutoff and use
 lagged Cboe inputs or timestamped pre-close quotes.
 
+## A different target and a regime frame both produce informative negatives
+
+A new, commit-pinned Oxford-Man SPX dataset allowed one frozen jump-target test
+without buying intraday bars. The target was a material `max(RV5-BV,0)/RV5`
+event within five sessions. ATM VIX barely improved the history-only Brier
+(0.21421 to 0.21334); adding lagged SKEW worsened Brier to 0.21765 and log loss
+to 0.62576. The strict surface-versus-ATM verdict is **FAIL**. BPV exceeded RV
+on 16.9% of days and the 2017 event rate collapsed to 2.0%, so the next version
+needs realized quarticity and a formal BNS jump target rather than tuning this
+proxy.
+
+A separate two-state Gaussian HMM targeted five-session entry into a high-RV
+state. It used only RV history, annual prior-data fits, and forward-filtered
+probabilities. It strongly ranked risk (61.7% event rate in its top probability
+quintile versus 2.9% in the bottom) but lost to a supervised HAR-state logistic
+benchmark on Brier (0.13762 vs 0.12665) and log loss (0.45717 vs 0.42050). It
+also lost during 2020 and 2022. The HMM describes the state after the transition;
+it does not supply advance information about the switch.
+
+The proposed correlation-premium target remains unscored for a principled
+reason: COR1M is built from the top 50 SPX stocks, while the repository holds
+delayed QQQ snapshots and a survivorship-biased 13-name proxy. Mixing those
+universes would not produce implied-minus-realized correlation. Full results
+and exact data requirements are in `TARGET_REGIME_FINDINGS.md`.
+
 ---
 
 # Standing summary — what is true at the end

@@ -196,6 +196,22 @@ The resulting ranked research program, verified public cross-asset/surface
 coverage, and pre-run safety gate are recorded in
 [`reports/NEXT_RESEARCH_PROGRAM.md`](reports/NEXT_RESEARCH_PROGRAM.md).
 
+Two target/model-frame diagnostics are frozen in `target_regime.yaml`:
+
+```bash
+make fetch-jump-target       # tests first; commit-pinned Oxford-Man SPX source
+make jump-target             # 2014-2017 jump-event comparison
+make regime-transition       # forward-filtered two-state QQQ diagnostic
+make verify-target-regime    # independent target/timing/metric audit
+```
+
+Both strict verdicts are **FAIL**. ATM VIX added only 0.4% Brier improvement to
+the SPX jump-history model and SKEW worsened it; the HMM ranked stress well but
+lost to a supervised HAR-state transition model on both Brier and log loss.
+The implied-versus-realized correlation target remains blocked because COR1M's
+top-50 SPX basket does not match the available QQQ holdings data. See
+[`reports/TARGET_REGIME_FINDINGS.md`](reports/TARGET_REGIME_FINDINGS.md).
+
 ## Known limitations
 
 - GK-based RV is noisier than 5-min RV; QLIKE is chosen partly because it is

@@ -359,3 +359,30 @@ This is not a strategy backtest. It is motivated by the already-observed 2020
 failure and inherits the old carry study's full-window richness median and
 same-date VXN daily close. A future version must freeze +0.386812814 and use
 lagged Cboe data or timestamped pre-close quotes.
+
+---
+
+## 2026-08-12 (eighth) — changed target and transition frame
+
+Before downloading the new target source or scoring either model, eleven tests
+and `target_regime.yaml` froze two diagnostics: an SPX five-session jump event
+from Oxford-Man RV/BPV, and a two-state QQQ stress-transition model using only
+forward-filtered probabilities.
+
+The initial Oxford-Man branch URL returned HTTP 404 before any file was
+accepted. Public repository history identified commit
+`308b795fa220a58dea6784fe8e2566bcf8dea334` as the last containing revision.
+The source was pinned to that immutable commit and confirmation conservatively
+ended 2017-12-29, before the archive snapshot. No target, model, or decision
+criterion changed. A real mixed-timezone date layout then stopped parsing; a
+regression was added to preserve the stated trading date without UTC date
+roll-back.
+The repaired pre-run gate therefore contains twelve contracts.
+
+Both frozen verdicts were **FAIL**. On 1,001 SPX origins, the surface model lost
+to ATM on Brier (0.217646 vs 0.213344) and log loss (0.625756 vs 0.614335). On
+2,205 calm QQQ origins, the HMM lost to the supervised transition benchmark on
+Brier (0.137616 vs 0.126650) and log loss (0.457171 vs 0.420496), despite strong
+top-versus-bottom quintile ranking. An independent verifier reproduced source
+hash, component reconciliation, source lags, annual thresholds, completed
+targets, phase losses, fences, and both verdicts.
