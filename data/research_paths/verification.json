@@ -1,0 +1,102 @@
+{
+  "independent_checks": {
+    "absorption_map": {
+      "earnings": {
+        "attenuation": 0.33410682054492,
+        "n": 1479
+      },
+      "leverage": {
+        "attenuation": 0.39304226714108104,
+        "n": 2463
+      },
+      "post_fomc": {
+        "attenuation": -0.18448963098431292,
+        "n": 2463
+      },
+      "scheduled_macro": {
+        "attenuation": 0.05097897249312333,
+        "n": 2463
+      },
+      "weekday": {
+        "attenuation": 0.09221572463077854,
+        "n": 2463
+      }
+    },
+    "horizon_curve": {
+      "rows": [
+        {
+          "horizon": 1,
+          "improvement_pct": 8.136295733076429,
+          "n": 2462
+        },
+        {
+          "horizon": 5,
+          "improvement_pct": 11.445227322863815,
+          "n": 2458
+        },
+        {
+          "horizon": 10,
+          "improvement_pct": 9.667805819527048,
+          "n": 2453
+        },
+        {
+          "horizon": 21,
+          "improvement_pct": 6.905122699191638,
+          "n": 2442
+        },
+        {
+          "horizon": 42,
+          "improvement_pct": 2.6405129768949553,
+          "n": 2421
+        },
+        {
+          "horizon": 63,
+          "improvement_pct": 3.6389114125796227,
+          "n": 2400
+        }
+      ]
+    },
+    "quarterly_top25": {
+      "eligible_events": 578,
+      "issuers": 44,
+      "rows": 675,
+      "snapshots": 27
+    },
+    "single_name_earnings": {
+      "assets": 3,
+      "forecast_rows": 4434,
+      "pooled_effect": 2.0494763103831963
+    },
+    "source_hashes": {
+      "keys": [
+        "aapl",
+        "amzn",
+        "goog",
+        "ibm",
+        "spx",
+        "vix",
+        "vix3m",
+        "vix9d",
+        "vxapl",
+        "vxazn",
+        "vxgog",
+        "vxibm"
+      ],
+      "sources": 12
+    },
+    "spx_term_slope": {
+      "dislocation_improvement_pct": -0.5974216354847554,
+      "n": 503,
+      "verdict": "FAIL"
+    },
+    "vrp_term_structure": {
+      "common_n": 3656,
+      "premiums": {
+        "vix": 3.4689439589055437,
+        "vix3m": 4.7168096221750275,
+        "vix9d": 3.6055371573851875
+      }
+    }
+  },
+  "verdict": "PASS"
+}

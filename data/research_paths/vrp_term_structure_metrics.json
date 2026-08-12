@@ -1,0 +1,81 @@
+{
+  "common_n": 3656,
+  "evidence_class": "descriptive SPX measurement",
+  "first_origin": "2011-01-04",
+  "last_origin": "2025-07-18",
+  "rows": [
+    {
+      "horizon_calendar_days": 9,
+      "implied_mean": 17.58424507658643,
+      "n": 3656,
+      "negative_minus_nonnegative": -0.2946147462192079,
+      "negative_state_n": 1452,
+      "negative_state_premium": 3.42793023707142,
+      "nonnegative_state_n": 2204,
+      "nonnegative_state_premium": 3.722544983290628,
+      "premium_mean": 3.6055371573851875,
+      "premium_mean_ci95": [
+        3.0503190706420034,
+        4.100834550899955
+      ],
+      "premium_median": 4.396235372684987,
+      "realized_mean": 13.978707919201245,
+      "state_difference_ci95": [
+        -1.0415901648469807,
+        0.4060708080777169
+      ],
+      "symbol": "vix9d"
+    },
+    {
+      "horizon_calendar_days": 30,
+      "implied_mean": 18.176583698030633,
+      "n": 3656,
+      "negative_minus_nonnegative": 0.26613685068648074,
+      "negative_state_n": 1452,
+      "negative_state_premium": 3.6293831325688375,
+      "nonnegative_state_n": 2204,
+      "nonnegative_state_premium": 3.3632462818823567,
+      "premium_mean": 3.4689439589055437,
+      "premium_mean_ci95": [
+        2.5035140127218383,
+        4.285307440098501
+      ],
+      "premium_median": 4.395765333863765,
+      "realized_mean": 14.707639739125092,
+      "state_difference_ci95": [
+        -0.5686692876354391,
+        1.033409859028802
+      ],
+      "symbol": "vix"
+    },
+    {
+      "horizon_calendar_days": 93,
+      "implied_mean": 20.03660557986871,
+      "n": 3656,
+      "negative_minus_nonnegative": 1.0203381704315042,
+      "negative_state_n": 1452,
+      "negative_state_premium": 5.331915018135376,
+      "nonnegative_state_n": 2204,
+      "nonnegative_state_premium": 4.311576847703872,
+      "premium_mean": 4.7168096221750275,
+      "premium_mean_ci95": [
+        3.5255880147882257,
+        5.791863817879333
+      ],
+      "premium_median": 5.884868824251703,
+      "realized_mean": 15.319795957693682,
+      "state_difference_ci95": [
+        0.11401043744057299,
+        2.104752673426503
+      ],
+      "symbol": "vix3m"
+    }
+  ],
+  "study": "vrp_term_structure",
+  "uncertainty": {
+    "block_sessions": 21,
+    "draws": 5000,
+    "method": "circular moving-block bootstrap",
+    "seed": 20260812
+  }
+}

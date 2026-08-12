@@ -1,0 +1,107 @@
+{
+  "protocol_version": 1,
+  "retrieved_at_utc": "2026-08-12T17:59:14.463673+00:00",
+  "sources": {
+    "aapl": {
+      "auto_adjust": true,
+      "first_date": "2009-01-02",
+      "last_date": "2025-10-21",
+      "provider": "Yahoo Finance via yfinance",
+      "rows": 4227,
+      "sha256": "3ea8963f6ba578e04d34c6870e154aa553c9085192aaa766d9f9afce119fc9a4",
+      "ticker": "AAPL"
+    },
+    "amzn": {
+      "auto_adjust": true,
+      "first_date": "2009-01-02",
+      "last_date": "2025-10-21",
+      "provider": "Yahoo Finance via yfinance",
+      "rows": 4227,
+      "sha256": "9ce78f2af919b69c066bd0f64ba6451fba58c602206ce7867180e44b469131d7",
+      "ticker": "AMZN"
+    },
+    "goog": {
+      "auto_adjust": true,
+      "first_date": "2009-01-02",
+      "last_date": "2025-10-21",
+      "provider": "Yahoo Finance via yfinance",
+      "rows": 4227,
+      "sha256": "e6584b7eff248e6393f2c83c552151f4a54ac7039e2288e2229558c31e071165",
+      "ticker": "GOOG"
+    },
+    "ibm": {
+      "auto_adjust": true,
+      "first_date": "2009-01-02",
+      "last_date": "2025-10-21",
+      "provider": "Yahoo Finance via yfinance",
+      "rows": 4227,
+      "sha256": "fb0237d5c18b2fae2a78c3d99efe6905931bdfbd63e95b50909a4a198a59dc6f",
+      "ticker": "IBM"
+    },
+    "spx": {
+      "auto_adjust": false,
+      "first_date": "2009-01-02",
+      "last_date": "2025-10-21",
+      "provider": "Yahoo Finance via yfinance",
+      "rows": 4227,
+      "sha256": "3958fbb1eb36689df1596c26b9f0e02e3f1d4fa3b0032381e5287a2a03697bf0",
+      "ticker": "^GSPC"
+    },
+    "vix": {
+      "first_date": "1990-01-02",
+      "last_date": "2026-08-11",
+      "provider": "Cboe",
+      "rows": 9248,
+      "sha256": "a34aabce269632f30904cf482986dd50b6d4cf51f2203dc51a0a9f460f3c90b2",
+      "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+    },
+    "vix3m": {
+      "first_date": "2009-09-18",
+      "last_date": "2026-08-11",
+      "provider": "Cboe",
+      "rows": 4249,
+      "sha256": "594d774564e55e072dc9a24e528a42412b8a0861d6eb2cb23a3c3a27fed6390f",
+      "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX3M_History.csv"
+    },
+    "vix9d": {
+      "first_date": "2011-01-04",
+      "last_date": "2026-08-11",
+      "provider": "Cboe",
+      "rows": 3923,
+      "sha256": "0d6f600ee71bf6ffb5069d0c583cbe0b1ec97df6da4e4e439d5f0f22f5616abe",
+      "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX9D_History.csv"
+    },
+    "vxapl": {
+      "first_date": "2011-01-07",
+      "last_date": "2026-08-11",
+      "provider": "Cboe",
+      "rows": 3916,
+      "sha256": "0d65e9132c3bc70c111b157d53d8174c601ff0b93b03c064baf5b239d379226b",
+      "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VXAPL_History.csv"
+    },
+    "vxazn": {
+      "first_date": "2011-01-07",
+      "last_date": "2026-08-11",
+      "provider": "Cboe",
+      "rows": 3916,
+      "sha256": "0becaad9fbd9960c7e7caae989786c767b9789fcc29ca040e12e25d3833e26f5",
+      "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VXAZN_History.csv"
+    },
+    "vxgog": {
+      "first_date": "2011-01-07",
+      "last_date": "2026-08-11",
+      "provider": "Cboe",
+      "rows": 3916,
+      "sha256": "493a4f98e3b3c1a877b89f9c7dcd5617961f6927b930439e9772f96526a52f43",
+      "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VXGOG_History.csv"
+    },
+    "vxibm": {
+      "first_date": "2011-01-07",
+      "last_date": "2026-08-11",
+      "provider": "Cboe",
+      "rows": 3916,
+      "sha256": "7fabe34d61c81b7c7d8bf7c71fb68a46ff8f92933645fa2137ff65127f0a93ae",
+      "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VXIBM_History.csv"
+    }
+  }
+}

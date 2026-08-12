@@ -1,0 +1,126 @@
+{
+  "evidence_class": "diagnostic measurement",
+  "groups": {
+    "earnings": {
+      "attenuation": 0.2941313587690011,
+      "coefficients_with": {
+        "target_top25_earnings_weight": 0.02680740475546669
+      },
+      "coefficients_without": {
+        "target_top25_earnings_weight": 0.028846335601223953
+      },
+      "first_origin": "2019-11-27",
+      "last_origin": "2025-10-16",
+      "n_with": 1479,
+      "n_without": 1479,
+      "p_with": 1.1228067519527908e-07,
+      "p_without": 2.7010633206472015e-10,
+      "partial_r2_with": 0.014517766529959506,
+      "partial_r2_without": 0.015565020223123536,
+      "r2_with": 0.4964384518016155,
+      "r2_without": 0.4561544593807546,
+      "wald_with": 28.149775809803423,
+      "wald_without": 39.87962372249835
+    },
+    "leverage": {
+      "attenuation": 0.41673278536756286,
+      "coefficients_with": {
+        "lev_d": -6.481266202463431,
+        "lev_m": -29.23504920817654,
+        "lev_w": -34.90416819761205
+      },
+      "coefficients_without": {
+        "lev_d": -10.47964374080959,
+        "lev_m": -27.299840108015445,
+        "lev_w": -45.941723572490375
+      },
+      "first_origin": "2016-01-04",
+      "last_origin": "2025-10-16",
+      "n_with": 2462,
+      "n_without": 2462,
+      "p_with": 1.5693493387106683e-15,
+      "p_without": 1.3653808399018616e-26,
+      "partial_r2_with": 0.0368965920832393,
+      "partial_r2_without": 0.06401815325033346,
+      "r2_with": 0.5645125660125094,
+      "r2_without": 0.5347804272503485,
+      "wald_with": 72.02892589868914,
+      "wald_without": 123.49215606791867
+    },
+    "post_fomc": {
+      "attenuation": -0.17107414180503389,
+      "coefficients_with": {
+        "target_post_fomc": 0.38591937578567603
+      },
+      "coefficients_without": {
+        "target_post_fomc": 0.3556452760094758
+      },
+      "first_origin": "2016-01-04",
+      "last_origin": "2025-10-16",
+      "n_with": 2462,
+      "n_without": 2462,
+      "p_with": 2.755624948992562e-05,
+      "p_without": 0.00010686844233374687,
+      "partial_r2_with": 0.007295134975136727,
+      "partial_r2_without": 0.0056387233885302245,
+      "r2_with": 0.5511276454605385,
+      "r2_without": 0.5057635680965189,
+      "wald_with": 17.579363776447288,
+      "wald_without": 15.011315807341928
+    },
+    "scheduled_macro": {
+      "attenuation": 0.06487213474499776,
+      "coefficients_with": {
+        "target_cpi": 0.2636736403916353,
+        "target_fomc": 0.3601694314776134,
+        "target_nfp": 0.20575320447808665
+      },
+      "coefficients_without": {
+        "target_cpi": 0.28290252774365693,
+        "target_fomc": 0.3951405528870036,
+        "target_nfp": 0.20861171213850654
+      },
+      "first_origin": "2016-01-04",
+      "last_origin": "2025-10-16",
+      "n_with": 2462,
+      "n_without": 2462,
+      "p_with": 3.8841699532294296e-08,
+      "p_without": 1.0978745651811803e-08,
+      "partial_r2_with": 0.013959017594515923,
+      "partial_r2_without": 0.014643341822576145,
+      "r2_with": 0.5541408599486737,
+      "r2_without": 0.5102392155198187,
+      "wald_with": 37.34778261071526,
+      "wald_without": 39.93869073779638
+    },
+    "weekday": {
+      "attenuation": 0.08031875353095874,
+      "coefficients_with": {
+        "target_friday": 0.01027987899968219,
+        "target_thursday": 0.12471347209128339,
+        "target_tuesday": -0.014562543803908784,
+        "target_wednesday": 0.048941916159193244
+      },
+      "coefficients_without": {
+        "target_friday": 0.023674303250466933,
+        "target_thursday": 0.1465084162401709,
+        "target_tuesday": 0.012658865113557446,
+        "target_wednesday": 0.08184621873124442
+      },
+      "first_origin": "2016-01-04",
+      "last_origin": "2025-10-16",
+      "n_with": 2462,
+      "n_without": 2462,
+      "p_with": 0.03191826395324561,
+      "p_without": 0.021600520416103445,
+      "partial_r2_with": 0.004008443099946912,
+      "partial_r2_without": 0.0042906652116228095,
+      "r2_with": 0.5496414986986555,
+      "r2_without": 0.505093530476366,
+      "wald_with": 10.564631042871136,
+      "wald_without": 11.48727462197607
+    }
+  },
+  "source_estimator": "daily Garman-Klass plus squared overnight gap",
+  "study": "absorption_map"
+}

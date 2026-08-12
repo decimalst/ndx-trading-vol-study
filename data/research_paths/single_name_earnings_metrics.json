@@ -1,0 +1,96 @@
+{
+  "equal_asset_pool": {
+    "assets": [
+      "AAPL",
+      "AMZN",
+      "GOOG"
+    ],
+    "effect_ci95": [
+      1.8288228379161817,
+      2.2719202465203314
+    ],
+    "equal_asset_effect_log_variance": 2.0494763103831963,
+    "equal_asset_effect_variance_pct": 676.3834202143729
+  },
+  "event_label_fence": "Earnings labels are joined only after HAR-IV forecasts are fixed. They are never forecast inputs because the repository calendar is not a versioned point-in-time archive. This measures a mechanism, not deployable foresight.\n",
+  "evidence_class": "cross-sectional mechanism diagnostic",
+  "rows": [
+    {
+      "asset": "AAPL",
+      "effect_ci95": [
+        1.4305408925871383,
+        2.032597290526846
+      ],
+      "eligible_n": 1478,
+      "event_effect_log_variance": 1.7149841052503472,
+      "event_effect_variance_pct": 455.65871910971725,
+      "event_mean_log_residual": 1.2842269109368043,
+      "event_n": 23,
+      "first_eligible_origin": "2019-11-29",
+      "issuer_id": "037833",
+      "iv_symbol": "VXAPL",
+      "last_eligible_origin": "2025-10-17",
+      "mean_qlike": 0.3754903467872109,
+      "non_event_mean_log_residual": -0.4307571943135428,
+      "non_event_n": 1455
+    },
+    {
+      "asset": "AMZN",
+      "effect_ci95": [
+        1.6516918235399656,
+        2.59721066300619
+      ],
+      "eligible_n": 1478,
+      "event_effect_log_variance": 2.1387272311973256,
+      "event_effect_variance_pct": 748.8626691203327,
+      "event_mean_log_residual": 1.668824670090356,
+      "event_n": 23,
+      "first_eligible_origin": "2019-11-29",
+      "issuer_id": "023135",
+      "iv_symbol": "VXAZN",
+      "last_eligible_origin": "2025-10-17",
+      "mean_qlike": 0.4155410460061182,
+      "non_event_mean_log_residual": -0.46990256110696954,
+      "non_event_n": 1455
+    },
+    {
+      "asset": "GOOG",
+      "effect_ci95": [
+        1.9540340870351887,
+        2.627981451366423
+      ],
+      "eligible_n": 1478,
+      "event_effect_log_variance": 2.294717594701915,
+      "event_effect_variance_pct": 892.1633694688268,
+      "event_mean_log_residual": 1.7935945056242315,
+      "event_n": 23,
+      "first_eligible_origin": "2019-11-29",
+      "issuer_id": "02079K",
+      "iv_symbol": "VXGOG",
+      "last_eligible_origin": "2025-10-17",
+      "mean_qlike": 0.41489464809416243,
+      "non_event_mean_log_residual": -0.5011230890776838,
+      "non_event_n": 1455
+    },
+    {
+      "asset": "IBM",
+      "effect_ci95": [
+        NaN,
+        NaN
+      ],
+      "eligible_n": 0,
+      "event_effect_log_variance": NaN,
+      "event_effect_variance_pct": NaN,
+      "event_mean_log_residual": NaN,
+      "event_n": 0,
+      "first_eligible_origin": null,
+      "issuer_id": "459200",
+      "iv_symbol": "VXIBM",
+      "last_eligible_origin": null,
+      "mean_qlike": NaN,
+      "non_event_mean_log_residual": NaN,
+      "non_event_n": 0
+    }
+  ],
+  "study": "single_name_earnings"
+}

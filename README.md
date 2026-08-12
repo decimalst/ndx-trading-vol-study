@@ -8,10 +8,14 @@ better than the options market already does through VXN?
 
 The short answer is: **volatility is forecastable, but the forecastable part is
 largely already priced.** A compact HAR model using VXN is difficult to beat.
-Across roughly ten designs spanning QQQ/NDX and SPX—with underlying-price,
-option-implied, and cross-sectional/holdings evidence—additional signals were
-usually redundant, non-stationary, contaminated by how they were discovered,
-or too weak to survive a frozen holdout. These designs are not statistically
+Across roughly ten original designs spanning QQQ/NDX and SPX—with
+underlying-price, option-implied, and cross-sectional/holdings evidence—extra
+index-level signals were usually redundant, non-stationary, contaminated by how
+they were discovered, or too weak to survive a frozen holdout. A five-path
+extension changed the question from “can this beat the surface?” to “what does
+the surface absorb, and what can a 30-day scalar not represent?” That produced a
+positive single-name earnings mechanism, an absorption map, and a VRP term
+curve, alongside another clean rejection. These designs are not statistically
 independent, so their count is not a meta-test; their breadth is the important
 result.
 
@@ -43,6 +47,15 @@ The project then moved through several questions:
    model trained on the same rows?
 7. Reconstruct point-in-time QQQ holdings from SEC N-PORT and specify a properly
    matched future SPX correlation-premium study.
+8. Replace the current 13-name selection with the top 25 issuers in each
+   SEC-accepted quarterly QQQ snapshot.
+9. Measure how much VXN attenuates leverage, weekday, earnings, macro, and
+   post-FOMC regularities.
+10. Trace VXN's contribution over 1, 5, 10, 21, 42, and 63 sessions.
+11. Measure the matched 9/30/93-day SPX volatility-risk-premium curve and run
+    historically gated single-name earnings/own-IV diagnostics.
+12. Test the regime-conditional VIX9D/VIX hypothesis on an untouched 2014-2015
+    SPX window.
 
 ## Results in plain English
 
@@ -50,11 +63,17 @@ The project then moved through several questions:
 |---|---|---|---|
 | Can foundation models beat a simple volatility model? | No. Chronos-2 and TiRex-2 did not beat HAR-IV, the HAR model that also sees VXN. | Model complexity did not add information beyond a small linear model plus the option-implied level. | [Clean results](reports/results_clean.md), [full findings](reports/FINDINGS.md) |
 | Do macro calendars and earnings improve the forecast? | Not reliably. The well-powered earnings comparison was flat, and the concentration defence pointed the wrong way. | Widely known scheduled information appears priced or too small at this horizon. | [Diagnostic results](reports/results_diagnostic.md), [holdings audit](reports/qqq_nport_audit.md) |
+| How much leverage information does VXN absorb? | The joint Wald statistic on three return-asymmetry terms falls from 103.19 without VXN to 62.63 with it: about 40% attenuation, with a strongly significant remainder. | This is the clearest positive measurement in the project. The residual information is real in-sample but worth only about 1.8% of diagnostic QLIKE out of sample (DM p=0.159). | [Research amendments](reports/AMENDMENTS.md#2026-08-12-fourth--ledger-closing-test-har_iv_lev), [standing findings](reports/FINDINGS.md) |
 | Does short-end term slope help? | It improved QLIKE by 5.3%/7.0% in 2022-2023 but only 0.2%/0.9% in 2024-2025. | The interesting hypothesis is regime-conditional: slope may matter when the front end is dislocated. That yearly pattern is now inspected, so it is prospective-only. | [Independent signal verification](reports/signal_study/verification.md) |
 | Does SKEW repair short-vol carry? | Historically it raised mean P&L and improved CVaR, worst loss, and drawdown while keeping 63.3% of entries. | The registered participation gate failed, but the decisive problem is contamination: February 2020 motivated the rule and remains in the sample. | [SKEW diagnostic](reports/skew_carry_diagnostic.md), [protocol](reports/SKEW_CARRY_PROTOCOL.md) |
 | Does the SPX jump target reveal a surface signal? | No under the registered comparison. Lagged SKEW worsened the five-minute Oxford-Man RV/BPV proxy model. | This was not based on the local hourly bars, but it still lacks realized quarticity for a formal BNS jump test. | [Target findings](reports/TARGET_REGIME_FINDINGS.md), [jump report](reports/jump_target.md) |
 | Does a two-state HMM predict transitions? | Calibration helped substantially; adding the calibrated state to the supervised benchmark slightly worsened both Brier and log loss. | The HMM summarizes and ranks the current state, but supplied no detectable incremental transition information beyond RV history. | [Repair result](reports/regime_repair.md), [repair protocol](reports/REGIME_REPAIR_PROTOCOL.md) |
 | Can COR1M be compared with QQQ realized correlation? | No—the universes do not match. | The clean study moves to SPX, where COR1M, DSPX, and VIXEQ match by construction. It awaits exact historical top-50 weights and returns. | [SPX data contract](reports/SPX_DISPERSION_DATA_CONTRACT.md) |
+| What does VXN absorb? | About 39% of the leverage Wald statistic and 33% of the point-in-time top-25 earnings statistic; little weekday/macro structure, while it amplifies the post-FOMC contrast. | The surface is informative but not a sufficient statistic for every regularity. This is measurement, not a forecast win. | [Absorption map](reports/research_paths/absorption_map.md) |
+| Does VXN's forecast contribution peak near 30 days? | No. Its diagnostic OOS gain peaks at 5 sessions (11.45%) and decays to 6.91% at 21 and 2.64% at 42. | The 30-day risk-neutral quote adds most relative value against HAR at shorter physical horizons in this sample. | [Horizon curve](reports/research_paths/horizon_curve.md) |
+| What does the SPX VRP curve look like? | Mean implied-minus-realized vol is 3.61, 3.47, and 4.72 points at 9, 30, and 93 calendar days. | The longest measured premium is richest; only its leverage-state difference excludes zero under the frozen block interval. | [VRP term structure](reports/research_paths/vrp_term_structure.md) |
+| Was the index earnings mechanism merely absent? | No. After own implied vol, historically top-25 AAPL/AMZN/Alphabet earnings sessions retain a 2.05-log-variance pooled residual contrast. | Constant-maturity single-name IV does not localize the event to one day; this explains the index null better than a current-name concentration story. | [Single-name earnings](reports/research_paths/single_name_earnings.md) |
+| Does regime-conditioned VIX9D/VIX replicate on SPX? | No. It worsens 2014-2015 QLIKE by 0.60%; DM p=0.0325 points against it. | The inspected NDX non-stationarity did not become a portable regime rule. | [SPX replication](reports/research_paths/spx_term_slope_replication.md) |
 
 The most defensible overall conclusion is not that variance is unpredictable.
 It is that **historical data describes the current volatility regime much
@@ -68,6 +87,12 @@ something a lower forecasting loss establishes on its own.
 
 - [Standing findings](reports/FINDINGS.md) — the current conclusions and the
   evidence hierarchy.
+- [Five-path findings](reports/RESEARCH_PATHS_FINDINGS.md) — absorption, horizon,
+  VRP term structure, historically gated single names, and the SPX replication.
+- [Quarterly top-25 reconstruction](reports/research_paths/quarterly_top25.md) —
+  the point-in-time SEC N-PORT ranking and earnings-universe audit.
+- [Independent five-path verification](reports/research_paths/verification.md) —
+  source hashes, membership/as-of checks, and metric recomputation.
 - [Clean-window results](reports/results_clean.md) — the original QQQ forecast
   comparison.
 - [Orthogonal-signal verification](reports/signal_study/verification.md) — the
@@ -119,7 +144,9 @@ may be in or adjacent to its training corpus, so:
   benchmarking only. Chronos results here are labeled contaminated and never
   reported as evidence.
 - **Clean phase** (2025-11-03 → open): the only window where Chronos results
-  count. Accrues forward daily; re-evaluate monthly.
+  count. Data accrue forward daily, but the frozen specification is not
+  re-evaluated until the pre-committed gate of **500 scored origins or
+  2027-06-30**, whichever comes first. No monthly peeking.
 
 The date rule is a fallback for models whose training corpus is undisclosed. For
 a model that publishes an enumerable corpus, check the corpus instead — see
@@ -131,13 +158,16 @@ the post-publication subwindow as a robustness check.
 
 | Series | Source | Cost | Notes |
 |---|---|---|---|
-| QQQ daily OHLC (1999→) | yfinance | free | drives Garman–Klass RV fallback + overnight gaps |
-| QQQ 5-min bars | Polygon.io aggregates | ~$29/mo plan, or FirstRate Data one-time bundle | preferred RV estimator; check plan history depth |
+| QQQ daily OHLC (1999→) | yfinance | free | drives the Garman–Klass + overnight target used in the original QQQ headline tables |
+| QQQ 5-min bars | Polygon.io aggregates | ~$29/mo plan, or FirstRate Data one-time bundle | preferred future RV estimator; not purchased or used for the headline results |
 | VXN daily history | CBOE (`cdn.cboe.com/.../VXN_History.csv`) | free | the market benchmark; if 404, update URL from the CBOE VXN page |
 | Macro calendar (FOMC/CPI/NFP) | Fed + BLS schedules | free | `calendars/*.csv`, filled and verified 2026-08-11 for 2016→2026 (FOMC to 2027). See "Calendar provenance" below — the seeds contained errors |
 | Earnings dates, top-weight NDX names | yfinance (`make fetch-earnings`) | free, no API key | session inferred from the ET announcement timestamp; FMP path kept as `make fetch-earnings-fmp` |
 | Index weights | Invesco QQQ "Complete Holdings" CSV | free | **manual download** — Invesco returns HTTP 406 to scripted requests. Save to `data/raw/qqq_holdings_YYYY-MM-DD.csv`; newest is used |
 | Historical QQQ holdings | SEC Form N-PORT (`make fetch-nport-weights`) | free | quarterly public snapshots from 2019-09-30; point-in-time use begins at SEC acceptance, 50–62 days later |
+| Quarterly QQQ top 25 | audited SEC N-PORT holdings, aggregated by CUSIP issuer | free | 27 snapshots / 44 issuers; exactly 25 per snapshot and never backfilled with current names |
+| SPX term surface | Cboe VIX9D, VIX, VIX3M | free | official 9-, 30-, and 93-calendar-day expected-volatility histories |
+| Single-name implied vol | Cboe VXAPL, VXAZN, VXGOG, VXIBM | free | fixed source family; analysis retains only historically eligible top-25 issuer-sessions |
 | Orthogonal signal inputs | Yahoo Finance ETFs + Cboe VIX/VIX9D histories | free | separate diagnostic-only study; Cboe closes delayed one session at the 16:00 ET forecast origin |
 
 ### Calendar provenance
@@ -168,10 +198,13 @@ options data), and NQ futures 23-hour-session RV (Databento GLBX).
 
 ## Method summary
 
-- **Target:** `log_rv` where `rv_total` = intraday RV (5-min sum of squared log
-  returns, RTH) + squared overnight gap. Garman–Klass + overnight as the free
-  fallback. Total variance is used so the 30-day comparison lines up with
-  VXN's calendar-time quote: expected 30-cal-day variance = (VXN/100)² × 30/365.
+- **Target:** every original QQQ headline table in this repository was produced with
+  `SOURCE=daily`, because Polygon was not purchased. Thus `rv_total` is the
+  yfinance daily-OHLC **Garman–Klass estimate plus the squared overnight gap**;
+  it is not five-minute realized variance. The code supports a preferred future
+  5-minute RTH sum plus the same overnight gap. Total variance is used so the
+  30-day comparison lines up with VXN's calendar-time quote: expected
+  30-calendar-day variance = (VXN/100)² × 30/365.
 - **Covariates (all known ex ante):** FOMC/CPI/NFP flags and capped trading-day
   countdowns, `earnings_wt` (sum of NDX weights printing BMO that day + AMC the
   prior trading day), day-of-week.
@@ -197,8 +230,9 @@ options data), and NQ futures 23-hour-session RV (Databento GLBX).
 
 Clean window as of 2026-08-11 (measured, not estimated): **193 trading days, 192
 scored origins, 6 FOMC decisions, 8 CPI prints, 9 NFP prints, 30 days carrying
-earnings weight, 8 in the heavy-earnings slice.** The full-window DM test has
-reasonable power for large differences only. Event-sliced comparisons on n=6–8
+earnings weight, 12 in the frozen ≥5% heavy-earnings slice** (157 in the
+diagnostic window). The full-window DM test has
+reasonable power for large differences only. Event-sliced comparisons on n=6–12
 are descriptive, full stop. The value of
 the harness is that it accrues clean data forward mechanically; the honest
 timeline for event-conditional conclusions is 1–2 more years of accrual.
@@ -236,6 +270,22 @@ Forward accrual: `make daily-update` (cron it after the close if you want, e.g.
 `30 18 * * 1-5`). Infrastructure is deliberately one box + parquet + Make — no
 cloud, no scheduler, nothing to babysit. State lives in `data/`, results in
 `reports/`, and `config.yaml` is the pre-registration artifact.
+
+The five-path extension is separate from the frozen harness and runs its safety
+tests before every empirical command:
+
+```bash
+.venv/bin/python -m unittest tests.test_research_paths -v
+.venv/bin/python -m src.research_paths top25
+.venv/bin/python -m src.research_paths fetch-external
+.venv/bin/python -m src.research_paths fetch-top25-earnings
+.venv/bin/python -m src.research_paths absorption-map
+.venv/bin/python -m src.research_paths horizon-curve
+.venv/bin/python -m src.research_paths vrp-term-structure
+.venv/bin/python -m src.research_paths single-name-earnings
+.venv/bin/python -m src.research_paths spx-term-slope
+.venv/bin/python -m src.verify_research_paths
+```
 
 ## Diagnostic-only orthogonal-signal study
 
@@ -314,8 +364,16 @@ specified for SPX and remains data-blocked. See
 
 - GK-based RV is noisier than 5-min RV; QLIKE is chosen partly because it is
   robust to proxy noise, but buy the intraday history if results get close.
-- Earnings-weight covariate uses approximately-current weights; drift over the
-  diagnostic window is real (documented, accepted).
+- Earnings weights in the original harness are assigned per announcement from the latest
+  point-in-time reconstruction available before that announcement; a future
+  weight snapshot cannot change an earlier feature. The broader reconstruction
+  is still approximate: the tracked 13-name basket uses current membership and
+  is normalized to a fixed 55.43% aggregate weight, so it captures relative
+  drift rather than exact historical Nasdaq-100 membership and weights.
+- The five-path extension does not reuse that membership approximation: its
+  earnings studies start with the first SEC-accepted 2019 quarterly top-25
+  snapshot. That removes current-name selection but leaves a delayed quarterly
+  QQQ-fund proxy rather than exact daily NDX weights.
 - `predict_df` gets synthetic contiguous timestamps per origin (trading days
   are irregular); mapping back to real dates is positional and exact.
 - 30-day distributional eval for Chronos is out of scope (quantiles don't sum
@@ -327,9 +385,6 @@ specified for SPX and remains data-blocked. See
   accrues; their 30-day targets aren't realized yet anyway.
 - Earnings **sessions are inferred** from yfinance announcement timestamps, not
   verified against IR pages. See `reports/AMENDMENTS.md`.
-- The reconstructed 13-name weight file holds the tracked basket at a constant
-  55.43% and uses current membership. It is approximate relative drift, not
-  exact historical NDX weights; see the weight/source audit above.
 - Calendars are checked in, not fetched at runtime: bls.gov and invesco.com both
   reject scripted requests. They currently run through 2026 (FOMC through 2027)
   and must be extended by hand after that, or `is_cpi`/`is_nfp` silently become 0.

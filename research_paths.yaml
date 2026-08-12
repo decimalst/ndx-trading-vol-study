@@ -1,0 +1,176 @@
+# Five-path research extension.
+# Frozen 2026-08-12 before any empirical run of these specifications.
+# This file does not modify config.yaml or reopen the sealed NDX clean window.
+
+protocol_version: 1
+specified_on: "2026-08-12"
+frozen_before_empirical_run: true
+decision_time: "after 16:15 America/New_York"
+
+fences:
+  ndx_diagnostic_start: "2016-01-04"
+  ndx_diagnostic_end: "2025-10-17"
+  sealed_ndx_clean_start: "2025-11-03"
+  forbid_sealed_ndx_clean_origins: true
+  no_forward_fill: true
+  no_candidate_selection: true
+
+outputs:
+  data_dir: "data/research_paths"
+  report_dir: "reports/research_paths"
+
+quarterly_top25:
+  evidence_class: "point-in-time historical universe reconstruction"
+  source: "data/raw/qqq_nport_holdings.parquet"
+  source_start: "2019-09-30"
+  unit: "issuer, keyed by the six-character CUSIP issuer identifier"
+  aggregation: "sum positive EC share classes within issuer and filing"
+  rank: "descending disclosed pct_value, issuer identifier as deterministic tie break"
+  keep: 25
+  available_from: "SEC accepted_at, evaluated against the decision timestamp"
+  pre_first_filing: "missing; never fall back to present membership"
+  between_filings: "latest accepted snapshot; no future snapshot and no interpolation"
+  output: "data/research_paths/qqq_top25_quarterly.parquet"
+  limitations:
+    - "quarterly QQQ fund weights are a delayed proxy for NDX index weights"
+    - "no public quarterly coverage before the first accepted 2019 snapshot"
+    - "the paused pre-2019 reconstruction is not silently substituted"
+
+absorption_map:
+  evidence_class: "diagnostic measurement"
+  asset: "QQQ/NDX"
+  source: "data/processed/master_daily.parquet"
+  source_estimator: "daily Garman-Klass plus squared overnight gap"
+  start: "2016-01-04"
+  end: "2025-10-17"
+  target: "log rv_total on the next trading session"
+  baseline: [const, lrv_d, lrv_w, lrv_m]
+  market_control: "same-origin log(VXN), observed by the post-16:15 decision time"
+  hac_maxlags: 10
+  groups:
+    leverage: [lev_d, lev_w, lev_m]
+    weekday: [target_tuesday, target_wednesday, target_thursday, target_friday]
+    earnings: [target_top25_earnings_weight]
+    scheduled_macro: [target_fomc, target_cpi, target_nfp]
+    post_fomc: [target_post_fomc]
+  statistic: "1 - joint_Wald(group | HAR+VXN) / joint_Wald(group | HAR)"
+  interpretation: >
+    Descriptive attenuation of a joint Wald statistic, not a literal fraction
+    of information and not a trading result. Negative values mean amplification.
+  target_completion: >
+    Origins end 2025-10-17; the one-session target may complete on the next
+    observed session, which must remain strictly before sealed clean start.
+  earnings_sample: >
+    Begins only when an SEC-accepted quarterly top-25 snapshot and a realized
+    announcement label are both available. No current-name basket is permitted.
+
+horizon_curve:
+  evidence_class: "diagnostic forecast-shape measurement"
+  asset: "QQQ/NDX"
+  source: "data/processed/master_daily.parquet"
+  start: "2016-01-04"
+  end: "2025-10-17"
+  horizons_trading_sessions: [1, 5, 10, 21, 42, 63]
+  target: "log of mean rv_total over the next h trading sessions"
+  baseline: [const, lrv_d, lrv_w, lrv_m]
+  candidate_addition: "same-origin log(VXN)"
+  min_train_rows: 500
+  refit: "expanding at every origin"
+  point_forecast: "Duan exact smearing on each training fold"
+  primary_curve: "paired out-of-sample QLIKE improvement versus HAR"
+  secondary_curve: "full-window incremental adjusted R2 and partial R2"
+  overlap_inference: "Diebold-Mariano/Newey-West with h-1 overlap lags"
+
+vrp_term_structure:
+  evidence_class: "descriptive SPX measurement"
+  asset: "SPX"
+  start: "2011-01-03"
+  end: "2025-10-17"
+  price_source: "Yahoo Finance ^GSPC daily OHLC; close-to-close target"
+  implied_sources:
+    vix9d: "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX9D_History.csv"
+    vix: "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+    vix3m: "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX3M_History.csv"
+  horizons_calendar_days: {vix9d: 9, vix: 30, vix3m: 93}
+  target: "100 * sqrt((365/H) * sum of SPX squared close returns in (t,t+H])"
+  premium: "Cboe implied-vol index close minus matched forward realized volatility"
+  common_origin_curve: true
+  leverage_state: "negative versus nonnegative trailing five-session SPX log return"
+  uncertainty: "moving-block bootstrap, block=21 sessions, draws=5000, seed=20260812"
+  claims_excluded: [tradability, option-return alpha, significance-based selection]
+
+single_name_earnings:
+  evidence_class: "cross-sectional mechanism diagnostic"
+  start: "2016-01-04"
+  end: "2025-10-17"
+  matched_iv_family:
+    AAPL: {iv: VXAPL, calendar_ticker: AAPL, issuer_id: "037833"}
+    AMZN: {iv: VXAZN, calendar_ticker: AMZN, issuer_id: "023135"}
+    GOOG: {iv: VXGOG, calendar_ticker: GOOGL, issuer_id: "02079K"}
+    IBM: {iv: VXIBM, calendar_ticker: IBM, issuer_id: "459200"}
+  universe_gate: >
+    An issuer-session enters only while that issuer is in the latest
+    SEC-accepted quarterly QQQ top 25. The family is availability-based and
+    fixed before outcomes; names are never selected by current weights.
+  price_source: "Yahoo Finance split-adjusted daily OHLC"
+  iv_url_template: "https://cdn.cboe.com/api/global/us_indices/daily_prices/{symbol}_History.csv"
+  iv_definition: "Cboe 30-day expected volatility on the named equity options"
+  forecast_model: [const, lrv_d, lrv_w, lrv_m, same_origin_log_own_iv]
+  min_train_rows: 500
+  refit: "expanding at every origin"
+  event_mapping: "BMO to announcement session; AMC/unknown to next trading session"
+  primary_measure: "event minus non-event log(rv_total / HAR-IV forecast)"
+  uncertainty: "21-session moving-block bootstrap, 5000 draws, seed 20260812"
+  crucial_fence: >
+    Earnings labels are joined only after HAR-IV forecasts are fixed. They are
+    never forecast inputs because the repository calendar is not a versioned
+    point-in-time archive. This measures a mechanism, not deployable foresight.
+  family_rule: >
+    Report every matched-IV issuer with eligible top-25 sessions and the
+    equal-issuer pooled result; select none. IBM may have zero eligible rows.
+
+spx_term_slope_replication:
+  evidence_class: "repo-clean cross-asset historical holdout"
+  asset: "SPX"
+  training_start: "2011-01-03"
+  score_start: "2014-01-02"
+  score_end: "2015-12-31"
+  rationale: >
+    The NDX term-slope study inspected 2016-2025. This SPX target and 2014-2015
+    score window were not used to generate that regime-conditional hypothesis.
+  target: "next-session log SPX Garman-Klass plus overnight variance"
+  decision_time: "16:00 America/New_York"
+  cboe_close_delay_sessions: 1
+  baseline: [const, lrv_d, lrv_w, lrv_m, lev_d, lev_w, lev_m, same_origin_log_vix]
+  registered_candidates:
+    unconditional_slope: "log(VIX9D/VIX)"
+    dislocation_only: "max(log(VIX9D/VIX), 0)"
+  primary_comparison: "dislocation_only versus baseline on common origins"
+  reference_comparison: "unconditional_slope versus baseline on the same origins"
+  min_train_rows: 500
+  refit: "expanding at every origin"
+  success_requires:
+    - "dislocation_only has lower mean QLIKE than baseline"
+    - "two-sided DM p < 0.05"
+    - "paired win rate > 0.50"
+    - "dislocation_only QLIKE is lower than unconditional_slope QLIKE"
+  no_redefinition_after_run: true
+
+amendments:
+  - recorded_on: "2026-08-12"
+    scope: "SPX term-slope timing clarification before its first score"
+    change: "Delay VIX and VIX9D one full session at the 16:00 origin."
+    reason: >
+      This matches the information set that generated the NDX hypothesis and
+      prevents a 16:00-16:15 Cboe close from entering the origin. No SPX score
+      had been run or inspected.
+  - recorded_on: "2026-08-12"
+    scope: "absorption-map implementation audit, before final interpretation"
+    change: >
+      Replace the provisional five-lag HAC guess with ten lags and allow the
+      2025-10-17 origin's next-session target to complete before clean start.
+    reason: >
+      The first mechanical dry run failed to reproduce the already-published
+      leverage anchor. Ten lags and n=2463 exactly reconstruct 103.1875 to
+      62.6305. This is provenance repair against an existing claim, not a lag
+      selected for a new result. The provisional output is retained separately.

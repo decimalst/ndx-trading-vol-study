@@ -1,0 +1,50 @@
+{
+  "baseline_qlike": 0.2950061047146461,
+  "by_origin_state": {
+    "inverted": {
+      "baseline_qlike": 0.30335168998926837,
+      "dislocation_qlike": 0.3083878953696861,
+      "improvement_pct": -1.6601870194281358,
+      "n": 141
+    },
+    "not_inverted": {
+      "baseline_qlike": 0.2917554761960778,
+      "dislocation_qlike": 0.29224276205251665,
+      "improvement_pct": -0.16701858103646422,
+      "n": 362
+    }
+  },
+  "cboe_delay_sessions": 1,
+  "dislocation_minus_unconditional_qlike": 0.0012994826006386129,
+  "dislocation_only": {
+    "baseline_qlike": 0.2950061047146461,
+    "dm": 2.1437325084154026,
+    "dm_p": 0.03253408599696126,
+    "improvement_pct": -0.5974216354847554,
+    "n": 503,
+    "name": "dislocation_only",
+    "paired_win_rate": 0.48111332007952284,
+    "qlike": 0.2967685350102122
+  },
+  "evidence_class": "repo-clean cross-asset historical holdout",
+  "first_origin": "2014-01-02",
+  "last_origin": "2015-12-30",
+  "study": "spx_term_slope_replication",
+  "success_rule": [
+    "dislocation_only has lower mean QLIKE than baseline",
+    "two-sided DM p < 0.05",
+    "paired win rate > 0.50",
+    "dislocation_only QLIKE is lower than unconditional_slope QLIKE"
+  ],
+  "unconditional_slope": {
+    "baseline_qlike": 0.2950061047146461,
+    "dm": 0.17316565006176513,
+    "dm_p": 0.862591021696735,
+    "improvement_pct": -0.1569281745458442,
+    "n": 503,
+    "name": "unconditional_slope",
+    "paired_win_rate": 0.5407554671968191,
+    "qlike": 0.2954690524095736
+  },
+  "verdict": "FAIL"
+}

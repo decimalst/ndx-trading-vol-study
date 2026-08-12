@@ -1,0 +1,10 @@
+{
+  "covered_active_symbols": 43,
+  "eligible_events": 578,
+  "eligible_issuers": 39,
+  "fetch_failures": [],
+  "first_point_in_time_session": "2019-11-29",
+  "missing_active_symbols": [],
+  "raw_events": 1153,
+  "required_active_symbols": 43
+}

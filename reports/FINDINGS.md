@@ -762,3 +762,29 @@ new independent project-wide holdout.
 Let the clean window accrue. Do not re-run hunting for significance; every
 additional model tested on these same 192 days is another comparison against the
 same noise. Any model handed VXN must be reported against HAR-IV, not HAR.
+
+## Frozen extension: five research paths (2026-08-12)
+
+The follow-up changed the question from “can another feature beat the surface?”
+to “what does the surface absorb, where does its value live, and where should the
+mechanism be tested?” All five registered paths were run; none touched the sealed
+NDX clean window.
+
+- VXN absorbs 39.3% of the leverage joint Wald statistic and 33.4% of the
+  point-in-time top-25 earnings statistic, but little calendar structure.
+- Its diagnostic QLIKE contribution peaks at five sessions and decays beyond
+  ten; the curve does not peak at its nominal 30-calendar-day horizon.
+- The SPX implied-minus-realized premium is positive at 9, 30, and 93 calendar
+  days: 3.61, 3.47, and 4.72 annualized volatility points.
+- AAPL, AMZN, and GOOG earnings each leave large positive realized-variance
+  residuals after conditioning on their own 30-day implied indices. This is
+  mechanism evidence, not a tradable calendar forecast.
+- The clean 2014–2015 SPX replication rejects the prospective term-slope idea:
+  both the unconditional slope and the pre-specified dislocation interaction
+  worsen QLIKE.
+
+The constituent universe is now reconstructed independently each quarter from
+accepted SEC N-PORT filings: share classes are combined by issuer, the top 25 are
+ranked by filed portfolio weight, and a snapshot becomes usable only after its
+acceptance timestamp. See [the frozen extension findings](RESEARCH_PATHS_FINDINGS.md)
+and [the independent verification report](research_paths/verification.md).

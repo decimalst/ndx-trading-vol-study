@@ -1,0 +1,49 @@
+# Canonical Yahoo symbols for every issuer that appears in an SEC N-PORT
+# issuer-level quarterly QQQ top 25 (2019-09-30 through 2026-03-31).
+# This table maps identity only; it never determines historical membership.
+# FISV now trades as FI; META includes its FB history; CELG is delisted.
+issuer_id,ticker,company,active
+00724F,ADBE,Adobe,true
+007903,AMD,Advanced Micro Devices,true
+02079K,GOOGL,Alphabet,true
+023135,AMZN,Amazon,true
+031162,AMGN,Amgen,true
+037833,AAPL,Apple,true
+038222,AMAT,Applied Materials,true
+03831W,APP,AppLovin,true
+053015,ADP,Automatic Data Processing,true
+09857L,BKNG,Booking Holdings,true
+11135F,AVGO,Broadcom,true
+151020,CELG,Celgene,false
+16119P,CHTR,Charter Communications,true
+17275R,CSCO,Cisco,true
+20030N,CMCSA,Comcast,true
+22160K,COST,Costco,true
+30303M,META,Meta Platforms,true
+337738,FI,Fiserv,true
+375558,GILD,Gilead Sciences,true
+438516,HON,Honeywell,true
+458140,INTC,Intel,true
+461202,INTU,Intuit,true
+46120E,ISRG,Intuitive Surgical,true
+482480,KLAC,KLA,true
+512807,LRCX,Lam Research,true
+594918,MSFT,Microsoft,true
+595112,MU,Micron Technology,true
+60770K,MRNA,Moderna,true
+609207,MDLZ,Mondelez,true
+64110L,NFLX,Netflix,true
+67066G,NVDA,NVIDIA,true
+69608A,PLTR,Palantir,true
+70450Y,PYPL,PayPal,true
+713448,PEP,PepsiCo,true
+747525,QCOM,Qualcomm,true
+82509L,SHOP,Shopify,true
+855244,SBUX,Starbucks,true
+872590,TMUS,T-Mobile US,true
+88160R,TSLA,Tesla,true
+882508,TXN,Texas Instruments,true
+92532F,VRTX,Vertex Pharmaceuticals,true
+931142,WMT,Walmart,true
+98980L,ZM,Zoom,true
+G54950,LIN,Linde,true
