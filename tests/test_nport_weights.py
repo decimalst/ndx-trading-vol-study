@@ -66,6 +66,16 @@ class NportParserContract(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "percentage total"):
             validate_snapshot(holdings, min_total=98.0, max_total=102.0)
 
+    def test_snapshot_validation_allows_small_derivative_liability(self):
+        _, holdings = parse_nport_xml(SAMPLE_XML)
+        derivative = holdings.iloc[0].copy()
+        derivative["name"] = "N/A CME E-Mini NASDAQ 100 Index Future"
+        derivative["value_usd"] = -1.0
+        derivative["pct_value"] = -0.1
+        derivative["asset_category"] = "DE"
+        holdings = pd.concat([holdings, derivative.to_frame().T], ignore_index=True)
+        validate_snapshot(holdings, min_total=98.0, max_total=102.0)
+
     def test_archive_url_uses_registrant_cik_not_accession_filer(self):
         self.assertEqual(
             archive_url("0001067839", "0001752724-25-211318"),
