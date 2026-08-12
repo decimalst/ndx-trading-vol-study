@@ -15,6 +15,12 @@ smoke:
 test-signal-safety:
 	$(PY) -m unittest tests.test_signal_safety
 
+test-nport-weights:
+	$(PY) -m unittest tests.test_nport_weights
+
+fetch-nport-weights: test-nport-weights
+	$(PY) -m src.nport_weights fetch
+
 fetch-free:
 	$(PY) -m src.fetch free
 
@@ -92,3 +98,6 @@ signals-discover: test-signal-safety
 
 signals-confirm: test-signal-safety
 	$(PY) -m src.signal_study confirm
+
+verify-signals:
+	$(PY) -m src.verify_signal_results

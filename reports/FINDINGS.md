@@ -574,7 +574,43 @@ samples; the full-sample one is the relevant one for "is this term useful," and
 the verdict stays null. The report now prints win rate and mean difference side
 by side at every sample size so this cannot be read one-sidedly again.
 
-The ledger has no open items.
+The original-model ledger has no open items.
+
+## Separate orthogonal-signal holdout: directional term slope, not confirmed
+
+This study was frozen in `signal_study.yaml` and is mechanically unable to read
+the original clean window. It used discovery (2016–2021) to select at most one
+of seven combinations, then spent confirmation (2022–2025-10-17) once.
+
+Discovery selected lagged `log(VIX9D/VIX)`: QLIKE 0.3311 versus 0.3428 for a
+timing-safe HAR-IV-LEV baseline (+3.39%). Cross-asset stress (HYG/TLT/GLD/USO/UUP)
+and QQQ market state (volume/overnight share) were null or harmful, alone and in
+combinations.
+
+On 952 sealed confirmation origins, term slope reached QLIKE 0.3260 versus
+0.3358 (+2.92%) and won 519/952 days (54.5%), with sound interval independence
+(p=0.910). It **failed** because the pre-registered two-sided DM p-value was
+0.1016, above 0.05. An independent implementation reproduced every stored
+metric to 1e-12. Conservative post-hoc HAC checks were also non-significant.
+
+The improvement decayed from 5.3%/7.0% in 2022/2023 to 0.2%/0.9% in 2024/2025.
+Correct disposition: observe it prospectively without tuning; do not call it a
+validated signal and do not reuse this confirmation period.
+
+## Historical weights: free QQQ history recovered, but intentionally not scored
+
+The repository's old `pit_weights.parquet` is a current-13-name market-cap
+reconstruction with a mechanically constant 55.43% aggregate, not historical
+Nasdaq-100 weights. The public SEC path supplied by the user yielded 27 tested
+QQQ N-PORT snapshots (2,746 holdings) from 2019-09-30 through 2026-03-31.
+Disclosures arrive 50–62 days after the portfolio date and are joined by exact
+SEC acceptance timestamp at a 16:00 ET origin.
+
+The disclosed positive-equity top-10 weight moved 55.13% → 46.85%, and HHI
+0.0459 → 0.0312. This is a valid quarterly point-in-time fund proxy, not exact
+daily index history. It begins too late for most of discovery and contains only
+27 slow snapshots, so inserting it after seeing the signal results would be
+post-hoc contamination. It is stored for a future, separately frozen holdout.
 
 ---
 
@@ -606,7 +642,9 @@ value of the unpriced remainder is small — +1.8% QLIKE, DM p = 0.159.
 **Null:** calendar covariates (H1, p = 0.95, marginally *harmful*); implied
 correlation beyond the VXN level; the earnings mechanism out of sample (DM
 p = 0.975, win rate 45% at n=157, no concentration trend); information beyond
-the surface at 30 days (H3, withdrawn after non-overlapping-block testing).
+the surface at 30 days (H3, withdrawn after non-overlapping-block testing);
+cross-asset and market-state composites. Lagged VIX9D/VIX was directionally
+positive in a separate holdout but did not confirm (DM p = 0.1016).
 
 **The variance risk premium is real and structurally hard to harvest.** ~3.9–4.2
 vol points, visible to anyone charting VXN minus trailing RV. Conditional
@@ -619,8 +657,6 @@ keeping is not a model — it is the harness: the leakage boundary, the frozen
 pre-registration, the mechanically enforced diagnostic-only fence, the paired
 per-origin reporting that never lets a mean travel without its sign count, and
 the block testing that took back two of my own results.
-
-## Standing rule
 
 ## Standing rule
 

@@ -51,6 +51,8 @@ the post-publication subwindow as a robustness check.
 | Macro calendar (FOMC/CPI/NFP) | Fed + BLS schedules | free | `calendars/*.csv`, filled and verified 2026-08-11 for 2016→2026 (FOMC to 2027). See "Calendar provenance" below — the seeds contained errors |
 | Earnings dates, top-weight NDX names | yfinance (`make fetch-earnings`) | free, no API key | session inferred from the ET announcement timestamp; FMP path kept as `make fetch-earnings-fmp` |
 | Index weights | Invesco QQQ "Complete Holdings" CSV | free | **manual download** — Invesco returns HTTP 406 to scripted requests. Save to `data/raw/qqq_holdings_YYYY-MM-DD.csv`; newest is used |
+| Historical QQQ holdings | SEC Form N-PORT (`make fetch-nport-weights`) | free | quarterly public snapshots from 2019-09-30; point-in-time use begins at SEC acceptance, 50–62 days later |
+| Orthogonal signal inputs | Yahoo Finance ETFs + Cboe VIX/VIX9D histories | free | separate diagnostic-only study; Cboe closes delayed one session at the 16:00 ET forecast origin |
 
 ### Calendar provenance
 
@@ -149,6 +151,32 @@ Forward accrual: `make daily-update` (cron it after the close if you want, e.g.
 cloud, no scheduler, nothing to babysit. State lives in `data/`, results in
 `reports/`, and `config.yaml` is the pre-registration artifact.
 
+## Diagnostic-only orthogonal-signal study
+
+The independently frozen protocol is in
+[`reports/ORTHOGONAL_SIGNALS_PROTOCOL.md`](reports/ORTHOGONAL_SIGNALS_PROTOCOL.md).
+It never reads the original clean window. Safety tests run before both empirical
+stages:
+
+```bash
+make fetch-signal-inputs
+make signals-discover            # tests first; locks at most one candidate
+make signals-confirm             # tests first; spends confirmation once
+make verify-signals              # independent metric recomputation
+```
+
+Seven combinations of term structure, cross-asset stress, and QQQ market state
+were evaluated in discovery. Lagged `log(VIX9D/VIX)` won discovery, improved
+sealed confirmation QLIKE by 2.92%, but **failed confirmation** (DM p=0.1016).
+See [`reports/signal_study/verification.md`](reports/signal_study/verification.md)
+and the [weight/source audit](reports/HISTORICAL_WEIGHTS_AND_SIGNAL_BACKLOG.md).
+
+Historical QQQ holdings can be refreshed independently with
+`make fetch-nport-weights`. The target runs nine parser/integrity/as-of tests
+first, then writes 27 SEC filing snapshots plus a quarterly concentration
+summary. These are not exact daily Nasdaq-100 weights and are not fed into the
+completed signal holdout.
+
 ## Known limitations
 
 - GK-based RV is noisier than 5-min RV; QLIKE is chosen partly because it is
@@ -166,7 +194,9 @@ cloud, no scheduler, nothing to babysit. State lives in `data/`, results in
   accrues; their 30-day targets aren't realized yet anyway.
 - Earnings **sessions are inferred** from yfinance announcement timestamps, not
   verified against IR pages. See `reports/AMENDMENTS.md`.
-- Index weights are as of one Invesco holdings file, applied to all history.
+- The reconstructed 13-name weight file holds the tracked basket at a constant
+  55.43% and uses current membership. It is approximate relative drift, not
+  exact historical NDX weights; see the weight/source audit above.
 - Calendars are checked in, not fetched at runtime: bls.gov and invesco.com both
   reject scripted requests. They currently run through 2026 (FOMC through 2027)
   and must be extended by hand after that, or `is_cpi`/`is_nfp` silently become 0.

@@ -60,8 +60,9 @@ the selection set from 7 to 15.
   identifies position sign or inventory size.
 - Exact historical NDX weights are a licensed Nasdaq data product. Public QQQ
   Form N-PORT filings can support a delayed quarterly proxy from late 2019,
-  provided each snapshot becomes usable only on its filing date. Weight data
-  are audited separately and do not enter this holdout.
+  provided each snapshot becomes usable only after its SEC acceptance
+  timestamp. Weight data are audited separately in
+  `HISTORICAL_WEIGHTS_AND_SIGNAL_BACKLOG.md` and do not enter this holdout.
 - Historical observed weather is available, but it is revision-prone, its
   same-day availability is inconsistent by station, and the causal prior for
   next-day NDX variance is weak. It does not spend this first holdout.

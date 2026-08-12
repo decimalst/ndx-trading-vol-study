@@ -283,3 +283,38 @@ sign p, mean, median, top-10 concentration) for the key pairs in every phase,
 alongside the existing heavy-earnings slice table. A mean difference and a win
 rate answer different questions and can point opposite ways; neither now travels
 alone.
+
+---
+
+## 2026-08-12 (sixth) — separate orthogonal-signal protocol and holdout
+
+**`config.yaml` unchanged.** This is a separate diagnostic-only study governed
+by `signal_study.yaml`. The original clean window is fenced out in code and by
+pre-written tests.
+
+Before fetching signal inputs or producing a score, commits `ed313fb` and
+`340e8dd` registered the safety contract. Before any result, commit `352b59f`
+expanded the user-authorized combination search to exactly three families and
+their seven non-empty combinations. Both discovery and confirmation Make
+targets run the 14-test safety suite first.
+
+Discovery (2016–2021, n=1511) locked one winner: one-session-lagged
+`log(VIX9D/VIX)`, +3.39% QLIKE versus timing-safe HAR-IV-LEV. Cross-asset stress
+(HYG/TLT/GLD/USO/UUP), QQQ market state (abnormal volume/overnight share), and
+their combinations did not win.
+
+Confirmation was spent once (2022–2025-10-17, n=952). Term slope improved mean
+QLIKE by 2.92% and won 54.5% of origins, but failed the registered two-sided DM
+threshold (p=0.1016). Verdict: **FAIL**. An independent verifier that imports
+neither signal implementation nor shared metrics reproduced all confirmation
+numbers to 1e-12 and confirmed the last scored target precedes the clean fence.
+
+Historical-weight audit: `pit_weights.parquet` is a survivorship-biased
+13-current-name reconstruction with a mechanically fixed 55.43% aggregate, not
+exact historical NDX weights. After the user supplied the working EDGAR page,
+pre-run commits `30f49a2`, `844d38e`, and `5eefd8f` registered the N-PORT parser,
+liability, as-of timing, and concentration tests before live processing. Nine
+tests passed, then all 27 public QQQ N-PORT snapshots were downloaded (2,746
+holdings, report dates 2019-09-30 through 2026-03-31, disclosure lag 50–62
+days). They are aligned by SEC acceptance timestamp and stored for future use;
+no weight signal was scored on the spent holdout.
