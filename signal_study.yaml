@@ -44,12 +44,25 @@ options_term:
     VIX1D is excluded because its history begins in 2022 and would consume the
     confirmation period without a discovery sample.
 
+market_state:
+  feature: >
+    One qqq_market_stress value: RMS of the positive part of a QQQ log-volume
+    z-score and the positive part of an overnight-variance-share z-score. Each
+    scale estimate uses 252 sessions ending at t-1. Both raw observations are
+    known by the 16:00 ET origin and require no external data.
+  scale_window: 252
+  min_scale_observations: 126
+
 models:
   baseline: safe_har_iv_lev
   candidates:
     - term_slope
     - cross_asset
-    - combined
+    - market_state
+    - term_cross
+    - term_market
+    - cross_market
+    - full
 
 selection:
   loss: qlike
@@ -58,7 +71,8 @@ selection:
     common set of origins. Lock the candidate with the lowest mean QLIKE only
     if it strictly improves on baseline; otherwise lock no winner and do not
     spend the confirmation window.
-  tie_break_order: [term_slope, cross_asset, combined]
+  tie_break_order: [term_slope, cross_asset, market_state, term_cross,
+                    term_market, cross_market, full]
 
 confirmation:
   one_locked_test_only: true
@@ -76,4 +90,3 @@ fences:
   forbid_clean_scoring: true
   outputs_dir: "data/signal_study"
   reports_dir: "reports/signal_study"
-

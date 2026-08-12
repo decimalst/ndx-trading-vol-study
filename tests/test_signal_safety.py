@@ -32,12 +32,15 @@ def _study_cfg() -> dict:
             "no_forward_fill": True,
         },
         "cross_asset": {"scale_window": 20, "min_scale_observations": 5},
+        "market_state": {"scale_window": 20, "min_scale_observations": 5},
         "models": {
             "baseline": "safe_har_iv_lev",
-            "candidates": ["term_slope", "cross_asset", "combined"],
+            "candidates": ["term_slope", "cross_asset", "market_state",
+                           "term_cross", "term_market", "cross_market", "full"],
         },
         "selection": {
-            "tie_break_order": ["term_slope", "cross_asset", "combined"],
+            "tie_break_order": ["term_slope", "cross_asset", "market_state",
+                                "term_cross", "term_market", "cross_market", "full"],
         },
         "fences": {"clean_start": "2025-11-03", "forbid_clean_origins": True},
     }
@@ -58,12 +61,14 @@ def _master(n: int = 120, seed: int = 11) -> pd.DataFrame:
     idx = pd.bdate_range("2020-01-02", periods=n)
     ret = rng.normal(0.0, 0.012, n)
     rv = np.exp(-9.0 + 0.4 * rng.normal(size=n))
+    overnight = rv * rng.uniform(0.0, 0.7, n)
     return pd.DataFrame(
         {
             "rv_total": rv,
             "log_rv": np.log(rv),
             "ret_cc": ret,
             "vxn": 20.0 + rng.normal(size=n),
+            "var_overnight": overnight,
         },
         index=idx,
     )
@@ -120,6 +125,22 @@ class AvailabilityTests(unittest.TestCase):
         ).loc[origin]
         pd.testing.assert_series_equal(before, after)
 
+    def test_future_qqq_data_cannot_change_origin_market_state(self) -> None:
+        master = _master(80)
+        idx = master.index
+        daily = pd.DataFrame({"volume": np.linspace(1_000_000, 2_000_000, len(idx))},
+                             index=idx)
+        origin = idx[-2]
+        before = signal_study.build_market_state(master, daily, _study_cfg()).loc[origin]
+        changed_master = master.copy()
+        changed_daily = daily.copy()
+        changed_master.loc[idx[-1], "var_overnight"] = 1_000_000.0
+        changed_daily.loc[idx[-1], "volume"] = 1_000_000_000.0
+        after = signal_study.build_market_state(
+            changed_master, changed_daily, _study_cfg()
+        ).loc[origin]
+        self.assertEqual(before, after)
+
 
 class WalkForwardTests(unittest.TestCase):
     def test_unknown_target_and_future_cannot_change_origin_forecast(self) -> None:
@@ -127,19 +148,20 @@ class WalkForwardTests(unittest.TestCase):
         idx = master.index
         signals = pd.DataFrame(
             {"iv_term_slope": np.linspace(-0.2, 0.2, len(idx)),
-             "xasset_stress": np.linspace(0.1, 0.8, len(idx))},
+             "xasset_stress": np.linspace(0.1, 0.8, len(idx)),
+             "qqq_market_stress": np.linspace(0.2, 0.6, len(idx))},
             index=idx,
         )
         origin = idx[80]
         first = signal_study.run_walk_forward(
-            master, signals, pd.DatetimeIndex([origin]), _main_cfg(), "combined"
+            master, signals, pd.DatetimeIndex([origin]), _main_cfg(), "full"
         )
 
         poisoned = master.copy()
         poisoned.loc[idx[81]:, "log_rv"] = 100.0
         poisoned.loc[idx[81]:, "rv_total"] = np.exp(100.0)
         second = signal_study.run_walk_forward(
-            poisoned, signals, pd.DatetimeIndex([origin]), _main_cfg(), "combined"
+            poisoned, signals, pd.DatetimeIndex([origin]), _main_cfg(), "full"
         )
         pd.testing.assert_frame_equal(first, second)
 
@@ -148,7 +170,8 @@ class WalkForwardTests(unittest.TestCase):
         idx = master.index
         signals = pd.DataFrame(
             {"iv_term_slope": np.linspace(-0.2, 0.2, len(idx)),
-             "xasset_stress": np.linspace(0.1, 0.8, len(idx))},
+             "xasset_stress": np.linspace(0.1, 0.8, len(idx)),
+             "qqq_market_stress": np.linspace(0.2, 0.6, len(idx))},
             index=idx,
         )
         origin = idx[80]
@@ -166,29 +189,56 @@ class WalkForwardTests(unittest.TestCase):
 
 
 class SelectionTests(unittest.TestCase):
+    @staticmethod
+    def _all_losses(base: pd.Series, term: pd.Series,
+                    cross: pd.Series, combined: pd.Series) -> dict[str, pd.Series]:
+        return {
+            "safe_har_iv_lev": base,
+            "term_slope": term,
+            "cross_asset": cross,
+            "market_state": combined,
+            "term_cross": combined,
+            "term_market": combined,
+            "cross_market": combined,
+            "full": combined,
+        }
+
     def test_no_discovery_improvement_locks_no_winner(self) -> None:
         idx = pd.bdate_range("2020-01-02", periods=3)
-        losses = {
-            "safe_har_iv_lev": pd.Series([0.2, 0.2, 0.2], index=idx),
-            "term_slope": pd.Series([0.3, 0.2, 0.2], index=idx),
-            "cross_asset": pd.Series([0.2, 0.2, 0.2], index=idx),
-            "combined": pd.Series([0.4, 0.1, 0.2], index=idx),
-        }
+        losses = self._all_losses(
+            pd.Series([0.2, 0.2, 0.2], index=idx),
+            pd.Series([0.3, 0.2, 0.2], index=idx),
+            pd.Series([0.2, 0.2, 0.2], index=idx),
+            pd.Series([0.4, 0.1, 0.2], index=idx),
+        )
         winner, summary = signal_study.select_discovery_winner(losses, _study_cfg())
         self.assertIsNone(winner)
         self.assertEqual(summary["n_common"], 3)
 
     def test_selection_uses_one_common_origin_set(self) -> None:
         idx = pd.bdate_range("2020-01-02", periods=4)
-        losses = {
-            "safe_har_iv_lev": pd.Series([0.5, 0.5, 0.5, 0.5], index=idx),
-            "term_slope": pd.Series([0.1, 0.1, 9.0], index=idx[:3]),
-            "cross_asset": pd.Series([0.4, 0.4, 0.4], index=idx[1:]),
-            "combined": pd.Series([0.45, 0.45, 0.45, 0.45], index=idx),
-        }
+        losses = self._all_losses(
+            pd.Series([0.5, 0.5, 0.5, 0.5], index=idx),
+            pd.Series([0.1, 0.1, 9.0], index=idx[:3]),
+            pd.Series([0.4, 0.4, 0.4], index=idx[1:]),
+            pd.Series([0.45, 0.45, 0.45, 0.45], index=idx),
+        )
         winner, summary = signal_study.select_discovery_winner(losses, _study_cfg())
         self.assertEqual(summary["n_common"], 2)
         self.assertEqual(winner, "cross_asset")
+
+    def test_registered_power_set_has_expected_columns(self) -> None:
+        expected = {
+            "safe_har_iv_lev": (),
+            "term_slope": ("iv_term_slope",),
+            "cross_asset": ("xasset_stress",),
+            "market_state": ("qqq_market_stress",),
+            "term_cross": ("iv_term_slope", "xasset_stress"),
+            "term_market": ("iv_term_slope", "qqq_market_stress"),
+            "cross_market": ("xasset_stress", "qqq_market_stress"),
+            "full": ("iv_term_slope", "xasset_stress", "qqq_market_stress"),
+        }
+        self.assertEqual(signal_study.CANDIDATE_SIGNALS, expected)
 
 
 class DiscoveryLockTests(unittest.TestCase):

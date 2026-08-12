@@ -23,16 +23,35 @@ This timing rule also tightens the baseline: the study uses VXN(t-1), not the
 same-date daily close used by the original harness. The original reports remain
 immutable; the new baseline and candidates are compared only within this study.
 
-## Fixed candidates
+## Fixed signal families and combinations
 
-1. `term_slope`: safe HAR-IV-LEV plus lagged `log(VIX9D/VIX)`.
-2. `cross_asset`: safe HAR-IV-LEV plus one cross-asset stress composite built
-   from HYG, TLT, GLD, USO, and UUP close-to-close returns.
-3. `combined`: both additions.
+1. `term_slope`: lagged `log(VIX9D/VIX)`.
+2. `cross_asset`: one cross-asset stress composite built from HYG, TLT, GLD,
+   USO, and UUP close-to-close returns.
+3. `market_state`: one QQQ-native stress composite built from abnormal volume
+   and overnight-variance share, with both scales estimated through t-1.
+
+Discovery evaluates all seven non-empty combinations of these three families:
+the three singletons, three pairs, and the full combination. Every model adds
+its registered family columns to the same safe HAR-IV-LEV baseline. The seven
+models are selection opportunities only inside discovery; confirmation still
+tests exactly one locked winner.
 
 The cross-asset composite is a single feature, not five opportunities to tune.
 Each return is standardized with trailing data whose scale estimate ends at
 t-1; the feature is the root mean square across assets.
+
+### Pre-run expansion recorded 2026-08-12
+
+The first version named only `term_slope`, `cross_asset`, and their combination.
+Before any live signal input was fetched or any discovery result was produced,
+the user explicitly authorized a small permutation study if cross-contamination
+could be prevented. `market_state` and the complete 3-family power set were
+therefore added now. The outer confirmation window, one-winner lock, baseline,
+loss, success criteria, and clean fence are unchanged. ON RRP was considered as
+a fourth family and rejected for this round because its informative variation
+is concentrated in a short structural episode; four families would also double
+the selection set from 7 to 15.
 
 ## Deferred ideas
 
@@ -52,4 +71,3 @@ t-1; the feature is the root mean square across assets.
 Both `make signals-discover` and `make signals-confirm` depend on
 `make test-signal-safety`. Tests cover the clean-window fence, source lags,
 future-target invariance, missing-data behavior, and discovery-lock integrity.
-
