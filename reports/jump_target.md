@@ -2,6 +2,8 @@
 
 The Oxford-Man SPX target was not used anywhere else in this repository. The surface hypothesis was motivated by prior NDX work, so this is an external mechanism confirmation rather than a pristine strategy test.
 
+The source columns are five-minute realized variance and five-minute bipower variation computed by Oxford-Man. The repository's hourly QQQ bars do not enter this study.
+
 - Source coverage: 2000-01-03 through 2018-06-27.
 - Scored confirmation origins: 1001.
 - Five-session material-jump event rate: 38.9%.

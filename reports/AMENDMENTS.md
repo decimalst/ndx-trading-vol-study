@@ -386,3 +386,47 @@ Brier (0.137616 vs 0.126650) and log loss (0.457171 vs 0.420496), despite strong
 top-versus-bottom quintile ranking. An independent verifier reproduced source
 hash, component reconciliation, source lags, annual thresholds, completed
 targets, phase losses, fences, and both verdicts.
+
+---
+
+## 2026-08-12 (ninth) — calibrated and incremental HMM repair
+
+User review identified that the direct supervised-versus-unsupervised HMM
+comparison confounded discrimination with calibration. Before inspecting this
+transition target after 2025-11-03, six tests and `regime_repair.yaml` froze a
+Platt calibration and a same-row incremental-state comparison. These dates had
+already been used elsewhere in the project, so the result is explicitly a
+target-specific holdout rather than a pristine global holdout. All fitted
+objects use annual out-of-fold rows through 2024; the HMM, threshold, Platt
+mapping, and supervised coefficients are not refit on holdout labels.
+
+On 166 calm origins, Platt calibration passed: HMM Brier improved 0.218189 to
+0.205309 and log loss improved 0.673834 to 0.604679. The fair incremental test
+failed narrowly: adding calibrated HMM probability to the supervised benchmark
+worsened Brier 0.195725 to 0.196617 and log loss 0.578219 to 0.579151. This
+replaces the interpretation of the original comparison: calibration was a real
+defect, but the state supplied no detectable information beyond direct RV
+history in the registered holdout.
+
+The jump-data objection was also checked against implementation lineage. The
+jump module reads Oxford-Man five-minute `rv5` and `bv`; it never reads the
+seven-bars-per-session yfinance file. The jump negative remains limited by the
+absence of a formal BNS quarticity statistic, but it is not an hourly-sampling
+result.
+
+### Interpretive corrections from final review
+
+- The term-slope result is now led by non-stationarity, not its aggregate
+  p-value: confirmation improvement decayed 5.3%/7.0% in 2022-2023 to
+  0.2%/0.9% in 2024-2025. A dislocated-front-end interaction is prospective
+  only because the yearly split has been inspected.
+- The SKEW overlay passed every registered outcome check and failed only the
+  70% participation proxy. The verdict is unchanged, but February 2020
+  contamination—not gate design—is the binding reason it is not evidence. A
+  future overlay should gate direct risk-adjusted outcomes plus minimal
+  non-degeneracy.
+- N-PORT top-10 weight fell 55.13% to 46.85% and HHI fell 0.0459 to 0.0312,
+  with the large step following Nasdaq's July 2023 anti-concentration special
+  rebalance. Together with flat yearly earnings wins and the 2025 low, that is
+  a third line against the earnings-concentration defence. This sample is now
+  spent for the question; existing-data refits cannot restore falsifiability.

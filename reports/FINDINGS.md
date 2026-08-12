@@ -593,9 +593,12 @@ On 952 sealed confirmation origins, term slope reached QLIKE 0.3260 versus
 0.1016, above 0.05. An independent implementation reproduced every stored
 metric to 1e-12. Conservative post-hoc HAC checks were also non-significant.
 
-The improvement decayed from 5.3%/7.0% in 2022/2023 to 0.2%/0.9% in 2024/2025.
-Correct disposition: observe it prospectively without tuning; do not call it a
-validated signal and do not reuse this confirmation period.
+The improvement decayed monotonically from 5.3%/7.0% in 2022/2023 to 0.2%/0.9%
+in 2024/2025. That non-stationarity is more informative than p=0.1016. The
+natural interpretation is a regime-conditional term-slope signal: useful while
+the front end is dislocated, negligible otherwise. Because the yearly pattern
+has now been seen, this is a prospective-observation hypothesis only. Do not
+fit the interaction or reuse this confirmation period.
 
 ## Historical weights: free QQQ history recovered, but intentionally not scored
 
@@ -610,7 +613,13 @@ The disclosed positive-equity top-10 weight moved 55.13% → 46.85%, and HHI
 0.0459 → 0.0312. This is a valid quarterly point-in-time fund proxy, not exact
 daily index history. It begins too late for most of discovery and contains only
 27 slow snapshots, so inserting it after seeing the signal results would be
-post-hoc contamination. It is stored for a future, separately frozen holdout.
+post-hoc contamination. The sharp 2023-Q3 drop reflects Nasdaq's special
+rebalance to reduce overconcentration. This is adverse—not neutral—to the
+earnings-concentration defence and joins the flat yearly win rates and 2025 low
+as a third independent contradiction. The direction is now known, so the
+existing N-PORT data cannot support a later clean test. Within this project the
+hypothesis is effectively closed unless genuinely future observations or an
+untouched asset are acquired.
 
 An attempted annual backfill to 2004 was later paused before completion. The
 2004 and 2005 schedules parse and reconcile under pre-written regressions, but
@@ -630,6 +639,14 @@ known pre-COVID adverse entries and improved the average 5% CVaR from -22.71 to
 19.18. Mean P&L rose from +2.38 to +2.80 vol points. But it retained only 63.3%
 of richness trades versus the frozen 70% minimum, so the strict verdict is
 **FAIL**.
+
+The gate was probably mis-specified. Participation was a proxy for avoiding a
+degenerate "never trade" rule, while the outcomes actually cared about were
+mean and tail risk; the veto improved every registered outcome axis while
+rejecting 36.7% of trades. The frozen verdict still stands, but contamination—not
+the 70% proxy—is the decisive limitation: February 2020 motivated the rule and
+is included in the diagnostic. A future overlay should gate directly on
+pre-specified risk-adjusted outcomes, plus a minimal non-degeneracy condition.
 
 The diagnostic still identifies something real about the failure mechanism.
 Richness selected 61.8% of high-SKEW origins versus 45.1% of lower-SKEW origins;
@@ -657,18 +674,20 @@ needs realized quarticity and a formal BNS jump target rather than tuning this
 proxy.
 
 A separate two-state Gaussian HMM targeted five-session entry into a high-RV
-state. It used only RV history, annual prior-data fits, and forward-filtered
-probabilities. It strongly ranked risk (61.7% event rate in its top probability
-quintile versus 2.9% in the bottom) but lost to a supervised HAR-state logistic
-benchmark on Brier (0.13762 vs 0.12665) and log loss (0.45717 vs 0.42050). It
-also lost during 2020 and 2022. The HMM describes the state after the transition;
-it does not supply advance information about the switch.
+state. Its direct loss to a supervised classifier was calibration-confounded.
+A pre-specified Platt repair on a target-specific 2025-2026 holdout improved the
+HMM's Brier from 0.21819 to 0.20531 and log loss from 0.67383 to 0.60468 while
+retaining a 54.5%-versus-18.2% top/bottom quintile spread. Calibration is real.
+The fair incremental test still failed: adding the calibrated HMM probability
+to the same-row supervised model worsened Brier from 0.19572 to 0.19662 and log
+loss from 0.57822 to 0.57915. The state is descriptive and well ranked, but its
+useful information was already absorbed by direct RV-history features.
 
-The proposed correlation-premium target remains unscored for a principled
-reason: COR1M is built from the top 50 SPX stocks, while the repository holds
-delayed QQQ snapshots and a survivorship-biased 13-name proxy. Mixing those
-universes would not produce implied-minus-realized correlation. Full results
-and exact data requirements are in `TARGET_REGIME_FINDINGS.md`.
+The correlation-premium target is now explicitly an SPX study, matching COR1M,
+DSPX, and VIXEQ by construction. It remains unscored only because the repository
+lacks the exact point-in-time top-50 SPX tracking basket and constituent return
+panel. Full results and the acquisition gate are in
+`TARGET_REGIME_FINDINGS.md` and `SPX_DISPERSION_DATA_CONTRACT.md`.
 
 ---
 
@@ -676,6 +695,15 @@ and exact data requirements are in `TARGET_REGIME_FINDINGS.md`.
 
 Written 2026-08-12 at the close of the pre-gate work. This is the section to
 read first.
+
+**The central result is roughly ten designs across two assets and three
+instrument families—not any individual null.** Daily variance models, option-
+level controls, calendar/earnings features, cross-asset composites, term shape,
+carry, jump decomposition, and latent-state transition work repeatedly find
+that forecastable variance is already priced or that apparent additions are
+regime-bound, contaminated, or redundant. These are not statistically
+independent trials, so do not turn the count into a meta-p-value; breadth is the
+robustness claim.
 
 **Volatility is forecastable, and a five-term linear regression does it
 competently.** HAR-IV reaches QLIKE 0.3095 on the clean window with honest
@@ -699,17 +727,19 @@ value of the unpriced remainder is small — +1.8% QLIKE, DM p = 0.159.
 
 **Null:** calendar covariates (H1, p = 0.95, marginally *harmful*); implied
 correlation beyond the VXN level; the earnings mechanism out of sample (DM
-p = 0.975, win rate 45% at n=157, no concentration trend); information beyond
+p = 0.975, win rate 45% at n=157, declining concentration); information beyond
 the surface at 30 days (H3, withdrawn after non-overlapping-block testing);
 cross-asset and market-state composites. Lagged VIX9D/VIX was directionally
-positive in a separate holdout but did not confirm (DM p = 0.1016).
+positive but decayed from 5.3%/7.0% in 2022-2023 to 0.2%/0.9% in 2024-2025;
+front-end dislocation is now a prospective-only interaction hypothesis.
 
 **The variance risk premium is real and structurally hard to harvest.** ~3.9–4.2
 vol points, visible to anyone charting VXN minus trailing RV. Conditional
 selection does not pass against unconditional carry. A post-hoc SKEW veto
 supports the adverse-selection mechanism and dramatically improves historical
 tail aggregates, but fails its frozen 70%-participation floor (63.3%) and is not
-out-of-sample evidence.
+out-of-sample evidence. The gate was misaligned with the risk objective, but
+February 2020 contamination is the binding problem.
 
 **Four clean negatives and three self-withdrawn positives.** The version of this
 project that found significance would very likely have been wrong. What is worth
@@ -717,6 +747,15 @@ keeping is not a model — it is the harness: the leakage boundary, the frozen
 pre-registration, the mechanically enforced diagnostic-only fence, the paired
 per-origin reporting that never lets a mean travel without its sign count, and
 the block testing that took back two of my own results.
+
+**The repeated transition result is now better specified.** Calibrating the HMM
+worked, so its original proper-score loss was not by itself evidence against the
+state estimate. But the calibrated probability added nothing to the supervised
+RV-history model. Across carry, surface conditioning, the jump target, and the
+state repair, historical volatility describes the current regime without
+anticipating its discontinuous change. That consistency is more robust than any
+single model ranking, though the repair window is target-specific rather than a
+new independent project-wide holdout.
 
 ## Standing rule
 

@@ -20,3 +20,11 @@ This recomputation imports neither `src.signal_study` nor `src.metrics`. All rec
 | 2025 | 199 | 0.433988 | 0.437944 | +0.903% | 0.588 |
 
 Year rows are post-hoc stability descriptions, not additional tests.
+
+The monotone economic decay is more informative than the aggregate p-value:
+the improvement falls from 5.3% and 7.0% in 2022-2023, when the short end was
+more frequently dislocated, to 0.2% and 0.9% in 2024-2025. The natural
+hypothesis is regime-conditional term-slope information rather than a stable
+unconditional predictor. Because this yearly pattern has now been inspected,
+that interaction is prospective-only and cannot be promoted or tested on this
+confirmation sample.

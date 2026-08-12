@@ -30,7 +30,10 @@ test-jump-target:
 test-regime-transition:
 	$(PY) -m unittest tests.test_regime_transition
 
-test-target-regime: test-jump-target test-regime-transition
+test-regime-repair:
+	$(PY) -m unittest tests.test_regime_repair
+
+test-target-regime: test-jump-target test-regime-transition test-regime-repair
 
 fetch-nport-weights: test-nport-weights
 	$(PY) -m src.nport_weights fetch
@@ -61,8 +64,15 @@ jump-target: test-jump-target
 regime-transition: test-regime-transition
 	$(PY) -m src.regime_transition run
 
+regime-repair: test-regime-repair
+	$(PY) -m src.regime_repair run
+
 verify-target-regime:
 	$(PY) -m src.verify_target_regime
+	$(PY) -m src.verify_regime_repair
+
+verify-regime-repair:
+	$(PY) -m src.verify_regime_repair
 
 fetch-free:
 	$(PY) -m src.fetch free

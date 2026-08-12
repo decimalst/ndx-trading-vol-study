@@ -23,6 +23,13 @@ This makes surface shape the first idea in the project with a clear mechanism
 tied to an observed failure. It still requires a new transition to validate.
 The existing clean period has already been inspected and cannot be reused.
 
+The registered 70% SKEW-veto participation floor was an imperfect proxy for
+avoiding a never-trade rule. The overlay improved mean, CVaR, worst trade, and
+drawdown while retaining 63.3%, so future designs should gate the risk-adjusted
+outcomes actually valued plus only a minimal non-degeneracy constraint. This
+does not rescue the existing result: February 2020 motivated the rule and is in
+its sample, making contamination the binding limitation.
+
 ## What is cheaply available now
 
 A read-only coverage check of Cboe's public daily files found the following
@@ -81,6 +88,12 @@ one-session publication lag. Any SKEW/slope/VVIX combination must be specified
 as one fixed composite before its validation data are opened; enumerating all
 permutations on the spent NDX window would only manufacture a winner.
 
+The already-tested `log(VIX9D/VIX)` gain decayed monotonically from 5.3%/7.0%
+in 2022-2023 to 0.2%/0.9% in 2024-2025. That supports a narrower prospective
+hypothesis: term slope is informative only when the front end is dislocated.
+The yearly split has now been seen, so do not fit or test that interaction on
+the existing confirmation data; observe it forward unchanged.
+
 ### 3. Change the target when point-in-time constituents are ready
 
 Implied-versus-realized correlation is genuinely different from forecasting
@@ -89,33 +102,44 @@ correlation from point-in-time constituent membership, weights, and returns.
 The paused holdings work is therefore a prerequisite, not an optional feature.
 Do not substitute current constituents into history.
 
-A jump-versus-continuous target is also well motivated, but it needs intraday
-data. Pre-register the sampling interval, overnight treatment, bipower-variation
-estimator, jump threshold, and market-hours calendar before acquiring the data.
+A jump-versus-continuous target is also well motivated. The completed SPX study
+used Oxford-Man five-minute RV and bipower variation, not the local hourly bars,
+but it did not have realized quarticity for a formal BNS statistic. The next
+version needs underlying five-minute returns or a source that supplies the full
+BNS inputs. Pre-register sampling, overnight treatment, quarticity estimator,
+jump statistic, and market-hours calendar before acquisition.
 
 ### 4. Spend a data budget on intraday shape, not more daily macros
 
-If paid data are purchased, 5-minute QQQ/NQ bars offer more information per
-dollar than another daily macro feed. The first fixed targets should stay close
-to the original question: realized range, fraction of variance in the first and
-last hour, deviation from the ordinary intraday U-shape, and close location
-within the day's range. Event-day deformation can then be tested without
-pretending daily total variance is the same object.
+If paid data are purchased, prefer NQ futures from Databento's GLBX dataset for
+formal jump work. It supplies the exchange feed, avoids fragmented ETF venues,
+and covers the nearly continuous futures session, removing the arbitrary QQQ
+overnight-gap split. It changes the traded asset, so contract rolls, expiry
+selection, session boundaries, and maintenance breaks must be frozen. Databento
+documents GLBX futures coverage beginning in June 2010. [GLBX dataset
+documentation](https://databento.com/docs/knowledge-base/datasets/glbx-mdp3).
+
+Polygon full-tape QQQ remains the cheaper alternative when ETF fidelity matters.
+Whichever source is selected, the first fixed targets should stay close to the
+original question: formal jumps, realized range, fraction of variance in the
+first and last hour, deviation from the ordinary intraday U-shape, and close
+location within the day's range. Event-day deformation can then be tested
+without pretending daily total variance is the same object.
 
 Option-chain archiving is valuable but only prospectively. A useful archive
 needs timestamped quotes, strikes, expiries, volume, open interest, and contract
 adjustments. Open interest alone cannot identify whether dealers are long or
 short gamma, and a cron job cannot recreate the missing past.
 
-### 5. Treat regime switching as a frame, not new information
+### 5. Treat regime switching as a calibrated frame, not new information
 
-A Markov model fitted only to RV and VXN may simply repackage the ATM level. It
-becomes useful when the state includes a registered surface-shape input and the
-target is transition risk. Only filtered probabilities available at the origin
-may enter forecasts; smoothed full-sample state probabilities are lookahead.
-Estimate all state and transition parameters inside each training fold and
-score next-period tail-event probability with log loss or Brier score alongside
-the existing variance metrics.
+The two-state RV HMM ranked transition risk well but was initially misread
+through uncalibrated proper scores. A frozen Platt repair improved both HMM
+scores on the target-specific holdout. The more meaningful incremental test
+still failed: adding calibrated HMM probability to a supervised model trained
+on the same rows slightly worsened both Brier and log loss. Do not tune this
+result. Future state work needs a new asset or future window and must retain
+forward filtering, prior-only calibration, and a same-row supervised benchmark.
 
 ### 6. Keep CFTC positioning as a low-frequency secondary study
 

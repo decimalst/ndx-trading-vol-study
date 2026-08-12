@@ -56,10 +56,22 @@ filing index and tested concentration summary are adjacent. See
 The disclosure history is informative. On positive equity positions, top-10
 weight moved from 55.13% in the 2019-09-30 snapshot to 46.85% in 2026-03-31;
 security-level HHI moved from 0.0459 to 0.0312 (effective holdings 21.8 to
-32.1). Those numbers are known to a simulated forecaster only after the
-respective SEC acceptance dates. With just 27 slow snapshots and no coverage
-for most of the discovery window, they were not inserted post hoc into the
-already-spent signal holdout.
+32.1). The sharp 2023-Q3 step follows Nasdaq's July 2023 special rebalance,
+which was explicitly designed to reduce overconcentration. [Nasdaq's official
+announcement](https://www.nasdaq.com/press-release/the-nasdaq-100-index-special-rebalance-to-be-effective-july-24-2023-2023-07-07).
+Those numbers are known to a simulated forecaster only after the respective SEC
+acceptance dates. With just 27 slow snapshots and no coverage for most of the
+discovery window, they were not inserted post hoc into the already-spent signal
+holdout.
+
+This direction is adverse to the earnings-concentration defence: the available
+sample became less concentrated, not more, while the earnings feature showed
+flat yearly win rates and its worst 2025 result. It is a third independent line
+against the proposed mechanism. Because the direction and the 2023 structural
+break have now been inspected, no new regressor or interaction built from this
+same N-PORT history can cleanly test the hypothesis. Within the project's
+existing data it is effectively closed; only genuinely future holdings and
+earnings outcomes, or a separately acquired untouched asset, could falsify it.
 
 ## What the completed signal study already answers
 
@@ -76,8 +88,11 @@ low-multiplicity composite; none earned access to confirmation.
 The one locked candidate, lagged `log(VIX9D/VIX)`, improved confirmation QLIKE
 by **2.92%** and won 54.5% of origins, but failed the registered DM threshold
 (p=0.1016). The effect also decayed from 5.3%/7.0% in 2022/2023 to 0.2%/0.9%
-in 2024/2025. Treat it as a promising feature for future data, not a confirmed
-signal.
+in 2024/2025. That monotone decay is stronger evidence than the aggregate
+p-value that the information is regime-conditional: useful when the front end
+is dislocated and negligible otherwise. This interaction is now a hypothesis
+for prospective observation only; the yearly breakdown has spent the available
+sample for that question.
 
 ## Ranked follow-up candidates
 
@@ -102,10 +117,12 @@ Official timing references: [NY Fed ON RRP FAQ](https://www.newyorkfed.org/marke
 
 ## Decision
 
-Do not promote a new signal from this round. Keep `term_slope` in forward
-observation without refitting or repeated testing. For the next genuinely new
+Do not promote a new signal from this round. Keep the existing `term_slope`
+unchanged in forward observation and label the dislocated-front-end interaction
+prospective-only; do not refit or repeatedly test it. The earnings-concentration
+defence is closed on the inspected N-PORT history. For the next genuinely new
 holdout, the strongest order is: one option-shape factor, then one breadth
 factor, then (only if enough post-regime history exists) one liquidity factor.
-Exact daily historical weights require licensed Nasdaq data; the tested free
-N-PORT dataset can support only a delayed quarterly robustness feature in a
-future, newly frozen holdout.
+Exact daily historical weights require licensed Nasdaq data, but acquiring them
+now would not restore pre-registration for the already-inspected earnings
+question.

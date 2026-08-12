@@ -394,6 +394,10 @@ def _write_report(metrics: dict, phases: pd.DataFrame, raw: pd.DataFrame) -> Non
         "The surface hypothesis was motivated by prior NDX work, so this is an "
         "external mechanism confirmation rather than a pristine strategy test.",
         "",
+        "The source columns are five-minute realized variance and five-minute "
+        "bipower variation computed by Oxford-Man. The repository's hourly QQQ "
+        "bars do not enter this study.",
+        "",
         f"- Source coverage: {raw.index.min().date()} through {raw.index.max().date()}.",
         f"- Scored confirmation origins: {metrics['origins']}.",
         f"- Five-session material-jump event rate: {metrics['event_rate']:.1%}.",

@@ -1,0 +1,57 @@
+# Frozen after the HMM-comparison critique and before inspecting transition
+# labels or scores in the target-specific holdout.
+protocol_version: 1
+status: posthoc_repair_with_target_specific_holdout
+decision_time: "16:00 America/New_York"
+
+source:
+  series: "existing point-in-time QQQ master_daily log_rv"
+  prior_oof_forecasts: "data/target_regime/regime_forecasts.parquet"
+  note: >
+    The project-wide clean phase has already been used by other experiments.
+    This window is withheld only from the transition-target study and must not
+    be described as a pristine global holdout.
+
+training:
+  oof_start: "2016-01-04"
+  oof_end: "2024-12-31"
+  hmm_fit_end: "2024-12-31"
+  no_holdout_refit: true
+  min_oof_observations: 1500
+
+evaluation:
+  start: "2025-11-03"
+  end: "2026-08-04"
+  required_data_end: "2026-08-11"
+  horizon_sessions: 5
+  stress_quantile: 0.80
+  score_only_calm_origins: true
+  require_completed_targets: true
+
+calibration:
+  method: platt
+  input: "logit of raw HMM five-session exceedance probability"
+  ridge: 0.000001
+  clip: 0.000001
+
+incremental_test:
+  benchmark_features: [log_rv_d, log_rv_w, log_rv_m]
+  augmented_feature: p_hmm_platt
+  logistic_ridge: 0.000001
+  same_training_rows_required: true
+
+success_requires:
+  calibration:
+    - "Platt-calibrated HMM has lower average five-phase Brier loss than raw HMM"
+    - "Platt-calibrated HMM has lower average five-phase log loss than raw HMM"
+  incremental_state:
+    - "augmented logistic has lower average five-phase Brier loss than benchmark logistic"
+    - "augmented logistic has lower average five-phase log loss than benchmark logistic"
+
+interpretation: >
+  Calibration tests whether the prior HMM negative was merely probability
+  scaling. The incremental comparison is primary: it asks whether an
+  unsupervised state estimate adds information to a supervised model trained on
+  the same rows. Because the wider project has inspected the evaluation dates,
+  either result remains target-specific confirmation rather than a pristine
+  project-level discovery.

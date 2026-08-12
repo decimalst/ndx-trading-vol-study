@@ -10,6 +10,15 @@ Generated from SEC CIK 1067839. This is fund-holdings history, not licensed Nasd
 - Disclosed positive-equity top-10 weight: 55.13% in the first snapshot; 46.85% in the latest.
 - Security-level HHI: 0.0459 in the first snapshot; 0.0312 in the latest. These are disclosed QQQ portfolio values, available only after SEC acceptance.
 
+The direction is decreasing concentration, not the increase posited by the
+earnings-concentration defence. The large 2023-Q3 step coincides with Nasdaq's
+July 2023 special rebalance, which explicitly redistributed weights to address
+overconcentration ([Nasdaq announcement](https://www.nasdaq.com/press-release/the-nasdaq-100-index-special-rebalance-to-be-effective-july-24-2023-2023-07-07)).
+The direction and break are now inspected; this N-PORT sample
+cannot later be presented as a clean test of that defence. Combined with flat
+yearly earnings win rates and the 2025 low, this effectively closes the
+hypothesis inside the existing project data.
+
 | report date | SEC accepted (UTC) | holdings | pct total | accession |
 |---|---|---:|---:|---|
 | 2019-09-30 | 2019-11-29T14:32:05+00:00 | 103 | 99.962% | [0001752724-19-184787](https://www.sec.gov/Archives/edgar/data/1067839/000175272419184787/primary_doc.xml) |

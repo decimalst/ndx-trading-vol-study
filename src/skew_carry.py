@@ -358,11 +358,18 @@ def _write_report(
         "",
         "## Descriptive interpretation after the frozen verdict",
         "",
-        "The failure is the participation constraint, not the tail hypothesis. The veto "
+        "The frozen failure is the participation constraint, not the tail hypothesis. "
+        "That gate was a proxy for avoiding a degenerate never-trade rule, while mean "
+        "and tail outcomes were the actual objective. The veto "
         f"retained {metrics['participation']:.1%} of richness-only trades versus the "
         "registered 70% minimum. It removed all three known adverse entries, and the "
         "average phase CVaR, worst trade, and drawdown all improved materially, but "
         "those observations cannot override the frozen verdict.",
+        "",
+        "The decisive limitation is contamination: February 2020 motivated this rule "
+        "and remains inside the diagnostic sample. A future design should gate directly "
+        "on pre-specified risk-adjusted outcomes plus a minimal non-degeneracy condition, "
+        "not on an arbitrary participation floor.",
         "",
         f"The attrition is not random: {high_richness.sum() / richness[valid_gate].sum():.1%} "
         "of richness-eligible origins were also in a high-SKEW regime, compared with "

@@ -41,7 +41,9 @@ Even a pass requires genuinely future transition data. No p-value is reported be
 
 ## Descriptive interpretation after the frozen verdict
 
-The failure is the participation constraint, not the tail hypothesis. The veto retained 63.3% of richness-only trades versus the registered 70% minimum. It removed all three known adverse entries, and the average phase CVaR, worst trade, and drawdown all improved materially, but those observations cannot override the frozen verdict.
+The frozen failure is the participation constraint, not the tail hypothesis. That gate was a proxy for avoiding a degenerate never-trade rule, while mean and tail outcomes were the actual objective. The veto retained 63.3% of richness-only trades versus the registered 70% minimum. It removed all three known adverse entries, and the average phase CVaR, worst trade, and drawdown all improved materially, but those observations cannot override the frozen verdict.
+
+The decisive limitation is contamination: February 2020 motivated this rule and remains inside the diagnostic sample. A future design should gate directly on pre-specified risk-adjusted outcomes plus a minimal non-degeneracy condition, not on an arbitrary participation floor.
 
 The attrition is not random: 36.7% of richness-eligible origins were also in a high-SKEW regime, compared with 29.7% of all origins with a valid gate. The richness rule fired on 61.8% of high-SKEW days versus 45.1% of lower-SKEW days. That is direct evidence of the suspected overlap: backward-looking "richness" is especially likely to call variance expensive while the option wings are already charging for tail risk.
 
