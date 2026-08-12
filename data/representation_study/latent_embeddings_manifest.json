@@ -1,0 +1,31 @@
+{
+  "protocol_sha256": "4083043dd8a5dc89ab0ee3414148accdf0ff645abe68359dbfdd9daa3c5116c1",
+  "history_panel_sha256": "bfb3b938a5ac41cabfb34f19b5cde073d8d3373faf244640d747c686ffabd156",
+  "classical_forecasts_sha256": "502ab51d1ec3e2d2d0115179a5edba23f5d06896418a49da5a6417aaf06f81db",
+  "checkpoint": "NX-AI/TiRex-2",
+  "checkpoint_revision": "05e5b26db52bfb256f1ae1bdf785589850482de3",
+  "checkpoint_files": {
+    "model-config.yaml": {
+      "sha256": "cddbe6d0be4919cb7b0cad747fb19a295264e129d1c0790cf62133b4cb5da727",
+      "bytes": 1204
+    },
+    "model.ckpt": {
+      "sha256": "184b160ffbe4c01a26beeba14015ff3507c7497e1f3577114187bbc1d19fcac1",
+      "bytes": 380613375
+    }
+  },
+  "package": "tirex-2==0.2.1",
+  "device": "cpu",
+  "layer": "output of stack_out_norm, before output_patch_embedding",
+  "pooling": "last non-padding target token",
+  "token_index_zero_based": 63,
+  "dimension": 512,
+  "context_length": 2048,
+  "tta_sign_flip": false,
+  "differencing": false,
+  "rows": 6668,
+  "first_origin": "1999-04-12",
+  "last_origin": "2025-10-10",
+  "output_sha256": "a2c33b4cd907bb4456a21fda66a9bfeaa44d3e27cab00de1ba186780dc893f40",
+  "chunk_manifest_sha256": "7aee113f68b5fbd0e751fe25c8623e6e52b9436426e64d1108ce4a63a03838e6"
+}

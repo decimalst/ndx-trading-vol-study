@@ -4,9 +4,13 @@ pyyaml>=6.0
 requests>=2.31
 scipy>=1.11
 statsmodels>=0.14
+scikit-learn>=1.7,<1.8
+shap==0.51.0
 yfinance>=0.2.40
 lxml>=5.0          # yfinance.get_earnings_dates() parses HTML with it
 matplotlib>=3.8
 # Chronos-2 (pulls torch; on CPU-only boxes install torch first from the
 # cpu index to avoid the CUDA wheel: pip install torch --index-url https://download.pytorch.org/whl/cpu)
 chronos-forecasting>=2.3
+# The latent hook is implementation-coupled and therefore version-pinned.
+tirex-2==0.2.1

@@ -1,0 +1,40 @@
+{
+  "fences": {
+    "clean_origins_included": false,
+    "clean_start": "2025-11-03",
+    "origin_end": "2025-10-17"
+  },
+  "frozen_on": "2026-08-12",
+  "implementation": {
+    "path": "src/history_extension.py",
+    "sha256": "09eb7ee7074dc06f121cda6b35ac6af25093ae587c3602f2910538b8b7d25094"
+  },
+  "output": {
+    "first_date": "1999-03-11",
+    "last_date": "2025-10-17",
+    "path": "data/history_extension/qqq_price_only_daily.parquet",
+    "rows": 6694,
+    "sha256": "bfb3b938a5ac41cabfb34f19b5cde073d8d3373faf244640d747c686ffabd156"
+  },
+  "protocol": {
+    "path": "history_extension.yaml",
+    "sha256": "1002363f53c88388e66c0bbb7ae7a47a12324d90f158a87b61b979a8072821b2"
+  },
+  "protocol_version": 1,
+  "qqq": {
+    "first_date": "1999-03-10",
+    "last_date": "2026-08-11",
+    "path": "data/raw/daily_ohlc.parquet",
+    "rows": 6898,
+    "sha256": "710290d8ad8569172559334b23e423b50ecf7cd10f0fd8ec24a9fc29608bca4d"
+  },
+  "vxn": {
+    "first_date": "2009-09-14",
+    "joined_to_panel": false,
+    "last_date": "2026-08-11",
+    "official_first_value_month": "1995-01",
+    "path": "data/raw/vxn_daily.parquet",
+    "rows": 4255,
+    "sha256": "61c4dec804140831dadb05d0cc34ee38a3d662d31c5b6fc258eae6918b455731"
+  }
+}

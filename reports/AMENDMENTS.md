@@ -430,3 +430,85 @@ result.
   rebalance. Together with flat yearly earnings wins and the 2025 low, that is
   a third line against the earnings-concentration defence. This sample is now
   spent for the question; existing-data refits cannot restore falsifiability.
+
+---
+
+## 2026-08-12 (tenth) — history, GBM, ranking, and representation extensions
+
+These are isolated diagnostic protocols. They do not modify `config.yaml`,
+reopen the sealed NDX clean window, or rewrite any prior frozen verdict.
+
+### Price-only history extension
+
+`history_extension.yaml` froze QQQ/VXN source hashes, the 2025-10-17 endpoint,
+the Garman-Klass-plus-overnight transform, the derived parquet hash, and the
+exact transform implementation hash before downstream use. The resulting panel
+has 6,694 sessions from 1999-03-11. Cboe's free VXN file begins 2009-09-14, so
+no proxy or splice extends HAR-IV backward. A downstream verifier now requires
+the panel to match both the frozen protocol and build manifest.
+
+### GBM functional-form study
+
+`gbm_study.yaml` froze one histogram gradient-boosted tree, one HAR-IV
+information set, fixed discovery/confirmation dates, and 21-session block
+inference. GBM is point-estimate worse than HAR-IV on all three splits, but the
+confirmation block interval spans zero; the registered verdict remains
+**INCONCLUSIVE**. The verifier now recomputes every metric directly from the
+saved forecasts.
+
+After that headline was observed, `gbm_post_result.yaml` froze three reviewer
+diagnostics: realized-RV-decile loss attribution, one-session-lagged VXN timing
+sensitivity, and a fixed TreeExplainer interaction audit. They are explicitly
+outcome-conditioned/post-result and cannot revise the parent verdict. GBM's
+highest RV decile contributes 174.6% of its net confirmation deficit; the
+locked term contributes 137.9%. Lagged-VXN GBM is 5.82% worse in confirmation
+and decile 10 contributes 149.8%. Partial dependence selected correlated
+weekly/monthly RV, whereas SHAP 0.51.0 selected weekly RV × implied vol. The
+post-result verifier reconstructs timing-safe metrics and every decile table
+from hash-locked inputs.
+
+### Tail ranking and reviewer controls
+
+`representation_study.yaml` froze the inherited five-session/80th-percentile
+event and five-phase AUC/lift scoreboard before scoring the extended sample.
+The 5,592 calm origins yield 0.8704 AUC and 4.804x lift for RV history. The HMM
+augmentation adds +0.0010 AUC while reducing lift by 0.136x. The trailing-RV
+percentile row, phase min/max/spread, and positive-episode jackknife were added
+only after the headline in response to review and remain labeled as such. The
+jackknife is a positive-episode influence diagnostic with negative origins held
+fixed, not a full cluster-robust standard error. The benchmark intentionally
+inherits the transition module's `mean(log RV)` convention rather than
+standard HAR's `log(mean variance)`.
+
+### Latent ladder corrections and formal follow-up
+
+The original TiRex ladder uses full 512-dimensional ridge, sparse k={1,5,10},
+and one fixed MLP with no PCA. Sparse dimensions are selected inside each
+annual training fold and scored on disjoint forward rows. Review caught that
+ten synthetic controls impose a minimum exact corrected p-value of 1/11. No
+controls were silently added: the stored empirical-percentile flag is now
+called a descriptive heuristic, `formal_evidence` is false, and exact p=0.0909
+is shown for every rung. Chunk reuse now requires a current run signature and
+per-chunk hashes. The MLP convergence audit records 273 of 288 fits at the
+frozen iteration cap; the old scores were not refit or tuned.
+
+A separate `latent_k1_confirmation.yaml` was then frozen for one sparse k=1
+rung and 99 predetermined controls. It is a post-result formal-randomization
+diagnostic, not a new historical holdout. None of 99 controls reached the
+actual 0.8153 AUC, so corrected exact p=0.01. The verifier reconstructs all
+2,376 fold/control selections and 553,608 control rows. Coordinate
+characterization uses held-out rows and one-full-session-lagged VXN; it shows a
+fold-varying encoding dominated by smoothed volatility rather than a new
+transition variable.
+
+### Eidos-derived noise report correction
+
+Review of the source paper identified two overstatements. Eidos Appendix A.1.2
+re-normalizes corrupted inputs using noisy statistics; this implementation
+passes the common raw corruption to each model's native preprocessing, while
+HAR does not renormalize the origin state. The HAR/foundation magnitude is
+therefore not an apples-to-apples architecture comparison. The stored `crps`
+is also a trapezoidal approximation over quantiles 0.1-0.9, not full-tail CRPS.
+The report and protocol now say both explicitly. No forecasts, corruption
+paths, or bootstrap draws changed, and the verifier recomputes curves,
+intervals, hashes, and the rendered report.

@@ -748,14 +748,16 @@ pre-registration, the mechanically enforced diagnostic-only fence, the paired
 per-origin reporting that never lets a mean travel without its sign count, and
 the block testing that took back two of my own results.
 
-**The repeated transition result is now better specified.** Calibrating the HMM
-worked, so its original proper-score loss was not by itself evidence against the
-state estimate. But the calibrated probability added nothing to the supervised
-RV-history model. Across carry, surface conditioning, the jump target, and the
-state repair, historical volatility describes the current regime without
-anticipating its discontinuous change. That consistency is more robust than any
-single model ranking, though the repair window is target-specific rather than a
-new independent project-wide holdout.
+**The repeated transition result is now better specified.** On the extended
+history, direct RV features rank recurrent five-session threshold crossings
+well (AUC 0.870), but this 13.2%-base-rate target mostly measures proximity to a
+state boundary rather than rare discontinuous breaks. Calibration repairs the
+HMM's probability scale, yet its state adds no usable top-decile ordering.
+TiRex's continuous latent also encodes the threshold-proximity state but adds
+nothing beyond RV history. The information boundary is therefore
+architecture-invariant on this target: price history carries the state, while
+the HMM and latent representation are redundant re-encodings rather than new
+transition information.
 
 ## Standing rule
 
@@ -788,3 +790,97 @@ accepted SEC N-PORT filings: share classes are combined by issuer, the top 25 ar
 ranked by filed portfolio weight, and a snapshot becomes usable only after its
 acceptance timestamp. See [the frozen extension findings](RESEARCH_PATHS_FINDINGS.md)
 and [the independent verification report](research_paths/verification.md).
+
+## Extended-history functional-form and representation program (2026-08-12)
+
+Four additional paths were run under isolated protocols without reopening the
+sealed NDX clean window.
+
+**The nonlinear escape hatch closed on point estimates, while its frozen formal
+verdict remains INCONCLUSIVE.** A fixed histogram GBM using exactly the HAR-IV
+information set was worse than HAR-IV by 3.78% in discovery, 4.67% in
+confirmation, and 4.31% over the full diagnostic sample. The confirmation
+21-session block interval spans zero, so equality cannot be ruled out and the
+registered label is not rewritten. A timing-safe sensitivity that lags VXN one
+complete session is also worse on all three splits (5.82% in confirmation).
+
+**QLIKE explains the win-rate/mean-loss divergence.** GBM wins 54.7% of
+confirmation origins while losing on mean. Realized-variance deciles 2 through
+8 improve, but decile 10 contributes 174.6% of the net loss gap. The frozen
+locked term has the same shape: 57.4% wins, a slightly worse mean, and 137.9% of
+its gap in decile 10. The timing-safe GBM repeats it at 149.8%. This is a
+post-result, outcome-conditioned mechanism diagnostic—not an ex-ante rule—and
+the earnings-with-IV pair does not cleanly replicate it. Partial dependence had
+selected the highly correlated weekly/monthly RV pair (Pearson 0.816); a fixed
+post-result SHAP audit instead selected weekly RV × implied volatility,
+supporting the correlation-artifact caveat.
+
+**History can rank recurrent threshold crossings.** The price-only extension
+contains 6,694 QQQ sessions from 1999-03-11 through 2025-10-17 and is locked by
+raw-source, transform-code, protocol, and derived-output hashes. The first
+scored annual fold is 2002 because 1999-2001 supplies the required completed
+training labels. Across 5,592 calm origins, the five-session event rate is
+13.16%: 736 positive origins collapse to 222 trigger sessions and 118 positive
+episodes. The RV-history classifier reaches 0.8704 phase-mean AUC, 4.804x
+top-decile lift, and a 63.2% top-decile event rate. The reviewer-requested
+single RV-percentile control reaches 0.8111 AUC and 3.501x lift. This is a strong
+ranking result, but the target is proximity to a recurrent 80th-percentile
+boundary, not rare-crisis prediction.
+
+**Ranking metrics confirm the HMM null.** The calibrated HMM alone reaches
+0.8294 AUC. Adding it to RV history moves AUC only +0.0010 while reducing lift
+by 0.136x and the top-decile event rate by 1.79 percentage points. Thus the
+proper-score objection to the original HMM comparison has been removed: the
+state probability does not add usable ordering where the risk overlay would
+act.
+
+**A continuous TiRex latent reaches the same information boundary.** With no
+PCA, full ridge, sparse k={1,5,10}, and a fixed eight-unit MLP were trained in
+annual forward folds. Sparse k=1 and k=5 reach 0.8153 and 0.8270 latent-only
+AUC, showing descriptive decodability, but their augmented AUCs are 0.8694 and
+0.8657 versus 0.8704 for direct RV history. Every sparse coordinate is selected
+from completed fold-training labels and scored on disjoint forward rows; nine
+different coordinates appear in the k=1 path, so it is not one universal
+neuron. The original ten-control ladder cannot provide formal 5% evidence: its
+minimum exact corrected p-value is 1/11 = 0.0909. The old empirical-percentile
+flag is retained only as a descriptive heuristic. The fixed MLP also hit its
+500-iteration cap in 273 of 288 fits, so its result is a frozen optimizer
+endpoint, not proof that nonlinear probe capacity was exhausted.
+
+**A separate 99-control k=1 run confirms selectivity, not incremental value.**
+After the ten-control ceiling was identified, one rung—not the whole ladder—was
+registered under 99 fixed Markov controls. The exact same annual forward
+procedure selects from all 512 dimensions on completed training labels and
+scores only the held-out year; every synthetic control reselects from its own
+training labels. Actual phase-mean AUC is 0.8153 versus control median 0.5202,
+95th percentile 0.5640, and maximum 0.6080. With zero exceedances, the corrected
+exact randomization p-value is 1/100 = 0.01. This is formal selectivity evidence
+within an explicitly post-result, reused-history diagnostic—not a pristine
+holdout and not evidence of value beyond the 0.8704 RV-history benchmark.
+
+The coordinate characterization makes the mechanism concrete. Nine different
+coordinates are selected across 24 folds; z499 appears six times and z386 five,
+so there is no universal neuron. On held-out rows, the event-oriented median
+Pearson correlation is 0.856 with trailing five-session mean log RV, 0.804 with
+the 22-session mean, 0.755 with prior-session VXN (17 eligible folds), 0.573
+with current log RV, and only 0.039/-0.056 with one-/five-session return. TiRex
+really encodes the state, but principally as smoothed volatility level and
+lagged implied volatility—the same information the direct benchmark extracts
+more efficiently.
+
+**The Eidos-derived corruption result is narrower than first reported.** On the
+registered context-noise grid, Chronos-2 and TiRex-2 degrade modestly, making
+surface-noise fragility an unlikely explanation for their earlier forecasting
+null. But this adaptation supplies raw corrupted log-RV to each native adapter;
+it does not impose Eidos Appendix A.1.2's common noisy-statistics
+renormalization. HAR therefore is not an apples-to-apples architectural
+contrast, and the stored score is a 0.1-0.9 decile-grid CRPS approximation rather
+than full-tail CRPS.
+
+Taken together, the three obvious model-side explanations are closed on the
+available diagnostic evidence: a compact implied-aware model already has the
+capacity, a flexible GBM does not reveal useful functional form, and neither a
+two-state filter nor a rich continuous foundation representation contributes
+transition information beyond direct RV features. What remains binding is the
+information set and the definition of the economic risk, not another model
+class.

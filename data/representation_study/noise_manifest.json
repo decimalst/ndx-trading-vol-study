@@ -1,0 +1,42 @@
+{
+  "artifacts": {
+    "noise_bootstrap_intervals.parquet": {
+      "rows": 24,
+      "sha256": "753b57bb9688d6336ffcc6aef8944c652dff4842861f6aeba1e2f5a00f60e477"
+    },
+    "noise_curves.parquet": {
+      "rows": 30,
+      "sha256": "db041f72f73e929dbb3979aafaa71f05a39299afe6c2803042a0914ac2d27610"
+    },
+    "noise_forecasts.parquet": {
+      "rows": 3720,
+      "sha256": "12baf1f2ddeec44cc6a46576eb56be4cb5f6f5aa4536ee59ef64002e2635f156"
+    }
+  },
+  "chronos_checkpoint": {
+    "id": "amazon/chronos-2",
+    "revision": "29ec3766d36d6f73f0696f85560a422f50e8498c"
+  },
+  "clean_origins_included": false,
+  "first_origin": "2016-01-04",
+  "last_origin": "2025-10-15",
+  "history_panel_sha256": "bfb3b938a5ac41cabfb34f19b5cde073d8d3373faf244640d747c686ffabd156",
+  "models": [
+    "chronos_2_univariate",
+    "tirex_2_univariate",
+    "har_univariate_expanding_clean_fit"
+  ],
+  "origins": 124,
+  "protocol": "representation_study.yaml",
+  "production_protocol_sha256": "1a79821ae34fd7184ffd0cf7603d6793d8a49651bbc411aab7dd97ea9b738a08",
+  "reviewed_protocol_sha256": "4083043dd8a5dc89ab0ee3414148accdf0ff645abe68359dbfdd9daa3c5116c1",
+  "post_result_corrections": [
+    "disclosed that preprocessing is model-native rather than a common noisy-statistics renormalization",
+    "renamed stored CRPS as a decile-grid approximation",
+    "no forecasts, corruption paths, scores, or bootstrap draws changed"
+  ],
+  "tirex_checkpoint": {
+    "id": "NX-AI/TiRex-2",
+    "revision": "05e5b26db52bfb256f1ae1bdf785589850482de3"
+  }
+}

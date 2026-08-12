@@ -1,0 +1,198 @@
+# Core design frozen 2026-08-12 before producing any noise-robustness or
+# latent-probe result. The explicitly named reviewer_controls section was added
+# after the first classical ranking headline and carries its own post-result
+# evidence status; it did not alter the tail target or latent/noise ladders.
+# The history artifact is built first under history_extension.yaml. The ranking
+# target and scoreboard are frozen second. Only then may TiRex embeddings be
+# extracted or any transition score be inspected.
+protocol_version: 1
+status: frozen_before_results
+decision_time: "16:00 America/New_York"
+
+source:
+  panel: data/history_extension/qqq_price_only_daily.parquet
+  manifest: data/history_extension/source_manifest.json
+  first_session: "1999-03-11"
+  last_permitted_origin: "2025-10-17"
+  clean_start: "2025-11-03"
+  require_source_hash: true
+  forbid_clean_origins: true
+  permitted_inputs: [log_rv, rv_total, ret_cc]
+
+tail_target:
+  horizon_sessions: 5
+  stress_quantile: 0.80
+  threshold_rule: >
+    At each annual test fold, compute the numerical threshold from log_rv
+    observations no later than the prior-year cutoff. An origin is eligible
+    only when current log_rv is at or below that threshold. The event is one
+    if any of the next five complete sessions exceeds that same threshold.
+  score_only_calm_origins: true
+  require_complete_future: true
+  first_score_year: 2001
+  final_score_date: "2025-10-17"
+  refit: annual
+  minimum_training_observations: 400
+  note: >
+    The 80th-percentile/five-session definition is inherited unchanged from
+    target_regime.yaml. It was not selected after seeing AUC or lift.
+
+ranking_scoreboard:
+  primary: auc
+  secondary: top_decile_lift
+  top_fraction: 0.10
+  lift_definition: "event rate in highest-score ceil(10%) divided by the full-sample event rate"
+  tie_break: "stable chronological origin order after sorting score descending"
+  overlapping_target_handling: >
+    Compute metrics separately on all five fixed origin phases (positions
+    0::5 through 4::5) and use the unweighted mean across phases as primary.
+    Pooled daily-origin metrics are descriptive only.
+  common_rows_required: true
+  brier_and_logloss: diagnostic_only
+
+classical_models:
+  benchmark:
+    model: ridge logistic
+    features: [log_rv_d, log_rv_w, log_rv_m]
+    ridge: 0.000001
+  hmm:
+    states: 2
+    max_iter: 200
+    tolerance: 0.0000001
+    calibration: platt
+    calibration_clip: 0.000001
+    calibration_ridge: 0.000001
+    augmented_features: [log_rv_d, log_rv_w, log_rv_m, p_hmm_platt]
+
+reviewer_controls:
+  trailing_rv_percentile:
+    status: post_result_requested_after_headline_seen
+    requested_date: "2026-08-12"
+    evidence_role: diagnostic_only_not_prespecified_confirmation
+    feature: "empirical percentile of current log_rv in the annual fold's prior-year training history"
+    model: ridge logistic
+    ridge: 0.000001
+    purpose: "measure how much of benchmark ranking is the current volatility level within calm origins"
+    vxn_percentile_omitted: >
+      Official free VXN history in the locked local source begins in 2009, so
+      requiring it would discard the very history extension this control is
+      intended to audit.
+  phase_and_episode_reporting:
+    status: post_result_requested_after_headline_seen
+    evidence_role: diagnostic_uncertainty_not_prespecified_confirmation
+    ranking_phases: 5
+    phase_summaries: [mean, min, max, spread]
+    event_cluster_rule: >
+      Attach each positive origin to its first future threshold crossing;
+      trigger sessions no more than five market sessions apart share an episode.
+    inference: leave_one_transition_episode_out_jackknife
+    confidence_level: 0.95
+
+latent_probe:
+  checkpoint: NX-AI/TiRex-2
+  checkpoint_revision: 05e5b26db52bfb256f1ae1bdf785589850482de3
+  package: tirex-2==0.2.1
+  context_length: 2048
+  shorter_early_context_allowed: true
+  input: log_rv
+  layer: "output of stack_out_norm, before output_patch_embedding"
+  pooling: "last non-padding target token"
+  expected_dimension: 512
+  test_time_augmentation: false
+  differencing: false
+  frozen_backbone: true
+  no_layer_selection: true
+  no_pooling_selection: true
+  forbid_pca: true
+  tasks:
+    - "latent-only probe, for representation selectivity against its matched control"
+    - "benchmark features plus latent coordinates, for incremental value against benchmark and calibrated HMM"
+  probe_ladder:
+    full_ridge:
+      model: ridge logistic
+      ridge: 1.0
+      dimensions: all
+    sparse:
+      model: ridge logistic
+      ridge: 1.0
+      k: [1, 5, 10]
+      selection: "largest absolute standardized event/non-event mean difference on training rows only"
+      report_dimension_stability: true
+    small_mlp:
+      hidden_units: 8
+      activation: tanh
+      solver: lbfgs
+      l2_alpha: 1.0
+      max_iter: 500
+      seed: 42
+  control_task:
+    kind: "first-order Markov surrogate labels"
+    fit: "estimate transition probabilities from each fold's completed training labels only"
+    generation: "simulate one continuous train-plus-test label path independent of representations"
+    draws: 10
+    seeds: [4200, 4201, 4202, 4203, 4204, 4205, 4206, 4207, 4208, 4209]
+    compare: "actual metric minus median identical-probe control metric (selectivity)"
+  uncertainty:
+    event_cluster: >
+      Positive origins are assigned to the first future threshold-exceedance
+      session. Trigger sessions no more than five market sessions apart form
+      one transition episode.
+    method: "leave-one-transition-episode-out jackknife"
+    cluster_not_rows: true
+  interpretation_order:
+    - "selectivity: actual-label score minus structurally matched control score"
+    - "incremental value: benchmark-plus-probe versus benchmark and HMM-augmented on common rows"
+    - "capacity ladder: full ridge, sparse k=1/5/10, then the fixed small MLP; report every rung"
+  evidence_requires:
+    - "actual AUC exceeds the 95th percentile of matched controls"
+    - "event-cluster jackknife interval for AUC selectivity excludes zero"
+    - "top-decile lift selectivity and incremental comparisons are reported even when AUC fails"
+  interpretation: >
+    Diagnostic only. The checkpoint may have encountered financial price
+    histories during pretraining; embeddings are causal at the origin but the
+    model corpus does not create a pristine historical holdout.
+
+noise_robustness:
+  source_paper: https://arxiv.org/html/2602.14024v1
+  sample_start: "2016-01-04"
+  sample_end: "2025-10-17"
+  origin_stride_sessions: 20
+  context_length: 1024
+  target_horizon: 1
+  target: log_rv
+  quantiles: [0.10, 0.20, 0.30, 0.40, 0.50, 0.60, 0.70, 0.80, 0.90]
+  seed: 42
+  origin_seed: "first 64 bits of SHA-256('42|YYYY-MM-DD'), interpreted unsigned big-endian"
+  common_random_numbers: >
+    One Gaussian z-vector and one impulse uniform/sign vector are drawn per
+    origin and reused across models and intensities; impulse masks are nested.
+  gaussian:
+    intensities: [0.0, 0.2, 0.4, 0.6, 0.8]
+    definition: "x_noisy = x + Normal(0, (intensity * local_context_std)^2)"
+  impulse:
+    probabilities: [0.0, 0.05, 0.10, 0.15, 0.20]
+    magnitude_local_std: 8.0
+    signs: random_balanced
+  models:
+    - chronos_2_univariate
+    - tirex_2_univariate
+    - har_univariate_expanding_clean_fit
+  primary_metric: "relative CRPS = noisy CRPS / same-model clean CRPS"
+  paired_corruption_required: true
+  preprocessing_policy: >
+    The exact common corrupted log-RV array is passed to each adapter, which
+    retains its native preprocessing. Chronos-2 and TiRex-2 may normalize
+    internally; this was not independently audited. HAR does not renormalize
+    the corrupted origin state. Unlike Eidos Appendix A.1.2, no common
+    noisy-statistics renormalization is imposed across models.
+  all_intensities_reported: true
+  comparison_inference:
+    block_sessions: 22
+    block_sampled_origins: 2
+    bootstrap_draws: 5000
+    seed: 420042
+    confidence_level: 0.95
+  interpretation: >
+    Mechanism diagnostic patterned exactly on Eidos Appendix A.1.2. It tests
+    sensitivity to corrupted financial context, not whether Eidos itself wins;
+    no Eidos checkpoint is evaluated here.

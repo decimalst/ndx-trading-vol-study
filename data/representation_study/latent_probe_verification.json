@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "checks": {
+    "final_reviewed_protocol_hash": true,
+    "production_protocol_hash_preserved": true,
+    "embedding_hash": true,
+    "classical_hash": true,
+    "embedding_shape": true,
+    "common_rows": true,
+    "clean_fence": true,
+    "control_coverage": true,
+    "sparse_training_only_reconstruction": true,
+    "metrics_recomputed": true,
+    "mlp_convergence_coverage": true
+  },
+  "actual_rows": 5592,
+  "control_rows": 279600,
+  "embedding_shape": [
+    6668,
+    512
+  ],
+  "recomputed_rungs": [
+    "full_ridge",
+    "sparse_k1",
+    "sparse_k5",
+    "sparse_k10",
+    "small_mlp"
+  ]
+}

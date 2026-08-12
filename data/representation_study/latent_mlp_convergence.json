@@ -1,0 +1,35 @@
+{
+  "protocol_sha256": "4083043dd8a5dc89ab0ee3414148accdf0ff645abe68359dbfdd9daa3c5116c1",
+  "embeddings_sha256": "a2c33b4cd907bb4456a21fda66a9bfeaa44d3e27cab00de1ba186780dc893f40",
+  "classical_sha256": "502ab51d1ec3e2d2d0115179a5edba23f5d06896418a49da5a6417aaf06f81db",
+  "optimizer": {
+    "hidden_units": 8,
+    "activation": "tanh",
+    "solver": "lbfgs",
+    "l2_alpha": 1.0,
+    "max_iter": 500,
+    "seed": 42
+  },
+  "fits": 288,
+  "summary": {
+    "latent_actual": {
+      "fits": 24,
+      "converged": 3,
+      "hit_iteration_cap": 21,
+      "convergence_warnings": 21
+    },
+    "augmented_actual": {
+      "fits": 24,
+      "converged": 3,
+      "hit_iteration_cap": 21,
+      "convergence_warnings": 21
+    },
+    "control": {
+      "fits": 240,
+      "converged": 9,
+      "hit_iteration_cap": 231,
+      "convergence_warnings": 231
+    }
+  },
+  "interpretation": "Termination audit only; scores were not changed and the optimizer cap was not increased post-result."
+}

@@ -1,0 +1,104 @@
+# Frozen 2026-08-12 before this 99-control run. This is a post-result formal
+# randomization diagnostic motivated by the previously observed sparse-k=1
+# result. It is not a pristine historical holdout and does not alter the
+# original ten-control latent ladder or its verdict.
+protocol_version: 1
+status: frozen_before_99_control_run
+evidence_role: post_result_formal_randomization_diagnostic
+decision_time: "16:00 America/New_York"
+
+inputs:
+  representation_protocol:
+    path: representation_study.yaml
+    expected_sha256: 4083043dd8a5dc89ab0ee3414148accdf0ff645abe68359dbfdd9daa3c5116c1
+  embeddings:
+    path: data/representation_study/latent_embeddings.parquet
+    expected_sha256: a2c33b4cd907bb4456a21fda66a9bfeaa44d3e27cab00de1ba186780dc893f40
+    manifest_path: data/representation_study/latent_embeddings_manifest.json
+    manifest_expected_sha256: a436409502d4ecae9c26d3ceb565dc700e9e2342ea147ac26fac71fa078a5e82
+    expected_rows: 6668
+    expected_dimensions: 512
+    checkpoint_revision: 05e5b26db52bfb256f1ae1bdf785589850482de3
+  classical_forecasts:
+    path: data/representation_study/tail_classical_forecasts.parquet
+    expected_sha256: 502ab51d1ec3e2d2d0115179a5edba23f5d06896418a49da5a6417aaf06f81db
+    expected_rows: 5592
+  history_panel:
+    path: data/history_extension/qqq_price_only_daily.parquet
+    expected_sha256: bfb3b938a5ac41cabfb34f19b5cde073d8d3373faf244640d747c686ffabd156
+  vxn:
+    path: data/raw/vxn_daily.parquet
+    expected_sha256: 61c4dec804140831dadb05d0cc34ee38a3d662d31c5b6fc258eae6918b455731
+    first_available_session: "2009-09-14"
+    rule: "published VXN close shifted one complete source session before reindexing to scored origins"
+
+sample:
+  folds: existing_annual_forward_folds_exactly
+  first_scored_year: 2002
+  final_scored_year: 2025
+  expected_folds: 24
+  expected_origins: 5592
+  clean_start: "2025-11-03"
+  forbid_clean_origins: true
+  common_rows_required: true
+
+probe:
+  rung: sparse_k1_only
+  input_dimensions: all_512_before_selection
+  selector: "largest absolute standardized event/non-event mean difference on completed training rows only"
+  selector_tie_break: stable_coordinate_order
+  model: ridge_logistic
+  ridge: 1.0
+  refit: annual
+  held_out_scoring: true
+  forbid_pca: true
+  forbid_test_label_selection: true
+
+control_task:
+  kind: first_order_markov_surrogate_labels
+  fit: "estimate transition probabilities from each fold's completed actual training labels only"
+  generation: "simulate one continuous train-plus-test path; reselect top-1 using that control's TRAIN labels"
+  draws: 99
+  seeds:
+    start: 4300
+    stop_inclusive: 4398
+  exact_corrected_p: "(1 + count(control phase-mean AUC >= actual phase-mean AUC)) / 100"
+  alpha: 0.05
+  family: one_sparse_k1_rung_only
+  familywise_correction: none_single_registered_test
+
+scoreboard:
+  primary: five_phase_unweighted_mean_auc
+  secondary: five_phase_unweighted_mean_top_decile_lift
+  phases: 5
+  top_fraction: 0.10
+  report_phase_min_max_spread: true
+
+coordinate_characterization:
+  evidence_role: post_result_descriptive_diagnostic
+  selection: "the actual-label top-1 coordinate selected using each fold's completed training rows"
+  scoring_rows: held_out_fold_origins_only
+  orient_by_training_event_effect: true
+  correlations: [pearson, spearman]
+  variables:
+    - log_rv_level
+    - prior_fold_empirical_rv_percentile
+    - trailing_5_session_mean_log_rv
+    - trailing_22_session_mean_log_rv
+    - trailing_1_session_return
+    - trailing_5_session_return
+    - trailing_22_session_return
+    - prior_session_vxn_level
+  vxn_minimum_rows_per_fold: 20
+  fold_summary: median_min_max_of_event_oriented_correlations
+  interpretation_guard: "fold-specific selected coordinates are not one universal neuron"
+
+outputs:
+  forecasts: data/representation_study/latent_k1_confirmation_forecasts.parquet
+  controls: data/representation_study/latent_k1_confirmation_controls.parquet
+  selections: data/representation_study/latent_k1_confirmation_selections.parquet
+  correlations: data/representation_study/latent_k1_coordinate_correlations.parquet
+  phase_metrics: data/representation_study/latent_k1_confirmation_phase_metrics.parquet
+  metrics: data/representation_study/latent_k1_confirmation_metrics.json
+  verification: data/representation_study/latent_k1_confirmation_verification.json
+  report: reports/representation_study/latent_k1_confirmation.md

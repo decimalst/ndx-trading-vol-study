@@ -1,0 +1,58 @@
+# Frozen before constructing the 1999 price-only panel. This is an enabling
+# data protocol, not a model or outcome test. Downstream tail and latent studies
+# require their own frozen labels, windows, metrics, and success criteria.
+protocol_version: 1
+frozen_on: "2026-08-12"
+status: "enabling_data_only"
+decision_time: "16:00 America/New_York"
+
+source:
+  qqq:
+    path: "data/raw/daily_ohlc.parquet"
+    provider: "Yahoo Finance via yfinance; existing repository acquisition"
+    ticker: "QQQ"
+    inception_url: "https://www.invesco.com/us/financial-products/etfs/product-detail?productId=QQQ&ticker=QQQ"
+    expected_sha256: "710290d8ad8569172559334b23e423b50ecf7cd10f0fd8ec24a9fc29608bca4d"
+    expected_first_date: "1999-03-10"
+    required_columns: [open, high, low, close, "adj close", volume]
+    prices: "unadjusted OHLC for range and overnight variance; adjusted close for close-to-close return"
+  vxn:
+    path: "data/raw/vxn_daily.parquet"
+    provider: "Cboe free VXN history CSV; existing repository acquisition"
+    url: "https://cdn.cboe.com/api/global/us_indices/daily_prices/VXN_History.csv"
+    methodology_url: "https://cdn.cboe.com/api/global/us_indices/governance/Volatility_Index_Methodology_Selected_Broad_Based_Index_Equity_and_ETF_Volatility_Indices.pdf"
+    expected_sha256: "61c4dec804140831dadb05d0cc34ee38a3d662d31c5b6fc258eae6918b455731"
+    official_first_value_month: "1995-01"
+    free_file_first_date: "2009-09-14"
+    role: "coverage audit only; never backfilled or joined to the price-only panel"
+
+window:
+  source_start: "1999-03-10"
+  origin_end: "2025-10-17"
+  clean_start: "2025-11-03"
+  forbid_clean_origins: true
+
+transform:
+  estimator: "daily Garman-Klass RTH variance plus squared prior-close/current-open log return"
+  variance_floor: 0.0000000001
+  return: "adjusted close-to-close log return"
+  har_week_sessions: 5
+  har_month_sessions: 22
+  missing_policy: "no imputation and no forward fill"
+
+implementation:
+  path: "src/history_extension.py"
+  expected_sha256: "09eb7ee7074dc06f121cda6b35ac6af25093ae587c3602f2910538b8b7d25094"
+
+output:
+  panel: "data/history_extension/qqq_price_only_daily.parquet"
+  expected_sha256: "bfb3b938a5ac41cabfb34f19b5cde073d8d3373faf244640d747c686ffabd156"
+  manifest: "data/history_extension/source_manifest.json"
+  report: "reports/history_extension/HISTORY_EXTENSION_AUDIT.md"
+
+downstream_constraints:
+  - "The panel is enabling data, not evidence for a tail, HMM, GBM, or latent-probe claim."
+  - "A downstream origin may use rows through that origin only."
+  - "The NDX clean window beginning 2025-11-03 remains sealed."
+  - "Pre-2009 HAR-IV work needs an acquired and separately audited VXN history; no proxy or splice is permitted."
+  - "Tail labels, thresholds, AUC, lift, calibration, and latent-probe designs must be frozen separately before scoring."

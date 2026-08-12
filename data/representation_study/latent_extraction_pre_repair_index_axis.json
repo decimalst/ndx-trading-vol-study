@@ -1,0 +1,9 @@
+{
+  "stage": "embedding_consolidation",
+  "status": "failed_after_all_states_extracted",
+  "completed_embedding_rows": 6668,
+  "preserved_chunk_files": 27,
+  "financial_probe_scores_produced": false,
+  "error": "pandas index-name mismatch: persisted chunks used origin and expected source index used date",
+  "repair_scope": "canonicalize the expected embedding-origin axis name; reuse preserved chunks without re-extraction"
+}

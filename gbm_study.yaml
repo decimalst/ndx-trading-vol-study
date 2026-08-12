@@ -1,0 +1,132 @@
+# GBM functional-form study.
+# Frozen 2026-08-12 before any result-producing command was run.
+# This file is independent of config.yaml and never opens the NDX clean phase.
+
+protocol_version: 1
+study_id: "ndx_har_iv_gbm_functional_form_v1"
+specified_on: "2026-08-12"
+status: "frozen_before_first_empirical_run"
+question: >
+  Does a fixed gradient-boosted-tree functional form improve next-session
+  variance forecasts over linear log HAR-IV when both receive exactly the same
+  four same-origin inputs, and can the strongest discovered interaction be
+  represented by one interpretable term without leaking into evaluation?
+
+fences:
+  source: "data/processed/master_daily.parquet"
+  target_estimator: "daily Garman-Klass plus squared overnight gap"
+  target: "next-session log(rv_total)"
+  diagnostic_start: "2016-01-04"
+  diagnostic_end: "2025-10-17"
+  sealed_clean_start: "2025-11-03"
+  latest_allowed_target_date: "2025-10-20"
+  forbid_clean_origins: true
+  forbid_clean_targets: true
+  target_rule: "training row s is eligible at origin t only when s < t"
+  min_train_rows: 500
+  common_sample_only: true
+
+information_set:
+  feature_order: [lrv_d, lrv_w, lrv_m, liv]
+  definitions:
+    lrv_d: "same-origin log(rv_total)"
+    lrv_w: "log of same-origin trailing 5-session mean rv_total, inclusive"
+    lrv_m: "log of same-origin trailing 22-session mean rv_total, inclusive"
+    liv: "same-origin log(VXN close)"
+  forbidden_inputs:
+    - "returns or leverage terms"
+    - "calendar and earnings variables"
+    - "term slope, skew, correlation, or any other surface feature"
+    - "future realized values"
+
+splits:
+  discovery:
+    start: "2016-01-04"
+    end: "2019-12-31"
+    use: "interaction localization and descriptive GBM score"
+  confirmation:
+    start: "2020-01-02"
+    end: "2025-10-17"
+    use: "locked interaction term and primary functional-form evaluation"
+  no_split_selection_after_results: true
+
+estimators:
+  har_iv:
+    kind: "expanding ordinary least squares in log variance"
+    intercept: true
+    refit: "every origin"
+    point_variance: "exp(predicted log variance) times mean exp(training residual)"
+  gbm:
+    implementation: "sklearn.ensemble.HistGradientBoostingRegressor"
+    loss: "squared_error"
+    learning_rate: 0.05
+    max_iter: 64
+    max_leaf_nodes: 7
+    max_depth: 3
+    min_samples_leaf: 30
+    l2_regularization: 1.0
+    max_bins: 64
+    early_stopping: false
+    random_state: 20260812
+    refit: "expanding at every origin"
+    hyperparameter_search: "none"
+    point_variance: "exp(predicted log variance) times mean exp(training residual)"
+
+interaction_probe:
+  method: "exact quantile-grid two-way functional-ANOVA partial-dependence interaction"
+  reason_for_fallback: >
+    SHAP is not installed in the frozen project environment. This deterministic
+    fallback evaluates the fitted GBM itself and requires no surrogate model.
+  snapshot_origin: "2019-12-31"
+  fit_rows: "all complete design rows with row date < snapshot_origin"
+  background_rows: "complete design rows in the discovery score window"
+  grid_quantiles: [0.10, 0.20, 0.30, 0.40, 0.50, 0.60, 0.70, 0.80, 0.90]
+  pair_score: >
+    sum of squared double-centered pair partial dependence divided by the sum
+    of squared centered pair partial dependence; zero if denominator is zero
+  pair_selection: "largest score, feature-order pair as deterministic tie break"
+  location_selection: >
+    grid cell with largest absolute double-centered interaction, row-major tie break
+  locked_term: >
+    product of two one-sided hinges pointing from the selected grid thresholds
+    toward the selected interaction cell, each divided by its discovery IQR
+  augmented_model: "HAR-IV plus the one locked hinge-product term"
+  confirmation_only: true
+  no_pair_or_threshold_reselection: true
+
+scoreboard:
+  loss: "paired QLIKE on variance level"
+  report_splits: [all_diagnostic, discovery, confirmation]
+  primary_split: "confirmation"
+  continuity_inference: "two-sided Diebold-Mariano with h=1"
+  robust_inference:
+    method: "paired moving-block bootstrap of mean QLIKE difference"
+    block_sessions: 21
+    draws: 5000
+    seed: 20260812
+    confidence_level: 0.95
+  equivalence:
+    margin: "3 percent of confirmation HAR-IV mean QLIKE"
+    rule: "90 percent moving-block interval lies strictly inside plus/minus margin"
+  must_report:
+    - "mean QLIKE for every model on every eligible split"
+    - "paired loss difference, improvement, DM statistic and p-value"
+    - "21-session block interval and two-sided bootstrap p-value"
+    - "paired per-origin win rate"
+    - "equivalence interval and verdict"
+    - "all six interaction-pair scores and the locked term"
+  gbm_verdict:
+    win: "confirmation difference < 0 and block-bootstrap p < 0.05"
+    equivalent: "not a win and the 90 percent interval is inside the equivalence margin"
+    otherwise: "inconclusive"
+  augmented_term_verdict:
+    pass: "confirmation difference < 0 and block-bootstrap p < 0.05"
+    otherwise: "does not add"
+
+outputs:
+  data_dir: "data/gbm_study"
+  report_dir: "reports/gbm_study"
+  forecasts: "data/gbm_study/forecasts.parquet"
+  interactions: "data/gbm_study/interactions.json"
+  metrics: "data/gbm_study/metrics.json"
+  report: "reports/gbm_study/results.md"

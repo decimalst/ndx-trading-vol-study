@@ -1,0 +1,136 @@
+{
+  "augmented_term": {
+    "confirmation": {
+      "baseline_qlike": 0.34308319383062774,
+      "block_bootstrap_p_value": 0.22835432913417317,
+      "block_ci90": [
+        -6.316288110902383e-05,
+        0.0022379439488230683
+      ],
+      "block_ci95": [
+        -0.00010918679611035758,
+        0.002553491913070331
+      ],
+      "candidate_qlike": 0.34391529392447645,
+      "dm_p_value": 0.04923395194876169,
+      "dm_statistic": 1.9682049451378993,
+      "equivalence_margin": 0.010292495814918833,
+      "equivalent_3pct": true,
+      "improvement_pct": -0.2425359530317004,
+      "mean_difference": 0.0008321000938487739,
+      "n": 1457,
+      "win_count": 837,
+      "win_rate": 0.574468085106383
+    }
+  },
+  "feature_order": [
+    "lrv_d",
+    "lrv_w",
+    "lrv_m",
+    "liv"
+  ],
+  "gbm": {
+    "all_diagnostic": {
+      "baseline_qlike": 0.3400846156695108,
+      "block_bootstrap_p_value": 0.07678464307138572,
+      "block_ci90": [
+        0.002246629926623518,
+        0.030937161438591293
+      ],
+      "block_ci95": [
+        0.000937094450113876,
+        0.035245702923070464
+      ],
+      "candidate_qlike": 0.354742497371311,
+      "dm_p_value": 0.0018503961754968742,
+      "dm_statistic": 3.1166328646502492,
+      "equivalence_margin": 0.010202538470085324,
+      "equivalent_3pct": false,
+      "improvement_pct": -4.310069031774294,
+      "mean_difference": 0.014657881701800176,
+      "n": 2463,
+      "win_count": 1276,
+      "win_rate": 0.5180673974827447
+    },
+    "confirmation": {
+      "baseline_qlike": 0.34308319383062774,
+      "block_bootstrap_p_value": 0.2659468106378724,
+      "block_ci90": [
+        -0.0026485199429439133,
+        0.04389877846088441
+      ],
+      "block_ci95": [
+        -0.003847214396613862,
+        0.049626151832194036
+      ],
+      "candidate_qlike": 0.35910228663227045,
+      "dm_p_value": 0.027478220465416668,
+      "dm_statistic": 2.206876952613982,
+      "equivalence_margin": 0.010292495814918833,
+      "equivalent_3pct": false,
+      "improvement_pct": -4.66915695367782,
+      "mean_difference": 0.016019092801642792,
+      "n": 1457,
+      "win_count": 797,
+      "win_rate": 0.5470144131777626
+    },
+    "discovery": {
+      "baseline_qlike": 0.3357417445156865,
+      "block_bootstrap_p_value": 0.003999200159968006,
+      "block_ci90": [
+        0.00436594058748817,
+        0.018985680281317675
+      ],
+      "block_ci95": [
+        0.003123932532696477,
+        0.020722816992198193
+      ],
+      "candidate_qlike": 0.34842817038004065,
+      "dm_p_value": 0.007085674083054877,
+      "dm_statistic": 2.698328294204454,
+      "equivalence_margin": 0.010072252335470594,
+      "equivalent_3pct": false,
+      "improvement_pct": -3.778626301788758,
+      "mean_difference": 0.01268642586435417,
+      "n": 1006,
+      "win_count": 479,
+      "win_rate": 0.4761431411530815
+    }
+  },
+  "interaction_method": "exact quantile-grid two-way functional-ANOVA partial-dependence interaction",
+  "locked_term": {
+    "features": [
+      {
+        "direction": 1,
+        "discovery_median": -9.748706433714638,
+        "name": "lrv_w",
+        "scale": 1.1958179426751183,
+        "threshold": -8.219337753492816
+      },
+      {
+        "direction": 1,
+        "discovery_median": -9.562677427421171,
+        "name": "lrv_m",
+        "scale": 1.0587259177781352,
+        "threshold": -8.233018772922538
+      }
+    ],
+    "kind": "product_of_one_sided_iqr_scaled_hinges"
+  },
+  "protocol_sha256": "64700689a7682818cbcc7b446d432bf59da3fab7c908a8c3149f13117561ef05",
+  "sample": {
+    "all_end": "2025-10-17T00:00:00",
+    "all_n": 2463,
+    "all_start": "2016-01-04T00:00:00",
+    "last_target_date": "2025-10-20T00:00:00"
+  },
+  "selected_pair": [
+    "lrv_w",
+    "lrv_m"
+  ],
+  "study_id": "ndx_har_iv_gbm_functional_form_v1",
+  "verdicts": {
+    "gbm_functional_form": "INCONCLUSIVE",
+    "locked_interpretable_term": "DOES_NOT_ADD"
+  }
+}

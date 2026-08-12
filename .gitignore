@@ -7,3 +7,9 @@ __pycache__/
 .pytest_cache/
 .coverage
 htmlcov/
+
+# Resumable TiRex extraction/probe caches; consolidated, hash-audited artifacts
+# live beside these directories and are versioned.
+data/representation_study/latent_embedding_chunks/
+data/representation_study/latent_probe_work/
+data/representation_study/latent_pre_repair_*/

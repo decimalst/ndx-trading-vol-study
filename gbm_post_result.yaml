@@ -1,0 +1,160 @@
+# Post-result reviewer diagnostics for the frozen GBM functional-form study.
+# Frozen 2026-08-12 before any command computed these diagnostics.
+protocol_version: 1
+study_id: "ndx_gbm_post_result_diagnostics_v1"
+specified_on: "2026-08-12"
+status: "frozen_before_diagnostic_query"
+evidence_class: "post-result reviewer diagnostic; descriptive only"
+question: >
+  Does the candidate-minus-HAR QLIKE gap concentrate in the highest realized-
+  variance decile, and was the partial-dependence pair selection plausibly a
+  correlated-feature artifact?
+
+immutability:
+  frozen_parent_protocol: "gbm_study.yaml"
+  frozen_parent_verdict: "INCONCLUSIVE"
+  do_not_modify:
+    - "gbm_study.yaml"
+    - "data/gbm_study/metrics.json"
+    - "data/gbm_study/interactions.json"
+  substantive_parent_summary: >
+    GBM is point-estimate worse than HAR-IV on all three frozen splits; this
+    diagnostic must not revise the formal INCONCLUSIVE verdict.
+  parent_timing_status: >
+    The original comparison gives both models the same same-origin Cboe VXN
+    close, so it is internally common-information, but it is not established as
+    timing-safe at the standing 16:00 origin because the close may reflect the
+    16:00-16:15 interval.
+
+fences:
+  diagnostic_start: "2016-01-04"
+  confirmation_start: "2020-01-02"
+  diagnostic_end: "2025-10-17"
+  latest_allowed_target_date: "2025-10-20"
+  sealed_clean_start: "2025-11-03"
+  common_rows_only: true
+
+inputs:
+  master:
+    path: "data/processed/master_daily.parquet"
+    sha256: "2b934581bd760c7b8e6d555d2cef0aa10ade8b5ad9c55f2d3e4674bf49677566"
+  gbm_forecasts:
+    path: "data/gbm_study/forecasts.parquet"
+    sha256: "6573c3d235b79e3074390603b1dad0a95b7dfae268efcead064ebcee9e2f86af"
+  gbm_metrics:
+    path: "data/gbm_study/metrics.json"
+    sha256: "72b3f5323b867e0793c636138113c364a260a406f551d06cfa59134d027a372e"
+  gbm_interactions:
+    path: "data/gbm_study/interactions.json"
+    sha256: "3b1a6089b5c873eb5a6e698e3623e17a11a23ff0cec924d1b291d1ff172c6181"
+  earnings_forecasts:
+    har_iv_x:
+      path: "data/forecasts/har_iv_x_all.parquet"
+      sha256: "023f9933d8437242baa297af065398be71d6e783002d2a3950884795e4d32d38"
+    har_iv:
+      path: "data/forecasts/har_iv_all.parquet"
+      sha256: "f59209d0a6337770a34018d2c03ef6e3157ac2d3195e5932fa91831d3751f7f0"
+    har_x:
+      path: "data/forecasts/har_x_all.parquet"
+      sha256: "522445b63ed6a44cf4dc5e7112e2f6951d1deede999d688e75a89d6277a9f806"
+    har:
+      path: "data/forecasts/har_all.parquet"
+      sha256: "20d40bf2d4d56dea19c4a9191595e6cddc53a22c3865a89bfde905c59f04d734"
+  forbid_filename_suffix: "_sm.parquet"
+
+loss_decomposition:
+  loss: "QLIKE = actual/forecast - log(actual/forecast) - 1"
+  difference: "candidate loss minus baseline loss; negative favors candidate"
+  deciles: 10
+  decile_assignment: >
+    Within each exact pair sample, rank realized next-session variance ascending
+    with origin-date order breaking ties, then split ranks into ten equal-count
+    bins. Decile 10 is the highest realized variance.
+  report_per_decile:
+    - "count"
+    - "baseline and candidate mean QLIKE"
+    - "mean and sum paired loss difference"
+    - "candidate win rate"
+    - "fraction of the total aggregate paired gap"
+  reconciliation_tolerance: 1.0e-12
+  pairs:
+    gbm_confirmation:
+      sample: "confirmation"
+      baseline: "HAR-IV"
+      candidate: "GBM"
+    locked_term_confirmation:
+      sample: "confirmation"
+      baseline: "HAR-IV"
+      candidate: "HAR-IV plus frozen locked term"
+    timing_safe_gbm_confirmation:
+      sample: "confirmation, with VXN lagged one complete session"
+      baseline: "timing-safe HAR-IV"
+      candidate: "timing-safe GBM"
+    earnings_with_iv_diagnostic:
+      sample: "pre-clean diagnostic"
+      baseline: "tracked har_iv_all mean_var"
+      candidate: "tracked har_iv_x_all mean_var"
+    earnings_without_iv_diagnostic:
+      sample: "pre-clean diagnostic"
+      baseline: "tracked har_all mean_var"
+      candidate: "tracked har_x_all mean_var"
+  interpretation: >
+    Outcome-conditioned attribution only. It cannot establish a tradable rule,
+    causal mechanism, or prospective predictive evidence.
+
+timing_safe_sensitivity:
+  evidence_class: "post-result timing sensitivity"
+  reason: >
+    Cboe VXN close timing is ambiguous relative to the repository's standing
+    16:00 forecast origin. Same-origin VXN must not be described as timing-safe.
+  information_change: >
+    Replace liv at origin t with log(VXN close from the immediately preceding
+    complete trading session) for both HAR-IV and GBM.
+  unchanged:
+    - "all other HAR-IV inputs"
+    - "next-session target and common origin samples"
+    - "expanding refit policy and smearing transform"
+    - "all frozen GBM hyperparameters"
+    - "discovery, confirmation, and all-diagnostic splits"
+    - "QLIKE, h=1 DM, and 21-session paired block-bootstrap settings"
+  tuning_or_reselection: "none"
+  report_splits: [all_diagnostic, discovery, confirmation]
+  substantive_assessment_rule: >
+    The functional-form escape-hatch conclusion survives at a 16:00-safe
+    information boundary only if GBM's point estimate is no better on all three
+    splits and the confirmation comparison is not a registered block-bootstrap
+    win. Otherwise report that it does not survive. This sensitivity never
+    changes the parent frozen verdict.
+
+correlation_audit:
+  snapshot_origin: "2019-12-31"
+  fit_rows: "same complete rows strictly before snapshot as frozen GBM discovery"
+  background: "all complete HAR-IV design rows from 2016-01-04 through 2019-12-31"
+  correlations: [pearson, spearman]
+  pd_selected_pair: [lrv_w, lrv_m]
+  caveat: >
+    Partial dependence can extrapolate off-support under correlated inputs; the
+    two trailing averages overlap by construction, so its selection is treated
+    as potentially artifactual.
+  shap:
+    evidence_class: "post-result diagnostic"
+    implementation: "shap.TreeExplainer"
+    feature_perturbation: "tree_path_dependent"
+    model: "exact frozen HistGradientBoostingRegressor fitted once at the discovery snapshot"
+    evaluation_rows: "the full fixed discovery background"
+    output: "raw model log-variance prediction"
+    interaction_score: "mean absolute off-diagonal SHAP interaction value over evaluation rows"
+    pair_selection: "largest interaction score; frozen feature-order pair breaks an exact tie"
+    parameter_search: "none"
+    confirmation_data_use: "none"
+    unsupported_behavior: >
+      Record library version, exception type, and message; do not substitute a
+      tuned selector or change the frozen parent study.
+
+outputs:
+  loss_rows: "data/gbm_study/post_result_loss_rows.parquet"
+  metrics: "data/gbm_study/post_result_metrics.json"
+  shap: "data/gbm_study/post_result_shap.json"
+  correlations: "data/gbm_study/post_result_feature_correlations.csv"
+  timing_safe_forecasts: "data/gbm_study/post_result_timing_safe_forecasts.parquet"
+  report: "reports/gbm_study/post_result_diagnostics.md"

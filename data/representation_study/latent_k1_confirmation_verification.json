@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "checks": {
+    "protocol_hash": true,
+    "input_hashes": true,
+    "common_rows": true,
+    "clean_fence": true,
+    "control_coverage": true,
+    "one_actual_selection_per_fold": true,
+    "one_control_selection_per_fold_seed": true,
+    "training_only_actual_selection_reconstructed": true,
+    "control_training_label_reselection_reconstructed": true,
+    "held_out_predictions_reconstructed": true,
+    "coordinate_characterization_reconstructed": true,
+    "metrics_reproduced": true,
+    "phase_metrics_reproduced": true,
+    "report_reproduced": true
+  },
+  "origins": 5592,
+  "control_rows": 553608,
+  "fold_control_selections_reconstructed": 2376
+}

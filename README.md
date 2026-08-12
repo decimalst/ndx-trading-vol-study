@@ -17,7 +17,10 @@ the surface absorb, and what can a 30-day scalar not represent?” That produced
 positive single-name earnings mechanism, an absorption map, and a VRP term
 curve, alongside another clean rejection. These designs are not statistically
 independent, so their count is not a meta-test; their breadth is the important
-result.
+result. A later model-frame extension reached the same boundary three ways:
+HAR-IV closed the capacity explanation, gradient boosting closed the nonlinear
+functional-form explanation, and both HMM and TiRex latent-state probes failed
+to add usable transition ranking beyond direct realized-volatility history.
 
 This is research code and a record of negative as well as positive evidence. It
 is not a trading recommendation or financial advice.
@@ -56,6 +59,14 @@ The project then moved through several questions:
     historically gated single-name earnings/own-IV diagnostics.
 12. Test the regime-conditional VIX9D/VIX hypothesis on an untouched 2014-2015
     SPX window.
+13. Extend price-only QQQ history to inception in 1999 and rescore the transition
+    problem with AUC and top-decile lift over 24 annual forward folds.
+14. Fit one fixed gradient-boosted tree on exactly the HAR-IV information set,
+    then diagnose its paired QLIKE loss by realized-variance decile.
+15. Probe all 512 TiRex-2 coordinates with full ridge, sparse k={1,5,10}, and a
+    fixed small MLP—without PCA—and compare each with matched control labels.
+16. Adapt the Eidos context-corruption grid to the existing Chronos-2, TiRex-2,
+    and HAR pipelines, while keeping its preprocessing differences explicit.
 
 ## Results in plain English
 
@@ -74,11 +85,19 @@ The project then moved through several questions:
 | What does the SPX VRP curve look like? | Mean implied-minus-realized vol is 3.61, 3.47, and 4.72 points at 9, 30, and 93 calendar days. | The longest measured premium is richest; only its leverage-state difference excludes zero under the frozen block interval. | [VRP term structure](reports/research_paths/vrp_term_structure.md) |
 | Was the index earnings mechanism merely absent? | No. After own implied vol, historically top-25 AAPL/AMZN/Alphabet earnings sessions retain a 2.05-log-variance pooled residual contrast. | Constant-maturity single-name IV does not localize the event to one day; this explains the index null better than a current-name concentration story. | [Single-name earnings](reports/research_paths/single_name_earnings.md) |
 | Does regime-conditioned VIX9D/VIX replicate on SPX? | No. It worsens 2014-2015 QLIKE by 0.60%; DM p=0.0325 points against it. | The inspected NDX non-stationarity did not become a portable regime rule. | [SPX replication](reports/research_paths/spx_term_slope_replication.md) |
+| Does a nonlinear GBM improve HAR-IV? | Point-estimate no: it is worse on discovery, confirmation, and the full diagnostic sample by 3.78%, 4.67%, and 4.31%. The frozen confirmation verdict remains INCONCLUSIVE because its block interval spans zero. | Flexibility did not reveal a useful interaction. A lagged-VXN timing-safe rerun is also worse on every split. | [GBM result](reports/gbm_study/results.md), [post-result diagnostics](reports/gbm_study/post_result_diagnostics.md) |
+| Why can a model win most days but lose on mean QLIKE? | GBM wins 54.7% of confirmation days, but the highest realized-variance decile contributes 174.6% of its net loss gap; the locked term shows the same pattern. | QLIKE's asymmetric spike penalty can turn many small central gains into a worse aggregate. This mechanism is supported for these GBM comparisons, not claimed universally. | [Loss-decile decomposition](reports/gbm_study/post_result_diagnostics.md) |
+| Can price history rank five-session stress-state crossings? | Yes: the extended-history RV benchmark reaches 0.870 AUC and 4.80x top-decile lift; its top decile has a 63.2% event rate versus 13.2% overall. | This is mostly recurrent threshold proximity, not rare-crisis anticipation. The single RV-percentile control reaches only 0.811 AUC. | [Tail-ranking result](reports/representation_study/tail_classical.md), [protocol](reports/REPRESENTATION_STUDY_PROTOCOL.md) |
+| Does the calibrated HMM add under ranking metrics? | No usable addition: AUC moves 0.8704 to 0.8714, while top-decile lift falls 4.80x to 4.67x. | The original proper-score objection is removed; the state slightly rearranges the bulk and degrades the region one might act on. | [Tail-ranking result](reports/representation_study/tail_classical.md) |
+| Is transition proximity encoded in TiRex's latent state? | Descriptively yes: sparse k=1/k=5 reach 0.815/0.827 AUC, but the frozen ten-control design cannot attain p<0.0909. No rung improves the 0.870 RV-history benchmark when augmented. | The representation is a lossy re-encoding of information direct RV features already extract. Sparse coordinates are selected inside training folds and forward-scored; they are not one universal neuron. | [Latent probe](reports/representation_study/latent_probe.md), [result audit](reports/representation_study/latent_probe_result_audit.md) |
+| Does k=1 survive a formally attainable control test? | Yes in a separate post-result run: 0 of 99 matched controls reach its 0.815 AUC, giving corrected exact p=0.01. | The signal is genuinely encoded, but it is not novel: the selected fold-specific coordinates correlate most with 5/22-day volatility and prior-session VXN, and still trail direct RV history. | [99-control k=1 diagnostic](reports/representation_study/latent_k1_confirmation.md) |
+| Are the foundation pipelines fragile to injected context noise? | Chronos-2 and TiRex-2 degrade modestly on the registered grid. | This weakens surface-noise fragility as an explanation for their earlier null, but HAR comparisons mix preprocessing with architecture because the adaptation did not impose Eidos's common noisy-statistics renormalization. | [Noise diagnostic](reports/representation_study/noise_robustness.md) |
 
 The most defensible overall conclusion is not that variance is unpredictable.
-It is that **historical data describes the current volatility regime much
-better than it anticipates the transition into the next one, while options
-already price most of the forecastable conditional mean.** That shifts the
+It is that **price history ranks recurrent proximity to a volatility threshold,
+but neither discrete HMM state nor a rich continuous TiRex representation adds
+usable information beyond direct RV history; meanwhile options already price
+most of the forecastable conditional mean.** That shifts the
 economic question from “can I forecast this better?” toward “is there a risk
 premium I am willing and able to bear?” The latter is a portfolio decision, not
 something a lower forecasting loss establishes on its own.
@@ -87,6 +106,15 @@ something a lower forecasting loss establishes on its own.
 
 - [Standing findings](reports/FINDINGS.md) — the current conclusions and the
   evidence hierarchy.
+- [GBM functional-form study](reports/gbm_study/results.md) — frozen result,
+  timing qualification, and [post-result QLIKE/SHAP audit](reports/gbm_study/post_result_diagnostics.md).
+- [Extended-history transition study](reports/representation_study/tail_classical.md) —
+  1999-onward data, ranking metrics, HMM repair, and reviewer controls.
+- [TiRex latent probe](reports/representation_study/latent_probe.md) and
+  [99-control k=1 follow-up](reports/representation_study/latent_k1_confirmation.md),
+  plus the [Eidos-derived noise diagnostic](reports/representation_study/noise_robustness.md).
+- [1999 history audit](reports/history_extension/HISTORY_EXTENSION_AUDIT.md) —
+  source, transform, output, and clean-window fences.
 - [Five-path findings](reports/RESEARCH_PATHS_FINDINGS.md) — absorption, horizon,
   VRP term structure, historically gated single names, and the SPX replication.
 - [Quarterly top-25 reconstruction](reports/research_paths/quarterly_top25.md) —
@@ -286,6 +314,28 @@ tests before every empirical command:
 .venv/bin/python -m src.research_paths spx-term-slope
 .venv/bin/python -m src.verify_research_paths
 ```
+
+The later functional-form and representation studies are isolated from the
+original harness and each has its own machine-readable protocol:
+
+```bash
+.venv/bin/python -m unittest tests.test_history_extension -v
+.venv/bin/python -m src.history_extension build
+.venv/bin/python -m unittest tests.test_gbm_study tests.test_gbm_post_result -v
+.venv/bin/python -m src.gbm_study verify
+.venv/bin/python -m src.gbm_post_result verify
+.venv/bin/python -m unittest tests.test_representation_study tests.test_latent_probe_study tests.test_noise_robustness -v
+.venv/bin/python -m src.representation_study verify-tail
+.venv/bin/python -m src.latent_probe_study verify
+.venv/bin/python -m unittest tests.test_latent_k1_confirmation -v
+.venv/bin/python -m src.latent_k1_confirmation verify
+.venv/bin/python -m src.noise_robustness verify
+```
+
+The 1999 panel is price-only: the current free Cboe VXN file begins in September
+2009, so no proxy splice was used. The tail benchmark intentionally inherits the
+earlier transition study's `mean(log RV)` 5/22-session convention rather than
+standard HAR's `log(mean variance)`; that distinction is explicit in its report.
 
 ## Diagnostic-only orthogonal-signal study
 

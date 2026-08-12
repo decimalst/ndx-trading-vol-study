@@ -1,0 +1,79 @@
+{
+  "agrees_with_pd": false,
+  "background_end": "2019-12-31T00:00:00",
+  "background_rows": 1006,
+  "background_start": "2016-01-04T00:00:00",
+  "evidence_class": "post-result diagnostic",
+  "fit_last_row": "2019-12-30T00:00:00",
+  "fit_rows": 2592,
+  "method": {
+    "confirmation_data_use": "none",
+    "evaluation_rows": "the full fixed discovery background",
+    "evidence_class": "post-result diagnostic",
+    "feature_perturbation": "tree_path_dependent",
+    "implementation": "shap.TreeExplainer",
+    "interaction_score": "mean absolute off-diagonal SHAP interaction value over evaluation rows",
+    "model": "exact frozen HistGradientBoostingRegressor fitted once at the discovery snapshot",
+    "output": "raw model log-variance prediction",
+    "pair_selection": "largest interaction score; frozen feature-order pair breaks an exact tie",
+    "parameter_search": "none",
+    "unsupported_behavior": "Record library version, exception type, and message; do not substitute a tuned selector or change the frozen parent study.\n"
+  },
+  "pd_pair_pearson": 0.8156893014668073,
+  "pd_pair_spearman": 0.8021666853729481,
+  "pd_selected_pair": [
+    "lrv_w",
+    "lrv_m"
+  ],
+  "scores": [
+    {
+      "mean_absolute_interaction": 0.040465253298782804,
+      "pair": [
+        "lrv_w",
+        "liv"
+      ]
+    },
+    {
+      "mean_absolute_interaction": 0.01529279693314269,
+      "pair": [
+        "lrv_w",
+        "lrv_m"
+      ]
+    },
+    {
+      "mean_absolute_interaction": 0.014468880406013266,
+      "pair": [
+        "lrv_d",
+        "liv"
+      ]
+    },
+    {
+      "mean_absolute_interaction": 0.008421091900257248,
+      "pair": [
+        "lrv_m",
+        "liv"
+      ]
+    },
+    {
+      "mean_absolute_interaction": 0.004552260771811768,
+      "pair": [
+        "lrv_d",
+        "lrv_w"
+      ]
+    },
+    {
+      "mean_absolute_interaction": 0.0031406558355949717,
+      "pair": [
+        "lrv_d",
+        "lrv_m"
+      ]
+    }
+  ],
+  "selected_pair": [
+    "lrv_w",
+    "liv"
+  ],
+  "shap_version": "0.51.0",
+  "snapshot_origin": "2019-12-31T00:00:00",
+  "status": "success"
+}
