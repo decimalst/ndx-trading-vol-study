@@ -15,6 +15,7 @@ from src.nport_weights import (
     archive_url,
     assign_snapshot_asof,
     parse_nport_xml,
+    summarize_equity_concentration,
     validate_snapshot,
 )
 
@@ -82,6 +83,23 @@ class NportParserContract(unittest.TestCase):
             "https://www.sec.gov/Archives/edgar/data/1067839/"
             "000175272425211318/primary_doc.xml",
         )
+
+    def test_concentration_summary_uses_positive_equity_positions(self):
+        _, holdings = parse_nport_xml(SAMPLE_XML)
+        holdings.insert(0, "accession", "sample")
+        holdings.insert(1, "report_date", pd.Timestamp("2019-12-31"))
+        holdings.insert(2, "accepted_at", pd.Timestamp("2020-02-28T20:30:00Z"))
+        derivative = holdings.iloc[0].copy()
+        derivative["name"] = "Index future"
+        derivative["asset_category"] = "DE"
+        derivative["pct_value"] = -25.0
+        holdings = pd.concat([holdings, derivative.to_frame().T], ignore_index=True)
+        got = summarize_equity_concentration(holdings).iloc[0]
+        self.assertEqual(got["equity_holdings"], 2)
+        self.assertAlmostEqual(got["equity_pct_value"], 100.0)
+        self.assertAlmostEqual(got["top5_pct_value"], 100.0)
+        self.assertAlmostEqual(got["hhi"], 0.6**2 + 0.4**2)
+        self.assertAlmostEqual(got["effective_holdings"], 1.0 / (0.6**2 + 0.4**2))
 
 
 class NportAvailabilityContract(unittest.TestCase):
