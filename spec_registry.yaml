@@ -1,0 +1,158 @@
+# Specification registry — when each model spec was written, and on what basis.
+#
+# WHY THIS FILE EXISTS
+# config.yaml is frozen and does not record WHEN each specification was
+# written. Without that, a model designed by looking at the clean-window
+# results is scored on the clean window and reported next to genuinely
+# pre-registered models, with unadjusted p-values. The evaluator already had
+# the right machinery for this — `DIAGNOSTIC_ONLY` in experiment.py suppresses
+# har_lev/har_iv_lev from clean-phase output "so testing them cannot become a
+# peek" — but it was applied to two models by hand instead of to all of them
+# by rule. This file generalises it.
+#
+# HOW IT IS USED
+# A model is CONFIRMATORY in a phase only from
+#     max(phase_start, specified_on, available_from)
+# onward. Anything earlier is EXPLORATORY: it still gets reported, but in a
+# separate section, with its confirmatory origin count shown against the gate
+# in config.yaml (next_evaluation.at_origins: 500). Nothing is deleted; the
+# claim is just no longer allowed to sit in the headline table.
+#
+# FIELDS
+#   specified_on   date the specification was written. `pre-registration` means
+#                  it predates clean_start and needs no gate.
+#                  `undetermined` means the repository does not record it —
+#                  the evaluator warns and treats it as exploratory, because
+#                  the burden of proof is on the specification, not the reader.
+#   available_from earliest origin at which the model is leakage-clean (model
+#                  publication date). Distinct from specified_on: TiRex-2 was
+#                  not specified in response to a result, but its clean sample
+#                  still starts at publication.
+#   basis          how the specification came about.
+#   evidence       where in the repository that is documented.
+
+version: 1
+written_on: "2026-08-12"
+
+defaults:
+  specified_on: undetermined
+  available_from: null
+
+models:
+  persistence:
+    specified_on: pre-registration
+    basis: benchmark
+    evidence: "src/models.py:1 module docstring"
+  ewma:
+    specified_on: pre-registration
+    basis: benchmark (RiskMetrics)
+    evidence: "src/models.py:1 module docstring"
+  har:
+    specified_on: pre-registration
+    basis: benchmark (Corsi HAR-RV)
+    evidence: "src/models.py:1 module docstring"
+  har_x:
+    specified_on: pre-registration
+    basis: pre-registered event-covariate specification
+    evidence: "src/models.py:1 module docstring"
+  har_iv:
+    specified_on: pre-registration
+    basis: >
+      pre-registered control for any model handed VXN — the same-information-set
+      benchmark
+    evidence: "src/experiment.py:106"
+
+  har_sv:
+    specified_on: undetermined
+    basis: >
+      Patton-Sheppard signed semivariance. The repository does not record when
+      this was specified. It is also the only model whose diagnostic sample is
+      n=22 (hourly bars reach back ~730 sessions), so its diagnostic row cannot
+      replicate anything.
+    evidence: "src/experiment.py:110"
+  har_ic:
+    specified_on: undetermined
+    basis: >
+      HAR-IV plus the implied-correlation decomposition. Specification date not
+      recorded in the repository.
+    evidence: "src/experiment.py:112"
+
+  har_iv_x:
+    specified_on: "2026-08-11"
+    basis: >
+      POST-HOC ON THE CLEAN WINDOW. Specified after the clean-phase results were
+      seen, on the observation that har_x and chronos_cov both beat har_iv on
+      heavy-earnings days. The clean window generated the hypothesis, so it
+      cannot also test it. Its reported p-values (DM -3.660, p=0.0003 vs HAR;
+      sign p=0.000655) are unadjusted for that. Independently: the mean gap
+      flips sign after removing 3 of 192 days, and the effect inverts on the
+      13x larger diagnostic sample (DM -0.031, p=0.975; heavy-earnings wins
+      69/157 = 44%).
+    evidence: "src/experiment.py:114-121; config.yaml next_evaluation block"
+
+  har_lev:
+    specified_on: "2026-08-11"
+    diagnostic_only: true
+    basis: >
+      LHAR (Corsi-Reno) return asymmetry, admitted for diagnostic-window testing
+      during the freeze. Already suppressed from clean-phase reports by hand.
+    evidence: "src/experiment.py:123-125, src/experiment.py:211"
+  har_iv_lev:
+    specified_on: "2026-08-11"
+    diagnostic_only: true
+    basis: ledger-closing test — does return asymmetry survive alongside VXN
+    evidence: "src/experiment.py:127-132, src/experiment.py:211"
+
+  chronos_uni:
+    specified_on: pre-registration
+    available_from: "2025-10-17"
+    basis: Chronos-2 zero-shot, target history only
+    evidence: "config.yaml leakage boundary; src/chronos_runner.py:1"
+  chronos_cov:
+    specified_on: pre-registration
+    available_from: "2025-10-17"
+    basis: Chronos-2 + known-future calendar covariates
+    evidence: "src/chronos_runner.py:1"
+  chronos_cov_iv:
+    specified_on: pre-registration
+    available_from: "2025-10-17"
+    basis: Chronos-2 + VXN as a past-observed covariate
+    evidence: "src/chronos_runner.py:1"
+
+  # TiRex-2 was published after clean_start, so 164 of the 192 clean origins
+  # precede its publication date. reports/LEAKAGE_TIREX2.md flags this in a
+  # caption; the registry makes it structural, which drops the confirmatory
+  # sample from 192 to 28.
+  tirex_uni:
+    specified_on: "2026-07-01"
+    available_from: "2026-07-01"
+    basis: TiRex-2 zero-shot, target history only — model availability, not a result
+    evidence: "src/experiment.py:281; reports/LEAKAGE_TIREX2.md"
+  tirex_cov:
+    specified_on: "2026-07-01"
+    available_from: "2026-07-01"
+    basis: TiRex-2 + known-future calendar covariates
+    evidence: "src/tirex_runner.py:1"
+  tirex_cov_iv:
+    specified_on: "2026-07-01"
+    available_from: "2026-07-01"
+    basis: TiRex-2 + VXN as a past-observed covariate
+    evidence: "src/tirex_runner.py:1"
+  tirex_cov_ivf:
+    specified_on: "2026-07-01"
+    available_from: "2026-07-01"
+    basis: >
+      POST-HOC RESPECIFICATION. Built after an oracle probe showed TiRex-2's
+      past-covariate channel inert and its future channel near-perfect, i.e.
+      after cov_iv had been run and diagnosed. Plumbing-driven rather than
+      result-driven, but still specified with the clean window in hand.
+    evidence: "src/tirex_runner.py:97-104"
+
+  har_cum:
+    specified_on: pre-registration
+    basis: direct 30-calendar-day point forecast for the VXN comparison
+    evidence: "src/models.py:150"
+  persistence_cum:
+    specified_on: pre-registration
+    basis: direct 30-calendar-day benchmark
+    evidence: "src/models.py:150"
