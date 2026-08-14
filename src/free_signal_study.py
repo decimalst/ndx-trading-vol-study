@@ -10,8 +10,8 @@ import argparse
 import hashlib
 import json
 import math
+from collections.abc import Iterable
 from pathlib import Path
-from typing import Iterable
 
 import numpy as np
 import pandas as pd
@@ -28,7 +28,6 @@ from .representation_study import (
     roc_auc,
     top_decile_lift,
 )
-
 
 ROOT = Path(__file__).resolve().parents[1]
 PROTOCOL_PATH = ROOT / "free_signal_study.yaml"

@@ -1,9 +1,22 @@
 # NDX volatility forecasting: what the market already knows
 
+> **Question.** Can a modern time-series model — Chronos-2, TiRex-2 — plus
+> calendar and market data known at the forecast origin, beat a compact HAR
+> model that already sees VXN?
+>
+> **Answer.** No, and mostly the honest answer is *undetermined*: nothing tested
+> beats HAR-IV, but the clean window is 192 origins and the comparison's verdict
+> is `inconclusive`, not a null. The one thing genuinely established is an
+> equivalence: calendar and earnings covariates add nothing, at n=2463, by a
+> test that can actually say so.
+>
+> **What's reusable.** The correction ledger and the verdict vocabulary. 22
+> defects caught by pre-registration, byte-for-byte fences and adversarial
+> review — including a set of corrections that was documented, tested, cited,
+> and never implemented. And the distinction most quant repos collapse:
+> `inconclusive` ≠ `equivalent` ≠ null.
+
 A leakage-controlled, pre-registered study of Nasdaq-100 realized volatility.
-The question: can a modern time-series model, plus calendar and market data
-known at the forecast origin, predict QQQ/NDX variance better than classical
-models — and better than the options market already does through VXN?
 
 **The volatility answer is null and correctly so.** A compact HAR model using
 VXN is difficult to beat. Across ~16 designs spanning QQQ/NDX and SPX, extra
@@ -195,6 +208,16 @@ the retraction table above.
 ## Status
 
 Provisional by the project's own standard. Three rounds of adversarial review
-produced 8, then 12, then 22 findings, each round surviving every prior one. This
-process will count as converged when a round produces **zero conclusion-changing
-findings**. That has not happened.
+produced 8, then 12, then 22 findings, each round surviving every prior one.
+
+**That sequence does not measure what the earlier version of this section
+claimed.** Each round also *added new studies*, so 8 → 12 → 22 is partly counting
+new surface rather than residual error in old surface. A rising count under a
+growing codebase is uninformative about whether review is converging. Corrected
+2026-08-13.
+
+The test that can actually pass: **freeze scope for one round and re-review only
+what existed before it.** Convergence means a scope-frozen round producing
+**zero conclusion-changing findings**. No such round has been run, so nothing
+here has been shown to converge — and the three rounds to date cannot be read as
+evidence either way.

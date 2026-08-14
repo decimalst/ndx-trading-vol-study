@@ -75,7 +75,6 @@ def _avail_steps(df: pd.DataFrame, t: pd.Timestamp, max_steps: int) -> int:
 
 def _item(df: pd.DataFrame, t: pd.Timestamp, cfg: dict, variant: str, pred_len: int):
     import torch
-
     from tirex2 import TimeseriesType
 
     pos = df.index.get_loc(t)

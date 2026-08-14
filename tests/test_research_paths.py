@@ -1,6 +1,6 @@
 """Safety and estimand contracts for the frozen five-path extension."""
-from pathlib import Path
 import unittest
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -9,17 +9,17 @@ import yaml
 from src.research_paths import (
     align_exact_dates,
     assign_top25_asof,
-    build_quarterly_top25,
     build_absorption_design,
-    build_top25_earnings_events,
+    build_quarterly_top25,
     build_single_name_design,
+    build_top25_earnings_events,
+    dm_test_hac,
     event_target_flags,
     fit_absorption_group,
     forward_calendar_realized_vol,
     forward_mean_variance,
     gk_plus_overnight,
     moving_block_bootstrap,
-    dm_test_hac,
     parse_cboe_history,
     positive_front_slope,
     qlike_loss,
@@ -28,7 +28,6 @@ from src.research_paths import (
     wald_attenuation,
     walk_forward_log_ols,
 )
-
 
 ROOT = Path(__file__).resolve().parents[1]
 

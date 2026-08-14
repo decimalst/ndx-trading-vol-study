@@ -22,7 +22,7 @@ import pandas as pd
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from src import config, methodology, models  # noqa: E402
+from src import config, methodology, models
 
 
 def _lognormal_quantiles(mu: float, sigma: float, taus: np.ndarray) -> np.ndarray:

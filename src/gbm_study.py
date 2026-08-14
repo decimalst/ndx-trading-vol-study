@@ -18,13 +18,15 @@ import itertools
 import json
 import math
 import pathlib
-from typing import Any, Iterable
+from collections.abc import Iterable
+from typing import Any
 
 import numpy as np
 import pandas as pd
 import yaml
 from scipy import stats
 
+from . import envcheck
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DEFAULT_PROTOCOL = ROOT / "gbm_study.yaml"
@@ -640,7 +642,8 @@ def verify_saved(spec: dict[str, Any]) -> None:
     validate_artifacts(forecasts, metrics, lock, spec)
     recomputed = calculate_metrics(forecasts, lock, spec)
     if recomputed != metrics:
-        raise ValueError("saved GBM metrics do not recompute from forecasts")
+        raise ValueError("saved GBM metrics do not recompute from forecasts. "
+                         + envcheck.pin_advice())
     rendered = render_report(metrics, lock)
     if resolve_repo_path(outputs["report"]).read_text() != rendered:
         raise ValueError("saved report does not match metrics")

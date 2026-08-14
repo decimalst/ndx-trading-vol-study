@@ -91,18 +91,10 @@ class NoiseRobustnessTests(unittest.TestCase):
         self.assertEqual(array_sha256(x), array_sha256(x.astype(np.float64)))
         self.assertNotEqual(array_sha256(x), array_sha256(x + .1))
 
-    def test_cached_snapshots_resolve_required_executable_files(self):
-        # This is an environment prerequisite check, not model inference.
-        chronos = cached_snapshot_path(
-            "amazon/chronos-2", "29ec3766d36d6f73f0696f85560a422f50e8498c",
-            ("config.json",),
-        )
-        tirex = cached_snapshot_path(
-            "NX-AI/TiRex-2", "05e5b26db52bfb256f1ae1bdf785589850482de3",
-            ("model-config.yaml", "model.ckpt"),
-        )
-        self.assertTrue((chronos / "config.json").exists())
-        self.assertTrue((tirex / "model.ckpt").exists())
+    # test_cached_snapshots_resolve_required_executable_files moved to
+    # tests/env/test_local_artifacts.py on 2026-08-13. It asserted a local
+    # HuggingFace model cache exists -- an environment prerequisite, as its own
+    # comment said -- and had no guard at all, so it failed on every runner.
 
     def _toy_forecasts(self):
         rows = []

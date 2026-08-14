@@ -26,7 +26,6 @@ from .representation_study import (
     validate_protocol,
 )
 
-
 ROOT = config.ROOT
 OUTPUT_DIR = ROOT / "data" / "representation_study"
 REPORT_PATH = ROOT / "reports" / "representation_study" / "noise_robustness.md"

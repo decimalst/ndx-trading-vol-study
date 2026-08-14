@@ -12,8 +12,8 @@ import argparse
 import hashlib
 import json
 from collections import Counter
+from collections.abc import Iterable
 from pathlib import Path
-from typing import Iterable
 
 import numpy as np
 import pandas as pd
@@ -22,7 +22,6 @@ import yaml
 from . import config
 from . import latent_probe_study as latent
 from . import representation_study as base
-
 
 ROOT = config.ROOT
 PROTOCOL_PATH = ROOT / "latent_k1_confirmation.yaml"

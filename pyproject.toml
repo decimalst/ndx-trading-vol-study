@@ -1,0 +1,70 @@
+[project]
+name = "ndx-vol-experiment"
+version = "0.1.0"
+description = "Leakage-controlled, pre-registered study of Nasdaq-100 realized volatility"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+
+# Runtime dependencies live in requirements.txt, which is what the frozen
+# artifacts were built against and what src/envcheck.py enforces. They are not
+# duplicated here: two sources of truth for a version pin is how a pin stops
+# being a pin.
+
+[tool.ruff]
+line-length = 95
+target-version = "py311"
+extend-exclude = [".venv", "venv", "data", "reports", "calendars"]
+
+[tool.ruff.lint]
+select = [
+    "E", "W",   # pycodestyle
+    "F",        # pyflakes -- unused imports/names, the ones that signal rot
+    "I",        # import sorting
+    "B",        # bugbear
+    "UP",       # pyupgrade
+    "C4",       # comprehensions
+    "SIM",      # simplify
+    "RUF",
+]
+ignore = [
+    "E501",     # line length is handled by the formatter, not the linter
+    "B008",     # function call in default arg -- not a pattern used here
+    "SIM108",   # ternary-vs-if is a readability call, not a rule
+    "RUF001",   # the reports use en/em dashes deliberately
+    "RUF002",
+    "RUF003",
+
+    # --- DEFERRED, not clean. Stated rather than silently dropped. ----------
+    # These 128 findings are cosmetic, and every one of them sits in code that
+    # regenerates an artifact fenced byte-for-byte by
+    # reports/FROZEN_REPORT_HASHES.json. Autofixing them would edit numerical
+    # paths for style, which is a bad trade on this repository specifically:
+    # the cost of a silent numerical change here is a corrupted frozen report,
+    # and the benefit is tidier casts. They are tracked as O9 in
+    # docs/OPEN_FINDINGS.md and should be cleared deliberately, one rule at a
+    # time, each followed by a byte-for-byte reproduction check.
+    "RUF046",   # 94x unnecessary int() casts -- touching these changes dtypes
+    "B905",     # 31x zip() without strict= -- adding it can raise where it did not
+    "RUF005",   # 9x list concatenation style
+    "RUF007",   # 3x zip-instead-of-pairwise
+    "RUF012",   # 4x mutable class default -- all are read-only constants here
+    "SIM105",   # 2x contextlib.suppress
+    "C408",     # 1x dict() call
+    "E731",     # 1x lambda assignment
+    "F841",     # 6x unused locals -- see O9; several are deliberate unpacking
+    "B007",     # 1x unused loop variable
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Tests deliberately import inside methods so a missing optional dependency
+# skips rather than breaking collection.
+"tests/**" = ["E402", "F401"]
+# Study modules are long by design: each is one frozen protocol end to end, and
+# splitting them would decouple a pre-registration from its implementation.
+"src/latent_probe_study.py" = ["C901"]
+"src/research_paths.py" = ["C901"]
+"src/free_signal_study.py" = ["C901"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["src", "tests"]

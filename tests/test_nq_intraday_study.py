@@ -6,8 +6,8 @@ This file and ``nq_intraday_study.yaml`` were written before
 
 from __future__ import annotations
 
-import copy
 import ast
+import copy
 import inspect
 import unittest
 

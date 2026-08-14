@@ -13,8 +13,8 @@ import pandas as pd
 from src.surface_data_study import (
     DEFAULT_PROTOCOL,
     OPTION_COLUMNS,
-    add_full_session_lag,
     aapl_split_audit,
+    add_full_session_lag,
     build_daily_surface,
     build_forecast_design,
     hash_file,
@@ -28,7 +28,6 @@ from src.surface_data_study import (
     write_source_manifest,
 )
 from src.verify_surface_data_study import verify_artifacts
-
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 

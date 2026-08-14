@@ -30,7 +30,7 @@ import sys
 import numpy as np
 import pandas as pd
 
-from . import config, models
+from . import models
 
 FUTURE_COLS = ["is_fomc", "is_cpi", "is_nfp", "days_to_fomc", "days_to_cpi",
                "days_to_nfp", "earnings_wt", "dow"]

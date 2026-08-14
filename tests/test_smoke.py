@@ -5,15 +5,15 @@ Run:  python -m tests.test_smoke
 """
 from __future__ import annotations
 
-import sys
 import pathlib
+import sys
 
 import numpy as np
 import pandas as pd
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
-from src import config, metrics, models  # noqa: E402
-from src.features import build_covariates, forward_realized_var  # noqa: E402
+from src import config, metrics, models
+from src.features import build_covariates, forward_realized_var
 
 
 def make_synthetic(n: int = 1200, seed: int = 7) -> pd.DataFrame:

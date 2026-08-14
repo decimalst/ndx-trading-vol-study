@@ -16,8 +16,28 @@ smoke:
 # tests/__init__.py, so `python -m unittest discover` collected 0 tests and
 # printed OK -- most of the suite was unreachable from any make target. A guard
 # nobody runs is the same failure as a guard that was never implemented.
+# `-p 'test_*.py'` on tests/ only: tests/env/ holds ENVIRONMENT-PREREQUISITE
+# checks (large git-ignored caches, model snapshots) which cannot pass on a
+# clean clone or a CI runner and are not contracts about the code.
 test:
-	$(PY) -m unittest discover -s tests -t . -v
+	$(PY) -m unittest discover -s tests -t . -p 'test_*.py' -v
+
+# Environment prerequisites. Run where the git-ignored artifacts actually live.
+test-env:
+	$(PY) -m unittest discover -s tests/env -t . -p 'env_test_*.py' -v
+
+# Is this box inside requirements.txt for the numerically load-bearing packages?
+# A frozen digest over a report does not constrain the code that regenerates it.
+check-env:
+	$(PY) -m src.envcheck
+
+# Linter only, deliberately no `ruff format`. The formatter would reflow 69
+# files that regenerate byte-for-byte-fenced artifacts, which trades a real risk
+# of a silent numerical edit for tidier whitespace. The rules that catch actual
+# rot -- unused imports, unsorted imports, bugbear, pyflakes -- are enforced;
+# the cosmetic bulk is listed with reasons in pyproject.toml and tracked as O9.
+lint:
+	$(PY) -m ruff check src tests
 
 # Fast subset for pre-commit: the methodology contract (which includes the
 # frozen-report digest pin) plus the smoke test.

@@ -22,7 +22,6 @@ from src.gbm_post_result import (
     verify,
 )
 
-
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 

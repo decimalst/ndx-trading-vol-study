@@ -49,7 +49,6 @@ import pandas as pd
 
 from . import config, features, methodology, metrics, models
 
-
 DECILES = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
 
 # (estimator, inference) -> report suffix. Appended AFTER the grid suffix, so
@@ -597,8 +596,13 @@ def cmd_evaluate(cfg: dict, phase: str, source: str) -> None:
     for name, s in scores.items():
         e = ev.reindex(s.index)
         quiet = (e[["fomc", "cpi", "heavy_earn"]].sum(axis=1) == 0)
+
+        # B023: `_m` closes over the loop variable `s`, but it is defined AND
+        # fully consumed inside this iteration, so the late binding never has a
+        # chance to bite. Left as-is rather than restructured: this function
+        # writes a report fenced byte-for-byte, and the safest edit is no edit.
         def _m(mask):
-            v = s.loc[mask.fillna(False), "qlike"]
+            v = s.loc[mask.fillna(False), "qlike"]  # noqa: B023
             return f"{v.mean():.4f} ({len(v)})" if len(v) else "-"
         lines.append(f"| {name} | {_m(e['fomc'] == 1)} | {_m(e['cpi'] == 1)} | "
                      f"{_m(e['heavy_earn'] == 1)} | {_m(quiet)} |")

@@ -17,7 +17,6 @@ import yaml
 
 from . import config
 
-
 PROTOCOL_PATH = config.ROOT / "history_extension.yaml"
 IMPLEMENTATION_PATH = Path(__file__).resolve()
 

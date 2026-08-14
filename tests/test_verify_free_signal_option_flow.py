@@ -257,17 +257,9 @@ class GateContract(unittest.TestCase):
         )
 
 
-class CurrentArtifactContract(unittest.TestCase):
-    def test_current_artifacts_pass_or_verify_the_frozen_insufficient_gate(self):
-        if not verifier.METRICS_PATH.exists():
-            self.skipTest("HF option-flow empirical artifacts are not present yet")
-        got = verifier.verify_artifacts()
-        self.assertIn(got["status"], {"PASS", "INSUFFICIENT_DATA"})
-        self.assertGreaterEqual(got["checks"], 12)
-        if got["status"] == "INSUFFICIENT_DATA":
-            self.assertIn("zero historical scale", got["gate_reason"])
-            self.assertEqual(got["zero_scale_component"], "near_expiry_volume_share_7d")
-            self.assertEqual(got["finite_composite_rows"], {"QQQ": 0, "SPY": 0})
+# CurrentArtifactContract moved to tests/env/test_local_artifacts.py on
+# 2026-08-13: it guarded on METRICS_PATH (committed) but verify_artifacts()
+# reads free_sources/raw/huggingface/ (git-ignored), so a clean clone errored.
 
 
 if __name__ == "__main__":

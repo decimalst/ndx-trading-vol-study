@@ -8,11 +8,10 @@ import json
 import numpy as np
 import pandas as pd
 import yaml
-from scipy.special import expit, ndtr
+from scipy.special import ndtr
 
 from . import config
-from .jump_target import _fit_logistic, _predict_logistic, _losses
-
+from .jump_target import _fit_logistic, _losses, _predict_logistic
 
 PROTOCOL_PATH = config.ROOT / "target_regime.yaml"
 OUTPUT_DIR = config.ROOT / "data" / "target_regime"

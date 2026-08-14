@@ -19,7 +19,6 @@ from src.nport_weights import (
     validate_snapshot,
 )
 
-
 SAMPLE_XML = b"""<?xml version="1.0" encoding="UTF-8"?>
 <edgarSubmission xmlns="http://www.sec.gov/edgar/nport">
   <formData>

@@ -11,14 +11,13 @@ import hashlib
 import json
 import pathlib
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 import numpy as np
 import pandas as pd
 import yaml
 
 from . import config, metrics, models
-
 
 PROTOCOL_PATH = config.ROOT / "signal_study.yaml"
 BASELINE = "safe_har_iv_lev"
@@ -291,7 +290,7 @@ def write_discovery_lock(path: pathlib.Path, protocol: dict, winner: str | None,
     payload = {
         "protocol_sha256": _protocol_sha256(protocol),
         "winner": winner,
-        "created_at_utc": datetime.now(timezone.utc).isoformat(),
+        "created_at_utc": datetime.now(UTC).isoformat(),
         "discovery_scores": discovery_scores,
     }
     path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n")

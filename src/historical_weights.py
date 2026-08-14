@@ -22,8 +22,8 @@ import os
 import re
 import time
 import zipfile
+from collections.abc import Iterable
 from pathlib import PurePosixPath
-from typing import Iterable
 from urllib.parse import quote, urlencode
 
 import numpy as np
@@ -39,7 +39,6 @@ from .nport_weights import (
     summarize_equity_concentration,
     validate_snapshot,
 )
-
 
 SEC_SUBMISSIONS_URL = "https://data.sec.gov/submissions/CIK{cik}.json"
 SEC_SUBMISSIONS_ROOT = "https://data.sec.gov/submissions"

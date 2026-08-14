@@ -15,7 +15,6 @@ import statsmodels.api as sm
 import yaml
 from scipy import stats
 
-
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 
@@ -143,7 +142,7 @@ def main() -> None:
              "This recomputation imports neither `src.signal_study` nor "
              "`src.metrics`. All recorded confirmation metrics matched at "
              "1e-12 absolute/relative tolerance.", "",
-             f"- Protocol SHA-256 matched the discovery lock.",
+             "- Protocol SHA-256 matched the discovery lock.",
              f"- Origins: {j.index.min().date()} through {j.index.max().date()} "
              f"(n={len(j)}); last realized target: {next_dates.max().date()}.",
              f"- QLIKE: term slope {result['candidate_mean']:.6f}; safe baseline "

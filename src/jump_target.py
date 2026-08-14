@@ -12,7 +12,7 @@ import hashlib
 import io
 import json
 import zipfile
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 import numpy as np
 import pandas as pd
@@ -21,7 +21,6 @@ import yaml
 from scipy.special import expit
 
 from . import config
-
 
 PROTOCOL_PATH = config.ROOT / "target_regime.yaml"
 RAW_ARCHIVE = config.ROOT / "data" / "raw" / "oxford_man_realized.zip"
@@ -276,7 +275,7 @@ def fetch_oxford(protocol: dict | None = None) -> pd.DataFrame:
     frame.to_parquet(RAW_PARQUET)
     metadata = {
         "url": protocol["source"]["url"],
-        "fetched_at_utc": datetime.now(timezone.utc).isoformat(),
+        "fetched_at_utc": datetime.now(UTC).isoformat(),
         "sha256": hashlib.sha256(response.content).hexdigest(),
         "rows": len(frame),
         "first_date": str(frame.index.min().date()),

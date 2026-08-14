@@ -12,8 +12,8 @@ import argparse
 import hashlib
 import json
 import math
+from collections.abc import Iterable
 from pathlib import Path
-from typing import Iterable
 
 import numpy as np
 import pandas as pd
@@ -27,7 +27,6 @@ from .regime_transition import (
     fit_gaussian_hmm,
     future_exceedance_probability,
 )
-
 
 ROOT = config.ROOT
 PROTOCOL_PATH = ROOT / "representation_study.yaml"
@@ -473,7 +472,7 @@ def gaussian_noise(values: np.ndarray, intensity: float, rng: np.random.Generato
 def origin_noise_seed(base_seed: int, origin: pd.Timestamp | str) -> int:
     """Derive an order-invariant per-origin seed from the frozen base seed."""
     date = pd.Timestamp(origin).normalize().date().isoformat()
-    payload = f"{int(base_seed)}|{date}".encode("utf-8")
+    payload = f"{int(base_seed)}|{date}".encode()
     return int.from_bytes(hashlib.sha256(payload).digest()[:8], "big", signed=False)
 
 

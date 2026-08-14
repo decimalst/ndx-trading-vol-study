@@ -9,11 +9,10 @@ by relocating it, which is exactly the drift this contract exists to prevent.
 Whitespace is normalised before matching so a reflowed paragraph does not
 silently drop a guarded claim.
 """
-from pathlib import Path
 import json
 import re
 import unittest
-
+from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 

@@ -25,7 +25,6 @@ from src.historical_weights import (
     validate_membership_snapshot,
 )
 
-
 NAME_FIRST_HTML = b"""
 <html><body>
 <h1>Schedule of Investments</h1><p>September 30, 2015</p>

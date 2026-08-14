@@ -10,7 +10,7 @@ import argparse
 import hashlib
 import io
 import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 import numpy as np
 import pandas as pd
@@ -19,7 +19,6 @@ import yaml
 
 from . import config
 from .carry import build_trades
-
 
 PROTOCOL_PATH = config.ROOT / "skew_carry.yaml"
 OUTPUT_DIR = config.ROOT / "data" / "skew_carry"
@@ -245,7 +244,7 @@ def fetch_skew(protocol: dict | None = None) -> pd.DataFrame:
     frame.to_parquet(parquet_path)
     source = {
         "url": url,
-        "fetched_at_utc": datetime.now(timezone.utc).isoformat(),
+        "fetched_at_utc": datetime.now(UTC).isoformat(),
         "sha256": hashlib.sha256(response.content).hexdigest(),
         "rows": len(frame),
         "first_date": str(frame.index.min().date()),

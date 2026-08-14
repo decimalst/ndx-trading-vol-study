@@ -27,6 +27,7 @@ from src.gbm_study import (
     training_rows,
 )
 
+from . import envcheck
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DEFAULT_PROTOCOL = ROOT / "gbm_post_result.yaml"
@@ -561,7 +562,8 @@ def verify(spec: dict[str, Any]) -> None:
         ]
         comparisons[split] = paired_comparison(subset, "gbm_var", parent, offset)
     if comparisons != metrics["timing_safe_sensitivity"]["comparisons"]:
-        raise ValueError("timing-safe metrics do not recompute from saved forecasts")
+        raise ValueError("timing-safe metrics do not recompute from saved forecasts. "
+                         + envcheck.pin_advice())
     if timing_safe_assessment(comparisons) != metrics["timing_safe_sensitivity"]["substantive_assessment"]:
         raise ValueError("timing-safe assessment no longer follows its frozen rule")
     rebuilt_pairs: dict[str, dict[str, Any]] = {}
@@ -576,7 +578,8 @@ def verify(spec: dict[str, Any]) -> None:
         )
         rebuilt_pairs[pair] = result
     if rebuilt_pairs != metrics["pairs"]:
-        raise ValueError("loss-decile metrics do not recompute from locked inputs")
+        raise ValueError("loss-decile metrics do not recompute from locked inputs. "
+                         + envcheck.pin_advice())
     correlations = pd.read_csv(resolve_repo_path(spec["outputs"]["correlations"]))
     expected_correlations = feature_correlations(
         complete_rows(build_design(master)).loc[

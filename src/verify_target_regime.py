@@ -11,7 +11,6 @@ import yaml
 
 from . import config
 
-
 ROOT = config.ROOT
 OUT = ROOT / "data" / "target_regime"
 

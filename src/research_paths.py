@@ -11,15 +11,14 @@ import argparse
 import hashlib
 import io
 import json
-from pathlib import Path
 import time
-from typing import Iterable
+from collections.abc import Iterable
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
 import requests
 import yaml
-
 
 ROOT = Path(__file__).resolve().parents[1]
 PROTOCOL_PATH = ROOT / "research_paths.yaml"

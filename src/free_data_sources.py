@@ -11,15 +11,13 @@ import hashlib
 import io
 import json
 import math
-import os
 import shutil
+from collections.abc import Iterable
 from pathlib import Path
-from typing import Iterable
 
 import numpy as np
 import pandas as pd
 import yaml
-
 
 ROOT = Path(__file__).resolve().parents[1]
 PROTOCOL_PATH = ROOT / "free_data_sources.yaml"

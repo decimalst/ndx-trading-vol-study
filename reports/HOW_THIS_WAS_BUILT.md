@@ -320,13 +320,26 @@ by the second. Nothing in that trajectory licenses the inference that the
 remaining defect count is small.
 
 Reviewing harder is not the same as converging, and a reader has no way to tell
-the two apart from the outside. So this document states the standard rather than
-leaving it to be inferred:
+the two apart from the outside.
 
-> **This process counts as converged when a review round produces zero
-> conclusion-changing findings.** That has not happened. Until it does, every
-> result in this repository is provisional by the project's own standard — not
-> merely by a reader's suspicion.
+**And the sequence is confounded, which the first version of this section missed.**
+Each round also *added new studies* — the free-source acquisition, the
+representation extensions, the residualized probe. So 8 → 12 → 22 partly counts
+**new surface** rather than residual error in old surface. A count that rises
+while the codebase grows says nothing about whether review is converging, and
+citing it as if it did was the same category error as reading a rising p-value
+as evidence. Corrected 2026-08-13 after external review.
+
+The version of the test that can actually pass:
+
+> **Freeze scope for one round and re-review only what existed before it.**
+> Convergence means a scope-frozen round producing **zero conclusion-changing
+> findings**. No scope-frozen round has been run. Until one is, nothing here
+> has been shown to converge, and the three rounds to date are not evidence
+> either way.
+
+Every result in this repository remains provisional by the project's own
+standard — not merely by a reader's suspicion.
 
 Two things follow. First, "22 corrections caught" is not a claim of quality; it
 is a claim about the *rate at which this method produces defects*, which is the

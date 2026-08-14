@@ -165,3 +165,42 @@ Two sharp edges in that recovery:
    ```bash
    .venv/bin/python -m src.experiment baselines --phase all --estimator smearing --quantile-grid deciles
    ```
+
+## Test layout, and what CI does not collect
+
+```bash
+make test        # code contracts. This is what CI runs.
+make test-env    # environment prerequisites. Run where the artifacts live.
+make check-env   # is this box inside requirements.txt?
+make lint        # ruff check (no formatter -- see pyproject.toml)
+```
+
+`tests/env/` holds checks that assert **large git-ignored inputs exist on this
+machine**: the TiRex embedding chunk store, the raw HuggingFace option-flow
+shards, the cached Chronos-2 / TiRex-2 model snapshots. They cannot pass on a
+clean clone or a CI runner and they are not claims about whether the code is
+correct, so `make test` and CI do not collect them.
+
+They used to sit in the ordinary suite behind guards that checked the **wrong
+precondition** — `METRICS_PATH.exists()` is true on a clean clone because the
+metrics JSON is committed, while the verify path it gated then read
+`latent_embedding_chunks/manifest.json`, which `.gitignore` excludes. Guard
+passed, code errored, fresh checkout saw a hard failure unrelated to the
+science. Splitting them out is cleaner than adding more guards.
+
+## If artifacts stop reproducing, check the environment first
+
+`reports/FROZEN_REPORT_HASHES.json` pins report bytes, but a digest over an
+output does not constrain the code that produced it. A reviewer on
+scikit-learn 1.8 — outside the `>=1.7,<1.8` pin — hit three GBM artifact
+failures reading `timing-safe metrics do not recompute from saved forecasts`,
+which looks like a corrupted artifact and is not.
+
+```bash
+make check-env      # names any load-bearing package outside its pin
+```
+
+`src/envcheck.py` now asserts the pins, `tests/test_environment.py` fails
+loudly when they drift, and the artifact verifiers append the diagnosis to
+their own error messages. **A recompute mismatch on an unpinned environment is
+an environment problem until proven otherwise.**

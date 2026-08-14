@@ -14,12 +14,12 @@ import json
 import math
 import pathlib
 import zipfile
-from typing import Any, Iterable, Sequence
+from collections.abc import Iterable, Sequence
+from typing import Any
 
 import numpy as np
 import pandas as pd
 import yaml
-
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DEFAULT_PROTOCOL = ROOT / "surface_data_study.yaml"

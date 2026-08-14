@@ -88,7 +88,7 @@ class TestResidualizationMechanics(unittest.TestCase):
 
     def setUp(self):
         try:
-            import src.residual_probe  # noqa: F401
+            import src.residual_probe
         except ModuleNotFoundError:
             self.skipTest("src/residual_probe.py not written yet (pre-run state)")
 
@@ -151,7 +151,7 @@ class TestWithinFoldScoring(unittest.TestCase):
 
     def setUp(self):
         try:
-            import src.residual_probe  # noqa: F401
+            import src.residual_probe
         except ModuleNotFoundError:
             self.skipTest("src/residual_probe.py not written yet (pre-run state)")
 
@@ -200,7 +200,7 @@ class TestVerdictCannotLaunderAFailureToReject(unittest.TestCase):
 
     def setUp(self):
         try:
-            import src.residual_probe  # noqa: F401
+            import src.residual_probe
         except ModuleNotFoundError:
             self.skipTest("src/residual_probe.py not written yet (pre-run state)")
 

@@ -12,14 +12,13 @@ import argparse
 import os
 import time
 import xml.etree.ElementTree as ET
-from typing import Iterable
+from collections.abc import Iterable
 
 import numpy as np
 import pandas as pd
 import requests
 
 from . import config
-
 
 SEC_CIK = "0001067839"
 SUBMISSIONS_URL = "https://data.sec.gov/submissions/CIK{cik}.json"

@@ -12,7 +12,6 @@ from scipy.special import expit, ndtr
 from . import config
 from .regime_transition import fit_gaussian_hmm
 
-
 ROOT = config.ROOT
 OUT = ROOT / "data" / "target_regime"
 
@@ -199,9 +198,16 @@ def main() -> None:
     }
     if checks != metrics["checks"]:
         raise AssertionError("repair verdict inputs do not reproduce")
+    # SCOPE. `fit_gaussian_hmm` is imported from the module under audit, so the
+    # HMM FIT is shared rather than independently reimplemented. The forward
+    # filter, targets, thresholds, calibration and verdict arithmetic below ARE
+    # independent -- which is more than src/verify_target_regime.py does -- but
+    # a defect inside the fit itself would reproduce on both sides.
     print(
         "REGIME REPAIR VERIFICATION PASSED: OOF/calibration/HMM cutoffs, fixed threshold, "
-        "completed targets, forward filter, all four probabilities, phase losses, and verdicts match"
+        "completed targets, forward filter, all four probabilities, phase losses, and verdicts "
+        "match. NOTE: fit_gaussian_hmm is imported from src/regime_transition.py, so the HMM "
+        "fit itself is shared and outside this check's reach."
     )
 
 

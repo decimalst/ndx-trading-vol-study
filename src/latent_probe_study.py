@@ -17,14 +17,14 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-import math
 import shutil
 import warnings
+from collections.abc import Callable, Iterable
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from importlib.metadata import version as package_version
 from pathlib import Path
-from typing import Callable, Iterable, NamedTuple
+from typing import NamedTuple
 
 import numpy as np
 import pandas as pd
@@ -36,7 +36,6 @@ from sklearn.preprocessing import StandardScaler
 
 from . import config
 from . import representation_study as base
-
 
 ROOT = config.ROOT
 PROTOCOL_PATH = ROOT / "representation_study.yaml"
@@ -73,7 +72,7 @@ def _sha256(path: Path) -> str:
 
 
 def _utc_stamp() -> str:
-    return datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    return datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
 
 
 def load_protocol() -> dict:

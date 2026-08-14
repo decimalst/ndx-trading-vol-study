@@ -28,14 +28,13 @@ from src.gbm_study import (
     protocol_sha256,
     qlike,
     render_report,
+    resolve_repo_path,
     smearing_variance,
     split_origins,
     training_rows,
     validate_artifacts,
     validate_lock,
-    resolve_repo_path,
 )
-
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 

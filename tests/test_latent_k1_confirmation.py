@@ -66,12 +66,11 @@ class LeakageContract(unittest.TestCase):
             study.fold_correlations(frame, train_index=test, fold_year=2020, variables=["x"])
 
 
-class ArtifactContract(unittest.TestCase):
-    def test_frozen_outputs_verify_when_present(self):
-        if not study.METRICS_PATH.exists():
-            self.skipTest("99-control empirical run has not been produced yet")
-        result = study.verify_results(write=False)
-        self.assertEqual(result["status"], "PASS")
+# ArtifactContract moved to tests/env/test_local_artifacts.py on 2026-08-13.
+# Its guard checked METRICS_PATH (committed) while verify_results() reaches
+# latent_embedding_chunks/manifest.json (git-ignored), so it passed the guard
+# and then hard-errored on any clean clone. It is an environment prerequisite,
+# not a contract about this module.
 
 
 if __name__ == "__main__":

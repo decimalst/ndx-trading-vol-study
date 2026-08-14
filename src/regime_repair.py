@@ -17,7 +17,6 @@ from .regime_transition import (
     future_exceedance_probability,
 )
 
-
 PROTOCOL_PATH = config.ROOT / "regime_repair.yaml"
 PRIOR_FORECASTS = config.ROOT / "data" / "target_regime" / "regime_forecasts.parquet"
 OUTPUT_DIR = config.ROOT / "data" / "target_regime"

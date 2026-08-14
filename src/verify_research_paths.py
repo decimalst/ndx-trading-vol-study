@@ -15,7 +15,6 @@ import pandas as pd
 import statsmodels.api as sm
 import yaml
 
-
 ROOT = Path(__file__).resolve().parents[1]
 SPEC_PATH = ROOT / "research_paths.yaml"
 

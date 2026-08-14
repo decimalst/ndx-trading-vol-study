@@ -175,7 +175,7 @@ class ZenodoAuditTests(unittest.TestCase):
 
     def test_duplicate_option_keys_fail_closed(self):
         columns = free_source_panels.ZENODO_COLUMNS
-        base = {column: 1 for column in columns}
+        base = dict.fromkeys(columns, 1)
         base.update({"date": "2020-01-02", "exdate": "2020-01-17", "best_bid": 1.0, "best_offer": 2.0})
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "tsla.csv"
@@ -185,7 +185,7 @@ class ZenodoAuditTests(unittest.TestCase):
 
     def test_hash_collision_between_distinct_keys_is_not_a_false_duplicate(self):
         columns = free_source_panels.ZENODO_COLUMNS
-        base = {column: 1 for column in columns}
+        base = dict.fromkeys(columns, 1)
         base.update({
             "date": "2020-01-02", "exdate": "2020-01-17",
             "best_bid": 1.0, "best_offer": 2.0,

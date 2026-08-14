@@ -319,7 +319,7 @@ def fetch_yf_earnings(cfg: dict, spec: list[str] | dict[str, float]) -> pd.DataF
     for tk, wt in weights.items():
         try:
             ed = yf.Ticker(tk).get_earnings_dates(limit=60)
-        except Exception as e:  # noqa: BLE001 — one bad ticker must not kill the run
+        except Exception as e:
             print(f"  {tk}: earnings lookup failed ({type(e).__name__}: {e})",
                   file=sys.stderr)
             continue
@@ -416,7 +416,7 @@ def build_pit_weights(cfg: dict, tickers: list[str], anchor: dict[str, float],
                             .reindex(px.index).ffill().fillna(1.0)
                 factor = total / applied
             caps[tk] = px * sh * factor
-        except Exception as e:  # noqa: BLE001
+        except Exception as e:
             print(f"  {tk}: {type(e).__name__}: {e}", file=sys.stderr)
         time.sleep(0.2)
     if not caps:

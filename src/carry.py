@@ -22,7 +22,7 @@ STEP = 21  # trading days spanned by a 30-calendar-day target
 
 
 def build_trades(cfg: dict) -> pd.DataFrame:
-    df = pd.read_parquet(cfg["paths"]["processed"] / f"master_daily.parquet")
+    df = pd.read_parquet(cfg["paths"]["processed"] / "master_daily.parquet")
     fc = pd.read_parquet(cfg["paths"]["forecasts"] / "har_cum_all.parquet")
     lo, hi = cfg["diagnostic_start"], cfg["diagnostic_end"]
 
@@ -123,7 +123,7 @@ def run(cfg: dict) -> None:
     mean_better = r["mean_sel"].mean() > r["mean_all"].mean()
     sig = r["p_mean"].median() < 0.05
     tail_ok = r["cvar_sel"].mean() >= r["cvar_all"].mean()
-    print(f"\n=== PRE-COMMITTED CRITERION")
+    print("\n=== PRE-COMMITTED CRITERION")
     print(f"  mean improves ........ {mean_better}")
     print(f"  significant (median p<0.05) ... {sig}")
     print(f"  CVaR not worsened .... {tail_ok}")

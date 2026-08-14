@@ -6,12 +6,12 @@ import hashlib
 import json
 import math
 import pathlib
-from typing import Any, Sequence
+from collections.abc import Sequence
+from typing import Any
 
 import numpy as np
 import pandas as pd
 import yaml
-
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DEFAULT_PROTOCOL = ROOT / "surface_data_study.yaml"

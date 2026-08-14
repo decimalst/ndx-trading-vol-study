@@ -1,12 +1,18 @@
 name: tests
 
-# The point of this workflow is that the guards actually run. Two of the
-# repository's worst defects were guards that existed but were never executed:
-# a methodology fork whose own suite failed 12 of 28 tests on a clean checkout,
-# and a test-discovery setup that collected 0 tests and reported success.
+# The point of this workflow is that the guards actually run. Three of this
+# repository's worst defects were guards that existed but never executed, or
+# executed against the wrong precondition:
 #
-# So this job asserts a MINIMUM TEST COUNT. A green run that executed nothing is
-# treated as a failure, which is the whole lesson.
+#   - a methodology fork whose own suite failed 12 of 28 tests on a clean checkout
+#   - test discovery that collected 0 tests and reported success
+#   - artifact tests guarding on a COMMITTED file, then reading a GIT-IGNORED one,
+#     so they passed the guard and hard-errored on any fresh clone
+#
+# So: assert a minimum test count (a green run that executed nothing is a
+# failure), collect only code contracts (environment prerequisites live in
+# tests/env/ and are not collected here), and check the numerical stack is
+# inside its pins before blaming an artifact for not reproducing.
 
 on:
   push:
@@ -15,6 +21,17 @@ on:
   workflow_dispatch:
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install ruff==0.16.3
+      - run: ruff check src tests
+
   test:
     runs-on: ubuntu-latest
     timeout-minutes: 45
@@ -31,19 +48,27 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Numerical stack is inside requirements.txt
+        # A digest over a report does not constrain the code that regenerates
+        # it. If this fails, artifact mismatches downstream are environment
+        # drift and not corrupted artifacts -- which is exactly how a reviewer
+        # on scikit-learn 1.8 was sent hunting for a data problem.
+        run: python -m src.envcheck
+
       - name: Frozen pre-registered reports match their pinned digests
-        # Runs first and on its own: this is the one check that is not
-        # self-healing, and it needs no data beyond what is committed.
+        # Runs on its own and needs nothing beyond what is committed. This is
+        # the one check that is not self-healing.
         run: |
           python -m unittest \
             tests.test_methodology.TestFrozenReportsUnchanged.test_frozen_reports_match_their_pinned_digests
 
-      - name: Run the full suite
-        run: python -m unittest discover -s tests -t . -v 2>&1 | tee /tmp/test.log
+      - name: Run the code-contract suite
+        # -p 'test_*.py' rooted at tests/ collects tests/*.py only. tests/env/
+        # holds environment prerequisites (multi-GB caches, model snapshots)
+        # which cannot pass on a runner and are not claims about the code.
+        run: python -m unittest discover -s tests -t . -p 'test_*.py' -v 2>&1 | tee /tmp/test.log
 
       - name: Assert the suite actually executed
-        # `unittest discover` silently collects 0 tests when packaging is wrong
-        # and still exits 0. Without this step a broken checkout looks green.
         run: |
           set -euo pipefail
           ran=$(grep -oE '^Ran [0-9]+ tests?' /tmp/test.log | grep -oE '[0-9]+' | tail -1)
@@ -55,9 +80,8 @@ jobs:
           fi
 
       - name: Report which tests skipped, and why
-        # Several assertions skip when the processed data is absent. That is
-        # correct behaviour on a fresh checkout, but a skip is not a pass and
-        # must be visible rather than silent.
+        # A skip is not a pass. Several assertions skip without the processed
+        # master parquet; that is correct on a fresh checkout but must be visible.
         if: always()
         run: |
           skipped=$(grep -cE "\.\.\. skipped" /tmp/test.log || true)

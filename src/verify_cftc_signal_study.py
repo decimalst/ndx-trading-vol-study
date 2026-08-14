@@ -13,13 +13,13 @@ import argparse
 import hashlib
 import json
 import math
+from collections.abc import Iterable, Sequence
 from pathlib import Path
-from typing import Any, Iterable, Sequence
+from typing import Any
 
 import numpy as np
 import pandas as pd
 import yaml
-
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_PROTOCOL = ROOT / "free_signal_study.yaml"

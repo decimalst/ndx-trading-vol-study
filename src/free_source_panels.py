@@ -10,14 +10,13 @@ import argparse
 import hashlib
 import io
 import json
+from collections.abc import Mapping
 from pathlib import Path
-from typing import Mapping
 
 import numpy as np
 import pandas as pd
 
 from .free_data_sources import load_protocol, parse_hf_spx_csv, sha256_file
-
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / "data" / "free_sources" / "raw"

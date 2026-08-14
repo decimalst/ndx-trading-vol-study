@@ -105,9 +105,18 @@ def main() -> None:
     participation = stored_phases["repaired_n"].mean() / stored_phases["richness_n"].mean()
     if not np.isclose(participation, stored_metrics["participation"]):
         raise AssertionError("participation mismatch")
+    # SCOPE. This module imports `build_trades` from the implementation it
+    # audits, so the trade CONSTRUCTION is shared, not independently rebuilt.
+    # What is independent here is everything downstream: timing, masks, phase
+    # sampling, tail metrics and the verdict arithmetic. A defect inside
+    # `build_trades` itself would reproduce identically on both sides and this
+    # check would not see it. Stated because "independent recomputation" is
+    # load-bearing elsewhere in this repository.
     print(
         "SKEW CARRY VERIFICATION PASSED: timing, masks, 21 phases, tail metrics, "
-        "clean fence, and frozen verdict inputs independently match"
+        "clean fence, and frozen verdict inputs match. NOTE: trade construction "
+        "is imported from src/carry.py, not independently reimplemented, so a "
+        "defect inside build_trades() is outside this check's reach."
     )
 
 
