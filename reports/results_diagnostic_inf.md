@@ -99,8 +99,8 @@ Win rate and mean difference answer different questions. A high win rate with no
 
 | pair | diagnostic win% | diagnostic gap | flip k | clean win% | clean gap | clean n | replicates? |
 |---|---|---|---|---|---|---|---|
-| har_iv_lev vs har_iv | 55.5% | +0.0062 | 7 | 55.2% | -0.0073 | 192 | **no** |
-| har_lev vs har | 57.5% | +0.0198 | never | 56.2% | +0.0113 | 192 | yes |
+| har_iv_lev vs har_iv | 55.5% | +0.0062 | 7 | — | — | — | not testable |
+| har_lev vs har | 57.5% | +0.0198 | never | — | — | — | not testable |
 | har_iv_x vs har_iv | 61.3% | +0.0001 | 1 | 62.5% | +0.0089 | 192 | yes |
 | har_x vs har | 60.7% | -0.0023 | 0 | 58.3% | +0.0114 | 192 | **no** |
 | har_iv vs har | 54.1% | +0.0377 | never | 57.8% | +0.0636 | 192 | yes |
@@ -112,13 +112,20 @@ Win rate and mean difference answer different questions. A high win rate with no
 | har_x vs har | 0.3522 vs 0.4417 | 0.1533 vs 0.2073 | 71/157 | 0.2638 | 2017-10-26 | 29% | 70/156 |
 | har_iv_x vs har_iv | 0.2900 vs 0.3874 | 0.1341 vs 0.1582 | 69/157 | 0.1506 | 2016-01-14 | 22% | 68/156 |
 
+### Pre-committed gate: reachability
+
+`next_evaluation.earnings_slice_confirmatory` requires **40 heavy-earnings days** before the registered confirmatory DM test may run. This phase has **157**. Heavy-earnings days arrive at 5.35% of origins over the full sample, so the `at_origins: 500` trigger projects to **~27** — a shortfall of ~13. Reaching 40 takes roughly **748 origins** at the observed rate.
+
+**The gate is therefore not reachable at its own trigger.** Over every rolling window in this sample the maximum count attained in 500 sessions is well below 40. This is disclosed rather than repaired: `config.yaml` is frozen, so the floor stands and the shortfall is published beside it. See `reports/AMENDMENTS.md`.
+
+
 ## 30-calendar-day horizon vs VXN (log variance)
 
-Origins are daily but each target spans 21 trading days, so consecutive rows share almost all of their target. **n = 2463, but n_eff = 117 independent windows.** Standard errors below come from a circular moving-block bootstrap (block = 21, 2000 reps) and from refitting on all 21 non-overlapping subsamples — not from HAC(32), which at this n has a lag/n ratio near 0.19 and understates se(beta) by about 3x. config.yaml's own `carry_study` block already requires non-overlapping inference for exactly this reason.
+Origins are daily but each target spans 21 trading days, so consecutive rows share almost all of their target. **n = 2463, but n_eff = 117 independent windows.** Standard errors below come from a circular moving-block bootstrap (block = 21, 2000 reps) and from refitting on all 21 non-overlapping subsamples — not from HAC(32), which at this n has a lag/n ratio of 0.01 and returns se(beta)=0.061 against 0.060 from the bootstrap and a 0.043 spread of the point estimate across the 21 starting offsets. The bootstrap interval is itself too narrow — see the calibration note below. config.yaml's own `carry_study` block already requires non-overlapping inference for exactly this reason.
 
 - VXN MZ: alpha=-0.040, beta=1.067, R2=0.550, n=2463, n_eff=117
   - bootstrap se(beta)=0.060, 95% CI [0.951, 1.179], p[beta=1]=0.273
-  - across the 21 non-overlapping subsamples (~117 obs each): beta ranges [0.994, 1.116], honest se=0.090
+  - across the 21 non-overlapping subsamples (~117 obs each): beta ranges [0.994, 1.116], sd across starting offsets=0.043; median within-subsample se=0.090 (the se of a beta fitted to ~117 points, **not** of the full-sample beta — it was previously published as "honest se", which overstated the reported coefficient's uncertainty)
   - variance risk premium at the window's median VXN (20.4): **3.9 vol points, 95% CI [3.1, 4.5]**. The frozen report prints this as a single number; at n_eff=117 it is an interval or it is nothing.
 
 Encompassing: realized = a + b*VXN + c*model. H3 wants c>0 and significant. A negative c is not evidence for the model — with VXN already in the regression it means the forecast enters against realized variance, which collinear forecasts commonly do. Models that consume VXN as an input are excluded: regressing on VXN and on a function of VXN is collinear by construction and the split of the coefficients is not interpretable.
@@ -126,7 +133,7 @@ Encompassing: realized = a + b*VXN + c*model. H3 wants c>0 and significant. A ne
 - har_cum: MZ beta=0.810 R2=0.485 | encompassing b_implied=0.851 c_model=0.196 (bootstrap p=0.034, 95% CI [0.017, 0.383], n=2463, n_eff=117, across-subsample c range [0.056, 0.325])
 - persistence_cum: MZ beta=0.443 R2=0.360 | encompassing b_implied=0.954 c_model=0.078 (bootstrap p=0.002, 95% CI [0.027, 0.133], n=2463, n_eff=117, across-subsample c range [-0.116, 0.174])
 
-At n_eff=117 this section cannot reject anything, and a non-significant `c_model` here is not evidence that the model adds nothing beyond VXN — it is evidence that the window is too short to tell. Read the CIs, not the p-values.
+n_eff=117 independent windows can resolve moderate effects, unlike the clean window. But these are not tests on 2463 observations: every interval here is built on 117, and the frozen report's n is 21x that. **And the bootstrap is anti-conservative** — measured nominal-95% coverage is ~82-85% and the true size of the `c_model` p-value is ~10-16%, not 5% (`tests/test_methodology.py::TestBootstrapCalibration`). A bootstrap p just under 0.05 here is not a 5% rejection; treat these intervals as a floor on the uncertainty and read the across-subsample ranges beside them.
 
 ---
 

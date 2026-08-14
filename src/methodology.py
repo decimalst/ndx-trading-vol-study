@@ -10,8 +10,8 @@ Four defects motivated it. Each is fixed by one section below.
 
 1. NO POWER ACCOUNTING. `metrics.dm_test` reports a p-value and nothing else,
    so a failure to reject reads as a null. On the clean window (n=192) the
-   minimum detectable QLIKE gain is ~6.5% of HAR-IV's loss for the har_iv_x
-   comparison and ~15% for chronos_cov_iv — i.e. the design cannot see effects
+   minimum detectable QLIKE gain is ~5.4% of HAR-IV's loss for the har_iv_x
+   comparison and ~13% for chronos_cov_iv — i.e. the design cannot see effects
    several times larger than any plausible one. `dm_verdict` refuses to emit
    "no difference" unless an equivalence test actually says so.
 
@@ -19,10 +19,17 @@ Four defects motivated it. Each is fixed by one section below.
    `metrics.encompassing` run on daily origins whose 30-calendar-day targets
    share ~21 trading days, and report n=171 (clean) / n=2463 (diagnostic).
    The independent counts are ~8 and ~117. HAC(32) on n=171 is a lag/n ratio
-   of 19%, far past where Newey-West is reliable: measured against
-   non-overlapping subsamples it understates se(beta) by 3.3x. This is also
-   the standard config.yaml's own `carry_study` block already sets --
-   "NON-OVERLAPPING trades only ... Overlapping series is descriptive only".
+   of 19%, far past where Newey-West is reliable. On the diagnostic window the
+   ratio is 1% and HAC is fine there, so the report computes it per phase
+   rather than quoting one remembered ratio. NOTE, added after the 2026-08-13
+   audit: the replacement bootstrap is also too narrow (see
+   `block_bootstrap_ols`), so this section buys a better floor on the
+   uncertainty, not a calibrated interval. Earlier claims that the "honest"
+   standard error was 3x / 2.9x the HAC one are withdrawn -- they compared HAC
+   against a median within-subsample se, which estimates a different quantity.
+   This is also the standard config.yaml's own `carry_study` block already
+   sets -- "NON-OVERLAPPING trades only ... Overlapping series is descriptive
+   only".
 
 3. POST-HOC SPECIFICATIONS SCORED AS CONFIRMATORY. Handled in
    `spec_registry.yaml` and the evaluator, not here.
@@ -185,10 +192,15 @@ def nonoverlap_phases(y: pd.Series, X: pd.DataFrame, step: int) -> dict:
         "beta_min": dict(zip(cols, B.min(axis=0))),
         "beta_max": dict(zip(cols, B.max(axis=0))),
         "beta_sd_across_phases": dict(zip(cols, B.std(axis=0, ddof=1))),
-        # Median within-phase SE: the honest per-subsample uncertainty. Phases
-        # are NOT independent of each other (offset by a day), so these are not
-        # averaged down by sqrt(step) -- the median is the representative one.
-        "se_honest": dict(zip(cols, np.median(S, axis=0))),
+        # Median WITHIN-subsample SE. This is the standard error of a beta
+        # fitted to ~n/step observations, NOT of the full-sample beta -- it is
+        # algebraically close to sqrt(step) x the full-sample OLS se, so it
+        # neither is nor measures the uncertainty of the reported coefficient.
+        # It was previously published as "honest se" beside the full-sample
+        # beta, which overstated the uncertainty of that estimate by ~1.3-1.4x.
+        # Kept because the per-subsample scale is worth seeing; renamed so it
+        # cannot be read as the thing it is not. Prefer beta_sd_across_phases.
+        "se_within_subsample": dict(zip(cols, np.median(S, axis=0))),
     }
 
 
@@ -200,6 +212,18 @@ def block_bootstrap_ols(y: pd.Series, X: pd.DataFrame, block: int,
     Uses every observation (unlike the phase split) while still respecting the
     dependence induced by the shared target window. Block length is set to the
     overlap, so a resampled block carries its own serial correlation with it.
+
+    KNOWN MISCALIBRATION, measured rather than assumed. Resampling blocks of
+    ROWS conditions on the one realized near-unit-root regressor path, so the
+    intervals are too narrow: against a DGP at this data's measured persistence
+    (regressor AR(1) 0.895, MA(20) errors) the nominal-95% interval covers
+    ~82-85% and se_boot is ~0.75x the truth. Lengthening the block makes it
+    worse, not better. `tests/test_methodology.py::TestBootstrapCalibration`
+    pins this so it cannot be forgotten. Consequently `p_zero` / `p_one` have
+    true size ~10-16% rather than 5%, and a bootstrap p just under 0.05 is NOT
+    a 5% rejection. These intervals are still far better than HAC(32) at
+    lag/n = 0.19, which is why they are used -- but they are a floor on the
+    uncertainty, not a calibrated interval.
 
     `stat` optionally maps a coefficient vector plus the resampled frame to a
     scalar, which is how the "vol points of premium" gets a confidence
@@ -325,7 +349,7 @@ def paired_summary(loss_a: pd.Series, loss_b: pd.Series) -> dict:
 
     `flip_k` is the number of origins that must be removed from the winning
     tail before the mean gap changes sign. On the clean window har_iv_x needs
-    only 3 of 192; the frozen report's "top-10 share of mean gap" column says
+    only 5 of 192; the frozen report's "top-10 share of mean gap" column says
     the same thing less directly, and is easy to read past.
     """
     ix = loss_a.index.intersection(loss_b.index)

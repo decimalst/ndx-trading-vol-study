@@ -98,8 +98,12 @@ def mz_regression(realized_log: pd.Series, forecast_log: pd.Series,
     df = pd.concat([realized_log, forecast_log], axis=1, keys=["y", "f"]).dropna()
     X = sm.add_constant(df["f"])
     res = sm.OLS(df["y"], X).fit(cov_type="HAC", cov_kwds={"maxlags": maxlags})
+    # se_beta is reported by the corrected fork so the claim "HAC understates
+    # the standard error under overlap" is a measured ratio in each report
+    # rather than a number memorised from one window.
     return {"alpha": float(res.params["const"]), "beta": float(res.params["f"]),
             "r2": float(res.rsquared), "p_beta1": float(res.t_test("f = 1").pvalue),
+            "se_beta": float(res.bse["f"]), "maxlags": int(maxlags),
             "n": int(res.nobs)}
 
 

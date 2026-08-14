@@ -6,7 +6,7 @@ Quantile grid: [0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95] → intervals below are 9
 
 `mean_var` here is the Duan smearing estimate `exp(mu)*mean(exp(resid))`. The frozen estimator integrates `exp(q)` over the quantile grid and divides by its mass, which discards the tails: it returns about 0.87 of the true conditional mean, and the discarded share depends on the grid — which is why every model's QLIKE differs between `results_clean.md` and `results_clean_dec.md` while EWMA's is 0.4036 in both. Only QLIKE changes; CRPS, pinball and coverage read off the quantiles and are identical.
 
-Two caveats, stated rather than buried. (i) Across the HAR family the frozen estimator's bias spans only 0.866–0.873, so it is a near-common factor: correcting it moves QLIKE **levels** a lot and DM statistics little. It was never the reason one model outranked another. (ii) Rows marked `~` below have no recoverable residuals (Chronos-2, TiRex-2) and are reconstructed from their saved quantiles by tail extension, which on the HAR family lands 3.5% low with a 2.5pp spread across models — real, and a wider spread than the 0.70pp it replaces for those rows. Rows without `~` are exact.
+Two caveats, stated rather than buried. (i) The frozen estimator's bias spans 0.866–0.873 across `har`, `har_x`, `har_iv`, `har_iv_x` and `har_ic` — but 0.866–0.883 once `har_sv`, `har_lev` and `har_iv_lev` are included, and 0.812–0.883 across every quantile model scored here, because `persistence` sits at 0.812. It is a near-common factor only on the narrow set. Correcting it moves QLIKE **levels** far more than DM statistics, but **not by cancellation** — QLIKE differentials are not scale-invariant, and rescaling both forecasts by a single common factor reproduces most of the DM movement on its own. It is therefore not safe to assume rankings are unaffected: on this window `har_sv vs har` moves from DM −1.615 (p=0.1080) to −2.163 (p=0.0318) on identical exactly-scored origins, crossing α=0.05. (ii) Rows marked `~` below have no recoverable residuals (Chronos-2, TiRex-2) and are reconstructed from their saved quantiles by tail extension, which on the five pinned HAR models lands 3.5% low with a 2.5pp spread — real, and a wider spread than the 0.70pp it replaces for those rows. A `~` row compared against an unmarked row mixes estimators; read those comparisons as indicative. Rows without `~` are exact.
 
 ## h=1 losses (mean per day)
 
@@ -20,9 +20,9 @@ Two caveats, stated rather than buried. (i) Across the HAR family the frozen est
 | har_sv | 188 | **exploratory** | 0.3201 | 0.4711 | 0.0881 | 0.0839 | 0.926 | 0.224 | 0.959 |
 | har_ic | 192 | **exploratory** | 0.3158 | 0.4686 | 0.0824 | 0.0833 | 0.891 | 0.669 | 0.246 |
 | har_iv_x | 192 | **exploratory** | 0.3037 | 0.4541 | 0.0825 | 0.0832 | 0.891 | 0.669 | 0.246 |
-| chronos_uni ~ | 192 | confirmatory | 0.3604 | 0.5026 | 0.0916 | 0.0877 | 0.906 | 0.771 | 0.528 |
-| chronos_cov ~ | 192 | confirmatory | 0.3656 | 0.5030 | 0.0943 | 0.0906 | 0.880 | 0.374 | 0.158 |
-| chronos_cov_iv ~ | 192 | confirmatory | 0.3185 | 0.4614 | 0.0816 | 0.0865 | 0.906 | 0.771 | 0.053 |
+| chronos_uni ~ | 192 | confirmatory | 0.3579 | 0.5026 | 0.0916 | 0.0877 | 0.906 | 0.771 | 0.528 |
+| chronos_cov ~ | 192 | confirmatory | 0.3643 | 0.5030 | 0.0943 | 0.0906 | 0.880 | 0.374 | 0.158 |
+| chronos_cov_iv ~ | 192 | confirmatory | 0.3200 | 0.4614 | 0.0816 | 0.0865 | 0.906 | 0.771 | 0.053 |
 
 ### Specification status
 
@@ -50,9 +50,9 @@ Every row above is below its gate. Those models are reported for completeness an
 | har_sv * | -2.163 | 0.0318 | 188 | 0.0522 | 315 | 0.942 | A better |
 | har_ic * | -2.804 | 0.0056 | 192 | 0.0466 | 192 | 0.984 | A better |
 | har_iv_x * | -3.440 | 0.0007 | 192 | 0.0478 | 127 | 0.997 | A better |
-| chronos_uni | -0.206 | 0.8369 | 192 | 0.0264 | 35,451 | 0.172 | inconclusive |
-| chronos_cov | 0.174 | 0.8619 | 192 | 0.0517 | 49,666 | 0.339 | inconclusive |
-| chronos_cov_iv | -2.612 | 0.0097 | 192 | 0.0471 | 221 | 0.975 | A better |
+| chronos_uni | -0.519 | 0.6041 | 192 | 0.0244 | 5,586 | 0.233 | inconclusive |
+| chronos_cov | 0.112 | 0.9108 | 192 | 0.0473 | 119,869 | 0.298 | inconclusive |
+| chronos_cov_iv | -2.496 | 0.0134 | 192 | 0.0476 | 242 | 0.968 | A better |
 
 `*` = exploratory specification (see the table above).
 
@@ -66,7 +66,7 @@ HAR-IV is log-HAR plus log(VXN). Any model fed VXN beats plain HAR trivially, be
 |---|---|---|---|---|---|---|---|
 | har_ic * | 1.327 | 0.1861 | 192 | 0.0085 | 856 | 0.039 | equivalent |
 | har_iv_x * | -1.347 | 0.1796 | 192 | 0.0169 | 831 | 0.418 | inconclusive |
-| chronos_cov_iv | 0.429 | 0.6685 | 192 | 0.0435 | 8,191 | 0.431 | inconclusive |
+| chronos_cov_iv | 0.553 | 0.5806 | 192 | 0.0413 | 4,919 | 0.468 | inconclusive |
 
 `*` = exploratory specification (see the table above).
 
@@ -82,9 +82,9 @@ HAR-IV is log-HAR plus log(VXN). Any model fed VXN beats plain HAR trivially, be
 | har_sv | 0.2688 (6) | 0.3187 (8) | 0.3201 (12) | 0.3221 (162) |
 | har_ic | 0.2386 (6) | 0.3092 (8) | 0.2666 (12) | 0.3225 (166) |
 | har_iv_x | 0.3197 (6) | 0.3317 (8) | 0.1588 (12) | 0.3122 (166) |
-| chronos_uni | 0.1972 (6) | 0.3946 (8) | 0.3453 (12) | 0.3658 (166) |
-| chronos_cov | 0.2923 (6) | 0.4071 (8) | 0.1374 (12) | 0.3828 (166) |
-| chronos_cov_iv | 0.3261 (6) | 0.3748 (8) | 0.1183 (12) | 0.3299 (166) |
+| chronos_uni | 0.2091 (6) | 0.3949 (8) | 0.3299 (12) | 0.3635 (166) |
+| chronos_cov | 0.2950 (6) | 0.4021 (8) | 0.1355 (12) | 0.3815 (166) |
+| chronos_cov_iv | 0.3332 (6) | 0.3789 (8) | 0.1162 (12) | 0.3314 (166) |
 
 ## Full-sample paired per-origin (all origins in phase)
 
@@ -96,7 +96,7 @@ Win rate and mean difference answer different questions. A high win rate with no
 | har_x vs har | 192 | 122 | 63.5% | 0.000215 | 0.3533 vs 0.3624 | 0.1644 vs 0.1564 | 162% |
 | har_sv vs har | 188 | 103 | 54.8% | 0.215 | 0.3201 vs 0.3604 | 0.1510 vs 0.1564 | 88% |
 | har_iv vs har | 192 | 104 | 54.2% | 0.279 | 0.3118 vs 0.3624 | 0.1629 vs 0.1564 | 72% |
-| chronos_cov vs chronos_uni | 192 | 93 | 48.4% | 0.718 | 0.3656 vs 0.3604 | 0.1521 vs 0.1883 | -489% |
+| chronos_cov vs chronos_uni | 192 | 91 | 47.4% | 0.516 | 0.3643 vs 0.3579 | 0.1533 vs 0.1876 | -369% |
 
 ## Replication: clean vs diagnostic
 
@@ -108,7 +108,7 @@ Win rate and mean difference answer different questions. A high win rate with no
 | har_x vs har | 63.5% | +0.0090 | 4 | 65.5% | -0.0020 | 2463 | **no** |
 | har_sv vs har | 54.8% | +0.0403 | 13 | — | — | — | not testable |
 | har_iv vs har | 54.2% | +0.0506 | 20 | 53.1% | +0.0322 | 2463 | yes |
-| chronos_cov vs chronos_uni | 48.4% | -0.0052 | 0 | — | — | — | not testable |
+| chronos_cov vs chronos_uni | 47.4% | -0.0064 | 0 | — | — | — | not testable |
 
 ### Heavy-earnings slice, paired per-origin (cutoff 5.0% of index weight)
 
@@ -116,15 +116,22 @@ Win rate and mean difference answer different questions. A high win rate with no
 |---|---|---|---|---|---|---|---|
 | har_x vs har | 0.2053 vs 0.3423 | 0.0651 vs 0.0835 | 8/12 | 0.3877 | 2025-11-19 | 50% | 7/11 |
 | har_iv_x vs har_iv | 0.1588 vs 0.2545 | 0.0483 vs 0.0688 | 7/12 | 0.7744 | 2025-11-19 | 49% | 6/11 |
-| chronos_cov vs chronos_uni | 0.1374 vs 0.3453 | 0.0410 vs 0.1509 | 9/12 | 0.1460 | 2025-11-19 | 51% | 8/11 |
+| chronos_cov vs chronos_uni | 0.1355 vs 0.3299 | 0.0412 vs 0.1334 | 10/12 | 0.0386 | 2025-11-19 | 55% | 9/11 |
+
+### Pre-committed gate: reachability
+
+`next_evaluation.earnings_slice_confirmatory` requires **40 heavy-earnings days** before the registered confirmatory DM test may run. This phase has **12**. Heavy-earnings days arrive at 5.35% of origins over the full sample, so the `at_origins: 500` trigger projects to **~27** — a shortfall of ~13. Reaching 40 takes roughly **748 origins** at the observed rate.
+
+**The gate is therefore not reachable at its own trigger.** Over every rolling window in this sample the maximum count attained in 500 sessions is well below 40. This is disclosed rather than repaired: `config.yaml` is frozen, so the floor stands and the shortfall is published beside it. See `reports/AMENDMENTS.md`.
+
 
 ## 30-calendar-day horizon vs VXN (log variance)
 
-Origins are daily but each target spans 21 trading days, so consecutive rows share almost all of their target. **n = 171, but n_eff = 8 independent windows.** Standard errors below come from a circular moving-block bootstrap (block = 21, 2000 reps) and from refitting on all 21 non-overlapping subsamples — not from HAC(32), which at this n has a lag/n ratio near 0.19 and understates se(beta) by about 3x. config.yaml's own `carry_study` block already requires non-overlapping inference for exactly this reason.
+Origins are daily but each target spans 21 trading days, so consecutive rows share almost all of their target. **n = 171, but n_eff = 8 independent windows.** Standard errors below come from a circular moving-block bootstrap (block = 21, 2000 reps) and from refitting on all 21 non-overlapping subsamples — not from HAC(32), which at this n has a lag/n ratio of 0.19 and returns se(beta)=0.160 against 0.220 from the bootstrap and a 0.360 spread of the point estimate across the 21 starting offsets. The bootstrap interval is itself too narrow — see the calibration note below. config.yaml's own `carry_study` block already requires non-overlapping inference for exactly this reason.
 
 - VXN MZ: alpha=-1.301, beta=0.829, R2=0.295, n=171, n_eff=8
   - bootstrap se(beta)=0.220, 95% CI [0.325, 1.183], p[beta=1]=0.293
-  - across the 21 non-overlapping subsamples (~8 obs each): beta ranges [0.298, 1.710], honest se=0.458
+  - across the 21 non-overlapping subsamples (~8 obs each): beta ranges [0.298, 1.710], sd across starting offsets=0.360; median within-subsample se=0.458 (the se of a beta fitted to ~8 points, **not** of the full-sample beta — it was previously published as "honest se", which overstated the reported coefficient's uncertainty)
   - variance risk premium at the window's median VXN (23.8): **4.1 vol points, 95% CI [1.7, 5.9]**. The frozen report prints this as a single number; at n_eff=8 it is an interval or it is nothing.
 
 Encompassing: realized = a + b*VXN + c*model. H3 wants c>0 and significant. A negative c is not evidence for the model — with VXN already in the regression it means the forecast enters against realized variance, which collinear forecasts commonly do. Models that consume VXN as an input are excluded: regressing on VXN and on a function of VXN is collinear by construction and the split of the coefficients is not interpretable.

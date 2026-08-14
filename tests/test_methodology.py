@@ -174,6 +174,85 @@ class TestOverlappingWindowInference(unittest.TestCase):
         self.assertEqual(a["boot"]["se_boot"]["f"], b["boot"]["se_boot"]["f"])
 
 
+class TestBootstrapCalibration(unittest.TestCase):
+    """Measure the block bootstrap's actual coverage instead of assuming it.
+
+    `block_bootstrap_ols` replaced HAC(32) because HAC at lag/n = 0.19 is badly
+    biased. It is better, but it is not calibrated: resampling blocks of rows
+    conditions on the one realized near-unit-root regressor path. The reports
+    quote its intervals and p-values, so the size distortion is a published
+    quantity and belongs in the test suite rather than in a footnote.
+
+    This is a Monte Carlo, so it is slow-ish and its numbers are stochastic;
+    the bounds are deliberately wide enough to be stable at this seed count and
+    narrow enough to fail if the estimator is silently replaced.
+    """
+
+    N, OVERLAP, REPS, NBOOT = 171, 21, 300, 250
+    AR = 0.895                       # measured persistence of log(VXN exp var)
+
+    @classmethod
+    def _coverage(cls, seed0: int) -> float:
+        rng = np.random.default_rng(seed0)
+        idx = pd.bdate_range("2016-01-04", periods=cls.N)
+        hit = 0
+        for r in range(cls.REPS):
+            e = rng.standard_normal(cls.N + cls.OVERLAP)
+            # MA(overlap-1): neighbouring targets share ~21 trading days, which
+            # is exactly the dependence the block bootstrap claims to handle.
+            u = np.convolve(e, np.ones(cls.OVERLAP), "valid")[:cls.N]
+            x = np.zeros(cls.N + 200)
+            for t in range(1, len(x)):
+                x[t] = cls.AR * x[t - 1] + rng.standard_normal()
+            x = x[200:]
+            y = 1.0 * x + u
+            X = pd.DataFrame({"const": 1.0, "f": x}, index=idx)
+            b = methodology.block_bootstrap_ols(pd.Series(y, index=idx), X,
+                                                block=cls.OVERLAP,
+                                                n_boot=cls.NBOOT, seed=9000 + r)
+            if b["ci_lo"]["f"] <= 1.0 <= b["ci_hi"]["f"]:
+                hit += 1
+        return hit / cls.REPS
+
+    def test_nominal_95_interval_undercovers_and_the_reports_say_so(self):
+        cov = self._coverage(seed0=7)
+        # The published claim is "~82-85%". Fail if it drifts outside a band
+        # that would make that sentence wrong in either direction.
+        self.assertGreater(cov, 0.74, f"coverage {cov:.3f} even worse than published")
+        self.assertLess(cov, 0.91,
+                        f"coverage {cov:.3f} — if the bootstrap has been fixed, "
+                        f"update the anti-conservatism note in "
+                        f"src/experiment.py and src/methodology.py")
+        # And the reports must actually carry the warning.
+        diag = ROOT / "reports" / "results_diagnostic_v2.md"
+        if diag.exists():
+            body = diag.read_text()
+            self.assertNotIn("is a real rejection", body)
+            self.assertIn("anti-conservative", body)
+
+    def test_se_within_subsample_is_not_labelled_a_standard_error_of_beta(self):
+        """It is ~sqrt(step) x the full-sample OLS se, so it measures a
+        different quantity than the coefficient it used to be printed beside."""
+        rng = np.random.default_rng(3)
+        n, step = 420, 21
+        idx = pd.bdate_range("2016-01-04", periods=n)
+        x = pd.Series(rng.standard_normal(n), index=idx).cumsum() / 10
+        y = 1.0 * x + pd.Series(rng.standard_normal(n), index=idx)
+        X = pd.DataFrame({"const": 1.0, "f": x}, index=idx)
+        ph = methodology.nonoverlap_phases(y, X, step=step)
+        self.assertIn("se_within_subsample", ph)
+        self.assertNotIn("se_honest", ph, "the misleading key must be gone")
+        Xv = X.values
+        beta, *_ = np.linalg.lstsq(Xv, y.values, rcond=None)
+        resid = y.values - Xv @ beta
+        full_se = np.sqrt(np.diag(np.linalg.pinv(Xv.T @ Xv))
+                          * (resid @ resid) / (n - 2))[1]
+        ratio = ph["se_within_subsample"]["f"] / (full_se * np.sqrt(step))
+        self.assertAlmostEqual(ratio, 1.0, delta=0.25,
+                               msg="se_within_subsample should track "
+                                   "sqrt(step) x the full-sample OLS se")
+
+
 class TestSpecificationRegistry(unittest.TestCase):
 
     def setUp(self):
@@ -204,6 +283,67 @@ class TestSpecificationRegistry(unittest.TestCase):
     def test_unknown_model_is_exploratory_rather_than_silently_confirmatory(self):
         s = config.spec_status(self.reg, "not_a_model", "2025-11-03")
         self.assertFalse(s["confirmatory"])
+
+
+class TestDiagnosticOnlyQuarantine(unittest.TestCase):
+    """The clean window must not be SCORED for quarantined models, anywhere.
+
+    The original guard filtered only the h=1 table, so the corrected fork's
+    replication panel reached into the clean window through its OTHER-window
+    column and published clean win rates and mean gaps for `har_lev` and
+    `har_iv_lev`. Suppressing a row from a report is not a quarantine; not
+    looking is.
+    """
+
+    def setUp(self):
+        from src import experiment as X
+        self.X = X
+        self.reg = config.load_spec_registry()
+
+    def test_registry_and_module_tuple_agree(self):
+        from_registry = {m for m, e in (self.reg["models"] or {}).items()
+                         if e and e.get("diagnostic_only")}
+        self.assertEqual(from_registry, set(self.X.DIAGNOSTIC_ONLY))
+
+    def test_quarantined_in_clean_but_not_diagnostic(self):
+        for m in self.X.DIAGNOSTIC_ONLY:
+            self.assertTrue(self.X._quarantined(m, "clean"), m)
+            self.assertTrue(self.X._quarantined(m, "all"), m)
+            self.assertFalse(self.X._quarantined(m, "diagnostic"), m)
+
+    def test_ordinary_models_are_never_quarantined(self):
+        for m in ("har", "har_iv", "har_iv_x", "chronos_cov_iv"):
+            self.assertFalse(self.X._quarantined(m, "clean"), m)
+
+    def test_qlike_series_refuses_the_clean_window(self):
+        if not (ROOT / "data" / "processed" / "master_daily.parquet").exists():
+            self.skipTest("no processed master")
+        cfg = config.load()
+        cfg["_estimator"], cfg["_inference"], cfg["_grid_suffix"] = "smearing", "corrected", ""
+        df = pd.read_parquet(ROOT / "data" / "processed" / "master_daily.parquet")
+        taus = np.asarray(cfg["quantiles"])
+        for m in self.X.DIAGNOSTIC_ONLY:
+            self.assertIsNone(self.X._qlike_series(cfg, df, m, "clean", taus),
+                              f"{m} was scored on the quarantined clean window")
+        # Control: the guard must not be silently blocking everything.
+        self.assertIsNotNone(self.X._qlike_series(cfg, df, "har", "clean", taus))
+
+    def test_no_report_publishes_a_clean_number_for_a_quarantined_model(self):
+        import re
+        for path in sorted((ROOT / "reports").glob("results_diagnostic*.md")):
+            body = path.read_text()
+            block = re.search(r"^## Replication.*?(?=^## |\Z)", body,
+                              re.S | re.M)
+            if not block:
+                continue
+            for line in block.group(0).splitlines():
+                if not line.startswith("| "):
+                    continue
+                name = line.split("|")[1].strip().split(" vs ")[0]
+                if name in self.X.DIAGNOSTIC_ONLY:
+                    self.assertNotIn("192", line,
+                                     f"{path.name} publishes clean-window "
+                                     f"origins for quarantined {name}: {line}")
 
 
 class TestPairedSummary(unittest.TestCase):
@@ -308,6 +448,107 @@ class TestEstimatorReconstructionAccuracy(unittest.TestCase):
         # barely moves the DM statistics. Documented, not assumed.
         self.assertLess(t.max() - t.min(), 0.02)
         self.assertLess(x.max() - x.min(), 0.05)
+
+    # The exact table printed in reports/METHODOLOGY_FORK.md, on the exact
+    # sample it was computed from. The inequalities above pass for a wide
+    # family of reconstruction schemes, which is how the published `~` rows
+    # once drifted away from any method the repository still contained. This
+    # pins the numbers instead, so a change to the estimator either updates
+    # the report or fails here.
+    DOC_MODELS = {"har": {}, "har_x": {"with_x": True}, "har_iv": {"with_iv": True},
+                  "har_iv_x": {"with_x": True, "with_iv": True},
+                  "har_ic": {"with_iv": True, "with_ic": True}}
+    DOC_TABLE = {                      # method: (lo, hi, level_pct, spread_pp)
+        "trunc":     (0.866, 0.873, -13.0, 0.70),
+        "lognormal": (0.952, 0.962, -4.3, 1.00),
+        "tail_ext":  (0.952, 0.976, -3.5, 2.49),
+    }
+    # The published 0.70pp "near-common factor" quantifies over DOC_MODELS only.
+    # Every other quantile model scored in the same DM column is outside that
+    # band -- persistence by 5.8pp -- so a test that pins only DOC_MODELS can
+    # pass while the prose built on it is false. These pin the wider scopes the
+    # reports actually claim.
+    WIDER_MODELS = {"har_sv": {"with_sv": True}, "har_lev": {"with_lev": True},
+                    "har_iv_lev": {"with_iv": True, "with_lev": True}}
+    TRUNC_BAND_HAR_FAMILY = (0.866, 0.883, 1.64)     # lo, hi, spread_pp
+    TRUNC_BAND_ALL_QUANTILE = (0.812, 0.883, 7.05)
+
+    def test_reconstruction_table_matches_the_published_one(self):
+        proc = ROOT / "data" / "processed" / "master_daily.parquet"
+        if not proc.exists():
+            self.skipTest("no processed master")
+        from src import experiment as X
+        cfg = config.load()
+        cfg["_estimator"], cfg["_grid_suffix"] = "trunc", ""
+        df = pd.read_parquet(proc)
+        taus = np.asarray(cfg["quantiles"])
+        origins = X._phase_origins(df, cfg, "clean")
+        got = {m: [] for m in self.DOC_TABLE}
+        for name, kw in self.DOC_MODELS.items():
+            exact = models.run_har(df, origins, cfg, estimator="smearing", **kw)
+            saved = X._load_forecast(cfg, name, "clean")
+            if saved is None:
+                self.skipTest(f"no saved forecasts for {name}")
+            for meth in got:
+                approx = models.rescore_mean_var(saved, taus, method=meth)
+                j = pd.concat([exact["mean_var"].rename("e"), approx.rename("a")],
+                              axis=1).dropna()
+                got[meth].append(float((j["a"] / j["e"]).mean()))
+        for meth, (lo, hi, level, spread) in self.DOC_TABLE.items():
+            v = np.array(got[meth])
+            self.assertAlmostEqual(v.min(), lo, places=3, msg=f"{meth} low end")
+            self.assertAlmostEqual(v.max(), hi, places=3, msg=f"{meth} high end")
+            self.assertAlmostEqual(100 * (v.mean() - 1), level, places=1,
+                                   msg=f"{meth} level")
+            self.assertAlmostEqual(100 * (v.max() - v.min()), spread, places=2,
+                                   msg=f"{meth} cross-model spread")
+
+    def test_the_near_common_factor_claim_is_scoped_to_its_own_model_set(self):
+        """The 0.70pp band does not hold outside DOC_MODELS. Pin what does."""
+        proc = ROOT / "data" / "processed" / "master_daily.parquet"
+        if not proc.exists():
+            self.skipTest("no processed master")
+        from src import experiment as X
+        cfg = config.load()
+        cfg["_estimator"], cfg["_grid_suffix"] = "trunc", ""
+        df = pd.read_parquet(proc)
+        taus = np.asarray(cfg["quantiles"])
+        origins = X._phase_origins(df, cfg, "clean")
+
+        def _ratio(exact):
+            saved = X._load_forecast(cfg, name, "clean")
+            if saved is None:
+                return None
+            approx = models.rescore_mean_var(saved, taus, method="trunc")
+            j = pd.concat([exact["mean_var"].rename("e"), approx.rename("a")],
+                          axis=1).dropna()
+            return float((j["a"] / j["e"]).mean())
+
+        har_family = {}
+        for name, kw in {**self.DOC_MODELS, **self.WIDER_MODELS}.items():
+            r = _ratio(models.run_har(df, origins, cfg, estimator="smearing", **kw))
+            if r is None:
+                self.skipTest(f"no saved forecasts for {name}")
+            har_family[name] = r
+        name = "persistence"
+        pers = _ratio(models.run_persistence(df, origins, cfg, estimator="smearing"))
+        if pers is None:
+            self.skipTest("no saved forecasts for persistence")
+
+        fam = np.array(list(har_family.values()))
+        lo, hi, spread = self.TRUNC_BAND_HAR_FAMILY
+        self.assertAlmostEqual(fam.min(), lo, places=3)
+        self.assertAlmostEqual(fam.max(), hi, places=3)
+        self.assertAlmostEqual(100 * (fam.max() - fam.min()), spread, places=2)
+
+        allq = np.append(fam, pers)
+        lo, hi, spread = self.TRUNC_BAND_ALL_QUANTILE
+        self.assertAlmostEqual(allq.min(), lo, places=3)
+        self.assertAlmostEqual(allq.max(), hi, places=3)
+        self.assertAlmostEqual(100 * (allq.max() - allq.min()), spread, places=2)
+        # The point of the whole test: persistence is nowhere near the band the
+        # "ranking is fair" argument is built on.
+        self.assertGreater(min(har_family.values()) - pers, 0.05)
 
 
 if __name__ == "__main__":

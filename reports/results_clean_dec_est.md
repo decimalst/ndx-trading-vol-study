@@ -6,7 +6,7 @@ Quantile grid: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9] → intervals below
 
 `mean_var` here is the Duan smearing estimate `exp(mu)*mean(exp(resid))`. The frozen estimator integrates `exp(q)` over the quantile grid and divides by its mass, which discards the tails: it returns about 0.87 of the true conditional mean, and the discarded share depends on the grid — which is why every model's QLIKE differs between `results_clean.md` and `results_clean_dec.md` while EWMA's is 0.4036 in both. Only QLIKE changes; CRPS, pinball and coverage read off the quantiles and are identical.
 
-Two caveats, stated rather than buried. (i) Across the HAR family the frozen estimator's bias spans only 0.866–0.873, so it is a near-common factor: correcting it moves QLIKE **levels** a lot and DM statistics little. It was never the reason one model outranked another. (ii) Rows marked `~` below have no recoverable residuals (Chronos-2, TiRex-2) and are reconstructed from their saved quantiles by tail extension, which on the HAR family lands 3.5% low with a 2.5pp spread across models — real, and a wider spread than the 0.70pp it replaces for those rows. Rows without `~` are exact.
+Two caveats, stated rather than buried. (i) The frozen estimator's bias spans 0.866–0.873 across `har`, `har_x`, `har_iv`, `har_iv_x` and `har_ic` — but 0.866–0.883 once `har_sv`, `har_lev` and `har_iv_lev` are included, and 0.812–0.883 across every quantile model scored here, because `persistence` sits at 0.812. It is a near-common factor only on the narrow set. Correcting it moves QLIKE **levels** far more than DM statistics, but **not by cancellation** — QLIKE differentials are not scale-invariant, and rescaling both forecasts by a single common factor reproduces most of the DM movement on its own. It is therefore not safe to assume rankings are unaffected: on this window `har_sv vs har` moves from DM −1.615 (p=0.1080) to −2.163 (p=0.0318) on identical exactly-scored origins, crossing α=0.05. (ii) Rows marked `~` below have no recoverable residuals (Chronos-2, TiRex-2) and are reconstructed from their saved quantiles by tail extension, which on the five pinned HAR models lands 3.5% low with a 2.5pp spread — real, and a wider spread than the 0.70pp it replaces for those rows. A `~` row compared against an unmarked row mixes estimators; read those comparisons as indicative. Rows without `~` are exact.
 
 ## h=1 losses (mean per day)
 
@@ -20,13 +20,13 @@ Two caveats, stated rather than buried. (i) Across the HAR family the frozen est
 | har_sv | 188 | 0.3201 | 0.5158 | 0.1458 | 0.1415 | 0.830 | 0.298 | 0.202 |
 | har_ic | 192 | 0.3158 | 0.5120 | 0.1409 | 0.1429 | 0.792 | 0.774 | 0.716 |
 | har_iv_x | 192 | 0.3037 | 0.4949 | 0.1385 | 0.1396 | 0.807 | 0.800 | 0.635 |
-| chronos_uni ~ | 192 | 0.3609 | 0.5499 | 0.1499 | 0.1518 | 0.812 | 0.662 | 0.143 |
-| chronos_cov ~ | 192 | 0.3660 | 0.5498 | 0.1540 | 0.1522 | 0.760 | 0.180 | 0.453 |
-| chronos_cov_iv ~ | 192 | 0.3184 | 0.5036 | 0.1350 | 0.1456 | 0.812 | 0.662 | 0.773 |
-| tirex_uni ~ | 192 | 0.3639 | 0.5522 | 0.1510 | 0.1528 | 0.786 | 0.642 | 0.181 |
-| tirex_cov ~ | 192 | 0.3638 | 0.5572 | 0.1518 | 0.1538 | 0.771 | 0.321 | 0.252 |
-| tirex_cov_iv ~ | 192 | 0.3597 | 0.5518 | 0.1518 | 0.1537 | 0.797 | 0.914 | 0.083 |
-| tirex_cov_ivf ~ | 192 | 0.3132 | 0.4929 | 0.1291 | 0.1483 | 0.740 | 0.043 | 0.948 |
+| chronos_uni ~ | 192 | 0.3586 | 0.5499 | 0.1499 | 0.1518 | 0.812 | 0.662 | 0.143 |
+| chronos_cov ~ | 192 | 0.3642 | 0.5498 | 0.1540 | 0.1522 | 0.760 | 0.180 | 0.453 |
+| chronos_cov_iv ~ | 192 | 0.3186 | 0.5036 | 0.1350 | 0.1456 | 0.812 | 0.662 | 0.773 |
+| tirex_uni ~ | 192 | 0.3642 | 0.5522 | 0.1510 | 0.1528 | 0.786 | 0.642 | 0.181 |
+| tirex_cov ~ | 192 | 0.3694 | 0.5572 | 0.1518 | 0.1538 | 0.771 | 0.321 | 0.252 |
+| tirex_cov_iv ~ | 192 | 0.3647 | 0.5518 | 0.1518 | 0.1537 | 0.797 | 0.914 | 0.083 |
+| tirex_cov_ivf ~ | 192 | 0.3127 | 0.4929 | 0.1291 | 0.1483 | 0.740 | 0.043 | 0.948 |
 
 ## Diebold-Mariano vs HAR (QLIKE; negative = beats HAR)
 
@@ -39,13 +39,13 @@ Two caveats, stated rather than buried. (i) Across the HAR family the frozen est
 | har_sv | -2.163 | 0.0318 | 188 |
 | har_ic | -2.804 | 0.0056 | 192 |
 | har_iv_x | -3.440 | 0.0007 | 192 |
-| chronos_uni | -0.152 | 0.8793 | 192 |
-| chronos_cov | 0.194 | 0.8465 | 192 |
-| chronos_cov_iv | -2.632 | 0.0092 | 192 |
-| tirex_uni | 0.130 | 0.8964 | 192 |
-| tirex_cov | 0.126 | 0.9001 | 192 |
-| tirex_cov_iv | -0.265 | 0.7915 | 192 |
-| tirex_cov_ivf | -2.641 | 0.0089 | 192 |
+| chronos_uni | -0.429 | 0.6687 | 192 |
+| chronos_cov | 0.109 | 0.9131 | 192 |
+| chronos_cov_iv | -2.601 | 0.0100 | 192 |
+| tirex_uni | 0.165 | 0.8694 | 192 |
+| tirex_cov | 0.601 | 0.5488 | 192 |
+| tirex_cov_iv | 0.219 | 0.8266 | 192 |
+| tirex_cov_ivf | -2.662 | 0.0084 | 192 |
 
 ## Diebold-Mariano vs HAR-IV — same information set
 
@@ -55,9 +55,9 @@ HAR-IV is log-HAR plus log(VXN). Any model fed VXN beats plain HAR trivially, be
 |---|---|---|---|
 | har_ic | 1.327 | 0.1861 | 192 |
 | har_iv_x | -1.347 | 0.1796 | 192 |
-| chronos_cov_iv | 0.419 | 0.6754 | 192 |
-| tirex_cov_iv | 2.770 | 0.0062 | 192 |
-| tirex_cov_ivf | 0.076 | 0.9394 | 192 |
+| chronos_cov_iv | 0.465 | 0.6425 | 192 |
+| tirex_cov_iv | 2.951 | 0.0036 | 192 |
+| tirex_cov_ivf | 0.050 | 0.9602 | 192 |
 
 ## TiRex-2 robustness: origins after publication (2026-07-01)
 
@@ -65,13 +65,13 @@ The date-based leakage rule applied literally to TiRex-2. Tiny sample by constru
 
 | model | QLIKE (full) | QLIKE (post-pub) | n |
 |---|---|---|---|
-| tirex_uni | 0.3639 | 0.2396 | 28 |
-| tirex_cov | 0.3638 | 0.2392 | 28 |
-| tirex_cov_iv | 0.3597 | 0.2365 | 28 |
-| tirex_cov_ivf | 0.3132 | 0.1865 | 28 |
+| tirex_uni | 0.3642 | 0.2435 | 28 |
+| tirex_cov | 0.3694 | 0.2497 | 28 |
+| tirex_cov_iv | 0.3647 | 0.2451 | 28 |
+| tirex_cov_ivf | 0.3127 | 0.1852 | 28 |
 | har | 0.3624 | 0.2515 | 28 |
 | har_iv | 0.3118 | 0.1987 | 28 |
-| chronos_cov | 0.3660 | 0.2583 | 28 |
+| chronos_cov | 0.3642 | 0.2597 | 28 |
 
 ## Event-sliced QLIKE (mean)
 
@@ -85,13 +85,13 @@ The date-based leakage rule applied literally to TiRex-2. Tiny sample by constru
 | har_sv | 0.2688 (6) | 0.3187 (8) | 0.3201 (12) | 0.3221 (162) |
 | har_ic | 0.2386 (6) | 0.3092 (8) | 0.2666 (12) | 0.3225 (166) |
 | har_iv_x | 0.3197 (6) | 0.3317 (8) | 0.1588 (12) | 0.3122 (166) |
-| chronos_uni | 0.1960 (6) | 0.3954 (8) | 0.3473 (12) | 0.3662 (166) |
-| chronos_cov | 0.2921 (6) | 0.4081 (8) | 0.1372 (12) | 0.3832 (166) |
-| chronos_cov_iv | 0.3240 (6) | 0.3732 (8) | 0.1183 (12) | 0.3300 (166) |
-| tirex_uni | 0.1687 (6) | 0.3630 (8) | 0.4169 (12) | 0.3672 (166) |
-| tirex_cov | 0.2285 (6) | 0.4460 (8) | 0.3224 (12) | 0.3677 (166) |
-| tirex_cov_iv | 0.1945 (6) | 0.3969 (8) | 0.3566 (12) | 0.3641 (166) |
-| tirex_cov_ivf | 0.1712 (6) | 0.2703 (8) | 0.2901 (12) | 0.3220 (166) |
+| chronos_uni | 0.2027 (6) | 0.3960 (8) | 0.3388 (12) | 0.3639 (166) |
+| chronos_cov | 0.2917 (6) | 0.4054 (8) | 0.1366 (12) | 0.3813 (166) |
+| chronos_cov_iv | 0.3263 (6) | 0.3753 (8) | 0.1169 (12) | 0.3302 (166) |
+| tirex_uni | 0.1717 (6) | 0.3787 (8) | 0.3981 (12) | 0.3680 (166) |
+| tirex_cov | 0.2397 (6) | 0.4785 (8) | 0.3054 (12) | 0.3734 (166) |
+| tirex_cov_iv | 0.2012 (6) | 0.4256 (8) | 0.3397 (12) | 0.3695 (166) |
+| tirex_cov_ivf | 0.1735 (6) | 0.2740 (8) | 0.2684 (12) | 0.3228 (166) |
 
 ## Full-sample paired per-origin (all origins in phase)
 
@@ -103,8 +103,8 @@ Win rate and mean difference answer different questions. A high win rate with no
 | har_x vs har | 192 | 122 | 63.5% | 0.000215 | 0.3533 vs 0.3624 | 0.1644 vs 0.1564 | 162% |
 | har_sv vs har | 188 | 103 | 54.8% | 0.215 | 0.3201 vs 0.3604 | 0.1510 vs 0.1564 | 88% |
 | har_iv vs har | 192 | 104 | 54.2% | 0.279 | 0.3118 vs 0.3624 | 0.1629 vs 0.1564 | 72% |
-| chronos_cov vs chronos_uni | 192 | 93 | 48.4% | 0.718 | 0.3660 vs 0.3609 | 0.1545 vs 0.1874 | -504% |
-| tirex_cov vs tirex_uni | 192 | 73 | 38.0% | 0.00111 | 0.3638 vs 0.3639 | 0.1806 vs 0.1659 | 11624% |
+| chronos_cov vs chronos_uni | 192 | 90 | 46.9% | 0.427 | 0.3642 vs 0.3586 | 0.1543 vs 0.1958 | -434% |
+| tirex_cov vs tirex_uni | 192 | 67 | 34.9% | 3.43e-05 | 0.3694 vs 0.3642 | 0.1854 vs 0.1670 | -345% |
 
 ### Heavy-earnings slice, paired per-origin (cutoff 5.0% of index weight)
 
@@ -112,8 +112,8 @@ Win rate and mean difference answer different questions. A high win rate with no
 |---|---|---|---|---|---|---|---|
 | har_x vs har | 0.2053 vs 0.3423 | 0.0651 vs 0.0835 | 8/12 | 0.3877 | 2025-11-19 | 50% | 7/11 |
 | har_iv_x vs har_iv | 0.1588 vs 0.2545 | 0.0483 vs 0.0688 | 7/12 | 0.7744 | 2025-11-19 | 49% | 6/11 |
-| chronos_cov vs chronos_uni | 0.1372 vs 0.3473 | 0.0391 vs 0.1536 | 9/12 | 0.1460 | 2025-11-19 | 51% | 8/11 |
-| tirex_cov vs tirex_uni | 0.3224 vs 0.4169 | 0.1442 vs 0.2079 | 9/12 | 0.1460 | 2025-11-19 | 70% | 8/11 |
+| chronos_cov vs chronos_uni | 0.1366 vs 0.3388 | 0.0406 vs 0.1436 | 9/12 | 0.1460 | 2025-11-19 | 54% | 8/11 |
+| tirex_cov vs tirex_uni | 0.3054 vs 0.3981 | 0.1160 vs 0.1809 | 7/12 | 0.7744 | 2025-11-19 | 74% | 6/11 |
 
 ## 30-calendar-day horizon vs VXN (log variance)
 

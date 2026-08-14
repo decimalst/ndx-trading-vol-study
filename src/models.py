@@ -8,6 +8,12 @@ Every model emits, per origin date t (forecast for t+1):
   rankings among quantile models are apples-to-apples; EWMA's mean_var is its
   native variance forecast (flagged in reports).
 
+That "identically" is the frozen pre-registration's claim, and it is only
+approximately true -- see `mean_var_from_quantiles` below and
+reports/METHODOLOGY_FORK.md. The frozen estimator stays the default so the
+pre-registered reports keep reproducing byte-for-byte; `estimator="smearing"`
+selects the corrected one and writes to a parallel `*_sm.parquet`.
+
 For the 30-calendar-day horizon, HAR and persistence produce direct point
 forecasts of cumulative variance via `predict_cum` (log-target direct
 projection). Distributional eval at that horizon is out of scope for v1.
@@ -16,13 +22,140 @@ from __future__ import annotations
 
 import numpy as np
 import pandas as pd
+from scipy.stats import norm
 
 _trapz = getattr(np, "trapezoid", getattr(np, "trapz", None))
 
+ESTIMATORS = ("trunc", "smearing")
+QUANTILE_METHODS = ("trunc", "lognormal", "tail_ext")
+
 
 def trunc_mean_var(qgrid: np.ndarray, log_q: np.ndarray) -> float:
-    """Truncated E[exp(X)] from quantiles of X on grid qgrid (ascending)."""
+    """Truncated E[exp(X)] from quantiles of X on grid qgrid (ascending).
+
+    The frozen pre-registered estimator. It integrates exp(q) over the quantile
+    grid and divides by the grid's mass, so everything outside [tau_lo, tau_hi]
+    is discarded -- and for a right-skewed variable most of E[exp(X)] lives in
+    exactly that discarded upper tail. Measured against exact smearing on the
+    HAR family it returns 0.866-0.873 of the true conditional mean, and the
+    discarded share depends on the grid, which is why every model's QLIKE
+    differs between results_clean.md and results_clean_dec.md while EWMA's --
+    which never touches this function -- is 0.4036 in both.
+
+    Kept unchanged and kept as the default: the frozen reports are the thing
+    corrections get compared against, so they must not move.
+    """
     return float(_trapz(np.exp(log_q), qgrid) / (qgrid[-1] - qgrid[0]))
+
+
+def smearing_mean_var(mu: float, resid: np.ndarray) -> float:
+    """Duan smearing: E[exp(X)] = exp(mu) * mean(exp(resid)).
+
+    Exact whenever the residuals are available and exchangeable with the
+    forecast error, which is the case for every model fitted here by OLS on
+    log RV. No distributional assumption and no grid dependence -- the whole
+    residual distribution enters, tails included.
+    """
+    r = np.asarray(resid, dtype=float)
+    r = r[np.isfinite(r)]
+    if r.size == 0:
+        return float("nan")
+    return float(np.exp(mu) * np.mean(np.exp(r)))
+
+
+def _fit_lognormal(qgrid: np.ndarray, log_q: np.ndarray) -> tuple[float, float]:
+    """OLS of the quantiles on z = Phi^-1(tau): the implied (mu, sigma)."""
+    z = norm.ppf(np.asarray(qgrid, dtype=float))
+    A = np.column_stack([np.ones_like(z), z])
+    beta, *_ = np.linalg.lstsq(A, np.asarray(log_q, dtype=float), rcond=None)
+    return float(beta[0]), float(abs(beta[1]))
+
+
+def _tail_ext_mean_var(qgrid: np.ndarray, log_q: np.ndarray) -> float:
+    """E[exp(X)] with q piecewise-linear in z = Phi^-1(tau), tails extrapolated.
+
+    Chronos-2 and TiRex-2 emit quantiles and nothing else -- no residuals, so
+    no smearing. This reconstructs the mean from the quantiles instead of
+    discarding the tails.
+
+    The quantile function of a lognormal is exactly linear in z, so linear
+    interpolation between knots plus linear extrapolation past the outermost
+    ones (at the end-segment slope) makes this EXACT on a true lognormal, on
+    any grid -- verified in tests/test_methodology.py. On each segment where
+    q(z) = a + b*z the contribution integrates in closed form:
+
+        int exp(a + b*z) phi(z) dz = exp(a + b^2/2) * [Phi(z2 - b) - Phi(z1 - b)]
+
+    Nothing is assumed about the interior shape; only the tail beyond the last
+    knot is extrapolated. On real log-RV residuals that extrapolation is
+    thin-tailed relative to the truth, so this lands ~3.5% low -- a smaller
+    but more dispersion-dependent bias than the ~13% it replaces. Used ONLY
+    where residuals do not exist, and those rows are flagged `~` in reports.
+    """
+    z = norm.ppf(np.asarray(qgrid, dtype=float))
+    q = np.asarray(log_q, dtype=float)
+    if len(z) < 2 or not np.all(np.isfinite(q)):
+        return float("nan")
+
+    def _seg(a: float, b: float, z1: float, z2: float) -> float:
+        return float(np.exp(a + b * b / 2) * (norm.cdf(z2 - b) - norm.cdf(z1 - b)))
+
+    total = 0.0
+    for j in range(len(z) - 1):
+        b = (q[j + 1] - q[j]) / (z[j + 1] - z[j])
+        total += _seg(q[j] - b * z[j], b, z[j], z[j + 1])
+    b_lo = (q[1] - q[0]) / (z[1] - z[0])
+    total += _seg(q[0] - b_lo * z[0], b_lo, -np.inf, z[0])
+    b_hi = (q[-1] - q[-2]) / (z[-1] - z[-2])
+    total += _seg(q[-1] - b_hi * z[-1], b_hi, z[-1], np.inf)
+    return float(total)
+
+
+def mean_var_from_quantiles(qgrid: np.ndarray, log_q: np.ndarray,
+                            method: str = "trunc") -> float:
+    """Point variance forecast from quantiles of log variance.
+
+    `trunc` is the frozen estimator, `tail_ext` the correction, `lognormal` a
+    reference point kept because the original review used it and thereby
+    overstated the defect: a lognormal fit is itself dispersion-biased, which
+    is where the retracted "4.7pp spread" figure came from.
+    """
+    if method == "trunc":
+        return trunc_mean_var(qgrid, log_q)
+    if method == "tail_ext":
+        return _tail_ext_mean_var(qgrid, log_q)
+    if method == "lognormal":
+        mu, sigma = _fit_lognormal(qgrid, log_q)
+        return float(np.exp(mu + sigma * sigma / 2))
+    raise ValueError(f"unknown mean-variance method {method!r}; "
+                     f"expected one of {QUANTILE_METHODS}")
+
+
+def rescore_mean_var(fc: pd.DataFrame, taus: np.ndarray,
+                     method: str = "tail_ext") -> pd.Series:
+    """Recompute `mean_var` for a saved forecast frame from its own quantiles.
+
+    The recovery path for models with no residuals. Returns an all-NaN series
+    when the frame carries no quantile columns (EWMA), so the caller keeps the
+    native variance forecast rather than inventing one.
+    """
+    cols = [f"q{t:.2f}" for t in np.asarray(taus, dtype=float)]
+    if not all(c in fc.columns for c in cols):
+        return pd.Series(np.nan, index=fc.index, name="mean_var")
+    grid = np.asarray(taus, dtype=float)
+    vals = [mean_var_from_quantiles(grid, row, method=method)
+            for row in fc[cols].values]
+    return pd.Series(vals, index=fc.index, name="mean_var")
+
+
+def _point_var(mu: float, resid: np.ndarray, taus: np.ndarray,
+               q: np.ndarray, estimator: str) -> float:
+    """Dispatch the point forecast for a model that has its own residuals."""
+    if estimator == "smearing":
+        return smearing_mean_var(mu, resid)
+    if estimator == "trunc":
+        return trunc_mean_var(taus, q)
+    raise ValueError(f"unknown estimator {estimator!r}; expected one of {ESTIMATORS}")
 
 
 def _emp_quantiles(resid: np.ndarray, taus: np.ndarray) -> np.ndarray:
@@ -30,7 +163,8 @@ def _emp_quantiles(resid: np.ndarray, taus: np.ndarray) -> np.ndarray:
 
 
 # ------------------------------------------------------------------ persistence
-def run_persistence(df: pd.DataFrame, origins: pd.DatetimeIndex, cfg: dict) -> pd.DataFrame:
+def run_persistence(df: pd.DataFrame, origins: pd.DatetimeIndex, cfg: dict,
+                    estimator: str = "trunc") -> pd.DataFrame:
     taus = np.asarray(cfg["quantiles"])
     y = df["log_rv"]
     dlog = y.diff().dropna()
@@ -41,8 +175,10 @@ def run_persistence(df: pd.DataFrame, origins: pd.DatetimeIndex, cfg: dict) -> p
             continue
         base = y.loc[t]
         q = base + _emp_quantiles(hist, taus)
+        # The log-change history IS this model's residual distribution, so
+        # smearing is exact here too, not just for the fitted regressions.
         rows.append({"origin": t, **{f"q{tau:.2f}": v for tau, v in zip(taus, q)},
-                     "mean_var": trunc_mean_var(taus, q)})
+                     "mean_var": _point_var(base, hist, taus, q, estimator)})
     return pd.DataFrame(rows).set_index("origin")
 
 
@@ -123,7 +259,7 @@ def _har_design(df: pd.DataFrame, cfg: dict, with_x: bool,
 def run_har(df: pd.DataFrame, origins: pd.DatetimeIndex, cfg: dict,
             with_x: bool = False, with_iv: bool = False,
             with_sv: bool = False, with_ic: bool = False,
-            with_lev: bool = False) -> pd.DataFrame:
+            with_lev: bool = False, estimator: str = "trunc") -> pd.DataFrame:
     taus = np.asarray(cfg["quantiles"])
     design = _har_design(df, cfg, with_x, with_iv, with_sv, with_ic, with_lev)
     feat_cols = [c for c in design.columns if c != "y_next"]
@@ -143,7 +279,7 @@ def run_har(df: pd.DataFrame, origins: pd.DatetimeIndex, cfg: dict,
         mu = float(x_t @ beta)
         q = mu + _emp_quantiles(resid, taus)
         rows.append({"origin": t, **{f"q{tau:.2f}": v for tau, v in zip(taus, q)},
-                     "mean_var": trunc_mean_var(taus, q)})
+                     "mean_var": _point_var(mu, resid, taus, q, estimator)})
     return pd.DataFrame(rows).set_index("origin")
 
 

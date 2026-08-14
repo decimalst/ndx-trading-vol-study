@@ -6,7 +6,7 @@ Quantile grid: [0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95] → intervals below are 9
 
 `mean_var` here is the Duan smearing estimate `exp(mu)*mean(exp(resid))`. The frozen estimator integrates `exp(q)` over the quantile grid and divides by its mass, which discards the tails: it returns about 0.87 of the true conditional mean, and the discarded share depends on the grid — which is why every model's QLIKE differs between `results_clean.md` and `results_clean_dec.md` while EWMA's is 0.4036 in both. Only QLIKE changes; CRPS, pinball and coverage read off the quantiles and are identical.
 
-Two caveats, stated rather than buried. (i) Across the HAR family the frozen estimator's bias spans only 0.866–0.873, so it is a near-common factor: correcting it moves QLIKE **levels** a lot and DM statistics little. It was never the reason one model outranked another. (ii) Rows marked `~` below have no recoverable residuals (Chronos-2, TiRex-2) and are reconstructed from their saved quantiles by tail extension, which on the HAR family lands 3.5% low with a 2.5pp spread across models — real, and a wider spread than the 0.70pp it replaces for those rows. Rows without `~` are exact.
+Two caveats, stated rather than buried. (i) The frozen estimator's bias spans 0.866–0.873 across `har`, `har_x`, `har_iv`, `har_iv_x` and `har_ic` — but 0.866–0.883 once `har_sv`, `har_lev` and `har_iv_lev` are included, and 0.812–0.883 across every quantile model scored here, because `persistence` sits at 0.812. It is a near-common factor only on the narrow set. Correcting it moves QLIKE **levels** far more than DM statistics, but **not by cancellation** — QLIKE differentials are not scale-invariant, and rescaling both forecasts by a single common factor reproduces most of the DM movement on its own. It is therefore not safe to assume rankings are unaffected: on this window `har_sv vs har` moves from DM −1.615 (p=0.1080) to −2.163 (p=0.0318) on identical exactly-scored origins, crossing α=0.05. (ii) Rows marked `~` below have no recoverable residuals (Chronos-2, TiRex-2) and are reconstructed from their saved quantiles by tail extension, which on the five pinned HAR models lands 3.5% low with a 2.5pp spread — real, and a wider spread than the 0.70pp it replaces for those rows. A `~` row compared against an unmarked row mixes estimators; read those comparisons as indicative. Rows without `~` are exact.
 
 ## h=1 losses (mean per day)
 
@@ -103,8 +103,8 @@ Win rate and mean difference answer different questions. A high win rate with no
 
 | pair | diagnostic win% | diagnostic gap | flip k | clean win% | clean gap | clean n | replicates? |
 |---|---|---|---|---|---|---|---|
-| har_iv_lev vs har_iv | 59.2% | +0.0084 | 19 | 59.4% | +0.0017 | 192 | yes |
-| har_lev vs har | 60.1% | +0.0180 | never | 58.9% | +0.0137 | 192 | yes |
+| har_iv_lev vs har_iv | 59.2% | +0.0084 | 19 | — | — | — | not testable |
+| har_lev vs har | 60.1% | +0.0180 | never | — | — | — | not testable |
 | har_iv_x vs har_iv | 65.7% | -0.0016 | 0 | 65.1% | +0.0081 | 192 | **no** |
 | har_x vs har | 65.5% | -0.0020 | 0 | 63.5% | +0.0090 | 192 | **no** |
 | har_iv vs har | 53.1% | +0.0322 | never | 54.2% | +0.0506 | 192 | yes |
@@ -116,13 +116,20 @@ Win rate and mean difference answer different questions. A high win rate with no
 | har_x vs har | 0.3423 vs 0.3861 | 0.1545 vs 0.1794 | 64/157 | 0.0251 | 2017-10-26 | 50% | 63/156 |
 | har_iv_x vs har_iv | 0.3008 vs 0.3312 | 0.1617 vs 0.1308 | 61/157 | 0.0065 | 2017-10-26 | 54% | 60/156 |
 
+### Pre-committed gate: reachability
+
+`next_evaluation.earnings_slice_confirmatory` requires **40 heavy-earnings days** before the registered confirmatory DM test may run. This phase has **157**. Heavy-earnings days arrive at 5.35% of origins over the full sample, so the `at_origins: 500` trigger projects to **~27** — a shortfall of ~13. Reaching 40 takes roughly **748 origins** at the observed rate.
+
+**The gate is therefore not reachable at its own trigger.** Over every rolling window in this sample the maximum count attained in 500 sessions is well below 40. This is disclosed rather than repaired: `config.yaml` is frozen, so the floor stands and the shortfall is published beside it. See `reports/AMENDMENTS.md`.
+
+
 ## 30-calendar-day horizon vs VXN (log variance)
 
-Origins are daily but each target spans 21 trading days, so consecutive rows share almost all of their target. **n = 2463, but n_eff = 117 independent windows.** Standard errors below come from a circular moving-block bootstrap (block = 21, 2000 reps) and from refitting on all 21 non-overlapping subsamples — not from HAC(32), which at this n has a lag/n ratio near 0.19 and understates se(beta) by about 3x. config.yaml's own `carry_study` block already requires non-overlapping inference for exactly this reason.
+Origins are daily but each target spans 21 trading days, so consecutive rows share almost all of their target. **n = 2463, but n_eff = 117 independent windows.** Standard errors below come from a circular moving-block bootstrap (block = 21, 2000 reps) and from refitting on all 21 non-overlapping subsamples — not from HAC(32), which at this n has a lag/n ratio of 0.01 and returns se(beta)=0.061 against 0.060 from the bootstrap and a 0.043 spread of the point estimate across the 21 starting offsets. The bootstrap interval is itself too narrow — see the calibration note below. config.yaml's own `carry_study` block already requires non-overlapping inference for exactly this reason.
 
 - VXN MZ: alpha=-0.040, beta=1.067, R2=0.550, n=2463, n_eff=117
   - bootstrap se(beta)=0.060, 95% CI [0.951, 1.179], p[beta=1]=0.273
-  - across the 21 non-overlapping subsamples (~117 obs each): beta ranges [0.994, 1.116], honest se=0.090
+  - across the 21 non-overlapping subsamples (~117 obs each): beta ranges [0.994, 1.116], sd across starting offsets=0.043; median within-subsample se=0.090 (the se of a beta fitted to ~117 points, **not** of the full-sample beta — it was previously published as "honest se", which overstated the reported coefficient's uncertainty)
   - variance risk premium at the window's median VXN (20.4): **3.9 vol points, 95% CI [3.1, 4.5]**. The frozen report prints this as a single number; at n_eff=117 it is an interval or it is nothing.
 
 Encompassing: realized = a + b*VXN + c*model. H3 wants c>0 and significant. A negative c is not evidence for the model — with VXN already in the regression it means the forecast enters against realized variance, which collinear forecasts commonly do. Models that consume VXN as an input are excluded: regressing on VXN and on a function of VXN is collinear by construction and the split of the coefficients is not interpretable.
@@ -130,7 +137,7 @@ Encompassing: realized = a + b*VXN + c*model. H3 wants c>0 and significant. A ne
 - har_cum: MZ beta=0.810 R2=0.485 | encompassing b_implied=0.851 c_model=0.196 (bootstrap p=0.034, 95% CI [0.017, 0.383], n=2463, n_eff=117, across-subsample c range [0.056, 0.325])
 - persistence_cum: MZ beta=0.443 R2=0.360 | encompassing b_implied=0.954 c_model=0.078 (bootstrap p=0.002, 95% CI [0.027, 0.133], n=2463, n_eff=117, across-subsample c range [-0.116, 0.174])
 
-At n_eff=117 this section cannot reject anything, and a non-significant `c_model` here is not evidence that the model adds nothing beyond VXN — it is evidence that the window is too short to tell. Read the CIs, not the p-values.
+n_eff=117 independent windows can resolve moderate effects, unlike the clean window. But these are not tests on 2463 observations: every interval here is built on 117, and the frozen report's n is 21x that. **And the bootstrap is anti-conservative** — measured nominal-95% coverage is ~82-85% and the true size of the `c_model` p-value is ~10-16%, not 5% (`tests/test_methodology.py::TestBootstrapCalibration`). A bootstrap p just under 0.05 here is not a 5% rejection; treat these intervals as a floor on the uncertainty and read the across-subsample ranges beside them.
 
 ---
 

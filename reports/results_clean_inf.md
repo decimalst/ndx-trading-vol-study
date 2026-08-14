@@ -114,13 +114,20 @@ Win rate and mean difference answer different questions. A high win rate with no
 | har_iv_x vs har_iv | 0.1846 vs 0.3395 | 0.0636 vs 0.1430 | 8/12 | 0.3877 | 2025-11-19 | 39% | 7/11 |
 | chronos_cov vs chronos_uni | 0.1671 vs 0.4265 | 0.0518 vs 0.2178 | 10/12 | 0.0386 | 2025-11-19 | 49% | 9/11 |
 
+### Pre-committed gate: reachability
+
+`next_evaluation.earnings_slice_confirmatory` requires **40 heavy-earnings days** before the registered confirmatory DM test may run. This phase has **12**. Heavy-earnings days arrive at 5.35% of origins over the full sample, so the `at_origins: 500` trigger projects to **~27** — a shortfall of ~13. Reaching 40 takes roughly **748 origins** at the observed rate.
+
+**The gate is therefore not reachable at its own trigger.** Over every rolling window in this sample the maximum count attained in 500 sessions is well below 40. This is disclosed rather than repaired: `config.yaml` is frozen, so the floor stands and the shortfall is published beside it. See `reports/AMENDMENTS.md`.
+
+
 ## 30-calendar-day horizon vs VXN (log variance)
 
-Origins are daily but each target spans 21 trading days, so consecutive rows share almost all of their target. **n = 171, but n_eff = 8 independent windows.** Standard errors below come from a circular moving-block bootstrap (block = 21, 2000 reps) and from refitting on all 21 non-overlapping subsamples — not from HAC(32), which at this n has a lag/n ratio near 0.19 and understates se(beta) by about 3x. config.yaml's own `carry_study` block already requires non-overlapping inference for exactly this reason.
+Origins are daily but each target spans 21 trading days, so consecutive rows share almost all of their target. **n = 171, but n_eff = 8 independent windows.** Standard errors below come from a circular moving-block bootstrap (block = 21, 2000 reps) and from refitting on all 21 non-overlapping subsamples — not from HAC(32), which at this n has a lag/n ratio of 0.19 and returns se(beta)=0.160 against 0.220 from the bootstrap and a 0.360 spread of the point estimate across the 21 starting offsets. The bootstrap interval is itself too narrow — see the calibration note below. config.yaml's own `carry_study` block already requires non-overlapping inference for exactly this reason.
 
 - VXN MZ: alpha=-1.301, beta=0.829, R2=0.295, n=171, n_eff=8
   - bootstrap se(beta)=0.220, 95% CI [0.325, 1.183], p[beta=1]=0.293
-  - across the 21 non-overlapping subsamples (~8 obs each): beta ranges [0.298, 1.710], honest se=0.458
+  - across the 21 non-overlapping subsamples (~8 obs each): beta ranges [0.298, 1.710], sd across starting offsets=0.360; median within-subsample se=0.458 (the se of a beta fitted to ~8 points, **not** of the full-sample beta — it was previously published as "honest se", which overstated the reported coefficient's uncertainty)
   - variance risk premium at the window's median VXN (23.8): **4.1 vol points, 95% CI [1.7, 5.9]**. The frozen report prints this as a single number; at n_eff=8 it is an interval or it is nothing.
 
 Encompassing: realized = a + b*VXN + c*model. H3 wants c>0 and significant. A negative c is not evidence for the model — with VXN already in the regression it means the forecast enters against realized variance, which collinear forecasts commonly do. Models that consume VXN as an input are excluded: regressing on VXN and on a function of VXN is collinear by construction and the split of the coefficients is not interpretable.

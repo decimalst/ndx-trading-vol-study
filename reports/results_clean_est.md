@@ -6,7 +6,7 @@ Quantile grid: [0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95] → intervals below are 9
 
 `mean_var` here is the Duan smearing estimate `exp(mu)*mean(exp(resid))`. The frozen estimator integrates `exp(q)` over the quantile grid and divides by its mass, which discards the tails: it returns about 0.87 of the true conditional mean, and the discarded share depends on the grid — which is why every model's QLIKE differs between `results_clean.md` and `results_clean_dec.md` while EWMA's is 0.4036 in both. Only QLIKE changes; CRPS, pinball and coverage read off the quantiles and are identical.
 
-Two caveats, stated rather than buried. (i) Across the HAR family the frozen estimator's bias spans only 0.866–0.873, so it is a near-common factor: correcting it moves QLIKE **levels** a lot and DM statistics little. It was never the reason one model outranked another. (ii) Rows marked `~` below have no recoverable residuals (Chronos-2, TiRex-2) and are reconstructed from their saved quantiles by tail extension, which on the HAR family lands 3.5% low with a 2.5pp spread across models — real, and a wider spread than the 0.70pp it replaces for those rows. Rows without `~` are exact.
+Two caveats, stated rather than buried. (i) The frozen estimator's bias spans 0.866–0.873 across `har`, `har_x`, `har_iv`, `har_iv_x` and `har_ic` — but 0.866–0.883 once `har_sv`, `har_lev` and `har_iv_lev` are included, and 0.812–0.883 across every quantile model scored here, because `persistence` sits at 0.812. It is a near-common factor only on the narrow set. Correcting it moves QLIKE **levels** far more than DM statistics, but **not by cancellation** — QLIKE differentials are not scale-invariant, and rescaling both forecasts by a single common factor reproduces most of the DM movement on its own. It is therefore not safe to assume rankings are unaffected: on this window `har_sv vs har` moves from DM −1.615 (p=0.1080) to −2.163 (p=0.0318) on identical exactly-scored origins, crossing α=0.05. (ii) Rows marked `~` below have no recoverable residuals (Chronos-2, TiRex-2) and are reconstructed from their saved quantiles by tail extension, which on the five pinned HAR models lands 3.5% low with a 2.5pp spread — real, and a wider spread than the 0.70pp it replaces for those rows. A `~` row compared against an unmarked row mixes estimators; read those comparisons as indicative. Rows without `~` are exact.
 
 ## h=1 losses (mean per day)
 
@@ -20,9 +20,9 @@ Two caveats, stated rather than buried. (i) Across the HAR family the frozen est
 | har_sv | 188 | 0.3201 | 0.4711 | 0.0881 | 0.0839 | 0.926 | 0.224 | 0.959 |
 | har_ic | 192 | 0.3158 | 0.4686 | 0.0824 | 0.0833 | 0.891 | 0.669 | 0.246 |
 | har_iv_x | 192 | 0.3037 | 0.4541 | 0.0825 | 0.0832 | 0.891 | 0.669 | 0.246 |
-| chronos_uni ~ | 192 | 0.3604 | 0.5026 | 0.0916 | 0.0877 | 0.906 | 0.771 | 0.528 |
-| chronos_cov ~ | 192 | 0.3656 | 0.5030 | 0.0943 | 0.0906 | 0.880 | 0.374 | 0.158 |
-| chronos_cov_iv ~ | 192 | 0.3185 | 0.4614 | 0.0816 | 0.0865 | 0.906 | 0.771 | 0.053 |
+| chronos_uni ~ | 192 | 0.3579 | 0.5026 | 0.0916 | 0.0877 | 0.906 | 0.771 | 0.528 |
+| chronos_cov ~ | 192 | 0.3643 | 0.5030 | 0.0943 | 0.0906 | 0.880 | 0.374 | 0.158 |
+| chronos_cov_iv ~ | 192 | 0.3200 | 0.4614 | 0.0816 | 0.0865 | 0.906 | 0.771 | 0.053 |
 
 ## Diebold-Mariano vs HAR (QLIKE; negative = beats HAR)
 
@@ -35,9 +35,9 @@ Two caveats, stated rather than buried. (i) Across the HAR family the frozen est
 | har_sv | -2.163 | 0.0318 | 188 |
 | har_ic | -2.804 | 0.0056 | 192 |
 | har_iv_x | -3.440 | 0.0007 | 192 |
-| chronos_uni | -0.206 | 0.8369 | 192 |
-| chronos_cov | 0.174 | 0.8619 | 192 |
-| chronos_cov_iv | -2.612 | 0.0097 | 192 |
+| chronos_uni | -0.519 | 0.6041 | 192 |
+| chronos_cov | 0.112 | 0.9108 | 192 |
+| chronos_cov_iv | -2.496 | 0.0134 | 192 |
 
 ## Diebold-Mariano vs HAR-IV — same information set
 
@@ -47,7 +47,7 @@ HAR-IV is log-HAR plus log(VXN). Any model fed VXN beats plain HAR trivially, be
 |---|---|---|---|
 | har_ic | 1.327 | 0.1861 | 192 |
 | har_iv_x | -1.347 | 0.1796 | 192 |
-| chronos_cov_iv | 0.429 | 0.6685 | 192 |
+| chronos_cov_iv | 0.553 | 0.5806 | 192 |
 
 ## Event-sliced QLIKE (mean)
 
@@ -61,9 +61,9 @@ HAR-IV is log-HAR plus log(VXN). Any model fed VXN beats plain HAR trivially, be
 | har_sv | 0.2688 (6) | 0.3187 (8) | 0.3201 (12) | 0.3221 (162) |
 | har_ic | 0.2386 (6) | 0.3092 (8) | 0.2666 (12) | 0.3225 (166) |
 | har_iv_x | 0.3197 (6) | 0.3317 (8) | 0.1588 (12) | 0.3122 (166) |
-| chronos_uni | 0.1972 (6) | 0.3946 (8) | 0.3453 (12) | 0.3658 (166) |
-| chronos_cov | 0.2923 (6) | 0.4071 (8) | 0.1374 (12) | 0.3828 (166) |
-| chronos_cov_iv | 0.3261 (6) | 0.3748 (8) | 0.1183 (12) | 0.3299 (166) |
+| chronos_uni | 0.2091 (6) | 0.3949 (8) | 0.3299 (12) | 0.3635 (166) |
+| chronos_cov | 0.2950 (6) | 0.4021 (8) | 0.1355 (12) | 0.3815 (166) |
+| chronos_cov_iv | 0.3332 (6) | 0.3789 (8) | 0.1162 (12) | 0.3314 (166) |
 
 ## Full-sample paired per-origin (all origins in phase)
 
@@ -75,7 +75,7 @@ Win rate and mean difference answer different questions. A high win rate with no
 | har_x vs har | 192 | 122 | 63.5% | 0.000215 | 0.3533 vs 0.3624 | 0.1644 vs 0.1564 | 162% |
 | har_sv vs har | 188 | 103 | 54.8% | 0.215 | 0.3201 vs 0.3604 | 0.1510 vs 0.1564 | 88% |
 | har_iv vs har | 192 | 104 | 54.2% | 0.279 | 0.3118 vs 0.3624 | 0.1629 vs 0.1564 | 72% |
-| chronos_cov vs chronos_uni | 192 | 93 | 48.4% | 0.718 | 0.3656 vs 0.3604 | 0.1521 vs 0.1883 | -489% |
+| chronos_cov vs chronos_uni | 192 | 91 | 47.4% | 0.516 | 0.3643 vs 0.3579 | 0.1533 vs 0.1876 | -369% |
 
 ### Heavy-earnings slice, paired per-origin (cutoff 5.0% of index weight)
 
@@ -83,7 +83,7 @@ Win rate and mean difference answer different questions. A high win rate with no
 |---|---|---|---|---|---|---|---|
 | har_x vs har | 0.2053 vs 0.3423 | 0.0651 vs 0.0835 | 8/12 | 0.3877 | 2025-11-19 | 50% | 7/11 |
 | har_iv_x vs har_iv | 0.1588 vs 0.2545 | 0.0483 vs 0.0688 | 7/12 | 0.7744 | 2025-11-19 | 49% | 6/11 |
-| chronos_cov vs chronos_uni | 0.1374 vs 0.3453 | 0.0410 vs 0.1509 | 9/12 | 0.1460 | 2025-11-19 | 51% | 8/11 |
+| chronos_cov vs chronos_uni | 0.1355 vs 0.3299 | 0.0412 vs 0.1334 | 10/12 | 0.0386 | 2025-11-19 | 55% | 9/11 |
 
 ## 30-calendar-day horizon vs VXN (log variance)
 

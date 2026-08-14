@@ -149,10 +149,25 @@ def main() -> None:
         protocol = yaml.safe_load(source)
     _verify_jump(protocol["jump_target"])
     _verify_regime(protocol["regime_transition"])
+    # SCOPE, stated precisely because the earlier banner overstated it. This
+    # module re-derives features, thresholds, targets, lags and fences from the
+    # raw source, and recomputes every loss and verdict from the stored
+    # probability columns. It does NOT re-fit the HMM or the logistic models,
+    # and does NOT re-derive p_history / p_atm / p_surface / p_logistic /
+    # p_hmm. A look-ahead injected into the forecast models themselves is
+    # therefore invisible to it -- demonstrated by an audit that swapped in a
+    # full-sample HMM fit and smoothed gammas and still saw this print PASSED.
+    # Independent re-derivation is implemented for the repair study in
+    # src/verify_regime_repair.py and is the standard this module should meet.
     print(
         "TARGET/REGIME VERIFICATION PASSED: source hash, component reconciliation, "
         "Cboe lags, annual thresholds, completed targets, filtered-state sums, "
-        "five-phase losses, clean fence, and both frozen verdicts independently match"
+        "five-phase losses and clean fence independently re-derived from source; "
+        "verdict arithmetic recomputed from the stored forecast probabilities. "
+        "NOTE: the forecasts themselves are NOT independently reproduced — the "
+        "HMM and logistic fits are taken from the pipeline, so this check cannot "
+        "detect leakage inside those models (see src/verify_regime_repair.py for "
+        "the stronger standard)."
     )
 
 

@@ -72,7 +72,7 @@ The project then moved through several questions:
 
 | Question | What happened | Interpretation | Details |
 |---|---|---|---|
-| Can foundation models beat a simple volatility model? | No. Chronos-2 and TiRex-2 did not beat HAR-IV, the HAR model that also sees VXN. | Model complexity did not add information beyond a small linear model plus the option-implied level. | [Clean results](reports/results_clean.md), [full findings](reports/FINDINGS.md) |
+| Can foundation models beat a simple volatility model? | **Undetermined — not "no".** Chronos-2 and TiRex-2 did not beat HAR-IV, but the clean window cannot tell "no difference" from "a difference several times larger than any plausible one": the comparison's verdict is `inconclusive`, its MDE is 14% of HAR's loss, and resolving the gap it shows would take 4,919 origins against the 192 available. | The often-quoted reading — "model complexity added nothing" — is **not supported**. It is a failure to reject on an underpowered design. | [Methodology fork](reports/METHODOLOGY_FORK.md), [clean results](reports/results_clean.md), [full findings](reports/FINDINGS.md) |
 | Do macro calendars and earnings improve the forecast? | Not reliably. The well-powered earnings comparison was flat, and the concentration defence pointed the wrong way. | Widely known scheduled information appears priced or too small at this horizon. | [Diagnostic results](reports/results_diagnostic.md), [holdings audit](reports/qqq_nport_audit.md) |
 | How much leverage information does VXN absorb? | The joint Wald statistic on three return-asymmetry terms falls from 103.19 without VXN to 62.63 with it: about 40% attenuation, with a strongly significant remainder. | This is the clearest positive measurement in the project. The residual information is real in-sample but worth only about 1.8% of diagnostic QLIKE out of sample (DM p=0.159). | [Research amendments](reports/AMENDMENTS.md#2026-08-12-fourth--ledger-closing-test-har_iv_lev), [standing findings](reports/FINDINGS.md) |
 | Does short-end term slope help? | It improved QLIKE by 5.3%/7.0% in 2022-2023 but only 0.2%/0.9% in 2024-2025. | The interesting hypothesis is regime-conditional: slope may matter when the front end is dislocated. That yearly pattern is now inspected, so it is prospective-only. | [Independent signal verification](reports/signal_study/verification.md) |
@@ -105,6 +105,13 @@ something a lower forecasting loss establishes on its own.
 
 ## Where to start
 
+- [How this was built](reports/HOW_THIS_WAS_BUILT.md) — **read this first if you
+  are judging whether to trust anything here.** This repository was produced
+  with heavy AI assistance over a short calendar window. That document states
+  the division of labour, the guardrails, and a ledger of all 22 corrections the
+  guardrails caught — including one round where a set of corrections was
+  documented, tested and reported without ever having been implemented, and
+  several where the correction inherited the defect it was correcting.
 - [Standing findings](reports/FINDINGS.md) — the current conclusions and the
   evidence hierarchy.
 - [Free-data source ledger](reports/FREE_DATA_SOURCES.md) — official versus
@@ -113,7 +120,10 @@ something a lower forecasting loss establishes on its own.
 - [GBM functional-form study](reports/gbm_study/results.md) — frozen result,
   timing qualification, and [post-result QLIKE/SHAP audit](reports/gbm_study/post_result_diagnostics.md).
 - [Extended-history transition study](reports/representation_study/tail_classical.md) —
-  1999-onward data, ranking metrics, HMM repair, and reviewer controls.
+  1999-onward data, ranking metrics, HMM repair, and reviewer controls. Read the
+  [pooling diagnostic](reports/representation_study/pooling_diagnostic.md)
+  alongside it: most of the headline AUC is between-fold, and a score with zero
+  within-year information scores above two of the published numbers.
 - [TiRex latent probe](reports/representation_study/latent_probe.md) and
   [99-control k=1 follow-up](reports/representation_study/latent_k1_confirmation.md),
   plus the [Eidos-derived noise diagnostic](reports/representation_study/noise_robustness.md).
@@ -126,7 +136,14 @@ something a lower forecasting loss establishes on its own.
 - [Independent five-path verification](reports/research_paths/verification.md) —
   source hashes, membership/as-of checks, and metric recomputation.
 - [Clean-window results](reports/results_clean.md) — the original QQQ forecast
-  comparison.
+  comparison. **Read it against the methodology fork below**, which supersedes
+  several of its rows.
+- [Methodology fork](reports/METHODOLOGY_FORK.md) — four defects that changed
+  conclusions: a grid-dependent point estimator, failures-to-reject reported as
+  nulls, post-hoc specifications scored as confirmatory, and overlapping-window
+  `n` reported as effective `n`. Additive by construction: `make scenarios`
+  writes `_est`/`_inf`/`_v2` reports beside the frozen ones, which still
+  reproduce byte-for-byte from the default command line.
 - [Orthogonal-signal verification](reports/signal_study/verification.md) — the
   sealed term-slope holdout and year-by-year stability.
 - [Target and regime findings](reports/TARGET_REGIME_FINDINGS.md) — SPX jumps,
@@ -263,9 +280,15 @@ options data), and NQ futures 23-hour-session RV (Databento GLBX).
   HAR, event-sliced QLIKE, and at 30 calendar days: Mincer–Zarnowitz plus the
   encompassing regression against VXN.
 - **Point-variance convention:** quantile models get a truncated-mean estimator
-  (trapezoid of exp(q) over the τ grid). It understates the true mean
-  identically across quantile models, so their QLIKE ranking is fair; EWMA uses
-  its native variance forecast and is flagged accordingly.
+  (trapezoid of exp(q) over the τ grid). It understates the true conditional
+  mean by **0.866–0.873** across five HAR specifications, but by **0.812–0.883
+  (7.05pp)** across every quantile model actually scored — `persistence` sits
+  at 0.812. So QLIKE *levels* are wrong by ~13%, are not comparable across
+  quantile grids at all, and rankings are **not** guaranteed safe: on the clean
+  window `har_sv vs har` crosses α=0.05 when the estimator is corrected. EWMA
+  uses its native variance forecast, is not understated, and is flagged
+  accordingly. `--estimator smearing` replaces this with exact Duan smearing;
+  see [`reports/METHODOLOGY_FORK.md`](reports/METHODOLOGY_FORK.md).
 
 ## Power — read before believing anything
 
@@ -410,7 +433,8 @@ make fetch-jump-target       # tests first; commit-pinned Oxford-Man SPX source
 make jump-target             # 2014-2017 jump-event comparison
 make regime-transition       # forward-filtered two-state QQQ diagnostic
 make regime-repair           # Platt calibration + incremental-state holdout
-make verify-target-regime    # independent target/timing/metric audits
+make verify-target-regime    # targets/timing/metrics re-derived from source;
+                             # forecasts NOT independently refit (see banner)
 ```
 
 The SPX jump surface comparison failed. It used Oxford-Man five-minute RV and

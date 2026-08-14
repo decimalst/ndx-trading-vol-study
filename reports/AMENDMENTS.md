@@ -561,3 +561,253 @@ open interest, correcting the original source description, but undocumented
 upstream provenance keeps it private-research-only. None of these audits creates
 a new predictive result. See `reports/FREE_DATA_SOURCES.md` for the current
 acquisition and rights ledger.
+
+---
+
+## 2026-08-13 — the methodology fork was documented but not implemented
+
+**`config.yaml` unchanged. No frozen report moved: `results_clean.md`,
+`results_diagnostic.md` and `results_clean_dec.md` are byte-for-byte identical
+before and after this entry, re-verified by
+`tests/test_methodology.py::TestFrozenReportsUnchanged`.**
+
+### What was wrong
+
+`reports/METHODOLOGY_FORK.md`, `src/methodology.py` and
+`tests/test_methodology.py` all described the four conclusion-changing
+corrections, and the `_est`/`_inf`/`_v2` reports sat in `reports/`. The code
+that produced them did not exist. `src/models.py` had no smearing or
+reconstruction estimator, `src/config.py` had no registry loader,
+`src/experiment.py` had no `--estimator`/`--inference` flags, and the
+`make scenarios` command the fork document tells the reader to run was not a
+target. Of the 28 tests in the fork's own suite, 12 failed on a clean checkout:
+11 errors and one failure, the latter being the CLI rejecting its own
+documented arguments.
+
+The corrected reports were therefore unreproducible artifacts. The guardrail
+that catches this for the pre-registered reports — byte-for-byte reproduction
+from the default command line — had no counterpart for the fork, which is
+precisely why the fork is where it happened.
+
+### What was restored
+
+- `models.smearing_mean_var`, `models.mean_var_from_quantiles`
+  (`trunc`/`lognormal`/`tail_ext`), `models.rescore_mean_var`, and
+  `estimator=` on `run_har`/`run_persistence`.
+- `config.load_spec_registry` / `config.spec_status`, applying
+  `max(phase_start, specified_on, available_from)` by rule.
+- `--estimator` / `--inference` on `src.experiment`, with the 2x2 scenario
+  routing, the specification-status section, the power/equivalence DM columns,
+  the replication panel, and overlap-aware 30-day inference.
+- `make test-methodology`, `make baselines-smearing`, `make scenarios`,
+  `make scenarios-all`. The empirical targets are gated on the test suite, as
+  every other empirical target in this repository is.
+
+Fidelity check: the restored smearing estimator reproduces the surviving
+`*_sm.parquet` forecasts to 0.0 relative error on `har`, `har_iv`, `har_iv_x`
+and `persistence`, and the restored `tail_ext` reproduces the published
+`trunc` and `tail_ext` rows of the fork document's reconstruction table
+exactly. The restoration is the original method, not a lookalike.
+
+### What changed in the numbers, and what did not
+
+**No verdict changed.** Every `A better` / `B better` / `equivalent` /
+`inconclusive` in every corrected table is what it was.
+
+Three things did move, all of them defects rather than data:
+
+1. **Chronos-2 / TiRex-2 reconstructed rows (`~`).** Their previously published
+   values are not reproducible by `trunc`, `lognormal` or `tail_ext`, i.e. by
+   any method the repository contains or documents. They came from a fourth
+   scheme that no longer exists and was never specified precisely enough to
+   rebuild. The rows are now `tail_ext` throughout. The visible consequence is
+   `chronos_cov_iv` vs `har_iv`: DM 0.429 → 0.553, and origins-to-resolve
+   8,191 → 4,919. The verdict, `inconclusive`, is unchanged, as is the
+   headline that the comparison was never a null. `METHODOLOGY_FORK.md` and
+   the affected reports are updated. A new test,
+   `test_reconstruction_table_matches_the_published_one`, pins the published
+   table to the code so this cannot recur silently — the pre-existing test
+   asserted only inequalities, which a wide family of schemes satisfies.
+   The `lognormal` reference row is corrected from 0.945–0.968 / −4.6% /
+   2.28pp to 0.952–0.962 / −4.3% / 1.00pp for the same reason.
+
+2. **Two clean-window sentences were printed into the diagnostic report as
+   fact.** The 30-day section stated "a lag/n ratio near 0.19 and understates
+   se(beta) by about 3x" in both phases; on the diagnostic window the ratio is
+   0.01 and the three standard errors are 0.061 (HAC), 0.060 (bootstrap) and
+   0.090 (refits) — HAC is essentially fine there. The section also closed with
+   "At n_eff=117 this section cannot reject anything", directly contradicting
+   the `har_cum` row above it (c_model=0.196, bootstrap p=0.034). Both are now
+   computed per phase; the closing caveat is conditional on n_eff.
+
+3. **A premium labelled with a median from a different sample.** The premium
+   line printed the phase-wide median VXN (24.1) beside a figure evaluated on
+   the shorter sample that has a realized 30-day target (median 23.8). Now
+   both come from the same frame.
+
+Also reconciled: `flip k` for `har_iv_x vs har_iv` was published as 3 in
+`methodology.py`, 4 in `METHODOLOGY_FORK.md` and 5 in `results_clean_v2.md`.
+The computed value is 5; the first two were stale.
+
+### What this does not fix
+
+The fork's own outputs still have no byte-for-byte fence — only the frozen
+pre-registered reports do. The new pinning test covers the estimator table,
+not the reports. Nothing here revisits any frozen verdict or changes a
+pre-registered quantity.
+
+**Correction to the sentence that stood here.** It originally ended "…or
+reopens the clean window." That was false, and an adversarial audit run the
+same day caught it: the restored replication panel reopened the clean window
+for the two quarantined models. See the next entry.
+
+---
+
+## 2026-08-13 (second) — adversarial audit of the restoration
+
+**`config.yaml` unchanged. The three frozen reports remain byte-for-byte
+identical.** An eight-lens adversarial audit was run against the repository
+immediately after the restoration above, with every finding put through two
+independent refutation passes. 39 raw findings, 20 verified, **14 survived**,
+6 refuted. The eight items acted on here are the ones that were reproduced
+independently before being fixed.
+
+### The clean window was reopened for two quarantined models
+
+`har_lev` and `har_iv_lev` are `DIAGNOSTIC_ONLY`: admitted for diagnostic-window
+testing during the freeze, suppressed from clean-phase reports "so testing them
+cannot become a peek". The guard lived inside the h=1 table loop only. The
+corrected fork's replication panel is driven by `FULL_PAIRS` and calls
+`_qlike_series(...)` directly, which had no guard — so `results_diagnostic_v2.md`
+and `results_diagnostic_inf.md` published clean-window win rates, mean gaps and
+a `replicates? yes` verdict for both models over all 192 clean origins, and
+`METHODOLOGY_FORK.md` cited `har_lev vs har` as replicating cleanly.
+
+Suppressing a row from a report is not a quarantine. **~38% of the eventual
+≥500-origin gate draw is spent for these two models, with direction known**, and
+no re-run un-spends it. When the gate opens their clean result must be read as
+carrying a 192-origin peek. Nothing in the return-asymmetry conclusion depends
+on it — that rests on the diagnostic window at n=2463.
+
+Fixed at the source: `_quarantined()` reads `diagnostic_only` from
+`spec_registry.yaml` (a field previously computed by `config.spec_status` and
+read by nothing) and is enforced in both the table loop and `_qlike_series`.
+`TestDiagnosticOnlyQuarantine` pins it, including a test that greps the
+generated reports for the leak.
+
+### "The estimator fix changes no rankings" was false
+
+`har_sv vs har`, with **both sides exactly smeared on identical 188 origins**,
+moves from DM −1.615 (p=0.1080) to −2.163 (**p=0.0318**) — across the
+pre-registered α on the estimator switch alone. The only `equivalent` verdict in
+the clean window (`har_ic vs har_iv`, p_TOST=0.039) also requires the estimator
+fix: under the inference fix alone it is `inconclusive` at p_TOST=0.119, and
+**none** of the three rows in that table earns a null. The section heading
+claiming those numbers were "(fix 2)" was showing fixes 1+2; both tables are
+now printed.
+
+The stated mechanism was also backwards. QLIKE differentials are not
+scale-invariant, so a common multiplicative factor moves DM on its own rather
+than cancelling. And the "0.866–0.873 / 0.70pp near-common factor" holds only
+over the five models it was measured on: 0.866–0.883 across the HAR family,
+**0.812–0.883 (7.05pp)** across every quantile model scored, with `persistence`
+at 0.812. The pinning test quantified over the narrow set while the prose
+quantified over all models, so it passed while the claim was false; it now pins
+all three scopes.
+
+### Both 30-day standard errors were misdescribed
+
+The figure published as the "honest standard error" (0.458) was the median
+*within-subsample* SE — the SE of a beta fitted to ~8 points, algebraically
+≈ √21 × the full-sample OLS se. It is not a standard error of the reported
+coefficient, and the ratios formed against HAC from it (3x, then 2.9x) are
+withdrawn. The key is renamed `se_within_subsample`; the reports now lead with
+`beta_sd_across_phases`, which was computed all along and never printed.
+
+Worse, **the bootstrap that replaced HAC is itself anti-conservative**: against
+a DGP at this data's measured persistence its nominal-95% interval covers
+**82.2%** (reproduced independently) and `p_zero` has true size ~10–16%. So
+`results_diagnostic_v2.md`'s "a significant `c_model` above is a real rejection"
+— resting on `har_cum` p=0.034 — was unsupported and is struck.
+`TestBootstrapCalibration` now measures coverage in CI so this cannot be
+forgotten again. Abandoning HAC(32) at lag/n=0.19 is still correct; the honest
+statement is that no interval in that section is calibrated, which strengthens
+rather than weakens the n_eff=8 conclusion.
+
+### Failures to reject were reported as established nulls
+
+`FINDINGS.md` opened with H1 as "a well-powered null for a difference of that
+size, not an underpowered maybe", under a section headed "H1 is dead past
+arguing". Measured: MDE = 14.1% of HAR's loss, **43× the observed gap**; power
+against the gap actually observed = **0.050**; origins needed = **357,040**;
+95% CI on the gap = [−9.5%, +10.2%] of HAR QLIKE; TOST p = 0.297. The corrected
+verdict is `inconclusive`. The headline numbers quoted there (0.3688 / 0.3734 /
+DM −0.259 / p 0.796) also reproduce nowhere — the code gives 0.3719 / 0.3731 /
+−0.065 / 0.9483.
+
+H1's real answer lives on the diagnostic window, where n=2463 gives the
+equivalence test power: `har_x vs har` equivalent at p_TOST=0.006,
+`har_iv_x vs har_iv` at 0.013. Corrected in `FINDINGS.md` and in README's
+"Results in plain English", which had rendered it as a flat "No."
+
+### The pre-committed earnings gate cannot fire at its own trigger
+
+`next_evaluation.earnings_slice_confirmatory.min_heavy_earnings_days: 40` gates
+the registered confirmatory DM test. Heavy-earnings days arrive at ~6.2–6.4% of
+origins. Over **every** rolling 414-session window in the sample (the sessions
+between `clean_start` and the `at_date: 2027-06-30` trigger) the maximum count
+attained is **34**; 40 is reached in 0.1% of 500-session windows. Forty heavy
+days accrues at ~640–750 origins, roughly 2028. The field was also read by no
+code, so nothing computed the shortfall.
+
+This is the repository's signature defect found once more: a registered test
+that cannot deliver its verdict at its own registered date. `config.yaml` is
+frozen, so it is **disclosed, not repaired** — `cmd_evaluate` now reads the
+field and prints the reachability arithmetic beside the gate in every corrected
+report.
+
+### One verifier claimed independence it does not have
+
+`verify_target_regime.py` re-derives features, thresholds, targets, lags and
+fences from raw, but never re-derives a single forecast probability — it
+aggregates the pipeline's own stored columns. The audit demonstrated the
+consequence by injecting real look-ahead into `src.regime_transition` (full-
+sample HMM fit, smoothed rather than filtered gammas) and watching the verifier
+still print `VERIFICATION PASSED … both frozen verdicts independently match`.
+Currently inert: an independent re-derivation reproduces every stored
+probability at max abs error 0.0, and leakage pushes toward PASS while both
+frozen verdicts are FAIL, so it cannot have manufactured the published
+negatives. The banner and the README line now state the actual scope.
+`src/verify_regime_repair.py` already meets the stronger standard and is cited
+as the target.
+
+### Not fixed here — recorded so the next reviewer starts from them
+
+- **F6 — since confirmed and published additively.** The tail-ranking
+  scoreboard pools 24 annual folds whose event rates range 0.000–0.808, four
+  containing no event at all, so most scored pairs straddle two different years.
+  Reproduced independently: a fold-constant score with **zero within-year
+  information** reaches phase-mean AUC **0.8317**, above the published
+  `p_rv_percentile` (0.8111), `p_hmm_platt` (0.8294) and the latent sparse k=1
+  rung (0.8153) that cleared the 99-control gate. Within-fold AUC for every
+  model is far lower (0.677–0.731) and the ordering **reorders** — the
+  calibrated HMM is best within fold while ranking third pooled, so
+  "HMM augmentation adds +0.0010 AUC while reducing lift" is a pooled-metric
+  artifact. The prior-folds-only version of the same score sits at chance
+  (0.5072), confirming the between-fold component is not itself forecastable.
+  Both the pooling and the control design are *registered*, so no verdict is
+  rewritten: `src/pooling_diagnostic.py` and
+  `reports/representation_study/pooling_diagnostic.md` publish it alongside
+  (`make pooling-diagnostic`). A future ranking protocol must stratify within
+  fold before comparing.
+- **F7.** The NQ study's "no evaluable folds" appears to be a rolling-window
+  construction artifact rather than a shortage of history; a gap-tolerant
+  reading reportedly yields 316 origins and a null. Changing it alters a frozen
+  protocol and must be run as an additive, labelled sensitivity.
+- **F12.** `noise_robustness`'s HAR arm aggregates on the variance scale while
+  the impulse is injected on the log scale; all eight Gaussian HAR-vs-foundation
+  intervals reportedly flip significance under the repo's other convention. The
+  direction survives, the interval exclusions may not. The within-foundation
+  Chronos-vs-TiRex comparison is untouched.
+- 19 lower-severity findings were not adversarially verified and carry no
+  claim here.

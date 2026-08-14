@@ -109,6 +109,42 @@ chronos-clean:
 evaluate:
 	$(PY) -m src.experiment evaluate --phase $(or $(PHASE),clean) --source $(or $(SOURCE),daily)
 
+# --- Corrected-methodology fork ------------------------------------------
+# reports/METHODOLOGY_FORK.md. Additive: the four corrections land in parallel
+# `_est`/`_inf`/`_v2` reports and the frozen `results_{phase}.md` are never
+# touched. test-methodology asserts exactly that, so it gates the run rather
+# than merely accompanying it.
+test-methodology:
+	$(PY) -m unittest tests.test_methodology
+
+# Post-result, additive: measures how much of the registered ranking statistic
+# is between-fold rather than within-fold. Refits nothing, rewrites no verdict.
+pooling-diagnostic:
+	$(PY) -m src.pooling_diagnostic
+
+# Exact-smearing forecasts for every model with recoverable residuals.
+# Chronos-2/TiRex-2 have none and are reconstructed at evaluate time.
+baselines-smearing: test-methodology
+	$(PY) -m src.experiment baselines --phase $(or $(PHASE),all) --estimator smearing --source $(or $(SOURCE),daily)
+
+# The full 2x2: frozen, estimator-only, inference-only, both. Each correction
+# is readable in isolation instead of as one undifferentiated "corrected".
+# The first line rewrites the FROZEN report; it is in the list deliberately, so
+# every scenario run re-proves that the default path still reproduces it.
+EV=$(PY) -m src.experiment evaluate --phase $(or $(PHASE),clean) --source $(or $(SOURCE),daily) $(EXTRA)
+
+scenarios: test-methodology
+	$(EV)
+	$(EV) --estimator smearing
+	$(EV) --inference corrected
+	$(EV) --estimator smearing --inference corrected
+
+# Every scenario on every window, including the decile grid: 12 reports.
+scenarios-all: test-methodology
+	$(MAKE) scenarios PHASE=clean
+	$(MAKE) scenarios PHASE=diagnostic
+	$(MAKE) scenarios PHASE=clean EXTRA="$(GRID)"
+
 # --- TiRex-2 comparison -------------------------------------------------
 # TiRex-2 emits only deciles (0.1..0.9), and mean_var is not comparable across
 # quantile grids, so the whole model set is recomputed on that grid into a

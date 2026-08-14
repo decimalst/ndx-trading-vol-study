@@ -5,11 +5,34 @@ pre-registered 7-point quantile grid. Source: `reports/results_clean.md`.
 
 ## Verdict: the primary hypothesis failed. Record it as a negative.
 
-**H1 — FAILED.** `chronos_cov` mean QLIKE 0.3688 vs log-HAR-RV 0.3734.
-DM = −0.259, **p = 0.796**. The calendar covariates — the original thesis of the
-experiment — bought 1.2% of QLIKE, which is indistinguishable from zero at
-n=192. This is a well-powered null for a difference of that size, not an
-underpowered maybe.
+**H1 — FAILED TO REJECT. Not a null.** `chronos_cov` mean QLIKE 0.3719 vs
+log-HAR-RV 0.3731, DM = −0.065, **p = 0.948**, n=192. The calendar covariates —
+the original thesis of the experiment — bought 0.3% of QLIKE.
+
+> **Corrected 2026-08-13.** This block previously read "0.3688 vs 0.3734,
+> DM = −0.259, p = 0.796 … a well-powered null for a difference of that size,
+> not an underpowered maybe." Both halves were wrong. The numbers appear
+> nowhere else in the repository and do not reproduce from the code; the
+> figures above do. And the design is not well-powered — it is the opposite:
+>
+> | quantity | value |
+> |---|---|
+> | minimum detectable effect at 80% power | 0.0525 = **14.1% of HAR's loss** |
+> | MDE ÷ observed gap | **43×** |
+> | power against the gap actually observed | **0.050** |
+> | origins needed to resolve that gap | **357,040** |
+> | 95% CI on the gap | [−9.5%, +10.2%] of HAR QLIKE |
+> | TOST vs a 3% margin | p = 0.297 — does **not** reject non-equivalence |
+>
+> Power of 0.050 against the observed effect means the test is no more likely
+> to detect it than to fire by chance. The corrected evaluator's verdict is
+> **`inconclusive`**, not `equivalent` (`reports/results_clean_inf.md`). H1 is
+> unresolved on this window, not answered.
+>
+> What *is* established, on the 13× larger diagnostic window: the calendar
+> covariates are **equivalent** to their controls at n=2463, p_TOST = 0.013
+> (`reports/results_diagnostic_v2.md`). Cite the diagnostic window for the
+> calendar-covariate null. The clean window cannot carry it.
 
 **H3 — FAILED.** Every encompassing coefficient on a non-VXN-fed model is
 negative (`har_cum` −0.360, `chronos_uni` −0.216, `chronos_cov` −0.159; none
@@ -98,12 +121,28 @@ one Invesco snapshot for all history, a look-ahead sitting directly on the
 earnings slice. Removing it made `chronos_cov` *worse*, so part of its already
 negligible edge was the look-ahead.
 
-## H1 is dead past arguing
+## H1 is unresolved on this window — and settled against on the diagnostic one
+
+*(This section was headed "H1 is dead past arguing". Retitled 2026-08-13: on
+the clean window the corrected verdict is `inconclusive`, with power 0.050
+against the observed gap. See the correction in the verdict block above.)*
 
 `chronos_cov` 0.3722 is worse than `chronos_uni` 0.3719. DM vs HAR **−0.064,
-p = 0.95**. The calendar covariates are not merely unhelpful to Chronos-2, they
-are marginally harmful. `chronos_cov_iv` vs HAR-IV: **+0.285, p = 0.777**, point
-estimate favouring five OLS terms.
+p = 0.95**. `chronos_cov_iv` vs HAR-IV: **+0.285, p = 0.777**, point estimate
+favouring five OLS terms.
+
+Every one of those is a failure to reject on a design whose MDE is 14% of HAR's
+loss — they are consistent with the covariates being useless *and* with their
+being worth several times any plausible effect. The sentence "the calendar
+covariates are not merely unhelpful to Chronos-2, they are marginally harmful"
+is a reading of a point estimate with a 95% interval spanning ±10% of HAR's
+QLIKE, and is withdrawn.
+
+The claim that survives is the diagnostic-window one, where n=2463 gives the
+equivalence test real power: `har_x vs har` is **equivalent** at p_TOST = 0.006
+and `har_iv_x vs har_iv` at p_TOST = 0.013. That is a positive finding of no
+effect. It is the finding the clean window was always too short to produce, and
+it is what should be cited for H1.
 
 ## Ranking (clean window, 192 origins, pre-registered grid)
 
@@ -124,7 +163,19 @@ estimate favouring five OLS terms.
 `har_sv` swaps the daily term for its signed halves; no new market data, only a
 split share from free hourly bars. QLIKE 0.3371 vs HAR 0.3731 (−9.6%,
 DM −1.615, **p = 0.108**) — not significant, but ~8x the effect the calendar
-covariates ever produced, and it beats every Chronos variant not fed VXN. It
+covariates ever produced, and it beats every Chronos variant not fed VXN.
+
+**Estimator-dependent, flagged 2026-08-13.** Under the corrected point-forecast
+estimator (`reports/METHODOLOGY_FORK.md`), with both sides exactly smeared on
+the identical 188 origins, this reads QLIKE 0.3201 vs 0.3624, DM **−2.163,
+p = 0.0318** — significant at the pre-registered α. Nothing about the data
+changed; only the estimator did. This is the one comparison in the repository
+whose significance turns on that fix, and it is why the fork's "the estimator
+changes no rankings" claim was withdrawn. It does not promote `har_sv` to a
+confirmatory result: its specification date is unrecorded, so
+`spec_registry.yaml` treats it as exploratory, and n_req = 315 against n = 188.
+
+It
 also has the cleanest violation independence in the table (**p_ind = 0.959**).
 Constraint: yfinance caps 5-minute history at 60 days, so the split comes from
 ~7 hourly returns/session and only reaches back to 2023-09-13 (532 pre-window
@@ -410,7 +461,19 @@ VXN remains the stronger single input. But it is the best model here that uses
 
 `har_lev` is registered in `DIAGNOSTIC_ONLY` and is **mechanically suppressed
 from clean-phase reports**, so testing it during the freeze cannot become a
-peek. It enters the clean window at the gate or not at all.
+peek.
+
+**That claim was too strong, and the exception is recorded rather than
+quietly repaired.** Until 2026-08-13 the suppression covered the clean
+*report* but not the clean *window*: the corrected fork's replication panel
+scored `har_lev` and `har_iv_lev` on all 192 clean origins and published their
+win rates, mean gaps and a `replicates? yes` verdict. The draw is therefore
+~38% spent for these two models (192 of the ≥500 gate origins), with direction
+known. The guard now lives in `_qlike_series` and is enforced by
+`tests/test_methodology.py::TestDiagnosticOnlyQuarantine`. When the gate opens,
+`har_lev`'s clean-window result must be read as carrying a 192-origin peek —
+not as a clean draw. Nothing in the return-asymmetry conclusion above depends
+on it; that rests on the diagnostic window at n=2463.
 
 ## The carry study: conditional selection FAILS its pre-committed criterion
 
