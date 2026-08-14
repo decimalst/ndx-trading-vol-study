@@ -811,3 +811,60 @@ as the target.
   Chronos-vs-TiRex comparison is untouched.
 - 19 lower-severity findings were not adversarially verified and carry no
   claim here.
+
+---
+
+## 2026-08-13 (third) — residualized latent probe
+
+**`config.yaml` unchanged. No frozen verdict rewritten. The three frozen reports
+still match their pinned digests.** A new protocol, `residual_probe.yaml`, was
+frozen before `src/residual_probe.py` was written, and
+`tests/test_residual_probe.py` (20 contracts) was written before both. This is a
+**post-result, additive** diagnostic on a sample the parent study already
+inspected; it is not a new holdout.
+
+### Why
+
+The parent probe established that transition proximity is *decodable* from
+TiRex-2's latent state. Two later results made that the weaker question: the
+selected coordinates track smoothed volatility and prior-session VXN, and the
+pooling diagnostic showed the registered statistic is mostly between-fold. So
+the question became whether anything in the latent state is **orthogonal to
+realized-volatility history** and still ranks transitions *within* a fold.
+
+### Design
+
+Per annual fold: regress each of the 512 coordinates on
+`[1, log_rv_d, log_rv_w, log_rv_m]` using **training rows only**, apply those
+coefficients to held-out rows, reselect k=1 on training residuals, fit a ridge
+logistic on training rows, score held-out rows. Three fits per fold, all fenced
+against leakage by pre-written contracts. The benchmark is refit in the same
+pipeline so it differs from the augmented model by exactly one column. Inference
+is paired over the **19 usable folds** (the five ranking phases inside a fold
+are offsets of the same year and are averaged first); the five dropped folds are
+the zero-event years, which contain no orderable within-fold pair.
+
+### Result — `inconclusive`, and the design is the binding constraint
+
+| quantity | value |
+|---|---|
+| HAR median R² on a latent coordinate | 0.305 (fold range 0.242–0.748) |
+| residualized k=1 alone, within fold | 0.6298 |
+| HAR alone → HAR + residualized k=1, within fold | 0.7162 → 0.7176 |
+| mean fold ΔAUC | −0.0006 (10/19 folds improved, sign p = 1.000) |
+| bootstrap 95% CI | [−0.0165, +0.0155] |
+| MDE at 80% power | 0.0234 — **37× the observed effect** |
+| p_TOST vs a ±0.01 margin declared before the run | 0.1383 |
+
+Two things worth separating. First, the R² result contradicts the expectation
+that motivated the test: three HAR terms explain only ~30% of a typical
+coordinate's variance, so the latent is **not** mostly RV history in a variance
+sense — but the part that ranks transitions is apparently the part HAR already
+has. Second, and more useful: **no attainable sample settles this design.**
+Resolving a one-AUC-point effect at 80% power would take ~104 annual folds, and
+the fold-to-fold spread (−0.075 to +0.086) is an order of magnitude larger than
+the effect sought. The correct conclusion is that the question needs a different
+unit of inference, not more history.
+
+Reported as `inconclusive` rather than as the null it superficially resembles —
+the equivalence test does not reject, so no claim of "no effect" is earned.

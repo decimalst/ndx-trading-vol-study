@@ -8,11 +8,25 @@ __pycache__/
 .coverage
 htmlcov/
 
-# External market-data downloads are hash-audited locally but never committed.
+# --- Data policy -----------------------------------------------------------
+# One rule, applied consistently (settled 2026-08-13; it previously was not).
+#
+# COMMITTED: the specific third-party inputs the published results depend on,
+# so the pipeline reproduces from a clean clone -- raw Cboe CSVs, the pinned
+# Oxford-Man archive, the Invesco QQQ holdings snapshot, SEC N-PORT extracts,
+# and the derived Cboe close panel. These are redistributed here for
+# verification of the results in this repository. Each retains its original
+# terms; see LICENSE and DATA-LICENSE.md. Nothing under data/ or calendars/ is
+# relicensed by this repository's MIT grant.
+#
+# NOT COMMITTED: bulk third-party archives that are large, are not needed to
+# reproduce a published number, or whose upstream provenance is undocumented.
+# These are hash-audited locally and their fetch commands are in docs/DATA.md.
+#
+# The previous version of this file excluded the DERIVED Cboe panel on
+# redistribution grounds while committing the RAW Cboe source it is built from,
+# which was backwards and is the inconsistency this comment replaces.
 data/free_sources/raw/
-# Cboe close values are useful locally but their download terms do not permit
-# treating the normalized history as a redistributable repository artifact.
-data/free_sources/processed/cboe_daily_local.parquet
 
 # Resumable TiRex extraction/probe caches; consolidated, hash-audited artifacts
 # live beside these directories and are versioned.

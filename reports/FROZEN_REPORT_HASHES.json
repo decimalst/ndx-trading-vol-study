@@ -1,0 +1,9 @@
+{
+  "_comment": "SHA-256 of the frozen pre-registered reports. TestFrozenReportsUnchanged previously read current bytes, overwrote the file, then compared -- so it could only detect drift introduced by that subprocess, and consecutive runs would launder a corruption into the 'frozen' record. These digests are the external anchor. Changing one is a pre-registration amendment and must be logged in reports/AMENDMENTS.md.",
+  "_pinned_on": "2026-08-13",
+  "sha256": {
+    "results_clean.md": "768604933e64319c8882aec2e152487b1020eb0be22c6467bd2f0f1c12540e9e",
+    "results_diagnostic.md": "64102552f41cab9430977b2690877319c222a55fefceac5266588cb15500a194",
+    "results_clean_dec.md": "b7b7bfc0e1503bb87f9740e0de09cf15b88fa969fc934f25678f27a1dcccfeed"
+  }
+}

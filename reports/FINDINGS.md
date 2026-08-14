@@ -597,12 +597,30 @@ Two things are true at once and both belong in the sentence:
   statistical existence, decisively (χ² = 62.63, p < 1e-6), corroborated
   out-of-sample by the 55.5% paired count.
 - The forecast value they buy is **small**: QLIKE 0.3438 → 0.3376, **+1.8%**,
-  DM p = 0.159. At n=2463 that test has real power against moderate effects, so
-  p = 0.159 is not merely "underpowered" — it is mild evidence that whatever
-  gain exists is genuinely small.
+  DM p = 0.159 under the frozen point-forecast estimator.
 
-**Correct statement: not subsumed, and worth about 1.8% of QLIKE that does not
-survive a significance test.**
+> **This one reverses under the corrected estimator, 2026-08-13.** With both
+> sides exactly smeared on the same 2,463 origins, `har_iv_lev vs har_iv` reads
+> **DM −2.166, p = 0.0304** — significant, verdict `A better`
+> (`reports/results_diagnostic_v2.md`). It is one of only three DM comparisons
+> in the entire repository that cross α=0.05 when the estimator is corrected,
+> and it is the one that matters most, because it is the project's clearest
+> positive measurement.
+>
+> The sentence that stood here — "worth about 1.8% of QLIKE that does not
+> survive a significance test" — is therefore **estimator-dependent, and false
+> under the estimator the methodology fork calls correct**. It is withdrawn.
+>
+> Do not over-read the reversal either. `har_iv_lev` is an exploratory
+> specification (`spec_registry.yaml`: specified 2026-08-11, after the phase
+> opened), the TOST returns `inconclusive` at p_TOST = 0.321 under both
+> estimators, and n_req = 4,120. The honest statement is: **the gain is small,
+> its significance depends on which point estimator is used, and the frozen
+> report's p = 0.159 should not be quoted on its own.**
+
+**Correct statement: not subsumed; worth about 1.8% of QLIKE, whose statistical
+significance is estimator-dependent (p = 0.159 frozen, p = 0.030 corrected) and
+which no equivalence test resolves either way.**
 
 ### Context, so this does not inflate in the retelling
 

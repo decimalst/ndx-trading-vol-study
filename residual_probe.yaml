@@ -1,0 +1,152 @@
+# Residualized latent probe — pre-registration
+#
+# FROZEN BEFORE IMPLEMENTATION, 2026-08-13. Written before src/residual_probe.py
+# exists and before any residualized score has been computed.
+#
+# WHY THIS EXISTS
+# The parent latent probe (representation_study.yaml, latent_k1_confirmation.yaml)
+# asked whether five-session stress-state transition proximity is DECODABLE from
+# TiRex-2's frozen 512-dimensional latent state. It is: sparse k=1 reaches 0.8153
+# pooled phase-mean AUC, and 0 of 99 matched controls reach it.
+#
+# Two later findings make that the wrong question.
+#   1. The coordinate characterization showed the selected dimensions track
+#      smoothed 5/22-day volatility and prior-session VXN. So the probe
+#      established that the latent encodes VOLATILITY LEVEL -- which direct RV
+#      history already supplies.
+#   2. reports/representation_study/pooling_diagnostic.md showed the pooled
+#      phase-mean AUC is dominated by between-fold event-rate variation: a
+#      fold-constant score with zero within-year information reaches 0.8317,
+#      ABOVE the 0.8153 the probe achieved.
+#
+# So the interesting question is not "is transition proximity decodable" but
+# "does the latent state encode anything ORTHOGONAL to realized-volatility
+# history that ranks transitions WITHIN a year". This protocol asks exactly that
+# and nothing else.
+#
+# This is a POST-RESULT, ADDITIVE diagnostic on an already-inspected sample. It
+# is not a new historical holdout and cannot restore falsifiability to the
+# parent study. It rewrites no frozen verdict.
+
+version: 1
+written_on: "2026-08-13"
+status: post_result_additive
+
+question: >
+  Does any TiRex-2 latent coordinate, after the direct HAR realized-volatility
+  feature set has been projected out of it, carry incremental within-fold
+  ranking information about the five-session stress-state transition event?
+
+sample:
+  source: data/representation_study/tail_classical_forecasts.parquet
+  latents: data/representation_study/latent_embeddings.parquet
+  expected_origins: 5592
+  expected_folds: 24
+  expected_phases: 5
+  # The parent sample ends before the sealed NDX clean window opens. Asserted at
+  # runtime; the run aborts rather than scoring a clean-window origin.
+  clean_window_start: "2025-11-03"
+  last_origin_must_precede_clean_window: true
+
+# --- the residualization, fixed before implementation ---------------------
+residualization:
+  # Projected out of every latent coordinate. This is the parent study's own
+  # benchmark feature set, so "orthogonal to RV history" means orthogonal to the
+  # exact thing the latent has to beat.
+  features: [log_rv_d, log_rv_w, log_rv_m]
+  intercept: true
+  method: ordinary least squares, one regression per coordinate
+  fit_rows: >
+    TRAINING rows of that fold only (origins at or before the fold cutoff with
+    completed targets). Coefficients are then APPLIED to the held-out rows.
+    Fitting on held-out rows, or on the pooled sample, is leakage and is
+    forbidden.
+  applied_to: [training rows, held-out rows]
+  report_also: >
+    per-fold median R^2 of HAR on the latent coordinates. If HAR explains most
+    of the latent variance, that is itself the finding and must be printed
+    whatever the ranking result.
+
+# --- the probe, matched to the parent so the comparison is like-for-like ---
+probe:
+  rung: sparse k=1
+  selector: >
+    largest absolute standardized mean difference between event and non-event
+    TRAINING rows, computed on RESIDUALIZED training coordinates only. Same
+    selector as the parent k=1 rung (src/latent_probe_study.py).
+  model: ridge logistic regression
+  fit_rows: training rows only
+  scored_rows: held-out fold rows only
+  k_family: one registered rung only; no ladder, no family correction
+
+# --- scoring, using the corrected metric, not the pooled one --------------
+scoring:
+  primary_metric: >
+    WITHIN-FOLD pair-weighted AUC: AUC computed separately in each
+    (ranking_phase, fold_year) cell that contains both classes, then weighted by
+    cell row count. Pooled phase-mean AUC is reported for continuity with the
+    parent study but is NOT the registered statistic -- see pooling_diagnostic.md.
+  scores_compared:
+    bench: existing p_benchmark (HAR ridge logistic)
+    raw_k1: existing p_latent_sparse_k1_99 (non-residualized, for contrast)
+    resid_k1: NEW residualized k=1 alone
+    bench_plus_resid: NEW ridge logistic on [HAR features + selected residual coordinate]
+  primary_comparison: bench_plus_resid minus bench
+  unit_of_inference: >
+    the 24 annual folds. The five ranking phases inside a fold are offsets of the
+    same year and are NOT independent, so phases are averaged within a fold
+    FIRST, giving 24 paired observations. Treating 100 fold-phase cells as
+    independent would repeat the pseudo-replication this repository has already
+    corrected twice.
+
+inference:
+  paired_test: two-sided sign test plus a paired bootstrap over the 24 folds
+  bootstrap_draws: 10000
+  seed: 20260813
+  alpha: 0.05
+  # REQUIRED, and the reason this block exists at all. A non-significant paired
+  # test is NOT evidence of no effect. Every reported comparison carries a
+  # minimum detectable effect and an equivalence test, and the verdict is
+  # three-way. See src/methodology.py and reports/METHODOLOGY_FORK.md.
+  equivalence_margin_auc: 0.01
+  margin_rationale: >
+    One AUC point. Declared before running. Chosen as a materiality floor: the
+    parent study's own headline gap between the benchmark (0.8704) and the
+    HMM-augmented model (0.8714) is 0.0010, so a margin of 0.01 is ten times the
+    difference the parent study treated as negligible.
+  verdict:
+    adds: paired test rejects at alpha AND mean delta > 0
+    equivalent: equivalence test rejects non-equivalence against the margin
+    inconclusive: neither
+  power_reporting_required: true
+
+decision: >
+  ADDS -> the latent state carries a genuinely new transition variable beyond RV
+  history, and that is a positive result worth pursuing.
+  EQUIVALENT -> the representation is a lossy re-encoding of realized-volatility
+  history, stated as a measurement rather than as a failure to reject.
+  INCONCLUSIVE -> this sample cannot answer it; report the MDE and stop. No
+  re-specification of the selector, the rung, the feature set, or the margin
+  after seeing any result.
+
+reachability_check:
+  # The defect this repository has produced most often is a registered criterion
+  # that cannot be met at its own resolution. Checked before running:
+  note: >
+    The primary test is a paired comparison over 24 folds with a continuous
+    statistic, so it has no discreteness floor above alpha (unlike an exact
+    randomization p-value over K controls, which floors at 1/(K+1)). A two-sided
+    sign test over 24 folds attains p=0.0000019 at its extreme and p<0.05 from
+    18/24 onward, so the criterion is attainable. The equivalence route is also
+    attainable: with 24 folds the TOST can reject non-equivalence at a 0.01
+    margin provided the observed spread is small enough, which is exactly the
+    condition under which "no effect" deserves to be asserted.
+
+must_report:
+  - per-fold median R^2 of HAR on the latent coordinates
+  - within-fold pair-weighted AUC for all four scores
+  - pooled phase-mean AUC for all four scores, labelled as not the registered statistic
+  - the 24 per-fold deltas, so the reader can see the spread rather than a mean
+  - minimum detectable effect and the equivalence p-value
+  - which coordinates were selected, and whether they differ from the parent's
+  - explicit statement that this is post-result and additive

@@ -54,13 +54,35 @@ Two claims that stood here were wrong:
   rescaling *both* forecasts by a single common factor moves the DM statistic
   on its own, and in fact reproduces most of the observed movement. The common
   factor is the mechanism, not the reason there is no effect.
-- *"It was never the reason one model outranked another."* False on this
-  window. `har_sv vs har`, with **both sides exactly smeared on identical 188
-  origins**, moves from DM −1.615 (p=0.1080) to −2.163 (p=0.0318) — crossing
-  the pre-registered α=0.05 on the estimator switch alone. Two further orderings
-  become undetermined (`har`/`chronos_cov`, `har_ic`/`chronos_cov_iv`), though
-  both of those pairs are inferentially empty (DM p ≥ 0.60 under both
-  estimators) and mix an exact row against a reconstructed one.
+- *"It was never the reason one model outranked another."* False. A full sweep
+  of every DM row in every window and grid finds **three comparisons that cross
+  α=0.05 on the estimator switch alone**, all of them on exactly-scored rows
+  with no reconstruction involved, all in the same direction (not significant →
+  significant):
+
+  | window / grid | comparison | frozen | corrected |
+  |---|---|---|---|
+  | clean, pre-registered | `har_sv vs har` | −1.615 (p=0.1080) | −2.163 (**p=0.0318**) |
+  | clean, deciles | `har_sv vs har` | −1.072 (p=0.2850) | −2.163 (**p=0.0318**) |
+  | diagnostic | `har_iv_lev vs har_iv` | −1.410 (p=0.1585) | −2.166 (**p=0.0304**) |
+
+  The third is the consequential one: it is the leverage result, the project's
+  clearest positive measurement, whose standing conclusion was "worth ~1.8% of
+  QLIKE that does not survive a significance test." Under the corrected
+  estimator it does survive. See `reports/FINDINGS.md`.
+
+  Two further orderings become undetermined (`har`/`chronos_cov`,
+  `har_ic`/`chronos_cov_iv`), though both of those pairs are inferentially empty
+  (DM p ≥ 0.60 under both estimators) and mix an exact row against a
+  reconstructed one.
+
+  **The general statement, since one example understates it:** QLIKE is
+  `rv/v − log(rv/v) − 1`, so scaling a forecast by a common factor `c` shifts
+  the two terms by `1/c` and `log c` respectively and does not cancel. **Every
+  DM row involving a quantile model is estimator-dependent**, and the frozen
+  reports' DM columns should be treated as provisional near the threshold. The
+  three rows above are the ones where that dependence changes a verdict at
+  α=0.05 today; on a different sample the set would differ.
 
 What survives is the narrower and still-useful statement: correcting the
 estimator moves QLIKE **levels** far more than it moves DM statistics, and no

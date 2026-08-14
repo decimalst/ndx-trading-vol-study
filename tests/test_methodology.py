@@ -375,6 +375,37 @@ class TestFrozenReportsUnchanged(unittest.TestCase):
     PHASES = [("clean", []), ("diagnostic", []),
               ("clean", ["--quantile-grid", "deciles"])]
 
+    def test_frozen_reports_match_their_pinned_digests(self):
+        """The external anchor, and the only check here that is not self-healing.
+
+        `test_default_evaluate_reproduces_the_frozen_reports` below reads the
+        current bytes, overwrites the file, and compares -- so it detects drift
+        introduced by THAT subprocess and is structurally incapable of noticing
+        that a frozen report had already diverged. Worse, it is self-healing:
+        with a corrupted dependency, consecutive invocations launder the
+        corruption into the "frozen" record and then go green. These digests
+        were pinned once and are compared without writing anything, so a report
+        that drifted at any point in the past still fails.
+
+        Changing a digest is a pre-registration amendment, not a test fix.
+        """
+        import hashlib
+        import json
+        pin = ROOT / "reports" / "FROZEN_REPORT_HASHES.json"
+        self.assertTrue(pin.exists(), "frozen-report digests are missing")
+        want = json.loads(pin.read_text())["sha256"]
+        self.assertTrue(want, "no digests pinned")
+        for name, digest in want.items():
+            path = ROOT / "reports" / name
+            self.assertTrue(path.exists(), f"{name} is missing")
+            got = hashlib.sha256(path.read_bytes()).hexdigest()
+            self.assertEqual(
+                got, digest,
+                f"{name} no longer matches its pinned digest. If this change is "
+                f"intended, it is an amendment to a frozen pre-registered "
+                f"artifact: log it in reports/AMENDMENTS.md and re-pin "
+                f"deliberately. Do not silently update the hash.")
+
     def test_default_evaluate_reproduces_the_frozen_reports(self):
         if not (ROOT / "data" / "processed" / "master_daily.parquet").exists():
             self.skipTest("no processed master; run `make features` first")

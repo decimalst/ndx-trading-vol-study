@@ -12,6 +12,17 @@ setup: .venv/bin/python
 smoke:
 	$(PY) -m tests.test_smoke
 
+# Run EVERY test module. Before 2026-08-13 there was no such target and no
+# tests/__init__.py, so `python -m unittest discover` collected 0 tests and
+# printed OK -- most of the suite was unreachable from any make target. A guard
+# nobody runs is the same failure as a guard that was never implemented.
+test:
+	$(PY) -m unittest discover -s tests -t . -v
+
+# Fast subset for pre-commit: the methodology contract (which includes the
+# frozen-report digest pin) plus the smoke test.
+test-fast: test-methodology smoke
+
 test-signal-safety:
 	$(PY) -m unittest tests.test_signal_safety
 
@@ -117,10 +128,42 @@ evaluate:
 test-methodology:
 	$(PY) -m unittest tests.test_methodology
 
+# Re-pin the frozen-report digests. REQUIRED after a forward-accrual round:
+# `daily-update` legitimately extends results_clean.md with new origins, which
+# breaks the SHA-256 pin, which fails test-methodology, which blocks
+# baselines-smearing / scenarios / scenarios-all. Without this target the whole
+# corrected fork becomes unrunnable after every accrual -- a deadlock introduced
+# with the pin itself on 2026-08-13.
+#
+# This is deliberately a separate, explicit command and NOT a dependency of
+# anything. Re-pinning is an amendment to a frozen pre-registered artifact: run
+# it only when you intend the frozen reports to have changed, and log why in
+# reports/AMENDMENTS.md. Never run it to make a red test go green.
+repin-frozen-reports:
+	@echo "Re-pinning frozen report digests. This is an AMENDMENT."
+	@echo "Log the reason in reports/AMENDMENTS.md before committing."
+	$(PY) -c "import hashlib, json, pathlib; \
+files = ['results_clean.md', 'results_diagnostic.md', 'results_clean_dec.md']; \
+d = {f: hashlib.sha256((pathlib.Path('reports')/f).read_bytes()).hexdigest() for f in files}; \
+p = pathlib.Path('reports/FROZEN_REPORT_HASHES.json'); \
+m = json.loads(p.read_text()); m['sha256'] = d; \
+p.write_text(json.dumps(m, indent=2) + chr(10)); \
+[print(f'  {k}  {v}') for k, v in d.items()]"
+
 # Post-result, additive: measures how much of the registered ranking statistic
 # is between-fold rather than within-fold. Refits nothing, rewrites no verdict.
 pooling-diagnostic:
 	$(PY) -m src.pooling_diagnostic
+
+test-residual-probe:
+	$(PY) -m unittest tests.test_residual_probe
+
+# Post-result, additive: does anything in TiRex's latent state survive
+# projecting out HAR realized-volatility history and still rank transitions
+# within fold? Gated on its pre-written contracts, which fence the three
+# separate per-fold fits against leakage.
+residual-probe: test-residual-probe
+	$(PY) -m src.residual_probe
 
 # Exact-smearing forecasts for every model with recoverable residuals.
 # Chronos-2/TiRex-2 have none and are reconstructed at evaluate time.

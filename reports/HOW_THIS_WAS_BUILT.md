@@ -310,6 +310,32 @@ previous version of this document ended "There is no reason to believe this
 document is the last one." That was written on 2026-08-12 and was proven right
 the following day, by a margin of nine.
 
+## 8 → 12 → 22 is not a converging sequence
+
+It is tempting to read three rounds of 8, 12 and 22 findings as a process
+tightening up. It is not. Each round's findings had **survived every prior
+round**, including rounds explicitly commissioned to attack the work. The count
+went up, not down, and the third round found defects in the corrections produced
+by the second. Nothing in that trajectory licenses the inference that the
+remaining defect count is small.
+
+Reviewing harder is not the same as converging, and a reader has no way to tell
+the two apart from the outside. So this document states the standard rather than
+leaving it to be inferred:
+
+> **This process counts as converged when a review round produces zero
+> conclusion-changing findings.** That has not happened. Until it does, every
+> result in this repository is provisional by the project's own standard — not
+> merely by a reader's suspicion.
+
+Two things follow. First, "22 corrections caught" is not a claim of quality; it
+is a claim about the *rate at which this method produces defects*, which is the
+honest thing to take from it. Second, the open surface is enumerated rather than
+gestured at: `docs/OPEN_FINDINGS.md` lists the confirmed-but-unfixed findings,
+the guardrail holes, and the 19 leads that were never adversarially verified. A
+sentence like "19 lower-severity findings remain" makes the backlog
+unenumerable; a list makes it a backlog.
+
 ## What to distrust in this repository
 
 * Every headline QQQ table uses a Garman–Klass daily estimate plus the squared
