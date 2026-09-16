@@ -1,0 +1,171 @@
+study_id: commodity_implied_wave24
+specified_on: '2026-09-08'
+wave: 24
+evidence_class: exploratory_reused_history_current_commodity_iv_captures
+objective: Joint delayed oil and gold ETF option-implied volatility adds five-session QQQ variance information
+  beyond market and matched commodity-return risk controls
+sealed_start: '2025-11-03'
+forecast:
+  origin_start: '2016-01-01'
+  origin_end: '2025-10-20'
+  development:
+  - '2016-01-01'
+  - '2019-12-31'
+  evaluation:
+  - '2020-01-01'
+  - '2025-10-20'
+  source_end: '2025-10-20'
+  minimum_train: 1000
+evaluation_stability:
+- - '2020-01-01'
+  - '2022-12-31'
+- - '2023-01-01'
+  - '2025-10-20'
+measurement:
+  asset: QQQ
+  horizon: 5
+  gk_floor: 1.0e-10
+  target: Arithmetic mean of next five full-calendar GK-plus-overnight daily variance proxies; all five
+    constituents required
+  units: Native squared log returns, without annualization
+  market_baseline:
+  - const
+  - lrv_d
+  - lrv_w
+  - lrv_m
+  - lev_d
+  - lev_w
+  - lev_m
+  - liv
+  - lvix
+  - term
+  - xasset_stress
+  - market_stress
+  matched_additions:
+  - uso_ret
+  - uso_r2
+  - uso_lrv5
+  - uso_lrv22
+  - gld_ret
+  - gld_r2
+  - gld_lrv5
+  - gld_lrv22
+  candidate_additions:
+  - lovx
+  - lgvz
+  commodity_return: For each ETF, log previous full-QQQ-session price minus log two-sessions-prior price;
+    square without repair
+  commodity_history: Log strict arithmetic mean of five or22 delayed squared returns; all constituents
+    required; genuine zero returns retained and zero rolling mean leaves log unknown
+  commodity_iv: Joint delayed OVX,GVZ columns; 2*(log(index)-log(100))-log(252); fixed unit reparameterization,
+    not a measured variance risk premium
+availability:
+  commodity_source_floor: '2009-01-02'
+  commodity: Reindex USO/GLD prices and OVX/GVZ to full QQQ calendar, mask pre-floor cells before numerical
+    conversion, lag levels one full QQQ session before returns/windows/log-IV; no filling or missing-date
+    compression
+  market: Inherited idealized after-current-close QQQ/cross-ETF convention; VXN,VIX,VIX9D delayed one
+    observed QQQ session; prior-only252/min126 stress scaling
+  training: Expanding common22-feature-complete rows; labels mature by previous observed QQQ session of
+    first feature-complete monthly application; no query-label scheduling
+  calendar: Never compress reference calendar before lags, targets, fitting cutoffs or modulo5 offsets
+  capture: Exact current Cboe byte captures are authenticated; original immutable historical vintages
+    and exact file-update clock remain unverified
+estimator:
+  kind: Separate OLS log-target fits with exact training-residual Duan smearing
+  feature_scaling: Common-training population means and standard deviations; intercept unchanged
+  minimum_scale: 1.0e-12
+  rank_rcond: 1.0e-12
+  failure: No dropping, clipping, alternative lookbacks, tuning, estimator fallback or arm-specific rows
+inference:
+  blocks:
+  - 21
+  - 63
+  - 126
+  bootstrap_draws: 399999
+  seed: 20260930
+  hac_lags: 126
+  minimum_phase_observations: 505
+  minimum_slice_observations: 252
+  minimum_offset_observations: 63
+  effect_threshold_absolute: 0.005
+  wave_alpha: 8.333333333333334e-05
+  cumulative_alpha: 0.05
+  loss: q/f-log(q/f)-1; absolute paired QLIKE differences
+  seed_rule: seed+5*1000000+phase_code*10000+block; development0 evaluation1; shared draws across contrasts
+  block_units: Retained paired observations in date order, with gaps disclosed
+  p_rule: Two-sided centered-null plus-one bootstrap; phase maximum across blocks and Bartlett HAC; hypothesis
+    maximum across both phases
+  gate: Both controls must pass Holm2 wavealpha and Holm144 .05, delta<=-.005 both phases, negative every
+    modulo5 offset and fixed evaluation slice; all fixed daily support floors required
+calibration:
+  rho: 0.8
+  n: 1500
+  burn_in: 200
+  replications: 200
+  bootstrap_draws: 499
+  minimum_envelope_coverage: 0.9
+comparisons:
+  controls:
+  - matched
+  - market
+  new_hypotheses: 2
+  inherited_hypotheses: 142
+  cumulative_hypotheses: 144
+  failure: Any registered invalid or unsupported attempt retains both hypotheses as unevaluable p1
+source_pins:
+  data/raw/daily_ohlc.parquet: 710290d8ad8569172559334b23e423b50ecf7cd10f0fd8ec24a9fc29608bca4d
+  data/raw/cross_asset_daily.parquet: 53f11ec90fc4f68d8d5592af7d893f7b5707bfbd7799b0735681acc18e72ac53
+  data/raw/vxn_daily.parquet: 61c4dec804140831dadb05d0cc34ee38a3d662d31c5b6fc258eae6918b455731
+  data/raw/short_dated_iv.parquet: b238e404c661140a47f8eb7cd2bbdf5931fe7f2aa62151a08f71b52a20bfd39c
+prior:
+  path: reports/claims_release/predictive/metrics.json
+  sha256: 3d0325eb0ba493a436abd539dde41a9b9dcbc90b57c380e3494e6b7f99f76f24
+  publication: reports/claims_release/predictive/publication_audit.json
+  publication_sha256: 57bc07a84501e223178bfbb2e72998c92eedfd835e6976643b2df43ce159e13f
+  freeze: reports/claims_release/predictive/freeze_record.json
+  freeze_sha256: e9571e94246a2c8714c19d936034b49cbf4a7f88c4a551425cc7103c544a772a
+verification:
+  coefficient_atol: 1.0e-07
+  coefficient_rtol: 1.0e-07
+  forecast_atol: 1.0e-12
+  forecast_rtol: 1.0e-07
+  numerical_atol: 1.0e-12
+  numerical_rtol: 1.0e-09
+  score_atol: 1.0e-10
+  score_rtol: 1.0e-08
+  probabilities_and_identities: Exact
+outputs:
+  data: data/commodity_implied/forecasting
+  reports: reports/commodity_implied/predictive
+limitations:
+- Reused historical partitions remain exploratory; no untouched-future confirmation or execution-profit
+  claim
+- Current Cboe captures do not prove immutable original daily vintages or exact CSV publication clocks;
+  a one-session lag does not repair later revisions
+- OVX/GVZ are30-calendar-day USO/GLD option-implied measures; ETF implied risk and close-return controls
+  differ from the five-session QQQ variance proxy
+- Cboe quotation-source change2022-06-06 and strike-selection change2025-02-10 remain in the fixed sample;
+  no favorable subperiod selection
+- Inherited vendor adjusted-price revisions, OHLC calendar completeness and Cboe historical/back-calculation
+  limitations remain
+- Incidental external search snippets were disclosed during source discovery; no protected QQQ/SPX outcome
+  series was accessed or used
+- No single-index attribution, causal commodity effect, measured variance risk premium or universal orthogonality
+  claim
+commodity:
+  admission: reports/commodity_implied/SOURCE_ADMISSION.json
+  admission_sha256: 139f29534f2a6ea289d265d128c938f5ff898d35556b640457d2175f4b2c5385
+  checkpoint: reports/commodity_implied/SOURCE_PRE_ADMISSION.json
+  checkpoint_sha256: 802dd08edab6cd08e13f52777f10e8f5757849edac2f0216a9cf961bba2b35e2
+  histories:
+    OVX:
+      raw: data/commodity_implied/source_metadata/OVX_History.response
+      raw_sha256: c68b3fcf25ecc3fd13eaa2595ac179b4f753315d0b51e1366acb2c3a2adf6079
+      parsed: data/commodity_implied/OVX_parsed.json
+      parsed_sha256: 93edce26b59b34918564d7e0bd21b04eef5bbc49fba1021216f8181774f36354
+    GVZ:
+      raw: data/commodity_implied/source_metadata/GVZ_History.response
+      raw_sha256: 7a2acc2e858d48fc02b7e4925f88df0716fba0a69e7d64c7d94039ed49771fd3
+      parsed: data/commodity_implied/GVZ_parsed.json
+      parsed_sha256: ffa5bc4abc206da3f8da73646eb483448c1b370fbcb4af00a6df0b37ee660d69

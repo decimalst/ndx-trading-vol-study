@@ -1,0 +1,716 @@
+{
+  "capture_sha256": "da234a12d5c3912d06c5b8ac470e4be5657378e061ff9c59b08955203861931c",
+  "created_utc": "2026-09-08T23:53:06.424268+00:00",
+  "next_gate": "Before numerical conversion, authenticate each document release date, auction identity, original tenor, original/correction relationship, units and category totals. Unknown or out-of-scope release dates are not numerical inputs.",
+  "no_numerical_feature_or_outcome_selection": true,
+  "records": [
+    {
+      "reasons": [
+        "first_2010_3-Year"
+      ],
+      "record": {
+        "announcement_date": "2010-01-07",
+        "auction_date": "2010-01-12",
+        "cusip": "912828MG2",
+        "documents": {
+          "announcement_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/A_20100107_4.pdf"
+          ],
+          "announcement_xml": [
+            "https://www.treasurydirect.gov/xml/A_20100107_4.xml"
+          ],
+          "competitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/R_20100112_3.pdf"
+          ],
+          "competitive_xml": [
+            "https://www.treasurydirect.gov/xml/R_20100112_3.xml"
+          ],
+          "noncompetitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/NCR_20100112_3.pdf"
+          ],
+          "special_pdf": []
+        },
+        "security_term": "3-Year",
+        "security_type": "Note",
+        "term_bucket": "3-Year"
+      }
+    },
+    {
+      "reasons": [
+        "first_2010_10-Year",
+        "earliest_shortened_term_label_requires_original_term_confirmation"
+      ],
+      "record": {
+        "announcement_date": "2010-01-07",
+        "auction_date": "2010-01-13",
+        "cusip": "912828LY4",
+        "documents": {
+          "announcement_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/A_20100107_3.pdf"
+          ],
+          "announcement_xml": [
+            "https://www.treasurydirect.gov/xml/A_20100107_3.xml"
+          ],
+          "competitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/R_20100113_1.pdf"
+          ],
+          "competitive_xml": [
+            "https://www.treasurydirect.gov/xml/R_20100113_1.xml"
+          ],
+          "noncompetitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/NCR_20100113_1.pdf"
+          ],
+          "special_pdf": []
+        },
+        "security_term": "9-Year 10-Month",
+        "security_type": "Note",
+        "term_bucket": "10-Year"
+      }
+    },
+    {
+      "reasons": [
+        "first_2010_30-Year"
+      ],
+      "record": {
+        "announcement_date": "2010-01-07",
+        "auction_date": "2010-01-14",
+        "cusip": "912810QD3",
+        "documents": {
+          "announcement_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/A_20100107_1.pdf"
+          ],
+          "announcement_xml": [
+            "https://www.treasurydirect.gov/xml/A_20100107_1.xml"
+          ],
+          "competitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/R_20100114_1.pdf"
+          ],
+          "competitive_xml": [
+            "https://www.treasurydirect.gov/xml/R_20100114_1.xml"
+          ],
+          "noncompetitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/NCR_20100114_1.pdf"
+          ],
+          "special_pdf": []
+        },
+        "security_term": "29-Year 10-Month",
+        "security_type": "Bond",
+        "term_bucket": "30-Year"
+      }
+    },
+    {
+      "reasons": [
+        "first_2010_2-Year"
+      ],
+      "record": {
+        "announcement_date": "2010-01-21",
+        "auction_date": "2010-01-26",
+        "cusip": "912828MJ6",
+        "documents": {
+          "announcement_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/A_20100121_3.pdf"
+          ],
+          "announcement_xml": [
+            "https://www.treasurydirect.gov/xml/A_20100121_3.xml"
+          ],
+          "competitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/R_20100126_2.pdf"
+          ],
+          "competitive_xml": [
+            "https://www.treasurydirect.gov/xml/R_20100126_2.xml"
+          ],
+          "noncompetitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/NCR_20100126_2.pdf"
+          ],
+          "special_pdf": []
+        },
+        "security_term": "2-Year",
+        "security_type": "Note",
+        "term_bucket": "2-Year"
+      }
+    },
+    {
+      "reasons": [
+        "first_2010_5-Year"
+      ],
+      "record": {
+        "announcement_date": "2010-01-21",
+        "auction_date": "2010-01-27",
+        "cusip": "912828MH0",
+        "documents": {
+          "announcement_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/A_20100121_5.pdf"
+          ],
+          "announcement_xml": [
+            "https://www.treasurydirect.gov/xml/A_20100121_5.xml"
+          ],
+          "competitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/R_20100127_1.pdf"
+          ],
+          "competitive_xml": [
+            "https://www.treasurydirect.gov/xml/R_20100127_1.xml"
+          ],
+          "noncompetitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/NCR_20100127_1.pdf"
+          ],
+          "special_pdf": []
+        },
+        "security_term": "5-Year",
+        "security_type": "Note",
+        "term_bucket": "5-Year"
+      }
+    },
+    {
+      "reasons": [
+        "first_2010_7-Year"
+      ],
+      "record": {
+        "announcement_date": "2010-01-21",
+        "auction_date": "2010-01-28",
+        "cusip": "912828MK3",
+        "documents": {
+          "announcement_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/A_20100121_4.pdf"
+          ],
+          "announcement_xml": [
+            "https://www.treasurydirect.gov/xml/A_20100121_4.xml"
+          ],
+          "competitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/R_20100128_1.pdf"
+          ],
+          "competitive_xml": [
+            "https://www.treasurydirect.gov/xml/R_20100128_1.xml"
+          ],
+          "noncompetitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/NCR_20100128_1.pdf"
+          ],
+          "special_pdf": []
+        },
+        "security_term": "7-Year",
+        "security_type": "Note",
+        "term_bucket": "7-Year"
+      }
+    },
+    {
+      "reasons": [
+        "earliest_linked_nominal_special_notice"
+      ],
+      "record": {
+        "announcement_date": "2010-06-17",
+        "auction_date": "2010-06-22",
+        "cusip": "912828NS5",
+        "documents": {
+          "announcement_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/A_20100617_2.pdf"
+          ],
+          "announcement_xml": [
+            "https://www.treasurydirect.gov/xml/A_20100617_2.xml"
+          ],
+          "competitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/R_20100622_2.pdf"
+          ],
+          "competitive_xml": [
+            "https://www.treasurydirect.gov/xml/R_20100622_2.xml"
+          ],
+          "noncompetitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/NCR_20100622_2.pdf"
+          ],
+          "special_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/BPD_SPL_20100625_1.pdf"
+          ]
+        },
+        "security_term": "2-Year",
+        "security_type": "Note",
+        "term_bucket": "2-Year"
+      }
+    },
+    {
+      "reasons": [
+        "first_2016_3-Year"
+      ],
+      "record": {
+        "announcement_date": "2016-01-07",
+        "auction_date": "2016-01-12",
+        "cusip": "912828N63",
+        "documents": {
+          "announcement_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/A_20160107_2.pdf"
+          ],
+          "announcement_xml": [
+            "https://www.treasurydirect.gov/xml/A_20160107_2.xml"
+          ],
+          "competitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/R_20160112_2.pdf"
+          ],
+          "competitive_xml": [
+            "https://www.treasurydirect.gov/xml/R_20160112_2.xml"
+          ],
+          "noncompetitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/NCR_20160112_2.pdf"
+          ],
+          "special_pdf": []
+        },
+        "security_term": "3-Year",
+        "security_type": "Note",
+        "term_bucket": "3-Year"
+      }
+    },
+    {
+      "reasons": [
+        "first_2016_10-Year"
+      ],
+      "record": {
+        "announcement_date": "2016-01-07",
+        "auction_date": "2016-01-13",
+        "cusip": "912828M56",
+        "documents": {
+          "announcement_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/A_20160107_5.pdf"
+          ],
+          "announcement_xml": [
+            "https://www.treasurydirect.gov/xml/A_20160107_5.xml"
+          ],
+          "competitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/R_20160113_1.pdf"
+          ],
+          "competitive_xml": [
+            "https://www.treasurydirect.gov/xml/R_20160113_1.xml"
+          ],
+          "noncompetitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/NCR_20160113_1.pdf"
+          ],
+          "special_pdf": []
+        },
+        "security_term": "9-Year 10-Month",
+        "security_type": "Note",
+        "term_bucket": "10-Year"
+      }
+    },
+    {
+      "reasons": [
+        "first_2016_30-Year"
+      ],
+      "record": {
+        "announcement_date": "2016-01-07",
+        "auction_date": "2016-01-14",
+        "cusip": "912810RP5",
+        "documents": {
+          "announcement_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/A_20160107_3.pdf"
+          ],
+          "announcement_xml": [
+            "https://www.treasurydirect.gov/xml/A_20160107_3.xml"
+          ],
+          "competitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/R_20160114_1.pdf"
+          ],
+          "competitive_xml": [
+            "https://www.treasurydirect.gov/xml/R_20160114_1.xml"
+          ],
+          "noncompetitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/NCR_20160114_1.pdf"
+          ],
+          "special_pdf": []
+        },
+        "security_term": "29-Year 10-Month",
+        "security_type": "Bond",
+        "term_bucket": "30-Year"
+      }
+    },
+    {
+      "reasons": [
+        "first_2016_2-Year"
+      ],
+      "record": {
+        "announcement_date": "2016-01-21",
+        "auction_date": "2016-01-26",
+        "cusip": "912828P20",
+        "documents": {
+          "announcement_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/A_20160121_6.pdf"
+          ],
+          "announcement_xml": [
+            "https://www.treasurydirect.gov/xml/A_20160121_6.xml"
+          ],
+          "competitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/R_20160126_2.pdf"
+          ],
+          "competitive_xml": [
+            "https://www.treasurydirect.gov/xml/R_20160126_2.xml"
+          ],
+          "noncompetitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/NCR_20160126_2.pdf"
+          ],
+          "special_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/BPD_SPL_20160121_1.pdf"
+          ]
+        },
+        "security_term": "2-Year",
+        "security_type": "Note",
+        "term_bucket": "2-Year"
+      }
+    },
+    {
+      "reasons": [
+        "first_2016_5-Year"
+      ],
+      "record": {
+        "announcement_date": "2016-01-21",
+        "auction_date": "2016-01-27",
+        "cusip": "912828N89",
+        "documents": {
+          "announcement_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/A_20160121_1.pdf"
+          ],
+          "announcement_xml": [
+            "https://www.treasurydirect.gov/xml/A_20160121_1.xml"
+          ],
+          "competitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/R_20160127_2.pdf"
+          ],
+          "competitive_xml": [
+            "https://www.treasurydirect.gov/xml/R_20160127_2.xml"
+          ],
+          "noncompetitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/NCR_20160127_2.pdf"
+          ],
+          "special_pdf": []
+        },
+        "security_term": "5-Year",
+        "security_type": "Note",
+        "term_bucket": "5-Year"
+      }
+    },
+    {
+      "reasons": [
+        "first_2016_7-Year"
+      ],
+      "record": {
+        "announcement_date": "2016-01-21",
+        "auction_date": "2016-01-28",
+        "cusip": "912828P38",
+        "documents": {
+          "announcement_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/A_20160121_5.pdf"
+          ],
+          "announcement_xml": [
+            "https://www.treasurydirect.gov/xml/A_20160121_5.xml"
+          ],
+          "competitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/R_20160128_1.pdf"
+          ],
+          "competitive_xml": [
+            "https://www.treasurydirect.gov/xml/R_20160128_1.xml"
+          ],
+          "noncompetitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/NCR_20160128_1.pdf"
+          ],
+          "special_pdf": []
+        },
+        "security_term": "7-Year",
+        "security_type": "Note",
+        "term_bucket": "7-Year"
+      }
+    },
+    {
+      "reasons": [
+        "2019_duplicate_month_term_group_requires_document_classification"
+      ],
+      "record": {
+        "announcement_date": "2019-06-06",
+        "auction_date": "2019-06-12",
+        "cusip": "9128286T2",
+        "documents": {
+          "announcement_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/A_20190606_4.pdf"
+          ],
+          "announcement_xml": [
+            "https://www.treasurydirect.gov/xml/A_20190606_4.xml"
+          ],
+          "competitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/R_20190612_1.pdf"
+          ],
+          "competitive_xml": [
+            "https://www.treasurydirect.gov/xml/R_20190612_1.xml"
+          ],
+          "noncompetitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/NCR_20190612_1.pdf"
+          ],
+          "special_pdf": []
+        },
+        "security_term": "9-Year 11-Month",
+        "security_type": "Note",
+        "term_bucket": "10-Year"
+      }
+    },
+    {
+      "reasons": [
+        "2019_duplicate_month_term_group_requires_document_classification"
+      ],
+      "record": {
+        "announcement_date": "2019-06-21",
+        "auction_date": "2019-06-21",
+        "cusip": "9128286T2",
+        "documents": {
+          "announcement_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/A_20190621_1.pdf"
+          ],
+          "announcement_xml": [
+            "https://www.treasurydirect.gov/xml/A_20190621_1.xml"
+          ],
+          "competitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/R_20190621_1.pdf"
+          ],
+          "competitive_xml": [
+            "https://www.treasurydirect.gov/xml/R_20190621_1.xml"
+          ],
+          "noncompetitive_pdf": [],
+          "special_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190620_4.pdf"
+          ]
+        },
+        "security_term": "9-Year 11-Month",
+        "security_type": "Note",
+        "term_bucket": "10-Year"
+      }
+    },
+    {
+      "reasons": [
+        "first_2025_3-Year"
+      ],
+      "record": {
+        "announcement_date": "2025-01-02",
+        "auction_date": "2025-01-06",
+        "cusip": "91282CMF5",
+        "documents": {
+          "announcement_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/A_20250102_4.pdf"
+          ],
+          "announcement_xml": [
+            "https://www.treasurydirect.gov/xml/A_20250102_4.xml"
+          ],
+          "competitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/R_20250106_3.pdf"
+          ],
+          "competitive_xml": [
+            "https://www.treasurydirect.gov/xml/R_20250106_3.xml"
+          ],
+          "noncompetitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/NCR_20250106_3.pdf"
+          ],
+          "special_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250102_1.pdf"
+          ]
+        },
+        "security_term": "3-Year",
+        "security_type": "Note",
+        "term_bucket": "3-Year"
+      }
+    },
+    {
+      "reasons": [
+        "first_2025_10-Year"
+      ],
+      "record": {
+        "announcement_date": "2025-01-02",
+        "auction_date": "2025-01-07",
+        "cusip": "91282CLW9",
+        "documents": {
+          "announcement_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/A_20250102_3.pdf"
+          ],
+          "announcement_xml": [
+            "https://www.treasurydirect.gov/xml/A_20250102_3.xml"
+          ],
+          "competitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/R_20250107_2.pdf"
+          ],
+          "competitive_xml": [
+            "https://www.treasurydirect.gov/xml/R_20250107_2.xml"
+          ],
+          "noncompetitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/NCR_20250107_2.pdf"
+          ],
+          "special_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250102_1.pdf"
+          ]
+        },
+        "security_term": "9-Year 10-Month",
+        "security_type": "Note",
+        "term_bucket": "10-Year"
+      }
+    },
+    {
+      "reasons": [
+        "first_2025_30-Year"
+      ],
+      "record": {
+        "announcement_date": "2025-01-02",
+        "auction_date": "2025-01-08",
+        "cusip": "912810UE6",
+        "documents": {
+          "announcement_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/A_20250102_2.pdf"
+          ],
+          "announcement_xml": [
+            "https://www.treasurydirect.gov/xml/A_20250102_2.xml"
+          ],
+          "competitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/R_20250108_2.pdf"
+          ],
+          "competitive_xml": [
+            "https://www.treasurydirect.gov/xml/R_20250108_2.xml"
+          ],
+          "noncompetitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/NCR_20250108_2.pdf"
+          ],
+          "special_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250102_2.pdf"
+          ]
+        },
+        "security_term": "29-Year 10-Month",
+        "security_type": "Bond",
+        "term_bucket": "30-Year"
+      }
+    },
+    {
+      "reasons": [
+        "first_2025_5-Year"
+      ],
+      "record": {
+        "announcement_date": "2025-01-23",
+        "auction_date": "2025-01-27",
+        "cusip": "91282CMG3",
+        "documents": {
+          "announcement_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/A_20250123_5.pdf"
+          ],
+          "announcement_xml": [
+            "https://www.treasurydirect.gov/xml/A_20250123_5.xml"
+          ],
+          "competitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/R_20250127_4.pdf"
+          ],
+          "competitive_xml": [
+            "https://www.treasurydirect.gov/xml/R_20250127_4.xml"
+          ],
+          "noncompetitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/NCR_20250127_3.pdf"
+          ],
+          "special_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250123_1.pdf"
+          ]
+        },
+        "security_term": "5-Year",
+        "security_type": "Note",
+        "term_bucket": "5-Year"
+      }
+    },
+    {
+      "reasons": [
+        "first_2025_2-Year"
+      ],
+      "record": {
+        "announcement_date": "2025-01-23",
+        "auction_date": "2025-01-27",
+        "cusip": "91282CMH1",
+        "documents": {
+          "announcement_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/A_20250123_7.pdf"
+          ],
+          "announcement_xml": [
+            "https://www.treasurydirect.gov/xml/A_20250123_7.xml"
+          ],
+          "competitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/R_20250127_1.pdf"
+          ],
+          "competitive_xml": [
+            "https://www.treasurydirect.gov/xml/R_20250127_1.xml"
+          ],
+          "noncompetitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/NCR_20250127_1.pdf"
+          ],
+          "special_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250123_1.pdf"
+          ]
+        },
+        "security_term": "2-Year",
+        "security_type": "Note",
+        "term_bucket": "2-Year"
+      }
+    },
+    {
+      "reasons": [
+        "first_2025_7-Year"
+      ],
+      "record": {
+        "announcement_date": "2025-01-23",
+        "auction_date": "2025-01-28",
+        "cusip": "91282CMK4",
+        "documents": {
+          "announcement_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/A_20250123_4.pdf"
+          ],
+          "announcement_xml": [
+            "https://www.treasurydirect.gov/xml/A_20250123_4.xml"
+          ],
+          "competitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/R_20250128_3.pdf"
+          ],
+          "competitive_xml": [
+            "https://www.treasurydirect.gov/xml/R_20250128_3.xml"
+          ],
+          "noncompetitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/NCR_20250128_3.pdf"
+          ],
+          "special_pdf": []
+        },
+        "security_term": "7-Year",
+        "security_type": "Note",
+        "term_bucket": "7-Year"
+      }
+    },
+    {
+      "reasons": [
+        "latest_linked_nominal_special_notice"
+      ],
+      "record": {
+        "announcement_date": "2025-08-21",
+        "auction_date": "2025-08-27",
+        "cusip": "91282CNX5",
+        "documents": {
+          "announcement_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/A_20250821_1.pdf"
+          ],
+          "announcement_xml": [
+            "https://www.treasurydirect.gov/xml/A_20250821_1.xml"
+          ],
+          "competitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/R_20250827_3.pdf"
+          ],
+          "competitive_xml": [
+            "https://www.treasurydirect.gov/xml/R_20250827_3.xml"
+          ],
+          "noncompetitive_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/NCR_20250827_3.pdf"
+          ],
+          "special_pdf": [
+            "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250821_2.pdf"
+          ]
+        },
+        "security_term": "5-Year",
+        "security_type": "Note",
+        "term_bucket": "5-Year"
+      }
+    }
+  ],
+  "selection_uses": [
+    "dates",
+    "identity",
+    "document_links",
+    "display_metadata"
+  ],
+  "source_ceiling": "2025-10-20",
+  "source_floor": "2010-01-01",
+  "status": "DOCUMENTARY_SELECTION_ONLY_NO_BODIES_ACQUIRED"
+}

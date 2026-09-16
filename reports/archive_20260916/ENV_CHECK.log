@@ -1,0 +1,2 @@
+.venv/bin/python -m src.envcheck
+environment matches requirements.txt for all numerically load-bearing packages: scikit-learn, numpy, scipy, pandas, statsmodels

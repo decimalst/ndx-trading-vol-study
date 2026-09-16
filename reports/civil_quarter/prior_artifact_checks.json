@@ -1,0 +1,22 @@
+{
+  "status": "UNCHANGED",
+  "prior_manifests": 14,
+  "unique_pins": 1567,
+  "previous_code_files": 233,
+  "manifest_hashes": {
+    "reports/calendar_variance/manifest.json": "521deb0c053c3eb724f2cd84c4644688863ec263ecce62d00c8ea129580bb4c8",
+    "reports/causal_pool/manifest.json": "a775d4491b3dab27f2c36c037090d37a094dfad85c5ff67256acfa262d40f4c2",
+    "reports/cross_moment/manifest.json": "28a3fa3975bd58789d6859850579a472671443937e4de641351eb8f8217c969a",
+    "reports/index_hinge/manifest.json": "7d3c458c255b0d4ee9278a4844269b68249426aeacbeeb436e6350c7b1c4204b",
+    "reports/international_volatility/manifest.json": "530b8439d7b8dcd209d967a90d3affe1ec002a7dc0e4b824deb44c37285ea757",
+    "reports/iterative_signal_search/manifest.json": "5515fc5aea433d9e743bcd31d9bfdb284ebca23005ac3c0fdd6184ab5a15b61f",
+    "reports/joint_risk/manifest.json": "c80e77d076cefd98c0e6d7df6c9dd213638ec486e718a9713055552575dc7848",
+    "reports/macro_overnight/manifest.json": "d50b2523a84c139e87861e2468c829606e6c1a41f8fb17be68e5f4d8da5ab614",
+    "reports/measurement_memory/manifest.json": "c53329dbbc94dc0d8e83aca30284c41e3e0b9e35a3156817837bcadc647625b7",
+    "reports/overnight_index/manifest.json": "49c84753c1589ac7c01e4e3d90e250eca1df6341a30420a8e9d9a766c6e241fd",
+    "reports/relative_risk/manifest.json": "15e5319a2c66e64dfc3692f71d7da279b9d901ec8ed4a43869024a90d27c8e0f",
+    "reports/sign_memory/manifest.json": "47c6bc32556a30ae444a80380a2cd3a0076aa2df511d6814c5cec359cf1dcb0c",
+    "reports/tail_shape/manifest.json": "136cfa954874231d305af552d3f89d7e77bee76d3638a9152f764b425509644d",
+    "reports/target_aligned/manifest.json": "996e9f8f081a69a66dad9c4c611feb6775fc69c5ad9e3630230d55ad97b426d9"
+  }
+}

@@ -1,0 +1,279 @@
+specified_on: '2026-09-07'
+evidence_class: exploratory_reused_history_archival_SPX_daily_risk_event
+source_contract:
+  skew_sha256: becbf3f7510de66a736495df29a84ba1911d362402f05f6c46dedd5e9b971492
+  skew_anchor:
+    date: '2018-08-13'
+    close: 159.03
+    tolerance: 0.01
+  skew_derived: bounded raw and existing derived values must agree; raw CSV is the predictor source; no
+    fetch or vintage substitution
+  historical_availability: archival current-vintage Yahoo and Cboe extracts; revisions and exact release
+    latency unverified
+  vix9d: January2011-October2013 values back-calculated; no original-date historical availability claim
+  missing: preserve observed SPX reference calendar and strict windows; no filling; numerical CSV values
+    parsed only after date cutoff
+  interpretation: SKEW is an option-implied30day construction; it is not a physical one-day crash probability
+source_files:
+  data/free_sources/raw/cboe/VIX9D_History.csv: 0d6f600ee71bf6ffb5069d0c583cbe0b1ec97df6da4e4e439d5f0f22f5616abe
+  data/free_sources/raw/cboe/VIX9D_History.csv.manifest.json: aee15817f60f0e3cde73a55fa99b807ca4dd10b6b045d8f9b87683df7050cab0
+  data/free_sources/raw/cboe/VIX_History.csv: a34aabce269632f30904cf482986dd50b6d4cf51f2203dc51a0a9f460f3c90b2
+  data/free_sources/raw/cboe/VIX_History.csv.manifest.json: 51caa998f0dadc1a707182a0222f793626da93da535a31f49d66b79db0ab2917
+  data/free_sources/raw/cboe/VVIX_History.csv: f6bc726455fa3859c662875a005e97ba656b9536ae58fa6977ad24c6228e4f6a
+  data/free_sources/raw/cboe/VVIX_History.csv.manifest.json: f79ecf39b83642b0df23743a1f3aa0077bbf8fc8628fdc0b5de49f0a8ccd0a52
+  data/raw/SKEW_History.csv: becbf3f7510de66a736495df29a84ba1911d362402f05f6c46dedd5e9b971492
+  data/raw/skew_daily.parquet: 159deae9944941c92a454e80ff32d33eddc94e6e4f2e79a64678bd0429ade5a7
+  data/raw/skew_daily_source.json: d45a9e3080116655b8f613b131903de33eb23543037893c8603624e84d4121d7
+  data/research_paths/source_manifest.json: 457afd656244fc527535984874ee11313fd3156815f0d982d0c9f29ab85d244c
+  data/research_paths/spx_daily.parquet: 3958fbb1eb36689df1596c26b9f0e02e3f1d4fa3b0032381e5287a2a03697bf0
+index:
+  asset: SPX
+  source_end: '2025-10-20'
+  sealed_start: '2025-11-03'
+  origin_start: '2016-01-04'
+  origin_end: '2025-10-17'
+  latest_target: '2025-10-20'
+  development:
+  - '2016-01-04'
+  - '2019-12-31'
+  development_target_available_by: '2019-12-31'
+  evaluation:
+  - '2020-01-02'
+  - '2025-10-17'
+  evaluation_stability:
+  - - '2020-01-02'
+    - '2022-12-31'
+  - - '2023-01-01'
+    - '2025-10-17'
+  horizons:
+  - 1
+  market_lag: 1
+  minimum_train: 1000
+  models:
+  - baseline
+  - recent_frequency
+  - calibrated
+  minimum_train_per_class: 50
+  minimum_phase_per_class: 30
+  minimum_slice_per_class: 15
+  minimum_phase_observations: 127
+  baseline:
+  - const
+  - I
+  - R
+  - ret_d
+  - ret_w
+  - ret_m
+  - ret_q
+  - lr_d
+  - lr_w
+  - term
+  - lvvix
+  - entry_dow_1
+  - entry_dow_2
+  - entry_dow_3
+  - entry_dow_4
+  - neg_d
+  - neg_w
+  - neg_m
+  - skew
+  - I_square
+  - R_square
+  - skew_square
+  - intraday
+  - intraday_sq
+  - overnight
+  - overnight_sq
+  all_features:
+  - const
+  - I
+  - R
+  - ret_d
+  - ret_w
+  - ret_m
+  - ret_q
+  - lr_d
+  - lr_w
+  - term
+  - lvvix
+  - entry_dow_1
+  - entry_dow_2
+  - entry_dow_3
+  - entry_dow_4
+  - neg_d
+  - neg_w
+  - neg_m
+  - skew
+  - intraday
+  - intraday_sq
+  - overnight
+  - overnight_sq
+  - range_extremity
+target:
+  risk: V_s=max(0.5*log(H_s/L_s)^2-(2*log(2)-1)*log(C_s/O_s)^2,1e-10)+log(O_s/C_previous)^2
+  event: y_t=1{V[t+1]>2*mean(V[t-22:t-1])};exact22 observed sessions ending prior session
+  threshold: 2.0
+  reference_sessions: 22
+  ties: equality is0; missing risk or anyreference value unknown, never0
+  maturity: target_end=available_date=nextobservedSPXsessionclose; cutoff priorobservedclose
+  measurement: dailyOHLCriskproxy relative to trailingmean, not integratedvariance or doubling versus
+    immediatepreviousday
+  schedule: first feature-complete monthly application before future querylabel mask; expanding mature
+    commontraining>=1000 and>=50eachclass; everymonth preflight before anyfit; retain unscoredapplications
+    and fits
+  reference_arithmetic: Checked math.fsum of exactly22 finite positive session-risk values dividedby22,
+    then checked2*mean; no epsilon at equality. Legacy rolling baseline features unchanged.
+scoring:
+  loss: brier
+  effect_threshold_absolute: 0.0005
+  paired_difference: (p_candidate-p_control)*((p_candidate-y)+(p_control-y)), afterfiniteindividualsquaredlossvalidation
+  arithmetic: finitebinaryy andprobabilitiesin[0,1],boundedloss;rejectnonzerosquares/productsunderflowtozero;
+    coherence64epsilon/downwardULP noabsolutefloor
+  interpretation: conditionalprobability ofdefinedevent; absolute Brierscore gain is notprofit or probabilitypointgain
+comparisons:
+  new_hypotheses: 2
+  inherited_hypotheses: 129
+  cumulative_hypotheses: 131
+  inherited_sources:
+  - reports/orthogonal_round2/metrics.json
+  - reports/model_memory_study/combined_metrics.json
+  - reports/iterative_signal_search/metrics.json
+  - reports/international_volatility/metrics.json
+  - reports/overnight_index/metrics.json
+  - reports/macro_overnight/metrics.json
+  - reports/measurement_memory/metrics.json
+  - reports/index_hinge/metrics.json
+  - reports/tail_shape/metrics.json
+  - reports/calendar_variance/metrics.json
+  - reports/relative_risk/metrics.json
+  - reports/joint_risk/metrics.json
+  - reports/cross_moment/metrics.json
+  - reports/target_aligned/metrics.json
+  - reports/sign_memory/metrics.json
+  - reports/causal_pool/metrics.json
+  - reports/civil_quarter/metrics.json
+  - reports/civil_quarter_replay/metrics.json
+  - reports/profiled_quarter/metrics.json
+  - reports/range_alert/metrics.json
+  controls:
+  - baseline
+  - recent_frequency
+  contrasts:
+  - - calibrated
+    - baseline
+    - brier
+  - - calibrated
+    - recent_frequency
+    - brier
+  candidate_gate: bothcontrols pass bothphases/effect/stability andbothmultiplicitygates; no selectiveevent/subperiod/calibrationbin
+    promotion
+inference:
+  blocks:
+  - 21
+  - 63
+  - 126
+  hac_lags: 126
+  minimum_phase_observations: 127
+  minimum_phase_per_class: 30
+  minimum_slice_per_class: 15
+  bootstrap_draws: 199999
+  seed: 20260925
+  inference_scale: 1.0
+  seed_rule: seed+phase_code*10000+block;development0,evaluation1;common drawdesign forbothcontrols
+  p_phase: maximum two-sided centered-null circularblock bootstrap andBartlettHAC126p
+  p_hypothesis: maximumdevelopment/evaluationp
+  multiplicity: Holm2 at.05/(19*20);cumulativeHolm131 at.05 includingallfailedprior
+  gate: bothphasesmeanBrierdecrease>=.0005 againstbothcontrols;bothlate slicesnegative;bothHolmgates
+  power: ordinary5percentHAC80percentMDE diagnostic dividedby.0005;notadjustedpower or equivalencegate
+  failure_rule: anysource,arithmetic,support,optimizer,forecast,score,verification,publicationfailure
+    keeps bothnewhypothesesUNEVALUABLEp1; nooutcome-dependentrepair
+  calibration: descriptivein-the-large perphase/model n,eventfrequency,meanprobability,gap,Brier only;no
+    fitting,bins orpromotion
+  resolution: Minimum p=1/200000 below one tenth strictest two-comparison raw wave19 cutoff .05/(19*20*2).
+study_id: issued_calibration_wave19
+status: specified_before_new_calibration_states_fits_or_scores
+wave: 19
+wave_alpha: 0.00013157894736842105
+objective: Test causal intercept calibration from originally issued baseline risk-alert forecasts and
+  their later mature outcomes
+model:
+  candidate: calibrated
+  controls:
+  - baseline
+  - recent_frequency
+  new_baseline_fits: 0
+  half_life_sessions: 63
+  decay: 2**(-1/63)
+  ridge: 0.01
+  objective: sum_j w_j*logaddexp(0,(1-2*y_j)*(eta_j+a))+.01*a*a
+  weight: (1-delta)*delta**(cutoff_reference_position-label_available_reference_position); no renormalization
+  seed: empty at first original application prior-session cutoff; no fitted-probability seeding or labels
+    available at or before seed
+  logit: replay original saved monthly transformations and coefficients on original application features;
+    require saved application probability replay; never invert rounded probabilities
+  history: only genuinely issued baseline applications with known binary outcome available by cutoff;
+    cache all original applications independent of future label mask
+  clock: full frozen reference calendar; feature gaps and unknown labels age weights; no phase resets
+    or warmup deletion
+  controls_preserved: retain original recent-frequency broader known-label stream and all original baseline/frequency
+    probabilities and training metadata
+  derivative: sum w*expit(eta+a) for y0 or -w*expit(-eta-a) for y1, plus .02*a; stable signed residual
+    is not rounded saved p minus y
+  producer:
+    method: brentq
+    bracket: plus/minus(sum(weights)+1)/.02
+    xtol: 1.0e-12
+    rtol: 1.0e-14
+    maxiter: 200
+    gradient_tolerance: 1.0e-08
+    empty: canonical zero
+    balanced: exact computed g(0)==0 may return zero
+    fallback: none
+  arithmetic: finite float64 logits, weights, signed softplus losses, stable signed residuals, gradients,
+    objective and probabilities; signed softplus and signed residual for finite logits must remain nonzero;
+    reject nonzero multiplication or division underflow; expit forecast endpoints allowed; never silently
+    delete tiny records; scalar reductions use math.fsum
+  arrival_categories: 'mutually exclusive precedence: no original issuance NO_ISSUED_FORECAST; issued
+    missing label UNKNOWN_LABEL; otherwise ADMITTED'
+  probability: If a==0 retain original saved baseline probability after mandatory strict expit(original_eta)
+    replay; otherwise expit(replayed_eta+a). Fixed identity branch preserves exact nesting; no clipping
+    or solver fallback.
+verification:
+  scalar:
+    method: bisect
+    bracket: plus/minus(sum(weights)+1)/.02
+    xtol: 1.0e-12
+    rtol: 1.0e-14
+    maxiter: 200
+    full_gradient_tolerance: 1.0001e-08
+    fallback: none
+    empty: canonical zero
+  coefficient_rtol: 1.0e-07
+  coefficient_atol: 1.0e-06
+  saved_replay_rtol: 1.0e-10
+  saved_replay_atol: 1.0e-12
+  prediction_rtol: 1.0e-10
+  prediction_atol: 1.0e-12
+  inference_relative_tolerance: 1.0e-09
+  inference_absolute_tolerance: 1.0e-14
+  weight_roundoff_multiplier: 64
+  independent_state: explicit ages on full reference calendar and compensated sums; strict domains and
+    zero masks; no empirical arithmetic tolerance repairs
+  reconstruction: original monthly geometry and every original issued logit, mature calibration records,
+    independent scalar optima, unchanged cohort/controls, scores/inference/ledger; no prior baseline refits
+upstream:
+  anchors:
+    range_alert.yaml: ff7b2a7fee497da11f1f88613a17314d3b92d683f506bc4cc51d5089d2bc16a3
+    reports/range_alert/manifest.json: 3390dfe5a8cae1d18951625fafb7cdbd5ba6693a32a3158d6df182c2856af895
+    reports/range_alert/freeze_record.json: a0a00285aab3e3cb233ee34f62c944f693444ea0a830ca0812a65a25b295cb7f
+    reports/range_alert/verification.json: de5391c863c1008248b8ddfbc0b2c945126a5a8b36154cc6bfcdc980848bf873
+    reports/range_alert/publication_audit.json: d7d46dc66648c959d494c57a79feba9d8a7c4c1010ece89d4adde1fca449562e
+    reports/range_alert/publication_review.json: 38c661b97184eff4aff9792ab4891d2d9f13a814ef287b58fe363067beed16bf
+    reports/range_alert/NEXT_RESEARCH_DIRECTION.md: 8dc17f9701ebcdd05dfdaca219bb371d4c85fb432353c16d6fc777975e3d4106
+  admission: Complete immutable wave18 proof, output, prior manifest and publication closure; checked
+    byte snapshots before decoding; inherited historical fits admitted by successful verified records;
+    no new source acquisition or protected data
+  prospectus: reports/range_alert/NEXT_RESEARCH_DIRECTION.md
+outputs:
+  data: data/issued_calibration
+  reports: reports/issued_calibration

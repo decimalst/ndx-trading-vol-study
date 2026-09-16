@@ -1,0 +1,42 @@
+{
+  "status": "VERIFIED",
+  "protocol_sha256": "8bf0c5171a7962e480c1915e32fb4b5691a5d6ced5b989e4b8f942daa4a1ca7f",
+  "verifier_sha256": "291e58a81776fb6588df1d7f523d45d982dd1431279fe27ebfcd10bbc223fec3",
+  "feature_rows_verified": 6696,
+  "feature_columns_verified": 16,
+  "source_reconstruction": {
+    "source_rows": 7680,
+    "bounded_rows": 7473,
+    "post_fence_numeric_rows_parsed": 0,
+    "missing_reference_dates": 27
+  },
+  "forecast_reconstruction": {
+    "forecasts_verified": 8008,
+    "common_scored_origins": 2002,
+    "feature_complete_applications": 2024,
+    "monthly_fits_verified": 112,
+    "models_verified": 4,
+    "fit_target": "qmle",
+    "producer_kkt_max": 9.621522603382032e-09,
+    "independent_bfgs_kkt_max": 1.009454420703923e-08
+  },
+  "inference": {
+    "new_hypotheses_verified": 15,
+    "cumulative_hypotheses_verified": 99,
+    "phase_comparisons_verified": 30,
+    "bootstrap_runs_verified": 90,
+    "bootstrap_draws_per_run": 99999,
+    "leads": []
+  },
+  "ledger_events_verified": {
+    "inherited": 84,
+    "registered": 15,
+    "evaluated": 15
+  },
+  "limitations": [
+    "Retrospective source delays are assumptions; historical publication latency and revisions remain unverified.",
+    "Native squared annualized volatility measurements are not certified integrated daily variance.",
+    "Same-provider alternative measurements are not independent-source replication.",
+    "Adaptive historical reuse and missing stress-week observations remain limitations."
+  ]
+}

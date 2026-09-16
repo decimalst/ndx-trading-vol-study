@@ -1,0 +1,68 @@
+study_id: joint_copula_wave27
+question: Does fixed t8 dependence improve the joint next-session QQQ and SPX intraday return density beyond separately fitted Gaussian dependence and independence with identical conditional marginals?
+evidence_class: EXPLORATORY_REUSED_MARKET_HISTORY_CURRENT_VINTAGES
+evidence_limitation: Historical development and evaluation windows have been reused. Prior regression tests accessed the period beginning 2025-11-03; it is not untouched confirmation. Current vendor snapshots do not certify complete point-in-time price or implied-volatility vintages. Numerical inputs in this experiment end 2025-10-20. QQQ ETF and SPX price index are distinct instruments; exact synchronized auctions and historical publication latency are not certified.
+source:
+  ceiling: '2025-10-20'
+  numerical_exclusion_start: '2025-11-03'
+  inputs: [data/research_paths/spx_daily.parquet, data/raw/daily_ohlc.parquet, data/free_sources/raw/cboe/VIX_History.csv, data/free_sources/raw/cboe/VIX9D_History.csv, data/free_sources/raw/cboe/VVIX_History.csv, data/free_sources/raw/cboe/VXN_History.csv]
+  admission: Authenticate exact six original snapshots and inherited transitive source closure before bounded numerical decoding; inspect full date metadata, never decode numerical values after ceiling. No adjusted-close, volume, repair, new vintage or Treasury quantity substitution.
+  measurement: Before feature or label selection every complete raw OHLC row on the full SPX reference calendar must have finite GK strictly greater than1e-10. Every observed open/close pair must have a finite signed log(close/open), including rows with missing high/low. Zero signed returns valid; missing stays unknown; no clipping or floor repair.
+  calendar: Full bounded observed SPX calendar; reindex QQQ without intersecting or compressing. Overnight and close-to-close features require actual source predecessor to equal prior SPX reference date.
+  timing: Retain inherited extra conservative lag. At origin t all numerical predictors use at most the preceding SPX session t-1; the target is the next actual SPX session t+1 raw intraday return pair. No next-common-session substitution. VIX9D2011-2013 is back-calculated training history; no exact historical vintages are certified.
+forecast:
+  origin_start: '2016-01-04'
+  origin_end: '2025-10-17'
+  source_end: '2025-10-20'
+  development: ['2016-01-04', '2019-12-31']
+  evaluation: ['2020-01-01', '2025-10-20']
+  stability: [['2020-01-01', '2022-12-31'], ['2023-01-01', '2025-10-20']]
+  horizon: 1
+  target: Pair of next actual SPX session raw log(close/open) returns for QQQ ETF and SPX price index; signed and zero valid, either missing makes pair unknown.
+  arms: [t8_copula, gaussian_copula, independence]
+  minimum_train: 1000
+  schedule: First common34-feature-complete requested origin of each calendar month without query labels. Issue to every feature-complete requested origin, including unscored origins. Training labels must mature by the preceding full-calendar session, with training origins strictly before fit origin. No startup deletion or fallback.
+  marginals: Shared joint-risk34 raw controls plus training-centered corr22 square, with all34 non-intercept scales strictly greater than1e-12. Shared conditional means fit standardized ridge MSE plus.01 slope penalty, gradient<=1e-10. Shared positive residual second moments minimize mean(logh+e_squared/h) plus.01 slope penalty using the frozen Newton200/Armijo estimator, gradient<=1e-8. Common rows, no dropped columns. Independent augmented least-squares mean and positive-moment reconstruction required.
+  residual_staging: Current-fit in-sample training residuals are used for staged marginal variance and dependence fitting; they are not historical issued errors.
+  marginal_distribution: Fixed Student-t8 with location mu_j and scale sqrt(h_j)*sqrt(6/8), making marginal variance h_j. Identical means, variances, distributions and rows in all arms.
+dependence:
+  candidate: Bivariate t8 copula, parameter rho_t fitted by its own negative joint log likelihood on common current-fit mature training residual pairs. The inverse-t8 transform of its own t8 CDF equals the standardized residual exactly.
+  gaussian: Gaussian copula, separately fitted rho_G by its own negative joint log likelihood on exactly the same pairs. Transform t8 residuals with a stable log-tail inverse normal; never clip saturated CDF endpoints.
+  independence: Product of identical fitted t8 marginals. Placeholderrho0; t8rho0 is not independence.
+  domain: [-0.995, 0.995]
+  degrees_of_freedom: 8
+  tail_arithmetic: Float64 scaled positive quadratics and logaddexp marginal tails. For absolute standardized value<=1 use log(stdtr(8,-abs(z))); outside use log incomplete-beta via hypergeometric identity and ndtri_exp. The branch is a fixed numerical identity, not a fitted model choice.
+  gaussian_solver: Evaluate every admissible real root of rho^3-B*rho^2+(A-1)*rho-B plus both endpoints and zero; A=mean(w1_squared+w2_squared),B=mean(w1*w2). Root imaginary and polynomial residual tolerances1e-10; fixed objective ties1e-12 choose lowest rho.
+  t8_solver: Analytic-gradient L-BFGS-B from zero with bounds, maxiter1000,maxls50,ftol1e-14,gtol1e-9 and success required. Both endpoints and zero also evaluated. Whole-domain interval Taylor lower-bound branch and bound, all final disjoint leaves retained; branch interval with lowest bound at midpoint, evaluate midpoint and bracketed derivative root when signs differ. Brent xtol5e-15,rtol4eps,maxiter200. Interior near-stationary winner may be refined within its containing leaf under the same fixed rule.
+  certificate: Objective gap<=1e-8 and projected gradient<=1e-7; max32768 splits, roundoff inflation256eps. Every leaf lower bound independently reconstructed from a valid lower Hessian bound and checked to cover the full domain. This is a floating-point numerical certificate, not an exact arithmetic proof. No optimizer fallback, silent retry or domain change after results.
+support:
+  phase_daily: 505
+  slice_daily: 252
+  offset_daily: 63
+  rule: Identical scored pairs for all three arms; each literal phase, both fixed later slices, and each full-calendar modulo-five group meet its floor. Scoring target must end within its literal phase.
+inference:
+  loss: Negative full joint log density in nats per observed pair; candidate minus control. Shared marginal log densities cancel exactly from the paired difference, evaluated as control logcopula minus candidate logcopula. Full marginal densities retained for reported model loss. Negative loss values are valid for continuous densities.
+  blocks: [21, 63, 126]
+  hac_lags: 126
+  bootstrap_draws: 399999
+  seed: 20260909
+  domain: Full original SPX calendar positions within each literal phase, retaining missing-feature, missing-target, unavailable-endpoint and unissued-endpoint positions. Global modulo-five groups by origin, never renumbered.
+  bootstrap: Frozen circular masked ratio-of-sums inference with shared draws across both controls; seed+phase_code*10000 and core adds block length. Zero-support replicate fatal, never redrawn or discarded.
+  hac: Bartlett HAC126 on mask*(difference-observed_mean)/mean(mask); invalid variance fatal.
+  conservative_p: Maximum two-sided p across both phases and all three block lengths plus HAC126.
+  calibration: Reuse passed identical full-calendar synthetic daily-mask inference calibration;200 AR1 replications, predeclared90percent envelope coverage diagnostic. Not exact market coverage or multiplicity-adjusted tail calibration.
+  effect: Mean difference<=-.005 in both phases against both controls.
+  stability: Strictly negative means against both controls in both fixed later slices and each full-calendar modulo-five group per phase. Annual means descriptive only.
+  verification: Independently reconstructed row densities and scores atol1e-10,rtol1e-8; continuous HAC, conservative and Holm p atol1e-12,rtol1e-8; bootstrap count probabilities exact. Exceeding tolerance fails the family.
+comparisons:
+  wave: 27
+  inherited: 149
+  new: 2
+  cumulative: 151
+  contrasts: [[t8_copula, gaussian_copula], [t8_copula, independence]]
+  wave_alpha: 0.00006613756613756614
+  cumulative_alpha: 0.05
+  rule: Both comparisons meet all effect, support and stability gates with Holm2<=.05/(27*28) and Holm151<=.05. Preserve all149 inherited identities, probabilities and failures. A single passing control cannot promote the candidate.
+  registration: Freeze exact executable protocol, current source/test inventory, admitted inputs, inherited records and prewritten selected-test receipts before issuing a durable two-comparison journal; only then decode market numerics or inspect support.
+  failures: Any source, measurement, support, numerical, fit, certificate, verification or preservation failure leaves both registered comparisons unevaluable with p1. No substituted family or unrecorded retry.
+  interpretation: A pass is an exploratory joint-density lead on reused history requiring future confirmation. It does not prove pure tail dependence, better marginal volatility, index direction, tradable profit, or measurement of high-frequency covariance. Misspecified shared marginals may create apparent dependence gains.

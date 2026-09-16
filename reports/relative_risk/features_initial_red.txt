@@ -1,0 +1,21 @@
+Command: /Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/bin/python -m unittest tests.test_relative_risk_features -v
+Exit code: 1
+test_relative_risk_features (unittest.loader._FailedTest.test_relative_risk_features) ... ERROR
+
+======================================================================
+ERROR: test_relative_risk_features (unittest.loader._FailedTest.test_relative_risk_features)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_relative_risk_features
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_relative_risk_features.py", line 11, in <module>
+    from src import relative_risk_features as rr
+ImportError: cannot import name 'relative_risk_features' from 'src' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/__init__.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

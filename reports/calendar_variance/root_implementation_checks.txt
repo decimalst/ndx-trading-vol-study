@@ -1,0 +1,27 @@
+test_apply_rows_do_not_change_training_scaling (tests.test_calendar_variance_models.CalendarModels.test_apply_rows_do_not_change_training_scaling) ... ok
+test_exact_next_session_maturity_is_required (tests.test_calendar_variance_models.CalendarModels.test_exact_next_session_maturity_is_required) ... ok
+test_exact_previous_session_cutoff_is_required (tests.test_calendar_variance_models.CalendarModels.test_exact_previous_session_cutoff_is_required) ... ok
+test_future_labels_cannot_change_earlier_fit (tests.test_calendar_variance_models.CalendarModels.test_future_labels_cannot_change_earlier_fit) ... ok
+test_label_order_is_checked (tests.test_calendar_variance_models.CalendarModels.test_label_order_is_checked) ... ok
+test_maturity_uses_previous_observed_session_and_all_features (tests.test_calendar_variance_models.CalendarModels.test_maturity_uses_previous_observed_session_and_all_features) ... ok
+test_minimum_cannot_be_silently_skipped (tests.test_calendar_variance_models.CalendarModels.test_minimum_cannot_be_silently_skipped) ... ok
+test_nonpositive_or_infinite_target_is_rejected (tests.test_calendar_variance_models.CalendarModels.test_nonpositive_or_infinite_target_is_rejected) ... ok
+test_refit_origin_is_independent_of_query_label (tests.test_calendar_variance_models.CalendarModels.test_refit_origin_is_independent_of_query_label) ... ok
+test_same_common_rows_and_joint_calendar_block (tests.test_calendar_variance_models.CalendarModels.test_same_common_rows_and_joint_calendar_block) ... ok
+test_target_scale_equivariance (tests.test_calendar_variance_models.CalendarModels.test_target_scale_equivariance) ... ok
+test_zero_scale_candidate_aborts_even_baseline (tests.test_calendar_variance_models.CalendarModels.test_zero_scale_candidate_aborts_even_baseline) ... ok
+test_all_four_phase_scores_and_108_adjustment_preserved (tests.test_calendar_variance_search.CalendarSearch.test_all_four_phase_scores_and_108_adjustment_preserved) ... ok
+test_all_gates_and_both_controls_required (tests.test_calendar_variance_search.CalendarSearch.test_all_gates_and_both_controls_required) ... ok
+test_common_paired_metadata_and_positive_forecasts_required (tests.test_calendar_variance_search.CalendarSearch.test_common_paired_metadata_and_positive_forecasts_required) ... ok
+test_core_contract_amendments_rejected (tests.test_calendar_variance_search.CalendarSearch.test_core_contract_amendments_rejected) ... ok
+test_failed_wave_retains_both_as_p_one (tests.test_calendar_variance_search.CalendarSearch.test_failed_wave_retains_both_as_p_one) ... ok
+test_inference_does_not_shrink_blocks_or_remove_nonfinite (tests.test_calendar_variance_search.CalendarSearch.test_inference_does_not_shrink_blocks_or_remove_nonfinite) ... ok
+test_inherited_count_is_full_enumerated_family (tests.test_calendar_variance_search.CalendarSearch.test_inherited_count_is_full_enumerated_family) ... ok
+test_literal_protocol (tests.test_calendar_variance_search.CalendarSearch.test_literal_protocol) ... ok
+test_nominal_small_or_one_phase_gain_cannot_pass (tests.test_calendar_variance_search.CalendarSearch.test_nominal_small_or_one_phase_gain_cannot_pass) ... ok
+test_paired_inference_uses_worst_dependence_method (tests.test_calendar_variance_search.CalendarSearch.test_paired_inference_uses_worst_dependence_method) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.248s
+
+OK

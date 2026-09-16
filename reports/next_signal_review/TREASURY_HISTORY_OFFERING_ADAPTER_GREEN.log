@@ -1,0 +1,13 @@
+test_amended_pdf_uses_own_release_and_preserves_original_xml_dates (tests.test_treasury_history_offerings.TreasuryHistoryOfferingTests.test_amended_pdf_uses_own_release_and_preserves_original_xml_dates) ... ok
+test_duplicate_empty_alias_or_supplemental_conflicts_fail (tests.test_treasury_history_offerings.TreasuryHistoryOfferingTests.test_duplicate_empty_alias_or_supplemental_conflicts_fail) ... ok
+test_every_document_identity_precedes_any_amount_conversion (tests.test_treasury_history_offerings.TreasuryHistoryOfferingTests.test_every_document_identity_precedes_any_amount_conversion) ... ok
+test_explicit_different_final_identity_does_not_rewrite_raw_sources (tests.test_treasury_history_offerings.TreasuryHistoryOfferingTests.test_explicit_different_final_identity_does_not_rewrite_raw_sources) ... ok
+test_fixed_scale_and_strict_xml_leaf_rules_remain_unchanged (tests.test_treasury_history_offerings.TreasuryHistoryOfferingTests.test_fixed_scale_and_strict_xml_leaf_rules_remain_unchanged) ... ok
+test_original_text_and_identity_contracts_remain_strict (tests.test_treasury_history_offerings.TreasuryHistoryOfferingTests.test_original_text_and_identity_contracts_remain_strict) ... ok
+test_rows_and_columns_produce_exact_frozen_result_schema (tests.test_treasury_history_offerings.TreasuryHistoryOfferingTests.test_rows_and_columns_produce_exact_frozen_result_schema) ... ok
+test_three_way_disagreement_and_invalid_dollar_tokens_fail (tests.test_treasury_history_offerings.TreasuryHistoryOfferingTests.test_three_way_disagreement_and_invalid_dollar_tokens_fail) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.008s
+
+OK

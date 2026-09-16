@@ -1,0 +1,11 @@
+GREEN: all 11 prewritten generated tests passed the first implementation in 0.015s. No source or test corrections were needed.
+First implementation log SHA256 9cdac672165f31e97ae6d292be3e31f117f6cc3f0bfa6b8f5f6dd3cf3bbc3ffa
+Command: .venv/bin/ruff check src/precision_gate.py tests/test_precision_gate.py
+Exit status: 0
+All checks passed!
+
+No historical forecast data, targets, cohorts, scores or source arrays accessed. No registration or application.
+src/precision_gate.py SHA256 da099a4b12f7df1abff687e507b11d72edda3985bf22230622c2344627804e59
+tests/test_precision_gate.py SHA256 0c60c0e292b8e5f5d1b56c1f1eec42f507ccec14d8aafa4de948142b5ca0ffba
+reports/precision_gate/CORE_CONTRACT.md SHA256 2aade7a32724d5fb929311b89c30b9a5ae100158d73a3736de0760adc1a75c16
+reports/precision_gate/RED.log SHA256 6f88037d3365cbb269c1f4ea7f1b9174a4e0cabc575a845cf7e4dd8de9c0aeab

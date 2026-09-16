@@ -1,0 +1,96 @@
+study_id: measurement_memory_wave05
+specified_on: '2026-09-07'
+status: specified_before_empirical_scores
+objective: Test reported uncertainty width and its interaction with a recent measured volatility innovation
+evidence_class: exploratory_reused_history_archival_native_SPY_measurements_assumed_delay
+wave: 5
+wave_alpha: 0.0016666666666666668
+sources:
+  risklab: data/source_discovery/quarantine/risklab_spy/provider_response.txt
+  daily: data/raw/daily_ohlc.parquet
+  vix: data/free_sources/raw/cboe/VIX_History.csv
+  vix9d: data/free_sources/raw/cboe/VIX9D_History.csv
+  vvix: data/free_sources/raw/cboe/VVIX_History.csv
+source_contract:
+  risklab_sha256: b7802ef21565b13831420c8fdd2b15176e57265fd5afe981be73693c8350e392
+  fields_zero_based: {qmle: 2, ci_width: 4, rv5: 5, rv15: 6}
+  symbol: SPY
+  identifier: '84398'
+  units: native reported annualized volatility; square explicitly for this target; no annualization factor inferred
+  width: displayed absolute half-width in same native volatility units; confidence level and statistical calibration unknown
+  invalid: nonpositive or nonfinite measurement and negative or nonfinite width remain unknown; preserve original bytes; no clipping or filling
+  arithmetic_representability: nonfinite or nonpositive squared measurements and nonfinite derived features remain unknown without numerical clipping or flooring
+  missing_sessions: preserve missing source dates on bounded observed QQQ reference calendar before rolling or shifting
+  rights: research only; private quarantined source and derived rows; no trading or redistribution admission
+  timing: historical availability and revisions unverified; two-session lag is a declared archival assumption, not point-in-time certification
+  vix9d: prelaunch January2011-October2013 values are back-calculated archival training inputs; no claim they were available at their 2011 observation times
+index:
+  asset: SPY
+  reference_calendar: observed QQQ sessions, not a historically announced SPY schedule
+  source_end: '2025-10-20'
+  sealed_start: '2025-11-03'
+  origin_start: '2016-01-04'
+  origin_end: '2025-10-17'
+  latest_target: '2025-10-20'
+  latest_available: '2025-10-20'
+  development: ['2016-01-04', '2019-12-31']
+  development_target_available_by: '2019-12-31'
+  evaluation: ['2020-01-02', '2025-10-17']
+  evaluation_stability: [['2020-01-02', '2022-12-31'], ['2023-01-01', '2025-10-17']]
+  horizons: [1]
+  models: [mean, baseline, width, quality]
+  measures: [qmle, rv5, rv15]
+  primary_measure: qmle
+  baseline: [const, lq_d, lq_w, lq_m, lvix, livshape, lvvix, neg_d, neg_w, neg_m, entry_dow_1, entry_dow_2, entry_dow_3, entry_dow_4]
+  own_history: log strict mean trade-QMLE squared over 1/5/22 reference sessions, then shift two sessions
+  width_feature: log1p(ci_width/qmle), then shift two reference sessions
+  interaction: width_feature times contemporaneous lagged (lq_d-lq_m); unconstrained coefficient
+  market_features: logVIX,log(VIX9D/VIX),logVVIX and strict means of max(-QQQ adjusted logreturn,0)1/5/22, all shifted one reference session
+  market_lag: 1
+  measurement_lag: 2
+  label_availability_lag: 2
+  target: each next reference-session native trade-volatility estimate squared
+  label_availability: two reference sessions after target observation; at origin t target t+1 matures t+3
+  training_availability: every training target available no later than preceding reference session of monthly fit origin
+  common_sample: all four models share complete16feature rows and allthree finite positive matured target measurements in training and scoring
+  primary_only_fits: fit and scale using QMLE targets exclusively; alternate labels never change fitted parameters or forecasts
+  fit_schedule: monthly at first feature-complete origin in fixed window; future label presence never chooses refit origin
+  minimum_train: 1000
+  objective: mean(log(h)+q/h) plus0.01times standardized slope squared norm; intercept unpenalized
+  target_scaling: divide training QMLE squared by its positive mean for optimization, restore forecast units exactly
+  feature_scaling: train-only population mean and standard deviation; zero-scale<=1e-12 aborts whole wave
+  optimizer: frozen macro_second_moment deterministic Newton and Armijo implementation
+  penalty: 0.01
+  optimizer_max_iter: 200
+  gradient_tolerance: 0.00000001
+  armijo: 0.0001
+  maximum_backtracks: 60
+  effect_threshold_absolute: 0.005
+comparisons:
+  candidates: [width, quality]
+  controls: {width: [baseline, mean], quality: [baseline, mean, width]}
+  new_hypotheses: 15
+  inherited_hypotheses: 84
+  cumulative_hypotheses: 99
+  inherited_sources: [reports/orthogonal_round2/metrics.json, reports/model_memory_study/combined_metrics.json, reports/iterative_signal_search/metrics.json, reports/international_volatility/metrics.json, reports/overnight_index/metrics.json, reports/macro_overnight/metrics.json]
+  family_rationale: pre-fit expansion of earlier nine-comparison proposal to test width alone as a candidate, without any new observed relationship
+  primary_gate: each candidate must beat all its primary QMLE controls by0.005bothphases, negativegap both fixed evaluation slices, waveHolm15<1/600andcumulativeHolm99<0.05
+  alternate_gate: same forecasts evaluated against rv5 and rv15; every candidate-control alternative gap negative in both phases; no additional effect size or significance gate
+  alternatives_in_family: all ten alternate-measurement contrasts remain in both Holm corrections regardless of their gate role
+inference:
+  loss: log(predicted squared native volatility) plus measured squared native volatility dividedby prediction
+  blocks: [21, 63, 126]
+  block_units: consecutive retained paired-forecast observations in chronological order; missing dates reported, not imputed
+  bootstrap_draws: 99999
+  seed: 20260911
+  seed_rule: seed+phase_code*10000+block;development0,evaluation1;common resampling across all contrasts
+  resolution: minp1/100000 is below one tenth of strictest wave-Holm cutoff1/9000, namely1/90000
+  p_phase: maximum two-sided centered-null circular bootstrap p across allblocks and Bartlett HAC126 p
+  p_hypothesis: maximum development/evaluation p
+  failure_rule: any fitting, scoring, validation or output failure retains all15 hypotheses as unevaluablep1; preserve diagnostics separately; no post-result amendment
+  reporting: all fifteen paired absolute score gaps, phase and annual coverage, uncertainty, MDE, fixed-period diagnostics and both candidate verdicts; no percentage scores
+  interpretation: width may proxy volatility or liquidity; an interaction increment does not identify calibrated measurement error or a latent noise process
+  caveat: historical reuse, archival back-calculation, assumed publication lag and common missingness remain exploratory after multiplicity correction
+outputs:
+  data: data/measurement_memory
+  reports: reports/measurement_memory

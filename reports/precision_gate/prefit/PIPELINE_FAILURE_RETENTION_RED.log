@@ -1,0 +1,17 @@
+test_later_gate_failure_retains_earlier_issued_records_and_stage (tests.test_precision_gate_pipeline.PrecisionPipelineTests.test_later_gate_failure_retains_earlier_issued_records_and_stage) ... ERROR
+
+======================================================================
+ERROR: test_later_gate_failure_retains_earlier_issued_records_and_stage (tests.test_precision_gate_pipeline.PrecisionPipelineTests.test_later_gate_failure_retains_earlier_issued_records_and_stage)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_precision_gate_pipeline.py", line 178, in test_later_gate_failure_retains_earlier_issued_records_and_stage
+    with self.assertRaises(pipeline.PipelineExecutionError) as caught:
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.precision_gate_pipeline' has no attribute 'PipelineExecutionError'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.055s
+
+FAILED (errors=1)
+
+exit_code=1

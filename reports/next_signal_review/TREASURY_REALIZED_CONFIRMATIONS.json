@@ -1,0 +1,538 @@
+{
+  "count": 18,
+  "created_utc": "2026-09-09T01:43:54.788095+00:00",
+  "limits": [
+    "Canonical facts inherit the documented reviews; this transcription is not a second independent reading.",
+    "Announcement date and offered context retain archive membership and are checked against actual paired documents by the reconciliation helper.",
+    "Each final CUSIP/series lexeme was checked in its own pinned text; all original descriptors retain exact ledger extraction provenance."
+  ],
+  "new_predictive_comparisons": 0,
+  "records": [
+    {
+      "archive_context": {
+        "announcement_date": "2013-08-22",
+        "auction_date": "2013-08-28",
+        "cusip": "912828RE2",
+        "security_term": "5-Year",
+        "security_type": "Note",
+        "term_bucket": "5-Year"
+      },
+      "confirmation": {
+        "actual_cusip": "912828RE2",
+        "announcement_date": "2013-08-22",
+        "auction_date": "2013-08-28",
+        "body_sha256": "8771c5405ada07d3185df613d4158a220061fbe086807695280209b068f44278",
+        "kind": "REALIZED_REOPENING",
+        "offered_term": "5-Year Note",
+        "original_issue_date": "2011-08-31",
+        "original_term_years": 7,
+        "release_date": "2013-08-28",
+        "series": "P-2018",
+        "text_sha256": "0a5e12f2f144fd21206aaf61ce30ff78b42c507454cc6610270f0a42afc7111a",
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2013/BPD_SPL_20130828_1.pdf"
+      },
+      "extraction_path": "documents[url].body_applicability[1]",
+      "result_documents_bound": false,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_B.json",
+      "review_ledger_sha256": "262e9db081e963e71f9a72f0338aa455118ae060fb58db9340993e848b8001ad",
+      "source_text_path": "data/source_discovery/treasury_auction/full_notice_text_v1/8771c5405ada07d3185df613d4158a220061fbe086807695280209b068f44278.txt"
+    },
+    {
+      "archive_context": {
+        "announcement_date": "2013-09-19",
+        "auction_date": "2013-09-25",
+        "cusip": "912828RH5",
+        "security_term": "5-Year",
+        "security_type": "Note",
+        "term_bucket": "5-Year"
+      },
+      "confirmation": {
+        "actual_cusip": "912828RH5",
+        "announcement_date": "2013-09-19",
+        "auction_date": "2013-09-25",
+        "body_sha256": "4b2129022761bd8118bd26c8ca5ff8a6f507ec18024f0bbd49597370fd0ea6f0",
+        "kind": "REALIZED_REOPENING",
+        "offered_term": "5-Year Note",
+        "original_issue_date": "2011-09-30",
+        "original_term_years": 7,
+        "release_date": "2013-09-25",
+        "series": "Q-2018",
+        "text_sha256": "cff83780f19003cea6f3aee130961741f81c6a65da43724f71dc15328a87eae5",
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2013/BPD_SPL_20130925_1.pdf"
+      },
+      "extraction_path": "documents[url].body_applicability[0].existing_security_reference",
+      "result_documents_bound": false,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_A.json",
+      "review_ledger_sha256": "752ec9d4541919af83f1a2fcf29e2f599911763f53297f94034331ba4d5f1721",
+      "source_text_path": "data/source_discovery/treasury_auction/full_notice_text_v1/4b2129022761bd8118bd26c8ca5ff8a6f507ec18024f0bbd49597370fd0ea6f0.txt"
+    },
+    {
+      "archive_context": {
+        "announcement_date": "2015-05-21",
+        "auction_date": "2015-05-26",
+        "cusip": "912828SY7",
+        "security_term": "2-Year",
+        "security_type": "Note",
+        "term_bucket": "2-Year"
+      },
+      "confirmation": {
+        "actual_cusip": "912828SY7",
+        "announcement_date": "2015-05-21",
+        "auction_date": "2015-05-26",
+        "body_sha256": "2ba724504fa25955740f078dc0bd0ad62e2b5e035b5a451d1d9128557f7d6a63",
+        "kind": "REALIZED_REOPENING",
+        "offered_term": "2-Year Note",
+        "original_issue_date": "2012-05-31",
+        "original_term_years": 5,
+        "release_date": "2015-05-26",
+        "series": "Z-2017",
+        "text_sha256": "9da0b1087670ccbd8dcf77c3349917900842e916c1145effba1062743b956e53",
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2015/BPD_SPL_20150526_1.pdf"
+      },
+      "extraction_path": "documents[url].body_applicability[0].existing_security_reference",
+      "result_documents_bound": false,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_A.json",
+      "review_ledger_sha256": "752ec9d4541919af83f1a2fcf29e2f599911763f53297f94034331ba4d5f1721",
+      "source_text_path": "data/source_discovery/treasury_auction/full_notice_text_v1/2ba724504fa25955740f078dc0bd0ad62e2b5e035b5a451d1d9128557f7d6a63.txt"
+    },
+    {
+      "archive_context": {
+        "announcement_date": "2015-08-20",
+        "auction_date": "2015-08-25",
+        "cusip": "912828TM2",
+        "security_term": "2-Year",
+        "security_type": "Note",
+        "term_bucket": "2-Year"
+      },
+      "confirmation": {
+        "actual_cusip": "912828TM2",
+        "announcement_date": "2015-08-20",
+        "auction_date": "2015-08-25",
+        "body_sha256": "c9235d4ede8858ee5d7514dd1a394c1ab9f85e8bdda9b397aae8b87d0677671c",
+        "kind": "REALIZED_REOPENING",
+        "offered_term": "2-Year Note",
+        "original_issue_date": "2012-08-31",
+        "original_term_years": 5,
+        "release_date": "2015-08-25",
+        "series": "AC-2017",
+        "text_sha256": "fb4842fa94d2d03984f6cda7e45e673202771c00c4b54a19c536aaacd21f48e2",
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2015/BPD_SPL_20150825_1.pdf"
+      },
+      "extraction_path": "documents[url].body_applicability[0].existing_security_reference",
+      "result_documents_bound": false,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_A.json",
+      "review_ledger_sha256": "752ec9d4541919af83f1a2fcf29e2f599911763f53297f94034331ba4d5f1721",
+      "source_text_path": "data/source_discovery/treasury_auction/full_notice_text_v1/c9235d4ede8858ee5d7514dd1a394c1ab9f85e8bdda9b397aae8b87d0677671c.txt"
+    },
+    {
+      "archive_context": {
+        "announcement_date": "2015-09-17",
+        "auction_date": "2015-09-22",
+        "cusip": "912828TS9",
+        "security_term": "2-Year",
+        "security_type": "Note",
+        "term_bucket": "2-Year"
+      },
+      "confirmation": {
+        "actual_cusip": "912828TS9",
+        "announcement_date": "2015-09-17",
+        "auction_date": "2015-09-22",
+        "body_sha256": "7d641a05edc8b4addec5f5984d7194a442d24da2268f987842db81e70c06cafb",
+        "kind": "REALIZED_REOPENING",
+        "offered_term": "2-Year Note",
+        "original_issue_date": "2012-10-01",
+        "original_term_years": 5,
+        "release_date": "2015-09-22",
+        "series": "AD-2017",
+        "text_sha256": "a643204fdd4486cf595f232a981ef3f34d0ae96796aea889003f0bd55fc3f1c0",
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2015/BPD_SPL_20150922_1.pdf"
+      },
+      "extraction_path": "documents[url].body_applicability[0].existing_security_reference",
+      "result_documents_bound": false,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_A.json",
+      "review_ledger_sha256": "752ec9d4541919af83f1a2fcf29e2f599911763f53297f94034331ba4d5f1721",
+      "source_text_path": "data/source_discovery/treasury_auction/full_notice_text_v1/7d641a05edc8b4addec5f5984d7194a442d24da2268f987842db81e70c06cafb.txt"
+    },
+    {
+      "archive_context": {
+        "announcement_date": "2015-10-30",
+        "auction_date": "2015-11-04",
+        "cusip": "912828TW0",
+        "security_term": "2-Year",
+        "security_type": "Note",
+        "term_bucket": "2-Year"
+      },
+      "confirmation": {
+        "actual_cusip": "912828TW0",
+        "announcement_date": "2015-10-30",
+        "auction_date": "2015-11-04",
+        "body_sha256": "88b013bdbac4be41b75c738498326c5b24916751559a9e6f03aef19ace0f80c1",
+        "kind": "REALIZED_REOPENING",
+        "offered_term": "2-Year Note",
+        "original_issue_date": "2012-10-31",
+        "original_term_years": 5,
+        "release_date": "2015-11-04",
+        "series": "AE-2017",
+        "text_sha256": "e9f527667cd24b890ce685bfb0d9d74d73801b0081940dd97fbf247d6dd142d7",
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2015/BPD_SPL_20151104_1.pdf"
+      },
+      "extraction_path": "documents[url].body_applicability[0].existing_security_reference",
+      "result_documents_bound": false,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_A.json",
+      "review_ledger_sha256": "752ec9d4541919af83f1a2fcf29e2f599911763f53297f94034331ba4d5f1721",
+      "source_text_path": "data/source_discovery/treasury_auction/full_notice_text_v1/88b013bdbac4be41b75c738498326c5b24916751559a9e6f03aef19ace0f80c1.txt"
+    },
+    {
+      "archive_context": {
+        "announcement_date": "2016-02-18",
+        "auction_date": "2016-02-23",
+        "cusip": "912828UR9",
+        "security_term": "2-Year",
+        "security_type": "Note",
+        "term_bucket": "2-Year"
+      },
+      "confirmation": {
+        "actual_cusip": "912828UR9",
+        "announcement_date": "2016-02-18",
+        "auction_date": "2016-02-23",
+        "body_sha256": "91b73a336dbb4a827ab59a02038d4cf6f5fc013c1ef7a66b2541358173095c13",
+        "kind": "REALIZED_REOPENING",
+        "offered_term": "2-Year Note",
+        "original_issue_date": "2013-02-28",
+        "original_term_years": 5,
+        "release_date": "2016-02-23",
+        "series": "V-2018",
+        "text_sha256": "4faa5edd3112714a0d307ce5c774017ea240a5db9eca29654d99d98914f61b37",
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/BPD_SPL_20160223_1.pdf"
+      },
+      "extraction_path": "documents[url].body_applicability[1]",
+      "result_documents_bound": false,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_B.json",
+      "review_ledger_sha256": "262e9db081e963e71f9a72f0338aa455118ae060fb58db9340993e848b8001ad",
+      "source_text_path": "data/source_discovery/treasury_auction/full_notice_text_v1/91b73a336dbb4a827ab59a02038d4cf6f5fc013c1ef7a66b2541358173095c13.txt"
+    },
+    {
+      "archive_context": {
+        "announcement_date": "2017-04-20",
+        "auction_date": "2017-04-25",
+        "cusip": "912828ST8",
+        "security_term": "2-Year",
+        "security_type": "Note",
+        "term_bucket": "2-Year"
+      },
+      "confirmation": {
+        "actual_cusip": "912828ST8",
+        "announcement_date": "2017-04-20",
+        "auction_date": "2017-04-25",
+        "body_sha256": "601e90cc4bcdedb31f8a6c42e7bc361c1d1d797a1d143ff1eb68cb01771a8d81",
+        "kind": "REALIZED_REOPENING",
+        "offered_term": "2-Year Note",
+        "original_issue_date": "2012-04-30",
+        "original_term_years": 7,
+        "release_date": "2017-04-25",
+        "series": "K-2019",
+        "text_sha256": "697e25ccbe3aef9e73941649f01e37561704c118a4ae145ee4e772e9abce0d75",
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170425_1.pdf"
+      },
+      "extraction_path": "documents[url].body_applicability[1]",
+      "result_documents_bound": false,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_C.json",
+      "review_ledger_sha256": "313e63d983eafeb88b5dcef014964b86a3c0b3ce56067c179a226f0398103ec9",
+      "source_text_path": "data/source_discovery/treasury_auction/full_notice_text_v1/601e90cc4bcdedb31f8a6c42e7bc361c1d1d797a1d143ff1eb68cb01771a8d81.txt"
+    },
+    {
+      "archive_context": {
+        "announcement_date": "2017-10-19",
+        "auction_date": "2017-10-24",
+        "cusip": "912828F62",
+        "security_term": "2-Year",
+        "security_type": "Note",
+        "term_bucket": "2-Year"
+      },
+      "confirmation": {
+        "actual_cusip": "912828F62",
+        "announcement_date": "2017-10-19",
+        "auction_date": "2017-10-24",
+        "body_sha256": "281de1183d7ac6b7bcdb6218c9208eb19d95d2ce70c547137051b49322eba239",
+        "kind": "REALIZED_REOPENING",
+        "offered_term": "2-Year Note",
+        "original_issue_date": "2014-10-31",
+        "original_term_years": 5,
+        "release_date": "2017-10-24",
+        "series": "AE-2019",
+        "text_sha256": "a56da1a06d436ed4458c2b2723e43806772f568576616b9bf830feb56541c5f3",
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20171024_1.pdf"
+      },
+      "extraction_path": "documents[url].body_applicability[0].existing_security_reference",
+      "result_documents_bound": false,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_A.json",
+      "review_ledger_sha256": "752ec9d4541919af83f1a2fcf29e2f599911763f53297f94034331ba4d5f1721",
+      "source_text_path": "data/source_discovery/treasury_auction/full_notice_text_v1/281de1183d7ac6b7bcdb6218c9208eb19d95d2ce70c547137051b49322eba239.txt"
+    },
+    {
+      "archive_context": {
+        "announcement_date": "2017-11-22",
+        "auction_date": "2017-11-27",
+        "cusip": "912828M80",
+        "security_term": "5-Year",
+        "security_type": "Note",
+        "term_bucket": "5-Year"
+      },
+      "confirmation": {
+        "actual_cusip": "912828M80",
+        "announcement_date": "2017-11-22",
+        "auction_date": "2017-11-27",
+        "body_sha256": "0905a4cd3930581a2bfe3b62c5debff7b4e32cad56ea0d78c6a68025f6dd7cf2",
+        "kind": "REALIZED_REOPENING",
+        "offered_term": "5-Year Note",
+        "original_issue_date": "2015-11-30",
+        "original_term_years": 7,
+        "release_date": "2017-11-27",
+        "series": "S-2022",
+        "text_sha256": "83a183b69a83af847094fa415ad3b2bddd66505060c2ecc3d03a5efa397716fc",
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20171127_1.pdf"
+      },
+      "extraction_path": "documents[url].body_applicability[1]",
+      "result_documents_bound": false,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_B.json",
+      "review_ledger_sha256": "262e9db081e963e71f9a72f0338aa455118ae060fb58db9340993e848b8001ad",
+      "source_text_path": "data/source_discovery/treasury_auction/full_notice_text_v1/0905a4cd3930581a2bfe3b62c5debff7b4e32cad56ea0d78c6a68025f6dd7cf2.txt"
+    },
+    {
+      "archive_context": {
+        "announcement_date": "2017-12-21",
+        "auction_date": "2017-12-27",
+        "cusip": "912828N30",
+        "security_term": "5-Year",
+        "security_type": "Note",
+        "term_bucket": "5-Year"
+      },
+      "confirmation": {
+        "actual_cusip": "912828N30",
+        "announcement_date": "2017-12-21",
+        "auction_date": "2017-12-27",
+        "body_sha256": "cc7a0e46ee7d72f5395a34da34c665c56746ba18ce69a02923f0fe9392993ca6",
+        "kind": "REALIZED_REOPENING",
+        "offered_term": "5-Year Note",
+        "original_issue_date": "2015-12-31",
+        "original_term_years": 7,
+        "release_date": "2017-12-27",
+        "series": "T-2022",
+        "text_sha256": "3bf8d7284889966a34ae6d9a525b4b93ea4dcc6efa6e5b6c0fbddc64a56d5e0b",
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20171227_1.pdf"
+      },
+      "extraction_path": "documents[url].body_applicability[0].existing_security_reference",
+      "result_documents_bound": false,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_A.json",
+      "review_ledger_sha256": "752ec9d4541919af83f1a2fcf29e2f599911763f53297f94034331ba4d5f1721",
+      "source_text_path": "data/source_discovery/treasury_auction/full_notice_text_v1/cc7a0e46ee7d72f5395a34da34c665c56746ba18ce69a02923f0fe9392993ca6.txt"
+    },
+    {
+      "archive_context": {
+        "announcement_date": "2019-03-21",
+        "auction_date": "2019-03-26",
+        "cusip": "912828C57",
+        "security_term": "2-Year",
+        "security_type": "Note",
+        "term_bucket": "2-Year"
+      },
+      "confirmation": {
+        "actual_cusip": "912828C57",
+        "announcement_date": "2019-03-21",
+        "auction_date": "2019-03-26",
+        "body_sha256": "0274eae525477d9e1c7a8232f8163e6a5281a34eaba17923899fdf979d764a0b",
+        "kind": "REALIZED_REOPENING",
+        "offered_term": "2-Year Note",
+        "original_issue_date": "2014-03-31",
+        "original_term_years": 7,
+        "release_date": "2019-03-26",
+        "series": "J-2021",
+        "text_sha256": "1438c398671416372697af8f5e3a16da8d71259715ec60c0e5a1ed769f3013ce",
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190326_1.pdf"
+      },
+      "extraction_path": "documents[url].body_applicability[1]",
+      "result_documents_bound": false,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_B.json",
+      "review_ledger_sha256": "262e9db081e963e71f9a72f0338aa455118ae060fb58db9340993e848b8001ad",
+      "source_text_path": "data/source_discovery/treasury_auction/full_notice_text_v1/0274eae525477d9e1c7a8232f8163e6a5281a34eaba17923899fdf979d764a0b.txt"
+    },
+    {
+      "archive_context": {
+        "announcement_date": "2019-03-21",
+        "auction_date": "2019-03-27",
+        "cusip": "912828W71",
+        "security_term": "5-Year",
+        "security_type": "Note",
+        "term_bucket": "5-Year"
+      },
+      "confirmation": {
+        "actual_cusip": "912828W71",
+        "announcement_date": "2019-03-21",
+        "auction_date": "2019-03-27",
+        "body_sha256": "6fe126226dd23e331e589e253bd286d615f6918a8bae6042755489bade2c27ed",
+        "kind": "REALIZED_REOPENING",
+        "offered_term": "5-Year Note",
+        "original_issue_date": "2017-03-31",
+        "original_term_years": 7,
+        "release_date": "2019-03-27",
+        "series": "J-2024",
+        "text_sha256": "a1692f9b39f31e7ae0a829c712d536cf8f25fdd604bde217f8cfa7c389eafb84",
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190327_1.pdf"
+      },
+      "extraction_path": "documents[url].body_applicability[1]",
+      "result_documents_bound": false,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_C.json",
+      "review_ledger_sha256": "313e63d983eafeb88b5dcef014964b86a3c0b3ce56067c179a226f0398103ec9",
+      "source_text_path": "data/source_discovery/treasury_auction/full_notice_text_v1/6fe126226dd23e331e589e253bd286d615f6918a8bae6042755489bade2c27ed.txt"
+    },
+    {
+      "archive_context": {
+        "announcement_date": "2019-04-18",
+        "auction_date": "2019-04-23",
+        "cusip": "912828WG1",
+        "security_term": "2-Year",
+        "security_type": "Note",
+        "term_bucket": "2-Year"
+      },
+      "confirmation": {
+        "actual_cusip": "912828WG1",
+        "announcement_date": "2019-04-18",
+        "auction_date": "2019-04-23",
+        "body_sha256": "889b866b08cac26357dba8e56e3cd8baba68b4329e5c9d263d700a205ba5dbe4",
+        "kind": "REALIZED_REOPENING",
+        "offered_term": "2-Year Note",
+        "original_issue_date": "2014-04-30",
+        "original_term_years": 7,
+        "release_date": "2019-04-23",
+        "series": "K-2021",
+        "text_sha256": "700fca9b989d7a7f404abee4df30989cf3bfd8b5c2d654e658d296adf14ffdef",
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190423_1.pdf"
+      },
+      "extraction_path": "documents[url].body_applicability[1]",
+      "result_documents_bound": false,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_C.json",
+      "review_ledger_sha256": "313e63d983eafeb88b5dcef014964b86a3c0b3ce56067c179a226f0398103ec9",
+      "source_text_path": "data/source_discovery/treasury_auction/full_notice_text_v1/889b866b08cac26357dba8e56e3cd8baba68b4329e5c9d263d700a205ba5dbe4.txt"
+    },
+    {
+      "archive_context": {
+        "announcement_date": "2019-05-23",
+        "auction_date": "2019-05-28",
+        "cusip": "912828XT2",
+        "security_term": "5-Year",
+        "security_type": "Note",
+        "term_bucket": "5-Year"
+      },
+      "confirmation": {
+        "actual_cusip": "912828XT2",
+        "announcement_date": "2019-05-23",
+        "auction_date": "2019-05-28",
+        "body_sha256": "bb3065697800ae7fe6cc7854ab0925cba59173cae24619df230799e29b2526b2",
+        "kind": "REALIZED_REOPENING",
+        "offered_term": "5-Year Note",
+        "original_issue_date": "2017-05-31",
+        "original_term_years": 7,
+        "release_date": "2019-05-28",
+        "series": "L-2024",
+        "text_sha256": "b7402c1759dcc8416ede37bd3874da060995bc691938151c6cd837aa65a2f01a",
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190528_1.pdf"
+      },
+      "extraction_path": "documents[url].body_applicability[1]",
+      "result_documents_bound": false,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_B.json",
+      "review_ledger_sha256": "262e9db081e963e71f9a72f0338aa455118ae060fb58db9340993e848b8001ad",
+      "source_text_path": "data/source_discovery/treasury_auction/full_notice_text_v1/bb3065697800ae7fe6cc7854ab0925cba59173cae24619df230799e29b2526b2.txt"
+    },
+    {
+      "archive_context": {
+        "announcement_date": "2019-10-30",
+        "auction_date": "2019-11-05",
+        "cusip": "912828TY6",
+        "security_term": "3-Year",
+        "security_type": "Note",
+        "term_bucket": "3-Year"
+      },
+      "confirmation": {
+        "actual_cusip": "912828TY6",
+        "announcement_date": "2019-10-30",
+        "auction_date": "2019-11-05",
+        "body_sha256": "f7d3276a9ddea3c46216dd8bebb17508f773e3c32dd83c94a29a01eea1a68d14",
+        "kind": "REALIZED_REOPENING",
+        "offered_term": "3-Year Note",
+        "original_issue_date": "2012-11-15",
+        "original_term_years": 10,
+        "release_date": "2019-11-05",
+        "series": "F-2022",
+        "text_sha256": "acd55acb83d49e9501570089553da0bf9d9ac19baf8e3a7a5b511de331200021",
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20191105_1.pdf"
+      },
+      "extraction_path": "documents[url].body_applicability[1]",
+      "result_documents_bound": false,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_B.json",
+      "review_ledger_sha256": "262e9db081e963e71f9a72f0338aa455118ae060fb58db9340993e848b8001ad",
+      "source_text_path": "data/source_discovery/treasury_auction/full_notice_text_v1/f7d3276a9ddea3c46216dd8bebb17508f773e3c32dd83c94a29a01eea1a68d14.txt"
+    },
+    {
+      "archive_context": {
+        "announcement_date": "2022-01-20",
+        "auction_date": "2022-01-25",
+        "cusip": "912828Z78",
+        "security_term": "5-Year",
+        "security_type": "Note",
+        "term_bucket": "5-Year"
+      },
+      "confirmation": {
+        "actual_cusip": "912828Z78",
+        "announcement_date": "2022-01-20",
+        "auction_date": "2022-01-25",
+        "body_sha256": "fd7e3d5ea9785ee2b0ff51ade52534716ddce55bae935f3fd7b9ef33b69c22fc",
+        "kind": "REALIZED_REOPENING",
+        "offered_term": "5-Year Note",
+        "original_issue_date": "2020-01-31",
+        "original_term_years": 7,
+        "release_date": "2022-01-25",
+        "series": "G-2027",
+        "text_sha256": "d205fd4af8081f26e44024919004a0342aabdafad37c6619157a47d0b113acf9",
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2022/SPL_20220125_1.pdf"
+      },
+      "extraction_path": "documents[url].body_applicability[0].existing_security_reference",
+      "result_documents_bound": false,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_A.json",
+      "review_ledger_sha256": "752ec9d4541919af83f1a2fcf29e2f599911763f53297f94034331ba4d5f1721",
+      "source_text_path": "data/source_discovery/treasury_auction/full_notice_text_v1/fd7e3d5ea9785ee2b0ff51ade52534716ddce55bae935f3fd7b9ef33b69c22fc.txt"
+    },
+    {
+      "archive_context": {
+        "announcement_date": "2025-02-20",
+        "auction_date": "2025-02-25",
+        "cusip": "91282CGQ8",
+        "security_term": "5-Year",
+        "security_type": "Note",
+        "term_bucket": "5-Year"
+      },
+      "confirmation": {
+        "actual_cusip": "91282CGQ8",
+        "announcement_date": "2025-02-20",
+        "auction_date": "2025-02-25",
+        "body_sha256": "102e1aa92d7e3719e397dc03ba3dbe6b6f6928a34a4757e648aadcf9d02a77af",
+        "kind": "REALIZED_REOPENING",
+        "offered_term": "5-Year Note",
+        "original_issue_date": "2023-02-28",
+        "original_term_years": 7,
+        "release_date": "2025-02-25",
+        "series": "H-2030",
+        "text_sha256": "29503c0b5b6c46be175a013946a5e902eb6c48bc3ce1f8376926ac21a505be2f",
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250225_1.pdf"
+      },
+      "extraction_path": "documents[url].body_applicability[0].existing_security_reference",
+      "result_documents_bound": false,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_A.json",
+      "review_ledger_sha256": "752ec9d4541919af83f1a2fcf29e2f599911763f53297f94034331ba4d5f1721",
+      "source_text_path": "data/source_discovery/treasury_auction/full_notice_text_v1/102e1aa92d7e3719e397dc03ba3dbe6b6f6928a34a4757e648aadcf9d02a77af.txt"
+    }
+  ],
+  "source_history_admitted": false,
+  "source_review_sha256": "4bea660c12ae0ba31ef388f0f8559fa3b04daee6bdbb9690d7f60b062a2ce155",
+  "source_terminal_audit_sha256": "96684467e7aa0a643cd9f95fe6e6e3be8eff83c030fadb99b632adf2fe5e9b78",
+  "status": "CANONICAL_REVIEWED_CONFIRMATIONS_PENDING_RESULT_BINDING"
+}

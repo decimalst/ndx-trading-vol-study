@@ -1,0 +1,18 @@
+test_empty_valid_panel_is_insufficient_data (tests.test_claims_release_score.ClaimsReleaseScoreTests.test_empty_valid_panel_is_insufficient_data) ... FAIL
+
+======================================================================
+FAIL: test_empty_valid_panel_is_insufficient_data (tests.test_claims_release_score.ClaimsReleaseScoreTests.test_empty_valid_panel_is_insufficient_data)
+----------------------------------------------------------------------
+ValueError: Unique complete paired panel required
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_score.py", line 67, in test_empty_valid_panel_is_insufficient_data
+    with self.assertRaisesRegex(ValueError, "INSUFFICIENT_DATA"):
+AssertionError: "INSUFFICIENT_DATA" does not match "Unique complete paired panel required"
+
+----------------------------------------------------------------------
+Ran 1 test in 0.004s
+
+FAILED (failures=1)

@@ -1,0 +1,85 @@
+FFFFFFFFFF
+======================================================================
+FAIL: test_failure_outputs_replace_symlink_leaves_without_reading_or_writing_targets (tests.test_verify_peak_age.EnvelopeAndFailureTests.test_failure_outputs_replace_symlink_leaves_without_reading_or_writing_targets) (name='metrics.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 467, in test_failure_outputs_replace_symlink_leaves_without_reading_or_writing_targets
+    self.assertEqual(sentinel.read_bytes(), before)
+AssertionError: b'{\n  "status": "UNEVALUABLE",\n  "whole_w[1393 chars]n}\n' != b'"untouchable prior record"\n'
+
+======================================================================
+FAIL: test_failure_outputs_replace_symlink_leaves_without_reading_or_writing_targets (tests.test_verify_peak_age.EnvelopeAndFailureTests.test_failure_outputs_replace_symlink_leaves_without_reading_or_writing_targets) (name='failure.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 467, in test_failure_outputs_replace_symlink_leaves_without_reading_or_writing_targets
+    self.assertEqual(sentinel.read_bytes(), before)
+AssertionError: b'{\n  "status": "UNEVALUABLE",\n  "whole_w[1455 chars]n}\n' != b'"untouchable prior record"\n'
+
+======================================================================
+FAIL: test_failure_outputs_replace_symlink_leaves_without_reading_or_writing_targets (tests.test_verify_peak_age.EnvelopeAndFailureTests.test_failure_outputs_replace_symlink_leaves_without_reading_or_writing_targets) (name='verification.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 467, in test_failure_outputs_replace_symlink_leaves_without_reading_or_writing_targets
+    self.assertEqual(sentinel.read_bytes(), before)
+AssertionError: b'{\n  "status": "FAILED",\n  "error": "Ind[162 chars]n}\n' != b'"untouchable prior record"\n'
+
+======================================================================
+FAIL: test_failure_outputs_replace_symlink_leaves_without_reading_or_writing_targets (tests.test_verify_peak_age.EnvelopeAndFailureTests.test_failure_outputs_replace_symlink_leaves_without_reading_or_writing_targets) (name='results.md')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 467, in test_failure_outputs_replace_symlink_leaves_without_reading_or_writing_targets
+    self.assertEqual(sentinel.read_bytes(), before)
+AssertionError: b'# SPX trailing peak-age return forecasts\[165 chars]nk\n' != b'"untouchable prior record"\n'
+
+======================================================================
+FAIL: test_failure_outputs_replace_symlink_leaves_without_reading_or_writing_targets (tests.test_verify_peak_age.EnvelopeAndFailureTests.test_failure_outputs_replace_symlink_leaves_without_reading_or_writing_targets) (name='trial_ledger.jsonl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 467, in test_failure_outputs_replace_symlink_leaves_without_reading_or_writing_targets
+    self.assertEqual(sentinel.read_bytes(), before)
+AssertionError: b'"un[20 chars]rd"\n{"candidate": "peak_age", "control": "bas[1010 chars]"}\n' != b'"un[20 chars]rd"\n'
+
+======================================================================
+FAIL: test_diagnostic_backup_links_cannot_create_or_change_targets (tests.test_verify_peak_age.EnvelopeAndFailureTests.test_diagnostic_backup_links_cannot_create_or_change_targets) (invalid=False, dangling=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 496, in test_diagnostic_backup_links_cannot_create_or_change_targets
+    self.assertFalse(leaf.is_symlink())
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_diagnostic_backup_links_cannot_create_or_change_targets (tests.test_verify_peak_age.EnvelopeAndFailureTests.test_diagnostic_backup_links_cannot_create_or_change_targets) (invalid=False, dangling=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 495, in test_diagnostic_backup_links_cannot_create_or_change_targets
+    self.assertEqual(sentinel.read_bytes() if sentinel.exists() else None, before)
+AssertionError: b'{\n  "status": "UNPUBLISHED_DIAGNOSTIC_[214 chars]n}\n' != None
+
+======================================================================
+FAIL: test_diagnostic_backup_links_cannot_create_or_change_targets (tests.test_verify_peak_age.EnvelopeAndFailureTests.test_diagnostic_backup_links_cannot_create_or_change_targets) (invalid=True, dangling=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 496, in test_diagnostic_backup_links_cannot_create_or_change_targets
+    self.assertFalse(leaf.is_symlink())
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_diagnostic_backup_links_cannot_create_or_change_targets (tests.test_verify_peak_age.EnvelopeAndFailureTests.test_diagnostic_backup_links_cannot_create_or_change_targets) (invalid=True, dangling=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 495, in test_diagnostic_backup_links_cannot_create_or_change_targets
+    self.assertEqual(sentinel.read_bytes() if sentinel.exists() else None, before)
+AssertionError: b'not JSON' != None
+
+======================================================================
+FAIL: test_successful_proof_replaces_symlink_without_overwriting_prior_target (tests.test_verify_peak_age.CompleteEntryTests.test_successful_proof_replaces_symlink_without_overwriting_prior_target)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 685, in test_successful_proof_replaces_symlink_without_overwriting_prior_target
+    self.assertEqual(sentinel.read_bytes(), b"unchanged prior proof")
+AssertionError: b'{\n  "status": "VERIFIED",\n  "protocol_s[3411 chars]n}\n' != b'unchanged prior proof'
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.668s
+
+FAILED (failures=10)

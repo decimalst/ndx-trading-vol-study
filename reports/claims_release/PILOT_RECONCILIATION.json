@@ -1,0 +1,43 @@
+{
+  "status": "FIVE_PILOT_RELEASES_RECONCILED_NOT_FULL_SOURCE_ADMISSION",
+  "created_utc": "2026-09-08T20:59:17.567911+00:00",
+  "alfred_structural_sha256": "90832acafb2bec11766d871c004b0979ec1de6ad4c5cf3d9c815c40b3bc7d9ec",
+  "checks": [
+    {
+      "release_date": "2009-06-04",
+      "reference_week": "2009-05-30",
+      "status": "RECONCILED",
+      "dol_parse_path": "data/claims_release/dol_pilot/2009-06-04.parse.json",
+      "dol_parse_sha256": "2978708c6fbc749b29cced728ea3c3c01bde3e1f87d3cd0f8fdf10d1d2dad320"
+    },
+    {
+      "release_date": "2012-01-05",
+      "reference_week": "2011-12-31",
+      "status": "RECONCILED",
+      "dol_parse_path": "data/claims_release/dol_pilot/2012-01-05.parse.json",
+      "dol_parse_sha256": "b75ade29639e01764987357d2b8321e5b5cebef847b662fd92e114ff1790323a"
+    },
+    {
+      "release_date": "2014-12-31",
+      "reference_week": "2014-12-27",
+      "status": "RECONCILED",
+      "dol_parse_path": "data/claims_release/dol_pilot/2014-12-31.parse.json",
+      "dol_parse_sha256": "bf5f689c1ec9f181dc07c1b9a4c74f9ff04894ea76184da1f4cda08c5c73b03f"
+    },
+    {
+      "release_date": "2020-09-03",
+      "reference_week": "2020-08-29",
+      "status": "RECONCILED",
+      "dol_parse_path": "data/claims_release/dol_pilot/2020-09-03.parse.json",
+      "dol_parse_sha256": "f5604d4da21f1de830d38b9318691105be09910a5321abd50c9f40ba34da0a37"
+    },
+    {
+      "release_date": "2025-09-25",
+      "reference_week": "2025-09-20",
+      "status": "RECONCILED",
+      "dol_parse_path": "data/claims_release/dol_pilot/2025-09-25.parse.json",
+      "dol_parse_sha256": "fde7b1b038cecb2bb6620ec5b7a7749899af148db600239a96d981f40c3cb8e9"
+    }
+  ],
+  "limitation": "Each previously date-selected case checked independently; no complete-history, cohort, model or predictive claim."
+}

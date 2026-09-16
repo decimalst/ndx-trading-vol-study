@@ -1,0 +1,82 @@
+study_id: overnight_index_wave03
+specified_on: '2026-09-06'
+status: fixed_before_empirical_scores
+objective: Find incremental information for QQQ overnight returns with an entry-compatible information cutoff
+evidence_class: exploratory_reused_history_adjusted_return_proxy
+wave: 3
+wave_alpha: 0.004166666666666667
+sources:
+  daily: data/raw/daily_ohlc.parquet
+  cross: data/raw/cross_asset_daily.parquet
+  vxn: data/free_sources/raw/cboe/VXN_History.csv
+  vix: data/free_sources/raw/cboe/VIX_History.csv
+  vix9d: data/free_sources/raw/cboe/VIX9D_History.csv
+  vvix: data/free_sources/raw/cboe/VVIX_History.csv
+index:
+  asset: QQQ
+  source_end: '2025-10-20'
+  sealed_start: '2025-11-03'
+  origin_start: '2016-01-04'
+  origin_end: '2025-10-17'
+  latest_target: '2025-10-20'
+  decision: before entry-session closing-auction cutoff, with every market feature fixed through the previous completed session
+  feature_cutoff: previous actual QQQ session close; calendar predictors describe the known entry date only
+  target: exp(log(adjusted_close_next/adjusted_close_entry) - log(close_next/open_next)) minus1
+  target_interpretation: vendor-adjusted overnight return proxy; not exact price-plus-dividend cash profit
+  target_publication: next actual QQQ session close, even though the price move ends at its opening
+  horizons: [1]
+  models: [mean, baseline, cross_signed, volume_pressure, iv_shape]
+  baseline: [const, on_d, on_w, on_m, day_d, day_w, day_m, lrv_d, lrv_w, lrv_m, liv, lvix, entry_dow_1, entry_dow_2, entry_dow_3, entry_dow_4]
+  baseline_description: separate own adjusted-overnight and daytime logreturn means1/5/22; logmean GK-plus-raw-overnight variance1/5/22; logVXN/logVIX; entryweekdayTuesday-Friday
+  candidates:
+    cross_signed: five separate HYG,TLT,GLD,USO,UUP cached Yahoo close-series log returns at the feature cutoff; builder prefers adjusted close but permits raw close fallback
+    volume_pressure: daytime logreturn times abnormal logvolume; latest value and strict5session mean, both ending at feature cutoff
+    iv_shape: log(VIX9D/VIX) and logVVIX at feature cutoff
+  volume_reference: zscore of logvolume using strictly preceding252 observations, minimum126, sample standard deviation; no current observation in its own reference
+  calendar: entryweekday only; no realized next-opening date in any predictor
+  estimator: monthly expanding ridge; mean squared loss plus .01 times standardized slope norm squared; unpenalized intercept
+  ridge_alpha: 0.01
+  scaling: training-only population mean and standard deviation; reject zero-scale features
+  minimum_train: 1000
+  common_sample: all five models share every complete input and eligible label row for each fit and every scored origin
+  mean_control: mean target on exactly the same eligible training sample
+  training_rule: historical entry strictly before fit entry and label available_date at or before fit feature_cutoff_date
+  development: ['2016-01-04', '2019-12-31']
+  development_target_available_by: '2019-12-31'
+  evaluation: ['2020-01-02', '2025-10-17']
+  evaluation_stability: [['2020-01-02', '2022-12-31'], ['2023-01-01', '2025-10-17']]
+  effect_threshold_pct: 0.25
+  effect_rationale: unchanged practical return-forecast threshold from the first index wave
+measurement:
+  adjustment_factor: adjusted_close / close; never use its level as a predictor
+  event_flag: absolute log adjustment-factor ratio between target and entry greater than1e-5
+  event_threshold: 0.00001
+  sensitivity: paired loss on unflagged origins with identical frozen forecasts; retain full primary sample and all training rows
+  sensitivity_gate: negative pairedlossgap on the unflagged subset in both development and evaluation, in addition to primary gates
+  flag_timing: retrospective label audit only; cannot filter trades or serve as a predictor
+  cross_source_limitation: cache lacks per-field adjustment provenance; any passing cross-series result requires separate field confirmation before advancing beyond an exploratory lead
+  vix9d_history: first values January2011 precede October2013 launch; early training measurements are back-calculated history, while all scored entries are post-launch
+  cash_claims: no execution or cash-profit inference from the adjusted proxy; separate corporate-action and fill accounting required for those claims
+comparisons:
+  new_hypotheses: 6
+  inherited_hypotheses: 72
+  cumulative_hypotheses: 78
+  inherited_sources: [reports/orthogonal_round2/metrics.json, reports/model_memory_study/combined_metrics.json, reports/iterative_signal_search/metrics.json, reports/international_volatility/metrics.json]
+  controls: [baseline, mean]
+  signal_gate: each candidate must pass both controls
+inference:
+  loss: squared error of the adjusted overnight return proxy
+  blocks: [21, 63, 126]
+  bootstrap_draws: 19999
+  seed: 20260909
+  seed_rule: seed + phase_code*10000 + block; development=0,evaluation=1
+  p_phase: maximum two-sided centered-null circular bootstrap p across allblocks and Bartlett HAC126 p
+  p_hypothesis: maximum development and evaluation p
+  multiplicity: Holm across6 new contrasts at .05/(3*4), and separately all78 enumerated contrasts at .05
+  gate: bothphase gain>=.25%, negative pairedlossgap in eachof2evaluation slices and both unflagged phase sensitivities, waveHolm<wavealpha and cumulativeHolm<.05
+  reporting: all comparisons, nominal uncertainty envelope, MDE, annual and phase diagnostics, unflagged measurement sensitivity
+  failure_rule: any fit/scoring/output failure retains all6 hypotheses as unevaluable p1; distinguish insufficient data from invalid run and do not claim a null result
+  caveat: historical splits and cumulative correction do not reverse adaptive data reuse or establish historical publication vintages
+outputs:
+  data: data/overnight_index
+  reports: reports/overnight_index

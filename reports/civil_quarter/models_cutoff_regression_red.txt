@@ -1,0 +1,14 @@
+test_missing_predecessor_cutoff_never_enters_training (tests.test_civil_quarter_models.CivilQuarterModels.test_missing_predecessor_cutoff_never_enters_training) ... FAIL
+
+======================================================================
+FAIL: test_missing_predecessor_cutoff_never_enters_training (tests.test_civil_quarter_models.CivilQuarterModels.test_missing_predecessor_cutoff_never_enters_training)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_civil_quarter_models.py", line 367, in test_missing_predecessor_cutoff_never_enters_training
+    self.assertFalse(admitted.iloc[0])
+AssertionError: np.True_ is not false
+
+----------------------------------------------------------------------
+Ran 1 test in 0.032s
+
+FAILED (failures=1)

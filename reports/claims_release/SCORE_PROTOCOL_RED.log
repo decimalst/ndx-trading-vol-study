@@ -1,0 +1,33 @@
+test_claims_release_protocol (unittest.loader._FailedTest.test_claims_release_protocol) ... ERROR
+test_claims_release_score (unittest.loader._FailedTest.test_claims_release_score) ... ERROR
+
+======================================================================
+ERROR: test_claims_release_protocol (unittest.loader._FailedTest.test_claims_release_protocol)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_claims_release_protocol
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_protocol.py", line 6, in <module>
+    from src.claims_release_protocol import CONTRACT, validate
+ModuleNotFoundError: No module named 'src.claims_release_protocol'
+
+
+======================================================================
+ERROR: test_claims_release_score (unittest.loader._FailedTest.test_claims_release_score)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_claims_release_score
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_score.py", line 9, in <module>
+    from src.claims_release_score import evaluate, failure_metrics, inherit_family
+ModuleNotFoundError: No module named 'src.claims_release_score'
+
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+FAILED (errors=2)

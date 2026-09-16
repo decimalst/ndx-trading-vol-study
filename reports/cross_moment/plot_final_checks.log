@@ -1,0 +1,11 @@
+test_current_verified_identity_and_no_failure_or_new_fit_required (tests.test_plot_cross_moment.PlotContracts.test_current_verified_identity_and_no_failure_or_new_fit_required) ... ok
+test_guard_orders_both_literal_contrasts_and_phases_without_mutation (tests.test_plot_cross_moment.PlotContracts.test_guard_orders_both_literal_contrasts_and_phases_without_mutation) ... ok
+test_invalid_input_produces_no_plot_artifacts (tests.test_plot_cross_moment.PlotContracts.test_invalid_input_produces_no_plot_artifacts) ... ok
+test_missing_duplicate_or_wrong_functional_and_phase_rejected (tests.test_plot_cross_moment.PlotContracts.test_missing_duplicate_or_wrong_functional_and_phase_rejected) ... ok
+test_nonfinite_or_negative_losses_reversed_intervals_and_bad_probabilities_reject (tests.test_plot_cross_moment.PlotContracts.test_nonfinite_or_negative_losses_reversed_intervals_and_bad_probabilities_reject) ... ok
+test_render_preserves_unscaled_intervals_threshold_and_writes_png_and_pdf (tests.test_plot_cross_moment.PlotContracts.test_render_preserves_unscaled_intervals_threshold_and_writes_png_and_pdf) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.374s
+
+OK

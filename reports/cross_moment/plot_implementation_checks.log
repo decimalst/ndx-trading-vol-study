@@ -1,0 +1,19 @@
+/Users/byrons/.matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /var/folders/jn/2wqppgv57cx3k54l_dqt9sl00000gn/T/matplotlib-ej4lrndf because there was an issue with the default path ({configdir}); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+
+Fontconfig error: No writable cache directories
+	/opt/homebrew/var/cache/fontconfig
+	/Users/byrons/.cache/fontconfig
+	/Users/byrons/.fontconfig
+Matplotlib is building the font cache; this may take a moment.
+test_current_verified_identity_and_no_failure_or_new_fit_required (tests.test_plot_cross_moment.PlotContracts.test_current_verified_identity_and_no_failure_or_new_fit_required) ... ok
+test_guard_orders_both_literal_contrasts_and_phases_without_mutation (tests.test_plot_cross_moment.PlotContracts.test_guard_orders_both_literal_contrasts_and_phases_without_mutation) ... ok
+test_invalid_input_produces_no_plot_artifacts (tests.test_plot_cross_moment.PlotContracts.test_invalid_input_produces_no_plot_artifacts) ... ok
+test_missing_duplicate_or_wrong_functional_and_phase_rejected (tests.test_plot_cross_moment.PlotContracts.test_missing_duplicate_or_wrong_functional_and_phase_rejected) ... ok
+test_nonfinite_or_negative_losses_reversed_intervals_and_bad_probabilities_reject (tests.test_plot_cross_moment.PlotContracts.test_nonfinite_or_negative_losses_reversed_intervals_and_bad_probabilities_reject) ... ok
+test_render_preserves_unscaled_intervals_threshold_and_writes_png_and_pdf (tests.test_plot_cross_moment.PlotContracts.test_render_preserves_unscaled_intervals_threshold_and_writes_png_and_pdf) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.347s
+
+OK

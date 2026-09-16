@@ -1,0 +1,27 @@
+COMMAND: .venv/bin/python -m unittest tests.test_treasury_dealer_score -v
+test_activity_comes_from_explicit_mask_even_zero_difference (tests.test_treasury_dealer_score.TreasuryDealerScoreTests.test_activity_comes_from_explicit_mask_even_zero_difference) ... ok
+test_all_fixed_protocol_numeric_dates_and_masks_are_enforced (tests.test_treasury_dealer_score.TreasuryDealerScoreTests.test_all_fixed_protocol_numeric_dates_and_masks_are_enforced) ... ok
+test_failure_metrics_preserve_all_prior_and_two_p_one_rows (tests.test_treasury_dealer_score.TreasuryDealerScoreTests.test_failure_metrics_preserve_all_prior_and_two_p_one_rows) ... ok
+test_full_phase_calendar_gaps_tail_positions_offsets_and_shared_rng (tests.test_treasury_dealer_score.TreasuryDealerScoreTests.test_full_phase_calendar_gaps_tail_positions_offsets_and_shared_rng) ... ok
+test_inheritance_and_input_preservation (tests.test_treasury_dealer_score.TreasuryDealerScoreTests.test_inheritance_and_input_preservation) ... ok
+test_pairing_qlike_and_global_target_offset_corruption (tests.test_treasury_dealer_score.TreasuryDealerScoreTests.test_pairing_qlike_and_global_target_offset_corruption) ... ok
+test_support_corruptions_fail_before_resampling (tests.test_treasury_dealer_score.TreasuryDealerScoreTests.test_support_corruptions_fail_before_resampling) ... ok
+test_two_controls_both_endpoints_and_exact_family (tests.test_treasury_dealer_score.TreasuryDealerScoreTests.test_two_controls_both_endpoints_and_exact_family) ... ok
+test_worst_endpoint_phase_method_and_single_control_veto (tests.test_treasury_dealer_score.TreasuryDealerScoreTests.test_worst_endpoint_phase_method_and_single_control_veto) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 16.868s
+
+OK
+
+exit_code=0
+
+COMMAND: .venv/bin/ruff check src/treasury_dealer_score.py tests/test_treasury_dealer_score.py
+All checks passed!
+
+exit_code=0
+
+COMMAND: .venv/bin/ruff format --check src/treasury_dealer_score.py tests/test_treasury_dealer_score.py
+2 files already formatted
+
+exit_code=0

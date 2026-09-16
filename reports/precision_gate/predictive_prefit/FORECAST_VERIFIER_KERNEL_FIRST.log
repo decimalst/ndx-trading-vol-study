@@ -1,0 +1,12 @@
+test_certificate_matches_separate_optimum_and_literal_forecast (tests.test_verify_precision_gate_forecasts.IndependentGateTests.test_certificate_matches_separate_optimum_and_literal_forecast) ... ok
+test_gate_gradient_objective_stationarity_and_identity_tampering (tests.test_verify_precision_gate_forecasts.IndependentGateTests.test_gate_gradient_objective_stationarity_and_identity_tampering) ... ok
+test_identical_experts_boundary_and_tiny_ratio_prediction (tests.test_verify_precision_gate_forecasts.IndependentGateTests.test_identical_experts_boundary_and_tiny_ratio_prediction) ... ok
+test_interior_optimum_known_analytically (tests.test_verify_precision_gate_forecasts.IndependentGateTests.test_interior_optimum_known_analytically) ... ok
+test_separate_optimizer_contract_failure_and_input_preservation (tests.test_verify_precision_gate_forecasts.IndependentGateTests.test_separate_optimizer_contract_failure_and_input_preservation) ... ok
+test_calendar_gaps_change_decay_but_query_mutation_does_not_refit (tests.test_verify_precision_gate_forecasts.IndependentExpertTests.test_calendar_gaps_change_decay_but_query_mutation_does_not_refit) ... ok
+test_weighted_qr_scale_and_smearing_against_literal_weighted_fit (tests.test_verify_precision_gate_forecasts.IndependentExpertTests.test_weighted_qr_scale_and_smearing_against_literal_weighted_fit) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.022s
+
+OK

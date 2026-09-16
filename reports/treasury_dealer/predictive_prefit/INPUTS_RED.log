@@ -1,0 +1,19 @@
+test_treasury_dealer_inputs (unittest.loader._FailedTest.test_treasury_dealer_inputs) ... ERROR
+
+======================================================================
+ERROR: test_treasury_dealer_inputs (unittest.loader._FailedTest.test_treasury_dealer_inputs)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_treasury_dealer_inputs
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_dealer_inputs.py", line 14, in <module>
+    from src.treasury_dealer_inputs import build_inputs, read_inputs
+ModuleNotFoundError: No module named 'src.treasury_dealer_inputs'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

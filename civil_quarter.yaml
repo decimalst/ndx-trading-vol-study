@@ -1,0 +1,363 @@
+study_id: civil_quarter_wave15
+specified_on: '2026-09-07'
+status: specified_before_new_civil_features_counts_or_fits
+wave: 15
+wave_alpha: 0.00020833333333333335
+objective: Test one civil quarter-end SPX risk increment beyond market, original macro-plan, month-end, December
+  year-end and additive annual calendar controls
+evidence_class: exploratory_reused_history_archival_SPX_daily_risk_civil_calendar_interaction
+index:
+  asset: SPX
+  source_end: '2025-10-20'
+  sealed_start: '2025-11-03'
+  origin_start: '2016-01-04'
+  origin_end: '2025-10-17'
+  latest_target: '2025-10-20'
+  development:
+  - '2016-01-04'
+  - '2019-12-31'
+  development_target_available_by: '2019-12-31'
+  evaluation:
+  - '2020-01-02'
+  - '2025-10-17'
+  evaluation_stability:
+  - - '2020-01-02'
+    - '2022-12-31'
+  - - '2023-01-01'
+    - '2025-10-17'
+  horizons:
+  - 1
+  market_lag: 1
+  minimum_train: 1000
+  models:
+  - mean
+  - baseline
+  - quarter
+  baseline:
+  - const
+  - lrv_d
+  - lrv_w
+  - lrv_m
+  - neg_d
+  - neg_w
+  - neg_m
+  - lvix
+  - term
+  - lvvix
+  - entry_dow_1
+  - entry_dow_2
+  - entry_dow_3
+  - entry_dow_4
+  - nominal_hours
+  - cpi_plan
+  - nfp_plan
+  - fomc_plan
+  - month_2
+  - month_3
+  - month_4
+  - month_5
+  - month_6
+  - month_7
+  - month_8
+  - month_9
+  - month_10
+  - month_11
+  - month_12
+  - month_end5
+  - year_end5
+  all_features:
+  - const
+  - lrv_d
+  - lrv_w
+  - lrv_m
+  - neg_d
+  - neg_w
+  - neg_m
+  - lvix
+  - term
+  - lvvix
+  - entry_dow_1
+  - entry_dow_2
+  - entry_dow_3
+  - entry_dow_4
+  - nominal_hours
+  - cpi_plan
+  - nfp_plan
+  - fomc_plan
+  - month_2
+  - month_3
+  - month_4
+  - month_5
+  - month_6
+  - month_7
+  - month_8
+  - month_9
+  - month_10
+  - month_11
+  - month_12
+  - month_end5
+  - year_end5
+  - quarter_end5
+upstream:
+  protocol: causal_pool.yaml
+  reports: reports/causal_pool
+  data: data/causal_pool
+  protocol_sha256: 1e329ee208612ed8db1fede873b92a938820d51a3fcf2ec583c813d37ac000ad
+  manifest_sha256: a775d4491b3dab27f2c36c037090d37a094dfad85c5ff67256acfa262d40f4c2
+  verification_sha256: 0f2142d97e62e4ab1dbfc02c6a27bdf23dc02676bdd43bc41fa64e180a2d1010
+  verifier_sha256: cb34da06786f61e50b89f494e4071abb8d250539a52145d782cc1e122aeaa900
+  required_status: VERIFIED
+feature_source:
+  protocol: calendar_variance.yaml
+  reports: reports/calendar_variance
+  data: data/calendar_variance
+  protocol_sha256: b3357641d874d22eb6bf0903049e8dcfd93df4e38b0748f717923447ff367ca3
+  manifest_sha256: 521deb0c053c3eb724f2cd84c4644688863ec263ecce62d00c8ea129580bb4c8
+  verification_sha256: 47f2a0a333df19d258ca95dfef9fbf403ee0ae6f6a675ec85903755b84943cb7
+  verifier_sha256: c213b47e91c25c7293a557064dbf8c62c583fc32bf58701cbf2f5afa61f78677
+  required_status: VERIFIED
+  features: data/calendar_variance/features.parquet
+  targets: data/calendar_variance/targets.parquet
+prospectus:
+  path: reports/causal_pool/NEXT_CALENDAR_VARIANCE_DESIGN.md
+  sha256: 0933f511c14df8c5bdb32382663b1472d5e09d7678158ca67f455edfb1e7254f
+source_contract:
+  admission: Reconstruct complete original wave14 VERIFIED record and separately complete wave8 VERIFIED record
+    through frozen read-only functions; historical inventories anchored by original manifest hashes, never expanded-current-tree
+    old coverage
+  immutable_read: Read and hash each admitted parquet/JSON input once before decoding; inherited metrics and ledgers
+    use same checked snapshots. For old wave8 raw reconstruction stage all its registered input bytes into a temporary
+    same-relative-path tree, normalize only documentary source_path prefixes back to originalroot, and preserve
+    old parser/gates
+  sources:
+    daily: data/research_paths/spx_daily.parquet
+    vix: data/free_sources/raw/cboe/VIX_History.csv
+    vix9d: data/free_sources/raw/cboe/VIX9D_History.csv
+    vvix: data/free_sources/raw/cboe/VVIX_History.csv
+    cpi: data/source_discovery/macro_plans/cpi/ledger.json
+    nfp: data/source_discovery/macro_plans/nfp/ledger_verified.json
+    fomc: data/source_discovery/macro_plans/calendar/fomc_original_annual_plans.csv
+    fomc_coverage: data/source_discovery/macro_plans/calendar/fomc_annual_coverage.json
+  calendar:
+    source_publication_start: '2010-01-01'
+    source_publication_end: '2025-10-20'
+    bls_policy: next plan printed in preceding monthly release; original planned dates retained even if later canceled
+      or changed
+    bls_revision_policy: current archives with explicit this-release reissue notices remain unadmitted for both
+      CPI and payroll; retain original source ledger and separate pre-fit admission correction
+    source_eligibility: publication civil date strictly before preceding observed market-session date
+    nominal_start: entry civil date1600America/New_York
+    nominal_end: next Monday-through-Friday civil date1600America/New_York; skip weekends only
+    duration: nominal endpoint UTC difference in hours; includes DST elapsed-time change
+    cpi: eligible original CPI planned timestamp falls in open-left closed-right nominal window
+    nfp: eligible original payroll planned timestamp falls in open-left closed-right nominal window
+    fomc: eligible original annual meeting final DATE equals nominal ending date; date-only timing control, no invented
+      statement time
+    fomc_annual: exactly8original planned meetings per year from selected full annual announcement published before
+      covered year
+    coverage: each nominal-window calendar month requires its eligible explicit original BLS plan; full eligible
+      annual FOMC plan required
+    missing: pending retrieval blocks execution; intrinsically absent or ambiguous source statements remain unknown
+      and enter all-arm complete-sample mask; no date/year inference or zero fill
+    limitations: nominal window ignores holidays and early closes; neither actual nor historically planned exchange
+      holding interval; no actual next market date enters a predictor
+    provenance: exact currently captured official-document tool text and extraction hashes; raw provider bytes and
+      immutable historical web vintages unverified
+    replication: Legacy repository calendars already forecast next-session variance; this tests original-plan admission
+      with stronger matched SPX controls, not a first calendar mechanism
+  measurement: Exact frozen wave8 daily SPX target/market transformations; max(GK,1e-10) is part of that preexisting
+    risk proxy, not the later strict paired-asset raw-GK gate
+  missing: Keep full bounded SPX reference calendar, strict old rolling history and exact original-plan known-month
+    masks; no zero filling, removed macro controls, holiday repair or next-common-date labels
+  limitations: Reused Yahoo/Cboe archival values, unverified historical publication latency and revisions, original-plan
+    documentary coverage, nominal civil windows and early back-calculated VIX9D persist; no source acquisition or
+    institutional mechanism claim
+target:
+  formula: max(Garman-Klass[next],1e-10)+log(raw_open[next]/raw_close[entry])^2
+  availability: Next actual observed SPX close, target_end=available_date; strictly positive finite known risk labels;
+    missing stays unknown
+  interpretation: Native squared-log-return daily OHLC full-session risk proxy, not measured high-frequency integrated
+    variance
+  cohort: All32complete predictors and exact common mature labels across everymodel; monthly firstfeaturecomplete
+    application before futurequerylabelmask; no event-only evaluation or dropped unscored month
+civil:
+  month_columns:
+  - month_2
+  - month_3
+  - month_4
+  - month_5
+  - month_6
+  - month_7
+  - month_8
+  - month_9
+  - month_10
+  - month_11
+  - month_12
+  nuisance_columns:
+  - month_2
+  - month_3
+  - month_4
+  - month_5
+  - month_6
+  - month_7
+  - month_8
+  - month_9
+  - month_10
+  - month_11
+  - month_12
+  - month_end5
+  - year_end5
+  candidate: quarter_end5
+  nominal_date: First Monday-through-Friday civil date strictly after origin; skip weekends only; no future observed
+    prices/holidays/earlycloses
+  month_end5: Nominal date lies within final5 civil dates of its Gregorian month, inclusive
+  year_end5: month_end5 times nominal December indicator
+  quarter_end5: month_end5 times nominal month in March,June,September; December belongs to year-end control
+  seasonality: Eleven nominal-month dummies omitting January
+  training: Original18 retain old geometry; all13 new nuisance civil columns and candidate train-centered on exact
+    admitted rows with fixedscale1; query means unchanged
+  constant: Exact all-equal new civil values center exactly zero in mathematical primitives; whole-wave scientific
+    support and rank gates still reject unsupported empirical folds
+support:
+  minimum_train: 1000
+  minimum_phase_observations: 127
+  per_class:
+    train:
+      quarter_end5: 20
+      month_end5: 20
+      year_end5: 5
+      month_dummy: 20
+    phase:
+      quarter_end5: 30
+      month_end5: 20
+      year_end5: 5
+      month_dummy: 20
+    slice:
+      quarter_end5: 15
+      month_end5: 20
+      year_end5: 5
+      month_dummy: 10
+  civil_rank: Everytraining [const,11month,E5,Y5,G5] block must have rank15 by singularvalues>1e-10*largest; no
+    dropping or recoding
+  civil_rank_relative_tolerance: 1.0e-10
+  novelty: Regress centeredG5 on exact transformedBASE31 using lstsq rcond1e-12; normresidual/normcenteredG5 must
+    exceed1e-8; fullmarket rank not required because slopes regularized
+  novelty_lstsq_rcond: 1.0e-12
+  minimum_relative_residual_norm: 1.0e-08
+  timing: Audit everymonthly training group/rank/novelty and allphase/slice groups on exact commoncohorts before
+    any optimization; any failure aborts both hypotheses, no support-dependent deletion
+fitting:
+  penalty: 0.01
+  old_scale_minimum: 1.0e-12
+  new_civil_scale: 1.0
+  baseline: 31-column normalized mean eta+exp(log(q/meanq)-eta) plus.01squaredslopes; unpenalizedintercept, old17populationmean/std,
+    new13fixedscale1center
+  normalization: Trainmean=arithmetic mean of positivey; qscaled=y/trainmean; nativeforecast exp(log(trainmean)+design@scaled_beta)
+  quarter: "Freeze baselineeta; z=G5-trainmeanG5; fitonly b via mean(eta0+bz+exp(logqscaled-eta0-bz))+.01b\xB2;\
+    \ no extra intercept or jointrefit"
+  mean: Exact arithmetic training mean on sameall32featurecomplete mature rows
+  optimizer: Deterministic Newton from allzero baselinecoefficients and quarterb0; atmost200states and60Armijo halvings
+    perstep, armijo1e-4; accepted fullgradientmax<=1e-8
+  maximum_iterations: 200
+  maximum_backtracks: 60
+  armijo: 0.0001
+  gradient_tolerance: 1.0e-08
+  scalar_bracket: R=max(1,abs(initial_scalar_gradient)/.02); audit finite gradients at -R,+R enclosing zero; unique
+    optimum follows curvature>=.02
+  arithmetic: Strictrealfinite designs/parameters/states/predictions; positivey/mean/scaledtargets/ratio/forecast;
+    reject unsupported nonzeroproduct,quotient,exp underflow. Tentative invalid objectives may be rejected within
+    the fixed Armijo schedule; accepted iterates and published forecasts cannot be repaired/clipped/restarted
+scoring:
+  loss: proper_variance
+  formula: log(h)+y/h
+  effect_threshold_absolute: 0.005
+  paired_difference: d=(hA-hB)/max(hA,hB); gap=logratio-d*(y/min(hA,hB)). For abs(d)<=.5 logratio=-log1p(-d) ifd>=0
+    else log1p(d); otherwise log(hA)-log(hB)
+  arithmetic: First validate every positive real input and finite individual score, reject unsupported quotient/product
+    underflow. Coherence allowance64 times sum of unit(x) for loghA,y/hA,loghB,y/hB,stablegap,directgap; unit=max(eps*abs(x),abs(x)-nextafter(abs(x),0)),
+    no unit floor
+  effect_reference: Absolute mean natural-log proper-score decrease.005 bothphases, not percentage of potentiallynegative
+    rawscore or profit
+comparisons:
+  new_hypotheses: 2
+  inherited_hypotheses: 121
+  cumulative_hypotheses: 123
+  inherited_sources:
+  - reports/orthogonal_round2/metrics.json
+  - reports/model_memory_study/combined_metrics.json
+  - reports/iterative_signal_search/metrics.json
+  - reports/international_volatility/metrics.json
+  - reports/overnight_index/metrics.json
+  - reports/macro_overnight/metrics.json
+  - reports/measurement_memory/metrics.json
+  - reports/index_hinge/metrics.json
+  - reports/tail_shape/metrics.json
+  - reports/calendar_variance/metrics.json
+  - reports/relative_risk/metrics.json
+  - reports/joint_risk/metrics.json
+  - reports/cross_moment/metrics.json
+  - reports/target_aligned/metrics.json
+  - reports/sign_memory/metrics.json
+  - reports/causal_pool/metrics.json
+  controls:
+  - baseline
+  - mean
+  contrasts:
+  - - quarter
+    - baseline
+    - proper_variance
+  - - quarter
+    - mean
+    - proper_variance
+  candidate_gate: Both contrasts must pass everyfixedphase/effect/stability/multiplicity gate
+inference:
+  blocks:
+  - 21
+  - 63
+  - 126
+  hac_lags: 126
+  minimum_phase_observations: 127
+  bootstrap_draws: 99999
+  seed: 20260921
+  inference_scale: 1.0
+  seed_rule: seed+phase_code*10000+block; development0,evaluation1
+  p_phase: Maximum two-sided centered-null circular-block bootstrap and BartlettHAC126 p
+  p_hypothesis: Maximum development/evaluation p
+  multiplicity: Holm2 at.05/(15*16), separately cumulativeHolm123 at.05
+  gate: Bothphase proper-score delta<=-.005 againstBOTHcontrols; bothfixed evaluationslice deltas<0; waveHolm<.05/240,cumulativeHolm<.05
+  power: Nominal HAC80percent minimumdetectableeffect dividedby.005; ordinary5percent diagnostic, noequivalence
+    or adjustedpowerclaim
+  failure_rule: Any admission/support/fit/score/verification/publication failure leaves bothregistered hypotheses
+    UNEVALUABLEp1; retain alloldresults and diagnosticfailures, no outcome-dependent repair
+verification:
+  baseline_method: trust-exact
+  baseline_initialization: all_zero
+  baseline_maximum_iterations: 500
+  independent_gradient_target: 1.0e-10
+  accepted_gradient_tolerance: 1.0001e-08
+  quarter_method: brentq
+  scalar_absolute_tolerance: 1.0e-12
+  scalar_relative_tolerance: 1.0e-14
+  scalar_maximum_iterations: 200
+  coefficient_relative_tolerance: 1.0e-07
+  coefficient_absolute_tolerance: 1.0e-06
+  independent_normalized_prediction_relative_tolerance: 1.0e-07
+  independent_normalized_prediction_absolute_tolerance: 1.0e-06
+  saved_normalized_prediction_relative_tolerance: 1.0e-10
+  saved_normalized_prediction_absolute_tolerance: 1.0e-12
+  feature_relative_tolerance: 1.0e-10
+  feature_absolute_tolerance: 1.0e-12
+  inference_relative_tolerance: 1.0e-09
+  inference_absolute_tolerance: 1.0e-14
+  reconstruction: Independent originalupstreamproofs,civilcalendar,commonmaturity/support/rank/novelty,trainingtransforms,convexfits,strictsavedprediction
+    replay normalizedbyexacttrainmean,primitiveproperlosses/stablepairedgaps,fourphaseinference and complete123family
+    ledger; no newproducerimport
+outputs:
+  data: data/civil_quarter
+  reports: reports/civil_quarter
+  features: data/civil_quarter/features.parquet
+  targets: data/civil_quarter/targets.parquet
+  forecasts: data/civil_quarter/forecasts.parquet
+  fits: data/civil_quarter/fits.json
+  support_audit: data/civil_quarter/support_audit.json
+  admission: data/civil_quarter/upstream_admission.json

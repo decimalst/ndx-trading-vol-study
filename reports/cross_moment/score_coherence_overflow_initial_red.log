@@ -1,0 +1,17 @@
+test_coherence_allowance_does_not_overflow_on_finite_near_maximum_losses (tests.test_cross_moment_score.ProductArithmeticTests.test_coherence_allowance_does_not_overflow_on_finite_near_maximum_losses) ... ERROR
+
+======================================================================
+ERROR: test_coherence_allowance_does_not_overflow_on_finite_near_maximum_losses (tests.test_cross_moment_score.ProductArithmeticTests.test_coherence_allowance_does_not_overflow_on_finite_near_maximum_losses)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_cross_moment_score.py", line 124, in test_coherence_allowance_does_not_overflow_on_finite_near_maximum_losses
+    difference=score.paired_difference(np.array([1e154]),np.array([-1e154]),np.array([0.]))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/cross_moment_score.py", line 144, in paired_difference
+    raise ValueError('Factored and direct product-loss differences are numerically incoherent')
+ValueError: Factored and direct product-loss differences are numerically incoherent
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

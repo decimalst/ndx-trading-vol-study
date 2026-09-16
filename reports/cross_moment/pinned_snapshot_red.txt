@@ -1,0 +1,37 @@
+test_forecast_changed_after_admission_never_reaches_scorer (tests.test_cross_moment_publication.CrossMomentPublication.test_forecast_changed_after_admission_never_reaches_scorer) ... FAIL
+test_calendar_changed_after_admission_never_reaches_scorer (tests.test_cross_moment_publication.CrossMomentPublication.test_calendar_changed_after_admission_never_reaches_scorer) ... FAIL
+
+======================================================================
+FAIL: test_forecast_changed_after_admission_never_reaches_scorer (tests.test_cross_moment_publication.CrossMomentPublication.test_forecast_changed_after_admission_never_reaches_scorer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_cross_moment_publication.py", line 218, in test_forecast_changed_after_admission_never_reaches_scorer
+    self.exercise("forecast_changed")
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_cross_moment_publication.py", line 181, in exercise
+    newscore.assert_not_called()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 900, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'score_panel' to not have been called. Called 1 times.
+Calls: [call(Empty DataFrame
+Columns: []
+Index: [2020-01-02 00:00:00, 2020-01-03 00:00:00, 2020-01-06 00:00:00])].
+
+======================================================================
+FAIL: test_calendar_changed_after_admission_never_reaches_scorer (tests.test_cross_moment_publication.CrossMomentPublication.test_calendar_changed_after_admission_never_reaches_scorer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_cross_moment_publication.py", line 221, in test_calendar_changed_after_admission_never_reaches_scorer
+    self.exercise("calendar_changed")
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_cross_moment_publication.py", line 181, in exercise
+    newscore.assert_not_called()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 900, in assert_not_called
+    raise AssertionError(msg)
+AssertionError: Expected 'score_panel' to not have been called. Called 1 times.
+Calls: [call(Empty DataFrame
+Columns: []
+Index: [2020-01-02 00:00:00, 2020-01-03 00:00:00, 2020-01-06 00:00:00])].
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.012s
+
+FAILED (failures=2)

@@ -1,0 +1,32 @@
+FFF
+======================================================================
+FAIL: test_saved_stage_audits_and_probabilities_cannot_be_changed (tests.test_verify_event_cluster.OptimizationContracts.test_saved_stage_audits_and_probabilities_cannot_be_changed) (mutation='negative_max')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 365, in test_saved_stage_audits_and_probabilities_cannot_be_changed
+    with self.subTest(mutation=mutation), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_counts_uncertainty_support_and_family_mutation_rejected (tests.test_verify_event_cluster.InferenceContracts.test_counts_uncertainty_support_and_family_mutation_rejected) (field='boolcount')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 567, in test_counts_uncertainty_support_and_family_mutation_rejected
+    with self.subTest(field=field), self.assertRaises((AssertionError, ValueError)):
+AssertionError: (<class 'AssertionError'>, <class 'ValueError'>) not raised
+
+======================================================================
+FAIL: test_failure_rows_remain_parseable_after_unterminated_bad_ledger (tests.test_verify_event_cluster.RegisteredLayerContracts.test_failure_rows_remain_parseable_after_unterminated_bad_ledger)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 449, in test_failure_rows_remain_parseable_after_unterminated_bad_ledger
+    self.assertEqual(lines[0], 'broken original record')
+AssertionError: 'brok[13 chars]ecord{"candidate": "cluster", "control": "base[310 chars]LE"}' != 'brok[13 chars]ecord'
+- broken original record{"candidate": "cluster", "control": "baseline", "error": "Independent verification failed: ValueError: synthetic malformed ledger", "event": "verification_failed", "horizon": 1, "p_conservative": 1.0, "p_holm_cumulative": 1.0, "p_holm_wave": 1.0, "phases": [], "score": "brier", "status": "INVALID_RUN", "study": "event_cluster", "verdict": "UNEVALUABLE"}
++ broken original record
+
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.415s
+
+FAILED (failures=3)

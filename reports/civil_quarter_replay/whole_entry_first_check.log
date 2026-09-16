@@ -1,0 +1,14 @@
+E
+======================================================================
+ERROR: test_whole_entrypoint_reads_declared_artifacts_and_checks_final_protocol (tests.test_verify_civil_quarter_replay.EntryContracts.test_whole_entrypoint_reads_declared_artifacts_and_checks_final_protocol)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_civil_quarter_replay.py", line 509, in test_whole_entrypoint_reads_declared_artifacts_and_checks_final_protocol
+    maturity = pd.Series(dates, index=dates).shift(-1)
+               ^^
+NameError: name 'pd' is not defined
+
+----------------------------------------------------------------------
+Ran 1 test in 0.015s
+
+FAILED (errors=1)

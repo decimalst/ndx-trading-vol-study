@@ -1,0 +1,36 @@
+COMMAND: .venv/bin/python -m unittest tests.test_verify_copula_calibration.IndependentCalibrationMathTests -v
+test_calibrated_marginal_is_normalized_and_units_cancel (tests.test_verify_copula_calibration.IndependentCalibrationMathTests.test_calibrated_marginal_is_normalized_and_units_cancel) ... ok
+test_constant_scale_invalid_types_and_unrepresentable_tail_fail (tests.test_verify_copula_calibration.IndependentCalibrationMathTests.test_constant_scale_invalid_types_and_unrepresentable_tail_fail) ... ok
+test_full_jacobian_joint_densities_and_all_seven_contrasts (tests.test_verify_copula_calibration.IndependentCalibrationMathTests.test_full_jacobian_joint_densities_and_all_seven_contrasts) ... ok
+test_inverse_transform_uses_log_tails_without_clipping (tests.test_verify_copula_calibration.IndependentCalibrationMathTests.test_inverse_transform_uses_log_tails_without_clipping) ... FAIL
+test_population_normal_score_parameters_and_identity (tests.test_verify_copula_calibration.IndependentCalibrationMathTests.test_population_normal_score_parameters_and_identity) ... ok
+
+======================================================================
+FAIL: test_inverse_transform_uses_log_tails_without_clipping (tests.test_verify_copula_calibration.IndependentCalibrationMathTests.test_inverse_transform_uses_log_tails_without_clipping)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_copula_calibration.py", line 92, in test_inverse_transform_uses_log_tails_without_clipping
+    assert_allclose(actual[1:], t.ppf(norm.cdf(w[1:]), 8), atol=2e-5, rtol=2e-5)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/numpy/testing/_private/utils.py", line 1768, in assert_allclose
+    assert_array_compare(compare, actual, desired, err_msg=str(err_msg),
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/numpy/testing/_private/utils.py", line 983, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Not equal to tolerance rtol=2e-05, atol=2e-05
+
+Mismatched elements: 1 / 4 (25%)
+Mismatch at index:
+ [0, 1]: 175.4852258259887 (ACTUAL), 173.99095803486486 (DESIRED)
+Max absolute difference among violations: 1.49426779
+Max relative difference among violations: 0.00858819
+ ACTUAL: array([[-175.485226,  175.485226],
+       [   0.      ,    0.310417]])
+ DESIRED: array([[-175.485226,  173.990958],
+       [   0.      ,    0.310417]])
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.034s
+
+FAILED (failures=1)
+
+exit_code=1

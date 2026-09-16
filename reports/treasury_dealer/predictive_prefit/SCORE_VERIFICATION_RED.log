@@ -1,0 +1,23 @@
+PREIMPLEMENTATION RED: independent reconstruction absent
+Command: .venv/bin/python -m unittest tests.test_verify_treasury_dealer_scores -v
+Test SHA256 4ad88aeaa6ab2e18b6110dd8040a3fe1cee156c6ec57288e47d9200cc2cdb724
+Exit status: 1
+test_verify_treasury_dealer_scores (unittest.loader._FailedTest.test_verify_treasury_dealer_scores) ... ERROR
+
+======================================================================
+ERROR: test_verify_treasury_dealer_scores (unittest.loader._FailedTest.test_verify_treasury_dealer_scores)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_verify_treasury_dealer_scores
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_treasury_dealer_scores.py", line 10, in <module>
+    from src.verify_treasury_dealer_scores import _indexed_inference, verify_scores
+ModuleNotFoundError: No module named 'src.verify_treasury_dealer_scores'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

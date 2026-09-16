@@ -1,0 +1,34 @@
+{
+  "status": "VERIFIED",
+  "issued_forecasts_verified": 7386,
+  "common_scored_origins": 2462,
+  "primitive_score_cells_verified": 22158,
+  "paired_product_differences_verified": 4924,
+  "upstream_admission": {
+    "status": "UPSTREAM_VERIFIED_READ_ONLY",
+    "prior_files_written": false
+  },
+  "new_model_fits": 0,
+  "new_forecasts": 0,
+  "inference": {
+    "new_hypotheses_verified": 2,
+    "cumulative_hypotheses_verified": 114,
+    "phase_comparisons_verified": 4,
+    "bootstrap_runs_verified": 12,
+    "bootstrap_draws_per_run": 99999,
+    "leads": []
+  },
+  "ledger_events_verified": {
+    "inherited": 112,
+    "registered": 2,
+    "evaluated": 2
+  },
+  "protocol_sha256": "edeb72e2d7708c0a5227318d1ea54742050f9be0b761941ce598cdda28c26ed0",
+  "verifier_sha256": "d1cb8c3fc69e44646359b839aac160acf6ed4be6cc043e2f2ca23f7c979430fa",
+  "limitations": [
+    "Same frozen issued QQQ ETF and SPX price-index forecasts on reused history; this is a new score, not new predictive information or new model fitting.",
+    "Signed daily residual products are noisy cross-moment proxies affected by shared mean error and issued marginal second moments; no measured high-frequency covariance claim.",
+    "Fixed decimal-return units and absolute effect threshold; nominal MDE is diagnostic and nonqualification is not equivalence or proof of no predictability.",
+    "The original joint-score verdict and all upstream source, model and publication artifacts remain unchanged; no profit claim."
+  ]
+}

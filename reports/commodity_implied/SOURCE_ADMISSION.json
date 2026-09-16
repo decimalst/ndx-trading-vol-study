@@ -1,0 +1,57 @@
+{
+  "status": "BOUNDED_SOURCES_INDEPENDENTLY_VERIFIED_NO_FORECAST_ATTEMPT",
+  "created_utc": "2026-09-08T22:42:24.400412+00:00",
+  "source_pre_admission_sha256": "802dd08edab6cd08e13f52777f10e8f5757849edac2f0216a9cf961bba2b35e2",
+  "source_start": "2009-01-02",
+  "source_end": "2025-10-20",
+  "sources": {
+    "OVX": {
+      "verification": {
+        "status": "VERIFIED",
+        "symbol": "OVX",
+        "retained_rows": 4045,
+        "observed_rows": 4045,
+        "missing_rows": 0
+      },
+      "source_sha256": "c68b3fcf25ecc3fd13eaa2595ac179b4f753315d0b51e1366acb2c3a2adf6079",
+      "parsed_path": "data/commodity_implied/OVX_parsed.json",
+      "parsed_sha256": "93edce26b59b34918564d7e0bd21b04eef5bbc49fba1021216f8181774f36354",
+      "date_and_missingness_metadata": {
+        "total_rows": 4266,
+        "before_start_rows": 0,
+        "after_end_rows": 221,
+        "retained_rows": 4045,
+        "observed_rows": 4045,
+        "missing_rows": 0,
+        "first_retained_date": "2009-09-18",
+        "last_retained_date": "2025-10-20"
+      }
+    },
+    "GVZ": {
+      "verification": {
+        "status": "VERIFIED",
+        "symbol": "GVZ",
+        "retained_rows": 4045,
+        "observed_rows": 4045,
+        "missing_rows": 0
+      },
+      "source_sha256": "7a2acc2e858d48fc02b7e4925f88df0716fba0a69e7d64c7d94039ed49771fd3",
+      "parsed_path": "data/commodity_implied/GVZ_parsed.json",
+      "parsed_sha256": "ffa5bc4abc206da3f8da73646eb483448c1b370fbcb4af00a6df0b37ee660d69",
+      "date_and_missingness_metadata": {
+        "total_rows": 4266,
+        "before_start_rows": 0,
+        "after_end_rows": 221,
+        "retained_rows": 4045,
+        "observed_rows": 4045,
+        "missing_rows": 0,
+        "first_retained_date": "2009-09-18",
+        "last_retained_date": "2025-10-20"
+      }
+    }
+  },
+  "predictive_family": 142,
+  "features_cohorts_fits_or_scores_computed": false,
+  "vintage_limitation": "Current Cboe captures; original immutable historical vintages unverified.",
+  "outside_scope_numerical_values_converted": false
+}

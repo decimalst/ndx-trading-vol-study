@@ -1,0 +1,13 @@
+test_all_original_document_identities_precede_any_value_conversion (tests.test_treasury_offering_layout.TreasuryOfferingLayoutTests.test_all_original_document_identities_precede_any_value_conversion) ... ok
+test_date_title_and_duplicate_financial_rows_remain_strict (tests.test_treasury_offering_layout.TreasuryOfferingLayoutTests.test_date_title_and_duplicate_financial_rows_remain_strict) ... ok
+test_distinct_corpus_and_plural_labels_are_not_own_security (tests.test_treasury_offering_layout.TreasuryOfferingLayoutTests.test_distinct_corpus_and_plural_labels_are_not_own_security) ... ok
+test_duplicate_empty_and_unknown_own_labels_fail (tests.test_treasury_offering_layout.TreasuryOfferingLayoutTests.test_duplicate_empty_and_unknown_own_labels_fail) ... ok
+test_expected_identity_in_supplement_cannot_replace_wrong_or_missing_own (tests.test_treasury_offering_layout.TreasuryOfferingLayoutTests.test_expected_identity_in_supplement_cannot_replace_wrong_or_missing_own) ... ok
+test_frozen_xml_scale_and_strict_leaf_rules_still_apply (tests.test_treasury_offering_layout.TreasuryOfferingLayoutTests.test_frozen_xml_scale_and_strict_leaf_rules_still_apply) ... ok
+test_original_text_is_passed_intact_to_header_validation (tests.test_treasury_offering_layout.TreasuryOfferingLayoutTests.test_original_text_is_passed_intact_to_header_validation) ... ok
+test_unaffected_output_and_exact_financial_mapping_equal_frozen (tests.test_treasury_offering_layout.TreasuryOfferingLayoutTests.test_unaffected_output_and_exact_financial_mapping_equal_frozen) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.004s
+
+OK

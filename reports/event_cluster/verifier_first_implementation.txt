@@ -1,0 +1,31 @@
+...............F....
+======================================================================
+FAIL: test_full_calendar_matches_separate_producer (tests.test_verify_event_cluster.SummaryContracts.test_full_calendar_matches_separate_producer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 94, in test_full_calendar_matches_separate_producer
+    pd.testing.assert_frame_equal(m, producer.build_memory(t))
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/util/_decorators.py", line 220, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/_testing/asserters.py", line 1347, in assert_frame_equal
+    assert_series_equal(
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/util/_decorators.py", line 193, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/_testing/asserters.py", line 1029, in assert_series_equal
+    assert_attr_equal("dtype", left, right, obj=f"Attributes of {obj}")
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/_testing/asserters.py", line 448, in assert_attr_equal
+    raise_assert_detail(obj, msg, left_attr, right_attr)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/_testing/asserters.py", line 619, in raise_assert_detail
+    raise AssertionError(msg)
+AssertionError: Attributes of DataFrame.iloc[:, 13] (column name="window_first_available") are different
+
+Attribute "dtype" are different
+[left]:  datetime64[ns]
+[right]: datetime64[us]
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.376s
+
+FAILED (failures=1)

@@ -1,0 +1,38 @@
+FFFE
+======================================================================
+ERROR: test_complete_entry_ten_snapshots_protocol_source_and_pipeline_wiring (tests.test_verify_peak_age.CompleteEntryTests.test_complete_entry_ten_snapshots_protocol_source_and_pipeline_wiring)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 615, in test_complete_entry_ten_snapshots_protocol_source_and_pipeline_wiring
+    self.assertEqual(proof["manifest_sha256"], v.digest(self.root / v.REPORT / "manifest.json"))
+                     ~~~~~^^^^^^^^^^^^^^^^^^^
+KeyError: 'manifest_sha256'
+
+======================================================================
+FAIL: test_common_clock_and_minimum_training_faults_reject_without_score_change (tests.test_verify_peak_age.InferenceTests.test_common_clock_and_minimum_training_faults_reject_without_score_change) (kind='feature_clock')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 272, in test_common_clock_and_minimum_training_faults_reject_without_score_change
+    with self.subTest(kind=kind), self.assertRaises((ValueError, AssertionError)):
+AssertionError: (<class 'ValueError'>, <class 'AssertionError'>) not raised
+
+======================================================================
+FAIL: test_common_clock_and_minimum_training_faults_reject_without_score_change (tests.test_verify_peak_age.InferenceTests.test_common_clock_and_minimum_training_faults_reject_without_score_change) (kind='target_clock')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 272, in test_common_clock_and_minimum_training_faults_reject_without_score_change
+    with self.subTest(kind=kind), self.assertRaises((ValueError, AssertionError)):
+AssertionError: (<class 'ValueError'>, <class 'AssertionError'>) not raised
+
+======================================================================
+FAIL: test_common_clock_and_minimum_training_faults_reject_without_score_change (tests.test_verify_peak_age.InferenceTests.test_common_clock_and_minimum_training_faults_reject_without_score_change) (kind='train_minimum')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 272, in test_common_clock_and_minimum_training_faults_reject_without_score_change
+    with self.subTest(kind=kind), self.assertRaises((ValueError, AssertionError)):
+AssertionError: (<class 'ValueError'>, <class 'AssertionError'>) not raised
+
+----------------------------------------------------------------------
+Ran 2 tests in 1.176s
+
+FAILED (failures=3, errors=1)

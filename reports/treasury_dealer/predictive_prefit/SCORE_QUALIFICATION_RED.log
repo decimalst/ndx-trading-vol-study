@@ -1,0 +1,26 @@
+COMMAND: .venv/bin/python -m unittest tests.test_verify_treasury_dealer_scores.VerifyTreasuryDealerScoresTests.test_published_exact_clock_qualification_is_verified tests.test_verify_treasury_dealer_scores.VerifyTreasuryDealerScoresTests.test_partial_or_changed_clock_qualification_is_rejected -v
+test_published_exact_clock_qualification_is_verified (tests.test_verify_treasury_dealer_scores.VerifyTreasuryDealerScoresTests.test_published_exact_clock_qualification_is_verified) ... ERROR
+test_partial_or_changed_clock_qualification_is_rejected (tests.test_verify_treasury_dealer_scores.VerifyTreasuryDealerScoresTests.test_partial_or_changed_clock_qualification_is_rejected) ... ok
+
+======================================================================
+ERROR: test_published_exact_clock_qualification_is_verified (tests.test_verify_treasury_dealer_scores.VerifyTreasuryDealerScoresTests.test_published_exact_clock_qualification_is_verified)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_treasury_dealer_scores.py", line 212, in test_published_exact_clock_qualification_is_verified
+    self.assertEqual(self.check(args, qualified)["status"], "VERIFIED")
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_treasury_dealer_scores.py", line 116, in check
+    return verify_scores(args[0], args[1], args[2], metrics, args[3], args[4], args[5])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_treasury_dealer_scores.py", line 454, in verify_scores
+    _compare(metrics, expected)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_claims_release_scores.py", line 475, in _compare
+    raise ValueError(f"Verification dictionary schema mismatch: {path}")
+ValueError: Verification dictionary schema mismatch: root
+
+----------------------------------------------------------------------
+Ran 2 tests in 2.235s
+
+FAILED (errors=1)
+
+exit_code=1

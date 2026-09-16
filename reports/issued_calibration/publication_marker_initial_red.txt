@@ -1,0 +1,19 @@
+test_upstream_failure_created_during_scoring_blocks_publication (tests.test_issued_calibration_publication.PublicationTests.test_upstream_failure_created_during_scoring_blocks_publication) ... ERROR
+
+======================================================================
+ERROR: test_upstream_failure_created_during_scoring_blocks_publication (tests.test_issued_calibration_publication.PublicationTests.test_upstream_failure_created_during_scoring_blocks_publication)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_issued_calibration_publication.py", line 223, in test_upstream_failure_created_during_scoring_blocks_publication
+    s.run()
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/issued_calibration_search.py", line 799, in run
+    report(metrics)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/issued_calibration_search.py", line 602, in report
+    f"| {row['control']} | {d['delta']:+.8f} | {e['delta']:+.8f} | {row['p_holm_wave']:.8f} | {row['p_holm_cumulative']:.8f} | {row['verdict']} |"
+                                                                                                                                ~~~^^^^^^^^^^^
+KeyError: 'verdict'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.320s
+
+FAILED (errors=1)

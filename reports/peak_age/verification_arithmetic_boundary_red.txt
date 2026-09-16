@@ -1,0 +1,23 @@
+test_nonzero_compensated_mean_underflow_is_not_a_zero_branch (tests.test_peak_age_verification.IndependentPrimitives.test_nonzero_compensated_mean_underflow_is_not_a_zero_branch) ... FAIL
+test_tiny_valid_drawdown_cannot_be_zeroed_within_float_tolerance (tests.test_peak_age_verification.ProducerChallengeContracts.test_tiny_valid_drawdown_cannot_be_zeroed_within_float_tolerance) ... FAIL
+
+======================================================================
+FAIL: test_nonzero_compensated_mean_underflow_is_not_a_zero_branch (tests.test_peak_age_verification.IndependentPrimitives.test_nonzero_compensated_mean_underflow_is_not_a_zero_branch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_verification.py", line 63, in test_nonzero_compensated_mean_underflow_is_not_a_zero_branch
+    with self.assertRaises((ValueError, ArithmeticError)):
+AssertionError: (<class 'ValueError'>, <class 'ArithmeticError'>) not raised
+
+======================================================================
+FAIL: test_tiny_valid_drawdown_cannot_be_zeroed_within_float_tolerance (tests.test_peak_age_verification.ProducerChallengeContracts.test_tiny_valid_drawdown_cannot_be_zeroed_within_float_tolerance)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_verification.py", line 236, in test_tiny_valid_drawdown_cannot_be_zeroed_within_float_tolerance
+    with self.assertRaises((ValueError, AssertionError)):
+AssertionError: (<class 'ValueError'>, <class 'AssertionError'>) not raised
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.091s
+
+FAILED (failures=2)

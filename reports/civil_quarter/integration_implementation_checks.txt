@@ -1,0 +1,10 @@
+test_bad_prediction_in_wholly_unscored_first_month_cannot_disappear (tests.test_civil_quarter_integration.CivilQuarterPipeline.test_bad_prediction_in_wholly_unscored_first_month_cannot_disappear) ... ok
+test_complete_month_source_unknowns_are_excluded_from_every_training_basis (tests.test_civil_quarter_integration.CivilQuarterPipeline.test_complete_month_source_unknowns_are_excluded_from_every_training_basis) ... ok
+test_evaluator_rejects_unknown_old_plan_before_any_inference (tests.test_civil_quarter_integration.CivilQuarterPipeline.test_evaluator_rejects_unknown_old_plan_before_any_inference) ... ok
+test_generated_pipeline_keeps_source_unknowns_unscored_fits_and_all_three_controls (tests.test_civil_quarter_integration.CivilQuarterPipeline.test_generated_pipeline_keeps_source_unknowns_unscored_fits_and_all_three_controls) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 8.575s
+
+OK
+All checks passed!

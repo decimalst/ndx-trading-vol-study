@@ -1,0 +1,17 @@
+test_all_date_preflight_precedes_any_value_conversion (tests.test_commodity_implied_source.CommodityImpliedSourceTests.test_all_date_preflight_precedes_any_value_conversion) ... ok
+test_bounds_are_strict_dates_inside_fixed_source_scope (tests.test_commodity_implied_source.CommodityImpliedSourceTests.test_bounds_are_strict_dates_inside_fixed_source_scope) ... ok
+test_byte_hash_binds_exact_payload (tests.test_commodity_implied_source.CommodityImpliedSourceTests.test_byte_hash_binds_exact_payload) ... ok
+test_csv_quoted_physical_line_accounting_and_blank_rows (tests.test_commodity_implied_source.CommodityImpliedSourceTests.test_csv_quoted_physical_line_accounting_and_blank_rows) ... ok
+test_exact_records_missingness_and_all_date_accounting (tests.test_commodity_implied_source.CommodityImpliedSourceTests.test_exact_records_missingness_and_all_date_accounting) ... ok
+test_exact_symbol_header_width_and_utf8 (tests.test_commodity_implied_source.CommodityImpliedSourceTests.test_exact_symbol_header_width_and_utf8) ... ok
+test_hash_authentication_precedes_decoding_and_conversion (tests.test_commodity_implied_source.CommodityImpliedSourceTests.test_hash_authentication_precedes_decoding_and_conversion) ... ok
+test_header_only_and_zero_retained_are_structurally_valid (tests.test_commodity_implied_source.CommodityImpliedSourceTests.test_header_only_and_zero_retained_are_structurally_valid) ... ok
+test_invalid_in_window_numbers_fail_without_imputation (tests.test_commodity_implied_source.CommodityImpliedSourceTests.test_invalid_in_window_numbers_fail_without_imputation) ... ok
+test_invalid_or_unsorted_dates_in_any_scope_fail (tests.test_commodity_implied_source.CommodityImpliedSourceTests.test_invalid_or_unsorted_dates_in_any_scope_fail) ... ok
+test_only_selected_bounds_are_converted (tests.test_commodity_implied_source.CommodityImpliedSourceTests.test_only_selected_bounds_are_converted) ... ok
+test_permitted_finite_positive_decimal_forms (tests.test_commodity_implied_source.CommodityImpliedSourceTests.test_permitted_finite_positive_decimal_forms) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.002s
+
+OK

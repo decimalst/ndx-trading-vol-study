@@ -1,0 +1,28 @@
+# Joint intraday risk: inherited source feasibility
+
+This wave reuses the six exact archived inputs in the frozen [wave 9 date/source audit](/Users/byrons/code/trading-vol/ndx-vol-experiment/reports/relative_risk/SOURCE_FEASIBILITY.md). The facts below are carried forward from that audit; no new market numerical values, paired targets, empirical counts, features, fits, or associations were read or constructed for this note.
+
+The earlier date audit found **4,226 observed SPX sessions**, 2009-01-02 through the fixed 2025-10-20 source fence. QQQ has exactly those dates within that span: no missing or extra paired dates, and no differing source predecessor when the SPX predecessor exists. QQQ's 2,470 earlier dates remain outside the reference calendar. On the first SPX date neither asset receives a common prior-close-dependent observation; QQQ's longer history cannot manufacture the missing SPX predecessor. The sealed period begins 2025-11-03.
+
+The inherited date-supported first fit is **2016-01-04**, with previous-session cutoff **2015-12-31** and **1,254 mature common training origins**, 2011-01-05 through 2015-12-30. This is an inherited support upper bound, not a new numerical feasibility result. The added signed intraday means use the same 1/5/22-session observations already required by the strict marginal histories and lagged correlation. The paired next-SPX-session label has the same date availability as the previous relative-risk label. Thus neither change requires additional calendar history. Zero correlation denominators, zero training feature scales, failed raw measurements, or failed matrix/solver conditions can still make the registered experiment unevaluable; the 1,000-row gate remains fixed.
+
+The four IV dates are matched exactly to the previous SPX session. VIX9D begins 2011-01-04; its initial prelaunch values are back-calculated archival history. VVIX's 2013-05-13 gap excludes entry 2013-05-14 from the first training window. The inherited audit also records an earlier VVIX gap on 2010-11-11, before the all-input support period. No IV values or dates are filled.
+
+| Input | Exact path | Previously pinned SHA256 |
+|---|---|---|
+| QQQ ETF raw OHLC | `data/raw/daily_ohlc.parquet` | `710290d8ad8569172559334b23e423b50ecf7cd10f0fd8ec24a9fc29608bca4d` |
+| Yahoo `^GSPC` SPX raw OHLC | `data/research_paths/spx_daily.parquet` | `3958fbb1eb36689df1596c26b9f0e02e3f1d4fa3b0032381e5287a2a03697bf0` |
+| VXN | `data/free_sources/raw/cboe/VXN_History.csv` | `753b5a406a7a888a9e4ca1a3e37a71fbb415a3883bc4b02ff20dbf0c5bdc6c98` |
+| VIX | `data/free_sources/raw/cboe/VIX_History.csv` | `a34aabce269632f30904cf482986dd50b6d4cf51f2203dc51a0a9f460f3c90b2` |
+| VIX9D | `data/free_sources/raw/cboe/VIX9D_History.csv` | `0d6f600ee71bf6ffb5069d0c583cbe0b1ec97df6da4e4e439d5f0f22f5616abe` |
+| VVIX | `data/free_sources/raw/cboe/VVIX_History.csv` | `f6bc726455fa3859c662875a005e97ba656b9536ae58fa6977ad24c6228e4f6a` |
+
+Only `open,high,low,close` are selected from the parquet sources. Cboe uses `DATE,CLOSE` for VXN/VIX/VIX9D and `DATE,VVIX` for VVIX. The frozen loader bounds dates before numerical parsing and retains full native QQQ history for predecessor checks. The new runner must re-pin the six raw files plus the existing provenance manifests before any empirical construction.
+
+The earlier audit pins `data/history_extension/source_manifest.json` at `3a0f35ea40c102bfcea3ddd38dc323f2fb5be1990b9b9b366c81089d35fd3ec3` and `data/research_paths/source_manifest.json` at `457afd656244fc527535984874ee11313fd3156815f0d982d0c9f29ab85d244c`. QQQ is marked frozen on 2026-08-12 without an exact acquisition timestamp; SPX acquisition is recorded as 2026-08-12T17:59:14.463673+00:00. The four adjacent Cboe manifests record retrieval on 2026-08-12T20:45:00Z. These are later archival vintages, not certified historical publication snapshots. Original SPX normalization discarded incomplete OHLC rows, so equal archived calendars are not proof of completeness against an independent exchange calendar.
+
+The new response is a **paired signed raw log(close/open) return**, with both values observed on the same next SPX source date. High/low is needed for existing risk controls but not the signed return itself; missing open or close remains unknown. The full-reference audit rejects any finite raw GK at or below 1e-10 and any nonfinite computed return from an observed open/close pair, including rows with missing high/low. Exactly zero signed returns are valid. No future observed date selects predictors, and no later common date replaces a missing paired outcome.
+
+An outer product of one paired daily return observation is a noisy joint second-moment proxy, with a potentially signed off-diagonal and a rank-one or zero realized matrix. It is not measured intraday integrated covariance. About the shared predicted mean, its conditional expectation also includes remaining conditional mean error; gains cannot identify pure correlation dynamics if the shared marginal mean or scale is misspecified. QQQ is an ETF rather than an exact Nasdaq-100 index feed, and SPX is a price index rather than SPY. Within-session unit changes cancel in raw log(close/open), while ETF tracking, distributions in intersession controls, index construction, vendor revisions, and unsynchronized open/close conventions remain. No hedge-profit, execution-price, or exact-index-pair claim follows from date matching.
+
+**Source/date conclusion:** existing support is sufficient to attempt the unchanged registered initial sample gate. Numerical measurement, complete-feature scale, matrix conditioning, and optimizer feasibility remain separate post-freeze checks. This note does not certify that those checks pass.

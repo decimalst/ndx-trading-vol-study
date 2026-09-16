@@ -1,0 +1,18 @@
+test_complex_numeric_values_cannot_be_silently_cast_to_real (tests.test_cross_moment_score.FrozenPanelContracts.test_complex_numeric_values_cannot_be_silently_cast_to_real) ... /Users/byrons/code/trading-vol/ndx-vol-experiment/src/cross_moment_score.py:63: ComplexWarning: Casting complex values to real discards the imaginary part
+  array = np.asarray(values, dtype=float)
+/Users/byrons/code/trading-vol/ndx-vol-experiment/src/cross_moment_score.py:63: ComplexWarning: Casting complex values to real discards the imaginary part
+  array = np.asarray(values, dtype=float)
+FAIL
+
+======================================================================
+FAIL: test_complex_numeric_values_cannot_be_silently_cast_to_real (tests.test_cross_moment_score.FrozenPanelContracts.test_complex_numeric_values_cannot_be_silently_cast_to_real)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_cross_moment_score.py", line 205, in test_complex_numeric_values_cannot_be_silently_cast_to_real
+    with self.assertRaises(ValueError):score.score_panel(altered)
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.019s
+
+FAILED (failures=1)

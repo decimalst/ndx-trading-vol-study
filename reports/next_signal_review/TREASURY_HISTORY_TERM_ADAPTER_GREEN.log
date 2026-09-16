@@ -1,0 +1,23 @@
+Generated-only term parser checks; no historical application.
+
+Command: .venv/bin/python -m unittest tests.test_treasury_history_terms -v
+test_announcement_coupon_forms_preserve_descriptor_and_remove_only_token (tests.test_treasury_history_terms.TreasuryHistoryTermsTests.test_announcement_coupon_forms_preserve_descriptor_and_remove_only_token) ... ok
+test_coupon_is_not_numerically_decoded (tests.test_treasury_history_terms.TreasuryHistoryTermsTests.test_coupon_is_not_numerically_decoded) ... ok
+test_exact_case_spacing_kind_position_and_extra_text_are_strict (tests.test_treasury_history_terms.TreasuryHistoryTermsTests.test_exact_case_spacing_kind_position_and_extra_text_are_strict) ... ok
+test_exact_split_month_token_is_local_and_announcement_only (tests.test_treasury_history_terms.TreasuryHistoryTermsTests.test_exact_split_month_token_is_local_and_announcement_only) ... ok
+test_ordinary_terms_have_exact_named_output_for_both_roles (tests.test_treasury_history_terms.TreasuryHistoryTermsTests.test_ordinary_terms_have_exact_named_output_for_both_roles) ... ok
+test_strict_input_types_and_explicit_role (tests.test_treasury_history_terms.TreasuryHistoryTermsTests.test_strict_input_types_and_explicit_role) ... ok
+test_unsupported_coupon_tokens_cannot_be_silently_ignored (tests.test_treasury_history_terms.TreasuryHistoryTermsTests.test_unsupported_coupon_tokens_cannot_be_silently_ignored) ... ok
+test_year_month_bounds_and_ambiguous_integers_fail (tests.test_treasury_history_terms.TreasuryHistoryTermsTests.test_year_month_bounds_and_ambiguous_integers_fail) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.001s
+
+OK
+
+Exit code: 0
+
+Command: .venv/bin/ruff check src/treasury_history_terms.py tests/test_treasury_history_terms.py
+All checks passed!
+
+Exit code: 0

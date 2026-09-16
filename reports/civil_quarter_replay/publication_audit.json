@@ -1,0 +1,63 @@
+{
+  "status": "UNEVALUABLE_REPORT_AUDITED",
+  "audited_utc": "2026-09-07T12:50:54.806355+00:00",
+  "protocol_sha256": "99ff8102daf12a451f4bf2c50ddd4326dcf6b79873ad31a399c319b708ebac22",
+  "manifest_sha256": "f4a680cb8036d1dc71b624eddff6bf0937f230f839e507a8deb8e89fe5da9dc9",
+  "frozen_manifest_entries_checked": {
+    "code": 257,
+    "inputs": 1137,
+    "preserved": 290
+  },
+  "prefit_code_and_design_pins_unchanged": true,
+  "prior_failed_attempt_publication_unchanged": true,
+  "prior_manifests_independently_audited": 15,
+  "prior_unique_pins_independently_audited": 1631,
+  "source_files_checked": 399,
+  "ledger_events": 129,
+  "ledger_event_counts": {
+    "inherited": 123,
+    "registered": 2,
+    "evaluated": 2,
+    "verification_failed": 2
+  },
+  "generated_unverified_forecasts": 6297,
+  "generated_unverified_monthly_fits": 101,
+  "prior_completed_waves_forecasts": 138513,
+  "generated_sequence_forecasts_including_unverified": 144810,
+  "cumulative_hypotheses": 125,
+  "leads": [],
+  "report_local_links_checked": {
+    "SUMMARY.md": 10,
+    "VERIFICATION_FAILURE_AUDIT.md": 1,
+    "NUMERICAL_FAILURE_DIAGNOSIS.md": 2,
+    "NEXT_NUMERICAL_VERIFICATION.md": 2,
+    "QUOTE_SOURCE_DOCUMENTATION.md": 4
+  },
+  "report_artifact_hashes": {
+    "SUMMARY.md": "c945ade0ae38b1464725bf5844bc4077b711a9ec7ee0e3c3d1cb9c55c9b3a12f",
+    "VERIFICATION_FAILURE_AUDIT.md": "89ac5ce4665f72248d09139f5b7f104a8fcced3f46423373f37479a96c3c3df2",
+    "NUMERICAL_FAILURE_DIAGNOSIS.md": "8fa268c5ac6965dc459afc3741c618fc5f78f0fe1aeac8dead08c7c93d6169ca",
+    "NEXT_NUMERICAL_VERIFICATION.md": "4e1d508593b78175634c39143160c1e8c7fc3c0956132b90bc0183c6484808bc",
+    "QUOTE_SOURCE_DOCUMENTATION.md": "220c9fa16b7c9c8b6d878ea345712f0cda9e386564aa7e0e3f44ea987d141ea3",
+    "verification_failure_audit.json": "49bb09229a2317dc5a33d0711389d1e0f554be4e17ba390676892a52dbe7c708",
+    "numerical_failure_diagnosis.json": "13be3e97d9edfd71c3ba0a887c22ba5b0ecdbc0802255f7409ae886c9ec6d9e6",
+    "publication_review.json": "b4682f44e1eb9f78592cd207efdb065ded3934e6a4c99e48d3fb37c2d286e75c",
+    "metrics.json": "ac6ab77e85fd037535f4031c0124539b3b7c088ec8f42a810ca7eea668787e08",
+    "failure.json": "ac6ab77e85fd037535f4031c0124539b3b7c088ec8f42a810ca7eea668787e08",
+    "verification.json": "50022adbe5ecd4b23e17ae5972d5ec904064fb4d81a6ef0a1aa0be77558af0db",
+    "verification.log": "fc4e987856ec577b176c7addc4b339e42148a0783d34d55be5636294d4a3d7b7",
+    "trial_ledger.jsonl": "dc399e2c7d8048d12e6fed1f5f9549aef6e466ad5f93d1ff7febdaff401c6bab",
+    "run.log": "d7e507188f8dc18389c316150723d3715ba6309ef43c7874fe64537a02b51b60",
+    "unpublished_scored_metrics.json": "12264b117f51cb61b1bd093fa3aa00fa68e6aa0f9a5f019a3d52cc0f7ff9ce1a"
+  },
+  "private_generated_artifact_hashes": {
+    "features.parquet": "20c194f921087fa7f8e048e5ae2321dc2eddc5bfbc4b3fa059394a9dd7c151ff",
+    "fits.json": "7075d573f98dd689c7f9357fd3f87a392eaea7c43713438796497433307cf1a8",
+    "forecasts.parquet": "6c51fef0b230c443d14b65ecc33be832672d10437e6bb73268ba412af1e34075",
+    "source_closure.json": "7e34f54d03baf70eba2e927ad9889ac4a54dcd59d589ab46a1862147e093ab83",
+    "support_audit.json": "7e31adc7346fd3bd6ea40e6df744394c0ae847e95a972fa70c72705159aee3e1",
+    "targets.parquet": "cb8425322f2d0ad3a3847a071cbbc81723397d9a85391d19471a020054b5bc1a",
+    "upstream_admission.json": "5e8f4907d07e3a68170b382fb648d1e0a1fb92ef49562fe02957ce32127eb718"
+  },
+  "interpretation": "Independent baseline stationarity failed. Both hypotheses remain terminal p1, no accepted score results. Read-only training diagnosis does not rescue the failed trial. No full rerun, frozen repair, scored chart or prior artifact change. Future numerical design is prospective; quote-width source remains unadmitted."
+}

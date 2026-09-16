@@ -1,0 +1,44 @@
+{
+  "status": "VERIFIED_REPORT_AUDITED",
+  "audited_utc": "2026-09-07T09:05:54.354208+00:00",
+  "protocol_sha256": "edeb72e2d7708c0a5227318d1ea54742050f9be0b761941ce598cdda28c26ed0",
+  "verification_sha256": "b3745d90db160e1102f2c3b987627add1d890958e38b52bb30499b77f5c13fa0",
+  "summary_sha256": "8d8630ea22946ce55d09ea9a528d273f9bd2b218e6f98f50373e0f2c0033e325",
+  "figure_visually_reviewed": true,
+  "frozen_manifest_entries_checked": {
+    "code": 200,
+    "inputs": 57,
+    "preserved": 326
+  },
+  "prefit_code_and_design_pins_unchanged": true,
+  "summary_local_links_checked": 14,
+  "ledger_events": 116,
+  "generated_forecasts_by_recent_wave": {
+    "iterative_signal_search": 30040,
+    "international_volatility": 17703,
+    "overnight_index": 12310,
+    "macro_overnight": 10495,
+    "measurement_memory": 8008,
+    "index_hinge": 14280,
+    "tail_shape": 7374,
+    "calendar_variance": 6297,
+    "relative_risk": 7386,
+    "joint_risk": 7386
+  },
+  "generated_forecasts_total": 121279,
+  "current_wave_new_forecasts": 0,
+  "current_wave_reused_forecast_rows": 7386,
+  "current_wave_new_hypotheses": 2,
+  "cumulative_hypotheses": 114,
+  "leads": [],
+  "report_artifact_hashes": {
+    "SUMMARY.md": "8d8630ea22946ce55d09ea9a528d273f9bd2b218e6f98f50373e0f2c0033e325",
+    "comparison_intervals.png": "360e3efe60a625a0bc3ba033f73d892d5309af96864a58e2f30810098451a4a1",
+    "comparison_intervals.pdf": "5e6e274ec4277ec5c75408e9470866a2b14cd124ddb3f495252c5f81fddf45de",
+    "NEXT_TARGET_ALIGNMENT_DESIGN.md": "073a7c2176474e5ca65ef0a7d6c19dcbb91ef8db3770f7d97024ccdbfc50c112",
+    "metrics.json": "73199f2b2050a3f57f330dc1394960e6cd3e78c6167b22c47a3cb8e4f8e214e4",
+    "verification.json": "b3745d90db160e1102f2c3b987627add1d890958e38b52bb30499b77f5c13fa0",
+    "trial_ledger.jsonl": "7ddfb86c10531ebaa69bb27ef51270df1ebfe16567f3a62644e243d7b6b279d3"
+  },
+  "interpretation_review": "Independent reporting review found one realized-target versus conditional-expectation wording error; corrected only the new summary. Numerical findings and all preservation checks agree."
+}

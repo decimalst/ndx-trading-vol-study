@@ -1,0 +1,58 @@
+{
+  "status": "VERIFIED",
+  "raw_feature_rows_verified": 4226,
+  "raw_feature_columns_verified": 28,
+  "measurement_audit": {
+    "status": "PASS",
+    "reference_rows": 4226,
+    "gk_floor": 1e-10,
+    "per_asset": {
+      "qqq": {
+        "observed_complete_rows": 4226,
+        "missing_ohlc_rows": 0,
+        "finite_gk_rows": 4226,
+        "floor_hit_rows": 0,
+        "nonpositive_gk_rows": 0,
+        "small_positive_gk_rows": 0,
+        "minimum_raw_gk": 2.331834843103479e-06
+      },
+      "spx": {
+        "observed_complete_rows": 4226,
+        "missing_ohlc_rows": 0,
+        "finite_gk_rows": 4226,
+        "floor_hit_rows": 0,
+        "nonpositive_gk_rows": 0,
+        "small_positive_gk_rows": 0,
+        "minimum_raw_gk": 8.322391815939778e-07
+      }
+    }
+  },
+  "forecast_reconstruction": {
+    "forecasts_verified": 7386,
+    "common_scored_origins": 2462,
+    "feature_complete_applications": 2463,
+    "monthly_fits_verified": 118,
+    "models_verified": 3,
+    "full_mse_kkt_max": 4.025425826004181e-15
+  },
+  "inference": {
+    "new_hypotheses_verified": 2,
+    "cumulative_hypotheses_verified": 110,
+    "phase_comparisons_verified": 4,
+    "bootstrap_runs_verified": 12,
+    "bootstrap_draws_per_run": 99999,
+    "leads": []
+  },
+  "ledger_events_verified": {
+    "inherited": 108,
+    "registered": 2,
+    "evaluated": 2
+  },
+  "protocol_sha256": "996465872fa677ce0bb49d9decbc2e60f2df3e5a9e43ff0e4ec1ff416ad35a04",
+  "verifier_sha256": "6e079e5af890d13705d165963bd2ea123d49263a4d9f72e5b418593f472fa5d7",
+  "limitations": [
+    "QQQ ETF versus SPX price-index archival intraday OHLC risk; no exact Nasdaq100-index or portfolio-variance claim.",
+    "Passing the measurement gate removes floor dependence, not proxy bias, ETF/index differences or source revisions.",
+    "Reused history and back-calculated early VIX9D inputs remain exploratory limitations."
+  ]
+}

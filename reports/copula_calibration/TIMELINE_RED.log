@@ -1,0 +1,60 @@
+Prewritten generated monthly timeline contracts; no historical inputs.
+test_base_marginals_are_preserved_and_old_dependence_is_refitted (tests.test_copula_calibration.CrossedTimelineTests.test_base_marginals_are_preserved_and_old_dependence_is_refitted) ... ERROR
+test_entire_month_forecasts_ignore_current_and_future_outcomes (tests.test_copula_calibration.CrossedTimelineTests.test_entire_month_forecasts_ignore_current_and_future_outcomes) ... ERROR
+test_monthly_mature_issued_history_warmup_and_same_date_crossing (tests.test_copula_calibration.CrossedTimelineTests.test_monthly_mature_issued_history_warmup_and_same_date_crossing) ... ERROR
+test_saved_crossed_losses_include_marginal_jacobian_and_signed_interaction (tests.test_copula_calibration.CrossedTimelineTests.test_saved_crossed_losses_include_marginal_jacobian_and_signed_interaction) ... ERROR
+
+======================================================================
+ERROR: test_base_marginals_are_preserved_and_old_dependence_is_refitted (tests.test_copula_calibration.CrossedTimelineTests.test_base_marginals_are_preserved_and_old_dependence_is_refitted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_calibration.py", line 414, in test_base_marginals_are_preserved_and_old_dependence_is_refitted
+    got, _ = self.run_generated(frame)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_calibration.py", line 361, in run_generated
+    result = subject.run_crossed(frame, minimum_train=2)
+             ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.copula_calibration' has no attribute 'run_crossed'
+
+======================================================================
+ERROR: test_entire_month_forecasts_ignore_current_and_future_outcomes (tests.test_copula_calibration.CrossedTimelineTests.test_entire_month_forecasts_ignore_current_and_future_outcomes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_calibration.py", line 402, in test_entire_month_forecasts_ignore_current_and_future_outcomes
+    original, _ = self.run_generated(frame)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_calibration.py", line 361, in run_generated
+    result = subject.run_crossed(frame, minimum_train=2)
+             ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.copula_calibration' has no attribute 'run_crossed'
+
+======================================================================
+ERROR: test_monthly_mature_issued_history_warmup_and_same_date_crossing (tests.test_copula_calibration.CrossedTimelineTests.test_monthly_mature_issued_history_warmup_and_same_date_crossing)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_calibration.py", line 367, in test_monthly_mature_issued_history_warmup_and_same_date_crossing
+    got, calls = self.run_generated(frame)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_calibration.py", line 361, in run_generated
+    result = subject.run_crossed(frame, minimum_train=2)
+             ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.copula_calibration' has no attribute 'run_crossed'
+
+======================================================================
+ERROR: test_saved_crossed_losses_include_marginal_jacobian_and_signed_interaction (tests.test_copula_calibration.CrossedTimelineTests.test_saved_crossed_losses_include_marginal_jacobian_and_signed_interaction)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_calibration.py", line 430, in test_saved_crossed_losses_include_marginal_jacobian_and_signed_interaction
+    got, _ = self.run_generated(crossed_archive())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_calibration.py", line 361, in run_generated
+    result = subject.run_crossed(frame, minimum_train=2)
+             ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.copula_calibration' has no attribute 'run_crossed'
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.024s
+
+FAILED (errors=4)
+
+exit_code=1

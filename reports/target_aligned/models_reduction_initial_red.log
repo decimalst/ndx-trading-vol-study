@@ -1,0 +1,14 @@
+test_signed_numerator_cancellation_retains_the_small_identifiable_component (tests.test_target_aligned_models.ScalarAlgebraTests.test_signed_numerator_cancellation_retains_the_small_identifiable_component) ... FAIL
+
+======================================================================
+FAIL: test_signed_numerator_cancellation_retains_the_small_identifiable_component (tests.test_target_aligned_models.ScalarAlgebraTests.test_signed_numerator_cancellation_retains_the_small_identifiable_component)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_target_aligned_models.py", line 24, in test_signed_numerator_cancellation_retains_the_small_identifiable_component
+    self.assertEqual(result['constant']['numerator'],1/3)
+AssertionError: 0.0 != 0.3333333333333333
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=1)

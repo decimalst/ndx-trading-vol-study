@@ -1,0 +1,19 @@
+test_treasury_inventory_capture_integration (unittest.loader._FailedTest.test_treasury_inventory_capture_integration) ... ERROR
+
+======================================================================
+ERROR: test_treasury_inventory_capture_integration (unittest.loader._FailedTest.test_treasury_inventory_capture_integration)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_treasury_inventory_capture_integration
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_inventory_capture_integration.py", line 14, in <module>
+    from scripts import capture_treasury_inventory_metadata as capture
+ImportError: cannot import name 'capture_treasury_inventory_metadata' from 'scripts' (unknown location)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

@@ -1,0 +1,59 @@
+test_atomic_nonfinite_serialization_cannot_corrupt_existing_ledger (tests.test_event_cluster_publication.TransactionContracts.test_atomic_nonfinite_serialization_cannot_corrupt_existing_ledger) ... ok
+test_commit_rechecks_all_frozen_content_and_code_inventory (tests.test_event_cluster_publication.TransactionContracts.test_commit_rechecks_all_frozen_content_and_code_inventory) ... 
+  test_commit_rechecks_all_frozen_content_and_code_inventory (tests.test_event_cluster_publication.TransactionContracts.test_commit_rechecks_all_frozen_content_and_code_inventory) (mode='full_log') ... FAIL
+  test_commit_rechecks_all_frozen_content_and_code_inventory (tests.test_event_cluster_publication.TransactionContracts.test_commit_rechecks_all_frozen_content_and_code_inventory) (mode='added_code') ... FAIL
+test_existing_registration_or_private_output_never_overwritten (tests.test_event_cluster_publication.TransactionContracts.test_existing_registration_or_private_output_never_overwritten) ... ok
+test_full_original_history_support_failure_keeps_three_p1 (tests.test_event_cluster_publication.TransactionContracts.test_full_original_history_support_failure_keeps_three_p1) ... ok
+test_manifest_contains_every_new_and_prior_code_input_and_preserved_file (tests.test_event_cluster_publication.TransactionContracts.test_manifest_contains_every_new_and_prior_code_input_and_preserved_file) ... ok
+test_missing_inherited_evidence_is_explicit_not_fabricated (tests.test_event_cluster_publication.TransactionContracts.test_missing_inherited_evidence_is_explicit_not_fabricated) ... ok
+test_new_upstream_failure_marker_blocks_commit_at_both_late_stages (tests.test_event_cluster_publication.TransactionContracts.test_new_upstream_failure_marker_blocks_commit_at_both_late_stages) ... 
+  test_new_upstream_failure_marker_blocks_commit_at_both_late_stages (tests.test_event_cluster_publication.TransactionContracts.test_new_upstream_failure_marker_blocks_commit_at_both_late_stages) (upstream='range_alert', stage='report') ... FAIL
+  test_new_upstream_failure_marker_blocks_commit_at_both_late_stages (tests.test_event_cluster_publication.TransactionContracts.test_new_upstream_failure_marker_blocks_commit_at_both_late_stages) (upstream='issued_calibration', stage='report') ... FAIL
+test_partial_registration_retained_and_terminal_three_reconstructed (tests.test_event_cluster_publication.TransactionContracts.test_partial_registration_retained_and_terminal_three_reconstructed) ... ok
+test_pretest_failure_never_registers_or_admits (tests.test_event_cluster_publication.TransactionContracts.test_pretest_failure_never_registers_or_admits) ... ok
+test_pretest_mutation_of_frozen_evidence_blocks_registration (tests.test_event_cluster_publication.TransactionContracts.test_pretest_mutation_of_frozen_evidence_blocks_registration) ... ok
+test_report_and_partial_evaluated_write_failures_preserve_scored_diagnostic (tests.test_event_cluster_publication.TransactionContracts.test_report_and_partial_evaluated_write_failures_preserve_scored_diagnostic) ... ok
+test_source_admission_failure_retains_all_three_before_any_fit (tests.test_event_cluster_publication.TransactionContracts.test_source_admission_failure_retains_all_three_before_any_fit) ... ok
+test_three_registrations_exist_before_manifest_input_admission (tests.test_event_cluster_publication.TransactionContracts.test_three_registrations_exist_before_manifest_input_admission) ... ok
+
+======================================================================
+FAIL: test_commit_rechecks_all_frozen_content_and_code_inventory (tests.test_event_cluster_publication.TransactionContracts.test_commit_rechecks_all_frozen_content_and_code_inventory) (mode='full_log')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_event_cluster_publication.py", line 273, in test_commit_rechecks_all_frozen_content_and_code_inventory
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_commit_rechecks_all_frozen_content_and_code_inventory (tests.test_event_cluster_publication.TransactionContracts.test_commit_rechecks_all_frozen_content_and_code_inventory) (mode='added_code')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_event_cluster_publication.py", line 273, in test_commit_rechecks_all_frozen_content_and_code_inventory
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_new_upstream_failure_marker_blocks_commit_at_both_late_stages (tests.test_event_cluster_publication.TransactionContracts.test_new_upstream_failure_marker_blocks_commit_at_both_late_stages) (upstream='range_alert', stage='report')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_event_cluster_publication.py", line 303, in test_new_upstream_failure_marker_blocks_commit_at_both_late_stages
+    with self.assertRaisesRegex(ValueError, "upstream failure"):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_new_upstream_failure_marker_blocks_commit_at_both_late_stages (tests.test_event_cluster_publication.TransactionContracts.test_new_upstream_failure_marker_blocks_commit_at_both_late_stages) (upstream='issued_calibration', stage='report')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_event_cluster_publication.py", line 303, in test_new_upstream_failure_marker_blocks_commit_at_both_late_stages
+    with self.assertRaisesRegex(ValueError, "upstream failure"):
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.681s
+
+FAILED (failures=4)
+{"status": "SCORED_AWAITING_INDEPENDENT_VERIFICATION", "forecasts": 1, "monthly_fits": 1}
+{"status": "SCORED_AWAITING_INDEPENDENT_VERIFICATION", "forecasts": 1, "monthly_fits": 1}
+{"status": "SCORED_AWAITING_INDEPENDENT_VERIFICATION", "forecasts": 1, "monthly_fits": 1}
+{"status": "SCORED_AWAITING_INDEPENDENT_VERIFICATION", "forecasts": 1, "monthly_fits": 1}
+{"status": "SCORED_AWAITING_INDEPENDENT_VERIFICATION", "forecasts": 1, "monthly_fits": 1}

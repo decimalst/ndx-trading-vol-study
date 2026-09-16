@@ -1,0 +1,17 @@
+test_bootstrap_design_is_shared_across_controls_and_has_exact_seeds (tests.test_commodity_implied_score.CommodityScoreTests.test_bootstrap_design_is_shared_across_controls_and_has_exact_seeds) ... ok
+test_corrupted_cohorts_dates_loss_and_metadata_fail_before_inference (tests.test_commodity_implied_score.CommodityScoreTests.test_corrupted_cohorts_dates_loss_and_metadata_fail_before_inference) ... ok
+test_each_effect_offset_slice_and_multiplicity_gate_is_required (tests.test_commodity_implied_score.CommodityScoreTests.test_each_effect_offset_slice_and_multiplicity_gate_is_required) ... ok
+test_empty_or_unsupported_daily_panel_aborts_whole_wave (tests.test_commodity_implied_score.CommodityScoreTests.test_empty_or_unsupported_daily_panel_aborts_whole_wave) ... ok
+test_exact_family_daily_diagnostics_and_both_multiplicity_counts (tests.test_commodity_implied_score.CommodityScoreTests.test_exact_family_daily_diagnostics_and_both_multiplicity_counts) ... ok
+test_full_calendar_and_source_ceiling_cannot_be_changed (tests.test_commodity_implied_score.CommodityScoreTests.test_full_calendar_and_source_ceiling_cannot_be_changed) ... ok
+test_generated_serial_null_calibration_matches_separate_observation_oracle (tests.test_commodity_implied_score.CommodityScoreTests.test_generated_serial_null_calibration_matches_separate_observation_oracle) ... ok
+test_inherit_exact_completed_claims_family_preserves_every_row (tests.test_commodity_implied_score.CommodityScoreTests.test_inherit_exact_completed_claims_family_preserves_every_row) ... ok
+test_inherited_identity_probability_and_hash_closure_are_required (tests.test_commodity_implied_score.CommodityScoreTests.test_inherited_identity_probability_and_hash_closure_are_required) ... ok
+test_one_improving_comparison_cannot_be_a_lead (tests.test_commodity_implied_score.CommodityScoreTests.test_one_improving_comparison_cannot_be_a_lead) ... ok
+test_registered_failures_preserve_both_p_one_entries (tests.test_commodity_implied_score.CommodityScoreTests.test_registered_failures_preserve_both_p_one_entries) ... ok
+test_variable_loss_inference_matches_explicit_circular_and_hac_oracles (tests.test_commodity_implied_score.CommodityScoreTests.test_variable_loss_inference_matches_explicit_circular_and_hac_oracles) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.121s
+
+OK

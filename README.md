@@ -1,32 +1,64 @@
-# NDX volatility forecasting: what the market already knows
+# NDX volatility and joint-return research
 
-> **Question.** Can a modern time-series model — Chronos-2, TiRex-2 — plus
-> calendar and market data known at the forecast origin, beat a compact HAR
-> model that already sees VXN?
+> **Question.** Can additional data, models or latent memory improve volatility
+> forecasts — and can joint-return forecasts help assess spread-selling risk?
 >
-> **Answer.** No, and mostly the honest answer is *undetermined*: nothing tested
-> beats HAR-IV, but the clean window is 192 origins and the comparison's verdict
-> is `inconclusive`, not a null. The one thing genuinely established is an
-> equivalence: calendar and earnings covariates add nothing, at n=2463, by a
-> test that can actually say so.
+> **Current answer, 2026-09-16.** No new standalone volatility predictor has
+> cleared the relevant study gates. One **exploratory joint-density lead** did:
+> a t8 copula beat Gaussian and independence controls with the same marginals.
+> Historical risk filters reduced spread breaches, but **actual options
+> profitability has not been established**. Failed or underpowered tests remain
+> distinct from evidence of equivalence.
 >
-> **What's reusable.** The correction ledger and the verdict vocabulary. 22
-> defects caught by pre-registration, byte-for-byte fences and adversarial
-> review — including a set of corrections that was documented, tested, cited,
-> and never implemented. And the distinction most quant repos collapse:
-> `inconclusive` ≠ `equivalent` ≠ null.
+> **What's reusable.** Frozen protocols, independent verifiers, preserved failed
+> runs and a prospective collection design. The original audit ledger records
+> 22 corrections and why `inconclusive`, `equivalent` and a failed gate must
+> not be treated as interchangeable verdicts.
 
-A leakage-controlled, pre-registered study of Nasdaq-100 realized volatility.
+A research archive spanning Nasdaq-100 realized volatility, paired QQQ/SPX
+returns and hypothetical same-day spread liabilities. Later studies reuse
+previously inspected history: registration before a new run does not turn that
+history into an untouched holdout.
 
-**The volatility answer is null and correctly so.** A compact HAR model using
-VXN is difficult to beat. Across ~16 designs spanning QQQ/NDX and SPX, extra
-index-level signals were redundant, non-stationary, contaminated by how they
-were discovered, too weak to survive a frozen holdout — or, in several cases
-the project originally miscounted as nulls, simply **unresolved by a window too
-short to resolve them**.
+## Latest results
 
-**The finding with actual signal is the process one.** This repository was built
-with heavy AI assistance over about three days, under pre-registration,
+The [research index](docs/LATEST_RESEARCH.md) covers the full follow-up chain,
+including unsuccessful, source-blocked and numerically unevaluable studies.
+
+| Research question | Latest result | Evidence |
+|---|---|---|
+| Do extra signals or model/memory layers improve volatility prediction? | No candidate qualified in the completed follow-ups. Some comparisons remain inconclusive; unavailable data and failed checks are not negative empirical results. | [Model and memory study](reports/model_memory_study/SUMMARY.md), [orthogonal round 2](reports/orthogonal_round2/results.md), [study index](docs/LATEST_RESEARCH.md) |
+| Does dependence modeling improve the joint return density? | Wave 27's t8 copula improved average joint log loss against Gaussian by **0.03057 / 0.03102 nats** in development/evaluation, and also beat independence. Both comparisons cleared the registered search adjustment. This is an exploratory density result, not a volatility or trading result. | [Joint copula findings](reports/joint_copula/predictive/FINDINGS.md) |
+| Is that gain explained by marginal miscalibration? | The crossed calibration experiment left most of the t8 advantage, but **none of seven attribution comparisons passed the adjusted gates**. The mechanism remains unresolved. The next shape study failed its numerical tail-quantile check and remains **UNEVALUABLE**, with all six comparisons retained as p=1. | [Calibration findings](reports/copula_calibration/predictive/FINDINGS.md), [shape terminal record](reports/copula_shape/predictive/terminal.json) |
+| Could a filter reduce 0DTE condor breaches? | In the separate descriptive replay, the shape-t8 filter accepted **917 of 1,457 evaluation sessions**. At 2% short-strike distance and 1% wing width, either underlying breached on **29/917 days (3.16%)**, versus **146/1,457 (10.02%)** when always selling. Simpler filters were competitive; the new model did not consistently improve on them. | [Verified spread replay](reports/copula_spread_replay/FINDINGS.md) |
+| Which distances and widths look best in retrospect? | A **480-geometry hindsight search** found zero expiration liability at ±3.75% on those 917 evaluation days, but that distance had two development breaches. The pooled zero-liability distance was ±4.25% on 1,542 accepted days. All tested widths tied there; assumed premiums determine the apparent width winner. | [Hindsight findings](reports/spread_geometry_hindsight/FINDINGS.md), [selected cases](reports/spread_geometry_hindsight/ALL_WINNERS.md) |
+
+**What the spread result means.** The forecasts selected a calmer historical
+subset. They combine marginal volatility forecasts with joint dependence;
+this does not isolate a copula-only advantage. The replay measures underlying
+open-to-close expiration liabilities, with hypothetical credits, costs and
+sizing. It has no executable option quotes, intraday exits, assignment or
+broker-margin simulation. Zero observed liability at hindsight-selected strikes
+does not establish safety, available premium or future profit. The geometry
+search kept the original day filters fixed; it did not recalculate breach
+probabilities for each new strike.
+
+**Next evidence.** The [prospective benchmark plan](docs/PROSPECTIVE_BENCHMARK.md)
+specifies immutable forecasts and source receipts, exact option contracts,
+synchronized quotes, decision times, costs and settlement outcomes. The ledger
+is implemented and tested; live data collection and option execution adapters
+are not activated. Fresh observations and real premiums are needed to assess
+calibration and economic value.
+
+## Original study and audit record
+
+The August 2026 volatility studies found a compact HAR model using VXN difficult
+to beat. Additional index-level signals were redundant, unstable, discovered
+on reused history or too weak to clear their gates. Several comparisons were
+**unresolved by a window too short to resolve them**, rather than null results.
+
+The initial repository was built with heavy AI assistance over about three
+days, under pre-registration,
 byte-for-byte reproduction fences, and adversarial review. Twenty-two
 corrections were caught. The most instructive is that an entire set of
 methodology corrections was **documented, tested, cited, and never implemented**
@@ -48,16 +80,16 @@ every prior one).
 This is research code and a record of negative as well as positive evidence. It
 is not a trading recommendation or financial advice.
 
-## The honest headline
+## Original volatility findings (August 2026 snapshot)
 
 | | |
 |---|---|
 | **Does anything beat HAR-IV?** | Nothing tested does. But on the clean window that is **`inconclusive`, not a null**: for `chronos_cov_iv` vs HAR-IV the minimum detectable effect is 0.0413 QLIKE — **13% of HAR-IV's 0.3118 loss** — and resolving the gap actually observed would take **4,919 origins** against the 192 available (18,583 under the frozen estimator). That row's corrected point forecast is reconstructed by tail extension, so read it as indicative. |
 | **What is genuinely established?** | On the 13× larger diagnostic window, where equivalence tests have power: calendar and earnings covariates are **`equivalent`** to their controls (p_TOST 0.006 / 0.013). That is a positive finding of no effect, and it is the one claim of this kind the project can actually support. |
 | **What survives as positive?** | Return asymmetry (leverage) alongside VXN: joint Wald 103.19 → 62.63, so the surface prices ~40% of it and a decisive remainder survives. Its out-of-sample value is small and its **significance is estimator-dependent** — p = 0.159 frozen, p = 0.030 corrected. |
-| **What was retracted today?** | Three ranking results. A score with *zero within-year information* scores 0.8317 AUC on the annual-fold scoreboard, above several published headlines. See below. |
+| **What was retracted in the August review?** | Three ranking results. A score with *zero within-year information* scores 0.8317 AUC on the annual-fold scoreboard, above several published headlines. See below. |
 
-Full results table and evidence hierarchy: **[standing findings](reports/FINDINGS.md)**.
+Original results table and evidence hierarchy: **[standing findings](reports/FINDINGS.md)**.
 Every "no difference" claim written before 2026-08-13 should be read against
 **[the methodology fork](reports/METHODOLOGY_FORK.md)**, which supersedes several
 of them.
@@ -108,17 +140,20 @@ resembles.
 
 ## Where to start
 
+- [Latest research index](docs/LATEST_RESEARCH.md) — the follow-up studies, terminal outcomes and current interpretation.
+- [Spread replay](reports/copula_spread_replay/FINDINGS.md) and [hindsight geometry search](reports/spread_geometry_hindsight/FINDINGS.md) — historical risk filtering and its pricing limits.
+- [Prospective benchmark](docs/PROSPECTIVE_BENCHMARK.md) — collection design and implementation status.
 - [How this was built](reports/HOW_THIS_WAS_BUILT.md) — the correction ledger. Start here.
-- [Standing findings](reports/FINDINGS.md) — current conclusions and evidence hierarchy.
+- [Standing findings](reports/FINDINGS.md) — original August conclusions and evidence hierarchy.
 - [Methodology fork](reports/METHODOLOGY_FORK.md) — the four defects that changed
   conclusions, and the `_est`/`_inf`/`_v2` reports that isolate each.
 - [Amendments](reports/AMENDMENTS.md) — everything changed after results were observed.
 - [Pooling diagnostic](reports/representation_study/pooling_diagnostic.md) — what the
   ranking scoreboard actually measures.
 - [Open backlog](docs/OPEN_FINDINGS.md) — audit findings not yet resolved, enumerated.
-- Full results table → [`docs/RESULTS.md`](docs/RESULTS.md)
+- Original results table → [`docs/RESULTS.md`](docs/RESULTS.md)
 - Method, leakage policy, hypotheses, verdict vocabulary → [`docs/METHOD.md`](docs/METHOD.md)
-- Reproduce anything → [`docs/RUNBOOK.md`](docs/RUNBOOK.md)
+- Original-study runbook → [`docs/RUNBOOK.md`](docs/RUNBOOK.md); follow-up reproduction requirements → [latest research index](docs/LATEST_RESEARCH.md#reproduction-and-publication)
 - Data sourcing and provenance → [`docs/DATA.md`](docs/DATA.md) · licensing → [`DATA-LICENSE.md`](DATA-LICENSE.md)
 - Orthogonal-signal study → [`docs/SIGNAL_STUDY.md`](docs/SIGNAL_STUDY.md)
 - Per-study reports → [`reports/`](reports/)
@@ -138,7 +173,9 @@ Full vocabulary: [`docs/METHOD.md`](docs/METHOD.md#verdict-vocabulary-added-2026
 
 ## Known limitations
 
-Read these before believing any number here.
+The follow-ups add reused-history, current-vintage and multiple-search limits,
+and the spread studies lack actual option premiums. The following limitations
+refer to the original volatility studies unless stated otherwise.
 
 - **Several headline comparisons are `inconclusive`, not null.** The clean window
   is 192 origins. A failure to reject is not evidence of no effect.
@@ -149,7 +186,7 @@ Read these before believing any number here.
   8 CPI, 9 NFP, 30 earnings-weight days, 12 in the frozen ≥5% heavy-earnings slice
   (157 in the diagnostic window).
 - **The clean window contains no volatility event** and cannot settle tail questions.
-- **The ~16 studies are not statistically independent**; their count is not a meta-test.
+- **The studies are not statistically independent**; their count is not a meta-test.
 - **`har_lev` / `har_iv_lev` no longer have a clean draw.** 192 clean origins were
   scored and published for them before a quarantine bug was fixed — ~38% of the
   gate draw, spent with direction known.
@@ -175,7 +212,7 @@ Read these before believing any number here.
   scripted requests). They run through 2026, FOMC through 2027; after that `is_cpi` /
   `is_nfp` silently become 0 unless extended by hand.
 - **Ranking AUCs are mostly between-fold** — see the retraction table above.
-- **No monthly peeking.** The next evaluation is pre-committed to 500 scored origins or
+- **Original forward-accrual gate: no monthly peeking.** Evaluation is pre-committed to 500 scored origins or
   2027-06-30, whichever comes first. Reaching a gate is permission to look, not
   permission to stop at a favourable p.
 - **Two audit findings are recorded and *not* fixed**, because each would amend a frozen
@@ -205,9 +242,9 @@ absent from the probing literature, which tends to establish decodability and
 stop. The same standard applied to this repository's own results is what produced
 the retraction table above.
 
-## Status
+## Original audit status
 
-Provisional by the project's own standard. Three rounds of adversarial review
+The August audit remained provisional by the project's own standard. Three rounds of adversarial review
 produced 8, then 12, then 22 findings, each round surviving every prior one.
 
 **That sequence does not measure what the earlier version of this section
@@ -218,6 +255,7 @@ growing codebase is uninformative about whether review is converging. Corrected
 
 The test that can actually pass: **freeze scope for one round and re-review only
 what existed before it.** Convergence means a scope-frozen round producing
-**zero conclusion-changing findings**. No such round has been run, so nothing
-here has been shown to converge — and the three rounds to date cannot be read as
-evidence either way.
+**zero conclusion-changing findings**. That original record does not establish
+convergence. Later per-study verification receipts are linked in the
+[research index](docs/LATEST_RESEARCH.md); they should not be interpreted as a
+new audit of the entire repository.

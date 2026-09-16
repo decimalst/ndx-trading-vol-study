@@ -1,0 +1,26 @@
+test_calendar_maturity_and_event_values_are_not_silently_repaired (tests.test_tail_shape_search.TestTailShapeSearch.test_calendar_maturity_and_event_values_are_not_silently_repaired) ... ok
+test_entry_refits_independent_of_future_missing_label (tests.test_tail_shape_search.TestTailShapeSearch.test_entry_refits_independent_of_future_missing_label) ... ok
+test_failure_preserves_every_comparison (tests.test_tail_shape_search.TestTailShapeSearch.test_failure_preserves_every_comparison) ... ok
+test_fixed_protocol_and_resolution (tests.test_tail_shape_search.TestTailShapeSearch.test_fixed_protocol_and_resolution) ... ERROR
+test_inherited_source_identities_are_preserved (tests.test_tail_shape_search.TestTailShapeSearch.test_inherited_source_identities_are_preserved) ... ok
+test_minimum_train_class_support_is_required (tests.test_tail_shape_search.TestTailShapeSearch.test_minimum_train_class_support_is_required) ... ok
+test_missing_feature_makes_common_row_ineligible (tests.test_tail_shape_search.TestTailShapeSearch.test_missing_feature_makes_common_row_ineligible) ... ok
+test_paired_inference_absolute_nll_can_be_negative (tests.test_tail_shape_search.TestTailShapeSearch.test_paired_inference_absolute_nll_can_be_negative) ... ok
+test_three_comparisons_all_required (tests.test_tail_shape_search.TestTailShapeSearch.test_three_comparisons_all_required) ... ok
+test_training_excludes_unmatured_and_future_mutations (tests.test_tail_shape_search.TestTailShapeSearch.test_training_excludes_unmatured_and_future_mutations) ... ok
+
+======================================================================
+ERROR: test_fixed_protocol_and_resolution (tests.test_tail_shape_search.TestTailShapeSearch.test_fixed_protocol_and_resolution)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_tail_shape_search.py", line 34, in test_fixed_protocol_and_resolution
+    p=self.protocol();study.validate(p)
+                      ^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/tail_shape_search.py", line 51, in validate
+    raise ValueError('Fixed tail-shape specification differs')
+ValueError: Fixed tail-shape specification differs
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.137s
+
+FAILED (errors=1)

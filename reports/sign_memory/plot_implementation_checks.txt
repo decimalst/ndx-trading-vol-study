@@ -1,0 +1,17 @@
+test_complete_two_contrast_four_phase_same_row_family_required (tests.test_plot_sign_memory.PlotContracts.test_complete_two_contrast_four_phase_same_row_family_required) ... ok
+test_counts_are_validated_without_fixed_empirical_expectations (tests.test_plot_sign_memory.PlotContracts.test_counts_are_validated_without_fixed_empirical_expectations) ... ok
+test_exact_order_literal_values_and_no_input_mutation (tests.test_plot_sign_memory.PlotContracts.test_exact_order_literal_values_and_no_input_mutation) ... ok
+test_finite_bounded_brier_losses_ordered_intervals_and_probabilities (tests.test_plot_sign_memory.PlotContracts.test_finite_bounded_brier_losses_ordered_intervals_and_probabilities) ... ok
+test_invalid_input_creates_no_artifacts_and_main_failure_blocks_rendering (tests.test_plot_sign_memory.PlotContracts.test_invalid_input_creates_no_artifacts_and_main_failure_blocks_rendering) ... ok
+test_literal_intervals_zero_threshold_and_readable_render (tests.test_plot_sign_memory.PlotContracts.test_literal_intervals_zero_threshold_and_readable_render) ... ok
+test_verified_current_identity_success_family_and_reconstruction_counts_required (tests.test_plot_sign_memory.PlotContracts.test_verified_current_identity_success_family_and_reconstruction_counts_required) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.390s
+
+OK
+
+Scoped Ruff: all four new owned files pass.
+Synthetic PNG visually inspected: two panels, four phase intervals, literal Brier units and -0.0005 reference; readable labels, axes and footer without overlap.
+Synthetic PNG: /private/tmp/codex-sign-memory-synthetic-plot/comparison_intervals.png
+No empirical plot outputs or score values were read.

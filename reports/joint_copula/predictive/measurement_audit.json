@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "gk_floor": 1e-10,
+  "reference_rows": 4226,
+  "per_asset": {
+    "qqq": {
+      "observed_complete_rows": 4226,
+      "missing_ohlc_rows": 0,
+      "finite_gk_rows": 4226,
+      "floor_hit_rows": 0,
+      "nonpositive_gk_rows": 0,
+      "small_positive_gk_rows": 0,
+      "minimum_raw_gk": 2.331834843103479e-06,
+      "finite_intraday_return_rows": 4226,
+      "zero_intraday_return_rows": 23
+    },
+    "spx": {
+      "observed_complete_rows": 4226,
+      "missing_ohlc_rows": 0,
+      "finite_gk_rows": 4226,
+      "floor_hit_rows": 0,
+      "nonpositive_gk_rows": 0,
+      "small_positive_gk_rows": 0,
+      "minimum_raw_gk": 8.322391815939778e-07,
+      "finite_intraday_return_rows": 4226,
+      "zero_intraday_return_rows": 2
+    }
+  }
+}

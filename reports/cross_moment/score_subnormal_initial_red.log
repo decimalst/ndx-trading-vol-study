@@ -1,0 +1,17 @@
+test_nonzero_subnormal_factored_gap_is_retained_when_direct_gap_rounds_zero (tests.test_cross_moment_score.ProductArithmeticTests.test_nonzero_subnormal_factored_gap_is_retained_when_direct_gap_rounds_zero) ... ERROR
+
+======================================================================
+ERROR: test_nonzero_subnormal_factored_gap_is_retained_when_direct_gap_rounds_zero (tests.test_cross_moment_score.ProductArithmeticTests.test_nonzero_subnormal_factored_gap_is_retained_when_direct_gap_rounds_zero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_cross_moment_score.py", line 130, in test_nonzero_subnormal_factored_gap_is_retained_when_direct_gap_rounds_zero
+    result=score.paired_difference(np.array([candidate]),np.array([control]),np.array([0.]))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/cross_moment_score.py", line 144, in paired_difference
+    raise ValueError('Factored and direct product-loss differences are numerically incoherent')
+ValueError: Factored and direct product-loss differences are numerically incoherent
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

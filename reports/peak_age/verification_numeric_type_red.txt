@@ -1,0 +1,14 @@
+test_boolean_inside_zero_coefficient_list_is_not_numeric_evidence (tests.test_peak_age_verification.ProducerChallengeContracts.test_boolean_inside_zero_coefficient_list_is_not_numeric_evidence) ... FAIL
+
+======================================================================
+FAIL: test_boolean_inside_zero_coefficient_list_is_not_numeric_evidence (tests.test_peak_age_verification.ProducerChallengeContracts.test_boolean_inside_zero_coefficient_list_is_not_numeric_evidence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_verification.py", line 230, in test_boolean_inside_zero_coefficient_list_is_not_numeric_evidence
+    with self.assertRaises((ValueError, AssertionError)):
+AssertionError: (<class 'ValueError'>, <class 'AssertionError'>) not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.030s
+
+FAILED (failures=1)

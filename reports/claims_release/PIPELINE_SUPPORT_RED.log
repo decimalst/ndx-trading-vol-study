@@ -1,0 +1,24 @@
+test_registered_monthly_support_failure_retains_insufficient_data_classification (tests.test_claims_release_pipeline.ClaimsReleasePipelineTests.test_registered_monthly_support_failure_retains_insufficient_data_classification) ... 
+  test_registered_monthly_support_failure_retains_insufficient_data_classification (tests.test_claims_release_pipeline.ClaimsReleasePipelineTests.test_registered_monthly_support_failure_retains_insufficient_data_classification) (field='minimum_train') ... FAIL
+  test_registered_monthly_support_failure_retains_insufficient_data_classification (tests.test_claims_release_pipeline.ClaimsReleasePipelineTests.test_registered_monthly_support_failure_retains_insufficient_data_classification) (field='minimum_train_releases') ... FAIL
+
+======================================================================
+FAIL: test_registered_monthly_support_failure_retains_insufficient_data_classification (tests.test_claims_release_pipeline.ClaimsReleasePipelineTests.test_registered_monthly_support_failure_retains_insufficient_data_classification) (field='minimum_train')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_pipeline.py", line 213, in test_registered_monthly_support_failure_retains_insufficient_data_classification
+    self.assertTrue(all(row["status"] == "INSUFFICIENT_DATA" for row in metrics["rows"]))
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_registered_monthly_support_failure_retains_insufficient_data_classification (tests.test_claims_release_pipeline.ClaimsReleasePipelineTests.test_registered_monthly_support_failure_retains_insufficient_data_classification) (field='minimum_train_releases')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_pipeline.py", line 213, in test_registered_monthly_support_failure_retains_insufficient_data_classification
+    self.assertTrue(all(row["status"] == "INSUFFICIENT_DATA" for row in metrics["rows"]))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 1 test in 0.562s
+
+FAILED (failures=2)

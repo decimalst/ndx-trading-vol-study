@@ -1,0 +1,160 @@
+I001 [*] Import block is un-sorted or un-formatted
+  --> tests/test_verify_peak_age.py:3:1
+   |
+ 1 |   """Prewritten independent wave22 entry/inference contracts, generated data only."""
+ 2 |
+ 3 | / from __future__ import annotations
+ 4 | |
+ 5 | | import copy
+ 6 | | import json
+ 7 | | import tempfile
+ 8 | | import unittest
+ 9 | | from pathlib import Path
+10 | | from unittest.mock import patch
+11 | |
+12 | | import numpy as np
+13 | | import pandas as pd
+14 | | import yaml
+15 | |
+16 | | from src import verify_peak_age as v
+17 | | from src import verify_index_hinge as old
+18 | | from tests.test_peak_age_admission import Fixture as SourceFixture
+   | |__________________________________________________________________^
+help: Organize imports
+   |
+15 |
+16 + from src import verify_index_hinge as old
+17 | from src import verify_peak_age as v
+   - from src import verify_index_hinge as old
+18 | from tests.test_peak_age_admission import Fixture as SourceFixture
+   |
+
+RUF059 Unpacked variable `prior` is never used
+   --> tests/test_verify_peak_age.py:299:25
+    |
+298 |     def test_wave22_strict_significance_and_all_three_controls(self):
+299 |         _, _, original, prior, _, _, _ = self.fixture
+    |                         ^^^^^
+300 |         m = copy.deepcopy(original)
+301 |         for row in m["rows"]:
+    |
+help: Prefix it with an underscore or any other dummy variable pattern
+
+RUF059 Unpacked variable `panel` is never used
+   --> tests/test_verify_peak_age.py:338:9
+    |
+337 |     def test_exact143_ledger_order_and_predecode_hash(self):
+338 |         panel, p, m, prior, calendar, a, k = inference_fixture()
+    |         ^^^^^
+339 |         with tempfile.TemporaryDirectory() as d:
+340 |             root = Path(d)
+    |
+help: Prefix it with an underscore or any other dummy variable pattern
+
+RUF059 Unpacked variable `p` is never used
+   --> tests/test_verify_peak_age.py:338:16
+    |
+337 |     def test_exact143_ledger_order_and_predecode_hash(self):
+338 |         panel, p, m, prior, calendar, a, k = inference_fixture()
+    |                ^
+339 |         with tempfile.TemporaryDirectory() as d:
+340 |             root = Path(d)
+    |
+help: Prefix it with an underscore or any other dummy variable pattern
+
+RUF059 Unpacked variable `calendar` is never used
+   --> tests/test_verify_peak_age.py:338:29
+    |
+337 |     def test_exact143_ledger_order_and_predecode_hash(self):
+338 |         panel, p, m, prior, calendar, a, k = inference_fixture()
+    |                             ^^^^^^^^
+339 |         with tempfile.TemporaryDirectory() as d:
+340 |             root = Path(d)
+    |
+help: Prefix it with an underscore or any other dummy variable pattern
+
+RUF059 Unpacked variable `a` is never used
+   --> tests/test_verify_peak_age.py:338:39
+    |
+337 |     def test_exact143_ledger_order_and_predecode_hash(self):
+338 |         panel, p, m, prior, calendar, a, k = inference_fixture()
+    |                                       ^
+339 |         with tempfile.TemporaryDirectory() as d:
+340 |             root = Path(d)
+    |
+help: Prefix it with an underscore or any other dummy variable pattern
+
+RUF059 Unpacked variable `k` is never used
+   --> tests/test_verify_peak_age.py:338:42
+    |
+337 |     def test_exact143_ledger_order_and_predecode_hash(self):
+338 |         panel, p, m, prior, calendar, a, k = inference_fixture()
+    |                                          ^
+339 |         with tempfile.TemporaryDirectory() as d:
+340 |             root = Path(d)
+    |
+help: Prefix it with an underscore or any other dummy variable pattern
+
+SIM117 [*] Use a single `with` statement with multiple contexts instead of nested `with` statements
+   --> tests/test_verify_peak_age.py:411:13
+    |
+409 |               ledger = b'{"event":"registered"}\n'
+410 |               (report / "trial_ledger.jsonl").write_bytes(ledger)
+411 | /             with patch.object(
+412 | |                 v, "verify", side_effect=ValueError("injected independent check")
+413 | |             ):
+414 | |                 with self.assertRaises(ValueError):
+    | |___________________________________________________^
+415 |                       v.verify_with_failure_guard(root)
+416 |               failed = json.loads((report / "metrics.json").read_text())
+    |
+help: Combine `with` statements
+    |
+412 |                 v, "verify", side_effect=ValueError("injected independent check")
+    -             ):
+    -                 with self.assertRaises(ValueError):
+    -                     v.verify_with_failure_guard(root)
+413 +             ), self.assertRaises(ValueError):
+414 +                 v.verify_with_failure_guard(root)
+415 |             failed = json.loads((report / "metrics.json").read_text())
+    |
+
+RUF059 Unpacked variable `iv` is never used
+   --> tests/test_verify_peak_age.py:460:19
+    |
+458 |     f.put("src/verify_peak_age.py", Path(v.__file__).read_bytes())
+459 |     pins = v.collect_closure(root, f.expected)["files"]
+460 |     audit, daily, iv = v.admit_upstream(root, f.expected, pins)
+    |                   ^^
+461 |     panel, _, metrics, prior, calendar, a, k = inference_fixture()
+462 |     metrics["protocol_sha256"] = f.hash(v.PROTOCOL)
+    |
+help: Prefix it with an underscore or any other dummy variable pattern
+
+RUF059 Unpacked variable `calendar` is never used
+   --> tests/test_verify_peak_age.py:461:31
+    |
+459 |     pins = v.collect_closure(root, f.expected)["files"]
+460 |     audit, daily, iv = v.admit_upstream(root, f.expected, pins)
+461 |     panel, _, metrics, prior, calendar, a, k = inference_fixture()
+    |                               ^^^^^^^^
+462 |     metrics["protocol_sha256"] = f.hash(v.PROTOCOL)
+463 |     f.put(v.OUT + "/upstream_admission.json", audit)
+    |
+help: Prefix it with an underscore or any other dummy variable pattern
+
+SIM117 Use a single `with` statement with multiple contexts instead of nested `with` statements
+   --> tests/test_verify_peak_age.py:652:9
+    |
+650 |           report = self.root / v.REPORT
+651 |           original = (report / "trial_ledger.jsonl").read_bytes()
+652 | /         with patch.object(v, "verify", side_effect=ValueError("generated late audit failure")):
+653 | |             with self.assertRaises(ValueError):
+    | |_______________________________________________^
+654 |                   v.verify_with_failure_guard(self.root)
+655 |           updated = (report / "trial_ledger.jsonl").read_bytes()
+    |
+help: Combine `with` statements
+
+Found 11 errors.
+[*] 2 fixable with the `--fix` option (8 hidden fixes can be enabled with the `--unsafe-fixes` option).

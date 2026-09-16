@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<stdin>", line 6, in <module>
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py", line 424, in evaluate
+    raise ValueError("Declared phase, maturity and training support required")
+ValueError: Declared phase, maturity and training support required

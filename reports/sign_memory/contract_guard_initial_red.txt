@@ -1,0 +1,2 @@
+FAIL: contract accepted changed target zero
+FAIL: contract accepted changed measurement gk_floor

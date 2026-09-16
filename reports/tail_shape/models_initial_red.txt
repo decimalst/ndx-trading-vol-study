@@ -1,0 +1,19 @@
+test_tail_shape_models (unittest.loader._FailedTest.test_tail_shape_models) ... ERROR
+
+======================================================================
+ERROR: test_tail_shape_models (unittest.loader._FailedTest.test_tail_shape_models)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_tail_shape_models
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_tail_shape_models.py", line 10, in <module>
+    from src import tail_shape_features as features
+ImportError: cannot import name 'tail_shape_features' from 'src' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/__init__.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

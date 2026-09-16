@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-09-07T07:52:10.270943+00:00",
+  "independent_review": "volatility_scout",
+  "artifact_hashes_checked": 489,
+  "protocol_hash_matches": true,
+  "cumulative_hypotheses": 110,
+  "ledger_events": 112,
+  "forecasts": 7386,
+  "monthly_fits": 118,
+  "full_pre_run_tests": 1114,
+  "focused_pre_run_tests": 106,
+  "local_links_checked": 20,
+  "figure_visually_reviewed": true,
+  "findings": [],
+  "scope": "Report statements, saved metrics and verification, frozen hashes, links and figure. No new fitting or changes to frozen research artifacts."
+}

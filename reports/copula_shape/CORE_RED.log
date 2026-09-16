@@ -1,0 +1,22 @@
+Five prewritten synthetic contracts before the shape producer module exists.
+test_copula_shape (unittest.loader._FailedTest.test_copula_shape) ... ERROR
+
+======================================================================
+ERROR: test_copula_shape (unittest.loader._FailedTest.test_copula_shape)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_copula_shape
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_shape.py", line 9, in <module>
+    from src.copula_shape import fit_shape, inverse_shape, shape_coordinates
+ModuleNotFoundError: No module named 'src.copula_shape'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+
+exit_code=1

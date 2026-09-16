@@ -1,0 +1,10 @@
+{
+  "status": "VERIFIED",
+  "comparisons_verified": 2,
+  "endpoints_verified": 4,
+  "bootstrap_runs_verified": 12,
+  "hac_runs_verified": 4,
+  "inherited_comparisons_verified": 149,
+  "density_rows_verified": 7386,
+  "common_scored_origins": 2462
+}

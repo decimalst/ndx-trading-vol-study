@@ -1,0 +1,25 @@
+test_evaluator_rejects_unknown_old_plan_before_any_inference (tests.test_civil_quarter_integration.CivilQuarterPipeline.test_evaluator_rejects_unknown_old_plan_before_any_inference) ... ERROR
+
+======================================================================
+ERROR: test_evaluator_rejects_unknown_old_plan_before_any_inference (tests.test_civil_quarter_integration.CivilQuarterPipeline.test_evaluator_rejects_unknown_old_plan_before_any_inference)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_civil_quarter_integration.py", line 173, in test_evaluator_rejects_unknown_old_plan_before_any_inference
+    search.evaluate(panel, features, protocol, 118, prior=synthetic_prior())
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/civil_quarter_search.py", line 564, in evaluate
+    phase = paired_inference(
+            ^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1183, in _execute_mock_call
+    raise effect
+RuntimeError: inference reached
+
+----------------------------------------------------------------------
+Ran 1 test in 0.110s
+
+FAILED (errors=1)

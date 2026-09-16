@@ -1,0 +1,29 @@
+COMMAND: .venv/bin/python -m unittest tests.test_verify_copula_calibration -v
+test_calibrated_marginal_is_normalized_and_units_cancel (tests.test_verify_copula_calibration.IndependentCalibrationMathTests.test_calibrated_marginal_is_normalized_and_units_cancel) ... ok
+test_constant_scale_invalid_types_and_unrepresentable_tail_fail (tests.test_verify_copula_calibration.IndependentCalibrationMathTests.test_constant_scale_invalid_types_and_unrepresentable_tail_fail) ... ok
+test_full_jacobian_joint_densities_and_all_seven_contrasts (tests.test_verify_copula_calibration.IndependentCalibrationMathTests.test_full_jacobian_joint_densities_and_all_seven_contrasts) ... ok
+test_inverse_transform_uses_log_tails_without_clipping (tests.test_verify_copula_calibration.IndependentCalibrationMathTests.test_inverse_transform_uses_log_tails_without_clipping) ... ok
+test_population_normal_score_parameters_and_identity (tests.test_verify_copula_calibration.IndependentCalibrationMathTests.test_population_normal_score_parameters_and_identity) ... ok
+test_actual_producer_generated_replay_and_roundtrip (tests.test_verify_copula_calibration.IndependentCrossedChronologyTests.test_actual_producer_generated_replay_and_roundtrip) ... ok
+test_archive_clock_and_canonical_identity_corruption_rejected (tests.test_verify_copula_calibration.IndependentCrossedChronologyTests.test_archive_clock_and_canonical_identity_corruption_rejected) ... ok
+test_cohort_certificate_provenance_and_coverage_corruptions_rejected (tests.test_verify_copula_calibration.IndependentCrossedChronologyTests.test_cohort_certificate_provenance_and_coverage_corruptions_rejected) ... ok
+test_current_month_labels_do_not_change_its_calibration (tests.test_verify_copula_calibration.IndependentCrossedChronologyTests.test_current_month_labels_do_not_change_its_calibration) ... ok
+test_every_application_and_density_contrast_group_corruption_rejected (tests.test_verify_copula_calibration.IndependentCrossedChronologyTests.test_every_application_and_density_contrast_group_corruption_rejected) ... ok
+test_exact_warmup_history_and_unscored_issuance (tests.test_verify_copula_calibration.IndependentCrossedChronologyTests.test_exact_warmup_history_and_unscored_issuance) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 2.936s
+
+OK
+
+exit_code=0
+
+COMMAND: .venv/bin/ruff check src/verify_copula_calibration.py tests/test_verify_copula_calibration.py
+All checks passed!
+
+exit_code=0
+
+COMMAND: .venv/bin/ruff format --check src/verify_copula_calibration.py tests/test_verify_copula_calibration.py
+2 files already formatted
+
+exit_code=0

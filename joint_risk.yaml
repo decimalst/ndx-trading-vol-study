@@ -1,0 +1,244 @@
+study_id: joint_risk_wave10
+specified_on: '2026-09-07'
+status: specified_before_empirical_scores
+objective: Test one lagged correlation increment for QQQ ETF and SPX index joint intraday residual second-moment prediction
+evidence_class: exploratory_reused_history_archival_QQQ_SPX_joint_daily_return_second_moments
+wave: 10
+wave_alpha: 0.00045454545454545455
+sources:
+  daily: data/research_paths/spx_daily.parquet
+  vix: data/free_sources/raw/cboe/VIX_History.csv
+  vix9d: data/free_sources/raw/cboe/VIX9D_History.csv
+  vvix: data/free_sources/raw/cboe/VVIX_History.csv
+  qqq: data/raw/daily_ohlc.parquet
+  vxn: data/free_sources/raw/cboe/VXN_History.csv
+index:
+  asset: QQQ_ETF_and_SPX_price_index
+  source_end: '2025-10-20'
+  sealed_start: '2025-11-03'
+  origin_start: '2016-01-04'
+  origin_end: '2025-10-17'
+  latest_target: '2025-10-20'
+  development:
+  - '2016-01-04'
+  - '2019-12-31'
+  development_target_available_by: '2019-12-31'
+  evaluation:
+  - '2020-01-02'
+  - '2025-10-17'
+  evaluation_stability:
+  - - '2020-01-02'
+    - '2022-12-31'
+  - - '2023-01-01'
+    - '2025-10-17'
+  horizons:
+  - 1
+  models:
+  - constant_matrix
+  - constant_correlation
+  - dynamic_correlation
+  market_lag: 1
+  target: Paired next actual observed SPX session raw log(close/open) QQQ and SPX returns
+  target_interpretation: Conditional second moment of returns about common predicted mean; exact covariance only if shared
+    means are conditionally correct
+  label_availability: Both same-date intraday OHLC observations mature at actual next observed SPX close
+  minimum_train: 1000
+  common_sample: All3models share all34 complete raw features and both finite mature return labels; signed and zero returns
+    retained
+  fit_schedule: Monthly first feature-complete origin before future query-label filtering; expanding training with label available
+    by previous SPX session
+  objective: 'Shared means: normalized ridge MSE plus .01 standardized slope penalty. Shared positive diagonal residual moments:
+    mean log(h)+e^2/h plus .01 standardized slope penalty. Dependence: mean unhalved matrix score with candidate-only .01*b^2'
+  feature_scaling: Append (corr22-training mean corr22)^2 to34features, then training-only population standardization of34nonintercept
+    columns. Every scale must exceed1e-12; no drop or fallback
+  penalty: 0.01
+  effect_rationale: Predeclared .005 unhalved joint score decrease against both controls in both phases; absolute since raw
+    score can be negative
+  all_features:
+  - const
+  - qqq_lg_d
+  - qqq_lg_w
+  - qqq_lg_m
+  - qqq_lt_d
+  - qqq_lt_w
+  - qqq_lt_m
+  - qqq_neg_d
+  - qqq_neg_w
+  - qqq_neg_m
+  - spx_lg_d
+  - spx_lg_w
+  - spx_lg_m
+  - spx_lt_d
+  - spx_lt_w
+  - spx_lt_m
+  - spx_neg_d
+  - spx_neg_w
+  - spx_neg_m
+  - lvxn
+  - lvix
+  - term
+  - lvvix
+  - entry_dow_1
+  - entry_dow_2
+  - entry_dow_3
+  - entry_dow_4
+  - corr22
+  - qqq_day_d
+  - qqq_day_w
+  - qqq_day_m
+  - spx_day_d
+  - spx_day_w
+  - spx_day_m
+  solver: Mean direct ridge fullMSEgradient<=1e-10. Positive marginal moments use frozen Newton200/Armijo helper gradient<=1e-8.
+    Dependence numerical global certificate per dependence section
+  effect_threshold_absolute: 0.005
+  residual_staging: current_fit_training_residuals
+  transform: training_centered_corr22_square
+  mean_gradient_tolerance: 1.0e-10
+  moment_gradient_tolerance: 1.0e-08
+measurement:
+  gk_floor: 1.0e-10
+  formula: 0.5*log(high/low)^2-(2*log(2)-1)*log(close/open)^2
+  admission_pool: For each asset separately, every observed complete OHLC row after alignment to full bounded SPX reference
+    calendar; before ANY correlation, feature, target or sample mask
+  gate: Every complete observed raw GK strictly greater than1e-10; every observed open/close pair must yield finite signed
+    log(close/open), including high/low gaps. Audit precedes any feature/target/sample mask.
+  failure: Save measurement audit before requiring PASS; no feature/target construction or fits on floor failure; retain both
+    registered hypotheses as UNEVALUABLEp1
+  missing: Absent or partially missing OHLC is counted separately and remains unknown; never converted to zero or floored
+  invalid: Invalid observed prices/ranges or nonfinite computed GK fail wholewave. Any observed open/close pair producing
+    nonfinite signed log return fails even when high/low is missing; missing open/close stays unknown.
+  zero_target: Zero or signed intraday returns and zero residual outer products valid; positive GK gate concerns shared risk
+    histories
+  diagnostics: Existing perasset GK counts/minima plus finite and zero intraday return counts; missing measurements unknown
+  claims: No true-correlation identification under misspecified marginals, HF covariance, causal, cash-profit or exact Nasdaq100-index
+    claim
+comparisons:
+  new_hypotheses: 2
+  inherited_hypotheses: 110
+  cumulative_hypotheses: 112
+  inherited_sources:
+  - reports/orthogonal_round2/metrics.json
+  - reports/model_memory_study/combined_metrics.json
+  - reports/iterative_signal_search/metrics.json
+  - reports/international_volatility/metrics.json
+  - reports/overnight_index/metrics.json
+  - reports/macro_overnight/metrics.json
+  - reports/measurement_memory/metrics.json
+  - reports/index_hinge/metrics.json
+  - reports/tail_shape/metrics.json
+  - reports/calendar_variance/metrics.json
+  - reports/relative_risk/metrics.json
+  controls:
+  - constant_correlation
+  - constant_matrix
+  candidate_gate: One slope must beat conditional constant correlation and constant residual-matrix benchmark under all gates
+  contrasts:
+  - - dynamic_correlation
+    - constant_correlation
+    - matrix_qlike
+  - - dynamic_correlation
+    - constant_matrix
+    - matrix_qlike
+inference:
+  loss: Unhalved logdet(H)+e' inverse(H) e with same mean predictions across models; finite signed score valid; no logdet
+    observed outer product
+  blocks:
+  - 21
+  - 63
+  - 126
+  block_units: consecutive retained paired-forecast observations in chronological order; missing calendar dates are reported
+    and not imputed
+  bootstrap_draws: 99999
+  seed: 20260916
+  seed_rule: seed+phase_code*10000+block;development0,evaluation1
+  p_phase: maximum two-sided centered-null circular bootstrap p across allblocks and Bartlett HAC126 p
+  p_hypothesis: maximum development/evaluation p
+  multiplicity: Holm2 at0.05/(10*11), separately Holm112 at0.05
+  gate: Absolute paired score decrease>=.005 both phases vsBOTHcontrols, negative2evaluation slices, waveHolm<.05/110,cumulativeHolm<.05
+  reporting: All2absolute joint-score differences, uncertainty envelopes, nominal MDE, annual/fixed-period diagnostics; no
+    percentage raw-score gains
+  failure_rule: Any registered measurement, fit, scoring, verification or output failure retains both hypotheses as UNEVALUABLEp1;
+    no post-result tuning repair or omitted arms
+  caveat: Corrections cannot reverse reused-history selection or archival source uncertainty. Shared diagonal misspecification
+    can create dynamic dependence score gains without true correlation predictability.
+  hac_lags: 126
+  minimum_phase_observations: 127
+  resolution: 1/100000 below one tenth strictest waveHolm cutoff1/4400
+outputs:
+  data: data/joint_risk
+  reports: reports/joint_risk
+source_contract:
+  instruments: QQQ ETF vendor raw OHLC and Yahoo ^GSPC SPX price index; no audited exact Nasdaq100 OHLC source is claimed
+  fields: open,high,low,close only; no adjusted close, volume, inferred distributions or corporate-action substitution
+  reference_calendar: Retain every bounded observed SPX date; reindex QQQ without first intersecting calendars; no next-common-date
+    labels
+  previous_close: Each asset raw overnight and close return requires its actual source predecessor date equal to preceding
+    SPX reference date; otherwise unknown
+  vintage: Archival Yahoo and Cboe extracts; revisions, synchronized auctions and exact historical publication latency unverified
+  vix9d: Back-calculated January2011-October2013 training history; forecasts begin2016
+  iv_match: VXN underlying Nasdaq100 and SPX/VIX controls; no implied covariance or exact synchronous index/ETF auction data
+    claimed
+  missing: Missing observed quotes or absent exact-date sources remain unknown through strict rolling windows; no filling
+    or compressed rolling
+  limitations: Intraday ratios cancel common within-session units, but ETF tracking, index construction and vendor conventions
+    remain; raw intersession controls retain distribution effects
+verification:
+  coefficient_relative_tolerance: 1.0e-07
+  coefficient_absolute_tolerance: 1.0e-10
+  forecast_relative_tolerance: 1.0e-07
+  forecast_absolute_tolerance: 1.0e-10
+  mean_gradient_tolerance: 1.0e-10
+  moment_gradient_tolerance: 1.0e-08
+  dependence_projected_gradient_tolerance: 1.0e-07
+  global_value_gap: 1.0e-08
+  independent_fit: Independent source/features/targets/fit schedule, augmented least-squares sharedmeans, independently checked
+    convex positive moments, separate scalar/certificate reconstruction, Cholesky matrix scores and all inference/accounting
+  identity_tests: Asset-order/unit invariance, shared means/diagonals, zero slope exact nesting, zero/rank-one outcomes, analytic
+    constant-true-correlation misspecified-scale counterexample
+  independent_variance_coefficient_relative_tolerance: 1.0e-07
+  independent_variance_coefficient_absolute_tolerance: 1.0e-06
+  independent_variance_forecast_relative_tolerance: 1.0e-06
+  independent_variance_forecast_absolute_tolerance: 1.0e-12
+  geometry_policy: Independent convex marginal fit checked separately; scalar certificate and tight saved-forecast replay
+    use independently reconstructed saved marginal coefficients that also pass exact objective/KKT checks
+correlation:
+  window: 22
+  returns: raw log(close/open) per matched SPX date, common within-session units cancel
+  calculation: Centered two-pass Pearson covariance divided by centered norms over exactly22 complete paired returns; ends
+    at previous SPX session
+  missing: Any missing pair in window or exact zero centered denominator makes correlation unknown for all models
+  roundoff_tolerance: 1.0e-12
+  bounds: Retain finite rho including tiny overshoot with abs(rho)<=1+1e-12; reject larger violation; no clipping, epsilon
+    denominator, alternate window or Fisher transform
+dependence:
+  rho_max: 0.995
+  parameter_bound: 4.0
+  slope_penalty: 0.01
+  minimum_correlation_eigenvalue: 1.0e-06
+  constant: Global over bounded intercept by all real admissible roots of rho^3-B*rho^2+(A-1)*rho-B and endpoints, A=mean
+    standardized squared residual sum,B=mean standardized product; deterministic minimum with fixed tie policy
+  candidate: rho=.995*tanh(fixed fitted a0+b*training-standardized corr22). Only b is fitted, constrained[-4,4]
+  shared_marginals: Bothconditionalarms share identical means and positive diagonal forecasts, including corr22 and its training-centered
+    square among shared predictors
+  constant_matrix: Training mean of residual outer products about current fitted shared means, n denominator, no recentering/jitter;
+    positive finite diagonals and1-abs(normalized correlation)>=1e-6
+  diagonal_admissibility: Finite strictly positive predictions; no unit-dependent floor or eigenvalue repair; matrix scores
+    finite; reject wholewave on failure
+  global_value_gap: 1.0e-08
+  maximum_splits: 32768
+  projected_gradient_tolerance: 1.0e-07
+  local_solver: L-BFGS-B from zero and every interval midpoint improving incumbent; maxiter1000,maxls50,ftol1e-14,gtol1e-9.
+    Audit each attempt. Interval pruning only from analytical Taylor lower bounds with conservative floating inflation; numerical
+    certificate, not exact arithmetic proof
+  failure: Failure to certify bounded optimum or meet derivative/conditioning contract aborts wholewave retaining bothp1;
+    no post-outcome solver repair
+  floating_inflation_eps_multiplier: 256
+  constant_objective_tie_tolerance: 1.0e-12
+  cubic_root_imaginary_tolerance: 1.0e-10
+  cubic_root_scaled_residual_tolerance: 1.0e-10
+  local_options:
+    maxiter: 1000
+    maxls: 50
+    ftol: 1.0e-14
+    gtol: 1.0e-09

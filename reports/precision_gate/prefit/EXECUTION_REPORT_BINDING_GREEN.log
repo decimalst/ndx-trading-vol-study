@@ -1,0 +1,18 @@
+test_altered_rule_or_raw_protocol_bytes_rejected (tests.test_precision_gate_search.PrecisionGateProtocolTests.test_altered_rule_or_raw_protocol_bytes_rejected) ... ok
+test_fixed_design_and_projection (tests.test_precision_gate_search.PrecisionGateProtocolTests.test_fixed_design_and_projection) ... ok
+test_mandatory_market_inventory_excludes_treasury_quantities (tests.test_precision_gate_search.PrecisionGateProtocolTests.test_mandatory_market_inventory_excludes_treasury_quantities) ... ok
+test_changed_freeze_record_bytes_after_registration_invalidate_attempt (tests.test_precision_gate_search.PrecisionGateSearchTests.test_changed_freeze_record_bytes_after_registration_invalidate_attempt) ... ok
+test_changed_output_during_verification_invalidates_saved_result (tests.test_precision_gate_search.PrecisionGateSearchTests.test_changed_output_during_verification_invalidates_saved_result) ... ok
+test_empty_current_inventory_or_missing_selected_receipts_cannot_freeze (tests.test_precision_gate_search.PrecisionGateSearchTests.test_empty_current_inventory_or_missing_selected_receipts_cannot_freeze) ... ok
+test_existing_attempt_and_invalid_family_prevent_callback (tests.test_precision_gate_search.PrecisionGateSearchTests.test_existing_attempt_and_invalid_family_prevent_callback) ... ok
+test_late_preservation_failure_retains_provisional_result (tests.test_precision_gate_search.PrecisionGateSearchTests.test_late_preservation_failure_retains_provisional_result) ... ok
+test_metrics_changed_after_publication_cannot_keep_completed_status (tests.test_precision_gate_search.PrecisionGateSearchTests.test_metrics_changed_after_publication_cannot_keep_completed_status) ... ok
+test_missing_or_reordered_control_invalidates_whole_attempt (tests.test_precision_gate_search.PrecisionGateSearchTests.test_missing_or_reordered_control_invalidates_whole_attempt) ... ok
+test_publication_write_failure_and_mutable_caller_prior_preserve_family (tests.test_precision_gate_search.PrecisionGateSearchTests.test_publication_write_failure_and_mutable_caller_prior_preserve_family) ... ok
+test_registration_and_inherited_identities_are_durable_before_work (tests.test_precision_gate_search.PrecisionGateSearchTests.test_registration_and_inherited_identities_are_durable_before_work) ... ok
+test_support_failure_preserves_all_three_as_unevaluable (tests.test_precision_gate_search.PrecisionGateSearchTests.test_support_failure_preserves_all_three_as_unevaluable) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.917s
+
+OK

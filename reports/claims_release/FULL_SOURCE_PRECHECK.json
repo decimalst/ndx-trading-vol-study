@@ -1,0 +1,17 @@
+{
+  "started_utc": "2026-09-08T20:49:58.359408+00:00",
+  "completed_utc": "2026-09-08T20:56:21.887782+00:00",
+  "exit_code": 0,
+  "code_test_sha256": {
+    "src/claims_release_archive.py": "a2ab878ea7d0599a39146e4b21f0e5d0e93e936d6759f316fea896181519dc39",
+    "src/claims_release_reconcile.py": "8c298b9acab5b0c104e498fab83f3a3649fa82191aaedd7462e441b459b720f9",
+    "src/claims_release_source.py": "de49bdeeef37413063f111313e77def8eec9e29f2cf5dc2744f362e0958180f2",
+    "tests/test_claims_release_archive.py": "44e9e40e41d9be15698bff648937d9bd146113561fcb093b1b4e81d74981ef2d",
+    "tests/test_claims_release_reconcile.py": "3db2ad43f2cc7e3a077dca7284af92e91e87728f40f71e71af0e45e12588f0fd",
+    "tests/test_claims_release_source.py": "0ba7f577f09acc26a3f7ca8379579f49e97cb28b141e29983b90e144e8e1ca42"
+  },
+  "unchanged": false,
+  "log_sha256": "9d79afe3d9980bfeb03cf20a866af53ad1a931c1e1087d24c518ee7bdaa732a3",
+  "log_path": "reports/claims_release/FULL_SOURCE_PRECHECK.log",
+  "purpose": "Source-preparation regression; no predictive trial registration or scoring"
+}

@@ -1,0 +1,62 @@
+{
+  "status": "REVIEWED_VERIFIED_PEAK_AGE_PUBLICATION",
+  "reviewed_utc": "2026-09-08T20:08:45.930278+00:00",
+  "artifact_hashes": {
+    "SUMMARY.md": "617bf65c22a68967c6649adc2f3396f2321855bbcdbf855a941e91bcd5eca970",
+    "verification.json": "f30658c01e0e46f88969b45ceaadb309c6c859ca2cb9830dc1736e81197e2d42",
+    "metrics.json": "55c775a54fc980d1850b62a928f6c01e45ee9ed10836a6f666ab6bb18099c157",
+    "comparison_intervals.png": "1af181f24b356df34f730d808eaf7958b3213ff0a22d57e69900c21f448c6e64",
+    "comparison_intervals.pdf": "54a67c4fd018107d6538c342fbbbf631fc46fcf5bf6661b4078f21c995714366",
+    "PUBLICATION_REVIEW.md": "c7fb3582f6ddfb67689ec745d1e7e21168e8b3ba694fd9a0e8ab87b82930c298"
+  },
+  "protocol_sha256": "0d3b15c5386c4c77a383e3ff6ecc0c711c628051d480874be62d7c087197b935",
+  "verification_status": "VERIFIED",
+  "summary_claims_match_saved_metrics_and_proof": true,
+  "all_three_contrasts_and_both_phases_reviewed": true,
+  "new_hypotheses": 3,
+  "cumulative_hypotheses": 140,
+  "leads": [],
+  "review_evidence": {
+    "manifest_counts": {
+      "code": 336,
+      "inputs": 2199,
+      "preserved": 0
+    },
+    "verified_output_hashes_checked": 10,
+    "prefit_hashes_checked": 75,
+    "prior_python_files_unchanged": 319,
+    "prior_wave21_report_artifacts_checked": 55,
+    "full_repository_tests": 2378,
+    "full_repository_seconds": 384.561,
+    "focused_pre_run_tests": 154,
+    "focused_pre_run_seconds": 66.211,
+    "ledger_events": 143,
+    "ledger_roles": {
+      "registered": 3,
+      "inherited": 137,
+      "evaluated": 3
+    },
+    "scored_predictions_and_losses": 9688,
+    "scored_origins": 2422,
+    "application_predictions": 9852,
+    "application_origins": 2463,
+    "unscored_origins": 41,
+    "monthly_schedules": 118,
+    "nuisance_fits": 236,
+    "scalar_fits": 118,
+    "training_means": 118,
+    "old_wave20_failed_trio_exact": true,
+    "old_wave20_three_p_one_hypotheses_retained": true,
+    "required_failure_markers_absent": true,
+    "actual_png_visually_inspected": true,
+    "pdf_hash_checked": true,
+    "source_or_forecast_tables_decoded_by_review": 0,
+    "fits_forecasts_inference_or_tests_rerun_by_review": false
+  },
+  "limitations": [
+    "Publication review checks saved claims, records, image and byte identities; the existing independent VERIFIED proof supplies mathematical reconstruction and inference.",
+    "The sequential correction slightly worsened matched-parent error in both phases, with both reported interval envelopes including zero; no registered comparison qualified.",
+    "Sequential correction can retune ridge shrinkage within the control span; no orthogonal signal, untouched future confirmation or trading-profit claim follows.",
+    "Archival source-vintage and VIX9D backcalculation limitations, overlapping targets and price-index exclusions remain unchanged."
+  ]
+}

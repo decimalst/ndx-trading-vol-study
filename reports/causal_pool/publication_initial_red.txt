@@ -1,0 +1,19 @@
+test_causal_pool_publication (unittest.loader._FailedTest.test_causal_pool_publication) ... ERROR
+
+======================================================================
+ERROR: test_causal_pool_publication (unittest.loader._FailedTest.test_causal_pool_publication)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_causal_pool_publication
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_publication.py", line 15, in <module>
+    from src import causal_pool_search as study
+ImportError: cannot import name 'causal_pool_search' from 'src' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/__init__.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

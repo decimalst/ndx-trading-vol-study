@@ -1,0 +1,8 @@
+{
+  "created_utc": "2026-09-13T22:08:41.674598+00:00",
+  "freeze_sha256": "7d96b280283fa2ea88c7778d52bb57f6a13d15a4bfc10daa3a5f5277286ef31f",
+  "new_hypotheses": 0,
+  "cumulative_hypotheses": 164,
+  "original_failure": "9f7a1ef5d19c16305f708aaa9bf8ce832c6de8d8e13ca73b9c4899a66e385a0c",
+  "scope": "Descriptive accounting replay from unchanged saved probabilities; no refits, sampling or inference."
+}

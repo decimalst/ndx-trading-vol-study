@@ -1,0 +1,68 @@
+study_id: orthogonal_round2_20260906
+specified_on: '2026-09-06'
+evidence_class: exploratory_on_previously_inspected_history
+status: fixed_before_first_round2_score
+decision_time: '16:00 America/New_York; idealized observation at QQQ close'
+origin_start: '2016-01-04'
+origin_end: '2025-10-17'
+latest_target: '2025-10-20'
+sealed_start: '2025-11-03'
+horizons: [1, 5]
+minimum_training_rows: 500
+refit: first_eligible_origin_of_each_calendar_month
+training: expanding; row_date < refit_origin AND target_end <= refit_origin
+common_sample: all baseline and four candidate inputs complete for every arm
+target: arithmetic mean of next h daily Garman-Klass-plus-overnight variances
+baseline: [const, lrv_d, lrv_w, lrv_m, lev_d, lev_w, lev_m, liv, lvix, term, xasset_stress, market_stress]
+candidates: [vvix, rv_dispersion, stock_bond_corr, close_pressure]
+definitions:
+  vvix: log of prior-session Cboe VVIX close
+  rv_dispersion: trailing 22-session sample standard deviation of log realized variance
+  stock_bond_corr: trailing 22-session QQQ adjusted-return versus TLT return correlation
+  close_pressure: trailing 5-session mean of 2*log(close/low)/log(high/low)-1; flat range is missing
+  lrv_d: log of current daily variance
+  lrv_w: log of trailing 5-session arithmetic mean variance
+  lrv_m: log of trailing 22-session arithmetic mean variance
+  leverage: negative part of daily, 5-session mean, and 22-session mean adjusted QQQ log return
+  liv: log of prior-session VXN close
+  lvix: log of prior-session VIX close
+  term: log of prior-session VIX9D/VIX closes
+  xasset_stress: RMS of HYG/TLT/GLD/USO/UUP return z-scores; each scale uses prior 252 sessions, minimum 126
+  market_stress: RMS of positive log-volume and overnight-variance-share z-scores; same prior-only scales
+missing: no fill; undefined or zero-scale feature fails closed, never reweights
+timing:
+  cboe_delay_sessions: 1
+  qqq_and_etf_delay_sessions: 0
+  retrospective_data_limit: latest-vintage historical prices are not an archived point-in-time feed
+estimator: OLS log-target, separate exact Duan smearing per arm from training residuals
+orthogonality: each candidate projected on baseline with training coefficients only; augmented OLS; report train projection R2
+selection: none; four singleton additions, no combinations or tuned thresholds
+inference:
+  primary_loss: paired QLIKE, lower is better
+  hypothesis_count: 8
+  blocks: [21, 63, 126]
+  bootstrap_draws: 4999
+  seed: 20260906
+  method: circular moving blocks on paired losses; centered-null two-sided p with plus-one correction
+  conservative_p: maximum p across all three block lengths and Bartlett HAC(126)
+  multiplicity: Holm across all eight candidate-horizon hypotheses
+  stability_periods: [['2016-01-04', '2019-12-31'], ['2020-01-01', '2022-12-31'], ['2023-01-01', '2025-10-17']]
+  shortlist_requires: Holm p < 0.05, >=1 percent relative QLIKE improvement, negative gap in all three periods
+  verdicts: exploratory_shortlist_or_inconclusive_or_insufficient_data; never confirmatory or equivalence
+  sensitivity: report all years, nonoverlapping 5-session phases, and nominal HAC MDE; never select an offset
+  calibration: synthetic AR(1) loss null with rho=0.8, n=1500, 200 repetitions, 499 resamples; require coverage >=0.90 for conservative CI envelope before empirical scoring
+sources:
+  - data/raw/daily_ohlc.parquet
+  - data/raw/cross_asset_daily.parquet
+  - data/raw/vxn_daily.parquet
+  - data/raw/short_dated_iv.parquet
+  - data/free_sources/raw/cboe/VVIX_History.csv
+outputs:
+  local_data: data/orthogonal_round2
+  report: reports/orthogonal_round2/results.md
+  audit: reports/orthogonal_round2/verification.json
+restrictions:
+  - No protected origins or protected targets; slice before feature construction.
+  - Historical split labels do not create new independent confirmation data.
+  - No changes to existing protocols, results, thresholds, or accrual gates.
+  - No promotion to predictive signal without genuinely new data.

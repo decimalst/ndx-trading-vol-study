@@ -1,0 +1,23 @@
+Captured initial pre-implementation tool output; the producer did not yet exist.
+Command: .venv/bin/python -m unittest tests.test_calendar_variance_features -v
+Exit code: 1
+
+test_calendar_variance_features (unittest.loader._FailedTest.test_calendar_variance_features) ... ERROR
+
+======================================================================
+ERROR: test_calendar_variance_features (unittest.loader._FailedTest.test_calendar_variance_features)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_calendar_variance_features
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_calendar_variance_features.py", line 11, in <module>
+    from src import calendar_variance_features as cf
+ImportError: cannot import name 'calendar_variance_features' from 'src' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/__init__.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

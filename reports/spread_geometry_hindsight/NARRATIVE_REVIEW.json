@@ -1,0 +1,48 @@
+{
+  "status": "VERIFIED_NARRATIVE_AGAINST_SAVED_OUTPUTS",
+  "reviewed_utc": "2026-09-13T22:56:22.160569+00:00",
+  "scope": "Read-only comparison of final findings, all winner tables, figure source data, saved output rows and prior artifact audit. No producer, payoff calculator, search, account simulation, fit, sampling or hypothesis test was run. This is a narrative consistency review, not predictive or executable-options validation.",
+  "remaining_material_findings": [],
+  "resolved_findings": [
+    {
+      "issue": "An unqualified statement about filtered call-spread breaches excluded zero-breach original/calibrated Gaussian cases.",
+      "resolution": "Final narrative now explicitly limits the statement to original-t8 and shape-t8 filters."
+    }
+  ],
+  "checks": {
+    "all_252_winner_rows_match_formatted_saved_data": true,
+    "fixed_width_credit_scenarios_each_have_47_zero_liability_all_width_tie_groups_and_16_widest_selections": true,
+    "fixed_open_5bp_scenario_has_63_narrowest_width_selections": true,
+    "zero_drawdown_49_groups_is_distinguished_from_zero_liability_47_groups_per_scenario": true,
+    "evaluation_shape_condor_375bps_has_zero_breaches_in_917_accepted_days": true,
+    "development_same_geometry_has_two_breaches_in_625_accepted_days": true,
+    "pooled_first_zero_liability_shape_condor_distance_425bps_has_1542_accepted_days": true,
+    "pooled_original_t8_first_zero_liability_condor_distance_425bps_has_1608_accepted_days": true,
+    "threshold_table_consistent_with_saved_geometry": true,
+    "fee_credit_and_opening_price_basis_point_units_consistent": true,
+    "width_slice_retains_29_breaches_while_full_loss_counts_and_liability_change": true,
+    "call_outlier_date_return_and_saved_max_debits_match": true,
+    "all_160_figure_rows_match_saved_geometry_with_only_json_rounding": true,
+    "prior_artifact_audit_and_38_pretest_claims_match_receipts": true,
+    "final_report_hashes_match_author_declared_hashes": true,
+    "terminal_output_hashes_unchanged_at_review_close": true
+  },
+  "reviewed_narratives": {
+    "reports/spread_geometry_hindsight/FINDINGS.md": "7399f7037c4c3e7d89d24bf3dfcf6b843e108ad6f824da1c775c0be305840905",
+    "reports/spread_geometry_hindsight/ALL_WINNERS.md": "3df3460a6d8521717bb3728652441b072d4aef549496f6ca376f729682605378"
+  },
+  "reviewed_receipts": {
+    "reports/spread_geometry_hindsight/terminal.json": "bf2bd68782cbbd660cc9a9c5fc14ec819a44b7fb8612c9b07d0925f54ed44297",
+    "reports/spread_geometry_hindsight/INDEPENDENT_REVIEW.json": "a5f5eae021dda7fbaa55554ca229c32b423d53e04dbb3ef47fc7129faa9646ad",
+    "reports/spread_geometry_hindsight/verification.json": "21f55124994d6a4c200e7fd3cd29c3c374ccf5b29b24413820b9b98160408725",
+    "reports/spread_geometry_hindsight/FIGURE_DATA.json": "e02219a57eddf2cd560db17e25c27a85d0e77a36b42fb0bf8c66a89b480fe0b1"
+  },
+  "saved_output_pins": {
+    "data/model_memory_study/spread_geometry_hindsight/returns.parquet": "fbe2fb5424af2822127679b44646f5fbfa3d637de5025b03ab76c0b2b6f5cedd",
+    "data/model_memory_study/spread_geometry_hindsight/selections.parquet": "d8bc7d9d4d9438c36f981c5f6b847f9f11d09c3020ccdb1d34573160d90167bf",
+    "data/model_memory_study/spread_geometry_hindsight/geometry.parquet": "7a099c00530ad63516db15b55faad04a034b98a5d72015a76fb63e0592b64c4d",
+    "data/model_memory_study/spread_geometry_hindsight/accounts.parquet": "805c8b5dc2833eb618ede23629d913f67986dbbdc349c1f7b19af741d1f90a9c",
+    "data/model_memory_study/spread_geometry_hindsight/winners.parquet": "6ead95fd239cfa70dcc4f1568e82d440fd64ffb6f63466279bbd76b71684e810",
+    "reports/spread_geometry_hindsight/verification.json": "21f55124994d6a4c200e7fd3cd29c3c374ccf5b29b24413820b9b98160408725"
+  }
+}

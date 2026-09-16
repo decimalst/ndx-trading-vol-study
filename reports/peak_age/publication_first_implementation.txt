@@ -1,0 +1,8 @@
+.....................
+----------------------------------------------------------------------
+Ran 21 tests in 2.203s
+
+OK
+{"status": "SCORED_AWAITING_INDEPENDENT_VERIFICATION", "newly_generated_forecasts": 4, "monthly_schedules": 1, "common_application_origins": 2}
+{"status": "SCORED_AWAITING_INDEPENDENT_VERIFICATION", "newly_generated_forecasts": 4, "monthly_schedules": 1, "common_application_origins": 2}
+{"status": "SCORED_AWAITING_INDEPENDENT_VERIFICATION", "newly_generated_forecasts": 4, "monthly_schedules": 1, "common_application_origins": 2}

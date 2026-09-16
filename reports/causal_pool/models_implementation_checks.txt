@@ -1,0 +1,414 @@
+test_entire_unscored_month_retains_every_application_state (tests.test_causal_pool_models.CausalPoolModels.test_entire_unscored_month_retains_every_application_state) ... ERROR
+test_exact_application_index_fit_counts_and_first_cutoffs_required (tests.test_causal_pool_models.CausalPoolModels.test_exact_application_index_fit_counts_and_first_cutoffs_required) ... ERROR
+test_first_update_has_one_minus_decay_weight_and_two_session_maturity (tests.test_causal_pool_models.CausalPoolModels.test_first_update_has_one_minus_decay_weight_and_two_session_maturity) ... ERROR
+test_future_labels_cannot_change_prior_cutoff_state (tests.test_causal_pool_models.CausalPoolModels.test_future_labels_cannot_change_prior_cutoff_state) ... ERROR
+test_initial_prior_mass_exactly_one_and_no_cold_start_deletion (tests.test_causal_pool_models.CausalPoolModels.test_initial_prior_mass_exactly_one_and_no_cold_start_deletion) ... ERROR
+test_invalid_full_calendar_and_label_alignment_reject (tests.test_causal_pool_models.CausalPoolModels.test_invalid_full_calendar_and_label_alignment_reject) ... ERROR
+test_labels_from_feature_gap_and_development_boundary_are_consumed (tests.test_causal_pool_models.CausalPoolModels.test_labels_from_feature_gap_and_development_boundary_are_consumed) ... ERROR
+test_missing_labels_decay_mass_without_becoming_zero_observations (tests.test_causal_pool_models.CausalPoolModels.test_missing_labels_decay_mass_without_becoming_zero_observations) ... ERROR
+test_nonzero_underflow_and_bad_probability_inputs_reject (tests.test_causal_pool_models.CausalPoolModels.test_nonzero_underflow_and_bad_probability_inputs_reject) ... ok
+test_original_baseline_metadata_probability_loss_and_inputs_preserved (tests.test_causal_pool_models.CausalPoolModels.test_original_baseline_metadata_probability_loss_and_inputs_preserved) ... ERROR
+test_original_panel_tampering_rejects_before_new_state (tests.test_causal_pool_models.CausalPoolModels.test_original_panel_tampering_rejects_before_new_state) ... ERROR
+test_output_validator_rejects_unknown_models_and_changed_brier (tests.test_causal_pool_models.CausalPoolModels.test_output_validator_rejects_unknown_models_and_changed_brier) ... ERROR
+test_pool_is_exact_separate_half_products_and_endpoints_are_valid (tests.test_causal_pool_models.CausalPoolModels.test_pool_is_exact_separate_half_products_and_endpoints_are_valid) ... ERROR
+test_preseed_labels_are_never_refed (tests.test_causal_pool_models.CausalPoolModels.test_preseed_labels_are_never_refed) ... ERROR
+test_seed_consumed_availability_is_distinct_from_state_cutoff (tests.test_causal_pool_models.CausalPoolModels.test_seed_consumed_availability_is_distinct_from_state_cutoff) ... ERROR
+test_states_match_independent_explicit_full_calendar_weights (tests.test_causal_pool_models.CausalPoolModels.test_states_match_independent_explicit_full_calendar_weights) ... ERROR
+test_unscored_first_application_seeds_before_first_scored_origin (tests.test_causal_pool_models.CausalPoolModels.test_unscored_first_application_seeds_before_first_scored_origin) ... ERROR
+test_zero_binary_label_adds_denominator_weight (tests.test_causal_pool_models.CausalPoolModels.test_zero_binary_label_adds_denominator_weight) ... ERROR
+
+======================================================================
+ERROR: test_entire_unscored_month_retains_every_application_state (tests.test_causal_pool_models.CausalPoolModels.test_entire_unscored_month_retains_every_application_state)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 224, in test_entire_unscored_month_retains_every_application_state
+    args = fixture(unscored_month=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 53, in fixture
+    "train_n": n, "train_first_origin": str(reference[train][0].date()),
+                                            ~~~~~~~~~^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 5425, in __getitem__
+    result = getitem(key)
+             ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/datetimelike.py", line 393, in __getitem__
+    result = cast(Union[Self, DTScalarOrNaT], super().__getitem__(key))
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/_mixins.py", line 304, in __getitem__
+    key = check_array_indexer(self, key)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexers/utils.py", line 570, in check_array_indexer
+    raise IndexError(
+IndexError: Boolean index has wrong length: 1501 instead of 1500
+
+======================================================================
+ERROR: test_exact_application_index_fit_counts_and_first_cutoffs_required (tests.test_causal_pool_models.CausalPoolModels.test_exact_application_index_fit_counts_and_first_cutoffs_required)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 285, in test_exact_application_index_fit_counts_and_first_cutoffs_required
+    args = list(deepcopy(fixture(unscored_first=True)))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 53, in fixture
+    "train_n": n, "train_first_origin": str(reference[train][0].date()),
+                                            ~~~~~~~~~^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 5425, in __getitem__
+    result = getitem(key)
+             ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/datetimelike.py", line 393, in __getitem__
+    result = cast(Union[Self, DTScalarOrNaT], super().__getitem__(key))
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/_mixins.py", line 304, in __getitem__
+    key = check_array_indexer(self, key)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexers/utils.py", line 570, in check_array_indexer
+    raise IndexError(
+IndexError: Boolean index has wrong length: 1501 instead of 1500
+
+======================================================================
+ERROR: test_first_update_has_one_minus_decay_weight_and_two_session_maturity (tests.test_causal_pool_models.CausalPoolModels.test_first_update_has_one_minus_decay_weight_and_two_session_maturity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 116, in test_first_update_has_one_minus_decay_weight_and_two_session_maturity
+    args = fixture()
+           ^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 53, in fixture
+    "train_n": n, "train_first_origin": str(reference[train][0].date()),
+                                            ~~~~~~~~~^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 5425, in __getitem__
+    result = getitem(key)
+             ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/datetimelike.py", line 393, in __getitem__
+    result = cast(Union[Self, DTScalarOrNaT], super().__getitem__(key))
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/_mixins.py", line 304, in __getitem__
+    key = check_array_indexer(self, key)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexers/utils.py", line 570, in check_array_indexer
+    raise IndexError(
+IndexError: Boolean index has wrong length: 1501 instead of 1500
+
+======================================================================
+ERROR: test_future_labels_cannot_change_prior_cutoff_state (tests.test_causal_pool_models.CausalPoolModels.test_future_labels_cannot_change_prior_cutoff_state)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 172, in test_future_labels_cannot_change_prior_cutoff_state
+    args = fixture()
+           ^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 53, in fixture
+    "train_n": n, "train_first_origin": str(reference[train][0].date()),
+                                            ~~~~~~~~~^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 5425, in __getitem__
+    result = getitem(key)
+             ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/datetimelike.py", line 393, in __getitem__
+    result = cast(Union[Self, DTScalarOrNaT], super().__getitem__(key))
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/_mixins.py", line 304, in __getitem__
+    key = check_array_indexer(self, key)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexers/utils.py", line 570, in check_array_indexer
+    raise IndexError(
+IndexError: Boolean index has wrong length: 1501 instead of 1500
+
+======================================================================
+ERROR: test_initial_prior_mass_exactly_one_and_no_cold_start_deletion (tests.test_causal_pool_models.CausalPoolModels.test_initial_prior_mass_exactly_one_and_no_cold_start_deletion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 100, in test_initial_prior_mass_exactly_one_and_no_cold_start_deletion
+    args = fixture()
+           ^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 53, in fixture
+    "train_n": n, "train_first_origin": str(reference[train][0].date()),
+                                            ~~~~~~~~~^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 5425, in __getitem__
+    result = getitem(key)
+             ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/datetimelike.py", line 393, in __getitem__
+    result = cast(Union[Self, DTScalarOrNaT], super().__getitem__(key))
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/_mixins.py", line 304, in __getitem__
+    key = check_array_indexer(self, key)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexers/utils.py", line 570, in check_array_indexer
+    raise IndexError(
+IndexError: Boolean index has wrong length: 1501 instead of 1500
+
+======================================================================
+ERROR: test_invalid_full_calendar_and_label_alignment_reject (tests.test_causal_pool_models.CausalPoolModels.test_invalid_full_calendar_and_label_alignment_reject)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 273, in test_invalid_full_calendar_and_label_alignment_reject
+    args = list(deepcopy(fixture()))
+                         ^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 53, in fixture
+    "train_n": n, "train_first_origin": str(reference[train][0].date()),
+                                            ~~~~~~~~~^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 5425, in __getitem__
+    result = getitem(key)
+             ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/datetimelike.py", line 393, in __getitem__
+    result = cast(Union[Self, DTScalarOrNaT], super().__getitem__(key))
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/_mixins.py", line 304, in __getitem__
+    key = check_array_indexer(self, key)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexers/utils.py", line 570, in check_array_indexer
+    raise IndexError(
+IndexError: Boolean index has wrong length: 1501 instead of 1500
+
+======================================================================
+ERROR: test_labels_from_feature_gap_and_development_boundary_are_consumed (tests.test_causal_pool_models.CausalPoolModels.test_labels_from_feature_gap_and_development_boundary_are_consumed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 204, in test_labels_from_feature_gap_and_development_boundary_are_consumed
+    args = fixture(omit_applications=(1390,))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 53, in fixture
+    "train_n": n, "train_first_origin": str(reference[train][0].date()),
+                                            ~~~~~~~~~^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 5425, in __getitem__
+    result = getitem(key)
+             ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/datetimelike.py", line 393, in __getitem__
+    result = cast(Union[Self, DTScalarOrNaT], super().__getitem__(key))
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/_mixins.py", line 304, in __getitem__
+    key = check_array_indexer(self, key)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexers/utils.py", line 570, in check_array_indexer
+    raise IndexError(
+IndexError: Boolean index has wrong length: 1501 instead of 1500
+
+======================================================================
+ERROR: test_missing_labels_decay_mass_without_becoming_zero_observations (tests.test_causal_pool_models.CausalPoolModels.test_missing_labels_decay_mass_without_becoming_zero_observations)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 185, in test_missing_labels_decay_mass_without_becoming_zero_observations
+    args = fixture(missing_labels=(1369, 1370))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 53, in fixture
+    "train_n": n, "train_first_origin": str(reference[train][0].date()),
+                                            ~~~~~~~~~^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 5425, in __getitem__
+    result = getitem(key)
+             ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/datetimelike.py", line 393, in __getitem__
+    result = cast(Union[Self, DTScalarOrNaT], super().__getitem__(key))
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/_mixins.py", line 304, in __getitem__
+    key = check_array_indexer(self, key)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexers/utils.py", line 570, in check_array_indexer
+    raise IndexError(
+IndexError: Boolean index has wrong length: 1501 instead of 1500
+
+======================================================================
+ERROR: test_original_baseline_metadata_probability_loss_and_inputs_preserved (tests.test_causal_pool_models.CausalPoolModels.test_original_baseline_metadata_probability_loss_and_inputs_preserved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 235, in test_original_baseline_metadata_probability_loss_and_inputs_preserved
+    args = fixture()
+           ^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 53, in fixture
+    "train_n": n, "train_first_origin": str(reference[train][0].date()),
+                                            ~~~~~~~~~^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 5425, in __getitem__
+    result = getitem(key)
+             ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/datetimelike.py", line 393, in __getitem__
+    result = cast(Union[Self, DTScalarOrNaT], super().__getitem__(key))
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/_mixins.py", line 304, in __getitem__
+    key = check_array_indexer(self, key)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexers/utils.py", line 570, in check_array_indexer
+    raise IndexError(
+IndexError: Boolean index has wrong length: 1501 instead of 1500
+
+======================================================================
+ERROR: test_original_panel_tampering_rejects_before_new_state (tests.test_causal_pool_models.CausalPoolModels.test_original_panel_tampering_rejects_before_new_state)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 297, in test_original_panel_tampering_rejects_before_new_state
+    args = list(deepcopy(fixture()))
+                         ^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 53, in fixture
+    "train_n": n, "train_first_origin": str(reference[train][0].date()),
+                                            ~~~~~~~~~^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 5425, in __getitem__
+    result = getitem(key)
+             ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/datetimelike.py", line 393, in __getitem__
+    result = cast(Union[Self, DTScalarOrNaT], super().__getitem__(key))
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/_mixins.py", line 304, in __getitem__
+    key = check_array_indexer(self, key)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexers/utils.py", line 570, in check_array_indexer
+    raise IndexError(
+IndexError: Boolean index has wrong length: 1501 instead of 1500
+
+======================================================================
+ERROR: test_output_validator_rejects_unknown_models_and_changed_brier (tests.test_causal_pool_models.CausalPoolModels.test_output_validator_rejects_unknown_models_and_changed_brier)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 309, in test_output_validator_rejects_unknown_models_and_changed_brier
+    panel, _ = run(fixture())
+                   ^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 53, in fixture
+    "train_n": n, "train_first_origin": str(reference[train][0].date()),
+                                            ~~~~~~~~~^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 5425, in __getitem__
+    result = getitem(key)
+             ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/datetimelike.py", line 393, in __getitem__
+    result = cast(Union[Self, DTScalarOrNaT], super().__getitem__(key))
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/_mixins.py", line 304, in __getitem__
+    key = check_array_indexer(self, key)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexers/utils.py", line 570, in check_array_indexer
+    raise IndexError(
+IndexError: Boolean index has wrong length: 1501 instead of 1500
+
+======================================================================
+ERROR: test_pool_is_exact_separate_half_products_and_endpoints_are_valid (tests.test_causal_pool_models.CausalPoolModels.test_pool_is_exact_separate_half_products_and_endpoints_are_valid)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 253, in test_pool_is_exact_separate_half_products_and_endpoints_are_valid
+    args = fixture()
+           ^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 53, in fixture
+    "train_n": n, "train_first_origin": str(reference[train][0].date()),
+                                            ~~~~~~~~~^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 5425, in __getitem__
+    result = getitem(key)
+             ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/datetimelike.py", line 393, in __getitem__
+    result = cast(Union[Self, DTScalarOrNaT], super().__getitem__(key))
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/_mixins.py", line 304, in __getitem__
+    key = check_array_indexer(self, key)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexers/utils.py", line 570, in check_array_indexer
+    raise IndexError(
+IndexError: Boolean index has wrong length: 1501 instead of 1500
+
+======================================================================
+ERROR: test_preseed_labels_are_never_refed (tests.test_causal_pool_models.CausalPoolModels.test_preseed_labels_are_never_refed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 162, in test_preseed_labels_are_never_refed
+    args = fixture(seed_gap=3)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 53, in fixture
+    "train_n": n, "train_first_origin": str(reference[train][0].date()),
+                                            ~~~~~~~~~^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 5425, in __getitem__
+    result = getitem(key)
+             ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/datetimelike.py", line 393, in __getitem__
+    result = cast(Union[Self, DTScalarOrNaT], super().__getitem__(key))
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/_mixins.py", line 304, in __getitem__
+    key = check_array_indexer(self, key)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexers/utils.py", line 570, in check_array_indexer
+    raise IndexError(
+IndexError: Boolean index has wrong length: 1501 instead of 1500
+
+======================================================================
+ERROR: test_seed_consumed_availability_is_distinct_from_state_cutoff (tests.test_causal_pool_models.CausalPoolModels.test_seed_consumed_availability_is_distinct_from_state_cutoff)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 152, in test_seed_consumed_availability_is_distinct_from_state_cutoff
+    args = fixture(seed_gap=3)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 53, in fixture
+    "train_n": n, "train_first_origin": str(reference[train][0].date()),
+                                            ~~~~~~~~~^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 5425, in __getitem__
+    result = getitem(key)
+             ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/datetimelike.py", line 393, in __getitem__
+    result = cast(Union[Self, DTScalarOrNaT], super().__getitem__(key))
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/_mixins.py", line 304, in __getitem__
+    key = check_array_indexer(self, key)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexers/utils.py", line 570, in check_array_indexer
+    raise IndexError(
+IndexError: Boolean index has wrong length: 1501 instead of 1500
+
+======================================================================
+ERROR: test_states_match_independent_explicit_full_calendar_weights (tests.test_causal_pool_models.CausalPoolModels.test_states_match_independent_explicit_full_calendar_weights)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 132, in test_states_match_independent_explicit_full_calendar_weights
+    args = fixture(missing_labels=(1372, 1380, 1400), omit_applications=(1382, 1383))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 53, in fixture
+    "train_n": n, "train_first_origin": str(reference[train][0].date()),
+                                            ~~~~~~~~~^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 5425, in __getitem__
+    result = getitem(key)
+             ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/datetimelike.py", line 393, in __getitem__
+    result = cast(Union[Self, DTScalarOrNaT], super().__getitem__(key))
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/_mixins.py", line 304, in __getitem__
+    key = check_array_indexer(self, key)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexers/utils.py", line 570, in check_array_indexer
+    raise IndexError(
+IndexError: Boolean index has wrong length: 1501 instead of 1500
+
+======================================================================
+ERROR: test_unscored_first_application_seeds_before_first_scored_origin (tests.test_causal_pool_models.CausalPoolModels.test_unscored_first_application_seeds_before_first_scored_origin)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 215, in test_unscored_first_application_seeds_before_first_scored_origin
+    args = fixture(unscored_first=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 53, in fixture
+    "train_n": n, "train_first_origin": str(reference[train][0].date()),
+                                            ~~~~~~~~~^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 5425, in __getitem__
+    result = getitem(key)
+             ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/datetimelike.py", line 393, in __getitem__
+    result = cast(Union[Self, DTScalarOrNaT], super().__getitem__(key))
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/_mixins.py", line 304, in __getitem__
+    key = check_array_indexer(self, key)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexers/utils.py", line 570, in check_array_indexer
+    raise IndexError(
+IndexError: Boolean index has wrong length: 1501 instead of 1500
+
+======================================================================
+ERROR: test_zero_binary_label_adds_denominator_weight (tests.test_causal_pool_models.CausalPoolModels.test_zero_binary_label_adds_denominator_weight)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 196, in test_zero_binary_label_adds_denominator_weight
+    args = fixture()
+           ^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 53, in fixture
+    "train_n": n, "train_first_origin": str(reference[train][0].date()),
+                                            ~~~~~~~~~^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 5425, in __getitem__
+    result = getitem(key)
+             ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/datetimelike.py", line 393, in __getitem__
+    result = cast(Union[Self, DTScalarOrNaT], super().__getitem__(key))
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/arrays/_mixins.py", line 304, in __getitem__
+    key = check_array_indexer(self, key)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexers/utils.py", line 570, in check_array_indexer
+    raise IndexError(
+IndexError: Boolean index has wrong length: 1501 instead of 1500
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.196s
+
+FAILED (errors=17)

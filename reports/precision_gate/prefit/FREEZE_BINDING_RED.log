@@ -1,0 +1,15 @@
+test_changed_freeze_record_bytes_after_registration_invalidate_attempt (tests.test_precision_gate_search.PrecisionGateSearchTests.test_changed_freeze_record_bytes_after_registration_invalidate_attempt) ... ERROR
+
+======================================================================
+ERROR: test_changed_freeze_record_bytes_after_registration_invalidate_attempt (tests.test_precision_gate_search.PrecisionGateSearchTests.test_changed_freeze_record_bytes_after_registration_invalidate_attempt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_precision_gate_search.py", line 181, in test_changed_freeze_record_bytes_after_registration_invalidate_attempt
+    check_snapshot = self.search._check_frozen_snapshot
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.precision_gate_search' has no attribute '_check_frozen_snapshot'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.790s
+
+FAILED (errors=1)

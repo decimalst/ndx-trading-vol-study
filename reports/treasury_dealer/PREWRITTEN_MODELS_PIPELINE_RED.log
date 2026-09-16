@@ -1,0 +1,39 @@
+PREIMPLEMENTATION RED: both new source modules absent
+Command: .venv/bin/python -m unittest tests.test_treasury_dealer_models tests.test_treasury_dealer_pipeline -v
+tests/test_treasury_dealer_models.py SHA256 bce7707c46dc9c86077f112efc883efd28823592ffd680bb64845b993901be8c
+tests/test_treasury_dealer_pipeline.py SHA256 36a0b6f4d7369631899e7af173f8812308474b58b9d5d40b78a45bb765afae50
+reports/treasury_dealer/PREWRITTEN_MODELS_PIPELINE_CONTRACT.md SHA256 e6758a899bce6bb9199226e3b46cdf56b9f3de53243276bf3b5bc7149fd036a3
+Exit status: 1
+test_treasury_dealer_models (unittest.loader._FailedTest.test_treasury_dealer_models) ... ERROR
+test_treasury_dealer_pipeline (unittest.loader._FailedTest.test_treasury_dealer_pipeline) ... ERROR
+
+======================================================================
+ERROR: test_treasury_dealer_models (unittest.loader._FailedTest.test_treasury_dealer_models)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_treasury_dealer_models
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_dealer_models.py", line 9, in <module>
+    from src.treasury_dealer_models import ALL, MARKET, MATCHED, fit_models
+ModuleNotFoundError: No module named 'src.treasury_dealer_models'
+
+
+======================================================================
+ERROR: test_treasury_dealer_pipeline (unittest.loader._FailedTest.test_treasury_dealer_pipeline)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_treasury_dealer_pipeline
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_dealer_pipeline.py", line 12, in <module>
+    from src.treasury_dealer_models import ALL, fit_models
+ModuleNotFoundError: No module named 'src.treasury_dealer_models'
+
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+FAILED (errors=2)

@@ -1,0 +1,82 @@
+test_all_stages_and_persisted_outputs_link_to_the_completed_proof (tests.test_commodity_implied_run_integration.CommodityRunIntegrationTests.test_all_stages_and_persisted_outputs_link_to_the_completed_proof) ... FAIL
+test_durable_whole_family_registration_precedes_both_source_readers (tests.test_commodity_implied_run_integration.CommodityRunIntegrationTests.test_durable_whole_family_registration_precedes_both_source_readers) ... FAIL
+test_either_source_reader_failure_retains_both_attempts_at_one (tests.test_commodity_implied_run_integration.CommodityRunIntegrationTests.test_either_source_reader_failure_retains_both_attempts_at_one) ... ok
+test_existing_output_or_registration_is_never_restarted (tests.test_commodity_implied_run_integration.CommodityRunIntegrationTests.test_existing_output_or_registration_is_never_restarted) ... ok
+test_failed_source_authentication_prevents_registration_and_numerical_reads (tests.test_commodity_implied_run_integration.CommodityRunIntegrationTests.test_failed_source_authentication_prevents_registration_and_numerical_reads) ... ok
+test_feature_and_target_failures_keep_whole_family_and_stop_models (tests.test_commodity_implied_run_integration.CommodityRunIntegrationTests.test_feature_and_target_failures_keep_whole_family_and_stop_models) ... ok
+test_insufficient_training_persists_complete_failure_coverage_and_schedules (tests.test_commodity_implied_run_integration.CommodityRunIntegrationTests.test_insufficient_training_persists_complete_failure_coverage_and_schedules) ... FAIL
+test_missing_or_mismatched_freeze_stops_before_source_reads_and_registration (tests.test_commodity_implied_run_integration.CommodityRunIntegrationTests.test_missing_or_mismatched_freeze_stops_before_source_reads_and_registration) ... ok
+test_model_failure_keeps_whole_family_and_saved_feature_target_stage (tests.test_commodity_implied_run_integration.CommodityRunIntegrationTests.test_model_failure_keeps_whole_family_and_saved_feature_target_stage) ... FAIL
+test_raised_or_negative_verification_invalidates_whole_family (tests.test_commodity_implied_run_integration.CommodityRunIntegrationTests.test_raised_or_negative_verification_invalidates_whole_family) ... ok
+test_scoring_failure_keeps_valid_outputs_without_success_proof (tests.test_commodity_implied_run_integration.CommodityRunIntegrationTests.test_scoring_failure_keeps_valid_outputs_without_success_proof) ... FAIL
+
+======================================================================
+FAIL: test_all_stages_and_persisted_outputs_link_to_the_completed_proof (tests.test_commodity_implied_run_integration.CommodityRunIntegrationTests.test_all_stages_and_persisted_outputs_link_to_the_completed_proof)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_commodity_implied_run_integration.py", line 183, in test_all_stages_and_persisted_outputs_link_to_the_completed_proof
+    pd.testing.assert_frame_equal(pd.read_parquet(path), expected)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/util/_decorators.py", line 220, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/_testing/asserters.py", line 1347, in assert_frame_equal
+    assert_series_equal(
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/util/_decorators.py", line 193, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/_testing/asserters.py", line 1016, in assert_series_equal
+    assert lidx.freq == ridx.freq, (lidx.freq, ridx.freq)
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: (None, <BusinessDay>)
+
+======================================================================
+FAIL: test_durable_whole_family_registration_precedes_both_source_readers (tests.test_commodity_implied_run_integration.CommodityRunIntegrationTests.test_durable_whole_family_registration_precedes_both_source_readers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_commodity_implied_run_integration.py", line 168, in test_durable_whole_family_registration_precedes_both_source_readers
+    self.assertEqual(result["status"], "COMPLETED")
+AssertionError: 'UNEVALUABLE' != 'COMPLETED'
+- UNEVALUABLE
++ COMPLETED
+
+
+======================================================================
+FAIL: test_insufficient_training_persists_complete_failure_coverage_and_schedules (tests.test_commodity_implied_run_integration.CommodityRunIntegrationTests.test_insufficient_training_persists_complete_failure_coverage_and_schedules)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_commodity_implied_run_integration.py", line 269, in test_insufficient_training_persists_complete_failure_coverage_and_schedules
+    self.assert_whole_failure(case, result, "INSUFFICIENT_DATA")
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_commodity_implied_run_integration.py", line 155, in assert_whole_failure
+    self.assertEqual(row["status"], status)
+AssertionError: 'INVALID_RUN' != 'INSUFFICIENT_DATA'
+- INVALID_RUN
++ INSUFFICIENT_DATA
+
+
+======================================================================
+FAIL: test_model_failure_keeps_whole_family_and_saved_feature_target_stage (tests.test_commodity_implied_run_integration.CommodityRunIntegrationTests.test_model_failure_keeps_whole_family_and_saved_feature_target_stage)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_commodity_implied_run_integration.py", line 259, in test_model_failure_keeps_whole_family_and_saved_feature_target_stage
+    self.assertEqual({p.name for p in case.out.iterdir()}, {"features.parquet", "targets.parquet"})
+AssertionError: Items in the second set but not the first:
+'targets.parquet'
+'features.parquet'
+
+======================================================================
+FAIL: test_scoring_failure_keeps_valid_outputs_without_success_proof (tests.test_commodity_implied_run_integration.CommodityRunIntegrationTests.test_scoring_failure_keeps_valid_outputs_without_success_proof)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_commodity_implied_run_integration.py", line 295, in test_scoring_failure_keeps_valid_outputs_without_success_proof
+    self.assert_whole_failure(case, result, "INSUFFICIENT_DATA")
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_commodity_implied_run_integration.py", line 155, in assert_whole_failure
+    self.assertEqual(row["status"], status)
+AssertionError: 'INVALID_RUN' != 'INSUFFICIENT_DATA'
+- INVALID_RUN
++ INSUFFICIENT_DATA
+
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.237s
+
+FAILED (failures=5)

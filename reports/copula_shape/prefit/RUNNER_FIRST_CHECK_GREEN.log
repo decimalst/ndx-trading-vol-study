@@ -1,0 +1,17 @@
+GENERATED TESTS AGAINST FIRST RUNNER IMPLEMENTATION
+['.venv/bin/python', '-m', 'unittest', 'tests.test_copula_shape_run', '-v']
+test_all_support_floors_precede_any_resampling (tests.test_copula_shape_run.ShapeRunContracts.test_all_support_floors_precede_any_resampling) ... ok
+test_bound_bytes_guard_paths_first_write_and_expected_hash (tests.test_copula_shape_run.ShapeRunContracts.test_bound_bytes_guard_paths_first_write_and_expected_hash) ... ok
+test_freeze_requires_pass_before_registration_and_refuses_duplicate_attempt (tests.test_copula_shape_run.ShapeRunContracts.test_freeze_requires_pass_before_registration_and_refuses_duplicate_attempt) ... ok
+test_late_metrics_write_mutations_invalidate_whole_six_family (tests.test_copula_shape_run.ShapeRunContracts.test_late_metrics_write_mutations_invalidate_whole_six_family) ... ok
+test_post_terminal_mutation_cannot_leave_completed_terminal (tests.test_copula_shape_run.ShapeRunContracts.test_post_terminal_mutation_cannot_leave_completed_terminal) ... ok
+test_six_signs_full_phase_masks_common_streams_and_holm164 (tests.test_copula_shape_run.ShapeRunContracts.test_six_signs_full_phase_masks_common_streams_and_holm164) ... ok
+test_source_pins_preserves_full_predecessor_records_and_provenance (tests.test_copula_shape_run.ShapeRunContracts.test_source_pins_preserves_full_predecessor_records_and_provenance) ... ok
+test_verified_commit_binds_original_output_hashes_and_started_receipt (tests.test_copula_shape_run.ShapeRunContracts.test_verified_commit_binds_original_output_hashes_and_started_receipt) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.090s
+
+OK
+
+exit_code=0

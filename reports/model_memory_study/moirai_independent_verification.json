@@ -1,0 +1,9 @@
+{
+  "moirai_contexts_checked": 3968,
+  "moirai_context_sessions": 512,
+  "moirai_raw_forecasts_replayed": 3968,
+  "moirai_quantile_values_checked": 178560,
+  "maximum_moirai_native_replay_error": 0.0,
+  "moirai_installed_official_files_checked": 95,
+  "moirai_fresh_context_hash": "d762a3e2c81a6df4b3f5751566cfa24b079b929f8ea1598c8577a7101ed3e49b"
+}

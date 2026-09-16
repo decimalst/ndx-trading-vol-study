@@ -1,0 +1,14 @@
+{
+  "status": "VERIFIED",
+  "monthly_fits_verified": 105,
+  "shape_fits_verified": 210,
+  "dependence_fits_verified": 210,
+  "applications_verified": 2191,
+  "scored_origins": 2190,
+  "contrasts_verified": 6,
+  "maximum_box_gap": 3.728451100672711e-15,
+  "maximum_projected_gradient": 3.6637359812630166e-15,
+  "largest_independent_dependence_gap": 9.937041411944847e-09,
+  "clock_verification": "full_reference_calendar",
+  "scope": "Saved shape density and forecasts; source authentication and prior baseline verification remain external; no economic payoff or live execution validation"
+}

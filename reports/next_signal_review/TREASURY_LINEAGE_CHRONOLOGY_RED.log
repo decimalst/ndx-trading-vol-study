@@ -1,0 +1,14 @@
+test_issue_cannot_precede_selected_auction_even_when_formats_agree (tests.test_treasury_security_lineage.TreasurySecurityLineageTests.test_issue_cannot_precede_selected_auction_even_when_formats_agree) ... FAIL
+
+======================================================================
+FAIL: test_issue_cannot_precede_selected_auction_even_when_formats_agree (tests.test_treasury_security_lineage.TreasurySecurityLineageTests.test_issue_cannot_precede_selected_auction_even_when_formats_agree)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_security_lineage.py", line 153, in test_issue_cannot_precede_selected_auction_even_when_formats_agree
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=1)

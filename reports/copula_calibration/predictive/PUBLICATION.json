@@ -1,0 +1,22 @@
+{
+  "status": "COMPLETE_POST_RESULT_PUBLICATION",
+  "created_utc": "2026-09-09T16:38:28.861161+00:00",
+  "scope": "Post-result narrative and figure binding; adds no fits, hypotheses or inference and does not modify the frozen diagnostic.",
+  "interpretation_review": "Independent agent reviewed FINDINGS.md and reported no material numerical or interpretive errors; the subsequent paragraph only links the completed audit and states its limits.",
+  "artifact_hashes": {
+    "reports/copula_calibration/predictive/FINDINGS.md": "b052ab8556808cacde3a8b577aa43f4e23033cc6bf2e34dfe5f0483f1dbc7dc3",
+    "reports/copula_calibration/predictive/FIGURE_RECEIPT.json": "26518949f9e7faac7d2ef3ee12fdf3606fb225cf7ce9ac689fadafbd1caf28ce",
+    "reports/copula_calibration/predictive/calibration_comparison.png": "879fb02465fac4ac2c2f7c6ab70ff74d271ff0f2b33fa8ff7621f55e23e18ec0",
+    "reports/copula_calibration/predictive/calibration_comparison.pdf": "6573bd7b922151936779bf00d2558460ec2dfe8f9dd7ac5e979d56cbdcac8c81",
+    "reports/copula_calibration/predictive/INDEPENDENT_REVIEW.json": "da5f90265b9132335a90f4b5dfb07adecc5a9f9519a4d36dca9dd4d01193285f",
+    "reports/copula_calibration/predictive/metrics.json": "d1c2e51baa5b53b2d869ac6a09c8412aaca1baa6d8eab273fc184e03c78e79b4",
+    "reports/copula_calibration/predictive/terminal.json": "483c26aac77924a64cc9d87fc017dd60c50dab9d7bdd8004c69343501b685587",
+    "reports/copula_calibration/predictive/freeze.json": "d10dd138bd4db433256783f79ef5161a4cf5a05f3632a7dce757224aef3c47ff",
+    "reports/copula_calibration/predictive/registration.json": "e1c0af5de87b0d99c7c409f580d6af5a19c2487a34380dbbc8ff956a2e41c2dc",
+    "reports/copula_calibration/predictive/forecast_verification.json": "c8e2567bcc438567818b3f26a5790feaf3aaa0eec8e20e11947beeac6bdf001b",
+    "reports/copula_calibration/predictive/score_verification.json": "f2b9ee6617b6407d0f186435b917c4d5aebceb74eb9ef691bccfd48eb9dbcfd9",
+    "reports/copula_calibration/LITERATURE_REVIEW.md": "0933ac234175e09122537776ddcb24b9c44c9a93b64a33808ad47c28be6b7c08",
+    "reports/copula_calibration/PREFIT.json": "062ce995f0dbd6ded4b0b0723af81986e88699fd693c55e07196637c6952d100",
+    "copula_calibration.yaml": "4ce085904316fbc871b47f2d0f06a8d8e8010faab058f4911e795b3cb1a00f5d"
+  }
+}

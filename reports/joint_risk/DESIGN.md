@@ -1,0 +1,19 @@
+# Joint intraday return risk: prospective experiment
+
+Specified before new empirical numerical measurement, feature/target construction, fitting or scores. This is wave 10, with two registered contrasts and 110 inherited hypotheses, yielding a family of 112. The runner will pin the protocol, all source/test files, source artifacts and every earlier report/protocol before loading numerical market values. The existing November 3, 2025 sealed boundary and October 20 numerical fence stay fixed.
+
+The response is the QQQ ETF/SPX index next-session raw intraday return pair. Common mean forecasts define a residual vector; its outer product is the observed proxy for the conditional residual second-moment matrix. It may be signed off-diagonal, rank one, or zero. Evaluate a positive-definite forecast using unhalved `logdet(H)+e' H^-1 e`. No determinant of the observed matrix, target jitter, or percentage improvement in a possibly negative score is permitted.
+
+Shared mean and positive residual-second-moment models see both markets' risk, leverage, signed intraday return and implied-volatility histories, weekday, strict lagged corr22 and its training-centered square. All market data ends at the previous observed SPX session. The square and all population standardization use mature training rows only. Shared ridge and positive-moment slope penalties are .01; intercepts are unpenalized. Residuals used for the staged variance/dependence fits are current-fit training residuals, disclosed rather than treated as historical out-of-sample errors.
+
+The attribution control holds correlation constant with the same conditional means and diagonals as the candidate. The candidate fits only one slope in `.995*tanh(fixed_a0+b*z_corr22)`. Both intercept and slope have fixed [-4,4] bounds; only the candidate slope is penalized by .01. The second control is the uncentered mean of training residual outer products, scored with the same predicted means. A finite positive diagonal and normalized correlation smallest eigenvalue at least 1e-6 are required; no jitter or fallback is available.
+
+The constant fit enumerates all admissible real cubic stationary points and endpoints. The candidate must pass a deterministic interval numerical global-value certificate with gap at most 1e-8 and projected gradient at most 1e-7 within 32,768 splits. All local refinements and numerical allowances are fixed and audited. This is a numerical tolerance certificate, not an exact-arithmetic uniqueness proof.
+
+Both candidate comparisons require at least .005 absolute score improvement in both 2016–2019 development and 2020–October 2025 evaluation; negative gaps in both fixed 2020–2022 and 2023+ slices; Holm over two at .05/(10*11); and cumulative Holm over 112 at .05. Inference retains 99,999 circular bootstrap draws at blocks 21/63/126 and HAC126, taking the worst phase/method p-values. All failures retain both comparisons at p=1 and preserve diagnostics. Historical reuse remains exploratory.
+
+Identical modeled diagonals do not prove true correlation prediction. The independent review supplies an analytic case with constant zero true correlation in which erroneous shared scales create a joint-score advantage for changing rho. A passing result will therefore be interpreted as improved joint residual-second-moment prediction with fixed modeled marginals, conditional on their adequacy for stronger correlation claims. Daily archival ETF/index products are not synchronized high-frequency covariance, exact Nasdaq-100 index risk, or evidence of trading profits.
+
+- [Frozen-at-run protocol](/Users/byrons/code/trading-vol/ndx-vol-experiment/joint_risk.yaml)
+- [Independent mathematical/design challenge](/Users/byrons/code/trading-vol/ndx-vol-experiment/reports/joint_risk/DESIGN_REVIEW.md)
+- [Earlier blinded prospectus](/Users/byrons/code/trading-vol/ndx-vol-experiment/reports/relative_risk/NEXT_JOINT_RISK_DESIGN.md)

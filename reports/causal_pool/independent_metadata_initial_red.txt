@@ -1,0 +1,22 @@
+FE............
+======================================================================
+ERROR: test_metadata_parser_uses_only_the_hash_checked_bytes (tests.test_verify_causal_pool.AdmissionAndFailureContracts.test_metadata_parser_uses_only_the_hash_checked_bytes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_causal_pool.py", line 170, in test_metadata_parser_uses_only_the_hash_checked_bytes
+    self.assertEqual(verify.read_json_snapshot(root,'metadata.json',digest),{'frozen':1})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_causal_pool' has no attribute 'read_json_snapshot'
+
+======================================================================
+FAIL: test_frozen_protocol_rejects_seed_timing_memory_weight_arithmetic_and_family_mutations (tests.test_verify_causal_pool.AdmissionAndFailureContracts.test_frozen_protocol_rejects_seed_timing_memory_weight_arithmetic_and_family_mutations)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_causal_pool.py", line 163, in test_frozen_protocol_rejects_seed_timing_memory_weight_arithmetic_and_family_mutations
+    with self.assertRaises(ValueError):verify.validate_protocol(extra)
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 14 tests in 1.081s
+
+FAILED (failures=1, errors=1)

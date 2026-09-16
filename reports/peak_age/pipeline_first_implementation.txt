@@ -1,0 +1,248 @@
+EEEEE.EEEEEEEE
+======================================================================
+ERROR: test_changed_date_clocks_and_misalignment_reject (tests.test_peak_age_pipeline.PipelineContracts.test_changed_date_clocks_and_misalignment_reject) (kind='cutoff')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_pipeline.py", line 117, in test_changed_date_clocks_and_misalignment_reject
+    with self.subTest(kind=kind),self.assertRaises(ValueError):self.run_panel(f,t,s,p)
+                                                               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_pipeline.py", line 36, in run_panel
+    return pipeline.build_panel(f,t,s,p)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 103, in build_panel
+    alignment(features,targets)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 39, in alignment
+    _dates(features.index)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 20, in _dates
+    or not index.equals(index.normalize()) or index.dtype.unit not in ('ms','us','ns')):
+                                              ^^^^^^^^^^^^^^^^
+AttributeError: 'numpy.dtypes.DateTime64DType' object has no attribute 'unit'
+
+======================================================================
+ERROR: test_changed_date_clocks_and_misalignment_reject (tests.test_peak_age_pipeline.PipelineContracts.test_changed_date_clocks_and_misalignment_reject) (kind='end')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_pipeline.py", line 117, in test_changed_date_clocks_and_misalignment_reject
+    with self.subTest(kind=kind),self.assertRaises(ValueError):self.run_panel(f,t,s,p)
+                                                               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_pipeline.py", line 36, in run_panel
+    return pipeline.build_panel(f,t,s,p)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 103, in build_panel
+    alignment(features,targets)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 39, in alignment
+    _dates(features.index)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 20, in _dates
+    or not index.equals(index.normalize()) or index.dtype.unit not in ('ms','us','ns')):
+                                              ^^^^^^^^^^^^^^^^
+AttributeError: 'numpy.dtypes.DateTime64DType' object has no attribute 'unit'
+
+======================================================================
+ERROR: test_changed_date_clocks_and_misalignment_reject (tests.test_peak_age_pipeline.PipelineContracts.test_changed_date_clocks_and_misalignment_reject) (kind='available')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_pipeline.py", line 117, in test_changed_date_clocks_and_misalignment_reject
+    with self.subTest(kind=kind),self.assertRaises(ValueError):self.run_panel(f,t,s,p)
+                                                               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_pipeline.py", line 36, in run_panel
+    return pipeline.build_panel(f,t,s,p)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 103, in build_panel
+    alignment(features,targets)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 39, in alignment
+    _dates(features.index)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 20, in _dates
+    or not index.equals(index.normalize()) or index.dtype.unit not in ('ms','us','ns')):
+                                              ^^^^^^^^^^^^^^^^
+AttributeError: 'numpy.dtypes.DateTime64DType' object has no attribute 'unit'
+
+======================================================================
+ERROR: test_changed_date_clocks_and_misalignment_reject (tests.test_peak_age_pipeline.PipelineContracts.test_changed_date_clocks_and_misalignment_reject) (kind='target_index')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_pipeline.py", line 117, in test_changed_date_clocks_and_misalignment_reject
+    with self.subTest(kind=kind),self.assertRaises(ValueError):self.run_panel(f,t,s,p)
+                                                               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_pipeline.py", line 36, in run_panel
+    return pipeline.build_panel(f,t,s,p)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 103, in build_panel
+    alignment(features,targets)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 39, in alignment
+    _dates(features.index)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 20, in _dates
+    or not index.equals(index.normalize()) or index.dtype.unit not in ('ms','us','ns')):
+                                              ^^^^^^^^^^^^^^^^
+AttributeError: 'numpy.dtypes.DateTime64DType' object has no attribute 'unit'
+
+======================================================================
+ERROR: test_feature_incomplete_origin_never_enters_any_arm (tests.test_peak_age_pipeline.PipelineContracts.test_feature_incomplete_origin_never_enters_any_arm)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_pipeline.py", line 80, in test_feature_incomplete_origin_never_enters_any_arm
+    panel,fits,states,_=self.run_panel(f,t,s,p)
+                        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_pipeline.py", line 36, in run_panel
+    return pipeline.build_panel(f,t,s,p)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 103, in build_panel
+    alignment(features,targets)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 39, in alignment
+    _dates(features.index)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 20, in _dates
+    or not index.equals(index.normalize()) or index.dtype.unit not in ('ms','us','ns')):
+                                              ^^^^^^^^^^^^^^^^
+AttributeError: 'numpy.dtypes.DateTime64DType' object has no attribute 'unit'
+
+======================================================================
+ERROR: test_full_applications_precede_scoring_and_all_controls_match (tests.test_peak_age_pipeline.PipelineContracts.test_full_applications_precede_scoring_and_all_controls_match)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_pipeline.py", line 39, in test_full_applications_precede_scoring_and_all_controls_match
+    f,t,s,p=fixture(); panel,fits,states,support=self.run_panel(f,t,s,p)
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_pipeline.py", line 36, in run_panel
+    return pipeline.build_panel(f,t,s,p)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 103, in build_panel
+    alignment(features,targets)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 39, in alignment
+    _dates(features.index)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 20, in _dates
+    or not index.equals(index.normalize()) or index.dtype.unit not in ('ms','us','ns')):
+                                              ^^^^^^^^^^^^^^^^
+AttributeError: 'numpy.dtypes.DateTime64DType' object has no attribute 'unit'
+
+======================================================================
+ERROR: test_future_label_mutation_preserves_earlier_issuance (tests.test_peak_age_pipeline.PipelineContracts.test_future_label_mutation_preserves_earlier_issuance)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_pipeline.py", line 86, in test_future_label_mutation_preserves_earlier_issuance
+    f,t,s,p=fixture(); before=self.run_panel(f,t,s,p)
+                              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_pipeline.py", line 36, in run_panel
+    return pipeline.build_panel(f,t,s,p)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 103, in build_panel
+    alignment(features,targets)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 39, in alignment
+    _dates(features.index)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 20, in _dates
+    or not index.equals(index.normalize()) or index.dtype.unit not in ('ms','us','ns')):
+                                              ^^^^^^^^^^^^^^^^
+AttributeError: 'numpy.dtypes.DateTime64DType' object has no attribute 'unit'
+
+======================================================================
+ERROR: test_input_frames_remain_unchanged (tests.test_peak_age_pipeline.PipelineContracts.test_input_frames_remain_unchanged)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_pipeline.py", line 139, in test_input_frames_remain_unchanged
+    self.run_panel(f,t,s,p)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_pipeline.py", line 36, in run_panel
+    return pipeline.build_panel(f,t,s,p)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 103, in build_panel
+    alignment(features,targets)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 39, in alignment
+    _dates(features.index)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 20, in _dates
+    or not index.equals(index.normalize()) or index.dtype.unit not in ('ms','us','ns')):
+                                              ^^^^^^^^^^^^^^^^
+AttributeError: 'numpy.dtypes.DateTime64DType' object has no attribute 'unit'
+
+======================================================================
+ERROR: test_ms_us_ns_transport_keeps_same_origin_decisions (tests.test_peak_age_pipeline.PipelineContracts.test_ms_us_ns_transport_keeps_same_origin_decisions)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_pipeline.py", line 104, in test_ms_us_ns_transport_keeps_same_origin_decisions
+    panel,fits,states,support=self.run_panel(*fixture(unit))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_pipeline.py", line 36, in run_panel
+    return pipeline.build_panel(f,t,s,p)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 103, in build_panel
+    alignment(features,targets)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 39, in alignment
+    _dates(features.index)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 20, in _dates
+    or not index.equals(index.normalize()) or index.dtype.unit not in ('ms','us','ns')):
+                                              ^^^^^^^^^^^^^^^^
+AttributeError: 'numpy.dtypes.DateTime64DType' object has no attribute 'unit'
+
+======================================================================
+ERROR: test_panel_rejects_partial_family_wrong_losses_and_pairing (tests.test_peak_age_pipeline.PipelineContracts.test_panel_rejects_partial_family_wrong_losses_and_pairing)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_pipeline.py", line 120, in test_panel_rejects_partial_family_wrong_losses_and_pairing
+    panel,_,_,_=self.run_panel(*fixture())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_pipeline.py", line 36, in run_panel
+    return pipeline.build_panel(f,t,s,p)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 103, in build_panel
+    alignment(features,targets)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 39, in alignment
+    _dates(features.index)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 20, in _dates
+    or not index.equals(index.normalize()) or index.dtype.unit not in ('ms','us','ns')):
+                                              ^^^^^^^^^^^^^^^^
+AttributeError: 'numpy.dtypes.DateTime64DType' object has no attribute 'unit'
+
+======================================================================
+ERROR: test_query_missing_label_never_moves_fit_date (tests.test_peak_age_pipeline.PipelineContracts.test_query_missing_label_never_moves_fit_date)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_pipeline.py", line 67, in test_query_missing_label_never_moves_fit_date
+    f,t,s,p=fixture(); original=self.run_panel(f,t,s,p)
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_pipeline.py", line 36, in run_panel
+    return pipeline.build_panel(f,t,s,p)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 103, in build_panel
+    alignment(features,targets)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 39, in alignment
+    _dates(features.index)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 20, in _dates
+    or not index.equals(index.normalize()) or index.dtype.unit not in ('ms','us','ns')):
+                                              ^^^^^^^^^^^^^^^^
+AttributeError: 'numpy.dtypes.DateTime64DType' object has no attribute 'unit'
+
+======================================================================
+ERROR: test_training_availability_inclusive_boundary (tests.test_peak_age_pipeline.PipelineContracts.test_training_availability_inclusive_boundary)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_pipeline.py", line 60, in test_training_availability_inclusive_boundary
+    mask=pipeline.training_mask(f,t,entry,40)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 58, in training_mask
+    alignment(features,targets)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 39, in alignment
+    _dates(features.index)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 20, in _dates
+    or not index.equals(index.normalize()) or index.dtype.unit not in ('ms','us','ns')):
+                                              ^^^^^^^^^^^^^^^^
+AttributeError: 'numpy.dtypes.DateTime64DType' object has no attribute 'unit'
+
+======================================================================
+ERROR: test_unscored_final_month_still_has_fit_and_predictions (tests.test_peak_age_pipeline.PipelineContracts.test_unscored_final_month_still_has_fit_and_predictions)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_pipeline.py", line 94, in test_unscored_final_month_still_has_fit_and_predictions
+    panel,fits,states,support=self.run_panel(f,t,s,p)
+                              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_pipeline.py", line 36, in run_panel
+    return pipeline.build_panel(f,t,s,p)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 103, in build_panel
+    alignment(features,targets)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 39, in alignment
+    _dates(features.index)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 20, in _dates
+    or not index.equals(index.normalize()) or index.dtype.unit not in ('ms','us','ns')):
+                                              ^^^^^^^^^^^^^^^^
+AttributeError: 'numpy.dtypes.DateTime64DType' object has no attribute 'unit'
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.178s
+
+FAILED (errors=13)

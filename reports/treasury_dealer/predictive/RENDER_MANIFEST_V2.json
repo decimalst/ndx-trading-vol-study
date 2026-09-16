@@ -1,0 +1,11 @@
+{
+  "status": "RENDERED_FROM_SAVED_VERIFIED_METRICS_ONLY",
+  "metrics_sha256": "05e363aeaa1fbe2d7a67099d8a12471590099f72aa99615bd35cc1222288daa4",
+  "renderer_sha256": "8ef8564698685aace46e23a111d393aba193b7f8a2090b211a06610b72e7ea9c",
+  "artifacts": {
+    "SUMMARY_V2.md": "05743d0459fe6ffd8c5f6751c769b94cbac99bb9bd1420b9d85c0dfe719ba8af",
+    "comparison_intervals_v2.png": "fe2f9dff5cdb1afca5937929e1c7cc6154ad7e09ee858d9ebc8fa31c3b9b18ab",
+    "comparison_intervals_v2.pdf": "8913eb2980c8ea49020cd20ae2e5f7f6d71ba7f864329a052eb984f29433e46d"
+  },
+  "fits_or_inference_rerun": false
+}

@@ -1,0 +1,53 @@
+study_id: spread_geometry_hindsight
+specified_on: '2026-09-13'
+scope: Explicitly user-requested hindsight search over short-strike distance and wing width; descriptive geometry and premium sensitivity, not a new predictive hypothesis or prospective validation.
+source:
+  parent_terminal: reports/copula_spread_replay/terminal.json
+  parent_terminal_sha256: 7152a1c68cda9ed1174fbaa6a9675b1f4417c79db75ba9bf191495c4ecd79ffe
+  parent_freeze: reports/copula_spread_replay/freeze.json
+  parent_freeze_sha256: 7d96b280283fa2ea88c7778d52bb57f6a13d15a4bfc10daa3a5f5277286ef31f
+  returns: data/model_memory_study/copula_shape_wave29/panel.parquet
+  returns_sha256: f1f74fb53bfbfb4cdb2b5542b72001acab86bd896bd8d82d153872211675fedc
+  positions: data/model_memory_study/copula_spread_replay/positions.parquet
+  positions_sha256: 562ad6fa0346808506e2d2b0859d839ea025dfeeb1e449f51195ab1c65d9a704
+  ceiling: '2025-10-20'
+  preserve: All parent artifacts, original six-p1 failure and existing formal hypothesis accounting remain unchanged.
+grid:
+  distance_bps: [25, 50, 75, 100, 125, 150, 175, 200, 225, 250, 275, 300, 325, 350, 375, 400, 425, 450, 475, 500]
+  width_bps: [10, 25, 50, 75, 100, 150, 200, 300]
+  units: Basis points of each underlying's session-opening price. 100bps is1%. Condor distance and width apply symmetrically to both wings.
+  structures: [put, call, condor]
+  policies: [always_sell, fixed_2pct_orig_gaussian, fixed_2pct_orig_t8, fixed_2pct_cal_gaussian, fixed_2pct_cal_t8, fixed_2pct_shape_gaussian, fixed_2pct_shape_t8]
+  policy_scope: Freeze the parent's existing .02-distance/.01-width acceptance-day mask separately for each model and structure. It is unchanged for every new geometry; it is not a new-geometry10% breach-probability forecast.
+  periods: [development, evaluation, pooled]
+  expected_origins: 2190
+  expected_phase_origins: {development: 733, evaluation: 1457}
+  expected_geometry_rows: 10080
+  expected_account_rows: 40320
+  expected_winner_rows: 252
+payoff:
+  target: Next-session QQQ/SPX log(close/open) at saved exact dates, equally weighted terminal intrinsic liability; hypothetical0DTE contracts.
+  budget: Aggregate gross-width liability reserve .02 of current equity, split equally between assets. Condor maximum is one wing width. Different geometries are separate accounts.
+  sizing: Gross underlying notional/equity=.02/(width_bps/10000). Narrower wings mean greater notional at the same reserve; no actual lot size, margin or assignment model.
+  fees: .02 of width per sold day, including round trip; an assumption, not observed fees.
+  scenarios:
+    width_05: Credit .05 of width.
+    width_10: Credit .10 of width.
+    width_20: Credit .20 of width.
+    open_5bp: Credit5bps of each underlying's opening price, so credit_fraction=5/width_bps. This deliberately different convention is a sensitivity, not an observed quote; it remains below every tested width.
+  accounting: Sold equity return=.02*(credit_fraction-.02-portfolio_debit); skipped0. Independent phase accounts reset1; pooled compounds all saved sessions chronologically. No annualization or sampled tail forecasts.
+  average_cost_credit: Accepted-day mean normalized liability+.02; also express in opening-price bps by multiplying width_bps. This is arithmetic expected daily break-even on this historical cohort, not zero compound growth or compensation for future risk.
+selection:
+  objective: Within each period/structure/policy/credit scenario, maximize total log growth after viewing the complete named period. All such winners are hindsight selections.
+  ties: Absolute log-growth difference from the group maximum<=1e-10. Report all tied distance/width ranges and tie count; representative is nearest short strike, then narrowest wing. No-trade groups remain visible without a winner.
+  primary_display_policies: [always_sell, fixed_2pct_orig_t8, fixed_2pct_shape_t8]
+  display: Full grid retained privately; report cost surfaces, event counts, selected hindsight geometries, old200bps/100bps anchor, all four premium conventions and both phases plus pooled.
+  known_monotonicity: With fixed day masks and constant width-fraction credits, farther strikes and wider wings weakly improve every day's return. Corner dominance is implied before reading results; report ties instead of pretending it is discovered alpha.
+inference:
+  new_formal_hypotheses: 0
+  existing_formal_hypotheses: 164
+  descriptive_geometry_policy_scenario_combinations_per_period: 13440
+  limitations: Hindsight, repeatedly reused/current-vintage history, no actual option quotes or settlements, no intraday touch/exit/assignment/margin analysis. No selected geometry is promoted as safe or profitable.
+execution:
+  prewritten: Synthetic payoff, accounting, monotonicity, unit conversion, complete-grid and tie/missing-data tests precede implementation and the empirical search. Separate verifier reconstructs all outputs without importing either payoff/accounting producer.
+  preservation: New source/test/protocol/input hash freeze and pretest receipt before run; private output directory; exact-byte saved output reload; independent verifier; saved anchor reproduction; preserve failures and no overwrite of completed run.

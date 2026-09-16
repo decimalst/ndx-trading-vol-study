@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-09-07T01:21:18.346778+00:00",
+  "hashes": {
+    "model_memory_reference.yaml": "e937d88080e6e508cf8688bafccc6d6eb4626a3d83397adb210b1d2132f12956",
+    "src/model_memory_reference.py": "913e03aaa3318f831b0cea9c12bacee36c65b66c8e8f7d69890d8b249316fd27",
+    "src/reference_xlstm.py": "5af5729542cc1ca8f256033c75f4a770b51899b5549bf088c2e4c50120e4d137",
+    "src/reference_moirai.py": "2ebbb6aa61366855850455805e88de0e6e03eaa63a93bfd95ded6f67c2660383",
+    "tests/test_model_memory_reference.py": "2342005e0e28bbd98928f6c355b4812a70f135e3b971fa38ac4d9777c21710e6",
+    "tests/test_reference_xlstm.py": "0a8ae686f974b0a4556ef26306b52c951a73adb16037216c83c869ac2275ff0c",
+    "tests/test_reference_moirai.py": "4fba77ccb904583f9e1b7f22acb98adc43d19b1570a911b1c3a638558f400ef2",
+    "reports/model_memory_study/moirai_extraction_manifest.json": "56691d59de3080954a41e2f0e2acd829eb2fa9a78c3e93aeff56b5e0031e9063",
+    "reports/model_memory_study/moirai_extraction_audit.json": "0e19fc2edd7cbb5fd8c3c9fe2dae652dcfa89788fdc26c888fc52dfb44a8f05c",
+    "data/model_memory_reference/neural_manifest.json": "09f47c0fdcea2547d279ab61d42b9f57f448204d75a6f0f31d5b7d0329775119",
+    "data/model_memory_reference/moirai_features.parquet": "0eed40f07fc1878ad863ea4d79b03678692b8c478237b697f7173a2c2547bbca",
+    "data/model_memory_reference/neural_forecasts.parquet": "c53f096cf43352b355beadb4f096b38332cd0a262d5ca36cd55e8d10c0c88ffc",
+    "data/model_memory_study/forecasts.parquet": "401d8da8b6278f71d37dc49f4fa6e02c20bd60961ca473f1a658c17cb537febf"
+  },
+  "protocol_sha256": "e937d88080e6e508cf8688bafccc6d6eb4626a3d83397adb210b1d2132f12956"
+}

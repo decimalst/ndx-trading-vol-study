@@ -1,0 +1,25 @@
+test_age_inside_nuisance_span_can_retune_ridge (tests.test_peak_age_verification.IndependentPrimitives.test_age_inside_nuisance_span_can_retune_ridge) ... ok
+test_high_precision_log_ratio_extremes_equal_and_nearby (tests.test_peak_age_verification.IndependentPrimitives.test_high_precision_log_ratio_extremes_equal_and_nearby) ... ok
+test_log_ratio_rejects_invalid_observed_values (tests.test_peak_age_verification.IndependentPrimitives.test_log_ratio_rejects_invalid_observed_values) ... ok
+test_moving_peak_changes_age_with_same_current_controls (tests.test_peak_age_verification.IndependentPrimitives.test_moving_peak_changes_age_with_same_current_controls) ... ok
+test_peak_latest_exact_tie_and_endpoints (tests.test_peak_age_verification.IndependentPrimitives.test_peak_latest_exact_tie_and_endpoints) ... FAIL
+test_peak_rejects_missing_wrong_length_and_invalid (tests.test_peak_age_verification.IndependentPrimitives.test_peak_rejects_missing_wrong_length_and_invalid) ... ok
+test_ridge_augmented_solution_and_saved_mean_intercept (tests.test_peak_age_verification.IndependentPrimitives.test_ridge_augmented_solution_and_saved_mean_intercept) ... ok
+test_ridge_strict_scale_and_target_alignment (tests.test_peak_age_verification.IndependentPrimitives.test_ridge_strict_scale_and_target_alignment) ... ok
+test_scalar_augmented_solution_is_sequential_fixed_scale (tests.test_peak_age_verification.IndependentPrimitives.test_scalar_augmented_solution_is_sequential_fixed_scale) ... ok
+test_scalar_rejects_bad_domains_and_shapes (tests.test_peak_age_verification.IndependentPrimitives.test_scalar_rejects_bad_domains_and_shapes) ... ok
+test_scalar_zero_branches_copy_query_bits (tests.test_peak_age_verification.IndependentPrimitives.test_scalar_zero_branches_copy_query_bits) ... ok
+test_strict_calendar_window_target_and_feature_lag (tests.test_peak_age_verification.IndependentPrimitives.test_strict_calendar_window_target_and_feature_lag) ... ok
+
+======================================================================
+FAIL: test_peak_latest_exact_tie_and_endpoints (tests.test_peak_age_verification.IndependentPrimitives.test_peak_latest_exact_tie_and_endpoints)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_verification.py", line 55, in test_peak_latest_exact_tie_and_endpoints
+    self.assertEqual(answer["window_return"], math.log(10 / 12))
+AssertionError: -0.18232155679395462 != -0.1823215567939546
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.663s
+
+FAILED (failures=1)

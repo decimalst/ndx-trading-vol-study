@@ -1,0 +1,62 @@
+test_unbounded_unknown_clock_keeps_every_later_origin_unknown (tests.test_treasury_dealer_features.TreasuryDealerFeatureTests.test_unbounded_unknown_clock_keeps_every_later_origin_unknown) ... FAIL
+test_unknown_upper_bound_masks_through_last_possible_activation (tests.test_treasury_dealer_features.TreasuryDealerFeatureTests.test_unknown_upper_bound_masks_through_last_possible_activation) ... ERROR
+test_exact_unknown_clock_masks_pending_interval_and_then_clears (tests.test_treasury_dealer_features.TreasuryDealerFeatureTests.test_exact_unknown_clock_masks_pending_interval_and_then_clears) ... ERROR
+test_known_delayed_release_is_pending_until_its_single_actual_pulse (tests.test_treasury_dealer_features.TreasuryDealerFeatureTests.test_known_delayed_release_is_pending_until_its_single_actual_pulse) ... FAIL
+test_recent_unreleased_prior_is_never_replaced_by_older_donor (tests.test_treasury_dealer_features.TreasuryDealerFeatureTests.test_recent_unreleased_prior_is_never_replaced_by_older_donor) ... FAIL
+
+======================================================================
+ERROR: test_unknown_upper_bound_masks_through_last_possible_activation (tests.test_treasury_dealer_features.TreasuryDealerFeatureTests.test_unknown_upper_bound_masks_through_last_possible_activation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_dealer_features.py", line 82, in test_unknown_upper_bound_masks_through_last_possible_activation
+    out = features.build_auction_features(calendar(), [event])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/treasury_dealer_features.py", line 171, in build_auction_features
+    ordered = _envelope(reference_calendar, events)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/treasury_dealer_features.py", line 77, in _envelope
+    raise ValueError("Exact eleven-field auction event schema required")
+ValueError: Exact eleven-field auction event schema required
+
+======================================================================
+ERROR: test_exact_unknown_clock_masks_pending_interval_and_then_clears (tests.test_treasury_dealer_features.TreasuryDealerFeatureTests.test_exact_unknown_clock_masks_pending_interval_and_then_clears)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_dealer_features.py", line 93, in test_exact_unknown_clock_masks_pending_interval_and_then_clears
+    out = features.build_auction_features(calendar(), [event])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/treasury_dealer_features.py", line 171, in build_auction_features
+    ordered = _envelope(reference_calendar, events)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/treasury_dealer_features.py", line 92, in _envelope
+    raise ValueError(
+ValueError: Known release requires a date; unknown availability remains absent
+
+======================================================================
+FAIL: test_unbounded_unknown_clock_keeps_every_later_origin_unknown (tests.test_treasury_dealer_features.TreasuryDealerFeatureTests.test_unbounded_unknown_clock_keeps_every_later_origin_unknown)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_dealer_features.py", line 75, in test_unbounded_unknown_clock_keeps_every_later_origin_unknown
+    self.assertTrue(out["features"].loc["2011-06-21":].isna().all().all())
+AssertionError: np.False_ is not true
+
+======================================================================
+FAIL: test_known_delayed_release_is_pending_until_its_single_actual_pulse (tests.test_treasury_dealer_features.TreasuryDealerFeatureTests.test_known_delayed_release_is_pending_until_its_single_actual_pulse)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_dealer_features.py", line 102, in test_known_delayed_release_is_pending_until_its_single_actual_pulse
+    self.assertTrue(out["features"].loc["2011-07-04":"2011-07-08"].isna().all().all())
+AssertionError: np.False_ is not true
+
+======================================================================
+FAIL: test_recent_unreleased_prior_is_never_replaced_by_older_donor (tests.test_treasury_dealer_features.TreasuryDealerFeatureTests.test_recent_unreleased_prior_is_never_replaced_by_older_donor)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_dealer_features.py", line 112, in test_recent_unreleased_prior_is_never_replaced_by_older_donor
+    self.assertEqual(audit["mask_reason"], "UNRELEASED_PRIOR_EVENT")
+AssertionError: None != 'UNRELEASED_PRIOR_EVENT'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.014s
+
+FAILED (failures=3, errors=2)

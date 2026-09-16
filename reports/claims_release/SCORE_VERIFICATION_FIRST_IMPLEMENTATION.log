@@ -1,0 +1,109 @@
+test_reduced_generated_calibration_reconstructs_coverage_and_status (tests.test_verify_claims_release_scores.CalibrationVerificationTests.test_reduced_generated_calibration_reconstructs_coverage_and_status) ... ok
+test_shocks_precede_stationary_state_and_block_seeds_have_no_phase_offset (tests.test_verify_claims_release_scores.CalibrationVerificationTests.test_shocks_precede_stationary_state_and_block_seeds_have_no_phase_offset) ... ok
+test_tampered_coverage_status_seed_design_and_schema_rejected (tests.test_verify_claims_release_scores.CalibrationVerificationTests.test_tampered_coverage_status_seed_design_and_schema_rejected) ... ok
+test_complete_generated_artifact_and_joint_lead_verify (tests.test_verify_claims_release_scores.CompleteScoreVerificationTests.test_complete_generated_artifact_and_joint_lead_verify) ... ok
+test_duplicate_missing_unknown_model_or_one_arm_metadata_disagreement_rejected (tests.test_verify_claims_release_scores.CompleteScoreVerificationTests.test_duplicate_missing_unknown_model_or_one_arm_metadata_disagreement_rejected) ... ok
+test_each_support_floor_fails_entire_wave (tests.test_verify_claims_release_scores.CompleteScoreVerificationTests.test_each_support_floor_fails_entire_wave) ... ok
+test_equal_release_weighting_can_fail_despite_negative_daily_mean (tests.test_verify_claims_release_scores.CompleteScoreVerificationTests.test_equal_release_weighting_can_fail_despite_negative_daily_mean) ... ERROR
+test_exact_schemas_identities_prior_preservation_and_boolean_count_rejected (tests.test_verify_claims_release_scores.CompleteScoreVerificationTests.test_exact_schemas_identities_prior_preservation_and_boolean_count_rejected) ... ok
+test_losses_are_reconstructed_and_nonpositive_or_nonfinite_inputs_fail (tests.test_verify_claims_release_scores.CompleteScoreVerificationTests.test_losses_are_reconstructed_and_nonpositive_or_nonfinite_inputs_fail) ... ok
+test_metrics_fields_counts_intervals_stability_accounting_and_leads_are_verified (tests.test_verify_claims_release_scores.CompleteScoreVerificationTests.test_metrics_fields_counts_intervals_stability_accounting_and_leads_are_verified) ... ok
+test_offset_sign_gate_uses_unfiltered_calendar_not_paired_row_counter (tests.test_verify_claims_release_scores.CompleteScoreVerificationTests.test_offset_sign_gate_uses_unfiltered_calendar_not_paired_row_counter) ... ERROR
+test_one_failed_comparison_never_produces_joint_headline (tests.test_verify_claims_release_scores.CompleteScoreVerificationTests.test_one_failed_comparison_never_produces_joint_headline) ... ok
+test_prior_family_must_have_exactly_140_finite_pvalues (tests.test_verify_claims_release_scores.CompleteScoreVerificationTests.test_prior_family_must_have_exactly_140_finite_pvalues) ... ok
+test_pvalues_compare_exactly_and_not_under_general_float_tolerance (tests.test_verify_claims_release_scores.CompleteScoreVerificationTests.test_pvalues_compare_exactly_and_not_under_general_float_tolerance) ... ok
+test_reordering_input_and_verification_do_not_mutate_supplied_artifacts (tests.test_verify_claims_release_scores.CompleteScoreVerificationTests.test_reordering_input_and_verification_do_not_mutate_supplied_artifacts) ... ok
+test_significance_thresholds_are_strict_and_cumulative_142_is_recomputed (tests.test_verify_claims_release_scores.CompleteScoreVerificationTests.test_significance_thresholds_are_strict_and_cumulative_142_is_recomputed) ... ok
+test_target_endpoint_phase_and_maturity_are_not_trusted (tests.test_verify_claims_release_scores.CompleteScoreVerificationTests.test_target_endpoint_phase_and_maturity_are_not_trusted) ... ok
+test_valid_zero_effect_is_negative_completed_result_not_support_failure (tests.test_verify_claims_release_scores.CompleteScoreVerificationTests.test_valid_zero_effect_is_negative_completed_result_not_support_failure) ... ok
+test_bootstrap_p_uses_centered_null_two_sides_ties_and_plus_one (tests.test_verify_claims_release_scores.IndependentInferenceTests.test_bootstrap_p_uses_centered_null_two_sides_ties_and_plus_one) ... ok
+test_constant_bootstrap_means_and_full_length_block (tests.test_verify_claims_release_scores.IndependentInferenceTests.test_constant_bootstrap_means_and_full_length_block) ... ok
+test_exact_block_division_uses_no_extra_tail_sample (tests.test_verify_claims_release_scores.IndependentInferenceTests.test_exact_block_division_uses_no_extra_tail_sample) ... ok
+test_hac_matches_direct_bartlett_autocovariance_formula (tests.test_verify_claims_release_scores.IndependentInferenceTests.test_hac_matches_direct_bartlett_autocovariance_formula) ... ok
+test_hac_zero_scale_retains_zero_and_nonzero_mean_p_conventions (tests.test_verify_claims_release_scores.IndependentInferenceTests.test_hac_zero_scale_retains_zero_and_nonzero_mean_p_conventions) ... ok
+test_holm_order_monotonicity_and_two_versus_142_families (tests.test_verify_claims_release_scores.IndependentInferenceTests.test_holm_order_monotonicity_and_two_versus_142_families) ... FAIL
+test_invalid_numerical_kernel_inputs_fail (tests.test_verify_claims_release_scores.IndependentInferenceTests.test_invalid_numerical_kernel_inputs_fail) ... ok
+test_offsets_are_full_calendar_positions_before_filtering (tests.test_verify_claims_release_scores.IndependentInferenceTests.test_offsets_are_full_calendar_positions_before_filtering) ... ok
+test_shared_circular_draws_exact_remainder_and_rng_order (tests.test_verify_claims_release_scores.IndependentInferenceTests.test_shared_circular_draws_exact_remainder_and_rng_order) ... ok
+
+======================================================================
+ERROR: test_equal_release_weighting_can_fail_despite_negative_daily_mean (tests.test_verify_claims_release_scores.CompleteScoreVerificationTests.test_equal_release_weighting_can_fail_despite_negative_daily_mean)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_claims_release_scores.py", line 251, in test_equal_release_weighting_can_fail_despite_negative_daily_mean
+    self.assertEqual(self.check(panel=panel, metrics=metrics, protocol=protocol)["status"], "VERIFIED")
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_claims_release_scores.py", line 178, in check
+    return verify.verify_scores(self.panel if panel is None else panel, self.calendar,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_claims_release_scores.py", line 347, in verify_scores
+    _compare(metrics, expected)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_claims_release_scores.py", line 329, in _compare
+    _compare(actual[key], value, f"{path}.{key}", exact=exact or key in P_FIELDS or key == "inherited_rows")
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_claims_release_scores.py", line 334, in _compare
+    _compare(a, e, f"{path}[{i}]", exact=exact)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_claims_release_scores.py", line 329, in _compare
+    _compare(actual[key], value, f"{path}.{key}", exact=exact or key in P_FIELDS or key == "inherited_rows")
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_claims_release_scores.py", line 334, in _compare
+    _compare(a, e, f"{path}[{i}]", exact=exact)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_claims_release_scores.py", line 329, in _compare
+    _compare(actual[key], value, f"{path}.{key}", exact=exact or key in P_FIELDS or key == "inherited_rows")
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_claims_release_scores.py", line 329, in _compare
+    _compare(actual[key], value, f"{path}.{key}", exact=exact or key in P_FIELDS or key == "inherited_rows")
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_claims_release_scores.py", line 338, in _compare
+    raise ValueError(f"Verification numerical mismatch: {path}")
+ValueError: Verification numerical mismatch: root.rows[0].phases[0].hac.p
+
+======================================================================
+ERROR: test_offset_sign_gate_uses_unfiltered_calendar_not_paired_row_counter (tests.test_verify_claims_release_scores.CompleteScoreVerificationTests.test_offset_sign_gate_uses_unfiltered_calendar_not_paired_row_counter)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_claims_release_scores.py", line 229, in test_offset_sign_gate_uses_unfiltered_calendar_not_paired_row_counter
+    self.assertEqual(self.check(panel=panel, metrics=metrics)["status"], "VERIFIED")
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_claims_release_scores.py", line 178, in check
+    return verify.verify_scores(self.panel if panel is None else panel, self.calendar,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_claims_release_scores.py", line 347, in verify_scores
+    _compare(metrics, expected)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_claims_release_scores.py", line 329, in _compare
+    _compare(actual[key], value, f"{path}.{key}", exact=exact or key in P_FIELDS or key == "inherited_rows")
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_claims_release_scores.py", line 334, in _compare
+    _compare(a, e, f"{path}[{i}]", exact=exact)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_claims_release_scores.py", line 329, in _compare
+    _compare(actual[key], value, f"{path}.{key}", exact=exact or key in P_FIELDS or key == "inherited_rows")
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_claims_release_scores.py", line 334, in _compare
+    _compare(a, e, f"{path}[{i}]", exact=exact)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_claims_release_scores.py", line 329, in _compare
+    _compare(actual[key], value, f"{path}.{key}", exact=exact or key in P_FIELDS or key == "inherited_rows")
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_claims_release_scores.py", line 329, in _compare
+    _compare(actual[key], value, f"{path}.{key}", exact=exact or key in P_FIELDS or key == "inherited_rows")
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_claims_release_scores.py", line 338, in _compare
+    raise ValueError(f"Verification numerical mismatch: {path}")
+ValueError: Verification numerical mismatch: root.rows[0].phases[0].hac.p
+
+======================================================================
+FAIL: test_holm_order_monotonicity_and_two_versus_142_families (tests.test_verify_claims_release_scores.IndependentInferenceTests.test_holm_order_monotonicity_and_two_versus_142_families)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_claims_release_scores.py", line 429, in test_holm_order_monotonicity_and_two_versus_142_families
+    np.testing.assert_array_equal(total[-2:], [142e-8, 141e-7])
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/numpy/testing/_private/utils.py", line 1121, in assert_array_equal
+    assert_array_compare(operator.__eq__, actual, desired, err_msg=err_msg,
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/numpy/testing/_private/utils.py", line 983, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Arrays are not equal
+
+Mismatched elements: 1 / 2 (50%)
+Mismatch at index:
+ [1]: 1.4099999999999999e-05 (ACTUAL), 1.41e-05 (DESIRED)
+Max absolute difference among violations: 1.69406589e-21
+Max relative difference among violations: 1.20146517e-16
+ ACTUAL: array([1.42e-06, 1.41e-05])
+ DESIRED: array([1.42e-06, 1.41e-05])
+
+----------------------------------------------------------------------
+Ran 27 tests in 1.814s
+
+FAILED (failures=1, errors=2)

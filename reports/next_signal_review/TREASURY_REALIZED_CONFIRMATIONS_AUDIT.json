@@ -1,0 +1,367 @@
+{
+  "completed_utc": "2026-09-09T01:51:59.742034+00:00",
+  "counts": {
+    "canonical_confirmations": 18,
+    "confirmations_by_ledger": {
+      "reports/next_signal_review/TREASURY_NOTICE_LEDGER_A.json": 9,
+      "reports/next_signal_review/TREASURY_NOTICE_LEDGER_B.json": 6,
+      "reports/next_signal_review/TREASURY_NOTICE_LEDGER_C.json": 3
+    },
+    "discrepancies": 0,
+    "document_body_hashes_checked": 18,
+    "document_text_hashes_checked": 18,
+    "independently_identified_reviewed_confirmations": 18,
+    "original_review_ledgers_checked": 4,
+    "unique_selected_events": 18
+  },
+  "cumulative_comparisons": 144,
+  "discrepancies": [],
+  "input_hashes": {
+    "data/source_discovery/treasury_auction/full_notice_text_v1/0274eae525477d9e1c7a8232f8163e6a5281a34eaba17923899fdf979d764a0b.txt": "1438c398671416372697af8f5e3a16da8d71259715ec60c0e5a1ed769f3013ce",
+    "data/source_discovery/treasury_auction/full_notice_text_v1/0905a4cd3930581a2bfe3b62c5debff7b4e32cad56ea0d78c6a68025f6dd7cf2.txt": "83a183b69a83af847094fa415ad3b2bddd66505060c2ecc3d03a5efa397716fc",
+    "data/source_discovery/treasury_auction/full_notice_text_v1/102e1aa92d7e3719e397dc03ba3dbe6b6f6928a34a4757e648aadcf9d02a77af.txt": "29503c0b5b6c46be175a013946a5e902eb6c48bc3ce1f8376926ac21a505be2f",
+    "data/source_discovery/treasury_auction/full_notice_text_v1/281de1183d7ac6b7bcdb6218c9208eb19d95d2ce70c547137051b49322eba239.txt": "a56da1a06d436ed4458c2b2723e43806772f568576616b9bf830feb56541c5f3",
+    "data/source_discovery/treasury_auction/full_notice_text_v1/2ba724504fa25955740f078dc0bd0ad62e2b5e035b5a451d1d9128557f7d6a63.txt": "9da0b1087670ccbd8dcf77c3349917900842e916c1145effba1062743b956e53",
+    "data/source_discovery/treasury_auction/full_notice_text_v1/4b2129022761bd8118bd26c8ca5ff8a6f507ec18024f0bbd49597370fd0ea6f0.txt": "cff83780f19003cea6f3aee130961741f81c6a65da43724f71dc15328a87eae5",
+    "data/source_discovery/treasury_auction/full_notice_text_v1/601e90cc4bcdedb31f8a6c42e7bc361c1d1d797a1d143ff1eb68cb01771a8d81.txt": "697e25ccbe3aef9e73941649f01e37561704c118a4ae145ee4e772e9abce0d75",
+    "data/source_discovery/treasury_auction/full_notice_text_v1/6fe126226dd23e331e589e253bd286d615f6918a8bae6042755489bade2c27ed.txt": "a1692f9b39f31e7ae0a829c712d536cf8f25fdd604bde217f8cfa7c389eafb84",
+    "data/source_discovery/treasury_auction/full_notice_text_v1/7d641a05edc8b4addec5f5984d7194a442d24da2268f987842db81e70c06cafb.txt": "a643204fdd4486cf595f232a981ef3f34d0ae96796aea889003f0bd55fc3f1c0",
+    "data/source_discovery/treasury_auction/full_notice_text_v1/8771c5405ada07d3185df613d4158a220061fbe086807695280209b068f44278.txt": "0a5e12f2f144fd21206aaf61ce30ff78b42c507454cc6610270f0a42afc7111a",
+    "data/source_discovery/treasury_auction/full_notice_text_v1/889b866b08cac26357dba8e56e3cd8baba68b4329e5c9d263d700a205ba5dbe4.txt": "700fca9b989d7a7f404abee4df30989cf3bfd8b5c2d654e658d296adf14ffdef",
+    "data/source_discovery/treasury_auction/full_notice_text_v1/88b013bdbac4be41b75c738498326c5b24916751559a9e6f03aef19ace0f80c1.txt": "e9f527667cd24b890ce685bfb0d9d74d73801b0081940dd97fbf247d6dd142d7",
+    "data/source_discovery/treasury_auction/full_notice_text_v1/91b73a336dbb4a827ab59a02038d4cf6f5fc013c1ef7a66b2541358173095c13.txt": "4faa5edd3112714a0d307ce5c774017ea240a5db9eca29654d99d98914f61b37",
+    "data/source_discovery/treasury_auction/full_notice_text_v1/bb3065697800ae7fe6cc7854ab0925cba59173cae24619df230799e29b2526b2.txt": "b7402c1759dcc8416ede37bd3874da060995bc691938151c6cd837aa65a2f01a",
+    "data/source_discovery/treasury_auction/full_notice_text_v1/c9235d4ede8858ee5d7514dd1a394c1ab9f85e8bdda9b397aae8b87d0677671c.txt": "fb4842fa94d2d03984f6cda7e45e673202771c00c4b54a19c536aaacd21f48e2",
+    "data/source_discovery/treasury_auction/full_notice_text_v1/cc7a0e46ee7d72f5395a34da34c665c56746ba18ce69a02923f0fe9392993ca6.txt": "3bf8d7284889966a34ae6d9a525b4b93ea4dcc6efa6e5b6c0fbddc64a56d5e0b",
+    "data/source_discovery/treasury_auction/full_notice_text_v1/f7d3276a9ddea3c46216dd8bebb17508f773e3c32dd83c94a29a01eea1a68d14.txt": "acd55acb83d49e9501570089553da0bf9d9ac19baf8e3a7a5b511de331200021",
+    "data/source_discovery/treasury_auction/full_notice_text_v1/fd7e3d5ea9785ee2b0ff51ade52534716ddce55bae935f3fd7b9ef33b69c22fc.txt": "d205fd4af8081f26e44024919004a0342aabdafad37c6619157a47d0b113acf9",
+    "data/source_discovery/treasury_auction/full_notices_v1/0508357c7d7cadcf039b34e397e204853e6aa29fc87580f5fc5d3b9f8a3530b5/body.pdf": "f7d3276a9ddea3c46216dd8bebb17508f773e3c32dd83c94a29a01eea1a68d14",
+    "data/source_discovery/treasury_auction/full_notices_v1/0572de5612845db622d028a3126af2b86a4621bfdddc9001ba0ddf2f9181c61a/body.pdf": "8771c5405ada07d3185df613d4158a220061fbe086807695280209b068f44278",
+    "data/source_discovery/treasury_auction/full_notices_v1/2ae055f9a4d7af3d756a39dc76059d803b73f285324e9157851b3d3da3edd4a8/body.pdf": "c9235d4ede8858ee5d7514dd1a394c1ab9f85e8bdda9b397aae8b87d0677671c",
+    "data/source_discovery/treasury_auction/full_notices_v1/3da94122b4079d57a41eac95c8aba91a575a4aa16e73866b37ef00a9eb0e3387/body.pdf": "fd7e3d5ea9785ee2b0ff51ade52534716ddce55bae935f3fd7b9ef33b69c22fc",
+    "data/source_discovery/treasury_auction/full_notices_v1/5d329ac6cd95d70b73ef9605555a0dd77723676920f91570e4636384c39b72bb/body.pdf": "88b013bdbac4be41b75c738498326c5b24916751559a9e6f03aef19ace0f80c1",
+    "data/source_discovery/treasury_auction/full_notices_v1/7f7a99e4b76c8f6872bb80794488049487d6ebd67291bcea45a396ff95504474/body.pdf": "4b2129022761bd8118bd26c8ca5ff8a6f507ec18024f0bbd49597370fd0ea6f0",
+    "data/source_discovery/treasury_auction/full_notices_v1/924e414763e1fe130a0a0fe667b760d20811f7c800054642c749364ab06b870e/body.pdf": "bb3065697800ae7fe6cc7854ab0925cba59173cae24619df230799e29b2526b2",
+    "data/source_discovery/treasury_auction/full_notices_v1/b0a2c1dfb405b52d12660904aae017898b90ff75d00c5c25d1b686cece8e4efc/body.pdf": "281de1183d7ac6b7bcdb6218c9208eb19d95d2ce70c547137051b49322eba239",
+    "data/source_discovery/treasury_auction/full_notices_v1/bdc4c85cfc33cbe2738b09656dc7873d53e909cf669be7647535912e92d32af1/body.pdf": "cc7a0e46ee7d72f5395a34da34c665c56746ba18ce69a02923f0fe9392993ca6",
+    "data/source_discovery/treasury_auction/full_notices_v1/c14bfbf4f2f21ef5250d21d06d312a5873fc146573c515758e6681a89fa06c0a/body.pdf": "889b866b08cac26357dba8e56e3cd8baba68b4329e5c9d263d700a205ba5dbe4",
+    "data/source_discovery/treasury_auction/full_notices_v1/c34c69b79e0f3f355a3062ef002d1cbafd35063e30b7491601f212f7dcbd42ca/body.pdf": "6fe126226dd23e331e589e253bd286d615f6918a8bae6042755489bade2c27ed",
+    "data/source_discovery/treasury_auction/full_notices_v1/cf3bb226b02f1332a8d188e9ab2e5930f415babf2aa0642e440d321988eb2db8/body.pdf": "0274eae525477d9e1c7a8232f8163e6a5281a34eaba17923899fdf979d764a0b",
+    "data/source_discovery/treasury_auction/full_notices_v1/d37d85e4c63b54a3d8aff047302b51fcf98c4199d34232c2f8c98130725c74be/body.pdf": "0905a4cd3930581a2bfe3b62c5debff7b4e32cad56ea0d78c6a68025f6dd7cf2",
+    "data/source_discovery/treasury_auction/full_notices_v1/dcbdd409f7afe66084bd99248c6389568ae068a3541faa1dfa9b9c67e2190a5f/body.pdf": "102e1aa92d7e3719e397dc03ba3dbe6b6f6928a34a4757e648aadcf9d02a77af",
+    "data/source_discovery/treasury_auction/full_notices_v1/e9e9ea2ee1b8666d6af0679c3ef7bcbed5f42c4dc840c143f56f698b06637c0a/body.pdf": "91b73a336dbb4a827ab59a02038d4cf6f5fc013c1ef7a66b2541358173095c13",
+    "data/source_discovery/treasury_auction/full_notices_v1/ecef10da419831c4802c49cd57fb19a758351e4e273e45556a7dd6f0cdce5192/body.pdf": "2ba724504fa25955740f078dc0bd0ad62e2b5e035b5a451d1d9128557f7d6a63",
+    "data/source_discovery/treasury_auction/full_notices_v1/f2e798e6128c4c23fdfe1a19a51dabcc0113f074cab5e66e74c22b76085e9ed6/body.pdf": "7d641a05edc8b4addec5f5984d7194a442d24da2268f987842db81e70c06cafb",
+    "data/source_discovery/treasury_auction/full_notices_v1/f87c0e91749d52764cf991905f7fb2678ea44bff51fb73ff212912bc79893f5a/body.pdf": "601e90cc4bcdedb31f8a6c42e7bc361c1d1d797a1d143ff1eb68cb01771a8d81",
+    "reports/next_signal_review/TREASURY_FULL_NOTICE_REVIEW.json": "4bea660c12ae0ba31ef388f0f8559fa3b04daee6bdbb9690d7f60b062a2ce155",
+    "reports/next_signal_review/TREASURY_FULL_NOTICE_REVIEW_ASSIGNMENTS.json": "ffe7c7d63ddcb586c4e6d5cf50e9e605648f7c00bed8529b0b98a779aa798f09",
+    "reports/next_signal_review/TREASURY_FULL_NOTICE_REVIEW_CHECKPOINT.json": "d63de42754c25a1999f83b31b43f776d4d0eff1658f36b9831a67e3616d2e8a2",
+    "reports/next_signal_review/TREASURY_FULL_NOTICE_TERMINAL_AUDIT.json": "96684467e7aa0a643cd9f95fe6e6e3be8eff83c030fadb99b632adf2fe5e9b78",
+    "reports/next_signal_review/TREASURY_NOTICE_LEDGER_A.json": "752ec9d4541919af83f1a2fcf29e2f599911763f53297f94034331ba4d5f1721",
+    "reports/next_signal_review/TREASURY_NOTICE_LEDGER_B.json": "262e9db081e963e71f9a72f0338aa455118ae060fb58db9340993e848b8001ad",
+    "reports/next_signal_review/TREASURY_NOTICE_LEDGER_C.json": "313e63d983eafeb88b5dcef014964b86a3c0b3ce56067c179a226f0398103ec9",
+    "reports/next_signal_review/TREASURY_NOTICE_LEDGER_ROOT.json": "9ff12f16b9f3afc6dea35feca93aa4005bdd65ff2e55e542a0b1edf4a779abb2",
+    "reports/next_signal_review/TREASURY_REALIZED_CONFIRMATIONS.json": "e9bb95e6bf66b5acc34cc162ff79bcf43e12463a1e7b91f7e9dd1fa99620aa73"
+  },
+  "limits": [
+    "Independent transcription and hash-binding audit of completed metadata reviews; no new reading or interpretation of original document text.",
+    "Only the 18 notice PDF/text bodies were read as opaque bytes for SHA-256; no financial field decoding, raw annual data, market data or network access.",
+    "This verifies canonical correspondence to reviewed confirmations, not announcement/final-result agreement or source-history admission.",
+    "Conditional alternatives are not treated as exhaustive realized identity constraints."
+  ],
+  "new_predictive_comparisons": 0,
+  "records": [
+    {
+      "actual_cusip": "912828RE2",
+      "archive_memberships": 1,
+      "auction_date": "2013-08-28",
+      "discrepancies": 0,
+      "extraction_path": "documents[url].body_applicability[1]",
+      "original_issue_date": "2011-08-31",
+      "original_term_years": 7,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_B.json",
+      "series": "P-2018",
+      "source_body_paths_hashed_only": [
+        "data/source_discovery/treasury_auction/full_notices_v1/0572de5612845db622d028a3126af2b86a4621bfdddc9001ba0ddf2f9181c61a/body.pdf"
+      ],
+      "source_text_path_hashed_only": "data/source_discovery/treasury_auction/full_notice_text_v1/8771c5405ada07d3185df613d4158a220061fbe086807695280209b068f44278.txt",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2013/BPD_SPL_20130828_1.pdf"
+    },
+    {
+      "actual_cusip": "912828RH5",
+      "archive_memberships": 1,
+      "auction_date": "2013-09-25",
+      "discrepancies": 0,
+      "extraction_path": "documents[url].body_applicability[0].existing_security_reference",
+      "original_issue_date": "2011-09-30",
+      "original_term_years": 7,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_A.json",
+      "series": "Q-2018",
+      "source_body_paths_hashed_only": [
+        "data/source_discovery/treasury_auction/full_notices_v1/7f7a99e4b76c8f6872bb80794488049487d6ebd67291bcea45a396ff95504474/body.pdf"
+      ],
+      "source_text_path_hashed_only": "data/source_discovery/treasury_auction/full_notice_text_v1/4b2129022761bd8118bd26c8ca5ff8a6f507ec18024f0bbd49597370fd0ea6f0.txt",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2013/BPD_SPL_20130925_1.pdf"
+    },
+    {
+      "actual_cusip": "912828SY7",
+      "archive_memberships": 1,
+      "auction_date": "2015-05-26",
+      "discrepancies": 0,
+      "extraction_path": "documents[url].body_applicability[0].existing_security_reference",
+      "original_issue_date": "2012-05-31",
+      "original_term_years": 5,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_A.json",
+      "series": "Z-2017",
+      "source_body_paths_hashed_only": [
+        "data/source_discovery/treasury_auction/full_notices_v1/ecef10da419831c4802c49cd57fb19a758351e4e273e45556a7dd6f0cdce5192/body.pdf"
+      ],
+      "source_text_path_hashed_only": "data/source_discovery/treasury_auction/full_notice_text_v1/2ba724504fa25955740f078dc0bd0ad62e2b5e035b5a451d1d9128557f7d6a63.txt",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2015/BPD_SPL_20150526_1.pdf"
+    },
+    {
+      "actual_cusip": "912828TM2",
+      "archive_memberships": 1,
+      "auction_date": "2015-08-25",
+      "discrepancies": 0,
+      "extraction_path": "documents[url].body_applicability[0].existing_security_reference",
+      "original_issue_date": "2012-08-31",
+      "original_term_years": 5,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_A.json",
+      "series": "AC-2017",
+      "source_body_paths_hashed_only": [
+        "data/source_discovery/treasury_auction/full_notices_v1/2ae055f9a4d7af3d756a39dc76059d803b73f285324e9157851b3d3da3edd4a8/body.pdf"
+      ],
+      "source_text_path_hashed_only": "data/source_discovery/treasury_auction/full_notice_text_v1/c9235d4ede8858ee5d7514dd1a394c1ab9f85e8bdda9b397aae8b87d0677671c.txt",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2015/BPD_SPL_20150825_1.pdf"
+    },
+    {
+      "actual_cusip": "912828TS9",
+      "archive_memberships": 1,
+      "auction_date": "2015-09-22",
+      "discrepancies": 0,
+      "extraction_path": "documents[url].body_applicability[0].existing_security_reference",
+      "original_issue_date": "2012-10-01",
+      "original_term_years": 5,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_A.json",
+      "series": "AD-2017",
+      "source_body_paths_hashed_only": [
+        "data/source_discovery/treasury_auction/full_notices_v1/f2e798e6128c4c23fdfe1a19a51dabcc0113f074cab5e66e74c22b76085e9ed6/body.pdf"
+      ],
+      "source_text_path_hashed_only": "data/source_discovery/treasury_auction/full_notice_text_v1/7d641a05edc8b4addec5f5984d7194a442d24da2268f987842db81e70c06cafb.txt",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2015/BPD_SPL_20150922_1.pdf"
+    },
+    {
+      "actual_cusip": "912828TW0",
+      "archive_memberships": 1,
+      "auction_date": "2015-11-04",
+      "discrepancies": 0,
+      "extraction_path": "documents[url].body_applicability[0].existing_security_reference",
+      "original_issue_date": "2012-10-31",
+      "original_term_years": 5,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_A.json",
+      "series": "AE-2017",
+      "source_body_paths_hashed_only": [
+        "data/source_discovery/treasury_auction/full_notices_v1/5d329ac6cd95d70b73ef9605555a0dd77723676920f91570e4636384c39b72bb/body.pdf"
+      ],
+      "source_text_path_hashed_only": "data/source_discovery/treasury_auction/full_notice_text_v1/88b013bdbac4be41b75c738498326c5b24916751559a9e6f03aef19ace0f80c1.txt",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2015/BPD_SPL_20151104_1.pdf"
+    },
+    {
+      "actual_cusip": "912828UR9",
+      "archive_memberships": 1,
+      "auction_date": "2016-02-23",
+      "discrepancies": 0,
+      "extraction_path": "documents[url].body_applicability[1]",
+      "original_issue_date": "2013-02-28",
+      "original_term_years": 5,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_B.json",
+      "series": "V-2018",
+      "source_body_paths_hashed_only": [
+        "data/source_discovery/treasury_auction/full_notices_v1/e9e9ea2ee1b8666d6af0679c3ef7bcbed5f42c4dc840c143f56f698b06637c0a/body.pdf"
+      ],
+      "source_text_path_hashed_only": "data/source_discovery/treasury_auction/full_notice_text_v1/91b73a336dbb4a827ab59a02038d4cf6f5fc013c1ef7a66b2541358173095c13.txt",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/BPD_SPL_20160223_1.pdf"
+    },
+    {
+      "actual_cusip": "912828ST8",
+      "archive_memberships": 1,
+      "auction_date": "2017-04-25",
+      "discrepancies": 0,
+      "extraction_path": "documents[url].body_applicability[1]",
+      "original_issue_date": "2012-04-30",
+      "original_term_years": 7,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_C.json",
+      "series": "K-2019",
+      "source_body_paths_hashed_only": [
+        "data/source_discovery/treasury_auction/full_notices_v1/f87c0e91749d52764cf991905f7fb2678ea44bff51fb73ff212912bc79893f5a/body.pdf"
+      ],
+      "source_text_path_hashed_only": "data/source_discovery/treasury_auction/full_notice_text_v1/601e90cc4bcdedb31f8a6c42e7bc361c1d1d797a1d143ff1eb68cb01771a8d81.txt",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170425_1.pdf"
+    },
+    {
+      "actual_cusip": "912828F62",
+      "archive_memberships": 1,
+      "auction_date": "2017-10-24",
+      "discrepancies": 0,
+      "extraction_path": "documents[url].body_applicability[0].existing_security_reference",
+      "original_issue_date": "2014-10-31",
+      "original_term_years": 5,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_A.json",
+      "series": "AE-2019",
+      "source_body_paths_hashed_only": [
+        "data/source_discovery/treasury_auction/full_notices_v1/b0a2c1dfb405b52d12660904aae017898b90ff75d00c5c25d1b686cece8e4efc/body.pdf"
+      ],
+      "source_text_path_hashed_only": "data/source_discovery/treasury_auction/full_notice_text_v1/281de1183d7ac6b7bcdb6218c9208eb19d95d2ce70c547137051b49322eba239.txt",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20171024_1.pdf"
+    },
+    {
+      "actual_cusip": "912828M80",
+      "archive_memberships": 1,
+      "auction_date": "2017-11-27",
+      "discrepancies": 0,
+      "extraction_path": "documents[url].body_applicability[1]",
+      "original_issue_date": "2015-11-30",
+      "original_term_years": 7,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_B.json",
+      "series": "S-2022",
+      "source_body_paths_hashed_only": [
+        "data/source_discovery/treasury_auction/full_notices_v1/d37d85e4c63b54a3d8aff047302b51fcf98c4199d34232c2f8c98130725c74be/body.pdf"
+      ],
+      "source_text_path_hashed_only": "data/source_discovery/treasury_auction/full_notice_text_v1/0905a4cd3930581a2bfe3b62c5debff7b4e32cad56ea0d78c6a68025f6dd7cf2.txt",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20171127_1.pdf"
+    },
+    {
+      "actual_cusip": "912828N30",
+      "archive_memberships": 1,
+      "auction_date": "2017-12-27",
+      "discrepancies": 0,
+      "extraction_path": "documents[url].body_applicability[0].existing_security_reference",
+      "original_issue_date": "2015-12-31",
+      "original_term_years": 7,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_A.json",
+      "series": "T-2022",
+      "source_body_paths_hashed_only": [
+        "data/source_discovery/treasury_auction/full_notices_v1/bdc4c85cfc33cbe2738b09656dc7873d53e909cf669be7647535912e92d32af1/body.pdf"
+      ],
+      "source_text_path_hashed_only": "data/source_discovery/treasury_auction/full_notice_text_v1/cc7a0e46ee7d72f5395a34da34c665c56746ba18ce69a02923f0fe9392993ca6.txt",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20171227_1.pdf"
+    },
+    {
+      "actual_cusip": "912828C57",
+      "archive_memberships": 1,
+      "auction_date": "2019-03-26",
+      "discrepancies": 0,
+      "extraction_path": "documents[url].body_applicability[1]",
+      "original_issue_date": "2014-03-31",
+      "original_term_years": 7,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_B.json",
+      "series": "J-2021",
+      "source_body_paths_hashed_only": [
+        "data/source_discovery/treasury_auction/full_notices_v1/cf3bb226b02f1332a8d188e9ab2e5930f415babf2aa0642e440d321988eb2db8/body.pdf"
+      ],
+      "source_text_path_hashed_only": "data/source_discovery/treasury_auction/full_notice_text_v1/0274eae525477d9e1c7a8232f8163e6a5281a34eaba17923899fdf979d764a0b.txt",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190326_1.pdf"
+    },
+    {
+      "actual_cusip": "912828W71",
+      "archive_memberships": 1,
+      "auction_date": "2019-03-27",
+      "discrepancies": 0,
+      "extraction_path": "documents[url].body_applicability[1]",
+      "original_issue_date": "2017-03-31",
+      "original_term_years": 7,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_C.json",
+      "series": "J-2024",
+      "source_body_paths_hashed_only": [
+        "data/source_discovery/treasury_auction/full_notices_v1/c34c69b79e0f3f355a3062ef002d1cbafd35063e30b7491601f212f7dcbd42ca/body.pdf"
+      ],
+      "source_text_path_hashed_only": "data/source_discovery/treasury_auction/full_notice_text_v1/6fe126226dd23e331e589e253bd286d615f6918a8bae6042755489bade2c27ed.txt",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190327_1.pdf"
+    },
+    {
+      "actual_cusip": "912828WG1",
+      "archive_memberships": 1,
+      "auction_date": "2019-04-23",
+      "discrepancies": 0,
+      "extraction_path": "documents[url].body_applicability[1]",
+      "original_issue_date": "2014-04-30",
+      "original_term_years": 7,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_C.json",
+      "series": "K-2021",
+      "source_body_paths_hashed_only": [
+        "data/source_discovery/treasury_auction/full_notices_v1/c14bfbf4f2f21ef5250d21d06d312a5873fc146573c515758e6681a89fa06c0a/body.pdf"
+      ],
+      "source_text_path_hashed_only": "data/source_discovery/treasury_auction/full_notice_text_v1/889b866b08cac26357dba8e56e3cd8baba68b4329e5c9d263d700a205ba5dbe4.txt",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190423_1.pdf"
+    },
+    {
+      "actual_cusip": "912828XT2",
+      "archive_memberships": 1,
+      "auction_date": "2019-05-28",
+      "discrepancies": 0,
+      "extraction_path": "documents[url].body_applicability[1]",
+      "original_issue_date": "2017-05-31",
+      "original_term_years": 7,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_B.json",
+      "series": "L-2024",
+      "source_body_paths_hashed_only": [
+        "data/source_discovery/treasury_auction/full_notices_v1/924e414763e1fe130a0a0fe667b760d20811f7c800054642c749364ab06b870e/body.pdf"
+      ],
+      "source_text_path_hashed_only": "data/source_discovery/treasury_auction/full_notice_text_v1/bb3065697800ae7fe6cc7854ab0925cba59173cae24619df230799e29b2526b2.txt",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190528_1.pdf"
+    },
+    {
+      "actual_cusip": "912828TY6",
+      "archive_memberships": 1,
+      "auction_date": "2019-11-05",
+      "discrepancies": 0,
+      "extraction_path": "documents[url].body_applicability[1]",
+      "original_issue_date": "2012-11-15",
+      "original_term_years": 10,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_B.json",
+      "series": "F-2022",
+      "source_body_paths_hashed_only": [
+        "data/source_discovery/treasury_auction/full_notices_v1/0508357c7d7cadcf039b34e397e204853e6aa29fc87580f5fc5d3b9f8a3530b5/body.pdf"
+      ],
+      "source_text_path_hashed_only": "data/source_discovery/treasury_auction/full_notice_text_v1/f7d3276a9ddea3c46216dd8bebb17508f773e3c32dd83c94a29a01eea1a68d14.txt",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20191105_1.pdf"
+    },
+    {
+      "actual_cusip": "912828Z78",
+      "archive_memberships": 1,
+      "auction_date": "2022-01-25",
+      "discrepancies": 0,
+      "extraction_path": "documents[url].body_applicability[0].existing_security_reference",
+      "original_issue_date": "2020-01-31",
+      "original_term_years": 7,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_A.json",
+      "series": "G-2027",
+      "source_body_paths_hashed_only": [
+        "data/source_discovery/treasury_auction/full_notices_v1/3da94122b4079d57a41eac95c8aba91a575a4aa16e73866b37ef00a9eb0e3387/body.pdf"
+      ],
+      "source_text_path_hashed_only": "data/source_discovery/treasury_auction/full_notice_text_v1/fd7e3d5ea9785ee2b0ff51ade52534716ddce55bae935f3fd7b9ef33b69c22fc.txt",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2022/SPL_20220125_1.pdf"
+    },
+    {
+      "actual_cusip": "91282CGQ8",
+      "archive_memberships": 1,
+      "auction_date": "2025-02-25",
+      "discrepancies": 0,
+      "extraction_path": "documents[url].body_applicability[0].existing_security_reference",
+      "original_issue_date": "2023-02-28",
+      "original_term_years": 7,
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_A.json",
+      "series": "H-2030",
+      "source_body_paths_hashed_only": [
+        "data/source_discovery/treasury_auction/full_notices_v1/dcbdd409f7afe66084bd99248c6389568ae068a3541faa1dfa9b9c67e2190a5f/body.pdf"
+      ],
+      "source_text_path_hashed_only": "data/source_discovery/treasury_auction/full_notice_text_v1/102e1aa92d7e3719e397dc03ba3dbe6b6f6928a34a4757e648aadcf9d02a77af.txt",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250225_1.pdf"
+    }
+  ],
+  "result_documents_bound": false,
+  "reviewer": "peak_age_admission",
+  "source_history_admitted": false,
+  "status": "VERIFIED_METADATA_TRANSCRIPTION"
+}

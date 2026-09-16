@@ -1,0 +1,27 @@
+.....EE...........
+======================================================================
+ERROR: test_all_four_phase_inferences_calibration_and_121_trial_events (tests.test_verify_sign_memory.InferenceContracts.test_all_four_phase_inferences_calibration_and_121_trial_events)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_sign_memory.py", line 267, in test_all_four_phase_inferences_calibration_and_121_trial_events
+    with patch.object(verify,'inherited_rows',return_value=prior):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.verify_sign_memory' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_sign_memory.py'> does not have the attribute 'inherited_rows'
+
+======================================================================
+ERROR: test_invalid_probabilities_and_nonzero_square_underflow_rejected (tests.test_verify_sign_memory.InferenceContracts.test_invalid_probabilities_and_nonzero_square_underflow_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_sign_memory.py", line 287, in test_invalid_probabilities_and_nonzero_square_underflow_rejected
+    with self.assertRaises(ValueError):verify.brier_loss(np.array([-1e-13]),np.array([0.]))
+                                       ^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_sign_memory' has no attribute 'brier_loss'
+
+----------------------------------------------------------------------
+Ran 18 tests in 1.023s
+
+FAILED (errors=2)

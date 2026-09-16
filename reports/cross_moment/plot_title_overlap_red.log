@@ -1,0 +1,14 @@
+test_render_preserves_unscaled_intervals_threshold_and_writes_png_and_pdf (tests.test_plot_cross_moment.PlotContracts.test_render_preserves_unscaled_intervals_threshold_and_writes_png_and_pdf) ... FAIL
+
+======================================================================
+FAIL: test_render_preserves_unscaled_intervals_threshold_and_writes_png_and_pdf (tests.test_plot_cross_moment.PlotContracts.test_render_preserves_unscaled_intervals_threshold_and_writes_png_and_pdf)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_plot_cross_moment.py", line 176, in test_render_preserves_unscaled_intervals_threshold_and_writes_png_and_pdf
+    self.assertFalse(
+AssertionError: np.True_ is not false
+
+----------------------------------------------------------------------
+Ran 1 test in 0.382s
+
+FAILED (failures=1)

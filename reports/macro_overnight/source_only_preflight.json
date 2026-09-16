@@ -1,0 +1,29 @@
+{
+  "cpi": {
+    "records": 190,
+    "admitted": 168,
+    "states": {
+      "VERIFIED_EXPLICIT_PLAN": 168,
+      "ORIGINAL_VINTAGE_UNCERTAIN": 17,
+      "AMBIGUOUS_PRINTED_TIMESTAMP_OR_ID": 4,
+      "OUTSIDE_PUBLICATION_FENCE": 1
+    }
+  },
+  "nfp": {
+    "records": 190,
+    "admitted": 176,
+    "states": {
+      "ORIGINAL_VINTAGE_UNCERTAIN": 13,
+      "EXPLICIT_ORIGINAL_PLAN": 176,
+      "OUTSIDE_PUBLICATION_FENCE": 1
+    }
+  },
+  "fomc": {
+    "annual_documents": 16,
+    "planned_meetings": 128
+  },
+  "calendar_complete_before_2016": 1122,
+  "calendar_complete_in_forecast_window": 2099,
+  "read_scope": "Dates and documentary plans only; no prices, targets, model fits or forecast scores",
+  "original_nfp_ledger_sha256": "b64110b8cf4951c0adf7ceb3f444e7970e069eaf06f7bb59fcd72b68ced0b248"
+}

@@ -1,0 +1,57 @@
+test_all_gates_mandatory (tests.test_range_alert_search.RangeAlertContractTests.test_all_gates_mandatory) ... ok
+test_bool_cannot_replace_numeric (tests.test_range_alert_search.RangeAlertContractTests.test_bool_cannot_replace_numeric) ... ok
+test_both_controls_required (tests.test_range_alert_search.RangeAlertContractTests.test_both_controls_required) ... ok
+test_complete_inherited_family (tests.test_range_alert_search.RangeAlertContractTests.test_complete_inherited_family) ... ok
+test_direct_brier_difference_and_identical_forecasts (tests.test_range_alert_search.RangeAlertContractTests.test_direct_brier_difference_and_identical_forecasts) ... ok
+test_every_leaf_change_rejected (tests.test_range_alert_search.RangeAlertContractTests.test_every_leaf_change_rejected) ... ok
+test_extra_contract_key_rejected (tests.test_range_alert_search.RangeAlertContractTests.test_extra_contract_key_rejected) ... ok
+test_failure_retains_two_p1 (tests.test_range_alert_search.RangeAlertContractTests.test_failure_retains_two_p1) ... ok
+test_inherited_files_pinned_before_decode (tests.test_range_alert_search.RangeAlertContractTests.test_inherited_files_pinned_before_decode) ... ok
+test_literal_contract (tests.test_range_alert_search.RangeAlertContractTests.test_literal_contract) ... ok
+test_phase_bandwidth_not_shortened (tests.test_range_alert_search.RangeAlertContractTests.test_phase_bandwidth_not_shortened) ... ok
+test_probability_domain (tests.test_range_alert_search.RangeAlertContractTests.test_probability_domain) ... ok
+test_source_hash_mismatch_before_loader (tests.test_range_alert_search.RangeAlertContractTests.test_source_hash_mismatch_before_loader) ... ok
+test_source_path_escape_rejected (tests.test_range_alert_search.RangeAlertContractTests.test_source_path_escape_rejected) ... ok
+test_zero_difference_inference_is_p1 (tests.test_range_alert_search.RangeAlertContractTests.test_zero_difference_inference_is_p1) ... ok
+test_atomic_serialization_failure_keeps_prior_ledger (tests.test_range_alert_publication.PublicationTests.test_atomic_serialization_failure_keeps_prior_ledger) ... ok
+test_checked_json_identity_before_parsing (tests.test_range_alert_publication.PublicationTests.test_checked_json_identity_before_parsing) ... ok
+test_existing_private_output_never_overwritten (tests.test_range_alert_publication.PublicationTests.test_existing_private_output_never_overwritten) ... ok
+test_existing_registration_never_overwritten (tests.test_range_alert_publication.PublicationTests.test_existing_registration_never_overwritten) ... ok
+test_inherited_failure_still_registers_both_and_declares_missing_history (tests.test_range_alert_publication.PublicationTests.test_inherited_failure_still_registers_both_and_declares_missing_history) ... ok
+test_partial_registration_preserved_and_terminal_family_repaired (tests.test_range_alert_publication.PublicationTests.test_partial_registration_preserved_and_terminal_family_repaired) ... ok
+test_pretests_fail_before_registration (tests.test_range_alert_publication.PublicationTests.test_pretests_fail_before_registration) ... ok
+test_protocol_mutation_during_checks_prevents_registration (tests.test_range_alert_publication.PublicationTests.test_protocol_mutation_during_checks_prevents_registration) ... ok
+test_report_and_partial_evaluated_failures_preserve_diagnostics (tests.test_range_alert_publication.PublicationTests.test_report_and_partial_evaluated_failures_preserve_diagnostics) ... 
+  test_report_and_partial_evaluated_failures_preserve_diagnostics (tests.test_range_alert_publication.PublicationTests.test_report_and_partial_evaluated_failures_preserve_diagnostics) (mode='evaluated') ... ERROR
+test_source_failure_keeps_all_registration_and_p1 (tests.test_range_alert_publication.PublicationTests.test_source_failure_keeps_all_registration_and_p1) ... ok
+test_source_manifest_pin_also_required (tests.test_range_alert_publication.PublicationTests.test_source_manifest_pin_also_required) ... ok
+test_source_snapshot_survives_original_replacement (tests.test_range_alert_publication.PublicationTests.test_source_snapshot_survives_original_replacement) ... ok
+test_application_cohort_cannot_shrink_and_bounded_brier_scores_are_valid (tests.test_plot_range_alert.PlotContracts.test_application_cohort_cannot_shrink_and_bounded_brier_scores_are_valid) ... ok
+test_complete_two_contrast_four_phase_same_row_family_required (tests.test_plot_range_alert.PlotContracts.test_complete_two_contrast_four_phase_same_row_family_required) ... ok
+test_counts_are_validated_without_fixed_empirical_expectations (tests.test_plot_range_alert.PlotContracts.test_counts_are_validated_without_fixed_empirical_expectations) ... ok
+test_every_independent_cohort_count_matches_metrics (tests.test_plot_range_alert.PlotContracts.test_every_independent_cohort_count_matches_metrics) ... ok
+test_exact_order_literal_values_and_no_input_mutation (tests.test_plot_range_alert.PlotContracts.test_exact_order_literal_values_and_no_input_mutation) ... ok
+test_finite_proper_losses_ordered_intervals_and_probabilities (tests.test_plot_range_alert.PlotContracts.test_finite_proper_losses_ordered_intervals_and_probabilities) ... ok
+test_invalid_input_creates_no_artifacts_and_main_failure_blocks_rendering (tests.test_plot_range_alert.PlotContracts.test_invalid_input_creates_no_artifacts_and_main_failure_blocks_rendering) ... ok
+test_literal_intervals_zero_threshold_and_readable_render (tests.test_plot_range_alert.PlotContracts.test_literal_intervals_zero_threshold_and_readable_render) ... ok
+test_replay_threshold_and_cumulative_family_are_not_previous_wave (tests.test_plot_range_alert.PlotContracts.test_replay_threshold_and_cumulative_family_are_not_previous_wave) ... ok
+test_separate_scales_preserve_small_comparison_and_no_single_control_lead (tests.test_plot_range_alert.PlotContracts.test_separate_scales_preserve_small_comparison_and_no_single_control_lead) ... ok
+test_verified_current_identity_success_family_and_reconstruction_counts_required (tests.test_plot_range_alert.PlotContracts.test_verified_current_identity_success_family_and_reconstruction_counts_required) ... ok
+
+======================================================================
+ERROR: test_report_and_partial_evaluated_failures_preserve_diagnostics (tests.test_range_alert_publication.PublicationTests.test_report_and_partial_evaluated_failures_preserve_diagnostics) (mode='evaluated')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_range_alert_publication.py", line 247, in test_report_and_partial_evaluated_failures_preserve_diagnostics
+    s.run()
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/range_alert_search.py", line 965, in run
+    report(metrics)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/range_alert_search.py", line 683, in report
+    f"| {row['control']} | {d['delta']:+.8f} | {e['delta']:+.8f} | {row['p_holm_wave']:.8f} | {row['p_holm_cumulative']:.8f} | {row['verdict']} |"
+                                                                                                                                ~~~^^^^^^^^^^^
+KeyError: 'verdict'
+
+----------------------------------------------------------------------
+Ran 38 tests in 1.203s
+
+FAILED (errors=1)

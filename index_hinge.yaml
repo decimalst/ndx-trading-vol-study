@@ -1,0 +1,80 @@
+study_id: index_hinge_wave06
+specified_on: '2026-09-07'
+status: specified_before_empirical_scores
+objective: Test a training-centered asymmetric implied-versus-trailing-proxy gap for medium-horizon SPX price returns
+wave: 6
+wave_alpha: 0.0011904761904761906
+evidence_class: exploratory_reused_history_archival_price_index_returns
+sources:
+  daily: data/research_paths/spx_daily.parquet
+  vix: data/free_sources/raw/cboe/VIX_History.csv
+  vix9d: data/free_sources/raw/cboe/VIX9D_History.csv
+  vvix: data/free_sources/raw/cboe/VVIX_History.csv
+source_contract:
+  price: raw SPX OHLC; Yahoo price index, no dividends or risk-free subtraction; no fund execution claim
+  vintage: existing archival Yahoo and Cboe extracts; historical revisions and exact release latency unverified
+  vix9d: January2011-October2013 back-calculated archival training values; not available at original observation dates
+  missing: preserve observed SPX reference calendar before rolling; no filling; strict complete windows
+  timing: every market feature ends at previous observed SPX session; entry weekday only calendar feature
+  variance_proxy: max(Garman-Klass daily variance,1e-10) plus squared raw overnight log return
+  scale: annualization252 is explicit convention; VIX30calendar-day variance and trailing22trading-session OHLC proxy differ
+  interpretation: log implied-versus-trailing-proxy gap; neither measured variance risk premium nor replication of high-frequency premium research
+index:
+  asset: SPX
+  source_end: '2025-10-20'
+  sealed_start: '2025-11-03'
+  origin_start: '2016-01-04'
+  origin_end: '2025-10-17'
+  latest_target: '2025-10-20'
+  development: ['2016-01-04', '2019-12-31']
+  development_target_available_by: '2019-12-31'
+  evaluation: ['2020-01-02', '2025-10-17']
+  evaluation_stability: [['2020-01-02', '2022-12-31'], ['2023-01-01', '2025-10-17']]
+  horizons: [21, 63]
+  models: [mean, baseline, hinge]
+  raw: [const, I, R, ret_d, ret_w, ret_m, ret_q, lr_d, lr_w, term, lvvix, entry_dow_1, entry_dow_2, entry_dow_3, entry_dow_4]
+  baseline: [const, I, R, ret_d, ret_w, ret_m, ret_q, lr_d, lr_w, term, lvvix, entry_dow_1, entry_dow_2, entry_dow_3, entry_dow_4, I_square, R_square]
+  implied: log((VIX/100)^2)
+  realized: log(252 times strict trailing22 mean daily variance proxy)
+  return_features: strict means of raw SPX close logreturns over1/5/22/63sessions
+  risk_features: log252 times strict trailing mean variance proxy over1/5sessions
+  iv_controls: log(VIX9D/VIX) and logVVIX
+  market_lag: 1
+  curvature: squared I and R centered separately on exact admitted training rows at each monthly horizon fit
+  hinge: max((I-R)-mean_training(I-R),0); no threshold search
+  common_sample: identical complete15rawfeature finite matured label rows across3models within each horizon; horizons need not share rows
+  training_availability: origin before fit and target_end no later than preceding observed SPX session of fit
+  target: log(raw_close[t+h]/raw_close[t]); target_end and available_date both observed session t+h close
+  fit_schedule: monthly first raw-feature-complete entry; application includes all complete entries before filtering future outcomes
+  minimum_train: 1000
+  penalty: 0.01
+  objective: mean squared error plus0.01 standardized slope squared norm; unpenalized intercept
+  feature_scaling: population mean and standard deviation on exact training rows after derived transforms; any17nonintercept scale<=1e-12 aborts whole wave
+  effect_threshold_relative: 0.0025
+comparisons:
+  candidates: [hinge]
+  controls: [baseline, mean]
+  new_hypotheses: 4
+  inherited_hypotheses: 99
+  cumulative_hypotheses: 103
+  inherited_sources: [reports/orthogonal_round2/metrics.json, reports/model_memory_study/combined_metrics.json, reports/iterative_signal_search/metrics.json, reports/international_volatility/metrics.json, reports/overnight_index/metrics.json, reports/macro_overnight/metrics.json, reports/measurement_memory/metrics.json]
+  gate: per horizon must beat both controls by at least0.25percent MSE in both phases; waveHolm4<1/840 and cumulativeHolm103<0.05; negative paired gaps in both evaluation slices and every21or63nonoverlapoffset in both phases
+  no_overlap_selection: all offsets anchored to position modulo horizon in full bounded SPX calendar; every offset must be nonempty and improve; no best-offset selection
+inference:
+  loss: squared cumulative log-price-return prediction error
+  blocks: [126, 252, 504]
+  hac_lags: 504
+  minimum_phase_observations: 505
+  block_units: consecutive retained paired forecast observations; missing dates and boundary exclusions reported; no imputation
+  bootstrap_draws: 99999
+  seed: 20260912
+  seed_rule: seed+horizon*1000000+phase_code*10000+block;development0,evaluation1;shared resampling across controls within horizon
+  resolution: minp1/100000 is below one tenth of strictest waveHolm cutoff1/3360 namely1/33600
+  p_phase: maximum two-sided centered-null circular bootstrap p across allblocks and Bartlett HAC504 p
+  p_hypothesis: maximum development and evaluation p
+  failure_rule: any registered fitting scoring validation or output failure retains all4 hypotheses as unevaluablep1; no post-result amendment
+  reporting: all4paired contrasts with absolute and relative MSE effects, intervals, annual coverage, all nonoverlap offsets, fixed stability slices and nominal MDE
+  limitations: dependence after overlapping targets, few nonoverlapping quarters, historical reuse and source-vintage uncertainty remain despite conservative gates
+outputs:
+  data: data/index_hinge
+  reports: reports/index_hinge

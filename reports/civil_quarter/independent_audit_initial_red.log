@@ -1,0 +1,13 @@
+E
+======================================================================
+ERROR: test_saved_producer_audits_replay_and_coefficient_geometry_tampering_reject (tests.test_verify_civil_quarter.PositiveMomentContracts.test_saved_producer_audits_replay_and_coefficient_geometry_tampering_reject)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_civil_quarter.py", line 97, in test_saved_producer_audits_replay_and_coefficient_geometry_tampering_reject
+    from src import civil_quarter_models as model
+ImportError: cannot import name 'civil_quarter_models' from 'src' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/__init__.py)
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

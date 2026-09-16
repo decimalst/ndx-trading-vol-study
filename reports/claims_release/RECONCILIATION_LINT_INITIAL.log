@@ -1,0 +1,44 @@
+I001 [*] Import block is un-sorted or un-formatted
+  --> src/claims_release_reconcile.py:7:1
+   |
+ 5 |   """
+ 6 |
+ 7 | / from __future__ import annotations
+ 8 | |
+ 9 | | import calendar
+10 | | import hashlib
+11 | | import re
+12 | | from datetime import date, timedelta
+13 | | from urllib.parse import urlsplit
+   | |_________________________________^
+help: Organize imports
+   |
+14 |
+   -
+15 | SOURCE_CEILING = date(2025, 10, 20)
+   |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_claims_release_reconcile.py:234:35
+    |
+232 |                              ("observation_date", "2018-11-18"),
+233 |                              ("alfred_realtime_start_date", "2025-10-21")]:
+234 |             bad = record_fixture();bad[field] = value
+    |                                   ^
+235 |             with self.subTest(field=field, value=value), self.assertRaises(ValueError):
+236 |                 reconcile.reconcile_reports([bad], [report_fixture()])
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_claims_release_reconcile.py:244:35
+    |
+242 |                              ("body_release_date_verified", "true"),
+243 |                              ("body_release_dates", ["2018-11-22"])]:
+244 |             bad = report_fixture();bad[field] = value
+    |                                   ^
+245 |             with self.subTest(field=field, value=value), self.assertRaises(ValueError):
+246 |                 reconcile.reconcile_reports([record_fixture()], [bad])
+    |
+
+Found 3 errors.
+[*] 1 fixable with the `--fix` option.

@@ -1,0 +1,121 @@
+Generated ledger final checks after prewritten serialized-zero correction. No historical financial payloads read.
+Command: .venv/bin/python -m unittest tests.test_treasury_dealer_ledger -v
+Exit status: 0
+test_additive_recovery_preserves_original_disposition (tests.test_treasury_dealer_ledger.TreasuryDealerLedgerTests.test_additive_recovery_preserves_original_disposition) ... ok
+test_all_sixteen_fields_and_offering_sources_checked (tests.test_treasury_dealer_ledger.TreasuryDealerLedgerTests.test_all_sixteen_fields_and_offering_sources_checked) ... ok
+test_clock_scope_dates_and_evidence_never_default (tests.test_treasury_dealer_ledger.TreasuryDealerLedgerTests.test_clock_scope_dates_and_evidence_never_default) ... ok
+test_exact_known_mapping_and_schema_without_fraction (tests.test_treasury_dealer_ledger.TreasuryDealerLedgerTests.test_exact_known_mapping_and_schema_without_fraction) ... ok
+test_exact_order_membership_no_ignored_extra_or_duplicate (tests.test_treasury_dealer_ledger.TreasuryDealerLedgerTests.test_exact_order_membership_no_ignored_extra_or_duplicate) ... ok
+test_missing_notice_requires_exact_additive_closure_and_exclusion_evidence (tests.test_treasury_dealer_ledger.TreasuryDealerLedgerTests.test_missing_notice_requires_exact_additive_closure_and_exclusion_evidence) ... ok
+test_recovery_cannot_override_old_known_or_excluded (tests.test_treasury_dealer_ledger.TreasuryDealerLedgerTests.test_recovery_cannot_override_old_known_or_excluded) ... ok
+test_source_inputs_and_returned_provenance_are_independent_copies (tests.test_treasury_dealer_ledger.TreasuryDealerLedgerTests.test_source_inputs_and_returned_provenance_are_independent_copies) ... ok
+test_two_unknown_clocks_preserve_exact_and_upper_bound_distinction (tests.test_treasury_dealer_ledger.TreasuryDealerLedgerTests.test_two_unknown_clocks_preserve_exact_and_upper_bound_distinction) ... ok
+test_zero_dealer_is_known_but_unknown_is_never_zeroed (tests.test_treasury_dealer_ledger.TreasuryDealerLedgerTests.test_zero_dealer_is_known_but_unknown_is_never_zeroed) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.003s
+
+OK
+
+Command: .venv/bin/ruff check src/treasury_dealer_ledger.py tests/test_treasury_dealer_ledger.py
+Exit status: 1
+RUF021 [*] Parenthesize `a and b` expressions when chaining `and` and `or` together, to make the precedence clear
+   --> src/treasury_dealer_ledger.py:355:13
+    |
+353 |               complete.add(name)
+354 |           elif (
+355 | /             row.get("status") == "IDENTITY_REQUIRES_REVIEW"
+356 | |             and account.get("status") == MISSING
+    | |________________________________________________^
+357 |               or row.get("status") == PAIRED
+358 |               and account.get("status") == NOTICE_MISSING
+    |
+help: Parenthesize the `and` subexpression
+    |
+354 |         elif (
+    -             row.get("status") == "IDENTITY_REQUIRES_REVIEW"
+    -             and account.get("status") == MISSING
+355 +             (row.get("status") == "IDENTITY_REQUIRES_REVIEW"
+356 +             and account.get("status") == MISSING)
+357 |             or row.get("status") == PAIRED
+    |
+
+RUF021 [*] Parenthesize `a and b` expressions when chaining `and` and `or` together, to make the precedence clear
+   --> src/treasury_dealer_ledger.py:357:16
+    |
+355 |               row.get("status") == "IDENTITY_REQUIRES_REVIEW"
+356 |               and account.get("status") == MISSING
+357 |               or row.get("status") == PAIRED
+    |  ________________^
+358 | |             and account.get("status") == NOTICE_MISSING
+359 | |             and row["unavailable_notice_urls"]
+    | |______________________________________________^
+360 |           ):
+361 |               unknown.add(name)
+    |
+help: Parenthesize the `and` subexpression
+    |
+356 |             and account.get("status") == MISSING
+    -             or row.get("status") == PAIRED
+357 +             or (row.get("status") == PAIRED
+358 |             and account.get("status") == NOTICE_MISSING
+    -             and row["unavailable_notice_urls"]
+359 +             and row["unavailable_notice_urls"])
+360 |         ):
+    |
+
+C420 [*] Unnecessary dict comprehension for iterable; use `dict.fromkeys` instead
+  --> tests/test_treasury_dealer_ledger.py:92:24
+   |
+90 |         known_notice_dispositions=copy.deepcopy(row["known_notice_dispositions"]),
+91 |         unavailable_notice_urls=copy.deepcopy(row["unavailable_notice_urls"]),
+92 |         stage_statuses={k: "PARSED" for k in ("result_xml", "result_pdf", "offering")},
+   |                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+93 |         mismatched_fields=[],
+94 |         paired_field_comparisons=16,
+   |
+help: Replace with `dict.fromkeys(iterable)`)
+   |
+91 |         unavailable_notice_urls=copy.deepcopy(row["unavailable_notice_urls"]),
+   -         stage_statuses={k: "PARSED" for k in ("result_xml", "result_pdf", "offering")},
+92 +         stage_statuses=dict.fromkeys(("result_xml", "result_pdf", "offering"), "PARSED"),
+93 |         mismatched_fields=[],
+   |
+
+Found 3 errors.
+[*] 3 fixable with the `--fix` option.
+
+src/treasury_dealer_ledger.py SHA256 92a9c50220946684ad79e270628bea80c9a2303b45f010b8bd244ac530ca3e9e
+tests/test_treasury_dealer_ledger.py SHA256 3ad075c537cd7cbc0a62c1d57f59f9b8973b377e65c0fc846164ba10b8634114
+reports/treasury_dealer/LEDGER_CONTRACT.md SHA256 c16e3c892d1432ac65808d15adbcfe218915706a8a715770f3eff884d9dc4fd9
+reports/treasury_dealer/LEDGER_RED.log SHA256 343942824c08a08238c21117e95dbd1200142cdaba2e1bd905c838dbe127a323
+reports/treasury_dealer/LEDGER_FIRST_IMPLEMENTATION.log SHA256 f09e1d5b40bde5eb8b71191bb0320ee9e79fefb812b778f02e578e8c7e4a5090
+reports/treasury_dealer/LEDGER_DECIMAL_SERIALIZATION_RED.log SHA256 5df568e9e5c2e47cac6e00e8711b411e5aae11a3004d5bdde3febf386a465893
+
+
+FINAL GREEN after cosmetic parentheses/dict.fromkeys lint corrections. Earlier lint findings retained above; no numerical contract changed.
+Command: .venv/bin/python -m unittest tests.test_treasury_dealer_ledger -v
+Exit status: 0
+test_additive_recovery_preserves_original_disposition (tests.test_treasury_dealer_ledger.TreasuryDealerLedgerTests.test_additive_recovery_preserves_original_disposition) ... ok
+test_all_sixteen_fields_and_offering_sources_checked (tests.test_treasury_dealer_ledger.TreasuryDealerLedgerTests.test_all_sixteen_fields_and_offering_sources_checked) ... ok
+test_clock_scope_dates_and_evidence_never_default (tests.test_treasury_dealer_ledger.TreasuryDealerLedgerTests.test_clock_scope_dates_and_evidence_never_default) ... ok
+test_exact_known_mapping_and_schema_without_fraction (tests.test_treasury_dealer_ledger.TreasuryDealerLedgerTests.test_exact_known_mapping_and_schema_without_fraction) ... ok
+test_exact_order_membership_no_ignored_extra_or_duplicate (tests.test_treasury_dealer_ledger.TreasuryDealerLedgerTests.test_exact_order_membership_no_ignored_extra_or_duplicate) ... ok
+test_missing_notice_requires_exact_additive_closure_and_exclusion_evidence (tests.test_treasury_dealer_ledger.TreasuryDealerLedgerTests.test_missing_notice_requires_exact_additive_closure_and_exclusion_evidence) ... ok
+test_recovery_cannot_override_old_known_or_excluded (tests.test_treasury_dealer_ledger.TreasuryDealerLedgerTests.test_recovery_cannot_override_old_known_or_excluded) ... ok
+test_source_inputs_and_returned_provenance_are_independent_copies (tests.test_treasury_dealer_ledger.TreasuryDealerLedgerTests.test_source_inputs_and_returned_provenance_are_independent_copies) ... ok
+test_two_unknown_clocks_preserve_exact_and_upper_bound_distinction (tests.test_treasury_dealer_ledger.TreasuryDealerLedgerTests.test_two_unknown_clocks_preserve_exact_and_upper_bound_distinction) ... ok
+test_zero_dealer_is_known_but_unknown_is_never_zeroed (tests.test_treasury_dealer_ledger.TreasuryDealerLedgerTests.test_zero_dealer_is_known_but_unknown_is_never_zeroed) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.003s
+
+OK
+
+Command: .venv/bin/ruff check src/treasury_dealer_ledger.py tests/test_treasury_dealer_ledger.py
+Exit status: 0
+All checks passed!
+
+src/treasury_dealer_ledger.py SHA256 a8819de119ed31c64597f8ff8d34f2f76294511cbb747999203bd6d928de8434
+tests/test_treasury_dealer_ledger.py SHA256 9f43318f7111dbc2f7f07d75aed1fd2ba3714c2fa60d4019c6137a6a298fb569
+reports/treasury_dealer/LEDGER_CONTRACT.md SHA256 c16e3c892d1432ac65808d15adbcfe218915706a8a715770f3eff884d9dc4fd9

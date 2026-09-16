@@ -1,0 +1,70 @@
+{
+  "status": "VERIFIED",
+  "upstream_admission": {
+    "status": "UPSTREAM_VERIFIED_READ_ONLY",
+    "prior_files_written": false
+  },
+  "forecast_reconstruction": {
+    "new_monthly_fits": 0,
+    "new_forecasts_verified": 4924,
+    "preserved_forecasts_verified": 2462,
+    "forecasts_verified": 7386,
+    "common_scored_origins": 2462,
+    "common_application_origins": 2463,
+    "application_states_verified": 2463,
+    "full_calendar_states_reconstructed": 2463,
+    "post_seed_label_updates_verified": 2462
+  },
+  "primitive_brier_scores_verified": 7386,
+  "paired_brier_differences_verified": 4924,
+  "inference": {
+    "new_hypotheses_verified": 2,
+    "cumulative_hypotheses_verified": 121,
+    "phase_comparisons_verified": 4,
+    "bootstrap_runs_verified": 12,
+    "bootstrap_draws_per_run": 99999,
+    "calibration_rows_verified": 6,
+    "class_support": {
+      "development": {
+        "n": 1005,
+        "events": 815,
+        "nonevents": 190
+      },
+      "evaluation": {
+        "n": 1457,
+        "events": 1257,
+        "nonevents": 200
+      },
+      "evaluation_slices": [
+        {
+          "start": "2020-01-02",
+          "end": "2022-12-31",
+          "n": 756,
+          "events": 646,
+          "nonevents": 110
+        },
+        {
+          "start": "2023-01-01",
+          "end": "2025-10-17",
+          "n": 701,
+          "events": 611,
+          "nonevents": 90
+        }
+      ]
+    },
+    "leads": []
+  },
+  "ledger_events_verified": {
+    "inherited": 119,
+    "registered": 2,
+    "evaluated": 2
+  },
+  "protocol_sha256": "1e329ee208612ed8db1fede873b92a938820d51a3fcf2ec583c813d37ac000ad",
+  "verifier_sha256": "cb34da06786f61e50b89f494e4071abb8d250539a52145d782cc1e122aeaa900",
+  "limitations": [
+    "One fixed pool of an unchanged conditional probability and a causal unconditional event-rate filter; no fitted calibration coefficient or new conditional feature.",
+    "The initial mass summarizes only the first original eligible training subset; subsequent labels use the full calendar and mature target table, including previously unscored origins.",
+    "Adaptively selected exploratory comparison on reused archival QQQ ETF/SPX price-index history; preserved multiplicity and causal replay do not provide a new untouched validation sample.",
+    "Strict raw directional agreement, not volatility magnitude, covariance, executable direction or profit; calibration in the large and nominal detectable effect remain descriptive."
+  ]
+}

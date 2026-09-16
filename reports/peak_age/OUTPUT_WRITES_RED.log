@@ -1,0 +1,94 @@
+test_pre_run_evidence_symlink_cannot_overwrite_existing_sentinel (tests.test_peak_age_publication.PeakAgePublicationContracts.test_pre_run_evidence_symlink_cannot_overwrite_existing_sentinel) ... FAIL
+test_success_and_failure_report_symlinks_cannot_overwrite_existing_sentinel (tests.test_peak_age_publication.PeakAgePublicationContracts.test_success_and_failure_report_symlinks_cannot_overwrite_existing_sentinel) ... 
+  test_success_and_failure_report_symlinks_cannot_overwrite_existing_sentinel (tests.test_peak_age_publication.PeakAgePublicationContracts.test_success_and_failure_report_symlinks_cannot_overwrite_existing_sentinel) (mode='success') ... FAIL
+  test_success_and_failure_report_symlinks_cannot_overwrite_existing_sentinel (tests.test_peak_age_publication.PeakAgePublicationContracts.test_success_and_failure_report_symlinks_cannot_overwrite_existing_sentinel) (mode='failure') ... FAIL
+test_all_five_parquet_output_symlinks_preserve_existing_sentinels (tests.test_peak_age_publication.PeakAgePublicationContracts.test_all_five_parquet_output_symlinks_preserve_existing_sentinels) ... 
+  test_all_five_parquet_output_symlinks_preserve_existing_sentinels (tests.test_peak_age_publication.PeakAgePublicationContracts.test_all_five_parquet_output_symlinks_preserve_existing_sentinels) (name='features') ... FAIL
+  test_all_five_parquet_output_symlinks_preserve_existing_sentinels (tests.test_peak_age_publication.PeakAgePublicationContracts.test_all_five_parquet_output_symlinks_preserve_existing_sentinels) (name='targets') ... FAIL
+  test_all_five_parquet_output_symlinks_preserve_existing_sentinels (tests.test_peak_age_publication.PeakAgePublicationContracts.test_all_five_parquet_output_symlinks_preserve_existing_sentinels) (name='feature_states') ... FAIL
+  test_all_five_parquet_output_symlinks_preserve_existing_sentinels (tests.test_peak_age_publication.PeakAgePublicationContracts.test_all_five_parquet_output_symlinks_preserve_existing_sentinels) (name='forecasts') ... FAIL
+  test_all_five_parquet_output_symlinks_preserve_existing_sentinels (tests.test_peak_age_publication.PeakAgePublicationContracts.test_all_five_parquet_output_symlinks_preserve_existing_sentinels) (name='application_states') ... FAIL
+test_interrupted_ledger_backup_symlink_preserves_existing_sentinel_and_recovery (tests.test_peak_age_publication.PeakAgePublicationContracts.test_interrupted_ledger_backup_symlink_preserves_existing_sentinel_and_recovery) ... FAIL
+
+======================================================================
+FAIL: test_pre_run_evidence_symlink_cannot_overwrite_existing_sentinel (tests.test_peak_age_publication.PeakAgePublicationContracts.test_pre_run_evidence_symlink_cannot_overwrite_existing_sentinel)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 546, in test_pre_run_evidence_symlink_cannot_overwrite_existing_sentinel
+    self.assertEqual(sentinel.read_bytes(), original)
+AssertionError: b'generated checks' != b'existing pretest sentinel remains exact\n'
+
+======================================================================
+FAIL: test_success_and_failure_report_symlinks_cannot_overwrite_existing_sentinel (tests.test_peak_age_publication.PeakAgePublicationContracts.test_success_and_failure_report_symlinks_cannot_overwrite_existing_sentinel) (mode='success')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 583, in test_success_and_failure_report_symlinks_cannot_overwrite_existing_sentinel
+    self.assertEqual(sentinel.read_bytes(), original)
+AssertionError: b'# Trailing peak age and SPX21-session ret[662 chars]t.\n' != b'existing report sentinel remains exact\n'
+
+======================================================================
+FAIL: test_success_and_failure_report_symlinks_cannot_overwrite_existing_sentinel (tests.test_peak_age_publication.PeakAgePublicationContracts.test_success_and_failure_report_symlinks_cannot_overwrite_existing_sentinel) (mode='failure')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 583, in test_success_and_failure_report_symlinks_cannot_overwrite_existing_sentinel
+    self.assertEqual(sentinel.read_bytes(), original)
+AssertionError: b'# Peak age and SPX returns\n\nUNEVALUABLE[49 chars]d.\n' != b'existing report sentinel remains exact\n'
+
+======================================================================
+FAIL: test_all_five_parquet_output_symlinks_preserve_existing_sentinels (tests.test_peak_age_publication.PeakAgePublicationContracts.test_all_five_parquet_output_symlinks_preserve_existing_sentinels) (name='features')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 610, in test_all_five_parquet_output_symlinks_preserve_existing_sentinels
+    self.assertEqual(sentinel.read_bytes(), original)
+AssertionError: b'PAR1\x15\x04\x15 \x15$L\x15\x04\x15\x00\x[4392 chars]PAR1' != b'existing parquet sentinel remains exact\n'
+
+======================================================================
+FAIL: test_all_five_parquet_output_symlinks_preserve_existing_sentinels (tests.test_peak_age_publication.PeakAgePublicationContracts.test_all_five_parquet_output_symlinks_preserve_existing_sentinels) (name='targets')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 610, in test_all_five_parquet_output_symlinks_preserve_existing_sentinels
+    self.assertEqual(sentinel.read_bytes(), original)
+AssertionError: b'PAR1\x15\x04\x15 \x15$L\x15\x04\x15\x00\x[4392 chars]PAR1' != b'existing parquet sentinel remains exact\n'
+
+======================================================================
+FAIL: test_all_five_parquet_output_symlinks_preserve_existing_sentinels (tests.test_peak_age_publication.PeakAgePublicationContracts.test_all_five_parquet_output_symlinks_preserve_existing_sentinels) (name='feature_states')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 610, in test_all_five_parquet_output_symlinks_preserve_existing_sentinels
+    self.assertEqual(sentinel.read_bytes(), original)
+AssertionError: b'PAR1\x15\x04\x15 \x15$L\x15\x04\x15\x00\x[4392 chars]PAR1' != b'existing parquet sentinel remains exact\n'
+
+======================================================================
+FAIL: test_all_five_parquet_output_symlinks_preserve_existing_sentinels (tests.test_peak_age_publication.PeakAgePublicationContracts.test_all_five_parquet_output_symlinks_preserve_existing_sentinels) (name='forecasts')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 610, in test_all_five_parquet_output_symlinks_preserve_existing_sentinels
+    self.assertEqual(sentinel.read_bytes(), original)
+AssertionError: b'PAR1\x15\x04\x15\x10\x15\x14L\x15\x02\x15[8345 chars]PAR1' != b'existing parquet sentinel remains exact\n'
+
+======================================================================
+FAIL: test_all_five_parquet_output_symlinks_preserve_existing_sentinels (tests.test_peak_age_publication.PeakAgePublicationContracts.test_all_five_parquet_output_symlinks_preserve_existing_sentinels) (name='application_states')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 610, in test_all_five_parquet_output_symlinks_preserve_existing_sentinels
+    self.assertEqual(sentinel.read_bytes(), original)
+AssertionError: b'PAR1\x15\x04\x15 \x15$L\x15\x04\x15\x00\x[11435 chars]PAR1' != b'existing parquet sentinel remains exact\n'
+
+======================================================================
+FAIL: test_interrupted_ledger_backup_symlink_preserves_existing_sentinel_and_recovery (tests.test_peak_age_publication.PeakAgePublicationContracts.test_interrupted_ledger_backup_symlink_preserves_existing_sentinel_and_recovery)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 633, in test_interrupted_ledger_backup_symlink_preserves_existing_sentinel_and_recovery
+    self.assertEqual(sentinel.read_bytes(), original)
+AssertionError: b'{"candidate": "peak_age", "control": "bas[16640 chars]0}\n' != b'existing ledger-backup sentinel remains exact\n'
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.333s
+
+FAILED (failures=9)
+{"status": "SCORED_AWAITING_INDEPENDENT_VERIFICATION", "newly_generated_forecasts": 4, "monthly_schedules": 1, "common_application_origins": 2}
+{"status": "SCORED_AWAITING_INDEPENDENT_VERIFICATION", "newly_generated_forecasts": 4, "monthly_schedules": 1, "common_application_origins": 2}
+{"status": "SCORED_AWAITING_INDEPENDENT_VERIFICATION", "newly_generated_forecasts": 4, "monthly_schedules": 1, "common_application_origins": 2}
+{"status": "SCORED_AWAITING_INDEPENDENT_VERIFICATION", "newly_generated_forecasts": 4, "monthly_schedules": 1, "common_application_origins": 2}
+{"status": "SCORED_AWAITING_INDEPENDENT_VERIFICATION", "newly_generated_forecasts": 4, "monthly_schedules": 1, "common_application_origins": 2}
+{"status": "SCORED_AWAITING_INDEPENDENT_VERIFICATION", "newly_generated_forecasts": 4, "monthly_schedules": 1, "common_application_origins": 2}

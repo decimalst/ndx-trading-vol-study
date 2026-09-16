@@ -1,0 +1,22 @@
+test_fixed_two_comparison_wave_and_date_fences (tests.test_claims_release_protocol.ClaimsReleaseProtocolTests.test_fixed_two_comparison_wave_and_date_fences) ... ok
+test_no_grid_timing_or_gate_mutation (tests.test_claims_release_protocol.ClaimsReleaseProtocolTests.test_no_grid_timing_or_gate_mutation) ... ok
+test_complete_family_effect_support_and_shared_inference (tests.test_claims_release_score.ClaimsReleaseScoreTests.test_complete_family_effect_support_and_shared_inference) ... ok
+test_empty_valid_panel_is_insufficient_data (tests.test_claims_release_score.ClaimsReleaseScoreTests.test_empty_valid_panel_is_insufficient_data) ... ok
+test_inheritance_preserves_every_existing_row_and_new_three (tests.test_claims_release_score.ClaimsReleaseScoreTests.test_inheritance_preserves_every_existing_row_and_new_three) ... ok
+test_one_improving_contrast_is_not_a_lead (tests.test_claims_release_score.ClaimsReleaseScoreTests.test_one_improving_contrast_is_not_a_lead) ... ok
+test_panel_corruptions_rejected_before_inference (tests.test_claims_release_score.ClaimsReleaseScoreTests.test_panel_corruptions_rejected_before_inference) ... ok
+test_phase_slice_release_and_offset_support_fail_whole_wave (tests.test_claims_release_score.ClaimsReleaseScoreTests.test_phase_slice_release_and_offset_support_fail_whole_wave) ... ok
+test_prior_comparisons_cannot_be_dropped_or_invalid (tests.test_claims_release_score.ClaimsReleaseScoreTests.test_prior_comparisons_cannot_be_dropped_or_invalid) ... ok
+test_registered_failures_keep_two_p_one_comparisons (tests.test_claims_release_score.ClaimsReleaseScoreTests.test_registered_failures_keep_two_p_one_comparisons) ... ok
+test_release_weighted_mean_is_mean_of_group_means (tests.test_claims_release_score.ClaimsReleaseScoreTests.test_release_weighted_mean_is_mean_of_group_means) ... ok
+test_every_pin_enforced_without_rewriting_evidence (tests.test_claims_release_search.ClaimsReleaseSearchTests.test_every_pin_enforced_without_rewriting_evidence) ... ok
+test_incomplete_output_family_becomes_invalid_whole_wave (tests.test_claims_release_search.ClaimsReleaseSearchTests.test_incomplete_output_family_becomes_invalid_whole_wave) ... ok
+test_invalid_prior_stops_before_registration_and_callback (tests.test_claims_release_search.ClaimsReleaseSearchTests.test_invalid_prior_stops_before_registration_and_callback) ... ok
+test_no_overwrite_or_repeated_attempt_callback (tests.test_claims_release_search.ClaimsReleaseSearchTests.test_no_overwrite_or_repeated_attempt_callback) ... ok
+test_registered_error_retains_both_comparisons_at_one (tests.test_claims_release_search.ClaimsReleaseSearchTests.test_registered_error_retains_both_comparisons_at_one) ... ok
+test_registration_is_durable_before_numerical_callback (tests.test_claims_release_search.ClaimsReleaseSearchTests.test_registration_is_durable_before_numerical_callback) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.100s
+
+OK

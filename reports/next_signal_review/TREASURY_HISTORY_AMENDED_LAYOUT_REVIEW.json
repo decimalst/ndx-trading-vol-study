@@ -1,0 +1,794 @@
+{
+  "completed_utc": "2026-09-09T02:11:57.048061+00:00",
+  "counts": {
+    "complete_announcements_read": 7,
+    "complete_original_pages_viewed": 7,
+    "confirmed_extraction_layout_failures": 4,
+    "existing_schedule_notices_reused": 3,
+    "financial_numeric_conversions": 0,
+    "genuine_amended_announcements": 4,
+    "new_downloads": 0,
+    "new_predictive_comparisons": 0,
+    "ordinary_announcements_with_layout_failure": 3,
+    "revised_release_date_reschedules": 3,
+    "same_release_date_closing_time_amendment": 1
+  },
+  "documents": [
+    {
+      "announcement_xml_metadata_reference": {
+        "body_path": "data/source_discovery/treasury_auction/history_capture_v1/f11798d9fa258f05d57dfe78c9edda46d5ca0ffd90173136138c876f31f67c0d/body.xml",
+        "body_sha256": "c942cd6bda9141db925b3428ae14f0a35df14401cbd5a2345111d230a9d1a338",
+        "metadata": {
+          "announcement": {
+            "AnnouncedCUSIP": "",
+            "AnnouncementDate": "2015-01-22",
+            "AnnouncementPDFName": "A_20150126_3.pdf",
+            "AuctionDate": "2015-01-28",
+            "CUSIP": "912828H78",
+            "FloatingRate": "N",
+            "InflationIndexSecurity": "N",
+            "IssueDate": "2015-02-02",
+            "MaturityDate": "2017-01-31",
+            "OriginalDatedDate": "",
+            "OriginalIssueDate": "",
+            "ReOpeningIndicator": "N",
+            "SecurityTermDayMonth": "0-MONTH",
+            "SecurityTermWeekYear": "2-YEAR",
+            "SecurityType": "NOTE",
+            "TypeOfAuction": "SINGLE PRICE"
+          },
+          "results": {}
+        },
+        "raw_xml_not_decoded_in_this_review": true,
+        "url": "https://www.treasurydirect.gov/xml/A_20150126_3.xml"
+      },
+      "archive_memberships": [
+        {
+          "announcement_date": "2015-01-22",
+          "auction_date": "2015-01-28",
+          "cusip": "912828H78",
+          "kind": "announcement_pdf",
+          "security_term": "2-Year",
+          "security_type": "Note",
+          "term_bucket": "2-Year"
+        }
+      ],
+      "auction_date": "2015-01-28",
+      "classification": "DATED_RESCHEDULED_ANNOUNCEMENT",
+      "complete_original_pages_viewed": [
+        {
+          "path": "data/source_discovery/treasury_auction/history_amended_layout_review_v1/912828H78-1.png",
+          "sha256": "f6cf9e3fb5ca36e292a34f503d34b6725c39a7ace785abf5324720f10e3996a8",
+          "view_scope": "Complete original page: heading, aligned fields, color highlights, closing times and all footnotes.",
+          "viewed": true
+        }
+      ],
+      "complete_saved_text_read": true,
+      "cusip": "912828H78",
+      "existing_notice_cross_reference": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2015/BPD_SPL_20150126_1.pdf",
+      "finding": "A real dated replacement. The red January28 auction date agrees with the pinned January26 weather notice moving the two-year auction from January27. That notice expressly retains settlement dates. Archive/XML AnnouncementDate remains January22.",
+      "metadata_facts_visually_transcribed": {
+        "archive_and_xml_announcement_date": "2015-01-22",
+        "auction_date": "2015-01-28",
+        "competitive_closing_time": "1:00 p.m. ET",
+        "cusip_number": "912828H78",
+        "dated_date": "2015-01-31",
+        "heading": "AMENDED ANNOUNCEMENT",
+        "issue_date": "2015-02-02",
+        "maturity_date": "2017-01-31",
+        "noncompetitive_closing_time": "12:00 Noon ET",
+        "offered_term": "2-Year Note",
+        "original_issue_date": "2015-02-02",
+        "release_clock_statement": "FOR IMMEDIATE RELEASE",
+        "release_date": "2015-01-26",
+        "series": "AV-2017"
+      },
+      "original_scheduled_auction_date_from_existing_notice": "2015-01-27",
+      "red_body_fields": [
+        "auction_date"
+      ],
+      "red_title": true,
+      "source_admitted": false,
+      "source_pdf": {
+        "body_path": "data/source_discovery/treasury_auction/history_capture_v1/ed5f439a6a7070afe183b7da0c5b7f194a1e9670e22af1ea5ab3fd53063c52b3/body.pdf",
+        "body_sha256": "7db8c599a7f21e93eb2616fed7b984424013ab9a9ce7258e5b07ba63569ae0ba",
+        "pages": 1,
+        "text_path": "data/source_discovery/treasury_auction/history_metadata_v1/7db8c599a7f21e93eb2616fed7b984424013ab9a9ce7258e5b07ba63569ae0ba.txt",
+        "text_sha256": "9559cc4a5f3d76488e0874483b2f6020930cf1505cced78e80916df37cb781d1",
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2015/A_20150126_3.pdf"
+      },
+      "source_text_layout_failure": false,
+      "unresolved": [
+        "This review does not authenticate complete first-version history or actual historical delivery time.",
+        "Final result pairing and numerical offering/control admission remain separate.",
+        "Retain the original archive/XML announcement date and actual revised PDF date separately; a dated replacement reconciliation is required, without source-date substitution.",
+        "Highlighted fields and existing dated notices identify scheduling changes; absence of other red values is not a complete comparison with an unavailable pre-amendment version."
+      ]
+    },
+    {
+      "announcement_xml_metadata_reference": {
+        "body_path": "data/source_discovery/treasury_auction/history_capture_v1/90986e722cc1df2703462a5dd9a0e6be313aa0e19efb2b0109bcccce3dec3975/body.xml",
+        "body_sha256": "8a7e8aa8b2660669818f03a49e03f48d97698cd66f25fa0f17a8999155ac48ef",
+        "metadata": {
+          "announcement": {
+            "AnnouncedCUSIP": "",
+            "AnnouncementDate": "2015-01-22",
+            "AnnouncementPDFName": "A_20150126_4.pdf",
+            "AuctionDate": "2015-01-29",
+            "CUSIP": "912828H52",
+            "FloatingRate": "N",
+            "InflationIndexSecurity": "N",
+            "IssueDate": "2015-02-02",
+            "MaturityDate": "2020-01-31",
+            "OriginalDatedDate": "",
+            "OriginalIssueDate": "",
+            "ReOpeningIndicator": "N",
+            "SecurityTermDayMonth": "0-MONTH",
+            "SecurityTermWeekYear": "5-YEAR",
+            "SecurityType": "NOTE",
+            "TypeOfAuction": "SINGLE PRICE"
+          },
+          "results": {}
+        },
+        "raw_xml_not_decoded_in_this_review": true,
+        "url": "https://www.treasurydirect.gov/xml/A_20150126_4.xml"
+      },
+      "archive_memberships": [
+        {
+          "announcement_date": "2015-01-22",
+          "auction_date": "2015-01-29",
+          "cusip": "912828H52",
+          "kind": "announcement_pdf",
+          "security_term": "5-Year",
+          "security_type": "Note",
+          "term_bucket": "5-Year"
+        }
+      ],
+      "auction_date": "2015-01-29",
+      "classification": "DATED_RESCHEDULED_ANNOUNCEMENT",
+      "complete_original_pages_viewed": [
+        {
+          "path": "data/source_discovery/treasury_auction/history_amended_layout_review_v1/912828H52-1.png",
+          "sha256": "a33669622bc27c02554981e270902325cba591b5318240ee6f732e3a04859d0a",
+          "view_scope": "Complete original page: heading, aligned fields, color highlights, closing times and all footnotes.",
+          "viewed": true
+        }
+      ],
+      "complete_saved_text_read": true,
+      "cusip": "912828H52",
+      "existing_notice_cross_reference": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2015/BPD_SPL_20150126_1.pdf",
+      "finding": "A real dated replacement. Red January29 auction date and11:00/11:30ET closing values agree with the January26 weather notice moving the five-year auction from January28. That notice expressly retains settlement dates. Archive/XML AnnouncementDate remains January22.",
+      "metadata_facts_visually_transcribed": {
+        "archive_and_xml_announcement_date": "2015-01-22",
+        "auction_date": "2015-01-29",
+        "competitive_closing_time": "11:30 a.m. ET",
+        "cusip_number": "912828H52",
+        "dated_date": "2015-01-31",
+        "heading": "AMENDED ANNOUNCEMENT",
+        "issue_date": "2015-02-02",
+        "maturity_date": "2020-01-31",
+        "noncompetitive_closing_time": "11:00 a.m. ET",
+        "offered_term": "5-Year Note",
+        "original_issue_date": "2015-02-02",
+        "release_clock_statement": "FOR IMMEDIATE RELEASE",
+        "release_date": "2015-01-26",
+        "series": "U-2020"
+      },
+      "original_scheduled_auction_date_from_existing_notice": "2015-01-28",
+      "red_body_fields": [
+        "auction_date",
+        "noncompetitive_closing_time",
+        "competitive_closing_time"
+      ],
+      "red_title": true,
+      "source_admitted": false,
+      "source_pdf": {
+        "body_path": "data/source_discovery/treasury_auction/history_capture_v1/ed48a849c854379bc6d57d5d14debd0565050d0f26e3c9959ca73cbb825338ed/body.pdf",
+        "body_sha256": "58108f54d27f91719f7311b75133f35e99094ee0681da09119e3100f95eba659",
+        "pages": 1,
+        "text_path": "data/source_discovery/treasury_auction/history_metadata_v1/58108f54d27f91719f7311b75133f35e99094ee0681da09119e3100f95eba659.txt",
+        "text_sha256": "0a796470c1de797ce036171265a3c034284e9b73a5e5af6173272f628af32edb",
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2015/A_20150126_4.pdf"
+      },
+      "source_text_layout_failure": false,
+      "unresolved": [
+        "This review does not authenticate complete first-version history or actual historical delivery time.",
+        "Final result pairing and numerical offering/control admission remain separate.",
+        "Retain the original archive/XML announcement date and actual revised PDF date separately; a dated replacement reconciliation is required, without source-date substitution.",
+        "Highlighted fields and existing dated notices identify scheduling changes; absence of other red values is not a complete comparison with an unavailable pre-amendment version."
+      ]
+    },
+    {
+      "announcement_xml_metadata_reference": {
+        "body_path": "data/source_discovery/treasury_auction/history_capture_v1/63e7eb528c44e8ec87565be0aacf85ddd7193c765b82b5ec6238a2db8a20ebc2/body.xml",
+        "body_sha256": "f579bf7d0d426d441f73b79aebdf438d1bbecd6de01f5398aa262e425e1e4ffc",
+        "metadata": {
+          "announcement": {
+            "AnnouncedCUSIP": "",
+            "AnnouncementDate": "2016-02-18",
+            "AnnouncementPDFName": "A_20160225_4.pdf",
+            "AuctionDate": "2016-02-26",
+            "CUSIP": "912828P79",
+            "FloatingRate": "N",
+            "InflationIndexSecurity": "N",
+            "IssueDate": "2016-02-29",
+            "MaturityDate": "2023-02-28",
+            "OriginalDatedDate": "",
+            "OriginalIssueDate": "",
+            "ReOpeningIndicator": "N",
+            "SecurityTermDayMonth": "0-MONTH",
+            "SecurityTermWeekYear": "7-YEAR",
+            "SecurityType": "NOTE",
+            "TypeOfAuction": "SINGLE PRICE"
+          },
+          "results": {}
+        },
+        "raw_xml_not_decoded_in_this_review": true,
+        "url": "https://www.treasurydirect.gov/xml/A_20160225_4.xml"
+      },
+      "archive_memberships": [
+        {
+          "announcement_date": "2016-02-18",
+          "auction_date": "2016-02-26",
+          "cusip": "912828P79",
+          "kind": "announcement_pdf",
+          "security_term": "7-Year",
+          "security_type": "Note",
+          "term_bucket": "7-Year"
+        }
+      ],
+      "auction_date": "2016-02-26",
+      "classification": "DATED_RESCHEDULED_ANNOUNCEMENT",
+      "complete_original_pages_viewed": [
+        {
+          "path": "data/source_discovery/treasury_auction/history_amended_layout_review_v1/912828P79-1.png",
+          "sha256": "49cb23ed5b71e9f8434bd43b9a46a86fb5b60c67dd1c85b4a5c547ea57837e3b",
+          "view_scope": "Complete original page: heading, aligned fields, color highlights, closing times and all footnotes.",
+          "viewed": true
+        }
+      ],
+      "complete_saved_text_read": true,
+      "cusip": "912828P79",
+      "existing_notice_cross_reference": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/BPD_SPL_20160225_1.pdf",
+      "finding": "Both a real amendment and an extraction failure. The CUSIP Number row visually aligns with912828P79; the saved text places values before their labels. Red February26 date and11:00/11:30ET closing values agree with the technical-issue reschedule from February25. Its pinned notice explicitly retains settlement and other auction aspects; submitted bids can be updated until the new close.",
+      "metadata_facts_visually_transcribed": {
+        "archive_and_xml_announcement_date": "2016-02-18",
+        "auction_date": "2016-02-26",
+        "competitive_closing_time": "11:30 a.m. ET",
+        "cusip_number": "912828P79",
+        "dated_date": "2016-02-29",
+        "heading": "AMENDED ANNOUNCEMENT",
+        "issue_date": "2016-02-29",
+        "maturity_date": "2023-02-28",
+        "noncompetitive_closing_time": "11:00 a.m. ET",
+        "offered_term": "7-Year Note",
+        "original_issue_date": "2016-02-29",
+        "release_clock_statement": "FOR IMMEDIATE RELEASE",
+        "release_date": "2016-02-25",
+        "series": "H-2023"
+      },
+      "original_scheduled_auction_date_from_existing_notice": "2016-02-25",
+      "red_body_fields": [
+        "auction_date",
+        "noncompetitive_closing_time",
+        "competitive_closing_time"
+      ],
+      "red_title": true,
+      "source_admitted": false,
+      "source_pdf": {
+        "body_path": "data/source_discovery/treasury_auction/history_capture_v1/40aac72dc722afecf0383d45bb6f158efea463c4534933fc154001316a2f096d/body.pdf",
+        "body_sha256": "efa33d7c6feb1f50d9bdd81c6f212a477b8753501dda81fa7526924575eb29a9",
+        "pages": 1,
+        "text_path": "data/source_discovery/treasury_auction/history_metadata_v1/efa33d7c6feb1f50d9bdd81c6f212a477b8753501dda81fa7526924575eb29a9.txt",
+        "text_sha256": "e43feb22b2dfcd6461bce181ee605ecef29a5bd149678d93ef668ab3da90c01b",
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/A_20160225_4.pdf"
+      },
+      "source_text_layout_failure": true,
+      "unresolved": [
+        "This review does not authenticate complete first-version history or actual historical delivery time.",
+        "Final result pairing and numerical offering/control admission remain separate.",
+        "Retain the original archive/XML announcement date and actual revised PDF date separately; a dated replacement reconciliation is required, without source-date substitution.",
+        "A future layout-aware extractor requires generated label/value-order tests; do not accept arbitrary standalone CUSIPs or alter original extracted text.",
+        "The literal February month-end/leap dated-to-maturity boundary is a separate lineage-validation case. No exact anniversary rounding or source-date repair was performed.",
+        "Highlighted fields and existing dated notices identify scheduling changes; absence of other red values is not a complete comparison with an unavailable pre-amendment version."
+      ]
+    },
+    {
+      "announcement_xml_metadata_reference": {
+        "body_path": "data/source_discovery/treasury_auction/history_capture_v1/ede38ae3413faf75550c95cd6eb62f8a97ebf65a016729ddc8d0e21bb8034b60/body.xml",
+        "body_sha256": "c4a309faf88f219fe8ce223219b07acb7371a4048c75590e6aeec0985230276d",
+        "metadata": {
+          "announcement": {
+            "AnnouncedCUSIP": "",
+            "AnnouncementDate": "2017-02-16",
+            "AnnouncementPDFName": "A_20170216_2.pdf",
+            "AuctionDate": "2017-02-21",
+            "CUSIP": "912828W30",
+            "FloatingRate": "N",
+            "InflationIndexSecurity": "N",
+            "IssueDate": "2017-02-28",
+            "MaturityDate": "2019-02-28",
+            "OriginalDatedDate": "",
+            "OriginalIssueDate": "",
+            "ReOpeningIndicator": "N",
+            "SecurityTermDayMonth": "0-MONTH",
+            "SecurityTermWeekYear": "2-YEAR",
+            "SecurityType": "NOTE",
+            "TypeOfAuction": "SINGLE PRICE"
+          },
+          "results": {}
+        },
+        "raw_xml_not_decoded_in_this_review": true,
+        "url": "https://www.treasurydirect.gov/xml/A_20170216_2.xml"
+      },
+      "archive_memberships": [
+        {
+          "announcement_date": "2017-02-16",
+          "auction_date": "2017-02-21",
+          "cusip": "912828W30",
+          "kind": "announcement_pdf",
+          "security_term": "2-Year",
+          "security_type": "Note",
+          "term_bucket": "2-Year"
+        }
+      ],
+      "auction_date": "2017-02-21",
+      "classification": "EXTRACTION_LAYOUT_FAILURE_NO_AMENDMENT_HEADING",
+      "complete_original_pages_viewed": [
+        {
+          "path": "data/source_discovery/treasury_auction/history_amended_layout_review_v1/912828W30-1.png",
+          "sha256": "a898ad909e69e777e8cebe2f7eaa1c7b5f4eb7889af2977eac0563d81ebe1158",
+          "view_scope": "Complete original page: heading, aligned fields, color highlights, closing times and all footnotes.",
+          "viewed": true
+        }
+      ],
+      "complete_saved_text_read": true,
+      "cusip": "912828W30",
+      "existing_notice_cross_reference": null,
+      "finding": "The CUSIP Number row visually aligns with912828W30. The saved text emits a values block before labels. The page is an ordinary offering announcement, with no amended heading or highlighted correction.",
+      "metadata_facts_visually_transcribed": {
+        "archive_and_xml_announcement_date": "2017-02-16",
+        "auction_date": "2017-02-21",
+        "competitive_closing_time": "1:00 p.m. ET",
+        "cusip_number": "912828W30",
+        "dated_date": "2017-02-28",
+        "heading": "TREASURY OFFERING ANNOUNCEMENT",
+        "issue_date": "2017-02-28",
+        "maturity_date": "2019-02-28",
+        "noncompetitive_closing_time": "12:00 Noon ET",
+        "offered_term": "2-Year Note",
+        "original_issue_date": "2017-02-28",
+        "release_clock_statement": "Embargoed Until11:00A.M.; no timezone stated in this header",
+        "release_date": "2017-02-16",
+        "series": "AX-2019"
+      },
+      "original_scheduled_auction_date_from_existing_notice": null,
+      "red_body_fields": [],
+      "red_title": false,
+      "source_admitted": false,
+      "source_pdf": {
+        "body_path": "data/source_discovery/treasury_auction/history_capture_v1/8fc32e14d66761f6a17758533132e69fbb58d2868d193819e10079d77ffccb8d/body.pdf",
+        "body_sha256": "1910af5793f5ed314e1440aa4a9340bd2ea2c3e84a84a4a5b894f98ec256704b",
+        "pages": 1,
+        "text_path": "data/source_discovery/treasury_auction/history_metadata_v1/1910af5793f5ed314e1440aa4a9340bd2ea2c3e84a84a4a5b894f98ec256704b.txt",
+        "text_sha256": "e39f2f5814b65331e7df52bee4461dc359d25b475f893d12e16344604fbd3c96",
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/A_20170216_2.pdf"
+      },
+      "source_text_layout_failure": true,
+      "unresolved": [
+        "This review does not authenticate complete first-version history or actual historical delivery time.",
+        "Final result pairing and numerical offering/control admission remain separate.",
+        "A future layout-aware extractor requires generated label/value-order tests; do not accept arbitrary standalone CUSIPs or alter original extracted text."
+      ]
+    },
+    {
+      "announcement_xml_metadata_reference": {
+        "body_path": "data/source_discovery/treasury_auction/history_capture_v1/194c37b49f267c3f503c28563ccc7f1c22f3d3ef580ecca3c6264a8ad6ab4e09/body.xml",
+        "body_sha256": "e762a87fc84ba5578cc7944411a9efe27a0bed769009feed5a2bc78bbb9b8c33",
+        "metadata": {
+          "announcement": {
+            "AnnouncedCUSIP": "",
+            "AnnouncementDate": "2017-02-16",
+            "AnnouncementPDFName": "A_20170216_7.pdf",
+            "AuctionDate": "2017-02-22",
+            "CUSIP": "912828W55",
+            "FloatingRate": "N",
+            "InflationIndexSecurity": "N",
+            "IssueDate": "2017-02-28",
+            "MaturityDate": "2022-02-28",
+            "OriginalDatedDate": "",
+            "OriginalIssueDate": "",
+            "ReOpeningIndicator": "N",
+            "SecurityTermDayMonth": "0-MONTH",
+            "SecurityTermWeekYear": "5-YEAR",
+            "SecurityType": "NOTE",
+            "TypeOfAuction": "SINGLE PRICE"
+          },
+          "results": {}
+        },
+        "raw_xml_not_decoded_in_this_review": true,
+        "url": "https://www.treasurydirect.gov/xml/A_20170216_7.xml"
+      },
+      "archive_memberships": [
+        {
+          "announcement_date": "2017-02-16",
+          "auction_date": "2017-02-22",
+          "cusip": "912828W55",
+          "kind": "announcement_pdf",
+          "security_term": "5-Year",
+          "security_type": "Note",
+          "term_bucket": "5-Year"
+        }
+      ],
+      "auction_date": "2017-02-22",
+      "classification": "EXTRACTION_LAYOUT_FAILURE_NO_AMENDMENT_HEADING",
+      "complete_original_pages_viewed": [
+        {
+          "path": "data/source_discovery/treasury_auction/history_amended_layout_review_v1/912828W55-1.png",
+          "sha256": "d87120a128b4de38316fcf9e2f87e6953db8dd3419d50b45f7ced46a331257c1",
+          "view_scope": "Complete original page: heading, aligned fields, color highlights, closing times and all footnotes.",
+          "viewed": true
+        }
+      ],
+      "complete_saved_text_read": true,
+      "cusip": "912828W55",
+      "existing_notice_cross_reference": null,
+      "finding": "The CUSIP Number row visually aligns with912828W55. The saved text emits a values block before labels. The page is an ordinary offering announcement, with no amended heading or highlighted correction.",
+      "metadata_facts_visually_transcribed": {
+        "archive_and_xml_announcement_date": "2017-02-16",
+        "auction_date": "2017-02-22",
+        "competitive_closing_time": "1:00 p.m. ET",
+        "cusip_number": "912828W55",
+        "dated_date": "2017-02-28",
+        "heading": "TREASURY OFFERING ANNOUNCEMENT",
+        "issue_date": "2017-02-28",
+        "maturity_date": "2022-02-28",
+        "noncompetitive_closing_time": "12:00 Noon ET",
+        "offered_term": "5-Year Note",
+        "original_issue_date": "2017-02-28",
+        "release_clock_statement": "Embargoed Until11:00A.M.; no timezone stated in this header",
+        "release_date": "2017-02-16",
+        "series": "V-2022"
+      },
+      "original_scheduled_auction_date_from_existing_notice": null,
+      "red_body_fields": [],
+      "red_title": false,
+      "source_admitted": false,
+      "source_pdf": {
+        "body_path": "data/source_discovery/treasury_auction/history_capture_v1/e15550462c345db8e0f120540599f2494dc13ff2b956fb4c72562320392e865a/body.pdf",
+        "body_sha256": "e692aa5a8930ab8c859d3aa08a2e2e29223b7feee681a0d1afd6687e66a90f5d",
+        "pages": 1,
+        "text_path": "data/source_discovery/treasury_auction/history_metadata_v1/e692aa5a8930ab8c859d3aa08a2e2e29223b7feee681a0d1afd6687e66a90f5d.txt",
+        "text_sha256": "f6a34834a8b95055e6b3d7f695c7e62a7139c23f284b808925cc28c7d0d2d690",
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/A_20170216_7.pdf"
+      },
+      "source_text_layout_failure": true,
+      "unresolved": [
+        "This review does not authenticate complete first-version history or actual historical delivery time.",
+        "Final result pairing and numerical offering/control admission remain separate.",
+        "A future layout-aware extractor requires generated label/value-order tests; do not accept arbitrary standalone CUSIPs or alter original extracted text."
+      ]
+    },
+    {
+      "announcement_xml_metadata_reference": {
+        "body_path": "data/source_discovery/treasury_auction/history_capture_v1/aa68ae2c0619588cf3e9838237b376f2980a55e788499810794a8669da838bde/body.xml",
+        "body_sha256": "01316407702f755f99826f5564808ca0e387873f79ab28e1d9711cf44de6b6a4",
+        "metadata": {
+          "announcement": {
+            "AnnouncedCUSIP": "",
+            "AnnouncementDate": "2017-02-16",
+            "AnnouncementPDFName": "A_20170216_5.pdf",
+            "AuctionDate": "2017-02-23",
+            "CUSIP": "912828W48",
+            "FloatingRate": "N",
+            "InflationIndexSecurity": "N",
+            "IssueDate": "2017-02-28",
+            "MaturityDate": "2024-02-29",
+            "OriginalDatedDate": "",
+            "OriginalIssueDate": "",
+            "ReOpeningIndicator": "N",
+            "SecurityTermDayMonth": "0-MONTH",
+            "SecurityTermWeekYear": "7-YEAR",
+            "SecurityType": "NOTE",
+            "TypeOfAuction": "SINGLE PRICE"
+          },
+          "results": {}
+        },
+        "raw_xml_not_decoded_in_this_review": true,
+        "url": "https://www.treasurydirect.gov/xml/A_20170216_5.xml"
+      },
+      "archive_memberships": [
+        {
+          "announcement_date": "2017-02-16",
+          "auction_date": "2017-02-23",
+          "cusip": "912828W48",
+          "kind": "announcement_pdf",
+          "security_term": "7-Year",
+          "security_type": "Note",
+          "term_bucket": "7-Year"
+        }
+      ],
+      "auction_date": "2017-02-23",
+      "classification": "EXTRACTION_LAYOUT_FAILURE_NO_AMENDMENT_HEADING",
+      "complete_original_pages_viewed": [
+        {
+          "path": "data/source_discovery/treasury_auction/history_amended_layout_review_v1/912828W48-1.png",
+          "sha256": "f60e6235ba121225d7d8c87f8026e4974eda0417938b9d7c5cb783f7789d0166",
+          "view_scope": "Complete original page: heading, aligned fields, color highlights, closing times and all footnotes.",
+          "viewed": true
+        }
+      ],
+      "complete_saved_text_read": true,
+      "cusip": "912828W48",
+      "existing_notice_cross_reference": null,
+      "finding": "The CUSIP Number row visually aligns with912828W48. The saved text emits a values block before labels. No amended heading or highlighted correction appears. The stated February28,2017 dated date and February29,2024 maturity are real calendar metadata and must remain unchanged.",
+      "metadata_facts_visually_transcribed": {
+        "archive_and_xml_announcement_date": "2017-02-16",
+        "auction_date": "2017-02-23",
+        "competitive_closing_time": "1:00 p.m. ET",
+        "cusip_number": "912828W48",
+        "dated_date": "2017-02-28",
+        "heading": "TREASURY OFFERING ANNOUNCEMENT",
+        "issue_date": "2017-02-28",
+        "maturity_date": "2024-02-29",
+        "noncompetitive_closing_time": "12:00 Noon ET",
+        "offered_term": "7-Year Note",
+        "original_issue_date": "2017-02-28",
+        "release_clock_statement": "Embargoed Until11:00A.M.; no timezone stated in this header",
+        "release_date": "2017-02-16",
+        "series": "H-2024"
+      },
+      "original_scheduled_auction_date_from_existing_notice": null,
+      "red_body_fields": [],
+      "red_title": false,
+      "source_admitted": false,
+      "source_pdf": {
+        "body_path": "data/source_discovery/treasury_auction/history_capture_v1/3187b8c261c49c4fb0beb885dbdb3a1645d0353755474b65d4b41e2cf312f3fa/body.pdf",
+        "body_sha256": "dc528d6798a46b434c624cfdeb3b8aef0454851189f9a61e540aadd81dbeddd1",
+        "pages": 1,
+        "text_path": "data/source_discovery/treasury_auction/history_metadata_v1/dc528d6798a46b434c624cfdeb3b8aef0454851189f9a61e540aadd81dbeddd1.txt",
+        "text_sha256": "d3d834533fc86efbcc49cb4adc5837df6683fbc5e3928a27fadc9c19a22f636d",
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/A_20170216_5.pdf"
+      },
+      "source_text_layout_failure": true,
+      "unresolved": [
+        "This review does not authenticate complete first-version history or actual historical delivery time.",
+        "Final result pairing and numerical offering/control admission remain separate.",
+        "A future layout-aware extractor requires generated label/value-order tests; do not accept arbitrary standalone CUSIPs or alter original extracted text.",
+        "The literal February month-end/leap dated-to-maturity boundary is a separate lineage-validation case. No exact anniversary rounding or source-date repair was performed."
+      ]
+    },
+    {
+      "announcement_xml_metadata_reference": {
+        "body_path": "data/source_discovery/treasury_auction/history_capture_v1/77324fe251ca4a76bc6127e93369ff92d71445460dad7386d83a1f23142c8b4c/body.xml",
+        "body_sha256": "bbb6741a0fd2a61aa93f621c353042d052a5e1559659202dee951790195e690d",
+        "metadata": {
+          "announcement": {
+            "AnnouncedCUSIP": "",
+            "AnnouncementDate": "2017-06-08",
+            "AnnouncementPDFName": "A_20170608_6.pdf",
+            "AuctionDate": "2017-06-12",
+            "CUSIP": "912828XU9",
+            "FloatingRate": "N",
+            "InflationIndexSecurity": "N",
+            "IssueDate": "2017-06-15",
+            "MaturityDate": "2020-06-15",
+            "OriginalDatedDate": "",
+            "OriginalIssueDate": "",
+            "ReOpeningIndicator": "N",
+            "SecurityTermDayMonth": "0-MONTH",
+            "SecurityTermWeekYear": "3-YEAR",
+            "SecurityType": "NOTE",
+            "TypeOfAuction": "SINGLE PRICE"
+          },
+          "results": {}
+        },
+        "raw_xml_not_decoded_in_this_review": true,
+        "url": "https://www.treasurydirect.gov/xml/A_20170608_6.xml"
+      },
+      "archive_memberships": [
+        {
+          "announcement_date": "2017-06-08",
+          "auction_date": "2017-06-12",
+          "cusip": "912828XU9",
+          "kind": "announcement_pdf",
+          "security_term": "3-Year",
+          "security_type": "Note",
+          "term_bucket": "3-Year"
+        }
+      ],
+      "auction_date": "2017-06-12",
+      "classification": "SAME_RELEASE_DATE_CLOSING_TIME_AMENDMENT",
+      "complete_original_pages_viewed": [
+        {
+          "path": "data/source_discovery/treasury_auction/history_amended_layout_review_v1/912828XU9-1.png",
+          "sha256": "bb30d7f93d680864beb6368df48c7df0575898a89934e05b45765dc0b0f7e012",
+          "view_scope": "Complete original page: heading, aligned fields, color highlights, closing times and all footnotes.",
+          "viewed": true
+        }
+      ],
+      "complete_saved_text_read": true,
+      "cusip": "912828XU9",
+      "existing_notice_cross_reference": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170608_1.pdf",
+      "finding": "A genuine same-release-date amendment. The heading and11:00/11:30ET closing times are red; CUSIP and auction date are clear. The pinned June8 notice gives these early deadlines for the June12 three-year auction. Equality of archive and PDF dates does not establish an unamended original version.",
+      "metadata_facts_visually_transcribed": {
+        "archive_and_xml_announcement_date": "2017-06-08",
+        "auction_date": "2017-06-12",
+        "competitive_closing_time": "11:30 a.m. ET",
+        "cusip_number": "912828XU9",
+        "dated_date": "2017-06-15",
+        "heading": "AMENDED ANNOUNCEMENT",
+        "issue_date": "2017-06-15",
+        "maturity_date": "2020-06-15",
+        "noncompetitive_closing_time": "11:00 a.m. ET",
+        "offered_term": "3-Year Note",
+        "original_issue_date": "2017-06-15",
+        "release_clock_statement": "FOR IMMEDIATE RELEASE",
+        "release_date": "2017-06-08",
+        "series": "AN-2020"
+      },
+      "original_scheduled_auction_date_from_existing_notice": null,
+      "red_body_fields": [
+        "noncompetitive_closing_time",
+        "competitive_closing_time"
+      ],
+      "red_title": true,
+      "source_admitted": false,
+      "source_pdf": {
+        "body_path": "data/source_discovery/treasury_auction/history_capture_v1/6cb5194ba7e5e313694a14e9c95f3dc4399ec60a240a25b12836e8e8bb4094c6/body.pdf",
+        "body_sha256": "6fd1e274212480e76b7c38351d822c861b4c3194948aed46d31fd840f20beac0",
+        "pages": 1,
+        "text_path": "data/source_discovery/treasury_auction/history_metadata_v1/6fd1e274212480e76b7c38351d822c861b4c3194948aed46d31fd840f20beac0.txt",
+        "text_sha256": "f47cb22740509ecd57436c1abd28cde99ea63bad1baabeca4ea649a72b402eaa",
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/A_20170608_6.pdf"
+      },
+      "source_text_layout_failure": false,
+      "unresolved": [
+        "This review does not authenticate complete first-version history or actual historical delivery time.",
+        "Final result pairing and numerical offering/control admission remain separate.",
+        "Highlighted fields and existing dated notices identify scheduling changes; absence of other red values is not a complete comparison with an unavailable pre-amendment version."
+      ]
+    }
+  ],
+  "existing_reviewed_schedule_evidence_reused": [
+    {
+      "affected_fields": [
+        "auction_date",
+        "noncompetitive_closing_time",
+        "competitive_closing_time"
+      ],
+      "body_sha256": "5e5b76ef0eaada7e595c45008223d158bc20cc28f0f430aaec10bc3787e04ceb",
+      "evidence_sections": [
+        "Page 1 release header: January 26, 2015. This is a dated release header, not an authenticated intraday publication timestamp.",
+        "Page 1 title and complete body: Inclement-weather rescheduling: bill moved from Jan27 to Jan26, FRN and 2-year note Jan27 to Jan28, 5-year Jan28 to Jan29; body specifies distinct bidding deadlines. Broader scope includes bills, FRN and unchanged 7-year absent from selected associations."
+      ],
+      "explicit_unchanged_fields": [
+        "settlement_dates_all_named_securities",
+        "2015-01-26_13_week_bill_auction_schedule",
+        "2015-01-26_26_week_bill_auction_schedule",
+        "2015-01-29_7_year_auction_schedule"
+      ],
+      "release_date": "2015-01-26",
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_A.json",
+      "text_sha256": "7926fab77c968df01ea3387129cc294f83b3bf8733b7e713d1d5287b53392274",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2015/BPD_SPL_20150126_1.pdf"
+    },
+    {
+      "affected_fields": [
+        "auction_closing_date",
+        "noncompetitive_bid_closing_time",
+        "competitive_bid_closing_time",
+        "ability_to_update_existing_bids_until_new_close"
+      ],
+      "body_sha256": "42fdb5d3bec853959358f4dad110a51f5ac7654930e0c8ef6fad49a5891c75f6",
+      "evidence_sections": [
+        "Page 1 immediate-release header: 2016-02-25; the entire retained one-page text, including contact line and all body sections, was read.",
+        "Page 1 heading and complete body: Header supplies today's original February 25 date; body postpones close to February 26 due to a technical issue. Submitted bids stand but can be reviewed and updated until close."
+      ],
+      "explicit_unchanged_fields": [
+        "settlement_date",
+        "all_other_auction_aspects_from_original_announcement",
+        "submitted_bids_remain_valid_subject_to_bidder_updates"
+      ],
+      "release_date": "2016-02-25",
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_C.json",
+      "text_sha256": "b828446546fbf686a0db3b67304c44d75858eea9682d6c04ea5b11999a72a6fb",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/BPD_SPL_20160225_1.pdf"
+    },
+    {
+      "affected_fields": [
+        "noncompetitive_closing_time",
+        "competitive_closing_time"
+      ],
+      "body_sha256": "4f61b306791bb33f6f7d99b961f6ba16917539e5f7771c80d5923e0cd32064a4",
+      "evidence_sections": [
+        "Page 1 release header: June 08, 2017. This is a dated release header, not an authenticated intraday publication timestamp.",
+        "Page 1 title and complete body: 26-week bill and 3-year close at 11:00/11:30 ET; 13-week bill and 10-year at noon/13:00 ET. Bills are outside the selected associations; 10-year body label maps to the 9-year 11-month reopening by date plus term bucket."
+      ],
+      "explicit_unchanged_fields": [],
+      "release_date": "2017-06-08",
+      "review_ledger": "reports/next_signal_review/TREASURY_NOTICE_LEDGER_A.json",
+      "text_sha256": "00422c3123213b1345db85a573029d8320a00e944067d1c48e11d902004262df",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170608_1.pdf"
+    }
+  ],
+  "input_hashes": {
+    "data/source_discovery/treasury_auction/history_amended_layout_review_v1/912828H52-1.png": "a33669622bc27c02554981e270902325cba591b5318240ee6f732e3a04859d0a",
+    "data/source_discovery/treasury_auction/history_amended_layout_review_v1/912828H52.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/source_discovery/treasury_auction/history_amended_layout_review_v1/912828H52.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/source_discovery/treasury_auction/history_amended_layout_review_v1/912828H78-1.png": "f6cf9e3fb5ca36e292a34f503d34b6725c39a7ace785abf5324720f10e3996a8",
+    "data/source_discovery/treasury_auction/history_amended_layout_review_v1/912828H78.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/source_discovery/treasury_auction/history_amended_layout_review_v1/912828H78.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/source_discovery/treasury_auction/history_amended_layout_review_v1/912828P79-1.png": "49cb23ed5b71e9f8434bd43b9a46a86fb5b60c67dd1c85b4a5c547ea57837e3b",
+    "data/source_discovery/treasury_auction/history_amended_layout_review_v1/912828P79.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/source_discovery/treasury_auction/history_amended_layout_review_v1/912828P79.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/source_discovery/treasury_auction/history_amended_layout_review_v1/912828W30-1.png": "a898ad909e69e777e8cebe2f7eaa1c7b5f4eb7889af2977eac0563d81ebe1158",
+    "data/source_discovery/treasury_auction/history_amended_layout_review_v1/912828W30.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/source_discovery/treasury_auction/history_amended_layout_review_v1/912828W30.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/source_discovery/treasury_auction/history_amended_layout_review_v1/912828W48-1.png": "f60e6235ba121225d7d8c87f8026e4974eda0417938b9d7c5cb783f7789d0166",
+    "data/source_discovery/treasury_auction/history_amended_layout_review_v1/912828W48.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/source_discovery/treasury_auction/history_amended_layout_review_v1/912828W48.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/source_discovery/treasury_auction/history_amended_layout_review_v1/912828W55-1.png": "d87120a128b4de38316fcf9e2f87e6953db8dd3419d50b45f7ced46a331257c1",
+    "data/source_discovery/treasury_auction/history_amended_layout_review_v1/912828W55.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/source_discovery/treasury_auction/history_amended_layout_review_v1/912828W55.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/source_discovery/treasury_auction/history_amended_layout_review_v1/912828XU9-1.png": "bb30d7f93d680864beb6368df48c7df0575898a89934e05b45765dc0b0f7e012",
+    "data/source_discovery/treasury_auction/history_amended_layout_review_v1/912828XU9.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/source_discovery/treasury_auction/history_amended_layout_review_v1/912828XU9.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/source_discovery/treasury_auction/history_amended_layout_review_v1/render_manifest.json": "5d318eac17f125fb99f3957864035efc3f452a1ecb2486d64626ca0941bf3cb8",
+    "data/source_discovery/treasury_auction/history_capture_v1/194c37b49f267c3f503c28563ccc7f1c22f3d3ef580ecca3c6264a8ad6ab4e09/body.xml": "e762a87fc84ba5578cc7944411a9efe27a0bed769009feed5a2bc78bbb9b8c33",
+    "data/source_discovery/treasury_auction/history_capture_v1/3187b8c261c49c4fb0beb885dbdb3a1645d0353755474b65d4b41e2cf312f3fa/body.pdf": "dc528d6798a46b434c624cfdeb3b8aef0454851189f9a61e540aadd81dbeddd1",
+    "data/source_discovery/treasury_auction/history_capture_v1/3187b8c261c49c4fb0beb885dbdb3a1645d0353755474b65d4b41e2cf312f3fa/headers.txt": "7e54c9f3503454e810ec673ba08d0ef72a77d98977c6453060bd5c32cde335dc",
+    "data/source_discovery/treasury_auction/history_capture_v1/3187b8c261c49c4fb0beb885dbdb3a1645d0353755474b65d4b41e2cf312f3fa/receipt.json": "49c2f68fefe5c5103c377a95623245360d3bb426468597d424d6a52851496fb5",
+    "data/source_discovery/treasury_auction/history_capture_v1/40aac72dc722afecf0383d45bb6f158efea463c4534933fc154001316a2f096d/body.pdf": "efa33d7c6feb1f50d9bdd81c6f212a477b8753501dda81fa7526924575eb29a9",
+    "data/source_discovery/treasury_auction/history_capture_v1/40aac72dc722afecf0383d45bb6f158efea463c4534933fc154001316a2f096d/headers.txt": "d6272e372e1389c3a4afaacb6083bfcf28faed67573fecd12ecbbc99bc206530",
+    "data/source_discovery/treasury_auction/history_capture_v1/40aac72dc722afecf0383d45bb6f158efea463c4534933fc154001316a2f096d/receipt.json": "d99204f056b6ae8a9f97e89ad60afb8818147467763a81f6a525f87461b708a2",
+    "data/source_discovery/treasury_auction/history_capture_v1/63e7eb528c44e8ec87565be0aacf85ddd7193c765b82b5ec6238a2db8a20ebc2/body.xml": "f579bf7d0d426d441f73b79aebdf438d1bbecd6de01f5398aa262e425e1e4ffc",
+    "data/source_discovery/treasury_auction/history_capture_v1/6cb5194ba7e5e313694a14e9c95f3dc4399ec60a240a25b12836e8e8bb4094c6/body.pdf": "6fd1e274212480e76b7c38351d822c861b4c3194948aed46d31fd840f20beac0",
+    "data/source_discovery/treasury_auction/history_capture_v1/6cb5194ba7e5e313694a14e9c95f3dc4399ec60a240a25b12836e8e8bb4094c6/headers.txt": "05363e6e73033c7733b4020280a42141e16808a5374fa84d3a3b5e4f922eb3b4",
+    "data/source_discovery/treasury_auction/history_capture_v1/6cb5194ba7e5e313694a14e9c95f3dc4399ec60a240a25b12836e8e8bb4094c6/receipt.json": "3ea06de19e7ee2cfe92a2de9de13e770a0076dfda00bbfbb2360a7490516a574",
+    "data/source_discovery/treasury_auction/history_capture_v1/77324fe251ca4a76bc6127e93369ff92d71445460dad7386d83a1f23142c8b4c/body.xml": "bbb6741a0fd2a61aa93f621c353042d052a5e1559659202dee951790195e690d",
+    "data/source_discovery/treasury_auction/history_capture_v1/8fc32e14d66761f6a17758533132e69fbb58d2868d193819e10079d77ffccb8d/body.pdf": "1910af5793f5ed314e1440aa4a9340bd2ea2c3e84a84a4a5b894f98ec256704b",
+    "data/source_discovery/treasury_auction/history_capture_v1/8fc32e14d66761f6a17758533132e69fbb58d2868d193819e10079d77ffccb8d/headers.txt": "5a22b8eddb2fa1fa657b4db59ff73e25c78ff90efb8f9449d57f122051941b05",
+    "data/source_discovery/treasury_auction/history_capture_v1/8fc32e14d66761f6a17758533132e69fbb58d2868d193819e10079d77ffccb8d/receipt.json": "903d1e2febe9863fc033af875f3238b47d6d408b64b91f5da28d35693e82b674",
+    "data/source_discovery/treasury_auction/history_capture_v1/90986e722cc1df2703462a5dd9a0e6be313aa0e19efb2b0109bcccce3dec3975/body.xml": "8a7e8aa8b2660669818f03a49e03f48d97698cd66f25fa0f17a8999155ac48ef",
+    "data/source_discovery/treasury_auction/history_capture_v1/aa68ae2c0619588cf3e9838237b376f2980a55e788499810794a8669da838bde/body.xml": "01316407702f755f99826f5564808ca0e387873f79ab28e1d9711cf44de6b6a4",
+    "data/source_discovery/treasury_auction/history_capture_v1/e15550462c345db8e0f120540599f2494dc13ff2b956fb4c72562320392e865a/body.pdf": "e692aa5a8930ab8c859d3aa08a2e2e29223b7feee681a0d1afd6687e66a90f5d",
+    "data/source_discovery/treasury_auction/history_capture_v1/e15550462c345db8e0f120540599f2494dc13ff2b956fb4c72562320392e865a/headers.txt": "a709b940d214e66603da134207bccfe76ffa4304cdc2f893285a0e7aefe022e3",
+    "data/source_discovery/treasury_auction/history_capture_v1/e15550462c345db8e0f120540599f2494dc13ff2b956fb4c72562320392e865a/receipt.json": "a55ef3fabb51b8808736212fce5841f705b4c9ec97a1b56729b1f1b4ed247719",
+    "data/source_discovery/treasury_auction/history_capture_v1/ed48a849c854379bc6d57d5d14debd0565050d0f26e3c9959ca73cbb825338ed/body.pdf": "58108f54d27f91719f7311b75133f35e99094ee0681da09119e3100f95eba659",
+    "data/source_discovery/treasury_auction/history_capture_v1/ed48a849c854379bc6d57d5d14debd0565050d0f26e3c9959ca73cbb825338ed/headers.txt": "b94f3cfeed0db802ff7fdb10c9c7e210ee09e0e015aaaed0368b4fc0895b094d",
+    "data/source_discovery/treasury_auction/history_capture_v1/ed48a849c854379bc6d57d5d14debd0565050d0f26e3c9959ca73cbb825338ed/receipt.json": "0dd7ef765d867f74e8510767e50f0ff415f2860337867a0707af00b29e751baa",
+    "data/source_discovery/treasury_auction/history_capture_v1/ed5f439a6a7070afe183b7da0c5b7f194a1e9670e22af1ea5ab3fd53063c52b3/body.pdf": "7db8c599a7f21e93eb2616fed7b984424013ab9a9ce7258e5b07ba63569ae0ba",
+    "data/source_discovery/treasury_auction/history_capture_v1/ed5f439a6a7070afe183b7da0c5b7f194a1e9670e22af1ea5ab3fd53063c52b3/headers.txt": "f7508f6455a389433f90bd7a5339a96b17531e1d205c6a9cda10126f7913de42",
+    "data/source_discovery/treasury_auction/history_capture_v1/ed5f439a6a7070afe183b7da0c5b7f194a1e9670e22af1ea5ab3fd53063c52b3/receipt.json": "edb2d684042cc01b6dff623300095a587e110113d311270d83c5b27b98a3c0fb",
+    "data/source_discovery/treasury_auction/history_capture_v1/ede38ae3413faf75550c95cd6eb62f8a97ebf65a016729ddc8d0e21bb8034b60/body.xml": "c4a309faf88f219fe8ce223219b07acb7371a4048c75590e6aeec0985230276d",
+    "data/source_discovery/treasury_auction/history_capture_v1/f11798d9fa258f05d57dfe78c9edda46d5ca0ffd90173136138c876f31f67c0d/body.xml": "c942cd6bda9141db925b3428ae14f0a35df14401cbd5a2345111d230a9d1a338",
+    "data/source_discovery/treasury_auction/history_metadata_v1/1910af5793f5ed314e1440aa4a9340bd2ea2c3e84a84a4a5b894f98ec256704b.txt": "e39f2f5814b65331e7df52bee4461dc359d25b475f893d12e16344604fbd3c96",
+    "data/source_discovery/treasury_auction/history_metadata_v1/58108f54d27f91719f7311b75133f35e99094ee0681da09119e3100f95eba659.txt": "0a796470c1de797ce036171265a3c034284e9b73a5e5af6173272f628af32edb",
+    "data/source_discovery/treasury_auction/history_metadata_v1/6fd1e274212480e76b7c38351d822c861b4c3194948aed46d31fd840f20beac0.txt": "f47cb22740509ecd57436c1abd28cde99ea63bad1baabeca4ea649a72b402eaa",
+    "data/source_discovery/treasury_auction/history_metadata_v1/7db8c599a7f21e93eb2616fed7b984424013ab9a9ce7258e5b07ba63569ae0ba.txt": "9559cc4a5f3d76488e0874483b2f6020930cf1505cced78e80916df37cb781d1",
+    "data/source_discovery/treasury_auction/history_metadata_v1/dc528d6798a46b434c624cfdeb3b8aef0454851189f9a61e540aadd81dbeddd1.txt": "d3d834533fc86efbcc49cb4adc5837df6683fbc5e3928a27fadc9c19a22f636d",
+    "data/source_discovery/treasury_auction/history_metadata_v1/e692aa5a8930ab8c859d3aa08a2e2e29223b7feee681a0d1afd6687e66a90f5d.txt": "f6a34834a8b95055e6b3d7f695c7e62a7139c23f284b808925cc28c7d0d2d690",
+    "data/source_discovery/treasury_auction/history_metadata_v1/efa33d7c6feb1f50d9bdd81c6f212a477b8753501dda81fa7526924575eb29a9.txt": "e43feb22b2dfcd6461bce181ee605ecef29a5bd149678d93ef668ab3da90c01b",
+    "reports/next_signal_review/TREASURY_FULL_NOTICE_REVIEW.json": "4bea660c12ae0ba31ef388f0f8559fa3b04daee6bdbb9690d7f60b062a2ce155",
+    "reports/next_signal_review/TREASURY_HISTORY_CAPTURE.json": "111149a8cecec2c15152381169e44d9fcff3fabf24c8b677fe3232da39a1db28",
+    "reports/next_signal_review/TREASURY_HISTORY_INSPECTION_CHECKPOINT.json": "93dfa872c6c402439e028227e4b0ebc4bca87f094356a0f4a5f95cc3b35de5ee",
+    "reports/next_signal_review/TREASURY_HISTORY_METADATA.json": "82a619ac849802fe45b30447b0c4c12d94f3786f88e118536b1850ee8cda846e",
+    "reports/next_signal_review/TREASURY_NOTICE_LEDGER_A.json": "752ec9d4541919af83f1a2fcf29e2f599911763f53297f94034331ba4d5f1721",
+    "reports/next_signal_review/TREASURY_NOTICE_LEDGER_C.json": "313e63d983eafeb88b5dcef014964b86a3c0b3ce56067c179a226f0398103ec9"
+  },
+  "limits": [
+    "Documentary metadata triage only; source-history admission, first financial value recovery and forecasting remain unperformed.",
+    "No newly inspected page states an allocation-result correction: all seven are offering announcements.",
+    "The prior January2016 RP5 announcement typo is preserved and was not re-rendered or reclassified.",
+    "Bid deadlines and embargo labels do not establish actual historical delivery timestamps.",
+    "No financial amounts or yields are transcribed into this public review.",
+    "Raw XML was hashed only; the XML identity comparison used the frozen metadata projection."
+  ],
+  "registered_comparisons": 144,
+  "render_manifest_path": "data/source_discovery/treasury_auction/history_amended_layout_review_v1/render_manifest.json",
+  "render_manifest_sha256": "5d318eac17f125fb99f3957864035efc3f452a1ecb2486d64626ca0941bf3cb8",
+  "reviewer": "peak_age_admission",
+  "source_history_admitted": false,
+  "status": "COMPLETE_SEVEN_CASE_DOCUMENTARY_TRIAGE"
+}

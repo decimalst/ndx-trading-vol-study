@@ -1,0 +1,69 @@
+{
+  "status": "VERIFIED_QUALIFIED_REPORT_CHECKPOINT",
+  "completed_utc": "2026-09-09T05:28:58.643929+00:00",
+  "study": "precision_gate_wave26",
+  "artifact_hashes": {
+    "reports/precision_gate/predictive/metrics.json": "3ad635e31bf81f224ccf690bb0efd109b8f0b23dea6fc7bfb30d6073b7ffde58",
+    "reports/precision_gate/predictive/FULL_PRECHECK.log": "5be4435c043a9011affbf4fd7b891413a7deb8b2242ff864ca89031879a8ee6e",
+    "reports/precision_gate/predictive/TEST_GATE_RESULT.json": "1433cd160bb68b775aed22697e23ef8c480f99017c1486bde37156664f210efd",
+    "reports/precision_gate/predictive/FULL_PRECHECK.json": "f6ec4b617c6e3da95868d61a3d81c677a9aa0e65d3a0f941fc17813e45cbc0c4",
+    "reports/precision_gate/predictive/score_verification.json": "1f3938eb02f0ceb7493505a1bac8790f2d5c42c9654e31d5fe722a0b62cb09f6",
+    "reports/precision_gate/predictive/manifest.json": "a7acefd1a8724eef86aeafce589d771418221669135cc2540dbb4630c9a33a83",
+    "reports/precision_gate/predictive/freeze_record.json": "3ff970b3e4fa0ed77e862cd1f1fe2f8e872378f643bd1366f4fa81e7e4c95b43",
+    "reports/precision_gate/predictive/verification.json": "c78af4d31336dceb585c60f02823c964c5503f56745b489dfd0695ee4433a92f",
+    "reports/precision_gate/predictive/forecast_verification.json": "e4f168e2679a61ca4075f7221d431e76144a50a178f31ab3fe591147e44463c3",
+    "reports/precision_gate/predictive/trial_ledger.jsonl": "b9af3ce5fa61780080f8c599133ebdc44b3c5782a5d98b95aa0f93efbdf874f1",
+    "reports/precision_gate/predictive/TEST_SELECTION.json": "06793e70074b402aa1ac83bfef80f89f5694143f2a0154a05a9f3ba346ffe589",
+    "reports/precision_gate/predictive/terminal.json": "85e66cca0c8750fb994fbb5e11256ada8a274206487564c7a7e8b186b00030bf",
+    "reports/precision_gate/predictive/PUBLICATION_INDEPENDENT_AUDIT.json": "b3322c02f6906345c1b2998d37d583b15fc477cfb9a59deff081c4efb9474aa5",
+    "reports/precision_gate/predictive/RENDER_MANIFEST.json": "d94f1314e4a981a07d2ff45402647be1ab2189171ac51c1245b348b45189e642",
+    "reports/precision_gate/predictive/FINDINGS.md": "04454d3f4e4b930b3ba56b60dc42c04532c95a667867ee803986f4e7e7dd7c37",
+    "reports/precision_gate/predictive/SUMMARY.md": "196028247ae9635ba822cf165b379adff59d2978bdaee449ef73c78d87bd1d73",
+    "reports/precision_gate/predictive/comparison_intervals.png": "3e8c1a49ed13cb533d1cb1ce6780e533ed91351d77b1f91a7fb42f90d3726ca6",
+    "reports/precision_gate/predictive/comparison_intervals.pdf": "3b977cdcb946c07e7ae6d360475f50b10cb6648672fca9318164a7cc092972c0",
+    "scripts/render_precision_gate_results.py": "450e313d8d4d1fae4b987db9fe01df2312ad5dd5515e104514b6759675e81e5b"
+  },
+  "output_hashes": {
+    "data/model_memory_study/precision_gate_wave26/coverage.parquet": "b13ea685556aea6fa0a83c19e4a0828f3dc73359cb19cfcf5f022b35700e1b02",
+    "data/model_memory_study/precision_gate_wave26/targets.parquet": "ef47b14b888a564897ca8d72b5cfd193d89a6407dc9820a5fb3ffe6cd12ed0d5",
+    "data/model_memory_study/precision_gate_wave26/panel.parquet": "e2c171e91c96db7951b87fa596ebc8242265b12384aa4ac53653a99cc41504e0",
+    "data/model_memory_study/precision_gate_wave26/schedules.parquet": "3bf856bbda9373ab00401255dd5c274b0370971cf869aac0becbb2794c1b190a",
+    "data/model_memory_study/precision_gate_wave26/applications.parquet": "e94c62a1bb947af96a838535ddb49e2fa58f4767c0195a5a35a5c035c96db55d",
+    "data/model_memory_study/precision_gate_wave26/features.parquet": "78140d5b46cfefcaf9843630ed44f046389bd10b2d12c75b0e6e40179ac242f3",
+    "data/model_memory_study/precision_gate_wave26/fits.json": "5eece57f5a8567219f7fb0d5c7b0e600e926f09a6b8ee7f16dfd8d1de48bbb96"
+  },
+  "result": {
+    "new_comparisons": 3,
+    "cumulative_comparisons": 149,
+    "qualifying_signals": 0,
+    "verdicts": [
+      "DOES_NOT_QUALIFY",
+      "DOES_NOT_QUALIFY",
+      "DOES_NOT_QUALIFY"
+    ],
+    "scored_origins": 2454,
+    "fitted_gate_scored_origins": 2415,
+    "cold_start_scored_origins": 39,
+    "scored_forecasts": 9816,
+    "issued_forecasts": 10784,
+    "expert_fits": 258,
+    "gate_fits": 232
+  },
+  "selected_tests": {
+    "passed": 3313,
+    "quarantined_historical_replays": 6
+  },
+  "visual_review": {
+    "six_means_and_envelopes_match_saved_metrics": true,
+    "axis_labels_and_qualifications_readable": true,
+    "six_rounded_means_in_both_reports_checked": true,
+    "no_fits_or_inference_rerun": true
+  },
+  "evidence_class": "EXPLORATORY_REUSED_MARKET_HISTORY_CURRENT_VINTAGES",
+  "evidence_limitation": "Historical development and evaluation windows have been reused. Prior regression tests accessed the period beginning 2025-11-03; it is not untouched confirmation. Current vendor snapshots do not certify complete point-in-time price or implied-volatility vintages. Numerical inputs in this experiment end 2025-10-20.",
+  "independent_audit_scope": "Saved empirical artifacts and bookkeeping; new narrative/chart checked separately in this checkpoint.",
+  "goal_turn_classification": "PROGRESS_PRECISION_GATE_COMPLETED_AND_VERIFIED_NO_QUALIFYING_SIGNAL",
+  "goal_complete": false,
+  "next_action": "Review remaining information or target hypotheses against prior experiments before registering another model; no further gate retuning is registered.",
+  "external_publication_performed": false
+}

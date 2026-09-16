@@ -1,0 +1,18 @@
+.E...........
+======================================================================
+ERROR: test_failure_guard_keeps_allthree_pone_and_old_bytes_and_score_diagnostics (tests.test_verify_peak_age.EnvelopeAndFailureTests.test_failure_guard_keeps_allthree_pone_and_old_bytes_and_score_diagnostics)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 212, in test_failure_guard_keeps_allthree_pone_and_old_bytes_and_score_diagnostics
+    with patch.object(v,'verify',side_effect=ValueError('injected independent check')):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.verify_peak_age' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_peak_age.py'> does not have the attribute 'verify'
+
+----------------------------------------------------------------------
+Ran 13 tests in 1.348s
+
+FAILED (errors=1)

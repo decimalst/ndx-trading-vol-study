@@ -1,0 +1,43 @@
+{
+  "checkpoint_sha256": "abcd5ae5d0f120e4308e47ef522f5d0956f1219151f0bb60601248064642a7a2",
+  "completed_utc": "2026-09-09T03:26:31.084065+00:00",
+  "events": [
+    {
+      "auction_date": "2019-12-23",
+      "cusip": "912828YZ7",
+      "offering_sources": 3,
+      "paired_fields": 16,
+      "private_output": "data/source_discovery/treasury_auction/clock_recovery_v1/reconciled_events_v1/2019-12-23_912828YZ7.json",
+      "private_output_sha256": "41c6df1ce4ec14392a5b4828a1b03a80a302c8922d5fe5bca48ba5cec3c7d20c",
+      "release_date": "2019-12-23",
+      "status": "PAIRED_SOURCE_AMOUNTS_AND_OFFERING_MATCH"
+    },
+    {
+      "auction_date": "2019-12-24",
+      "cusip": "912828YY0",
+      "offering_sources": 3,
+      "paired_fields": 16,
+      "private_output": "data/source_discovery/treasury_auction/clock_recovery_v1/reconciled_events_v1/2019-12-24_912828YY0.json",
+      "private_output_sha256": "5f941445b2f0be66c36eb8f4f92e13cbdb0f762d05c6f24bef15615a150baa56",
+      "release_date": "2019-12-24",
+      "status": "PAIRED_SOURCE_AMOUNTS_AND_OFFERING_MATCH"
+    },
+    {
+      "auction_date": "2020-12-09",
+      "cusip": "91282CAV3",
+      "offering_sources": 3,
+      "paired_fields": 16,
+      "private_output": "data/source_discovery/treasury_auction/clock_recovery_v1/reconciled_events_v1/2020-12-09_91282CAV3.json",
+      "private_output_sha256": "b381e983e21c7d8c10d49f98c31455e65919b2709ff0ca74728130101a1aeffd",
+      "release_date": "2020-12-09",
+      "status": "PAIRED_SOURCE_AMOUNTS_AND_OFFERING_MATCH"
+    }
+  ],
+  "market_arrays_read": false,
+  "new_predictive_comparisons": 0,
+  "preserved_pins": 28215,
+  "pypdf_version": "6.10.0",
+  "registered_comparisons": 144,
+  "source_history_admitted": false,
+  "status": "COMPLETED_THREE_RECOVERED_SOURCE_APPLICATIONS"
+}

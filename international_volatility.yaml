@@ -1,0 +1,78 @@
+study_id: international_volatility_wave02
+specified_on: '2026-09-06'
+status: fixed_before_empirical_scores
+evidence_class: exploratory_reused_history
+wave: 2
+wave_alpha: 0.008333333333333333
+objective: Test regional and latent international volatility information beyond the strong SPX baseline
+sources:
+  archive: data/raw/oxford_man_realized.zip
+  archive_sha256: e0dd80edc0c2cedac5ed3f72250ee4460e963b4efd458d68525a61bcc5c27ea2
+  spx_existing: data/research_paths/spx_daily.parquet
+  spx_extension: data/iterative_signal_search/spx_daily_pre2009_download.parquet
+  spx_extension_metadata: data/iterative_signal_search/spx_daily_pre2009_source.json
+  cboe: data/research_paths/cboe_indices.parquet
+  source_end: '2018-01-03'
+international:
+  asia: ['.N225', '.HSI', '.KS11']
+  europe: ['.FTSE', '.GDAXI', '.FCHI']
+  raw_measure: rv5
+  windows: [1, 5, 22]
+  rolling_calendar: each market's archived local observation dates before US alignment; retain invalid-value rows so incomplete windows stay missing; no independently certified exchange-session calendar
+  transform: log of arithmetic mean rv5 over each complete local rolling window
+  alignment: backward asof to date of previous SPX session; no same-US-date foreign observation
+  freshness: maximum3 additional SPX sessions since source date beyond the mandatory previous-session cutoff
+  max_extra_us_sessions: 3
+  age_formula: count of SPX sessions strictly after foreign source date through previous-SPX-session cutoff, inclusive of cutoff; zero on exact cutoff match
+  dates: preserve stated local trading date; do not convert local midnight to UTC
+  source_audit: retain source date and extra-US-session age for every foreign market and US origin
+  interpretation: lagged archival index-volatility states; not a real-time historical publication-vintage feed
+hf:
+  asset: SPX
+  source_end: '2018-01-03'
+  baseline: [const, gk_d, gk_w, gk_m, lev_d, lev_w, lev_m, liv, hf_d, hf_w, hf_m]
+  models: [baseline, regional, latent]
+  candidates:
+    regional: six equal-weight regional means of foreign log variance; Asia and Europe at1/5/22 local-session windows
+    latent: three principal components from all18 foreign log-variance features; scaling and SVD fitted only on eligible training rows
+  pca_components: 3
+  pca_boundary_gap: require (s3 squared minus s4 squared) greater than 1e-8 times s1 squared; otherwise insufficient data, no arbitrary subspace choice
+  pca_sign: largest absolute loading of each component made positive; deterministic tie-breaking by feature order
+  target: arithmetic mean of next h complete SPX rv5 observations
+  horizons: [1, 5, 21]
+  target_publication: one full SPX session after target_end
+  minimum_train: 750
+  estimator: expanding monthly OLS of log target with exact Duan smearing
+  scaling: training-only population mean/std; reject zero scale and deficient design rank
+  training_rule: origin strictly before fit_origin and target available_date at or before fit_origin
+  refit: first eligible origin each calendar month
+  development: ['2010-01-04', '2013-12-31']
+  development_target_available_by: '2013-12-31'
+  evaluation: ['2014-01-02', '2017-12-29']
+  latest_target: '2017-12-29'
+  common_sample: identical origins across all three models and all three horizons; all labels obey phase fences
+  evaluation_stability: [['2014-01-02', '2015-12-31'], ['2016-01-01', '2017-12-29']]
+  effect_threshold_pct: 1.0
+comparisons:
+  new_hypotheses: 6
+  inherited_hypotheses: 66
+  cumulative_hypotheses: 72
+  inherited_sources: [reports/orthogonal_round2/metrics.json, reports/model_memory_study/combined_metrics.json, reports/iterative_signal_search/metrics.json]
+  control: baseline
+  mechanism_claim: beating baseline supports adding the declared international representation; latent superiority over regional is not a tested claim
+inference:
+  loss: QLIKE
+  blocks: [21, 63, 126]
+  bootstrap_draws: 19999
+  seed: 20260908
+  seed_rule: seed + horizon*1000 + phase_code*10000 + block; development=0,evaluation=1
+  p_phase: maximum two-sided centered-null circular bootstrap p across allblocks and Bartlett HAC126 p
+  p_hypothesis: maximum of development and evaluation phase p
+  multiplicity: Holm across6 new contrasts at wavealpha .05/(2*3), and separately all72 enumerated contrasts at .05
+  gate: bothphase gain>=1%, eachof2evaluation slices negative pairedlossgap, waveHolm<wavealpha, cumulativeHolm<.05
+  missing_data: complete common sample only; any run failure retains all6 hypotheses as unevaluable p1, distinct insufficient-data and invalid-run statuses
+  reporting: every comparison, nominal uncertainty envelope, MDE, annual slices and actual-calendar nonoverlapping phases
+  caveat: neither split nor multiplicity accounting reverses the adaptive reuse of historical data
+outputs:
+  data: data/international_volatility
+  reports: reports/international_volatility

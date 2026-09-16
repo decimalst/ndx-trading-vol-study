@@ -1,0 +1,78 @@
+test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction (tests.test_treasury_history_pdf_layout.TreasuryHistoryPdfLayoutTests.test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction) ... 
+  test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction (tests.test_treasury_history_pdf_layout.TreasuryHistoryPdfLayoutTests.test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction) (result=True, label='CUSIP:', value='AB1234567') ... FAIL
+  test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction (tests.test_treasury_history_pdf_layout.TreasuryHistoryPdfLayoutTests.test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction) (result=True, label='CUSIP:', value='ZZ1234567') ... FAIL
+  test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction (tests.test_treasury_history_pdf_layout.TreasuryHistoryPdfLayoutTests.test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction) (result=True, label='CUSIP#', value='AB1234567') ... FAIL
+  test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction (tests.test_treasury_history_pdf_layout.TreasuryHistoryPdfLayoutTests.test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction) (result=True, label='CUSIP#', value='ZZ1234567') ... FAIL
+  test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction (tests.test_treasury_history_pdf_layout.TreasuryHistoryPdfLayoutTests.test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction) (result=False, label='CUSIP:', value='AB1234567') ... FAIL
+  test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction (tests.test_treasury_history_pdf_layout.TreasuryHistoryPdfLayoutTests.test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction) (result=False, label='CUSIP:', value='ZZ1234567') ... FAIL
+  test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction (tests.test_treasury_history_pdf_layout.TreasuryHistoryPdfLayoutTests.test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction) (result=False, label='CUSIP#', value='AB1234567') ... FAIL
+  test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction (tests.test_treasury_history_pdf_layout.TreasuryHistoryPdfLayoutTests.test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction) (result=False, label='CUSIP#', value='ZZ1234567') ... FAIL
+
+======================================================================
+FAIL: test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction (tests.test_treasury_history_pdf_layout.TreasuryHistoryPdfLayoutTests.test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction) (result=True, label='CUSIP:', value='AB1234567')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_history_pdf_layout.py", line 89, in test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction
+    with self.subTest(result=result, label=label, value=value), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction (tests.test_treasury_history_pdf_layout.TreasuryHistoryPdfLayoutTests.test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction) (result=True, label='CUSIP:', value='ZZ1234567')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_history_pdf_layout.py", line 89, in test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction
+    with self.subTest(result=result, label=label, value=value), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction (tests.test_treasury_history_pdf_layout.TreasuryHistoryPdfLayoutTests.test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction) (result=True, label='CUSIP#', value='AB1234567')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_history_pdf_layout.py", line 89, in test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction
+    with self.subTest(result=result, label=label, value=value), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction (tests.test_treasury_history_pdf_layout.TreasuryHistoryPdfLayoutTests.test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction) (result=True, label='CUSIP#', value='ZZ1234567')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_history_pdf_layout.py", line 89, in test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction
+    with self.subTest(result=result, label=label, value=value), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction (tests.test_treasury_history_pdf_layout.TreasuryHistoryPdfLayoutTests.test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction) (result=False, label='CUSIP:', value='AB1234567')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_history_pdf_layout.py", line 89, in test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction
+    with self.subTest(result=result, label=label, value=value), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction (tests.test_treasury_history_pdf_layout.TreasuryHistoryPdfLayoutTests.test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction) (result=False, label='CUSIP:', value='ZZ1234567')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_history_pdf_layout.py", line 89, in test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction
+    with self.subTest(result=result, label=label, value=value), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction (tests.test_treasury_history_pdf_layout.TreasuryHistoryPdfLayoutTests.test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction) (result=False, label='CUSIP#', value='AB1234567')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_history_pdf_layout.py", line 89, in test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction
+    with self.subTest(result=result, label=label, value=value), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction (tests.test_treasury_history_pdf_layout.TreasuryHistoryPdfLayoutTests.test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction) (result=False, label='CUSIP#', value='ZZ1234567')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_history_pdf_layout.py", line 89, in test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction
+    with self.subTest(result=result, label=label, value=value), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+FAILED (failures=8)

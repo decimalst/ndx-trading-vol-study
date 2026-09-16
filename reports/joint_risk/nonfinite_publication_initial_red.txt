@@ -1,0 +1,22 @@
+test_nonfinite_scored_payload_still_records_both_failed_trials (tests.test_joint_risk_publication.TestJointRiskPublication.test_nonfinite_scored_payload_still_records_both_failed_trials) ... ERROR
+
+======================================================================
+ERROR: test_nonfinite_scored_payload_still_records_both_failed_trials (tests.test_joint_risk_publication.TestJointRiskPublication.test_nonfinite_scored_payload_still_records_both_failed_trials)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_joint_risk_publication.py", line 278, in test_nonfinite_scored_payload_still_records_both_failed_trials
+    self._assert_failed_publication("nonfinite_scored")
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_joint_risk_publication.py", line 227, in _assert_failed_publication
+    (report / "unpublished_scored_metrics.json").read_text()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py", line 1058, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/folders/jn/2wqppgv57cx3k54l_dqt9sl00000gn/T/tmpjf2cma15/report/unpublished_scored_metrics.json'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.010s
+
+FAILED (errors=1)

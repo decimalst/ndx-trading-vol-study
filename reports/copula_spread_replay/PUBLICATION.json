@@ -1,0 +1,52 @@
+{
+  "status": "PUBLISHED_LOCAL_DESCRIPTIVE_FINDINGS",
+  "created_utc": "2026-09-13T22:24:56.232717+00:00",
+  "scope": "Local presentation of the separately registered probability replay; no inference, model promotion, empirical rerun or modification of frozen artifacts. Live data collection is not active.",
+  "original_status": "UNEVALUABLE",
+  "original_six_comparisons": "p=1 retained",
+  "replay_new_hypotheses": 0,
+  "cumulative_hypotheses": 164,
+  "artifacts": {
+    "reports/copula_spread_replay/terminal.json": "7152a1c68cda9ed1174fbaa6a9675b1f4417c79db75ba9bf191495c4ecd79ffe",
+    "reports/copula_spread_replay/freeze.json": "7d96b280283fa2ea88c7778d52bb57f6a13d15a4bfc10daa3a5f5277286ef31f",
+    "reports/copula_spread_replay/registration.json": "f9ffbd3d870fe06c3ea2c9dec45337889fdbe2861e2ff80c65fd4ef5f1ef9427",
+    "reports/copula_spread_replay/PREFIT.json": "5d19a4e0eaa214cbead50f9073a8bd31b4d557b89beea45566a970ea4c7ba04f",
+    "reports/copula_spread_replay/accounting_verification.json": "6af44a802906b20c3b407d29e81024c07820b0c053d12d2501cfa3c937feeecf",
+    "reports/copula_spread_replay/density_descriptions.json": "6a8bb53c7f340f4e53ea4436a3ce9f0a37121b199ce22d780c6dd00b59b968b4",
+    "reports/copula_spread_replay/INDEPENDENT_REVIEW.json": "0fb7a2cb40fff69c5785b8b01137215067b434961d40d4d362b9710c7b20a8b8",
+    "reports/copula_spread_replay/NARRATIVE_REVIEW.json": "2f0f401d8da9f2ed61a4cc0adfe42e330e24f4d3cbfa5f6caca8005e6ea36048",
+    "reports/copula_spread_replay/FINDINGS.md": "0ef75ce83aca4ba5e439fa50f04ed6b39469cf0eb9aad36b8aad87c546544cfa",
+    "reports/copula_spread_replay/ALL_CASES.md": "50aba1cc918456351c8106b217b85e058e3655acdcc7a7a9f15c32de6c47d2f9",
+    "reports/copula_spread_replay/FIGURE_DATA.json": "df48c0d1c799ba0648d6ff9ffba2652b96ea8b6b0c3a1204110c432d79f34825",
+    "reports/copula_spread_replay/FIGURE_RECEIPT.json": "0bb99b965d295a24e08b69f48ff88fefb330a179711411037154cb0ff8250af8",
+    "reports/copula_spread_replay/spread_safety.png": "2b8cfc3c590701155a6f844f1addfc6c3612de7477cda7520dd00b0e6a41c865",
+    "reports/copula_spread_replay/spread_safety.pdf": "58a2dac41e35f14e7123f9b6859014e8e6b9115a8889e92960e4a7f8ad01b06c",
+    "reports/copula_spread_replay/render_findings.py": "38a9d10de3b3addad6434cb15d07a067c297ce9efe0e3797f33c86affd82e3c3",
+    "reports/copula_shape/predictive/terminal.json": "9f7a1ef5d19c16305f708aaa9bf8ce832c6de8d8e13ca73b9c4899a66e385a0c",
+    "reports/copula_shape/predictive/INDEPENDENT_REVIEW.json": "68ce5b9aeee226faa3dd42edebb88d45193c68f41865ca27603c5c15d72eb4fa",
+    "reports/copula_shape/predictive/forecast_verification.json": "8821bf79c24eb354599d8d1127a83699426ddc25a57fb7e5bcc94c5b1411f983",
+    "docs/PROSPECTIVE_BENCHMARK.md": "e9bd8628dbc0caa89eacc130d7fd377d42b3a3c8e147b7ebd4690f9cd0a9aaf0",
+    "src/prospective_benchmark.py": "3b9ea77604aa658241088c69bc426b9c05f6fb99777c929a90e1dd8cb6b1f088",
+    "tests/test_prospective_benchmark.py": "4fb2d346a8ed5e77dbccb2fd2b06a5d5274793c8029f043b9227ca91897c76bc"
+  },
+  "saved_outputs": {
+    "reports/copula_spread_replay/started.json": "e0aa3b225c9f450ae12d601ac73bebc14a00acabac9201fb59421c4378475594",
+    "data/model_memory_study/copula_spread_replay/positions.parquet": "562ad6fa0346808506e2d2b0859d839ea025dfeeb1e449f51195ab1c65d9a704",
+    "data/model_memory_study/copula_spread_replay/path.parquet": "28803e5739398b18858b09ddc21936d899cdf8cfac91161af16a8756a730733b",
+    "data/model_memory_study/copula_spread_replay/summary.parquet": "4232bba71551ba96bc7ae1893c65af28cc7cf11b6d4f04d2cc263fe53e2ff00e",
+    "data/model_memory_study/copula_spread_replay/outcomes.parquet": "266c8bcd0424618713354b280356b246e040e1c68447da6b49846ba8d0184df7",
+    "reports/copula_spread_replay/accounting_verification.json": "6af44a802906b20c3b407d29e81024c07820b0c053d12d2501cfa3c937feeecf",
+    "data/model_memory_study/copula_spread_replay/safety_summary.parquet": "0574957139b8d004e1271128d1e81722290f27160cb953a28c8b9acac3984bef",
+    "reports/copula_spread_replay/density_descriptions.json": "6a8bb53c7f340f4e53ea4436a3ce9f0a37121b199ce22d780c6dd00b59b968b4"
+  },
+  "visual_qa": {
+    "file": "reports/copula_spread_replay/spread_safety.png",
+    "checked_by": "root",
+    "result": "Labels, units, legend, numerical values and qualifications readable; no clipping or overlap."
+  },
+  "local_link_check": {
+    "checked": 7,
+    "missing": 0
+  },
+  "publication_note": "No external publication, commit, push, live feed, subscription or order performed."
+}

@@ -1,0 +1,44 @@
+test_all_observed_reduces_to_ordinary_calendar_mean_and_hac (tests.test_treasury_dealer_inference.TreasuryDealerInferenceTests.test_all_observed_reduces_to_ordinary_calendar_mean_and_hac) ... ok
+test_calendar_gaps_change_hac_without_changing_selected_sequence (tests.test_treasury_dealer_inference.TreasuryDealerInferenceTests.test_calendar_gaps_change_hac_without_changing_selected_sequence) ... ok
+test_constant_zero_and_nonzero_have_declared_zero_variance_limits (tests.test_treasury_dealer_inference.TreasuryDealerInferenceTests.test_constant_zero_and_nonzero_have_declared_zero_variance_limits) ... ok
+test_false_mask_nan_and_large_numbers_never_enter_arithmetic (tests.test_treasury_dealer_inference.TreasuryDealerInferenceTests.test_false_mask_nan_and_large_numbers_never_enter_arithmetic) ... ok
+test_finite_inputs_with_overflowing_influence_variance_fail (tests.test_treasury_dealer_inference.TreasuryDealerInferenceTests.test_finite_inputs_with_overflowing_influence_variance_fail) ... ok
+test_inputs_unchanged_after_success_or_failure (tests.test_treasury_dealer_inference.TreasuryDealerInferenceTests.test_inputs_unchanged_after_success_or_failure) ... ok
+test_masked_remainder_matches_independent_literal_oracle (tests.test_treasury_dealer_inference.TreasuryDealerInferenceTests.test_masked_remainder_matches_independent_literal_oracle) ... ok
+test_multiple_draw_chunks_keep_full_then_tail_rng_order (tests.test_treasury_dealer_inference.TreasuryDealerInferenceTests.test_multiple_draw_chunks_keep_full_then_tail_rng_order) ... ok
+test_rejects_invalid_bootstrap_and_hac_parameters (tests.test_treasury_dealer_inference.TreasuryDealerInferenceTests.test_rejects_invalid_bootstrap_and_hac_parameters) ... ok
+test_rejects_invalid_data_mask_and_support (tests.test_treasury_dealer_inference.TreasuryDealerInferenceTests.test_rejects_invalid_data_mask_and_support) ... ok
+test_zero_support_replicate_rejects_entire_call (tests.test_treasury_dealer_inference.TreasuryDealerInferenceTests.test_zero_support_replicate_rejects_entire_call) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.017s
+
+OK
+
+COMMAND: .venv/bin/ruff check src/treasury_dealer_inference.py tests/test_treasury_dealer_inference.py
+All checks passed!
+EXIT: 0
+
+COMMAND: .venv/bin/ruff format --check src/treasury_dealer_inference.py tests/test_treasury_dealer_inference.py
+2 files already formatted
+EXIT: 0
+
+COMMAND: .venv/bin/python -m unittest tests.test_treasury_dealer_inference -v
+test_all_observed_reduces_to_ordinary_calendar_mean_and_hac (tests.test_treasury_dealer_inference.TreasuryDealerInferenceTests.test_all_observed_reduces_to_ordinary_calendar_mean_and_hac) ... ok
+test_calendar_gaps_change_hac_without_changing_selected_sequence (tests.test_treasury_dealer_inference.TreasuryDealerInferenceTests.test_calendar_gaps_change_hac_without_changing_selected_sequence) ... ok
+test_constant_zero_and_nonzero_have_declared_zero_variance_limits (tests.test_treasury_dealer_inference.TreasuryDealerInferenceTests.test_constant_zero_and_nonzero_have_declared_zero_variance_limits) ... ok
+test_false_mask_nan_and_large_numbers_never_enter_arithmetic (tests.test_treasury_dealer_inference.TreasuryDealerInferenceTests.test_false_mask_nan_and_large_numbers_never_enter_arithmetic) ... ok
+test_finite_inputs_with_overflowing_influence_variance_fail (tests.test_treasury_dealer_inference.TreasuryDealerInferenceTests.test_finite_inputs_with_overflowing_influence_variance_fail) ... ok
+test_inputs_unchanged_after_success_or_failure (tests.test_treasury_dealer_inference.TreasuryDealerInferenceTests.test_inputs_unchanged_after_success_or_failure) ... ok
+test_masked_remainder_matches_independent_literal_oracle (tests.test_treasury_dealer_inference.TreasuryDealerInferenceTests.test_masked_remainder_matches_independent_literal_oracle) ... ok
+test_multiple_draw_chunks_keep_full_then_tail_rng_order (tests.test_treasury_dealer_inference.TreasuryDealerInferenceTests.test_multiple_draw_chunks_keep_full_then_tail_rng_order) ... ok
+test_negative_computed_hac_variance_is_rejected (tests.test_treasury_dealer_inference.TreasuryDealerInferenceTests.test_negative_computed_hac_variance_is_rejected) ... ok
+test_rejects_invalid_bootstrap_and_hac_parameters (tests.test_treasury_dealer_inference.TreasuryDealerInferenceTests.test_rejects_invalid_bootstrap_and_hac_parameters) ... ok
+test_rejects_invalid_data_mask_and_support (tests.test_treasury_dealer_inference.TreasuryDealerInferenceTests.test_rejects_invalid_data_mask_and_support) ... ok
+test_zero_support_replicate_rejects_entire_call (tests.test_treasury_dealer_inference.TreasuryDealerInferenceTests.test_zero_support_replicate_rejects_entire_call) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.015s
+
+OK
+EXIT: 0

@@ -1,0 +1,154 @@
+{
+  "status": "VERIFIED_SAVED_DESCRIPTIVE_PROBABILITY_REPLAY",
+  "reviewer": "replay_entry_finish",
+  "started_utc": "2026-09-13T22:16:12.395468+00:00",
+  "completed_utc": "2026-09-13T22:16:14.157012+00:00",
+  "discrepancies": [],
+  "artifact_hashes": {
+    "reports/copula_spread_replay/terminal.json": "7152a1c68cda9ed1174fbaa6a9675b1f4417c79db75ba9bf191495c4ecd79ffe",
+    "reports/copula_spread_replay/freeze.json": "7d96b280283fa2ea88c7778d52bb57f6a13d15a4bfc10daa3a5f5277286ef31f",
+    "reports/copula_spread_replay/registration.json": "f9ffbd3d870fe06c3ea2c9dec45337889fdbe2861e2ff80c65fd4ef5f1ef9427",
+    "reports/copula_spread_replay/PREFIT.json": "5d19a4e0eaa214cbead50f9073a8bd31b4d557b89beea45566a970ea4c7ba04f",
+    "reports/copula_spread_replay/PREFIT.log": "2892cbf4e3c6f51234a9528a21d4ed10b5e98b577ce2b205887f6ea60c8df95f",
+    "reports/copula_spread_replay/PREFIT_BEFORE.json": "5d60a88dddff76a6084912a7ca6f109fadab631e4a3d9a137ea374ee721ceec2",
+    "reports/copula_spread_replay/accounting_verification.json": "6af44a802906b20c3b407d29e81024c07820b0c053d12d2501cfa3c937feeecf",
+    "copula_spread_replay.yaml": "4ecf19e69ca59b5765fc7904ae3882720d0e23b6a3a3dc9636125150079893d2",
+    "reports/copula_shape/predictive/terminal.json": "9f7a1ef5d19c16305f708aaa9bf8ce832c6de8d8e13ca73b9c4899a66e385a0c",
+    "reports/copula_shape/predictive/failure.json": "9f7a1ef5d19c16305f708aaa9bf8ce832c6de8d8e13ca73b9c4899a66e385a0c",
+    "reports/copula_shape/predictive/INDEPENDENT_REVIEW.json": "68ce5b9aeee226faa3dd42edebb88d45193c68f41865ca27603c5c15d72eb4fa"
+  },
+  "terminal_output_hashes": {
+    "reports/copula_spread_replay/started.json": "e0aa3b225c9f450ae12d601ac73bebc14a00acabac9201fb59421c4378475594",
+    "data/model_memory_study/copula_spread_replay/positions.parquet": "562ad6fa0346808506e2d2b0859d839ea025dfeeb1e449f51195ab1c65d9a704",
+    "data/model_memory_study/copula_spread_replay/path.parquet": "28803e5739398b18858b09ddc21936d899cdf8cfac91161af16a8756a730733b",
+    "data/model_memory_study/copula_spread_replay/summary.parquet": "4232bba71551ba96bc7ae1893c65af28cc7cf11b6d4f04d2cc263fe53e2ff00e",
+    "data/model_memory_study/copula_spread_replay/outcomes.parquet": "266c8bcd0424618713354b280356b246e040e1c68447da6b49846ba8d0184df7",
+    "reports/copula_spread_replay/accounting_verification.json": "6af44a802906b20c3b407d29e81024c07820b0c053d12d2501cfa3c937feeecf",
+    "data/model_memory_study/copula_spread_replay/safety_summary.parquet": "0574957139b8d004e1271128d1e81722290f27160cb953a28c8b9acac3984bef",
+    "reports/copula_spread_replay/density_descriptions.json": "6a8bb53c7f340f4e53ea4436a3ce9f0a37121b199ce22d780c6dd00b59b968b4"
+  },
+  "terminal_anchors": {
+    "reports/copula_spread_replay/freeze.json": "7d96b280283fa2ea88c7778d52bb57f6a13d15a4bfc10daa3a5f5277286ef31f",
+    "reports/copula_spread_replay/registration.json": "f9ffbd3d870fe06c3ea2c9dec45337889fdbe2861e2ff80c65fd4ef5f1ef9427"
+  },
+  "source_preservation": {
+    "replay_freeze_pins": 30253,
+    "unchanged_inherited_pin_map": 30233,
+    "new_delta_pins_directly_hashed": 20,
+    "new_delta_hashes": {
+      "reports/copula_shape/predictive/terminal.json": "9f7a1ef5d19c16305f708aaa9bf8ce832c6de8d8e13ca73b9c4899a66e385a0c",
+      "reports/copula_shape/predictive/freeze.json": "737d9b68bcebf3578efc9ee2dba9e8c4141dfab6a174e1ce39ad110bee831b03",
+      "reports/copula_shape/predictive/started.json": "2f820afe4f84175fa432fc6dfb2832e59ad947feaf439558f960fc829de368db",
+      "data/model_memory_study/copula_shape_wave29/snapshot.zip": "d6fd4eb3cbb84d9769d34d45529a8ce5968df2decaafe9c7de894b5cb17656e6",
+      "data/model_memory_study/copula_shape_wave29/applications.parquet": "afceea26a32581da852b47a9a89776e0dccc2349e4ad19ce329ee6e9ad6d0ab5",
+      "data/model_memory_study/copula_shape_wave29/panel.parquet": "f1f74fb53bfbfb4cdb2b5542b72001acab86bd896bd8d82d153872211675fedc",
+      "data/model_memory_study/copula_shape_wave29/fits.json": "55932cfb6506aefe7a101da97d55e4b9d258947a495f6c781743e8b6a2bd25ea",
+      "reports/copula_shape/predictive/forecast_verification.json": "8821bf79c24eb354599d8d1127a83699426ddc25a57fb7e5bcc94c5b1411f983",
+      "reports/copula_shape/predictive/score_verification.json": "dbb961811b5ed8e062fa41d6b344ea1d658a0aa8b3e115d5256d65ae9fda6804",
+      "data/model_memory_study/copula_shape_wave29/spread_risks.parquet": "057e6f3035e95428fd07176db10d1a46a7e41deb6d0ce2cd4824bf07b4dcdf53",
+      "data/model_memory_study/copula_shape_wave29/integration_diagnostics.json": "64925f056c43cc42a561df632118847583aededfc1ef49a3aa53b4bef2f2b19a",
+      "reports/copula_shape/predictive/registration.json": "0b38e60b8229492b0e1f26aa21a1ce6d9d0c31cd4b0cf8f1eab984f634bf8218",
+      "reports/copula_shape/predictive/INDEPENDENT_REVIEW.json": "68ce5b9aeee226faa3dd42edebb88d45193c68f41865ca27603c5c15d72eb4fa",
+      "reports/copula_shape/predictive/failure.json": "9f7a1ef5d19c16305f708aaa9bf8ce832c6de8d8e13ca73b9c4899a66e385a0c",
+      "copula_spread_replay.yaml": "4ecf19e69ca59b5765fc7904ae3882720d0e23b6a3a3dc9636125150079893d2",
+      "src/copula_spread_replay.py": "3f0aee292e746a4476f4c47ca0a1717c025a82a92f8a3bd40dfec6e2a64b0d7d",
+      "tests/test_copula_spread_replay.py": "337db208aa413749ad8635de0f7c3fc80538f4aba87083b974b87ee7b642d0ef",
+      "reports/copula_spread_replay/PREFIT.log": "2892cbf4e3c6f51234a9528a21d4ed10b5e98b577ce2b205887f6ea60c8df95f",
+      "reports/copula_spread_replay/PREFIT_BEFORE.json": "5d60a88dddff76a6084912a7ca6f109fadab631e4a3d9a137ea374ee721ceec2",
+      "reports/copula_spread_replay/PREFIT.json": "5d19a4e0eaa214cbead50f9073a8bd31b4d557b89beea45566a970ea4c7ba04f"
+    },
+    "previous_complete_source_audit": "reports/copula_shape/predictive/INDEPENDENT_REVIEW.json",
+    "previous_complete_source_audit_sha256": "68ce5b9aeee226faa3dd42edebb88d45193c68f41865ca27603c5c15d72eb4fa",
+    "inherited_partial_outputs_directly_rehashed": 9,
+    "repeated_full_source_scan": false
+  },
+  "test_gate": {
+    "selected": 31,
+    "run": 31,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "exact_before_after_code_pins": 541,
+    "actual_log_verified": true,
+    "local_timestamp_order": [
+      "2026-09-13T22:07:25.444816+00:00",
+      "2026-09-13T22:07:38.049268+00:00",
+      "2026-09-13T22:08:41.650348+00:00",
+      "2026-09-13T22:08:41.674598+00:00",
+      "2026-09-13T22:09:14.114696+00:00",
+      "2026-09-13T22:10:00.617273+00:00"
+    ],
+    "rerun_for_this_audit": false
+  },
+  "privacy": {
+    "directory_mode": "0700",
+    "table_modes": "0600",
+    "private_tables": 5
+  },
+  "counts": {
+    "positions": 137970,
+    "paths": 413910,
+    "outcomes": 19710,
+    "summaries": 378,
+    "safety_summaries": 324,
+    "origins": 2190,
+    "structure_distance_cases": 9,
+    "policies": 7,
+    "credit_scenarios": 3,
+    "per_phase_scenario_accounts": 189,
+    "threshold_ambiguities_retained": 69,
+    "phases": {
+      "development": {
+        "origins": 733,
+        "first_origin": "2017-02-01",
+        "last_origin": "2019-12-30",
+        "positions": 46179,
+        "paths": 138537,
+        "outcomes": 6597,
+        "summaries": 189
+      },
+      "evaluation": {
+        "origins": 1457,
+        "first_origin": "2020-01-02",
+        "last_origin": "2025-10-17",
+        "positions": 91791,
+        "paths": 275373,
+        "outcomes": 13113,
+        "summaries": 189
+      }
+    }
+  },
+  "published_tail_fields": {
+    "no_sampled_es_or_var_fields_in_any_saved_table": true,
+    "positions_max_terminal_debit_exactly_one": true,
+    "interpretation": "Universal bounded terminal-liability support limit, not an ES/VaR estimate; old sampled estimates remain unchanged in the failed source artifact."
+  },
+  "independent_accounting_certificate": {
+    "status": "VERIFIED",
+    "origins": 2190,
+    "cases_per_origin": 9,
+    "policies": 7,
+    "credit_scenarios": 3,
+    "positions": 137970,
+    "outcomes": 19710,
+    "paths": 413910,
+    "summaries": 378,
+    "scope": "Independent saved probability decisions and account reconstruction; universal payoff bound is not a tail estimate.",
+    "original_failed_result_preserved": true
+  },
+  "family_accounting": {
+    "replay_new_hypotheses": 0,
+    "cumulative_tracked_hypotheses": 164,
+    "original_six_comparisons_remain_p1": true,
+    "original_attempt_remains_UNEVALUABLE": true,
+    "leads": []
+  },
+  "limits": [
+    "This audit authenticates saved bytes, source preservation, schema/metadata, complete cohorts and count correspondence. It does not rerun option payoffs, capital accounting, density calculations, model fits, QMC, tests or inference.",
+    "Accounting correctness relies on the hash-authenticated independent VERIFIED reconstruction certificate. Descriptive density values are hash-bound context, not independently recalculated here and not restored inferential results.",
+    "The complete30,233-file ancestral source scan was performed by the immediately preceding failure audit; this review verified that whole hash map is retained and directly checked the20 new pins, immediate retained inputs, current outputs and anchors.",
+    "This is a separately registered descriptive probability replay after a preserved numerical failure. Zero new hypotheses were added; the six failed tests remain p1 and the tracked family remains164.",
+    "Credits/fees and normalized strikes/expirations are hypothetical. No historical option quotes, executable contracts, assignment/margin paths, actual profit, future safety or untouched confirmation are established.",
+    "New narrative findings and figures are outside this receipt and may be published additively after this audit. Local timestamps provide ordering, not external attestation."
+  ]
+}

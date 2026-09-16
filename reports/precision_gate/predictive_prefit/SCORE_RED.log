@@ -1,0 +1,22 @@
+COMMAND: .venv/bin/python -m unittest tests.test_precision_gate_score -v
+test_precision_gate_score (unittest.loader._FailedTest.test_precision_gate_score) ... ERROR
+
+======================================================================
+ERROR: test_precision_gate_score (unittest.loader._FailedTest.test_precision_gate_score)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_precision_gate_score
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_precision_gate_score.py", line 10, in <module>
+    from src.precision_gate_score import _passes, evaluate, failure_metrics, inherit_family
+ModuleNotFoundError: No module named 'src.precision_gate_score'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+
+exit_code=1

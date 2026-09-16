@@ -1,0 +1,67 @@
+{
+  "completed_utc": "2026-09-09T02:09:48.418647+00:00",
+  "financial_values_converted": false,
+  "input_hashes": {
+    "reports/next_signal_review/TREASURY_HISTORY_CAPTURE.json": "111149a8cecec2c15152381169e44d9fcff3fabf24c8b677fe3232da39a1db28",
+    "reports/next_signal_review/TREASURY_HISTORY_IDENTITY.json": "8e4daaf66d1ad41c6dc1263a30d7317d47c92634db274abc463446096fe44df0",
+    "reports/next_signal_review/TREASURY_HISTORY_METADATA.json": "82a619ac849802fe45b30447b0c4c12d94f3786f88e118536b1850ee8cda846e",
+    "reports/next_signal_review/TREASURY_HISTORY_SELECTION.json": "11ff74c612198f796601c286c77c5fbf3e2833f2c82e8a43902bf10c1a4b9523"
+  },
+  "new_requests_issued": 0,
+  "records": [
+    {
+      "auction_date": "2019-12-23",
+      "available_result_xml_body_sha256": "0a2164df1966cdb3a894ac1332ea7a6778fe90dd6f3e6ae07525627fd98ab71e",
+      "available_result_xml_url": "https://www.treasurydirect.gov/xml/R_20191223_3.xml",
+      "curl_exit": 0,
+      "cusip": "912828YZ7",
+      "disposition": "ORIGINAL_RESULT_PDF_UNAVAILABLE_XML_REFERENCES_THE_SAME_MISSING_NAME",
+      "http_status": 404,
+      "limits": "No alternative official PDF filename was identified in the saved XML. XML release time alone is not an independently dated PDF release; this event remains unresolved under the paired-source contract.",
+      "missing_url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/R_20191223_3.pdf",
+      "receipt_path": "data/source_discovery/treasury_auction/history_capture_v1/b6575ec1705eecd59c12661163e178b04ed4d9f80ae75d7bdd80e14e5803db47/receipt.json",
+      "receipt_sha256": "686bfdbc6ed4fa152015cfe0eb07bd89d261dd4eca5b37d0a051a7b499633582",
+      "retained_failed_body_path": "data/source_discovery/treasury_auction/history_capture_v1/b6575ec1705eecd59c12661163e178b04ed4d9f80ae75d7bdd80e14e5803db47/body.pdf",
+      "retained_failed_body_sha256": "f798aedf92adfc4bae426a3fd50581a70a66a8aa5eb4d472aba6ab9f9f7ada89",
+      "xml_release_time_lexeme": "13:02",
+      "xml_results_pdf_name": "R_20191223_3.pdf"
+    },
+    {
+      "auction_date": "2020-01-27",
+      "available_result_xml_body_sha256": "252afd6786f9bc142a5f5dfe3002586c2fb815bb1c57efb438d052ed199c4baa",
+      "available_result_xml_url": "https://www.treasurydirect.gov/xml/R_20200127_4.xml",
+      "curl_exit": 0,
+      "cusip": "912828Z52",
+      "disposition": "ORIGINAL_RESULT_PDF_UNAVAILABLE_XML_REFERENCES_THE_SAME_MISSING_NAME",
+      "http_status": 404,
+      "limits": "No alternative official PDF filename was identified in the saved XML. XML release time alone is not an independently dated PDF release; this event remains unresolved under the paired-source contract.",
+      "missing_url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/R_20200127_4.pdf",
+      "receipt_path": "data/source_discovery/treasury_auction/history_capture_v1/b0f20fcffb52cecf101153af8a31c0adfbc97df75878fa8c92ad333aa0e54e3f/receipt.json",
+      "receipt_sha256": "8d6db2181a674be03a95d42c8ea8175352998d3bd7d998ad453923a34d2bee29",
+      "retained_failed_body_path": "data/source_discovery/treasury_auction/history_capture_v1/b0f20fcffb52cecf101153af8a31c0adfbc97df75878fa8c92ad333aa0e54e3f/body.pdf",
+      "retained_failed_body_sha256": "f798aedf92adfc4bae426a3fd50581a70a66a8aa5eb4d472aba6ab9f9f7ada89",
+      "xml_release_time_lexeme": "13:02",
+      "xml_results_pdf_name": "R_20200127_4.pdf"
+    },
+    {
+      "auction_date": "2020-12-09",
+      "available_result_xml_body_sha256": "8699dbc278a21088e0d7606a82b14d0837cfcb10f0b6b04700e4249f3d61bb02",
+      "available_result_xml_url": "https://www.treasurydirect.gov/xml/R_20201209_3.xml",
+      "curl_exit": 0,
+      "cusip": "91282CAV3",
+      "disposition": "ORIGINAL_RESULT_PDF_UNAVAILABLE_XML_REFERENCES_THE_SAME_MISSING_NAME",
+      "http_status": 404,
+      "limits": "No alternative official PDF filename was identified in the saved XML. XML release time alone is not an independently dated PDF release; this event remains unresolved under the paired-source contract.",
+      "missing_url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/R_20201209_3.pdf",
+      "receipt_path": "data/source_discovery/treasury_auction/history_capture_v1/da16494dc05740724050b32bb0b5080c39159d93956c2e02a2ab2e78ac8af9e4/receipt.json",
+      "receipt_sha256": "cf02c2a744cb71f6646a8598d03b15c2826555085c61534d90acaa0d0ffe1fbf",
+      "retained_failed_body_path": "data/source_discovery/treasury_auction/history_capture_v1/da16494dc05740724050b32bb0b5080c39159d93956c2e02a2ab2e78ac8af9e4/body.pdf",
+      "retained_failed_body_sha256": "f798aedf92adfc4bae426a3fd50581a70a66a8aa5eb4d472aba6ab9f9f7ada89",
+      "xml_release_time_lexeme": "13:02",
+      "xml_results_pdf_name": "R_20201209_3.pdf"
+    }
+  ],
+  "registered_comparisons": 144,
+  "source_history_admitted": false,
+  "status": "THREE_EXPLICIT_UNAVAILABLE_RESULT_PDFS_RETAINED"
+}

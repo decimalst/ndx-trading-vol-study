@@ -1,0 +1,36 @@
+{
+  "status": "UNEVALUABLE",
+  "whole_wave_aborted": true,
+  "leads": [],
+  "hypothesis_count": 2,
+  "cumulative_hypothesis_count": 123,
+  "protocol_sha256": "8b9fdabcbaf3eae80116cc1efa02e7d32372d9a628faf74996fceefe142da109",
+  "rows": [
+    {
+      "study": "civil_quarter",
+      "candidate": "quarter",
+      "control": "baseline",
+      "score": "proper_variance",
+      "horizon": 1,
+      "p_conservative": 1.0,
+      "p_holm_wave": 1.0,
+      "p_holm_cumulative": 1.0,
+      "phases": [],
+      "status": "INVALID_RUN",
+      "error": "[Errno 2] No such file or directory: '/var/folders/jn/2wqppgv57cx3k54l_dqt9sl00000gn/T/civil-quarter-old-source-gtixn8tx/data/source_discovery/bls_plan_capture/cpi_12152015.web-extract.txt'"
+    },
+    {
+      "study": "civil_quarter",
+      "candidate": "quarter",
+      "control": "mean",
+      "score": "proper_variance",
+      "horizon": 1,
+      "p_conservative": 1.0,
+      "p_holm_wave": 1.0,
+      "p_holm_cumulative": 1.0,
+      "phases": [],
+      "status": "INVALID_RUN",
+      "error": "[Errno 2] No such file or directory: '/var/folders/jn/2wqppgv57cx3k54l_dqt9sl00000gn/T/civil-quarter-old-source-gtixn8tx/data/source_discovery/bls_plan_capture/cpi_12152015.web-extract.txt'"
+    }
+  ]
+}

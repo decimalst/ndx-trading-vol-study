@@ -1,0 +1,40 @@
+{
+  "status": "VERIFIED",
+  "forecasts": {
+    "status": "VERIFIED",
+    "calendar_rows": 4226,
+    "coverage_origins": 2463,
+    "application_forecasts_verified": 7389,
+    "forecasts_verified": 7386,
+    "monthly_fits": 118,
+    "marginal_models_verified": 472,
+    "dependence_fits_verified": 236,
+    "largest_independent_global_gap": 9.974728820694168e-09,
+    "limits": [
+      "Frozen independent joint-risk feature and marginal reconstruction is reused.",
+      "Current-fit training residuals are in-sample staged residuals, not issued historical errors.",
+      "Global certificate values and stationarity are reconstructed; local optimizer messages are not independently reproduced.",
+      "Source hash authentication, historical-vintage limitations and statistical inference are separate checks."
+    ]
+  },
+  "scores": {
+    "status": "VERIFIED",
+    "comparisons_verified": 2,
+    "endpoints_verified": 4,
+    "bootstrap_runs_verified": 12,
+    "hac_runs_verified": 4,
+    "inherited_comparisons_verified": 149,
+    "density_rows_verified": 7386,
+    "common_scored_origins": 2462
+  },
+  "protocol_sha256": "cf43700c6c37ba860e9ef8ae4adb4c70158030efeedd3bca9b073f0691cd5d50",
+  "outputs": {
+    "data/model_memory_study/joint_copula_wave27/features.parquet": "c064880974725ef1647d4e300f1b87a85ee8aaf306c8d702f0267e57bc16a683",
+    "data/model_memory_study/joint_copula_wave27/targets.parquet": "21cfdd9a10e50c073865747dfb5cd809033e5005629ef9a2cf595a993afaef19",
+    "data/model_memory_study/joint_copula_wave27/applications.parquet": "0ce97f4708e8c3f3a24b2223f04eb34d7a06802fe905acb4d06d633e3d883222",
+    "data/model_memory_study/joint_copula_wave27/panel.parquet": "c4caed2560d36180511efd28436fa344224031e44f039e55161af536d0de6347",
+    "data/model_memory_study/joint_copula_wave27/coverage.parquet": "bcc430b0235744f7b65dcab905bb16c2f59d98d2bc0222d643545c516b084c14",
+    "data/model_memory_study/joint_copula_wave27/schedules.parquet": "37d4d6c7cdc613501cc63d52c7ba2a828e936a1974daa995aac67cdffebf1232",
+    "data/model_memory_study/joint_copula_wave27/fits.json": "be070e131e96faa7939be052838beb16594825a1afe451c5deb01448fe1bae91"
+  }
+}

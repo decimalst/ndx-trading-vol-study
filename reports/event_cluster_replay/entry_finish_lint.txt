@@ -1,0 +1,200 @@
+F401 [*] `pandas` imported but unused
+  --> src/verify_event_cluster_replay.py:17:18
+   |
+16 | import numpy as np
+17 | import pandas as pd
+   |                  ^^
+18 | import yaml
+   |
+help: Remove unused import: `pandas`
+   |
+16 | import numpy as np
+   - import pandas as pd
+17 | import yaml
+   |
+
+SIM102 Use a single `if` statement instead of nested `if` statements
+   --> src/verify_event_cluster_replay.py:726:13
+    |
+724 |               if type(a) not in (int, float) or not math.isfinite(a) or not math.isfinite(b):
+725 |                   raise ValueError("Finite real reconstruction evidence required: " + label)
+726 | /             if isinstance(key, str) and key.endswith("gradient_max_abs"):
+727 | |                 if not 0 <= a <= 1.0001e-8 or not 0 <= b <= 1.0001e-8:
+    | |______________________________________________________________________^
+728 |                       raise ValueError("Original full gradient acceptance unchanged")
+729 |               coefficient = "coefficients" in path or key == "coefficient"
+    |
+help: Combine `if` statements using `and`
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> tests/test_verify_event_cluster_replay.py:3:1
+   |
+ 1 |   """Prewritten wave21 entry and inference contracts; generated inputs only."""
+ 2 |
+ 3 | / import copy
+ 4 | | import json
+ 5 | | import tempfile
+ 6 | | import unittest
+ 7 | | from pathlib import Path
+ 8 | | from unittest.mock import patch
+ 9 | |
+10 | | import numpy as np
+11 | | import yaml
+12 | |
+13 | | from src import verify_event_cluster_replay as v
+14 | | from src import verify_event_cluster as frozen
+   | |______________________________________________^
+help: Organize imports
+   |
+12 |
+13 + from src import verify_event_cluster as frozen
+14 | from src import verify_event_cluster_replay as v
+   - from src import verify_event_cluster as frozen
+15 |
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> tests/test_verify_event_cluster_replay.py:62:5
+   |
+61 |   def aligned_source_fixture(root):
+62 | /     import pandas as pd
+63 | |     from tests.test_event_cluster_replay_admission import Fixture
+   | |_________________________________________________________________^
+64 |
+65 |       f = Fixture(root)
+   |
+help: Organize imports
+   |
+62 |     import pandas as pd
+63 +
+64 |     from tests.test_event_cluster_replay_admission import Fixture
+   |
+
+B023 Function definition does not bind loop variable `admit`
+   --> tests/test_verify_event_cluster_replay.py:200:30
+    |
+198 |                 admit = source.admit_upstream
+199 |                 def inject(*args, **kwargs):
+200 |                     answer = admit(*args, **kwargs)
+    |                              ^^^^^
+201 |                     name = "event_cluster" if mutation == "required_failure" else mutation
+202 |                     (root / f"reports/{name}/failure.json").write_text("{}")
+    |
+
+B023 Function definition does not bind loop variable `mutation`
+   --> tests/test_verify_event_cluster_replay.py:201:47
+    |
+199 |                 def inject(*args, **kwargs):
+200 |                     answer = admit(*args, **kwargs)
+201 |                     name = "event_cluster" if mutation == "required_failure" else mutation
+    |                                               ^^^^^^^^
+202 |                     (root / f"reports/{name}/failure.json").write_text("{}")
+203 |                     return answer
+    |
+
+B023 Function definition does not bind loop variable `mutation`
+   --> tests/test_verify_event_cluster_replay.py:201:83
+    |
+199 |                 def inject(*args, **kwargs):
+200 |                     answer = admit(*args, **kwargs)
+201 |                     name = "event_cluster" if mutation == "required_failure" else mutation
+    |                                                                                   ^^^^^^^^
+202 |                     (root / f"reports/{name}/failure.json").write_text("{}")
+203 |                     return answer
+    |
+
+B023 Function definition does not bind loop variable `root`
+   --> tests/test_verify_event_cluster_replay.py:202:22
+    |
+200 |                     answer = admit(*args, **kwargs)
+201 |                     name = "event_cluster" if mutation == "required_failure" else mutation
+202 |                     (root / f"reports/{name}/failure.json").write_text("{}")
+    |                      ^^^^
+203 |                     return answer
+204 |                 with patch.object(source, "admit_upstream", side_effect=inject):
+    |
+
+SIM117 Use a single `with` statement with multiple contexts instead of nested `with` statements
+   --> tests/test_verify_event_cluster_replay.py:204:17
+    |
+202 |                       (root / f"reports/{name}/failure.json").write_text("{}")
+203 |                       return answer
+204 | /                 with patch.object(source, "admit_upstream", side_effect=inject):
+205 | |                     with self.assertRaises((ValueError, AssertionError)):
+    | |_________________________________________________________________________^
+206 |                           v.admit_upstream(root, f.expected, pins)
+    |
+help: Combine `with` statements
+
+SIM117 Use a single `with` statement with multiple contexts instead of nested `with` statements
+   --> tests/test_verify_event_cluster_replay.py:272:17
+    |
+270 |                   (report / "metrics.json").write_bytes(original)
+271 |                   (report / "trial_ledger.jsonl").write_bytes(b"broken unterminated record")
+272 | /                 with patch.object(v, "verify", side_effect=ValueError("synthetic failure")):
+273 | |                     with self.assertRaisesRegex(ValueError, "synthetic failure"):
+    | |_________________________________________________________________________________^
+274 |                           v.verify_with_failure_guard(root)
+275 |                   result = json.loads((report / "metrics.json").read_bytes())
+    |
+help: Combine `with` statements
+
+C401 Unnecessary generator (rewrite as a set comprehension)
+   --> tests/test_verify_event_cluster_replay.py:485:30
+    |
+483 |             for name, signature in result["verified_output_hashes"].items():
+484 |                 self.assertEqual(v.digest(root / name), signature)
+485 |             self.assertEqual(set(p.name for p in (root / v.OUT).iterdir()),
+    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+486 |                              {"upstream_admission.json", "reconstruction_audit.json"})
+    |
+help: Rewrite as a set comprehension
+
+B023 Function definition does not bind loop variable `mutation`
+   --> tests/test_verify_event_cluster_replay.py:501:38
+    |
+499 |                         "protocol": "event_cluster_replay.yaml",
+500 |                     }
+501 |                     name = paths.get(mutation, f"reports/{mutation}/failure.json")
+    |                                      ^^^^^^^^
+502 |                     (root / name).write_text("changed")
+503 |                     return {"synthetic": True}
+    |
+
+B023 Function definition does not bind loop variable `mutation`
+   --> tests/test_verify_event_cluster_replay.py:501:59
+    |
+499 |                         "protocol": "event_cluster_replay.yaml",
+500 |                     }
+501 |                     name = paths.get(mutation, f"reports/{mutation}/failure.json")
+    |                                                           ^^^^^^^^
+502 |                     (root / name).write_text("changed")
+503 |                     return {"synthetic": True}
+    |
+
+B023 Function definition does not bind loop variable `root`
+   --> tests/test_verify_event_cluster_replay.py:502:22
+    |
+500 |                     }
+501 |                     name = paths.get(mutation, f"reports/{mutation}/failure.json")
+502 |                     (root / name).write_text("changed")
+    |                      ^^^^
+503 |                     return {"synthetic": True}
+504 |                 with self.assertRaises((ValueError, AssertionError)):
+    |
+
+SIM117 Use a single `with` statement with multiple contexts instead of nested `with` statements
+   --> tests/test_verify_event_cluster_replay.py:531:13
+    |
+529 |                       (root / "reports/event_cluster/failure.json").write_text("changed after last hash")
+530 |                   return answer
+531 | /             with patch.object(v, "pins_checked", side_effect=mutate_after_loop):
+532 | |                 with self.assertRaises((ValueError, AssertionError)):
+    | |_____________________________________________________________________^
+533 |                       self.run_tree(root, tree)
+534 |               self.assertEqual(len(calls), 1)
+    |
+help: Combine `with` statements
+
+Found 15 errors.
+[*] 3 fixable with the `--fix` option (1 hidden fix can be enabled with the `--unsafe-fixes` option).

@@ -1,0 +1,202 @@
+{
+  "actual_coverage": {
+    "coverage_check": "Read verified forecast/state date and model columns; no new target construction or predictive association analysis.",
+    "development": {
+      "first_origin": "2016-01-04",
+      "last_origin": "2019-12-30",
+      "scored_origins": 1002
+    },
+    "evaluation": {
+      "first_origin": "2020-01-02",
+      "last_origin": "2025-10-17",
+      "scored_origins": 1456
+    },
+    "retained_unscored_application": "2019-12-31"
+  },
+  "admission_closure_files_rehashed": 1866,
+  "current_verified_counts": {
+    "admitted_records_verified": 2457,
+    "application_states_verified": 2459,
+    "arrival_sessions_verified": 2462,
+    "balanced_history_states": 0,
+    "common_application_origins": 2459,
+    "common_scored_origins": 2458,
+    "empty_history_states": 2,
+    "forecasts_verified": 7374,
+    "independent_calibration_fits_verified": 2459,
+    "maximum_independent_scalar_gradient": 1.1400082267076783e-13,
+    "new_forecasts": 2458,
+    "new_monthly_fits": 0,
+    "original_monthly_fits_replayed": 118,
+    "reused_control_forecasts": 4916
+  },
+  "decision_check": {
+    "baseline_conservative_p": 0.794055,
+    "baseline_development_delta": 0.000260650384693357,
+    "baseline_evaluation_delta": -0.0002514406198023515,
+    "both_later_slices_negative_for_each_control": true,
+    "cumulative_alpha": 0.05,
+    "descriptive_average_calibration_improves_in_both_phases": true,
+    "frequency_cumulative_holm_p": 0.030869999999999998,
+    "frequency_wave_holm_p": 0.00049,
+    "leads": [],
+    "required_absolute_effect": 0.0005,
+    "wave_alpha": 0.00013157894736842105
+  },
+  "displayed_rows_checked": {
+    "calibration_rows": 6,
+    "later_slice_and_mde_rows": 2,
+    "multiplicity_rows": 2,
+    "phase_comparison_rows": 4,
+    "support_rows": 4
+  },
+  "document_hash_path_convention": "Canonical repository-relative keys under repository_root; hashes are exact current file bytes.",
+  "document_hashes": {
+    "data/issued_calibration/upstream_admission.json": "53a9e5d02fd3ac3b6cef63698889f10c477f002348cd7d1ae6e56c8679e0a5bc",
+    "issued_calibration.yaml": "f4c03c25718439432c176aba36ce3bc572776b67a5ff80f906ddc00cd85b2051",
+    "reports/civil_quarter/metrics.json": "67eb0c458001b726f1456453388283a99f22a2508424da4fdf56d535e9b0d159",
+    "reports/civil_quarter_replay/metrics.json": "ac6ab77e85fd037535f4031c0124539b3b7c088ec8f42a810ca7eea668787e08",
+    "reports/issued_calibration/DESIGN.md": "29851428d210c242e3d3300353f77e98f9e04ff151e265be4935a742c8cd7c24",
+    "reports/issued_calibration/DESIGN_REVIEW.md": "7a7361bd11d5f4a004ed6f536e5eb4cdc9964960fa01b4f64b4c7147813c6000",
+    "reports/issued_calibration/MODEL_DESIGN.md": "b291b5efad443987080330323e19483afcae08d0067f4555268d92db5bac6042",
+    "reports/issued_calibration/NEXT_RESEARCH_DIRECTION.md": "3a0d1371fa207df3f45f5740d324d4504b6578321aac85ae24c9818fc5bc3881",
+    "reports/issued_calibration/SOURCE_DESIGN.md": "401c3ec3fbce0e414d0f81a9c670750d146ec37689091967e0076b3f011635b0",
+    "reports/issued_calibration/SUMMARY.md": "11f5ff464696be38d3ad2da3e953f1eea20b1984fa4c37f1aa8e05ec8c517bef",
+    "reports/issued_calibration/VERIFIER_DESIGN.md": "f08848a68d8209c819033a42f1edee8078cfa8632e925e66a9995eebdf376a29",
+    "reports/issued_calibration/freeze_record.json": "d12459d404d4bb7cfab43a351764b1c29353d0e2dbfbec6af689ffc411ba0c71",
+    "reports/issued_calibration/full_repository_tests.txt": "af90dd19704a8204340e14dcb2c1c1c8e182197edb577dc30880ec7f6b91d5d1",
+    "reports/issued_calibration/manifest.json": "5d824aad69991ea06cc35916be2e9852d9f5613c17bafe7b18e46047d93bdf6a",
+    "reports/issued_calibration/metrics.json": "f7fbc51b6f7df000a80c8ac8bf0aa688abf819b25e661e71938ed1542b8528d8",
+    "reports/issued_calibration/trial_ledger.jsonl": "78a5ad4b36b0250b5c9cdfe901b3603fe044c63606f4081d1d1907c304b592c1",
+    "reports/issued_calibration/verification.json": "5de5f8ed0f4a7757c475e0557b9798fe04d8fea33714a5c68437fbb181d48d14",
+    "reports/range_alert/SUMMARY.md": "51a5408bf13c4e10bebb8e8d67c237fb4a4c069f282bba4d4abceb436e266e35",
+    "reports/range_alert/publication_review.json": "38c661b97184eff4aff9792ab4891d2d9f13a814ef287b58fe363067beed16bf"
+  },
+  "figure_findings": [
+    "Both control panels are readable, without clipped or overlapping result labels.",
+    "Separate horizontal scales are declared; plotted signs and literal confidence envelopes agree with verified metrics.",
+    "Zero and the -.0005 effect reference are present, with negative-is-better Brier units and both Holm requirements.",
+    "The figure does not promote either the candidate or the earlier baseline/frequency contrast."
+  ],
+  "figure_hashes": {
+    "reports/issued_calibration/comparison_intervals.pdf": "aa7a69ea8684d6a810cc03412f795a37d7029e43ad2bb56ca272d8d7194d588a",
+    "reports/issued_calibration/comparison_intervals.png": "63c22d96952fe4b6bd3520c0e2c379e942fbe36b1540526e45b47bf1965e0d5b"
+  },
+  "figure_review_method": "Actual local PNG displayed through view_image and inspected visually; PDF bytes hashed, not separately rendered.",
+  "figure_visually_reviewed": true,
+  "frozen_files_written": false,
+  "historical_models_or_verifiers_rerun": false,
+  "inference_counts": {
+    "bootstrap_draws_per_run": 199999,
+    "bootstrap_runs_verified": 12,
+    "calibration_rows_verified": 6,
+    "class_support": {
+      "development": {
+        "events": 127,
+        "n": 1002,
+        "nonevents": 875
+      },
+      "evaluation": {
+        "events": 210,
+        "n": 1456,
+        "nonevents": 1246
+      },
+      "evaluation_slices": [
+        {
+          "end": "2022-12-31",
+          "events": 117,
+          "n": 756,
+          "nonevents": 639,
+          "start": "2020-01-02"
+        },
+        {
+          "end": "2025-10-17",
+          "events": 93,
+          "n": 700,
+          "nonevents": 607,
+          "start": "2023-01-01"
+        }
+      ]
+    },
+    "cumulative_hypotheses_verified": 131,
+    "leads": [],
+    "new_hypotheses_verified": 2,
+    "phase_comparisons_verified": 4
+  },
+  "interpretation": "No candidate qualifies. Average calibration improves in both phases, while baseline Brier loss worsens in development and its evaluation gain is below .0005. The frequency comparison fails the wave Holm gate despite passing cumulative Holm; both controls and both gates remain mandatory. Archived issued predictions are not live-stamped forecasts, and no trading or untouched-confirmation claim is supported.",
+  "ledger_events": {
+    "evaluated": 2,
+    "inherited": 129,
+    "registered": 2
+  },
+  "ledger_total_events": 133,
+  "manifest_counts": {
+    "code": 291,
+    "inputs": 1872,
+    "preserved": 24
+  },
+  "manifest_pins_rehashed": 2187,
+  "new_predictive_statistics_or_prospective_event_counts_computed": false,
+  "paired_brier_differences_verified": 4916,
+  "prefit_design_pins_checked": 5,
+  "primitive_brier_scores_verified": 7374,
+  "prior_failures_preserved": {
+    "civil_quarter": "Two canonical p1 UNEVALUABLE comparisons; source admission failed before new outputs.",
+    "civil_quarter_replay": "Two canonical p1 UNEVALUABLE comparisons; 6297 generated rows remain unverified.",
+    "failed_prior_comparisons_retained": 4
+  },
+  "prior_union_check": {
+    "conflicts": 0,
+    "groups": [
+      "code",
+      "inputs",
+      "preserved",
+      "existing_artifacts_sha256"
+    ],
+    "hash_mismatches": 0,
+    "missing": 0,
+    "prior_manifest_count": 20,
+    "unique_pins_rehashed": 1844
+  },
+  "prior_unpublished_diagnostic_scores_read": false,
+  "prospective_note_review": {
+    "boundary": "The link is appropriate as a future source-feasibility question, not an approved implementation, registered hypothesis or tested signal.",
+    "path": "reports/issued_calibration/NEXT_RESEARCH_DIRECTION.md",
+    "resolved_review_findings": [
+      "A fixed09:35 observation needs timestamped availability and a strictly post-cutoff target; full-day OHLC cannot establish remaining-risk prediction.",
+      "New post-cutoff historical risk K_t must be adequately controlled before attributing an increment to current information; nuisance design is unresolved before registration."
+    ],
+    "sha256": "3a0d1371fa207df3f45f5740d324d4504b6578321aac85ae24c9818fc5bc3881",
+    "status": "UNREGISTERED_SOURCE_BLOCKED_PROPOSAL_NOT_EVALUATED"
+  },
+  "protocol_sha256": "f4c03c25718439432c176aba36ce3bc572776b67a5ff80f906ddc00cd85b2051",
+  "repository_root": "/Users/byrons/code/trading-vol/ndx-vol-experiment",
+  "repository_test_seconds": 180.307,
+  "repository_tests_passed": 1988,
+  "reviewed_utc": "2026-09-07T15:17:35.533529+00:00",
+  "scope": "Independent publication interpretation review of the completed wave19 report against its already VERIFIED outputs, with exact displayed-value comparisons, source/output preservation hashes, count and failed-trial accounting, and actual PNG inspection. No historical optimizer, independent verifier, bootstrap or new candidate computation was run for this review.",
+  "sequence_count_audit": {
+    "completed_verified_waves_new_rows": 154642,
+    "cumulative_hypotheses": 131,
+    "initial_enumerated_hypotheses": 54,
+    "new_registrations": 77,
+    "retained_unverified_wave16_rows": 6297,
+    "scope": "Nineteen-wave sequence, extending the prior approved wave18 totals by 2458 new candidate rows only; copied/rescored controls are not counted again. Not repository-lifetime totals.",
+    "total_generated_new_rows": 160939
+  },
+  "status": "APPROVED_VERIFIED_INTERPRETATION",
+  "summary_sha256": "11f5ff464696be38d3ad2da3e953f1eea20b1984fa4c37f1aa8e05ec8c517bef",
+  "unresolved_material_findings": [],
+  "verified_output_hashes": {
+    "data/issued_calibration/calibration_audit.json": "f3a2331ca949b28819de06e45b0dfcbe18079ed7bf1ad201432df474f1c08b0c",
+    "data/issued_calibration/forecasts.parquet": "14795735bfa74c50ae12f82c3fc682b6e2e5c1f6268f7a96d383a14c2efd598c",
+    "data/issued_calibration/states.parquet": "dad791540bd4f48bc214fb37968bc634fb7353cf38da7dbea745a80065ed226b",
+    "data/issued_calibration/upstream_admission.json": "53a9e5d02fd3ac3b6cef63698889f10c477f002348cd7d1ae6e56c8679e0a5bc",
+    "reports/issued_calibration/metrics.json": "f7fbc51b6f7df000a80c8ac8bf0aa688abf819b25e661e71938ed1542b8528d8",
+    "reports/issued_calibration/trial_ledger.jsonl": "78a5ad4b36b0250b5c9cdfe901b3603fe044c63606f4081d1d1907c304b592c1"
+  },
+  "verified_output_pins_rehashed": 6,
+  "writes": [
+    "reports/issued_calibration/publication_review.json"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "rho": 0.8,
+  "n": 1500,
+  "burn_in": 200,
+  "replications": 200,
+  "bootstrap_draws": 499,
+  "minimum_envelope_coverage": 0.9,
+  "seed": 20260930,
+  "envelope_coverage": 0.915,
+  "individual_block_coverage": {
+    "21": 0.885,
+    "63": 0.895,
+    "126": 0.885
+  },
+  "limitation": "One stationary synthetic null; not market-data coverage certification"
+}

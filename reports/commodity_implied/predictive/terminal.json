@@ -1,0 +1,17 @@
+{
+  "status": "COMPLETED",
+  "completed_utc": "2026-09-08T23:16:14.774104+00:00",
+  "metrics_sha256": "02762e0403d5f09e8601ac66c324ddb78e2bacb401958cef6f40531476a5543a",
+  "trial_ledger_sha256": "a73de52b3b1d9fe5e54acc2288eaa4b176c207f05b9b30caabe4f000f6e407c0",
+  "leads": [],
+  "cumulative_hypotheses": 144,
+  "report_artifact_hashes": {
+    "metrics.json": "02762e0403d5f09e8601ac66c324ddb78e2bacb401958cef6f40531476a5543a",
+    "freeze_record.json": "a126d35cf061614631b7be2ab62b4f7f24d39a9c7c49059d2bb18ad54f5016b1",
+    "FULL_PRECHECK.json": "1a7860157900b86d987822fcd5083838acb3b9de4a8a7a741756225870e02f04",
+    "FULL_PRECHECK.log": "b6037a22de43d5df35ed2b5eb553dddc1e5c7d5a7faf4d2c46f70bb2ae787374",
+    "calibration.json": "19ccd5448903fdbecdb60414b080ad589e1a3c145eb1329948f0d3a26e1f1df8",
+    "calibration_verification.json": "abf9cd925bb49a8c2c1d220922b19b945b1d00e2e10e8271f35b4352216c5369",
+    "verification.json": "d1529ab048e30f89861384ff154a5c44d2fef0feaa15296cb90fbc77d7ec4430"
+  }
+}

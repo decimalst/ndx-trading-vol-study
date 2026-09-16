@@ -1,0 +1,19 @@
+test_verify_copula_shape (unittest.loader._FailedTest.test_verify_copula_shape) ... ERROR
+
+======================================================================
+ERROR: test_verify_copula_shape (unittest.loader._FailedTest.test_verify_copula_shape)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_verify_copula_shape
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_copula_shape.py", line 15, in <module>
+    from src.verify_copula_shape import (
+ModuleNotFoundError: No module named 'src.verify_copula_shape'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

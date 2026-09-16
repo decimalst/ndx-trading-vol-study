@@ -1,0 +1,14 @@
+{
+  "status": "METADATA_CLOSURE_READY_BEFORE_FREEZE",
+  "checked_utc": "2026-09-07T16:23:14.290727+00:00",
+  "pinned_paths": 1933,
+  "original_ledger_counts": {
+    "inherited": 129,
+    "registered": 2,
+    "evaluated": 2
+  },
+  "original_ledger_total": 133,
+  "new_registered_hypotheses": 0,
+  "numerical_tables_decoded": false,
+  "new_history_support_fits_scores": false
+}

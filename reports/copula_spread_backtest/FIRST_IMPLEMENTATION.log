@@ -1,0 +1,18 @@
+['.venv/bin/python', '-m', 'unittest', 'tests.test_copula_spread_backtest', '-v']
+test_boundary_touch_and_condor_single_width_maximum (tests.test_copula_spread_backtest.CopulaSpreadBacktestTests.test_boundary_touch_and_condor_single_width_maximum) ... ok
+test_breach_and_full_loss_are_joint_events_not_mean_debit (tests.test_copula_spread_backtest.CopulaSpreadBacktestTests.test_breach_and_full_loss_are_joint_events_not_mean_debit) ... ok
+test_compounding_drawdown_and_phase_resets (tests.test_copula_spread_backtest.CopulaSpreadBacktestTests.test_compounding_drawdown_and_phase_resets) ... ok
+test_credit_cashflow_decimal_oracle_equal_maximum_reserve (tests.test_copula_spread_backtest.CopulaSpreadBacktestTests.test_credit_cashflow_decimal_oracle_equal_maximum_reserve) ... ok
+test_extreme_logs_safe_without_exponential_overflow (tests.test_copula_spread_backtest.CopulaSpreadBacktestTests.test_extreme_logs_safe_without_exponential_overflow) ... ok
+test_inclusive_filter_cash_and_no_mean_or_es_sizing (tests.test_copula_spread_backtest.CopulaSpreadBacktestTests.test_inclusive_filter_cash_and_no_mean_or_es_sizing) ... ok
+test_invalid_payoff_parameters_risks_dates_and_no_silent_clipping (tests.test_copula_spread_backtest.CopulaSpreadBacktestTests.test_invalid_payoff_parameters_risks_dates_and_no_silent_clipping) ... ok
+test_piecewise_debit_matches_independent_dollar_intrinsic (tests.test_copula_spread_backtest.CopulaSpreadBacktestTests.test_piecewise_debit_matches_independent_dollar_intrinsic) ... ok
+test_strict_clocks_complete_models_cases_and_return_join (tests.test_copula_spread_backtest.CopulaSpreadBacktestTests.test_strict_clocks_complete_models_cases_and_return_join) ... ok
+test_target_blind_decisions_input_immutability_and_attribution (tests.test_copula_spread_backtest.CopulaSpreadBacktestTests.test_target_blind_decisions_input_immutability_and_attribution) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 4.178s
+
+OK
+
+exit_code=0

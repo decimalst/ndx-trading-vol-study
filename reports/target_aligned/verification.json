@@ -1,0 +1,41 @@
+{
+  "status": "VERIFIED",
+  "upstream_admission": {
+    "status": "UPSTREAM_VERIFIED_READ_ONLY",
+    "prior_files_written": false
+  },
+  "forecast_reconstruction": {
+    "monthly_fits_verified": 118,
+    "scalar_fits_verified": 236,
+    "flat_slope_fits_retained": 0,
+    "marginal_training_cells_replayed": 1170384,
+    "combined_forecasts_verified": 12310,
+    "original_forecasts_preserved": 7386,
+    "new_forecasts_verified": 4924,
+    "common_scored_origins": 2462,
+    "common_application_origins": 2463
+  },
+  "primitive_score_cells_verified": 36930,
+  "paired_product_differences_verified": 7386,
+  "inference": {
+    "new_hypotheses_verified": 3,
+    "cumulative_hypotheses_verified": 117,
+    "phase_comparisons_verified": 6,
+    "bootstrap_runs_verified": 18,
+    "bootstrap_draws_per_run": 99999,
+    "leads": []
+  },
+  "ledger_events_verified": {
+    "inherited": 114,
+    "registered": 3,
+    "evaluated": 3
+  },
+  "protocol_sha256": "ca11ec1c90f8d83867b6dce4efaaac4f0e5ed11e23143e2ab1f28d78a9f136b3",
+  "verifier_sha256": "93e8ac7f88624fec0933600a85062397c9b0b2306afe87d0b4e3ee4af0f751d2",
+  "limitations": [
+    "Two new scalar fits per original monthly fold; shared marginal coefficients replayed without refitting and all original issued rows preserved.",
+    "Current-fit training residuals are in-sample at the monthly fit cutoff; only their conditional expected product equals covariance plus mean-error product.",
+    "The staged bounded affine model changes both target alignment and dependence functional form, so success cannot isolate a loss-function change or establish true correlation dynamics.",
+    "Reused archival QQQ ETF/SPX index daily products, no measured high-frequency covariance or trading-profit claim; nominal MDE is diagnostic and nonqualification is not equivalence."
+  ]
+}

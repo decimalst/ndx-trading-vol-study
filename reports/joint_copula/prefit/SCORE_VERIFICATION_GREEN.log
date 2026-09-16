@@ -1,0 +1,26 @@
+Final verifier check after lint-only test import/generator edits; no mathematical changes.
+
+COMMAND: .venv/bin/python -m unittest tests.test_verify_joint_copula_scores -v
+test_every_metric_and_exact_discrete_probability_corruption_rejected (tests.test_verify_joint_copula_scores.VerifyJointCopulaScoresTests.test_every_metric_and_exact_discrete_probability_corruption_rejected) ... ok
+test_extreme_and_near_zero_tails_match_high_precision (tests.test_verify_joint_copula_scores.VerifyJointCopulaScoresTests.test_extreme_and_near_zero_tails_match_high_precision) ... ok
+test_full_components_and_generated_scores_independently_verify (tests.test_verify_joint_copula_scores.VerifyJointCopulaScoresTests.test_full_components_and_generated_scores_independently_verify) ... ok
+test_independent_formulas_match_distribution_ratios (tests.test_verify_joint_copula_scores.VerifyJointCopulaScoresTests.test_independent_formulas_match_distribution_ratios) ... ok
+test_nonshared_marginals_wrong_dates_and_rho_fail (tests.test_verify_joint_copula_scores.VerifyJointCopulaScoresTests.test_nonshared_marginals_wrong_dates_and_rho_fail) ... ok
+test_source_qualification_and_scientific_contract_cannot_change (tests.test_verify_joint_copula_scores.VerifyJointCopulaScoresTests.test_source_qualification_and_scientific_contract_cannot_change) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.630s
+
+OK
+
+exit_code=0
+
+COMMAND: .venv/bin/ruff check src/joint_copula_score.py src/verify_joint_copula_scores.py tests/test_joint_copula_score.py tests/test_verify_joint_copula_scores.py
+All checks passed!
+
+exit_code=0
+
+COMMAND: .venv/bin/ruff format --check src/joint_copula_score.py src/verify_joint_copula_scores.py tests/test_joint_copula_score.py tests/test_verify_joint_copula_scores.py
+4 files already formatted
+
+exit_code=0

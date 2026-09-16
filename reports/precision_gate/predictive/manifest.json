@@ -1,0 +1,7 @@
+{
+  "created_utc": "2026-09-09T05:20:20.340302+00:00",
+  "freeze_sha256": "3ff970b3e4fa0ed77e862cd1f1fe2f8e872378f643bd1366f4fa81e7e4c95b43",
+  "protocol_sha256": "c9ac4c6f238cc898e219b8e1b1e9c8f1bf84371e40bf363a7572ee63182f11a2",
+  "evidence_class": "EXPLORATORY_REUSED_MARKET_HISTORY_CURRENT_VINTAGES",
+  "evidence_limitation": "Historical development and evaluation windows have been reused. Prior regression tests accessed the period beginning 2025-11-03; it is not untouched confirmation. Current vendor snapshots do not certify complete point-in-time price or implied-volatility vintages. Numerical inputs in this experiment end 2025-10-20."
+}

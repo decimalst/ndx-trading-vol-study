@@ -1,0 +1,45 @@
+.......EEEE
+======================================================================
+ERROR: test_failure_guard_retains_both_trials_for_valid_malformed_and_nonfinite_json (tests.test_verify_sign_memory.TransformAndFailureContracts.test_failure_guard_retains_both_trials_for_valid_malformed_and_nonfinite_json)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_sign_memory.py", line 142, in test_failure_guard_retains_both_trials_for_valid_malformed_and_nonfinite_json
+    with patch.object(verify,'verify',side_effect=AssertionError('fault')):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.verify_sign_memory' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_sign_memory.py'> does not have the attribute 'verify'
+
+======================================================================
+ERROR: test_maturity_selection_preserves_unscored_application_and_binary_unknown (tests.test_verify_sign_memory.TransformAndFailureContracts.test_maturity_selection_preserves_unscored_application_and_binary_unknown)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_sign_memory.py", line 124, in test_maturity_selection_preserves_unscored_application_and_binary_unknown
+    entry=idx[100];mask=verify.training_mask(f,t,entry)
+                        ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_sign_memory' has no attribute 'training_mask'
+
+======================================================================
+ERROR: test_protocol_rejects_changed_support_optimizer_and_memory_window (tests.test_verify_sign_memory.TransformAndFailureContracts.test_protocol_rejects_changed_support_optimizer_and_memory_window)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_sign_memory.py", line 156, in test_protocol_rejects_changed_support_optimizer_and_memory_window
+    verify.validate_protocol(p)
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_sign_memory' has no attribute 'validate_protocol'
+
+======================================================================
+ERROR: test_training_only_geometry_retains_constant_bounded_and_memory (tests.test_verify_sign_memory.TransformAndFailureContracts.test_training_only_geometry_retains_constant_bounded_and_memory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_sign_memory.py", line 109, in test_training_only_geometry_retains_constant_bounded_and_memory
+    tx,ax,tm,am,audit=verify.transform(train,app)
+                      ^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_sign_memory' has no attribute 'transform'
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.028s
+
+FAILED (errors=4)

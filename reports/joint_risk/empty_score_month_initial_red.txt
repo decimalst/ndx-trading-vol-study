@@ -1,0 +1,23 @@
+test_entire_unscored_month_still_retains_scheduled_fit (tests.test_joint_risk_models.JointRiskModels.test_entire_unscored_month_still_retains_scheduled_fit) ... ERROR
+
+======================================================================
+ERROR: test_entire_unscored_month_still_retains_scheduled_fit (tests.test_joint_risk_models.JointRiskModels.test_entire_unscored_month_still_retains_scheduled_fit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_joint_risk_models.py", line 225, in test_entire_unscored_month_still_retains_scheduled_fit
+    panel, fits = model.forecast_panel(f, t, c)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/joint_risk_models.py", line 264, in forecast_panel
+    "loss": density.matrix_score(actual - mu, h, rho),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/joint_risk_density.py", line 35, in matrix_score
+    e = _residuals(residuals)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/joint_risk_density.py", line 29, in _residuals
+    raise ValueError("Finite nonempty two-asset residual matrix required")
+ValueError: Finite nonempty two-asset residual matrix required
+
+----------------------------------------------------------------------
+Ran 1 test in 0.011s
+
+FAILED (errors=1)

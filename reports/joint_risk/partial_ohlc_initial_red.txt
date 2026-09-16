@@ -1,0 +1,19 @@
+Captured UTC: 2026-09-07T08:05:34.534231+00:00
+Command: /Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/bin/python -m unittest tests.test_joint_risk_features.TestJointMeasurement.test_partial_high_low_gap_cannot_hide_nonfinite_observed_open_close_return -v
+
+test_partial_high_low_gap_cannot_hide_nonfinite_observed_open_close_return (tests.test_joint_risk_features.TestJointMeasurement.test_partial_high_low_gap_cannot_hide_nonfinite_observed_open_close_return) ... FAIL
+
+======================================================================
+FAIL: test_partial_high_low_gap_cannot_hide_nonfinite_observed_open_close_return (tests.test_joint_risk_features.TestJointMeasurement.test_partial_high_low_gap_cannot_hide_nonfinite_observed_open_close_return)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_joint_risk_features.py", line 139, in test_partial_high_low_gap_cannot_hide_nonfinite_observed_open_close_return
+    with self.assertRaisesRegex(ValueError, "[Nn]onfinite.*intraday"):
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.015s
+
+FAILED (failures=1)
+
+Exit code: 1

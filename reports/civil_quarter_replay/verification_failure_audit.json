@@ -1,0 +1,374 @@
+{
+  "canonical_publication": {
+    "all_new_pvalues": 1.0,
+    "cumulative_hypotheses": 125,
+    "hypotheses": 2,
+    "leads": [],
+    "metrics_equal_failure_json": true,
+    "phases_per_comparison": 0,
+    "status": "UNEVALUABLE",
+    "terminal_file_hashes": {
+      "reports/civil_quarter_replay/failure.json": "ac6ab77e85fd037535f4031c0124539b3b7c088ec8f42a810ca7eea668787e08",
+      "reports/civil_quarter_replay/freeze_record.json": "d71d23623e7eee5bc97f7b2b480aa2d63853c74876f48791f311a01e6692fe9b",
+      "reports/civil_quarter_replay/manifest.json": "f4a680cb8036d1dc71b624eddff6bf0937f230f839e507a8deb8e89fe5da9dc9",
+      "reports/civil_quarter_replay/metrics.json": "ac6ab77e85fd037535f4031c0124539b3b7c088ec8f42a810ca7eea668787e08",
+      "reports/civil_quarter_replay/results.md": "fd1a072bcca6c88ae217dbb17bad63412ae73a12c465d4a235b4272af4b11a3c",
+      "reports/civil_quarter_replay/trial_ledger.jsonl": "dc399e2c7d8048d12e6fed1f5f9549aef6e466ad5f93d1ff7febdaff401c6bab",
+      "reports/civil_quarter_replay/verification.json": "50022adbe5ecd4b23e17ae5972d5ec904064fb4d81a6ef0a1aa0be77558af0db"
+    },
+    "terminal_rows_equal_canonical_metrics": true,
+    "verification_status": "FAILED",
+    "whole_wave_aborted": true
+  },
+  "created_utc": "2026-09-07T12:42:06.597930+00:00",
+  "current_preservation": {
+    "end_pin_mismatches": [],
+    "freeze_code_equals_manifest_code": true,
+    "manifest_group_counts": {
+      "code": 257,
+      "inputs": 1137,
+      "preserved": 290
+    },
+    "pin_mismatches": [],
+    "prefit_design_mismatches": [],
+    "prefit_design_pins_checked": 2,
+    "unique_pins": 1684
+  },
+  "diagnostic_scores_read": false,
+  "exception": {
+    "canonical_error": "Independent verification failed: AssertionError: Independent baseline stationarity failed",
+    "message": "Independent baseline stationarity failed",
+    "type": "AssertionError"
+  },
+  "freeze_record_sha256": "d71d23623e7eee5bc97f7b2b480aa2d63853c74876f48791f311a01e6692fe9b",
+  "frozen_files_written": false,
+  "generated_outputs": {
+    "count_interpretation": "Generated artifacts only. Independent verification failed; none is promoted as verified predictive evidence.",
+    "count_method": "Parquet metadata.num_rows; top-level fit-list length with numeric parsing discarded and object contents discarded.",
+    "files_sha256": {
+      "data/civil_quarter_replay/features.parquet": "20c194f921087fa7f8e048e5ae2321dc2eddc5bfbc4b3fa059394a9dd7c151ff",
+      "data/civil_quarter_replay/fits.json": "7075d573f98dd689c7f9357fd3f87a392eaea7c43713438796497433307cf1a8",
+      "data/civil_quarter_replay/forecasts.parquet": "6c51fef0b230c443d14b65ecc33be832672d10437e6bb73268ba412af1e34075",
+      "data/civil_quarter_replay/source_closure.json": "7e34f54d03baf70eba2e927ad9889ac4a54dcd59d589ab46a1862147e093ab83",
+      "data/civil_quarter_replay/support_audit.json": "7e31adc7346fd3bd6ea40e6df744394c0ae847e95a972fa70c72705159aee3e1",
+      "data/civil_quarter_replay/targets.parquet": "cb8425322f2d0ad3a3847a071cbbc81723397d9a85391d19471a020054b5bc1a",
+      "data/civil_quarter_replay/upstream_admission.json": "5e8f4907d07e3a68170b382fb648d1e0a1fb92ef49562fe02957ce32127eb718"
+    },
+    "forecast_rows": 6297,
+    "independently_verified_forecasts": null,
+    "independently_verified_monthly_fits": null,
+    "monthly_fit_records": 101
+  },
+  "ledger": {
+    "evaluated_rows_role": "Historical diagnostics retained before terminal verification_failed rows; not valid inherited p-values or signal evidence. Only their event fields were inspected.",
+    "event_counts": {
+      "evaluated": 2,
+      "inherited": 123,
+      "registered": 2,
+      "verification_failed": 2
+    },
+    "events": 129,
+    "inherited_and_evaluated_score_payloads_decoded": false,
+    "order_verified": true
+  },
+  "limitations": [
+    "No optimizer diagnosis or change was attempted; failure of the independent stationarity check does not establish a predictive null result.",
+    "Source dependency closure and saved admission do not remove archival, original-plan, nominal-calendar or measurement limitations.",
+    "No diagnostic score values were inspected or used to revise models, source masks or evidence thresholds."
+  ],
+  "manifest_sha256": "f4a680cb8036d1dc71b624eddff6bf0937f230f839e507a8deb8e89fe5da9dc9",
+  "models_fitted": false,
+  "previous_preservation": {
+    "manifests": {
+      "reports/calendar_variance/manifest.json": {
+        "group_counts": {
+          "code": 169,
+          "inputs": 808,
+          "preserved": 272
+        },
+        "sha256": "521deb0c053c3eb724f2cd84c4644688863ec263ecce62d00c8ea129580bb4c8"
+      },
+      "reports/causal_pool/manifest.json": {
+        "group_counts": {
+          "code": 233,
+          "inputs": 199,
+          "preserved": 315
+        },
+        "sha256": "a775d4491b3dab27f2c36c037090d37a094dfad85c5ff67256acfa262d40f4c2"
+      },
+      "reports/civil_quarter/manifest.json": {
+        "group_counts": {
+          "code": 247,
+          "inputs": 1074,
+          "preserved": 290
+        },
+        "sha256": "212578e5418c5f10e8e4847bbebf335bc3dcbd7b0db63aac853a4902a5605156"
+      },
+      "reports/cross_moment/manifest.json": {
+        "group_counts": {
+          "code": 200,
+          "inputs": 57,
+          "preserved": 326
+        },
+        "sha256": "28a3fa3975bd58789d6859850579a472671443937e4de641351eb8f8217c969a"
+      },
+      "reports/index_hinge/manifest.json": {
+        "group_counts": {
+          "code": 147,
+          "inputs": 8,
+          "preserved": 230
+        },
+        "sha256": "7d3c458c255b0d4ee9278a4844269b68249426aeacbeeb436e6350c7b1c4204b"
+      },
+      "reports/international_volatility/manifest.json": {
+        "group_counts": {
+          "code": 11,
+          "inputs": 5,
+          "preserved": 150
+        },
+        "sha256": "530b8439d7b8dcd209d967a90d3affe1ec002a7dc0e4b824deb44c37285ea757"
+      },
+      "reports/iterative_signal_search/manifest.json": {
+        "group_counts": {
+          "code": 10,
+          "inputs": 9,
+          "preserved": 129
+        },
+        "sha256": "5515fc5aea433d9e743bcd31d9bfdb284ebca23005ac3c0fdd6184ab5a15b61f"
+      },
+      "reports/joint_risk/manifest.json": {
+        "group_counts": {
+          "code": 191,
+          "inputs": 12,
+          "preserved": 326
+        },
+        "sha256": "c80e77d076cefd98c0e6d7df6c9dd213638ec486e718a9713055552575dc7848"
+      },
+      "reports/macro_overnight/manifest.json": {
+        "group_counts": {
+          "code": 18,
+          "inputs": 805,
+          "preserved": 188
+        },
+        "sha256": "d50b2523a84c139e87861e2468c829606e6c1a41f8fb17be68e5f4d8da5ab614"
+      },
+      "reports/measurement_memory/manifest.json": {
+        "group_counts": {
+          "code": 139,
+          "inputs": 19,
+          "preserved": 211
+        },
+        "sha256": "c53329dbbc94dc0d8e83aca30284c41e3e0b9e35a3156817837bcadc647625b7"
+      },
+      "reports/overnight_index/manifest.json": {
+        "group_counts": {
+          "code": 13,
+          "inputs": 10,
+          "preserved": 164
+        },
+        "sha256": "49c84753c1589ac7c01e4e3d90e250eca1df6341a30420a8e9d9a766c6e241fd"
+      },
+      "reports/relative_risk/manifest.json": {
+        "group_counts": {
+          "code": 179,
+          "inputs": 12,
+          "preserved": 298
+        },
+        "sha256": "15e5319a2c66e64dfc3692f71d7da279b9d901ec8ed4a43869024a90d27c8e0f"
+      },
+      "reports/sign_memory/manifest.json": {
+        "group_counts": {
+          "code": 223,
+          "inputs": 135,
+          "preserved": 326
+        },
+        "sha256": "47c6bc32556a30ae444a80380a2cd3a0076aa2df511d6814c5cec359cf1dcb0c"
+      },
+      "reports/tail_shape/manifest.json": {
+        "group_counts": {
+          "code": 159,
+          "inputs": 11,
+          "preserved": 250
+        },
+        "sha256": "136cfa954874231d305af552d3f89d7e77bee76d3638a9152f764b425509644d"
+      },
+      "reports/target_aligned/manifest.json": {
+        "group_counts": {
+          "code": 211,
+          "inputs": 97,
+          "preserved": 326
+        },
+        "sha256": "996e9f8f081a69a66dad9c4c611feb6775fc69c5ad9e3630230d55ad97b426d9"
+      }
+    },
+    "prior_manifest_count": 15,
+    "prior_pin_mismatches": [],
+    "unique_prior_pins": 1631,
+    "wave15": {
+      "all_pvalues": 1.0,
+      "cumulative_hypotheses": 123,
+      "hypotheses_retained": 2,
+      "ledger_event_counts": {
+        "inherited": 121,
+        "registered": 2,
+        "unevaluable": 2
+      },
+      "ledger_events": 125,
+      "private_output_files": 0,
+      "publication_artifact_hashes": {
+        "reports/calendar_variance/verification.json": "47f2a0a333df19d258ca95dfef9fbf403ee0ae6f6a675ec85903755b84943cb7",
+        "reports/causal_pool/verification.json": "0f2142d97e62e4ab1dbfc02c6a27bdf23dc02676bdd43bc41fa64e180a2d1010",
+        "reports/civil_quarter/NEXT_INFORMATION_CHANNEL.md": "f8e35abea032754ff324f8e99dee817a1bbc83107c7fba92cbc3b8309fcf1c94",
+        "reports/civil_quarter/NEXT_SOURCE_COMPLETE_REPLAY.md": "db12906c70e9f3eb41a1dff364742fa7b45fda9db898520fc958f678faa51bbf",
+        "reports/civil_quarter/SOURCE_DEPENDENCY_AUDIT.md": "d1199b43d057a477ee3a2a0eaeaeaa50a2e3cac90f08396ce5af60a7751566db",
+        "reports/civil_quarter/SUMMARY.md": "dc9ad397a4d1cce46dbc3ff3a452e807f1a0bcb7d3a1a0c2bcbc953212786aa6",
+        "reports/civil_quarter/admission_failure_audit.json": "358a1655c1266ad0bb88ae0cd0f18e183693f83245e0f5afbe95484b7b9fd897",
+        "reports/civil_quarter/admission_failure_audit.log": "f316776811dbd5b448709c46fc91f0ddfc5d4638fe234d02e63a8a85d628e855",
+        "reports/civil_quarter/failure.json": "67eb0c458001b726f1456453388283a99f22a2508424da4fdf56d535e9b0d159",
+        "reports/civil_quarter/metrics.json": "67eb0c458001b726f1456453388283a99f22a2508424da4fdf56d535e9b0d159",
+        "reports/civil_quarter/run.log": "6aced5d2b52b88e343d524e51ab1d69c2f448d4cc1edf531ca90aa4637244b6d",
+        "reports/civil_quarter/source_dependency_audit.json": "bf83a9bda409729a14fed45419ad081b9969d73766a91ed6a9fb2bc16a6853bb",
+        "reports/civil_quarter/trial_ledger.jsonl": "d44aa0c1b9480cbc9dafae5cea26c0cbfaf1edfb584dcac41f856f8f417591a5",
+        "reports/cross_moment/verification.json": "b3745d90db160e1102f2c3b987627add1d890958e38b52bb30499b77f5c13fa0",
+        "reports/index_hinge/verification.json": "609a877047936bc32be1f36be5c0d0333f9a49be50c933064be1d6a7c10ef41e",
+        "reports/international_volatility/verification.json": "2d8d3406892974ab1725dc339442d80f1728f840710f0c761b05834482098c92",
+        "reports/iterative_signal_search/verification.json": "0261a6368960d8b6e679cb64940f8dcc78bac1e2da8603ee043d18aa60e4879f",
+        "reports/joint_risk/verification.json": "d62544e15e9575371a95fd7f1d5fdcb5e034cc49f7e78268a50ae5ffc5d3c3e3",
+        "reports/macro_overnight/verification.json": "8e539f04e8014f6823bc9da15f705bbc645e24ea1b1ac631ee843900c0b5c8b8",
+        "reports/measurement_memory/verification.json": "5c5676f8e25271851f6010d5fc6abf0f0543f55f35e3609c1f6e627888833018",
+        "reports/overnight_index/verification.json": "7db97e905982a0a5bdf0c0abad970f51d55440a96fb92a6703e29270f5bdbc5a",
+        "reports/relative_risk/verification.json": "521e72b127df0267097b380160e563ca64e3a7825c3df11395d8e79a03e02f60",
+        "reports/sign_memory/verification.json": "6a9e1348e93b44e6d0e88aba9b977f85b29489d1913834bbec58e267bafe4039",
+        "reports/tail_shape/verification.json": "d4f63b1848a4d33170101c8717c50c5bf0ad07b254d262ffda83517735fa89ff",
+        "reports/target_aligned/verification.json": "dfdc8224a8b7455622e6a16e2671bc70fe01a9a2600e78f39814ad824510fbd0"
+      },
+      "publication_artifact_pins_checked": 25,
+      "status": "UNEVALUABLE"
+    }
+  },
+  "protocol_sha256": "99ff8102daf12a451f4bf2c50ddd4326dcf6b79873ad31a399c319b708ebac22",
+  "read_only_before_after": {
+    "all_protected_hashes_identical": true,
+    "hashes_after": {
+      "data/civil_quarter_replay/features.parquet": "20c194f921087fa7f8e048e5ae2321dc2eddc5bfbc4b3fa059394a9dd7c151ff",
+      "data/civil_quarter_replay/fits.json": "7075d573f98dd689c7f9357fd3f87a392eaea7c43713438796497433307cf1a8",
+      "data/civil_quarter_replay/forecasts.parquet": "6c51fef0b230c443d14b65ecc33be832672d10437e6bb73268ba412af1e34075",
+      "data/civil_quarter_replay/source_closure.json": "7e34f54d03baf70eba2e927ad9889ac4a54dcd59d589ab46a1862147e093ab83",
+      "data/civil_quarter_replay/support_audit.json": "7e31adc7346fd3bd6ea40e6df744394c0ae847e95a972fa70c72705159aee3e1",
+      "data/civil_quarter_replay/targets.parquet": "cb8425322f2d0ad3a3847a071cbbc81723397d9a85391d19471a020054b5bc1a",
+      "data/civil_quarter_replay/upstream_admission.json": "5e8f4907d07e3a68170b382fb648d1e0a1fb92ef49562fe02957ce32127eb718",
+      "reports/calendar_variance/verification.json": "47f2a0a333df19d258ca95dfef9fbf403ee0ae6f6a675ec85903755b84943cb7",
+      "reports/causal_pool/verification.json": "0f2142d97e62e4ab1dbfc02c6a27bdf23dc02676bdd43bc41fa64e180a2d1010",
+      "reports/civil_quarter/NEXT_INFORMATION_CHANNEL.md": "f8e35abea032754ff324f8e99dee817a1bbc83107c7fba92cbc3b8309fcf1c94",
+      "reports/civil_quarter/NEXT_SOURCE_COMPLETE_REPLAY.md": "db12906c70e9f3eb41a1dff364742fa7b45fda9db898520fc958f678faa51bbf",
+      "reports/civil_quarter/SOURCE_DEPENDENCY_AUDIT.md": "d1199b43d057a477ee3a2a0eaeaeaa50a2e3cac90f08396ce5af60a7751566db",
+      "reports/civil_quarter/SUMMARY.md": "dc9ad397a4d1cce46dbc3ff3a452e807f1a0bcb7d3a1a0c2bcbc953212786aa6",
+      "reports/civil_quarter/admission_failure_audit.json": "358a1655c1266ad0bb88ae0cd0f18e183693f83245e0f5afbe95484b7b9fd897",
+      "reports/civil_quarter/admission_failure_audit.log": "f316776811dbd5b448709c46fc91f0ddfc5d4638fe234d02e63a8a85d628e855",
+      "reports/civil_quarter/failure.json": "67eb0c458001b726f1456453388283a99f22a2508424da4fdf56d535e9b0d159",
+      "reports/civil_quarter/metrics.json": "67eb0c458001b726f1456453388283a99f22a2508424da4fdf56d535e9b0d159",
+      "reports/civil_quarter/run.log": "6aced5d2b52b88e343d524e51ab1d69c2f448d4cc1edf531ca90aa4637244b6d",
+      "reports/civil_quarter/source_dependency_audit.json": "bf83a9bda409729a14fed45419ad081b9969d73766a91ed6a9fb2bc16a6853bb",
+      "reports/civil_quarter/trial_ledger.jsonl": "d44aa0c1b9480cbc9dafae5cea26c0cbfaf1edfb584dcac41f856f8f417591a5",
+      "reports/civil_quarter_replay/failure.json": "ac6ab77e85fd037535f4031c0124539b3b7c088ec8f42a810ca7eea668787e08",
+      "reports/civil_quarter_replay/freeze_record.json": "d71d23623e7eee5bc97f7b2b480aa2d63853c74876f48791f311a01e6692fe9b",
+      "reports/civil_quarter_replay/manifest.json": "f4a680cb8036d1dc71b624eddff6bf0937f230f839e507a8deb8e89fe5da9dc9",
+      "reports/civil_quarter_replay/metrics.json": "ac6ab77e85fd037535f4031c0124539b3b7c088ec8f42a810ca7eea668787e08",
+      "reports/civil_quarter_replay/results.md": "fd1a072bcca6c88ae217dbb17bad63412ae73a12c465d4a235b4272af4b11a3c",
+      "reports/civil_quarter_replay/trial_ledger.jsonl": "dc399e2c7d8048d12e6fed1f5f9549aef6e466ad5f93d1ff7febdaff401c6bab",
+      "reports/civil_quarter_replay/verification.json": "50022adbe5ecd4b23e17ae5972d5ec904064fb4d81a6ef0a1aa0be77558af0db",
+      "reports/cross_moment/verification.json": "b3745d90db160e1102f2c3b987627add1d890958e38b52bb30499b77f5c13fa0",
+      "reports/index_hinge/verification.json": "609a877047936bc32be1f36be5c0d0333f9a49be50c933064be1d6a7c10ef41e",
+      "reports/international_volatility/verification.json": "2d8d3406892974ab1725dc339442d80f1728f840710f0c761b05834482098c92",
+      "reports/iterative_signal_search/verification.json": "0261a6368960d8b6e679cb64940f8dcc78bac1e2da8603ee043d18aa60e4879f",
+      "reports/joint_risk/verification.json": "d62544e15e9575371a95fd7f1d5fdcb5e034cc49f7e78268a50ae5ffc5d3c3e3",
+      "reports/macro_overnight/verification.json": "8e539f04e8014f6823bc9da15f705bbc645e24ea1b1ac631ee843900c0b5c8b8",
+      "reports/measurement_memory/verification.json": "5c5676f8e25271851f6010d5fc6abf0f0543f55f35e3609c1f6e627888833018",
+      "reports/overnight_index/verification.json": "7db97e905982a0a5bdf0c0abad970f51d55440a96fb92a6703e29270f5bdbc5a",
+      "reports/relative_risk/verification.json": "521e72b127df0267097b380160e563ca64e3a7825c3df11395d8e79a03e02f60",
+      "reports/sign_memory/verification.json": "6a9e1348e93b44e6d0e88aba9b977f85b29489d1913834bbec58e267bafe4039",
+      "reports/tail_shape/verification.json": "d4f63b1848a4d33170101c8717c50c5bf0ad07b254d262ffda83517735fa89ff",
+      "reports/target_aligned/verification.json": "dfdc8224a8b7455622e6a16e2671bc70fe01a9a2600e78f39814ad824510fbd0"
+    },
+    "hashes_before": {
+      "data/civil_quarter_replay/features.parquet": "20c194f921087fa7f8e048e5ae2321dc2eddc5bfbc4b3fa059394a9dd7c151ff",
+      "data/civil_quarter_replay/fits.json": "7075d573f98dd689c7f9357fd3f87a392eaea7c43713438796497433307cf1a8",
+      "data/civil_quarter_replay/forecasts.parquet": "6c51fef0b230c443d14b65ecc33be832672d10437e6bb73268ba412af1e34075",
+      "data/civil_quarter_replay/source_closure.json": "7e34f54d03baf70eba2e927ad9889ac4a54dcd59d589ab46a1862147e093ab83",
+      "data/civil_quarter_replay/support_audit.json": "7e31adc7346fd3bd6ea40e6df744394c0ae847e95a972fa70c72705159aee3e1",
+      "data/civil_quarter_replay/targets.parquet": "cb8425322f2d0ad3a3847a071cbbc81723397d9a85391d19471a020054b5bc1a",
+      "data/civil_quarter_replay/upstream_admission.json": "5e8f4907d07e3a68170b382fb648d1e0a1fb92ef49562fe02957ce32127eb718",
+      "reports/calendar_variance/verification.json": "47f2a0a333df19d258ca95dfef9fbf403ee0ae6f6a675ec85903755b84943cb7",
+      "reports/causal_pool/verification.json": "0f2142d97e62e4ab1dbfc02c6a27bdf23dc02676bdd43bc41fa64e180a2d1010",
+      "reports/civil_quarter/NEXT_INFORMATION_CHANNEL.md": "f8e35abea032754ff324f8e99dee817a1bbc83107c7fba92cbc3b8309fcf1c94",
+      "reports/civil_quarter/NEXT_SOURCE_COMPLETE_REPLAY.md": "db12906c70e9f3eb41a1dff364742fa7b45fda9db898520fc958f678faa51bbf",
+      "reports/civil_quarter/SOURCE_DEPENDENCY_AUDIT.md": "d1199b43d057a477ee3a2a0eaeaeaa50a2e3cac90f08396ce5af60a7751566db",
+      "reports/civil_quarter/SUMMARY.md": "dc9ad397a4d1cce46dbc3ff3a452e807f1a0bcb7d3a1a0c2bcbc953212786aa6",
+      "reports/civil_quarter/admission_failure_audit.json": "358a1655c1266ad0bb88ae0cd0f18e183693f83245e0f5afbe95484b7b9fd897",
+      "reports/civil_quarter/admission_failure_audit.log": "f316776811dbd5b448709c46fc91f0ddfc5d4638fe234d02e63a8a85d628e855",
+      "reports/civil_quarter/failure.json": "67eb0c458001b726f1456453388283a99f22a2508424da4fdf56d535e9b0d159",
+      "reports/civil_quarter/metrics.json": "67eb0c458001b726f1456453388283a99f22a2508424da4fdf56d535e9b0d159",
+      "reports/civil_quarter/run.log": "6aced5d2b52b88e343d524e51ab1d69c2f448d4cc1edf531ca90aa4637244b6d",
+      "reports/civil_quarter/source_dependency_audit.json": "bf83a9bda409729a14fed45419ad081b9969d73766a91ed6a9fb2bc16a6853bb",
+      "reports/civil_quarter/trial_ledger.jsonl": "d44aa0c1b9480cbc9dafae5cea26c0cbfaf1edfb584dcac41f856f8f417591a5",
+      "reports/civil_quarter_replay/failure.json": "ac6ab77e85fd037535f4031c0124539b3b7c088ec8f42a810ca7eea668787e08",
+      "reports/civil_quarter_replay/freeze_record.json": "d71d23623e7eee5bc97f7b2b480aa2d63853c74876f48791f311a01e6692fe9b",
+      "reports/civil_quarter_replay/manifest.json": "f4a680cb8036d1dc71b624eddff6bf0937f230f839e507a8deb8e89fe5da9dc9",
+      "reports/civil_quarter_replay/metrics.json": "ac6ab77e85fd037535f4031c0124539b3b7c088ec8f42a810ca7eea668787e08",
+      "reports/civil_quarter_replay/results.md": "fd1a072bcca6c88ae217dbb17bad63412ae73a12c465d4a235b4272af4b11a3c",
+      "reports/civil_quarter_replay/trial_ledger.jsonl": "dc399e2c7d8048d12e6fed1f5f9549aef6e466ad5f93d1ff7febdaff401c6bab",
+      "reports/civil_quarter_replay/verification.json": "50022adbe5ecd4b23e17ae5972d5ec904064fb4d81a6ef0a1aa0be77558af0db",
+      "reports/cross_moment/verification.json": "b3745d90db160e1102f2c3b987627add1d890958e38b52bb30499b77f5c13fa0",
+      "reports/index_hinge/verification.json": "609a877047936bc32be1f36be5c0d0333f9a49be50c933064be1d6a7c10ef41e",
+      "reports/international_volatility/verification.json": "2d8d3406892974ab1725dc339442d80f1728f840710f0c761b05834482098c92",
+      "reports/iterative_signal_search/verification.json": "0261a6368960d8b6e679cb64940f8dcc78bac1e2da8603ee043d18aa60e4879f",
+      "reports/joint_risk/verification.json": "d62544e15e9575371a95fd7f1d5fdcb5e034cc49f7e78268a50ae5ffc5d3c3e3",
+      "reports/macro_overnight/verification.json": "8e539f04e8014f6823bc9da15f705bbc645e24ea1b1ac631ee843900c0b5c8b8",
+      "reports/measurement_memory/verification.json": "5c5676f8e25271851f6010d5fc6abf0f0543f55f35e3609c1f6e627888833018",
+      "reports/overnight_index/verification.json": "7db97e905982a0a5bdf0c0abad970f51d55440a96fb92a6703e29270f5bdbc5a",
+      "reports/relative_risk/verification.json": "521e72b127df0267097b380160e563ca64e3a7825c3df11395d8e79a03e02f60",
+      "reports/sign_memory/verification.json": "6a9e1348e93b44e6d0e88aba9b977f85b29489d1913834bbec58e267bafe4039",
+      "reports/tail_shape/verification.json": "d4f63b1848a4d33170101c8717c50c5bf0ad07b254d262ffda83517735fa89ff",
+      "reports/target_aligned/verification.json": "dfdc8224a8b7455622e6a16e2671bc70fe01a9a2600e78f39814ad824510fbd0"
+    },
+    "paths_checked": 39
+  },
+  "scope": "Read-only canonical failure accounting, immutable hashes, saved source-admission metadata and output-size metadata; no diagnostic score payloads, model fitting, verification rerun, calendar construction or source mutation.",
+  "source_admission": {
+    "all_closure_files_directly_registered_and_hash_matching": true,
+    "all_five_previously_omitted_files_recovered": true,
+    "interpretation": "This audit checks saved admission identity and byte bindings only; it does not rerun source parsing, historical reconstruction or numerical verification.",
+    "prior_files_written": false,
+    "saved_admission_sha256": "5e8f4907d07e3a68170b382fb648d1e0a1fb92ef49562fe02957ce32127eb718",
+    "saved_closure_counts": {
+      "bounded_bls_records": 378,
+      "documentary_files": 1,
+      "excluded_bls_records": 2,
+      "fomc_reference_rows": 128,
+      "metadata_files": 4,
+      "runtime_files": 394,
+      "unique_files": 399
+    },
+    "saved_closure_equal_admission_closure": true,
+    "saved_source_closure_sha256": "7e34f54d03baf70eba2e927ad9889ac4a54dcd59d589ab46a1862147e093ab83",
+    "saved_status": "UPSTREAM_VERIFIED_READ_ONLY",
+    "successful_historical_proof_identities": {
+      "feature_source": {
+        "manifest_sha256": "521deb0c053c3eb724f2cd84c4644688863ec263ecce62d00c8ea129580bb4c8",
+        "protocol_sha256": "b3357641d874d22eb6bf0903049e8dcfd93df4e38b0748f717923447ff367ca3",
+        "status": "VERIFIED",
+        "verification_sha256": "47f2a0a333df19d258ca95dfef9fbf403ee0ae6f6a675ec85903755b84943cb7",
+        "verifier_sha256": "c213b47e91c25c7293a557064dbf8c62c583fc32bf58701cbf2f5afa61f78677"
+      },
+      "upstream": {
+        "manifest_sha256": "a775d4491b3dab27f2c36c037090d37a094dfad85c5ff67256acfa262d40f4c2",
+        "protocol_sha256": "1e329ee208612ed8db1fede873b92a938820d51a3fcf2ec583c813d37ac000ad",
+        "status": "VERIFIED",
+        "verification_sha256": "0f2142d97e62e4ab1dbfc02c6a27bdf23dc02676bdd43bc41fa64e180a2d1010",
+        "verifier_sha256": "cb34da06786f61e50b89f494e4071abb8d250539a52145d782cc1e122aeaa900"
+      }
+    }
+  },
+  "status": "VERIFICATION_FAILURE_AND_PRESERVATION_AUDITED",
+  "verifier_rerun": false
+}

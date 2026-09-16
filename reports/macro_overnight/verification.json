@@ -1,0 +1,64 @@
+{
+  "status": "VERIFIED",
+  "protocol_sha256": "7b5173a97b5c9bfe4ce87d4a040127dc3dc9d6276495f40ca81777a01400db32",
+  "verifier_sha256": "16baccdf2583436bd9be70bfb11bdba4ef450a11b355d6a59599db10cec69cab",
+  "feature_rows_verified": 6696,
+  "feature_columns_verified": 20,
+  "source_reconstruction": {
+    "source_availability_rows_verified": 6696,
+    "cpi": {
+      "record_count": 190,
+      "explicit_plans_verified": 168,
+      "statuses": {
+        "VERIFIED_EXPLICIT_PLAN": 168,
+        "ORIGINAL_VINTAGE_UNCERTAIN": 17,
+        "AMBIGUOUS_PRINTED_TIMESTAMP_OR_ID": 4,
+        "OUTSIDE_PUBLICATION_FENCE": 1
+      }
+    },
+    "nfp": {
+      "record_count": 190,
+      "explicit_plans_verified": 176,
+      "statuses": {
+        "ORIGINAL_VINTAGE_UNCERTAIN": 13,
+        "EXPLICIT_ORIGINAL_PLAN": 176,
+        "OUTSIDE_PUBLICATION_FENCE": 1
+      }
+    },
+    "fomc": {
+      "annual_documents": 16,
+      "planned_meetings": 128
+    }
+  },
+  "forecast_reconstruction": {
+    "forecasts_verified": 10495,
+    "common_scored_origins": 2099,
+    "feature_complete_applications": 2099,
+    "monthly_fits_verified": 101,
+    "models_verified": 5,
+    "producer_kkt_max": 9.84564518542036e-09,
+    "independent_bfgs_kkt_max": 6.419063433354619e-09,
+    "adjustment_flagged_origins": 34
+  },
+  "inference": {
+    "new_hypotheses_verified": 6,
+    "cumulative_hypotheses_verified": 84,
+    "phase_comparisons_verified": 12,
+    "bootstrap_runs_verified": 36,
+    "bootstrap_draws_per_run": 49999,
+    "measurement_sensitivities_verified": 12,
+    "leads": [],
+    "fomc_timing_control_passes": false
+  },
+  "ledger_events_verified": {
+    "inherited": 78,
+    "registered": 6,
+    "evaluated": 6
+  },
+  "limitations": [
+    "Adaptive historical reuse remains exploratory after multiplicity corrections.",
+    "Original documentary plans and nominal civil windows do not certify exchange holding intervals.",
+    "Adjusted overnight second moments are not integrated variance or executable cash profit.",
+    "Current official-document extracts are not immutable historical web vintages."
+  ]
+}

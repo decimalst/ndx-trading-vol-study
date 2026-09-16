@@ -1,0 +1,60 @@
+{
+  "status": "INDEPENDENTLY_VERIFIED_FIRST_REPORT_LEDGER_WITH_EXPLICIT_GAPS",
+  "created_utc": "2026-09-08T21:41:49.260516+00:00",
+  "ledger_path": "data/claims_release/first_report_ledger.json",
+  "ledger_sha256": "f504c475a65eabab242ef583c7494b773cae13e3026de8a62fb5390ddab65c52",
+  "input_and_component_sha256": {
+    "src/claims_release_archive.py": "a2ab878ea7d0599a39146e4b21f0e5d0e93e936d6759f316fea896181519dc39",
+    "src/claims_release_reconcile.py": "5b4c34cc8b7c695528f83956203a855d1e1bf5c398b4df5eb9d453ec1a2d0dd9",
+    "src/claims_release_source.py": "9c0a0cc409bfac6989bb5a3c9207e02ea03d448d7ef7ed6c56c23484b8ad285f",
+    "tests/test_claims_release_archive.py": "44e9e40e41d9be15698bff648937d9bd146113561fcb093b1b4e81d74981ef2d",
+    "tests/test_claims_release_reconcile.py": "3db2ad43f2cc7e3a077dca7284af92e91e87728f40f71e71af0e45e12588f0fd",
+    "tests/test_claims_release_reconcile_formats.py": "b5483469ad1a0549b1ef23415349ba33b142678d5317ce66030a4cabc10c5de5",
+    "tests/test_claims_release_reconcile_identity.py": "bcae4c31f325ba52bf495799947218aead7f6602a8e5045882ebd58569a67e9a",
+    "tests/test_claims_release_source.py": "0ba7f577f09acc26a3f7ca8379579f49e97cb28b141e29983b90e144e8e1ca42",
+    "tests/test_claims_release_source_attributes.py": "b6d512a9a098675a732715561731e56cb064fe2ac5d69e3ae92a20c65f0be8b7",
+    "reports/claims_release/SUMMARY.md": "74e462fbe19e54a06b465f343a5a96b5e549f9be7f0aef77d978349699781cae",
+    "reports/claims_release/SOURCE_DISPOSITION.md": "529e1db286642fbcf98761d433b701a1676f8079c7c8639e8c36e16f5e6abd70",
+    "reports/claims_release/FULL_RECONCILIATION_FORMATS_RESULT.json": "d312402390f2404744a1caa7e2dcc5b41393913aef611810f6bb0b1f2356df27",
+    "reports/claims_release/SOURCE_DISCREPANCY_REVIEW.md": "927388e8bba2d3bc74b423ea56c48b79e1ac189f43ce12391e6693b20918dc2f",
+    "reports/claims_release/2017_CORRECTION_TIMING.md": "5acaeb785ede9ca2f3132a4f29002df276f3a3d86e06b5f66aeb3fe7e5dfa5c0",
+    "reports/claims_release/ARCHIVE_RECONCILIATION.md": "e42de6331753b4aa9fdcc0090e7b7be5953d9bc2d56948ddb1e11e6b8ea5a7ae",
+    "reports/claims_release/FULL_TEXT_EXTRACTION.md": "14bab3a309ea0b0341b76cc0eb10ec7057c32ce28fbf58a210de996612df4210",
+    "reports/claims_release/FULL_SOURCE_FINAL_CHECK.json": "48938b1afef6b36c1ff4621455b5cac5a1e306102db93335c3622aa917d03960",
+    "data/claims_release/dol_text/text_ledger.json": "1fca7e8b7da12e388a8a4e982c6ffe18cf48c11bdbd13e4442223d110d8b5ceb",
+    "data/claims_release/full_source_reconciliation_formats.json": "47b9de55d89783996c32969a68814c955919068a6d7ab614f5c4f80d748f0195",
+    "data/claims_release/alfred_structural.json": "90832acafb2bec11766d871c004b0979ec1de6ad4c5cf3d9c815c40b3bc7d9ec",
+    "reports/claims_release/SOURCE_AUDIT_CHECKPOINT.json": "5f282a2b7c369731db54714f459bd2ea564aa831c29a37835f5f98cfe2a4e47e",
+    "src/claims_release_ledger.py": "8b4db0a674fe37802cee76aa70e2240552c9a7edd68338cc6d90cfd16ef3449d",
+    "tests/test_claims_release_ledger.py": "e0e84278eb62b05ba5b916c0b52b807eb70fb15ed9d339ccfa092302f6842b3e",
+    "src/verify_claims_release_ledger.py": "9f97a6f20f1e4aef9141c1e2e043f5e337e991496625e1d26fcc6b0b1825d587",
+    "tests/test_verify_claims_release_ledger.py": "88771184c5a110f383bf5bc661e6db7a949cad9ed7362484299bd39412cdb4c5"
+  },
+  "verification": {
+    "status": "VERIFIED",
+    "start": "2009-05-30",
+    "end": "2025-10-18",
+    "reference_weeks": 856,
+    "counts": {
+      "observed": 851,
+      "unresolved_correction": 1,
+      "no_admitted_release": 4
+    },
+    "reports_checked": 852,
+    "alfred_records_checked": 852
+  },
+  "source_and_ledger_synthetic_tests": 129,
+  "test_log_sha256": "4ea8a48d052ca89c7a648a73edc243c624061abc4e90b373305a75e6bcb57a89",
+  "prior_python_files_unchanged": 336,
+  "prior_peak_age_reports_unchanged": 90,
+  "raw_alfred_reconciliation_status": "SOURCE_RECONCILIATION_INCOMPLETE",
+  "predictive_protocol_frozen": false,
+  "claims_forecasting_models_fitted": 0,
+  "new_predictive_comparisons": 0,
+  "cumulative_predictive_comparisons": 140,
+  "limitations": [
+    "This verifies source disposition, not predictive value or immutable historical publication timestamps.",
+    "The 2017 correction remains unavailable; raw comparison values are audit-only.",
+    "No claims market cohort or forecasts have been constructed."
+  ]
+}

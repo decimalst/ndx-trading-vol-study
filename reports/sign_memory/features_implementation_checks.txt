@@ -1,0 +1,24 @@
+test_current_and_future_changes_cannot_change_current_predictors (tests.test_sign_memory_features.SignFeatures.test_current_and_future_changes_cannot_change_current_predictors) ... ok
+test_exact_feature_target_schema_and_preserved_34_controls (tests.test_sign_memory_features.SignFeatures.test_exact_feature_target_schema_and_preserved_34_controls) ... ok
+test_full_source_gate_precedes_all_new_sign_construction (tests.test_sign_memory_features.SignFeatures.test_full_source_gate_precedes_all_new_sign_construction) ... ok
+test_joint_window_frequencies_independence_and_excess_exact_lag (tests.test_sign_memory_features.SignFeatures.test_joint_window_frequencies_independence_and_excess_exact_lag) ... ok
+test_loader_preserves_sources_hashes_fence_and_raw_only_semantics (tests.test_sign_memory_features.SignFeatures.test_loader_preserves_sources_hashes_fence_and_raw_only_semantics) ... ok
+test_missing_one_asset_invalidates_every_paired_summary_for_full22 (tests.test_sign_memory_features.SignFeatures.test_missing_one_asset_invalidates_every_paired_summary_for_full22) ... ok
+test_missing_target_does_not_skip_to_next_common_date (tests.test_sign_memory_features.SignFeatures.test_missing_target_does_not_skip_to_next_common_date) ... ok
+test_price_units_and_asset_permutation_preserve_joint_signs (tests.test_sign_memory_features.SignFeatures.test_price_units_and_asset_permutation_preserve_joint_signs) ... ok
+test_prior_source_date_mismatch_affects_old_histories_not_intraday_signs (tests.test_sign_memory_features.SignFeatures.test_prior_source_date_mismatch_affects_old_histories_not_intraday_signs) ... ok
+test_target_is_next_actual_session_agreement_not_entry_sign (tests.test_sign_memory_features.SignFeatures.test_target_is_next_actual_session_agreement_not_entry_sign) ... ok
+test_zero_returns_are_nonagreement_and_high_only_gap_does_not_mask_sign (tests.test_sign_memory_features.SignFeatures.test_zero_returns_are_nonagreement_and_high_only_gap_does_not_mask_sign) ... ok
+test_all_nine_sign_pairs_and_signed_zero_truth_table (tests.test_sign_memory_features.SignObservations.test_all_nine_sign_pairs_and_signed_zero_truth_table) ... ok
+test_missing_pair_masks_all_indicators_and_infinity_rejects (tests.test_sign_memory_features.SignObservations.test_missing_pair_masks_all_indicators_and_infinity_rejects) ... ok
+test_shape_complex_and_non_numeric_inputs_rejected (tests.test_sign_memory_features.SignObservations.test_shape_complex_and_non_numeric_inputs_rejected) ... ok
+test_sign_symmetry_and_positive_return_unit_invariance (tests.test_sign_memory_features.SignObservations.test_sign_symmetry_and_positive_return_unit_invariance) ... ok
+test_tiny_values_keep_sign_without_product_underflow (tests.test_sign_memory_features.SignObservations.test_tiny_values_keep_sign_without_product_underflow) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.428s
+
+OK
+
+Scoped Ruff: all four new owned files pass.
+All feature construction used synthetic source fixtures only; no empirical signs, event counts, associations or fits.

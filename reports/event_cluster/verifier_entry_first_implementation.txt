@@ -1,0 +1,65 @@
+EEEEE..............................
+======================================================================
+ERROR: test_complete_paths_real_admission_snapshots_and_eight_verified_outputs (tests.test_verify_event_cluster.CompleteEntryContracts.test_complete_paths_real_admission_snapshots_and_eight_verified_outputs)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 641, in test_complete_paths_real_admission_snapshots_and_eight_verified_outputs
+    _, _, checked = self.tree(r)
+                    ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 595, in tree
+    p['original_index'] = loaded['protocol']['index']
+                          ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'index'
+
+======================================================================
+ERROR: test_missing_memory_output_fails_before_pipeline (tests.test_verify_event_cluster.CompleteEntryContracts.test_missing_memory_output_fails_before_pipeline)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 682, in test_missing_memory_output_fails_before_pipeline
+    _, _, checked = self.tree(r)
+                    ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 595, in tree
+    p['original_index'] = loaded['protocol']['index']
+                          ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'index'
+
+======================================================================
+ERROR: test_new_upstream_failure_at_final_commit_blocks_success (tests.test_verify_event_cluster.CompleteEntryContracts.test_new_upstream_failure_at_final_commit_blocks_success) (prior='range_alert')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 669, in test_new_upstream_failure_at_final_commit_blocks_success
+    _, _, checked = self.tree(r)
+                    ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 595, in tree
+    p['original_index'] = loaded['protocol']['index']
+                          ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'index'
+
+======================================================================
+ERROR: test_new_upstream_failure_at_final_commit_blocks_success (tests.test_verify_event_cluster.CompleteEntryContracts.test_new_upstream_failure_at_final_commit_blocks_success) (prior='issued_calibration')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 669, in test_new_upstream_failure_at_final_commit_blocks_success
+    _, _, checked = self.tree(r)
+                    ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 595, in tree
+    p['original_index'] = loaded['protocol']['index']
+                          ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'index'
+
+======================================================================
+ERROR: test_output_mutation_during_reconstruction_blocks_commit (tests.test_verify_event_cluster.CompleteEntryContracts.test_output_mutation_during_reconstruction_blocks_commit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 655, in test_output_mutation_during_reconstruction_blocks_commit
+    _, _, checked = self.tree(r)
+                    ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 595, in tree
+    p['original_index'] = loaded['protocol']['index']
+                          ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'index'
+
+----------------------------------------------------------------------
+Ran 34 tests in 1.187s
+
+FAILED (errors=5)

@@ -1,0 +1,20 @@
+test_protocol_changed_during_pretests_cannot_be_registered_with_stale_configuration (tests.test_target_aligned_publication.TargetAlignedPublication.test_protocol_changed_during_pretests_cannot_be_registered_with_stale_configuration) ... ERROR
+
+======================================================================
+ERROR: test_protocol_changed_during_pretests_cannot_be_registered_with_stale_configuration (tests.test_target_aligned_publication.TargetAlignedPublication.test_protocol_changed_during_pretests_cannot_be_registered_with_stale_configuration)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_target_aligned_publication.py", line 34, in test_protocol_changed_during_pretests_cannot_be_registered_with_stale_configuration
+    study.run()
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/target_aligned_search.py", line 438, in run
+    ledger([{"event": "inherited", **row} for row in inherited(p)])
+                                                     ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/target_aligned_search.py", line 172, in inherited
+    for source in p["comparisons"]["inherited_sources"]:
+                  ~^^^^^^^^^^^^^^^
+KeyError: 'comparisons'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.009s
+
+FAILED (errors=1)

@@ -1,0 +1,23 @@
+COMMAND: .venv/bin/python -m unittest tests.test_verify_precision_gate_scores -v
+test_all_inference_and_gate_diagnostic_corruptions_reject (tests.test_verify_precision_gate_scores.VerifyPrecisionGateScoresTests.test_all_inference_and_gate_diagnostic_corruptions_reject) ... ok
+test_all_three_paired_scores_and_149_family_reconstruct (tests.test_verify_precision_gate_scores.VerifyPrecisionGateScoresTests.test_all_three_paired_scores_and_149_family_reconstruct) ... ok
+test_consistent_cold_start_relabel_cannot_reuse_prior_counts (tests.test_verify_precision_gate_scores.VerifyPrecisionGateScoresTests.test_consistent_cold_start_relabel_cannot_reuse_prior_counts) ... ok
+test_exact_inherited_rows_and_market_only_qualification (tests.test_verify_precision_gate_scores.VerifyPrecisionGateScoresTests.test_exact_inherited_rows_and_market_only_qualification) ... ok
+test_protocol_scope_and_paired_metadata_corruption_reject (tests.test_verify_precision_gate_scores.VerifyPrecisionGateScoresTests.test_protocol_scope_and_paired_metadata_corruption_reject) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.838s
+
+OK
+
+exit_code=0
+
+COMMAND: .venv/bin/ruff check src/verify_precision_gate_scores.py tests/test_verify_precision_gate_scores.py
+All checks passed!
+
+exit_code=0
+
+COMMAND: .venv/bin/ruff format --check src/verify_precision_gate_scores.py tests/test_verify_precision_gate_scores.py
+2 files already formatted
+
+exit_code=0

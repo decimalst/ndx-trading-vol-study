@@ -1,0 +1,30 @@
+.............EE......
+======================================================================
+ERROR: test_complete_temporary_tree_reconstructs_forecasts_and_publishes_only_new_verification (tests.test_verify_sign_memory.PublicationAndSnapshotContracts.test_complete_temporary_tree_reconstructs_forecasts_and_publishes_only_new_verification)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_sign_memory.py", line 339, in test_complete_temporary_tree_reconstructs_forecasts_and_publishes_only_new_verification
+    stack.enter_context(patch.object(verify,'load_source_tables',return_value=(None,None,None,audit)))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.verify_sign_memory' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_sign_memory.py'> does not have the attribute 'load_source_tables'
+
+======================================================================
+ERROR: test_hash_checked_source_staging_reads_verified_bytes_and_keeps_original_audit_path (tests.test_verify_sign_memory.PublicationAndSnapshotContracts.test_hash_checked_source_staging_reads_verified_bytes_and_keeps_original_audit_path)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_sign_memory.py", line 309, in test_hash_checked_source_staging_reads_verified_bytes_and_keeps_original_audit_path
+    *_,audit=verify.load_source_tables(root,p,m)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_sign_memory' has no attribute 'load_source_tables'
+
+----------------------------------------------------------------------
+Ran 21 tests in 1.439s
+
+FAILED (errors=2)

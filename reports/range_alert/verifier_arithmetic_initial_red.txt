@@ -1,0 +1,21 @@
+.FF
+======================================================================
+FAIL: test_complete_risk_window_computed_nan_is_not_missing_source (tests.test_verify_range_alert.IndependentRawComparison.test_complete_risk_window_computed_nan_is_not_missing_source)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_range_alert.py", line 276, in test_complete_risk_window_computed_nan_is_not_missing_source
+    with patch.object(pd.Series,'rolling',replaced),self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_IV_outside_reference_dates_not_silently_ignored (tests.test_verify_range_alert.IndependentRawComparison.test_invalid_IV_outside_reference_dates_not_silently_ignored)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_range_alert.py", line 265, in test_invalid_IV_outside_reference_dates_not_silently_ignored
+    with self.assertRaises(ValueError):v.feature_target_tables(daily,iv)
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.050s
+
+FAILED (failures=2)

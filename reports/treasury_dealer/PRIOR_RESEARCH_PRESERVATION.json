@@ -1,0 +1,21 @@
+{
+  "anchor_sha256": "a126d35cf061614631b7be2ab62b4f7f24d39a9c7c49059d2bb18ad54f5016b1",
+  "maps": {
+    "code": {
+      "checked": 394,
+      "drift": []
+    },
+    "inputs": {
+      "checked": 1538,
+      "drift": []
+    },
+    "prefit": {
+      "checked": 5,
+      "drift": []
+    },
+    "preserved": {
+      "checked": 1181,
+      "drift": []
+    }
+  }
+}

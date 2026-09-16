@@ -1,0 +1,115 @@
+test_analytic_gradient_and_hessian (tests.test_sign_memory_models.SignMemoryModels.test_analytic_gradient_and_hessian) ... ok
+test_bad_labels_and_support_are_failures (tests.test_sign_memory_models.SignMemoryModels.test_bad_labels_and_support_are_failures) ... ok
+test_binary_complement_symmetry (tests.test_sign_memory_models.SignMemoryModels.test_binary_complement_symmetry) ... ok
+test_brier_endpoints_and_nonzero_underflow (tests.test_sign_memory_models.SignMemoryModels.test_brier_endpoints_and_nonzero_underflow) ... ERROR
+test_development_boundary_and_all_three_models_exactly_paired (tests.test_sign_memory_models.SignMemoryModels.test_development_boundary_and_all_three_models_exactly_paired) ... ERROR
+test_empirical_feature_units_invariance (tests.test_sign_memory_models.SignMemoryModels.test_empirical_feature_units_invariance) ... ok
+test_entire_unscored_month_keeps_its_fit_audit (tests.test_sign_memory_models.SignMemoryModels.test_entire_unscored_month_keeps_its_fit_audit) ... ERROR
+test_exact_constant_memory_nests_without_dropping_arm (tests.test_sign_memory_models.SignMemoryModels.test_exact_constant_memory_nests_without_dropping_arm) ... ok
+test_exact_constant_nonzero_bounded_columns_are_retained (tests.test_sign_memory_models.SignMemoryModels.test_exact_constant_nonzero_bounded_columns_are_retained) ... ok
+test_full_calendar_maturity_and_alignment_required (tests.test_sign_memory_models.SignMemoryModels.test_full_calendar_maturity_and_alignment_required) ... ok
+test_full_synthetic_monthly_pipeline (tests.test_sign_memory_models.SignMemoryModels.test_full_synthetic_monthly_pipeline) ... ERROR
+test_iteration_budget_is_fixed (tests.test_sign_memory_models.SignMemoryModels.test_iteration_budget_is_fixed) ... ok
+test_memory_offset_derivative_penalizes_its_only_slope (tests.test_sign_memory_models.SignMemoryModels.test_memory_offset_derivative_penalizes_its_only_slope) ... ok
+test_monthly_origin_selected_before_future_query_label (tests.test_sign_memory_models.SignMemoryModels.test_monthly_origin_selected_before_future_query_label) ... ERROR
+test_nonfinite_and_zero_scale_existing_features_rejected (tests.test_sign_memory_models.SignMemoryModels.test_nonfinite_and_zero_scale_existing_features_rejected) ... ok
+test_panel_rejects_missing_duplicate_or_unshared_metadata (tests.test_sign_memory_models.SignMemoryModels.test_panel_rejects_missing_duplicate_or_unshared_metadata) ... ERROR
+test_query_mutation_does_not_refit_baseline_or_memory (tests.test_sign_memory_models.SignMemoryModels.test_query_mutation_does_not_refit_baseline_or_memory) ... ok
+test_solver_failure_is_not_retried (tests.test_sign_memory_models.SignMemoryModels.test_solver_failure_is_not_retried) ... ok
+test_solver_matches_independent_bfgs_and_json_replay (tests.test_sign_memory_models.SignMemoryModels.test_solver_matches_independent_bfgs_and_json_replay) ... ok
+test_stable_extreme_logits_and_unpenalized_intercept (tests.test_sign_memory_models.SignMemoryModels.test_stable_extreme_logits_and_unpenalized_intercept) ... ok
+test_training_maturity_common_rows_and_zero_class (tests.test_sign_memory_models.SignMemoryModels.test_training_maturity_common_rows_and_zero_class) ... ok
+test_training_minimum_and_class_support_not_relaxed (tests.test_sign_memory_models.SignMemoryModels.test_training_minimum_and_class_support_not_relaxed) ... ok
+test_transform_uses_training_only_and_fixed_bounded_scales (tests.test_sign_memory_models.SignMemoryModels.test_transform_uses_training_only_and_fixed_bounded_scales) ... ok
+
+======================================================================
+ERROR: test_brier_endpoints_and_nonzero_underflow (tests.test_sign_memory_models.SignMemoryModels.test_brier_endpoints_and_nonzero_underflow)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_sign_memory_models.py", line 329, in test_brier_endpoints_and_nonzero_underflow
+    np.testing.assert_array_equal(model.brier_loss(np.array([0.0, 1.0, 1.0]), np.array([0.0, 1.0, 0.0])), [0, 0, 1])
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/sign_memory_models.py", line 281, in brier_loss
+    if (loss < 0).any() or (loss > 1).any():
+        ^^^^^^^^
+TypeError: '<' not supported between instances of 'tuple' and 'int'
+
+======================================================================
+ERROR: test_development_boundary_and_all_three_models_exactly_paired (tests.test_sign_memory_models.SignMemoryModels.test_development_boundary_and_all_three_models_exactly_paired)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_sign_memory_models.py", line 297, in test_development_boundary_and_all_three_models_exactly_paired
+    panel, _ = model.forecast_panel(f, t, cfg)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/sign_memory_models.py", line 385, in forecast_panel
+    "y": actual, "probability": prediction, "loss": brier_loss(prediction, actual),
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/sign_memory_models.py", line 281, in brier_loss
+    if (loss < 0).any() or (loss > 1).any():
+        ^^^^^^^^
+TypeError: '<' not supported between instances of 'tuple' and 'int'
+
+======================================================================
+ERROR: test_entire_unscored_month_keeps_its_fit_audit (tests.test_sign_memory_models.SignMemoryModels.test_entire_unscored_month_keeps_its_fit_audit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_sign_memory_models.py", line 288, in test_entire_unscored_month_keeps_its_fit_audit
+    panel, fits = model.forecast_panel(f, t, cfg)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/sign_memory_models.py", line 385, in forecast_panel
+    "y": actual, "probability": prediction, "loss": brier_loss(prediction, actual),
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/sign_memory_models.py", line 281, in brier_loss
+    if (loss < 0).any() or (loss > 1).any():
+        ^^^^^^^^
+TypeError: '<' not supported between instances of 'tuple' and 'int'
+
+======================================================================
+ERROR: test_full_synthetic_monthly_pipeline (tests.test_sign_memory_models.SignMemoryModels.test_full_synthetic_monthly_pipeline)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_sign_memory_models.py", line 338, in test_full_synthetic_monthly_pipeline
+    panel, fits = model.forecast_panel(f, t, cfg)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/sign_memory_models.py", line 385, in forecast_panel
+    "y": actual, "probability": prediction, "loss": brier_loss(prediction, actual),
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/sign_memory_models.py", line 281, in brier_loss
+    if (loss < 0).any() or (loss > 1).any():
+        ^^^^^^^^
+TypeError: '<' not supported between instances of 'tuple' and 'int'
+
+======================================================================
+ERROR: test_monthly_origin_selected_before_future_query_label (tests.test_sign_memory_models.SignMemoryModels.test_monthly_origin_selected_before_future_query_label)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_sign_memory_models.py", line 274, in test_monthly_origin_selected_before_future_query_label
+    _, before = model.forecast_panel(f, t, cfg)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/sign_memory_models.py", line 385, in forecast_panel
+    "y": actual, "probability": prediction, "loss": brier_loss(prediction, actual),
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/sign_memory_models.py", line 281, in brier_loss
+    if (loss < 0).any() or (loss > 1).any():
+        ^^^^^^^^
+TypeError: '<' not supported between instances of 'tuple' and 'int'
+
+======================================================================
+ERROR: test_panel_rejects_missing_duplicate_or_unshared_metadata (tests.test_sign_memory_models.SignMemoryModels.test_panel_rejects_missing_duplicate_or_unshared_metadata)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_sign_memory_models.py", line 308, in test_panel_rejects_missing_duplicate_or_unshared_metadata
+    original, _ = model.forecast_panel(f, t, config(f.index))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/sign_memory_models.py", line 385, in forecast_panel
+    "y": actual, "probability": prediction, "loss": brier_loss(prediction, actual),
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/sign_memory_models.py", line 281, in brier_loss
+    if (loss < 0).any() or (loss > 1).any():
+        ^^^^^^^^
+TypeError: '<' not supported between instances of 'tuple' and 'int'
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.219s
+
+FAILED (errors=6)

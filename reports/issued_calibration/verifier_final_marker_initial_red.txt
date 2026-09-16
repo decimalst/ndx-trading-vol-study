@@ -1,0 +1,13 @@
+F
+======================================================================
+FAIL: test_complete_new_output_paths_and_serialized_hash_identity (tests.test_verify_issued_calibration.WholeEntryContracts.test_complete_new_output_paths_and_serialized_hash_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_issued_calibration.py", line 193, in test_complete_new_output_paths_and_serialized_hash_identity
+    with self.assertRaises(AssertionError):v.verify(root)
+AssertionError: AssertionError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.135s
+
+FAILED (failures=1)

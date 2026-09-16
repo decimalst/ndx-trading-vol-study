@@ -1,0 +1,33 @@
+test_solver_settings_and_zero_starts_are_exact_not_numeric_tolerances (tests.test_verify_event_cluster_replay.ReconstructionAuditContracts.test_solver_settings_and_zero_starts_are_exact_not_numeric_tolerances) ... 
+  test_solver_settings_and_zero_starts_are_exact_not_numeric_tolerances (tests.test_verify_event_cluster_replay.ReconstructionAuditContracts.test_solver_settings_and_zero_starts_are_exact_not_numeric_tolerances) (mutation='start') ... FAIL
+  test_solver_settings_and_zero_starts_are_exact_not_numeric_tolerances (tests.test_verify_event_cluster_replay.ReconstructionAuditContracts.test_solver_settings_and_zero_starts_are_exact_not_numeric_tolerances) (mutation='ridge') ... FAIL
+  test_solver_settings_and_zero_starts_are_exact_not_numeric_tolerances (tests.test_verify_event_cluster_replay.ReconstructionAuditContracts.test_solver_settings_and_zero_starts_are_exact_not_numeric_tolerances) (mutation='root_tolerance') ... FAIL
+
+======================================================================
+FAIL: test_solver_settings_and_zero_starts_are_exact_not_numeric_tolerances (tests.test_verify_event_cluster_replay.ReconstructionAuditContracts.test_solver_settings_and_zero_starts_are_exact_not_numeric_tolerances) (mutation='start')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster_replay.py", line 349, in test_solver_settings_and_zero_starts_are_exact_not_numeric_tolerances
+    with self.subTest(mutation=mutation), self.assertRaises((ValueError, AssertionError)):
+AssertionError: (<class 'ValueError'>, <class 'AssertionError'>) not raised
+
+======================================================================
+FAIL: test_solver_settings_and_zero_starts_are_exact_not_numeric_tolerances (tests.test_verify_event_cluster_replay.ReconstructionAuditContracts.test_solver_settings_and_zero_starts_are_exact_not_numeric_tolerances) (mutation='ridge')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster_replay.py", line 349, in test_solver_settings_and_zero_starts_are_exact_not_numeric_tolerances
+    with self.subTest(mutation=mutation), self.assertRaises((ValueError, AssertionError)):
+AssertionError: (<class 'ValueError'>, <class 'AssertionError'>) not raised
+
+======================================================================
+FAIL: test_solver_settings_and_zero_starts_are_exact_not_numeric_tolerances (tests.test_verify_event_cluster_replay.ReconstructionAuditContracts.test_solver_settings_and_zero_starts_are_exact_not_numeric_tolerances) (mutation='root_tolerance')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster_replay.py", line 349, in test_solver_settings_and_zero_starts_are_exact_not_numeric_tolerances
+    with self.subTest(mutation=mutation), self.assertRaises((ValueError, AssertionError)):
+AssertionError: (<class 'ValueError'>, <class 'AssertionError'>) not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+FAILED (failures=3)

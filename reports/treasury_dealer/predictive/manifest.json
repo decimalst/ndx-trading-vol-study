@@ -1,0 +1,6 @@
+{
+  "created_utc": "2026-09-09T04:30:25.500035+00:00",
+  "freeze_sha256": "99cca9121cfd6a691d99243845518315871071ecd3c9566fcdb965a11597c195",
+  "protocol_sha256": "194fd2ef49cfa8db5542f5e672383b5e2d4ec8f8c724b2af8559d51319aef6a8",
+  "source_clock_class": "QUALIFIED_REPORTED_CLOCK_ONLY_FOR_Z52"
+}

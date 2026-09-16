@@ -1,0 +1,25 @@
+test_all_unevaluable_hypotheses_retained (tests.test_sign_memory_search.SignMemorySearch.test_all_unevaluable_hypotheses_retained) ... ok
+test_both_controls_both_effects_and_strict_p_and_stability (tests.test_sign_memory_search.SignMemorySearch.test_both_controls_both_effects_and_strict_p_and_stability) ... ok
+test_brier_factored_difference_and_endpoint_truth (tests.test_sign_memory_search.SignMemorySearch.test_brier_factored_difference_and_endpoint_truth) ... ok
+test_declared_training_and_phase_fences_precede_inference (tests.test_sign_memory_search.SignMemorySearch.test_declared_training_and_phase_fences_precede_inference) ... ok
+test_fixed_contract_and_family (tests.test_sign_memory_search.SignMemorySearch.test_fixed_contract_and_family) ... ok
+test_four_phases_complete_accounting_and_support (tests.test_sign_memory_search.SignMemorySearch.test_four_phases_complete_accounting_and_support) ... ok
+test_mde_uses_probability_effect_not_prior_product_effect (tests.test_sign_memory_search.SignMemorySearch.test_mde_uses_probability_effect_not_prior_product_effect) ... ok
+test_no_relaxed_timing_support_models_numerics_or_family (tests.test_sign_memory_search.SignMemorySearch.test_no_relaxed_timing_support_models_numerics_or_family) ... ok
+test_support_checks_precede_every_inference_call (tests.test_sign_memory_search.SignMemorySearch.test_support_checks_precede_every_inference_call) ... ok
+test_target_measurement_and_source_contract_are_literal (tests.test_sign_memory_search.SignMemorySearch.test_target_measurement_and_source_contract_are_literal) ... ok
+test_true_next_session_label_cannot_cross_development_boundary (tests.test_sign_memory_search.SignMemorySearch.test_true_next_session_label_cannot_cross_development_boundary) ... ok
+test_failed_admission (tests.test_sign_memory_publication.SignMemoryPublication.test_failed_admission) ... ok
+test_failed_report (tests.test_sign_memory_publication.SignMemoryPublication.test_failed_report) ... ok
+test_nonfinite_metrics_keep_terminal_ledger (tests.test_sign_memory_publication.SignMemoryPublication.test_nonfinite_metrics_keep_terminal_ledger) ... ok
+test_partial_evaluation (tests.test_sign_memory_publication.SignMemoryPublication.test_partial_evaluation) ... ok
+test_partial_registration (tests.test_sign_memory_publication.SignMemoryPublication.test_partial_registration) ... ok
+test_protocol_changed_during_pretests_prevents_registration (tests.test_sign_memory_publication.SignMemoryPublication.test_protocol_changed_during_pretests_prevents_registration) ... ok
+test_protocol_mutation (tests.test_sign_memory_publication.SignMemoryPublication.test_protocol_mutation) ... ok
+test_source_changed_after_admission (tests.test_sign_memory_publication.SignMemoryPublication.test_source_changed_after_admission) ... ok
+test_staged_source_decodes_exact_admitted_bytes_and_original_identity (tests.test_sign_memory_publication.SignMemoryPublication.test_staged_source_decodes_exact_admitted_bytes_and_original_identity) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.759s
+
+OK

@@ -1,0 +1,67 @@
+{
+  "status": "EXTRACTED_NOT_SCORED",
+  "provenance": {
+    "official_code_revision": "cfd46d4510ed8896f263116f32928eede05b0a75",
+    "official_model_revision": "30f43ff08c8494f4943ae1521e9d4e94a0fbb389",
+    "artifact_sha256": {
+      "model.safetensors": "fb5652a3db8ea572606221b7cb1e77bb8962b168e4d4cc752cf31ceb04074669",
+      "config.json": "6b74b03c8ec199fabc352c0203465958142ca468183da68549652734836f853d",
+      "code_archive": "e1de1cbff2b6e131e1988f4f9dddce51e0801bb41c87d7e7d8609a783dd89f18"
+    },
+    "versions": {
+      "uni2ts": "2.0.0",
+      "torch": "2.4.1",
+      "numpy": "1.26.4",
+      "scipy": "1.11.4",
+      "pandas": "2.2.3",
+      "lightning": "2.4.0",
+      "gluonts": "0.14.3",
+      "huggingface-hub": "1.30.0",
+      "safetensors": "0.8.0",
+      "pyarrow": "18.1.0",
+      "einops": "0.7.0"
+    },
+    "checked_installed_python_files": 95,
+    "installed_source_tree_sha256": "ad9c5dc93c1c73a86c68c729dc9e1ed08641e29e571616dba5554debe3b4b1b0",
+    "dependency_lock_sha256": "27731476bb5b65db4db92f629ae7eb847ec19c5a83756361f14ecfe9dad02415",
+    "install_report_sha256": "dd0df67d04b05e24fb77bb596cce6d68926594a5d3675e3e38ba7b0279a59d4e",
+    "adapter_sha256": "2ebbb6aa61366855850455805e88de0e6e03eaa63a93bfd95ded6f67c2660383",
+    "tests_sha256": "4fba77ccb904583f9e1b7f22acb98adc43d19b1570a911b1c3a638558f400ef2",
+    "plan_sha256": "487b8ec303f5f7165645a098cfcb423cb4768fd456a96996b040353bd45b851b",
+    "device": "cpu",
+    "dtype": "float32",
+    "context_length": 512,
+    "prediction_length": 5,
+    "seed": 20260906,
+    "cpu_threads": 2,
+    "batch_size": 32,
+    "quantile_levels": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "parameters": 11387208
+  },
+  "origin_start": "2010-01-04",
+  "origin_end": "2025-10-10",
+  "origins": 3968,
+  "columns": [
+    "moirai_log_h1",
+    "moirai_log_h5"
+  ],
+  "source": "data/orthogonal_round2/features.parquet",
+  "source_column": "rv_total",
+  "bounded_rv_sha256": "35017341678c225155dd3a2b217dc71c776195fb76ca3e884b061da1735f363f",
+  "output_sha256": "0eed40f07fc1878ad863ea4d79b03678692b8c478237b697f7173a2c2547bbca",
+  "contexts_sha256": "4262717fa5de8ccbb8a9a3452a220a592753c9cb1e6d6ba8105e78490210e3c5",
+  "quantiles_sha256": "8595c1cda336823b68ee177b9ca6cd32e82ce17a3766a02f622dec002b7baf3c",
+  "manifest_sha256": "56691d59de3080954a41e2f0e2acd829eb2fa9a78c3e93aeff56b5e0031e9063",
+  "seconds": 8.009717999957502,
+  "interpretation": "Frozen quantile summaries for train-only calibration; neither column is a conditional mean claim"
+}

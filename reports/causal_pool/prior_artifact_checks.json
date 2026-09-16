@@ -1,0 +1,24 @@
+{
+  "status": "ALL_PRIOR_PINS_UNCHANGED",
+  "checked_utc": "2026-09-07T10:42:56.612793+00:00",
+  "manifests": [
+    "reports/calendar_variance/manifest.json",
+    "reports/cross_moment/manifest.json",
+    "reports/index_hinge/manifest.json",
+    "reports/international_volatility/manifest.json",
+    "reports/iterative_signal_search/manifest.json",
+    "reports/joint_risk/manifest.json",
+    "reports/macro_overnight/manifest.json",
+    "reports/measurement_memory/manifest.json",
+    "reports/overnight_index/manifest.json",
+    "reports/relative_risk/manifest.json",
+    "reports/sign_memory/manifest.json",
+    "reports/tail_shape/manifest.json",
+    "reports/target_aligned/manifest.json"
+  ],
+  "unique_pins_checked": 1504,
+  "python_source_test_pins": 223,
+  "branch": "main",
+  "remote": "git@github.com:decimalst/ndx-trading-vol-study.git",
+  "workspace": "Mixed prior additive research files retained; no commits or publication requested"
+}

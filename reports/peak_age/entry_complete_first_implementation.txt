@@ -1,0 +1,37 @@
+E.....E.............
+======================================================================
+ERROR: test_complete_entry_ten_snapshots_protocol_source_and_pipeline_wiring (tests.test_verify_peak_age.CompleteEntryTests.test_complete_entry_ten_snapshots_protocol_source_and_pipeline_wiring)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 308, in test_complete_entry_ten_snapshots_protocol_source_and_pipeline_wiring
+    proof=self.run_entry()
+          ^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 305, in run_entry
+    return v.verify(self.root)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_peak_age.py", line 602, in verify
+    validate_protocol(protocol)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_peak_age.py", line 289, in validate_protocol
+    identity(protocol,CONTRACT,"literal typed complete peak-age protocol")
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/issued_calibration_admission.py", line 99, in _same
+    _same(left[key], right[key], label + "." + key)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/issued_calibration_admission.py", line 99, in _same
+    _same(left[key], right[key], label + "." + key)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/issued_calibration_admission.py", line 94, in _same
+    raise ValueError("Typed identity differs: " + label)
+ValueError: Typed identity differs: literal typed complete peak-age protocol.verification.coefficient_atol
+
+======================================================================
+ERROR: test_upstream_source_or_new_failure_mutation_after_solves_rejects (tests.test_verify_peak_age.CompleteEntryTests.test_upstream_source_or_new_failure_mutation_after_solves_rejects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 327, in test_upstream_source_or_new_failure_mutation_after_solves_rejects
+    (self.root/name).unlink()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py", line 1147, in unlink
+    os.unlink(self)
+FileNotFoundError: [Errno 2] No such file or directory: '/var/folders/jn/2wqppgv57cx3k54l_dqt9sl00000gn/T/tmpu_7cleh3/reports/event_cluster_replay/failure.json'
+
+----------------------------------------------------------------------
+Ran 20 tests in 3.730s
+
+FAILED (errors=2)

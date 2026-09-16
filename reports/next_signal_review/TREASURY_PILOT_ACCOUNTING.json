@@ -1,0 +1,1340 @@
+{
+  "checkpoint_sha256": "e5f0bea7cf0364e4dd7b991018c7e8f94f7a7980d9d2e1a1048976f3f65ab3be",
+  "completed_utc": "2026-09-09T00:42:02.351034+00:00",
+  "counts": {
+    "EXCLUDED_DOCUMENTED_CONTINGENCY_TEST": 1,
+    "METADATA_OR_LINEAGE_REQUIRES_REVIEW": 1,
+    "PAIRED_SOURCE_AMOUNTS_MATCH": 20
+  },
+  "events": [
+    {
+      "announcement_amounts_checked": false,
+      "announcement_date": "2010-01-07",
+      "auction_date": "2010-01-12",
+      "cusip": "912828MG2",
+      "differing_fields": [],
+      "first_vintage_admitted": false,
+      "intraday_release_authenticated": false,
+      "lineage": {
+        "basis": "exact stated dated-to-maturity calendar years with PDF/XML lineage agreement",
+        "dated_date": "2010-01-15",
+        "issue_date": "2010-01-15",
+        "maturity_date": "2013-01-15",
+        "original_issue_date": null,
+        "original_tenor_years": 3,
+        "remaining_term": "3-Year Note",
+        "reopening": false
+      },
+      "notices": [],
+      "numerically_processed": true,
+      "parse_failures": {},
+      "parsed_formats": [
+        "pdf",
+        "xml"
+      ],
+      "private_accounting_path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2010-01-12_912828MG2.json",
+      "private_accounting_sha256": "f9644a51bb588003f711a2028759a509ac62626e09efb9333c9219bb1347f1da",
+      "release_basis": "dated competitive PDF release header with selected XML auction/CUSIP match",
+      "source_associations": [
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/A_20100107_4.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_xml",
+          "url": "https://www.treasurydirect.gov/xml/A_20100107_4.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/R_20100112_3.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_xml",
+          "url": "https://www.treasurydirect.gov/xml/R_20100112_3.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "noncompetitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/NCR_20100112_3.pdf"
+        }
+      ],
+      "status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "supported_result_release_date": "2010-01-12"
+    },
+    {
+      "announcement_amounts_checked": false,
+      "announcement_date": "2010-01-07",
+      "auction_date": "2010-01-13",
+      "cusip": "912828LY4",
+      "differing_fields": [],
+      "first_vintage_admitted": false,
+      "intraday_release_authenticated": false,
+      "lineage": {
+        "basis": "exact stated dated-to-maturity calendar years with PDF/XML lineage agreement",
+        "dated_date": "2009-11-15",
+        "issue_date": "2010-01-15",
+        "maturity_date": "2019-11-15",
+        "original_issue_date": "2009-11-16",
+        "original_tenor_years": 10,
+        "remaining_term": "9-Year 10-Month Note",
+        "reopening": true
+      },
+      "notices": [],
+      "numerically_processed": true,
+      "parse_failures": {},
+      "parsed_formats": [
+        "pdf",
+        "xml"
+      ],
+      "private_accounting_path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2010-01-13_912828LY4.json",
+      "private_accounting_sha256": "093af9e294197a92d60b53460d62f95f399f721b3b0a9a5686ca19ae01ab97d0",
+      "release_basis": "dated competitive PDF release header with selected XML auction/CUSIP match",
+      "source_associations": [
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/A_20100107_3.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_xml",
+          "url": "https://www.treasurydirect.gov/xml/A_20100107_3.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/R_20100113_1.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_xml",
+          "url": "https://www.treasurydirect.gov/xml/R_20100113_1.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "noncompetitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/NCR_20100113_1.pdf"
+        }
+      ],
+      "status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "supported_result_release_date": "2010-01-13"
+    },
+    {
+      "announcement_amounts_checked": false,
+      "announcement_date": "2010-01-07",
+      "auction_date": "2010-01-14",
+      "cusip": "912810QD3",
+      "differing_fields": [],
+      "first_vintage_admitted": false,
+      "intraday_release_authenticated": false,
+      "lineage": {
+        "basis": "exact stated dated-to-maturity calendar years with PDF/XML lineage agreement",
+        "dated_date": "2009-11-15",
+        "issue_date": "2010-01-15",
+        "maturity_date": "2039-11-15",
+        "original_issue_date": "2009-11-16",
+        "original_tenor_years": 30,
+        "remaining_term": "29-Year 10-Month Bond",
+        "reopening": true
+      },
+      "notices": [],
+      "numerically_processed": true,
+      "parse_failures": {},
+      "parsed_formats": [
+        "pdf",
+        "xml"
+      ],
+      "private_accounting_path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2010-01-14_912810QD3.json",
+      "private_accounting_sha256": "9e88ae5673515923aff4b84389369456d1e0568f134c74665fd1beb1d2582083",
+      "release_basis": "dated competitive PDF release header with selected XML auction/CUSIP match",
+      "source_associations": [
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/A_20100107_1.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_xml",
+          "url": "https://www.treasurydirect.gov/xml/A_20100107_1.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/R_20100114_1.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_xml",
+          "url": "https://www.treasurydirect.gov/xml/R_20100114_1.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "noncompetitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/NCR_20100114_1.pdf"
+        }
+      ],
+      "status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "supported_result_release_date": "2010-01-14"
+    },
+    {
+      "announcement_amounts_checked": false,
+      "announcement_date": "2010-01-21",
+      "auction_date": "2010-01-26",
+      "cusip": "912828MJ6",
+      "differing_fields": [],
+      "first_vintage_admitted": false,
+      "intraday_release_authenticated": false,
+      "lineage": {
+        "basis": "exact stated dated-to-maturity calendar years with PDF/XML lineage agreement",
+        "dated_date": "2010-01-31",
+        "issue_date": "2010-02-01",
+        "maturity_date": "2012-01-31",
+        "original_issue_date": null,
+        "original_tenor_years": 2,
+        "remaining_term": "2-Year Note",
+        "reopening": false
+      },
+      "notices": [],
+      "numerically_processed": true,
+      "parse_failures": {},
+      "parsed_formats": [
+        "pdf",
+        "xml"
+      ],
+      "private_accounting_path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2010-01-26_912828MJ6.json",
+      "private_accounting_sha256": "f45bd2ccd35759a993b747d42cdce7acf9df18fdb66c31f479257c19afb06663",
+      "release_basis": "dated competitive PDF release header with selected XML auction/CUSIP match",
+      "source_associations": [
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/A_20100121_3.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_xml",
+          "url": "https://www.treasurydirect.gov/xml/A_20100121_3.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/R_20100126_2.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_xml",
+          "url": "https://www.treasurydirect.gov/xml/R_20100126_2.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "noncompetitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/NCR_20100126_2.pdf"
+        }
+      ],
+      "status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "supported_result_release_date": "2010-01-26"
+    },
+    {
+      "announcement_amounts_checked": false,
+      "announcement_date": "2010-01-21",
+      "auction_date": "2010-01-27",
+      "cusip": "912828MH0",
+      "differing_fields": [],
+      "first_vintage_admitted": false,
+      "intraday_release_authenticated": false,
+      "lineage": {
+        "basis": "exact stated dated-to-maturity calendar years with PDF/XML lineage agreement",
+        "dated_date": "2010-01-31",
+        "issue_date": "2010-02-01",
+        "maturity_date": "2015-01-31",
+        "original_issue_date": null,
+        "original_tenor_years": 5,
+        "remaining_term": "5-Year Note",
+        "reopening": false
+      },
+      "notices": [],
+      "numerically_processed": true,
+      "parse_failures": {},
+      "parsed_formats": [
+        "pdf",
+        "xml"
+      ],
+      "private_accounting_path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2010-01-27_912828MH0.json",
+      "private_accounting_sha256": "47e22a9186e470c220c41cfdb38acdaa2f1a7fe548c1b57a31fb5da8ec14f66b",
+      "release_basis": "dated competitive PDF release header with selected XML auction/CUSIP match",
+      "source_associations": [
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/A_20100121_5.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_xml",
+          "url": "https://www.treasurydirect.gov/xml/A_20100121_5.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/R_20100127_1.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_xml",
+          "url": "https://www.treasurydirect.gov/xml/R_20100127_1.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "noncompetitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/NCR_20100127_1.pdf"
+        }
+      ],
+      "status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "supported_result_release_date": "2010-01-27"
+    },
+    {
+      "announcement_amounts_checked": false,
+      "announcement_date": "2010-01-21",
+      "auction_date": "2010-01-28",
+      "cusip": "912828MK3",
+      "differing_fields": [],
+      "first_vintage_admitted": false,
+      "intraday_release_authenticated": false,
+      "lineage": {
+        "basis": "exact stated dated-to-maturity calendar years with PDF/XML lineage agreement",
+        "dated_date": "2010-01-31",
+        "issue_date": "2010-02-01",
+        "maturity_date": "2017-01-31",
+        "original_issue_date": null,
+        "original_tenor_years": 7,
+        "remaining_term": "7-Year Note",
+        "reopening": false
+      },
+      "notices": [],
+      "numerically_processed": true,
+      "parse_failures": {},
+      "parsed_formats": [
+        "pdf",
+        "xml"
+      ],
+      "private_accounting_path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2010-01-28_912828MK3.json",
+      "private_accounting_sha256": "71f3e4ed19c2cb3e447bcbf0881e255ee2c09e5e9bd3de0d98bc806913b8abf9",
+      "release_basis": "dated competitive PDF release header with selected XML auction/CUSIP match",
+      "source_associations": [
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/A_20100121_4.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_xml",
+          "url": "https://www.treasurydirect.gov/xml/A_20100121_4.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/R_20100128_1.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_xml",
+          "url": "https://www.treasurydirect.gov/xml/R_20100128_1.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "noncompetitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/NCR_20100128_1.pdf"
+        }
+      ],
+      "status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "supported_result_release_date": "2010-01-28"
+    },
+    {
+      "announcement_amounts_checked": false,
+      "announcement_date": "2010-06-17",
+      "auction_date": "2010-06-22",
+      "cusip": "912828NS5",
+      "differing_fields": [],
+      "first_vintage_admitted": false,
+      "intraday_release_authenticated": false,
+      "lineage": {
+        "basis": "exact stated dated-to-maturity calendar years with PDF/XML lineage agreement",
+        "dated_date": "2010-06-30",
+        "issue_date": "2010-06-30",
+        "maturity_date": "2012-06-30",
+        "original_issue_date": null,
+        "original_tenor_years": 2,
+        "remaining_term": "2-Year Note",
+        "reopening": false
+      },
+      "notices": [
+        {
+          "disposition": "SOMA_AND_OVERALL_TOTALS_CORRECTION",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/BPD_SPL_20100625_1.pdf"
+        }
+      ],
+      "numerically_processed": true,
+      "parse_failures": {},
+      "parsed_formats": [
+        "pdf",
+        "xml"
+      ],
+      "private_accounting_path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2010-06-22_912828NS5.json",
+      "private_accounting_sha256": "33f4d77dd125304680426c11aaeecba53db0800f310fc00f2cbfd182d43e287f",
+      "release_basis": "dated competitive PDF release header with selected XML auction/CUSIP match",
+      "source_associations": [
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/A_20100617_2.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_xml",
+          "url": "https://www.treasurydirect.gov/xml/A_20100617_2.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/R_20100622_2.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_xml",
+          "url": "https://www.treasurydirect.gov/xml/R_20100622_2.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "noncompetitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/NCR_20100622_2.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "special_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/BPD_SPL_20100625_1.pdf"
+        }
+      ],
+      "status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "supported_result_release_date": "2010-06-22"
+    },
+    {
+      "announcement_amounts_checked": false,
+      "announcement_date": "2016-01-07",
+      "auction_date": "2016-01-12",
+      "cusip": "912828N63",
+      "differing_fields": [],
+      "first_vintage_admitted": false,
+      "intraday_release_authenticated": false,
+      "lineage": {
+        "basis": "exact stated dated-to-maturity calendar years with PDF/XML lineage agreement",
+        "dated_date": "2016-01-15",
+        "issue_date": "2016-01-15",
+        "maturity_date": "2019-01-15",
+        "original_issue_date": null,
+        "original_tenor_years": 3,
+        "remaining_term": "3-Year Note",
+        "reopening": false
+      },
+      "notices": [],
+      "numerically_processed": true,
+      "parse_failures": {},
+      "parsed_formats": [
+        "pdf",
+        "xml"
+      ],
+      "private_accounting_path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2016-01-12_912828N63.json",
+      "private_accounting_sha256": "295015f0b71bb204b8d7a8c793d36cc477061ea19d4ab2b3cdb0de3b248c4160",
+      "release_basis": "dated competitive PDF release header with selected XML auction/CUSIP match",
+      "source_associations": [
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/A_20160107_2.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_xml",
+          "url": "https://www.treasurydirect.gov/xml/A_20160107_2.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/R_20160112_2.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_xml",
+          "url": "https://www.treasurydirect.gov/xml/R_20160112_2.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "noncompetitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/NCR_20160112_2.pdf"
+        }
+      ],
+      "status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "supported_result_release_date": "2016-01-12"
+    },
+    {
+      "announcement_amounts_checked": false,
+      "announcement_date": "2016-01-07",
+      "auction_date": "2016-01-13",
+      "cusip": "912828M56",
+      "differing_fields": [],
+      "first_vintage_admitted": false,
+      "intraday_release_authenticated": false,
+      "lineage": {
+        "basis": "exact stated dated-to-maturity calendar years with PDF/XML lineage agreement",
+        "dated_date": "2015-11-15",
+        "issue_date": "2016-01-15",
+        "maturity_date": "2025-11-15",
+        "original_issue_date": "2015-11-16",
+        "original_tenor_years": 10,
+        "remaining_term": "9-Year 10-Month Note",
+        "reopening": true
+      },
+      "notices": [],
+      "numerically_processed": true,
+      "parse_failures": {},
+      "parsed_formats": [
+        "pdf",
+        "xml"
+      ],
+      "private_accounting_path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2016-01-13_912828M56.json",
+      "private_accounting_sha256": "800a5ddd047fbd2111e56cdd239ae481857a9f5e27043f24902205edb3abce1f",
+      "release_basis": "dated competitive PDF release header with selected XML auction/CUSIP match",
+      "source_associations": [
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/A_20160107_5.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_xml",
+          "url": "https://www.treasurydirect.gov/xml/A_20160107_5.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/R_20160113_1.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_xml",
+          "url": "https://www.treasurydirect.gov/xml/R_20160113_1.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "noncompetitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/NCR_20160113_1.pdf"
+        }
+      ],
+      "status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "supported_result_release_date": "2016-01-13"
+    },
+    {
+      "announcement_amounts_checked": false,
+      "announcement_date": "2016-01-07",
+      "auction_date": "2016-01-14",
+      "cusip": "912810RP5",
+      "error": "Unresolved document identity or membership: announcement_pdf",
+      "first_vintage_admitted": false,
+      "notices": [],
+      "numerically_processed": false,
+      "source_associations": [
+        {
+          "metadata_status": "METADATA_REQUIRES_REVIEW",
+          "role": "announcement_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/A_20160107_3.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_xml",
+          "url": "https://www.treasurydirect.gov/xml/A_20160107_3.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/R_20160114_1.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_xml",
+          "url": "https://www.treasurydirect.gov/xml/R_20160114_1.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "noncompetitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/NCR_20160114_1.pdf"
+        }
+      ],
+      "status": "METADATA_OR_LINEAGE_REQUIRES_REVIEW"
+    },
+    {
+      "announcement_amounts_checked": false,
+      "announcement_date": "2016-01-21",
+      "auction_date": "2016-01-26",
+      "conditional_notice_resolution": "retained final selected CUSIP and explicit new-issue identity",
+      "cusip": "912828P20",
+      "differing_fields": [],
+      "first_vintage_admitted": false,
+      "intraday_release_authenticated": false,
+      "lineage": {
+        "basis": "exact stated dated-to-maturity calendar years with PDF/XML lineage agreement",
+        "dated_date": "2016-01-31",
+        "issue_date": "2016-02-01",
+        "maturity_date": "2018-01-31",
+        "original_issue_date": null,
+        "original_tenor_years": 2,
+        "remaining_term": "2-Year Note",
+        "reopening": false
+      },
+      "notices": [
+        {
+          "disposition": "CONDITIONAL_SECURITY_SUBSTITUTION",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/BPD_SPL_20160121_1.pdf"
+        }
+      ],
+      "numerically_processed": true,
+      "parse_failures": {},
+      "parsed_formats": [
+        "pdf",
+        "xml"
+      ],
+      "private_accounting_path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2016-01-26_912828P20.json",
+      "private_accounting_sha256": "27332493ee9e5f5dc5e7b5c4a98a893da5860a1717a948cd885c4e32c4559a8e",
+      "release_basis": "dated competitive PDF release header with selected XML auction/CUSIP match",
+      "source_associations": [
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/A_20160121_6.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_xml",
+          "url": "https://www.treasurydirect.gov/xml/A_20160121_6.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/R_20160126_2.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_xml",
+          "url": "https://www.treasurydirect.gov/xml/R_20160126_2.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "noncompetitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/NCR_20160126_2.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "special_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/BPD_SPL_20160121_1.pdf"
+        }
+      ],
+      "status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "supported_result_release_date": "2016-01-26"
+    },
+    {
+      "announcement_amounts_checked": false,
+      "announcement_date": "2016-01-21",
+      "auction_date": "2016-01-27",
+      "cusip": "912828N89",
+      "differing_fields": [],
+      "first_vintage_admitted": false,
+      "intraday_release_authenticated": false,
+      "lineage": {
+        "basis": "exact stated dated-to-maturity calendar years with PDF/XML lineage agreement",
+        "dated_date": "2016-01-31",
+        "issue_date": "2016-02-01",
+        "maturity_date": "2021-01-31",
+        "original_issue_date": null,
+        "original_tenor_years": 5,
+        "remaining_term": "5-Year Note",
+        "reopening": false
+      },
+      "notices": [],
+      "numerically_processed": true,
+      "parse_failures": {},
+      "parsed_formats": [
+        "pdf",
+        "xml"
+      ],
+      "private_accounting_path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2016-01-27_912828N89.json",
+      "private_accounting_sha256": "f0be27fbfae7480cf371d7ac841c97a9813c091b2df495cc3c18d31a6c7e7019",
+      "release_basis": "dated competitive PDF release header with selected XML auction/CUSIP match",
+      "source_associations": [
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/A_20160121_1.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_xml",
+          "url": "https://www.treasurydirect.gov/xml/A_20160121_1.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/R_20160127_2.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_xml",
+          "url": "https://www.treasurydirect.gov/xml/R_20160127_2.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "noncompetitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/NCR_20160127_2.pdf"
+        }
+      ],
+      "status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "supported_result_release_date": "2016-01-27"
+    },
+    {
+      "announcement_amounts_checked": false,
+      "announcement_date": "2016-01-21",
+      "auction_date": "2016-01-28",
+      "cusip": "912828P38",
+      "differing_fields": [],
+      "first_vintage_admitted": false,
+      "intraday_release_authenticated": false,
+      "lineage": {
+        "basis": "exact stated dated-to-maturity calendar years with PDF/XML lineage agreement",
+        "dated_date": "2016-01-31",
+        "issue_date": "2016-02-01",
+        "maturity_date": "2023-01-31",
+        "original_issue_date": null,
+        "original_tenor_years": 7,
+        "remaining_term": "7-Year Note",
+        "reopening": false
+      },
+      "notices": [],
+      "numerically_processed": true,
+      "parse_failures": {},
+      "parsed_formats": [
+        "pdf",
+        "xml"
+      ],
+      "private_accounting_path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2016-01-28_912828P38.json",
+      "private_accounting_sha256": "7ce5c9bdb47101c4649694f76f6d8e70d7e5ddd3d89d412258db3a77385fa78d",
+      "release_basis": "dated competitive PDF release header with selected XML auction/CUSIP match",
+      "source_associations": [
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/A_20160121_5.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_xml",
+          "url": "https://www.treasurydirect.gov/xml/A_20160121_5.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/R_20160128_1.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_xml",
+          "url": "https://www.treasurydirect.gov/xml/R_20160128_1.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "noncompetitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/NCR_20160128_1.pdf"
+        }
+      ],
+      "status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "supported_result_release_date": "2016-01-28"
+    },
+    {
+      "announcement_amounts_checked": false,
+      "announcement_date": "2019-06-06",
+      "auction_date": "2019-06-12",
+      "cusip": "9128286T2",
+      "differing_fields": [],
+      "first_vintage_admitted": false,
+      "intraday_release_authenticated": false,
+      "lineage": {
+        "basis": "exact stated dated-to-maturity calendar years with PDF/XML lineage agreement",
+        "dated_date": "2019-05-15",
+        "issue_date": "2019-06-17",
+        "maturity_date": "2029-05-15",
+        "original_issue_date": "2019-05-15",
+        "original_tenor_years": 10,
+        "remaining_term": "9-Year 11-Month Note",
+        "reopening": true
+      },
+      "notices": [],
+      "numerically_processed": true,
+      "parse_failures": {},
+      "parsed_formats": [
+        "pdf",
+        "xml"
+      ],
+      "private_accounting_path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2019-06-12_9128286T2.json",
+      "private_accounting_sha256": "19d1cd4ed675926d6719ec247965edd6f743cf4ea93984bae138decf0d74e03a",
+      "release_basis": "dated competitive PDF release header with selected XML auction/CUSIP match",
+      "source_associations": [
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/A_20190606_4.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_xml",
+          "url": "https://www.treasurydirect.gov/xml/A_20190606_4.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/R_20190612_1.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_xml",
+          "url": "https://www.treasurydirect.gov/xml/R_20190612_1.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "noncompetitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/NCR_20190612_1.pdf"
+        }
+      ],
+      "status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "supported_result_release_date": "2019-06-12"
+    },
+    {
+      "announcement_amounts_checked": false,
+      "announcement_date": "2019-06-21",
+      "auction_date": "2019-06-21",
+      "cusip": "9128286T2",
+      "first_vintage_admitted": false,
+      "notices": [
+        {
+          "disposition": "RESTRICTED_CONTINGENCY_TEST",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190620_4.pdf"
+        }
+      ],
+      "numerically_processed": false,
+      "source_associations": [
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/A_20190621_1.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_xml",
+          "url": "https://www.treasurydirect.gov/xml/A_20190621_1.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/R_20190621_1.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_xml",
+          "url": "https://www.treasurydirect.gov/xml/R_20190621_1.xml"
+        },
+        {
+          "metadata_status": "METADATA_REQUIRES_REVIEW",
+          "role": "special_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190620_4.pdf"
+        }
+      ],
+      "status": "EXCLUDED_DOCUMENTED_CONTINGENCY_TEST"
+    },
+    {
+      "announcement_amounts_checked": false,
+      "announcement_date": "2025-01-02",
+      "auction_date": "2025-01-06",
+      "cusip": "91282CMF5",
+      "differing_fields": [],
+      "first_vintage_admitted": false,
+      "intraday_release_authenticated": false,
+      "lineage": {
+        "basis": "exact stated dated-to-maturity calendar years with PDF/XML lineage agreement",
+        "dated_date": "2025-01-15",
+        "issue_date": "2025-01-15",
+        "maturity_date": "2028-01-15",
+        "original_issue_date": null,
+        "original_tenor_years": 3,
+        "remaining_term": "3-Year Note",
+        "reopening": false
+      },
+      "notices": [
+        {
+          "disposition": "AUCTION_AND_BUYBACK_SCHEDULE",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250102_1.pdf"
+        }
+      ],
+      "numerically_processed": true,
+      "parse_failures": {},
+      "parsed_formats": [
+        "pdf",
+        "xml"
+      ],
+      "private_accounting_path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2025-01-06_91282CMF5.json",
+      "private_accounting_sha256": "1e965c0688d55e70c0230f12ef61ebda51aad62b7e895fa38d220adfc4122979",
+      "release_basis": "dated competitive PDF release header with selected XML auction/CUSIP match",
+      "source_associations": [
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/A_20250102_4.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_xml",
+          "url": "https://www.treasurydirect.gov/xml/A_20250102_4.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/R_20250106_3.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_xml",
+          "url": "https://www.treasurydirect.gov/xml/R_20250106_3.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "noncompetitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/NCR_20250106_3.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "special_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250102_1.pdf"
+        }
+      ],
+      "status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "supported_result_release_date": "2025-01-06"
+    },
+    {
+      "announcement_amounts_checked": false,
+      "announcement_date": "2025-01-02",
+      "auction_date": "2025-01-07",
+      "cusip": "91282CLW9",
+      "differing_fields": [],
+      "first_vintage_admitted": false,
+      "intraday_release_authenticated": false,
+      "lineage": {
+        "basis": "exact stated dated-to-maturity calendar years with PDF/XML lineage agreement",
+        "dated_date": "2024-11-15",
+        "issue_date": "2025-01-15",
+        "maturity_date": "2034-11-15",
+        "original_issue_date": "2024-11-15",
+        "original_tenor_years": 10,
+        "remaining_term": "9-Year 10-Month Note",
+        "reopening": true
+      },
+      "notices": [
+        {
+          "disposition": "AUCTION_AND_BUYBACK_SCHEDULE",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250102_1.pdf"
+        }
+      ],
+      "numerically_processed": true,
+      "parse_failures": {},
+      "parsed_formats": [
+        "pdf",
+        "xml"
+      ],
+      "private_accounting_path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2025-01-07_91282CLW9.json",
+      "private_accounting_sha256": "33d6879e8e95a1e2451059833b6695355d6710dcaaedbe5fd3c1be081d2726d3",
+      "release_basis": "dated competitive PDF release header with selected XML auction/CUSIP match",
+      "source_associations": [
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/A_20250102_3.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_xml",
+          "url": "https://www.treasurydirect.gov/xml/A_20250102_3.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/R_20250107_2.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_xml",
+          "url": "https://www.treasurydirect.gov/xml/R_20250107_2.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "noncompetitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/NCR_20250107_2.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "special_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250102_1.pdf"
+        }
+      ],
+      "status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "supported_result_release_date": "2025-01-07"
+    },
+    {
+      "announcement_amounts_checked": false,
+      "announcement_date": "2025-01-02",
+      "auction_date": "2025-01-08",
+      "cusip": "912810UE6",
+      "differing_fields": [],
+      "first_vintage_admitted": false,
+      "intraday_release_authenticated": false,
+      "lineage": {
+        "basis": "exact stated dated-to-maturity calendar years with PDF/XML lineage agreement",
+        "dated_date": "2024-11-15",
+        "issue_date": "2025-01-15",
+        "maturity_date": "2054-11-15",
+        "original_issue_date": "2024-11-15",
+        "original_tenor_years": 30,
+        "remaining_term": "29-Year 10-Month Bond",
+        "reopening": true
+      },
+      "notices": [
+        {
+          "disposition": "AUCTION_AND_BUYBACK_SCHEDULE",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250102_2.pdf"
+        }
+      ],
+      "numerically_processed": true,
+      "parse_failures": {},
+      "parsed_formats": [
+        "pdf",
+        "xml"
+      ],
+      "private_accounting_path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2025-01-08_912810UE6.json",
+      "private_accounting_sha256": "976b419f850137899ff83b7d788457f86f27cba21cff1b528c421ea11b85952a",
+      "release_basis": "dated competitive PDF release header with selected XML auction/CUSIP match",
+      "source_associations": [
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/A_20250102_2.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_xml",
+          "url": "https://www.treasurydirect.gov/xml/A_20250102_2.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/R_20250108_2.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_xml",
+          "url": "https://www.treasurydirect.gov/xml/R_20250108_2.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "noncompetitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/NCR_20250108_2.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "special_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250102_2.pdf"
+        }
+      ],
+      "status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "supported_result_release_date": "2025-01-08"
+    },
+    {
+      "announcement_amounts_checked": false,
+      "announcement_date": "2025-01-23",
+      "auction_date": "2025-01-27",
+      "cusip": "91282CMG3",
+      "differing_fields": [],
+      "first_vintage_admitted": false,
+      "intraday_release_authenticated": false,
+      "lineage": {
+        "basis": "exact stated dated-to-maturity calendar years with PDF/XML lineage agreement",
+        "dated_date": "2025-01-31",
+        "issue_date": "2025-01-31",
+        "maturity_date": "2030-01-31",
+        "original_issue_date": null,
+        "original_tenor_years": 5,
+        "remaining_term": "5-Year Note",
+        "reopening": false
+      },
+      "notices": [
+        {
+          "disposition": "AUCTION_CLOSING_TIMES",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250123_1.pdf"
+        }
+      ],
+      "numerically_processed": true,
+      "parse_failures": {},
+      "parsed_formats": [
+        "pdf",
+        "xml"
+      ],
+      "private_accounting_path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2025-01-27_91282CMG3.json",
+      "private_accounting_sha256": "9d4f1424c114d5e060a5e1c7bc644c4e10a2073ab46f7579687b4b7d2fb52d4e",
+      "release_basis": "dated competitive PDF release header with selected XML auction/CUSIP match",
+      "source_associations": [
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/A_20250123_5.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_xml",
+          "url": "https://www.treasurydirect.gov/xml/A_20250123_5.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/R_20250127_4.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_xml",
+          "url": "https://www.treasurydirect.gov/xml/R_20250127_4.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "noncompetitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/NCR_20250127_3.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "special_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250123_1.pdf"
+        }
+      ],
+      "status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "supported_result_release_date": "2025-01-27"
+    },
+    {
+      "announcement_amounts_checked": false,
+      "announcement_date": "2025-01-23",
+      "auction_date": "2025-01-27",
+      "cusip": "91282CMH1",
+      "differing_fields": [],
+      "first_vintage_admitted": false,
+      "intraday_release_authenticated": false,
+      "lineage": {
+        "basis": "exact stated dated-to-maturity calendar years with PDF/XML lineage agreement",
+        "dated_date": "2025-01-31",
+        "issue_date": "2025-01-31",
+        "maturity_date": "2027-01-31",
+        "original_issue_date": null,
+        "original_tenor_years": 2,
+        "remaining_term": "2-Year Note",
+        "reopening": false
+      },
+      "notices": [
+        {
+          "disposition": "AUCTION_CLOSING_TIMES",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250123_1.pdf"
+        }
+      ],
+      "numerically_processed": true,
+      "parse_failures": {},
+      "parsed_formats": [
+        "pdf",
+        "xml"
+      ],
+      "private_accounting_path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2025-01-27_91282CMH1.json",
+      "private_accounting_sha256": "6d4f6f06f3c716303cd4ad3c43b50a2f9478a1e96db036036337a2cfa618d778",
+      "release_basis": "dated competitive PDF release header with selected XML auction/CUSIP match",
+      "source_associations": [
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/A_20250123_7.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_xml",
+          "url": "https://www.treasurydirect.gov/xml/A_20250123_7.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/R_20250127_1.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_xml",
+          "url": "https://www.treasurydirect.gov/xml/R_20250127_1.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "noncompetitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/NCR_20250127_1.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "special_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250123_1.pdf"
+        }
+      ],
+      "status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "supported_result_release_date": "2025-01-27"
+    },
+    {
+      "announcement_amounts_checked": false,
+      "announcement_date": "2025-01-23",
+      "auction_date": "2025-01-28",
+      "cusip": "91282CMK4",
+      "differing_fields": [],
+      "first_vintage_admitted": false,
+      "intraday_release_authenticated": false,
+      "lineage": {
+        "basis": "exact stated dated-to-maturity calendar years with PDF/XML lineage agreement",
+        "dated_date": "2025-01-31",
+        "issue_date": "2025-01-31",
+        "maturity_date": "2032-01-31",
+        "original_issue_date": null,
+        "original_tenor_years": 7,
+        "remaining_term": "7-Year Note",
+        "reopening": false
+      },
+      "notices": [],
+      "numerically_processed": true,
+      "parse_failures": {},
+      "parsed_formats": [
+        "pdf",
+        "xml"
+      ],
+      "private_accounting_path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2025-01-28_91282CMK4.json",
+      "private_accounting_sha256": "8281f1eb9bdcecaa138cdca229af00ca2ec2fa4d765f83543b5b19ffaf0ef5d5",
+      "release_basis": "dated competitive PDF release header with selected XML auction/CUSIP match",
+      "source_associations": [
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/A_20250123_4.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_xml",
+          "url": "https://www.treasurydirect.gov/xml/A_20250123_4.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/R_20250128_3.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_xml",
+          "url": "https://www.treasurydirect.gov/xml/R_20250128_3.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "noncompetitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/NCR_20250128_3.pdf"
+        }
+      ],
+      "status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "supported_result_release_date": "2025-01-28"
+    },
+    {
+      "announcement_amounts_checked": false,
+      "announcement_date": "2025-08-21",
+      "auction_date": "2025-08-27",
+      "conditional_notice_resolution": "retained final selected CUSIP and explicit new-issue identity",
+      "cusip": "91282CNX5",
+      "differing_fields": [],
+      "first_vintage_admitted": false,
+      "intraday_release_authenticated": false,
+      "lineage": {
+        "basis": "exact stated dated-to-maturity calendar years with PDF/XML lineage agreement",
+        "dated_date": "2025-08-31",
+        "issue_date": "2025-09-02",
+        "maturity_date": "2030-08-31",
+        "original_issue_date": null,
+        "original_tenor_years": 5,
+        "remaining_term": "5-Year Note",
+        "reopening": false
+      },
+      "notices": [
+        {
+          "disposition": "CONDITIONAL_SECURITY_SUBSTITUTION",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250821_2.pdf"
+        }
+      ],
+      "numerically_processed": true,
+      "parse_failures": {},
+      "parsed_formats": [
+        "pdf",
+        "xml"
+      ],
+      "private_accounting_path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2025-08-27_91282CNX5.json",
+      "private_accounting_sha256": "6a6e348f5f9dc2357bce65ad14bc2e491045219f1045c9f1cd46a2efc8b2652e",
+      "release_basis": "dated competitive PDF release header with selected XML auction/CUSIP match",
+      "source_associations": [
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/A_20250821_1.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "announcement_xml",
+          "url": "https://www.treasurydirect.gov/xml/A_20250821_1.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/R_20250827_3.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "competitive_xml",
+          "url": "https://www.treasurydirect.gov/xml/R_20250827_3.xml"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "noncompetitive_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/NCR_20250827_3.pdf"
+        },
+        {
+          "metadata_status": "METADATA_MATCH",
+          "role": "special_pdf",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250821_2.pdf"
+        }
+      ],
+      "status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "supported_result_release_date": "2025-08-27"
+    }
+  ],
+  "features_or_market_arrays_or_scores_created": false,
+  "full_history_admitted": false,
+  "registered_comparisons": 144,
+  "source_associations": 118,
+  "started_utc": "2026-09-09T00:42:02.324245+00:00",
+  "status": "COMPLETED_FIXED_PILOT_SOURCE_ACCOUNTING",
+  "unique_documents": 116
+}

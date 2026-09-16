@@ -1,0 +1,22 @@
+COMMAND: .venv/bin/python -m unittest tests.test_verify_precision_gate_scores -v
+test_verify_precision_gate_scores (unittest.loader._FailedTest.test_verify_precision_gate_scores) ... ERROR
+
+======================================================================
+ERROR: test_verify_precision_gate_scores (unittest.loader._FailedTest.test_verify_precision_gate_scores)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_verify_precision_gate_scores
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_precision_gate_scores.py", line 7, in <module>
+    from src.verify_precision_gate_scores import verify_scores
+ModuleNotFoundError: No module named 'src.verify_precision_gate_scores'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+
+exit_code=1

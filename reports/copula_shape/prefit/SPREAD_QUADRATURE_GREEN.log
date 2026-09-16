@@ -1,0 +1,20 @@
+test_archive_phase_and_target_end_must_match (tests.test_copula_spread_forecasts.CausalBuildContracts.test_archive_phase_and_target_end_must_match) ... ok
+test_build_does_not_consult_future_outcomes (tests.test_copula_spread_forecasts.CausalBuildContracts.test_build_does_not_consult_future_outcomes) ... ok
+test_daily_cutoff_uses_full_calendar_not_retained_rows (tests.test_copula_spread_forecasts.CausalBuildContracts.test_daily_cutoff_uses_full_calendar_not_retained_rows) ... ok
+test_exact_marginal_fields_do_not_depend_on_copula (tests.test_copula_spread_forecasts.CausalBuildContracts.test_exact_marginal_fields_do_not_depend_on_copula) ... ok
+test_monthly_dependence_parameters_cannot_change (tests.test_copula_spread_forecasts.CausalBuildContracts.test_monthly_dependence_parameters_cannot_change) ... ok
+test_monthly_marginal_parameters_cannot_change_silently (tests.test_copula_spread_forecasts.CausalBuildContracts.test_monthly_marginal_parameters_cannot_change_silently) ... ok
+test_condor_exact_risk_is_sum_of_disjoint_sides (tests.test_copula_spread_forecasts.MarginalProbabilityContracts.test_condor_exact_risk_is_sum_of_disjoint_sides) ... ok
+test_identity_equals_direct_student_t_cdf_and_survival (tests.test_copula_spread_forecasts.MarginalProbabilityContracts.test_identity_equals_direct_student_t_cdf_and_survival) ... ok
+test_narrow_distribution_inside_wing_has_accurate_mean_debit (tests.test_copula_spread_forecasts.MarginalProbabilityContracts.test_narrow_distribution_inside_wing_has_accurate_mean_debit) ... ok
+test_quad_independently_reconstructs_normalized_spread_mean (tests.test_copula_spread_forecasts.MarginalProbabilityContracts.test_quad_independently_reconstructs_normalized_spread_mean) ... ok
+test_both_copulas_preserve_marginals_at_nonzero_rho (tests.test_copula_spread_forecasts.SamplingContracts.test_both_copulas_preserve_marginals_at_nonzero_rho) ... ok
+test_extreme_log_returns_have_finite_bounded_liability (tests.test_copula_spread_forecasts.SamplingContracts.test_extreme_log_returns_have_finite_bounded_liability) ... ok
+test_fractional_expected_shortfall_and_ties (tests.test_copula_spread_forecasts.SamplingContracts.test_fractional_expected_shortfall_and_ties) ... ok
+test_gaussian_independence_any_and_both_match_exact (tests.test_copula_spread_forecasts.SamplingContracts.test_gaussian_independence_any_and_both_match_exact) ... ok
+test_scrambles_are_reproducible_and_distinct (tests.test_copula_spread_forecasts.SamplingContracts.test_scrambles_are_reproducible_and_distinct) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.453s
+
+OK

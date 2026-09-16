@@ -1,0 +1,8 @@
+{
+  "started_utc": "2026-09-13T22:47:09.960637+00:00",
+  "anchors": {
+    "reports/spread_geometry_hindsight/freeze.json": "53c052ec37836f9c13ffa509f6464dae77e2f93b701391c6198db15eefe5e548",
+    "reports/spread_geometry_hindsight/registration.json": "e7733abe4459f6179f01d96321a1145070419158d3732b9bac37ebfe855a4be3"
+  },
+  "interpretation": "Explicitly hindsight-selected, no new formal hypothesis."
+}

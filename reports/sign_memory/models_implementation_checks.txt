@@ -1,0 +1,28 @@
+test_analytic_gradient_and_hessian (tests.test_sign_memory_models.SignMemoryModels.test_analytic_gradient_and_hessian) ... ok
+test_bad_labels_and_support_are_failures (tests.test_sign_memory_models.SignMemoryModels.test_bad_labels_and_support_are_failures) ... ok
+test_binary_complement_symmetry (tests.test_sign_memory_models.SignMemoryModels.test_binary_complement_symmetry) ... ok
+test_brier_endpoints_and_nonzero_underflow (tests.test_sign_memory_models.SignMemoryModels.test_brier_endpoints_and_nonzero_underflow) ... ok
+test_development_boundary_and_all_three_models_exactly_paired (tests.test_sign_memory_models.SignMemoryModels.test_development_boundary_and_all_three_models_exactly_paired) ... ok
+test_empirical_feature_units_invariance (tests.test_sign_memory_models.SignMemoryModels.test_empirical_feature_units_invariance) ... ok
+test_entire_unscored_month_keeps_its_fit_audit (tests.test_sign_memory_models.SignMemoryModels.test_entire_unscored_month_keeps_its_fit_audit) ... ok
+test_exact_constant_memory_nests_without_dropping_arm (tests.test_sign_memory_models.SignMemoryModels.test_exact_constant_memory_nests_without_dropping_arm) ... ok
+test_exact_constant_nonzero_bounded_columns_are_retained (tests.test_sign_memory_models.SignMemoryModels.test_exact_constant_nonzero_bounded_columns_are_retained) ... ok
+test_full_calendar_maturity_and_alignment_required (tests.test_sign_memory_models.SignMemoryModels.test_full_calendar_maturity_and_alignment_required) ... ok
+test_full_synthetic_monthly_pipeline (tests.test_sign_memory_models.SignMemoryModels.test_full_synthetic_monthly_pipeline) ... ok
+test_iteration_budget_is_fixed (tests.test_sign_memory_models.SignMemoryModels.test_iteration_budget_is_fixed) ... ok
+test_memory_offset_derivative_penalizes_its_only_slope (tests.test_sign_memory_models.SignMemoryModels.test_memory_offset_derivative_penalizes_its_only_slope) ... ok
+test_monthly_origin_selected_before_future_query_label (tests.test_sign_memory_models.SignMemoryModels.test_monthly_origin_selected_before_future_query_label) ... ok
+test_nonfinite_and_zero_scale_existing_features_rejected (tests.test_sign_memory_models.SignMemoryModels.test_nonfinite_and_zero_scale_existing_features_rejected) ... ok
+test_panel_rejects_missing_duplicate_or_unshared_metadata (tests.test_sign_memory_models.SignMemoryModels.test_panel_rejects_missing_duplicate_or_unshared_metadata) ... ok
+test_query_mutation_does_not_refit_baseline_or_memory (tests.test_sign_memory_models.SignMemoryModels.test_query_mutation_does_not_refit_baseline_or_memory) ... ok
+test_solver_failure_is_not_retried (tests.test_sign_memory_models.SignMemoryModels.test_solver_failure_is_not_retried) ... ok
+test_solver_matches_independent_bfgs_and_json_replay (tests.test_sign_memory_models.SignMemoryModels.test_solver_matches_independent_bfgs_and_json_replay) ... ok
+test_stable_extreme_logits_and_unpenalized_intercept (tests.test_sign_memory_models.SignMemoryModels.test_stable_extreme_logits_and_unpenalized_intercept) ... ok
+test_training_maturity_common_rows_and_zero_class (tests.test_sign_memory_models.SignMemoryModels.test_training_maturity_common_rows_and_zero_class) ... ok
+test_training_minimum_and_class_support_not_relaxed (tests.test_sign_memory_models.SignMemoryModels.test_training_minimum_and_class_support_not_relaxed) ... ok
+test_transform_uses_training_only_and_fixed_bounded_scales (tests.test_sign_memory_models.SignMemoryModels.test_transform_uses_training_only_and_fixed_bounded_scales) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.574s
+
+OK

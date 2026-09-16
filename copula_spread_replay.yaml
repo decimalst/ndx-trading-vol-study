@@ -1,0 +1,35 @@
+study_id: copula_spread_probability_replay
+specified_on: '2026-09-13'
+status_scope: Separately registered descriptive completion after wave29 numerical failure; not a replacement or rescue of its inferential result.
+source:
+  failed_terminal: reports/copula_shape/predictive/terminal.json
+  failed_terminal_sha256: 9f7a1ef5d19c16305f708aaa9bf8ce832c6de8d8e13ca73b9c4899a66e385a0c
+  source_freeze_sha256: 737d9b68bcebf3578efc9ee2dba9e8c4141dfab6a174e1ce39ad110bee831b03
+  numerical_ceiling: '2025-10-20'
+  retained: All original source pins, failed terminal, six p1 comparisons, saved forecasts, verification receipts and numerical diagnostics remain unchanged.
+reason:
+  failure: The original implementation applied its0.03 numerical difference limit to sampled VaR as well as means and ES. Worst VaR difference was0.0362006282. The registered attempt is UNEVALUABLE regardless of the prose/code threshold distinction.
+  additional_diagnostic: 429 of118260 sampled ES values are below the separately integrated mean by up to0.00001190594, because finite sampling can miss rare liabilities. These point estimates are not reliable population tail measures.
+  usable_probability_scope: Saved p_any_breach values agree across the two declared scrambles within0.00354004, below the original0.005 diagnostic threshold. Preserve all69 threshold-straddling rows and the original average probability; two-scramble agreement is not a rigorous confidence interval.
+replay:
+  computations: No new model fit, QMC sampling, empirical threshold, bootstrap, significance test or statistical promotion. Authenticate and reuse the exact saved forecasts, probabilities and historical return pairs.
+  models: [orig_gaussian, orig_t8, cal_gaussian, cal_t8, shape_gaussian, shape_t8]
+  structures: [put, call, condor]
+  distances: [0.01, 0.02, 0.03]
+  primary_distance: 0.02
+  width: 0.01
+  rule: Original p_any_breach<=0.10, plus unchanged always-sell control.
+  reserve: 0.02 of equity aggregate gross width, split equally; all189 policy/case/credit scenarios per phase retained.
+  credits: [0.05, 0.10, 0.20]
+  cost: 0.02
+  units: Credits, costs and expiration debit as fractions of spread width. Constant credits are hypothetical scenarios, never historical option prices.
+  adapter: The unchanged accounting engine requires an unused es97_5 field. Supply1, the exact universal maximum normalized terminal debit, solely for that legacy interface. It cannot affect decisions or cash flows. Remove that field from every published output and publish max_terminal_debit=1 instead; do not call1 an estimated ES or replace old sampled estimates.
+  reports: Coverage, any/both breach and full-width losses, Brier scores, mean liability error, required break-even credit, avoided liability versus forgone credit, all conditional-premium capital paths and drawdowns. No sampled VaR/ES point forecasts or their exceedance summaries.
+  density_context: Descriptive means and empirical PIT summaries may use the independently verified saved density rows. No inferential p-values reconstructed, no restored significance and no promotion; original six-comparison family remains p1.
+inference:
+  new_hypotheses: 0
+  cumulative_tracked_hypotheses: 164
+  limitations: Reused history, hypothetical 0DTE contracts/strikes and premiums, no actual option quotes/settlements, no intraday exit/assignment/margin evaluation. Fixed reserve is an expiration-liability limit under this proxy, not a live safety guarantee.
+execution:
+  prefit: New adapter and chronology/byte-binding checks, plus frozen spread engine and independent accounting verifier, pass on generated data before registration and before new economic outcomes are evaluated.
+  persistence: Separate output directory and source/test/protocol freeze; exclusive writes, exact-byte reloads, independent saved-accounting reconstruction, source/anchor/output hash checks before and after terminal publication. Preserve failed original attempt and any replay failure.

@@ -1,0 +1,46 @@
+{
+  "status": "VERIFIED",
+  "protocol_sha256": "8268ef87b62afa3296ee97817146356070ea672e3cab914e3eb61f344e779ed0",
+  "verifier_sha256": "11098214c8f89dfeee25da2efb3dd11b18d1fbb0225d190f35346c1d26d3e79d",
+  "feature_rows_verified": 4226,
+  "raw_feature_columns_verified": 15,
+  "forecast_reconstruction": {
+    "forecasts_verified": 14280,
+    "monthly_fits_verified": 236,
+    "training_transform_fits_verified": 236,
+    "models_verified": 3,
+    "horizons": {
+      "21": {
+        "common_scored_origins": 2422,
+        "feature_complete_applications": 2463,
+        "monthly_fits": 118
+      },
+      "63": {
+        "common_scored_origins": 2338,
+        "feature_complete_applications": 2463,
+        "monthly_fits": 118
+      }
+    },
+    "producer_kkt_max": 8.874495819418156e-17
+  },
+  "inference": {
+    "new_hypotheses_verified": 4,
+    "cumulative_hypotheses_verified": 103,
+    "phase_comparisons_verified": 8,
+    "bootstrap_runs_verified": 24,
+    "bootstrap_draws_per_run": 99999,
+    "hac_maxlags": 504,
+    "nonoverlap_offsets_verified": 336,
+    "leads": []
+  },
+  "ledger_events_verified": {
+    "inherited": 99,
+    "registered": 4,
+    "evaluated": 4
+  },
+  "limitations": [
+    "Archival revisions and VIX9D back-calculation remain retrospective source limitations.",
+    "The gap combines different variance conventions and is not a measured variance risk premium.",
+    "Overlapping price-index returns and historical reuse remain exploratory after all gates."
+  ]
+}

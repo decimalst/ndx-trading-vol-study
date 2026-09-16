@@ -1,0 +1,25 @@
+# Civil quarter-end risk experiment: unevaluable
+
+**The fifteenth wave failed during source admission, before any new civil features, support counts, fitted models, forecasts or scores were produced. It gives no empirical result for or against the quarter-end hypothesis.** Both registered comparisons remain `UNEVALUABLE` with conservative, wave-adjusted and cumulative-adjusted p-values equal to 1. There is no qualifying signal from this attempt.
+
+The intended question was whether a single quarter-end indicator improves next-session SPX daily risk forecasts beyond market volatility, original macro-plan flags, month seasonality, ordinary month-end and December year-end controls. It would have been compared with both that stronger baseline and a same-sample historical mean. The exact model, timing, support, scoring and evidence gates remain in the frozen [protocol](/Users/byrons/code/trading-vol/ndx-vol-experiment/civil_quarter.yaml), [design](/Users/byrons/code/trading-vol/ndx-vol-experiment/reports/civil_quarter/DESIGN.md) and [independent pre-run review](/Users/byrons/code/trading-vol/ndx-vol-experiment/reports/civil_quarter/DESIGN_REVIEW.md).
+
+## What failed
+
+The new admission routine constructed a temporary source tree from the original calendar-variance manifest's direct input files. Its frozen macro-plan scanner also follows document paths and hashes stored inside the CPI and payroll ledgers. The first such missing staged dependency was `data/source_discovery/bls_plan_capture/cpi_12152015.web-extract.txt`. That file exists in the repository, but it was absent from the staged direct-input inventory. The read stopped with `FileNotFoundError`.
+
+The subsequent [dependency audit](/Users/byrons/code/trading-vol/ndx-vol-experiment/reports/civil_quarter/SOURCE_DEPENDENCY_AUDIT.md) identified four required extraction snapshots missing from both direct registration and staging, plus one omitted documentary capture manifest. All five exist and match hashes already bound through pinned metadata. The runtime source set contains 394 unique extraction files.
+
+This is a source-packaging failure. It is distinct from a missing market observation, a failed civil-support requirement, a numerical model failure, or a non-significant predictive result. The [run log](/Users/byrons/code/trading-vol/ndx-vol-experiment/reports/civil_quarter/run.log) and [canonical failure record](/Users/byrons/code/trading-vol/ndx-vol-experiment/reports/civil_quarter/failure.json) preserve the error. The current private output directory contains no new files. A separate [read-only admission audit](/Users/byrons/code/trading-vol/ndx-vol-experiment/reports/civil_quarter/admission_failure_audit.json) independently reproduced the same failure and verified that all canonical failure records, frozen code and prior artifact hashes remained unchanged.
+
+The previously verified studies are not reclassified by this failure. Their original scanners check ledger-declared document hashes while reading the original source tree. The new immutable staging layer must also carry those indirect dependencies. Resolving that packaging does not establish historical vintage quality or remove the existing archival and original-plan limitations.
+
+## Preparation and accounting
+
+All **1,623** repository tests passed before the run, including **90** new tests. The experiment entry point then passed **95** focused checks before registration. The full generated pipeline independently reconstructed every synthetic monthly fit, common-source mask, support audit and proper-score comparison. Those tests did not cover the real ledgers' complete indirect document dependency set; the historical admission exposed that omission.
+
+The [freeze record](/Users/byrons/code/trading-vol/ndx-vol-experiment/reports/civil_quarter/freeze_record.json) pins the protocol and all **247** Python source/test files. The [run manifest](/Users/byrons/code/trading-vol/ndx-vol-experiment/reports/civil_quarter/manifest.json) records 247 code files, 1,074 input files and 290 preserved artifacts. The pre-run audit verified **1,567** unchanged unique pins across the preceding fourteen wave manifests.
+
+The [trial ledger](/Users/byrons/code/trading-vol/ndx-vol-experiment/reports/civil_quarter/trial_ledger.jsonl) has **125 events**: 121 inherited comparisons, two registrations and two terminal unevaluable outcomes. The cumulative enumerated family is **123 hypotheses**, including these two failed comparisons. This wave adds **zero forecasts**, so the fourteen earlier waves' total remains **138,513 generated forecasts**. These are counts for this enumerated research sequence, not a repository-lifetime experiment census.
+
+The protocol, frozen implementation, earlier results and failure record will remain unchanged. A corrected source package requires its own recorded attempt, an explicit audit of indirect document paths and hashes, prewritten tests, complete source reconstruction and independent verification. No model or evidence threshold will be changed in response to this unscored failure.

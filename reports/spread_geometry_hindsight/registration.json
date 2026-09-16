@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-09-13T22:46:41.847177+00:00",
+  "scope": "Explicitly user-requested hindsight search over short-strike distance and wing width; descriptive geometry and premium sensitivity, not a new predictive hypothesis or prospective validation.",
+  "freeze_sha256": "53c052ec37836f9c13ffa509f6464dae77e2f93b701391c6198db15eefe5e548",
+  "new_formal_hypotheses": 0,
+  "unchanged_existing_formal_hypotheses": 164,
+  "descriptive_combinations_per_period": 13440,
+  "periods": 3,
+  "test_gate": "PASS"
+}

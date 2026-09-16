@@ -1,0 +1,47 @@
+{
+  "status": "VERIFIED",
+  "inputs_and_support": {
+    "status": "VERIFIED",
+    "support_passed": true,
+    "support_status": "SUPPORT_PASS",
+    "calendar_rows": 6696,
+    "events_verified": 1138,
+    "feature_columns_verified": 34,
+    "monthly_support_rows": 118,
+    "limitations": [
+      "Saved source ledger identity and provenance are authenticated separately; no new original-document or release-timestamp certification."
+    ]
+  },
+  "forecasts": {
+    "status": "VERIFIED",
+    "application_origins": 2325,
+    "application_forecasts_verified": 6975,
+    "scored_origins": 2315,
+    "forecasts_verified": 6945,
+    "monthly_fits": 118,
+    "model_fits": 354,
+    "coverage_origins": 2464,
+    "calendar_rows": 6696
+  },
+  "scores": {
+    "status": "VERIFIED",
+    "comparisons_verified": 2,
+    "endpoints_verified": 8,
+    "bootstrap_runs_verified": 24,
+    "hac_runs_verified": 8,
+    "inherited_comparisons_verified": 144,
+    "common_scored_origins": 2315,
+    "common_active_origins": 524
+  },
+  "outputs": {
+    "data/treasury_dealer/forecasting/coverage.parquet": "f03f3c7deabb40bbf139820f9511c764bef8fe92067a25edc0016e31dbcf605b",
+    "data/treasury_dealer/forecasting/event_audit.json": "42b164ece2f5eea4f07d4f1dcfb858c21db993d5a795162ae0930b3bf5f4b3b2",
+    "data/treasury_dealer/forecasting/targets.parquet": "ef47b14b888a564897ca8d72b5cfd193d89a6407dc9820a5fb3ffe6cd12ed0d5",
+    "data/treasury_dealer/forecasting/panel.parquet": "258fc92b6f7d73ff22865b9379d5362ad9d6330c9c28b4d74c1c435de10dd741",
+    "data/treasury_dealer/forecasting/schedules.parquet": "a8e5f5c79a5e08e1dbf4ead676016c3be785f8864be8178ca5e0242edd0f3590",
+    "data/treasury_dealer/forecasting/applications.parquet": "e451848c589e43d8c1aa74600c1acecde6bca17ee6df85520ae336cf78df8f1c",
+    "data/treasury_dealer/forecasting/features.parquet": "d289ce5ce08fa90eef39544e54049cc6c9913f3f038cc05377fdc07766f97732",
+    "data/treasury_dealer/forecasting/fits.json": "75b9ea1829db82e3c69f302a58f85d88d9884eb63e56d2a1d5dfca0e0b82a02d"
+  },
+  "protocol_sha256": "194fd2ef49cfa8db5542f5e672383b5e2d4ec8f8c724b2af8559d51319aef6a8"
+}

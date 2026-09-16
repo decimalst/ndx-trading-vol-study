@@ -1,0 +1,12 @@
+{
+  "status": "VERIFIED",
+  "support_passed": true,
+  "support_status": "SUPPORT_PASS",
+  "calendar_rows": 6696,
+  "events_verified": 1138,
+  "feature_columns_verified": 34,
+  "monthly_support_rows": 118,
+  "limitations": [
+    "Saved source ledger identity and provenance are authenticated separately; no new original-document or release-timestamp certification."
+  ]
+}

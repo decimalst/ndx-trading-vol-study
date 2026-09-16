@@ -1,0 +1,207 @@
+{
+  "status": "VERIFIED_SAVED_COPULA_CALIBRATION_ARTIFACTS",
+  "reviewer": "replay_entry_finish",
+  "started_utc": "2026-09-09T16:37:25.596079+00:00",
+  "completed_utc": "2026-09-09T16:37:27.453108+00:00",
+  "discrepancies": [],
+  "artifact_hashes": {
+    "reports/copula_calibration/predictive/terminal.json": "483c26aac77924a64cc9d87fc017dd60c50dab9d7bdd8004c69343501b685587",
+    "reports/copula_calibration/predictive/freeze.json": "d10dd138bd4db433256783f79ef5161a4cf5a05f3632a7dce757224aef3c47ff",
+    "reports/copula_calibration/predictive/registration.json": "e1c0af5de87b0d99c7c409f580d6af5a19c2487a34380dbbc8ff956a2e41c2dc",
+    "reports/copula_calibration/predictive/metrics.json": "d1c2e51baa5b53b2d869ac6a09c8412aaca1baa6d8eab273fc184e03c78e79b4",
+    "reports/copula_calibration/predictive/forecast_verification.json": "c8e2567bcc438567818b3f26a5790feaf3aaa0eec8e20e11947beeac6bdf001b",
+    "reports/copula_calibration/predictive/score_verification.json": "f2b9ee6617b6407d0f186435b917c4d5aebceb74eb9ef691bccfd48eb9dbcfd9",
+    "reports/copula_calibration/PREFIT.json": "062ce995f0dbd6ded4b0b0723af81986e88699fd693c55e07196637c6952d100",
+    "reports/copula_calibration/PREFIT.log": "b43256ef44c0f37e77f3f3cb54f94ddf9d42c988508469bf6f56eb2d2c0ce07d",
+    "copula_calibration.yaml": "4ce085904316fbc871b47f2d0f06a8d8e8010faab058f4911e795b3cb1a00f5d",
+    "reports/joint_copula/predictive/terminal.json": "9dfbe34029b5b8095fd68ff0c3e1e624bd854de287449a1045b6700906742b2f",
+    "reports/joint_copula/predictive/freeze_record.json": "f98fddc72c6180a92445a36e4c41cac07c4b1ff2d29aab5aa3ef5ac929a1c265",
+    "reports/joint_copula/predictive/metrics.json": "d1de728c8fb6909a4ce8ecd6edb055d8b3652693550de140dfca3ff688593442",
+    "reports/copula_calibration/predictive/FIGURE_RECEIPT.json": "26518949f9e7faac7d2ef3ee12fdf3606fb225cf7ce9ac689fadafbd1caf28ce"
+  },
+  "terminal_output_hashes": {
+    "data/model_memory_study/copula_calibration_wave28/code_and_input_snapshot.zip": "2ff948b1bc1d7883b2fa2218d22336d57cfa0fd683997306165206864c3dad05",
+    "data/model_memory_study/copula_calibration_wave28/applications.parquet": "5fbb6bb3e9c152b002bdaed381c0f734f46fa042d3e7e9a74a3528f2c91c362f",
+    "data/model_memory_study/copula_calibration_wave28/panel.parquet": "812572feb6cd4698cc9e8900b5df22e11c39791289b3f5789d4779e113b03275",
+    "data/model_memory_study/copula_calibration_wave28/coverage.parquet": "e941a3e9c457487f92ccdc083152c5442310f378ea24449f0f6dfb88eea4c2eb",
+    "data/model_memory_study/copula_calibration_wave28/archive.parquet": "f1173cc0cf9849689fac465694fd9b27cceb200d335df21fc47a1ccbf29f70ca",
+    "data/model_memory_study/copula_calibration_wave28/fits.json": "ac7365b320f8e2379d8142109afa675d336e1f9d894438e1ab72863fb5a0a130"
+  },
+  "terminal_report_artifact_hashes": {
+    "reports/copula_calibration/predictive/started.json": "2b4ecc883b68a88c8d13f4850d1f9d123051845e356b1c0d1afee12daacdfd1c",
+    "reports/copula_calibration/predictive/forecast_verification.json": "c8e2567bcc438567818b3f26a5790feaf3aaa0eec8e20e11947beeac6bdf001b",
+    "reports/copula_calibration/predictive/score_verification.json": "f2b9ee6617b6407d0f186435b917c4d5aebceb74eb9ef691bccfd48eb9dbcfd9",
+    "reports/copula_calibration/predictive/metrics.json": "d1c2e51baa5b53b2d869ac6a09c8412aaca1baa6d8eab273fc184e03c78e79b4"
+  },
+  "preservation": {
+    "freeze_pins_checked": 30179,
+    "source_bytes_hashed": 530252851,
+    "inherited_closure_pins_preserved": 30119,
+    "old_code_pins_preserved": 514,
+    "snapshot_members_checked": 671,
+    "snapshot_exact_membership": true,
+    "snapshot_all_member_bytes_match_frozen_pins": true,
+    "private_directory_mode": "0700",
+    "private_output_file_modes": "0600",
+    "exact_private_output_files": 6,
+    "freeze_and_terminal_output_hashes_rechecked_at_end": true,
+    "full_source_pin_passes": 1
+  },
+  "test_receipt": {
+    "selected": 143,
+    "run": 143,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "tested_source_and_config_pins": 524,
+    "actual_log_terminal_verified": true,
+    "local_receipt_chronology": [
+      "2026-09-09T16:25:38.821031+00:00",
+      "2026-09-09T16:25:55.633053+00:00",
+      "2026-09-09T16:26:15.565807+00:00",
+      "2026-09-09T16:26:15.601905+00:00",
+      "2026-09-09T16:26:51.367263+00:00",
+      "2026-09-09T16:27:09.369727+00:00"
+    ],
+    "tests_rerun_for_this_audit": false
+  },
+  "registration": {
+    "new_contrasts": [
+      "original_gap",
+      "calibrated_gap",
+      "interaction",
+      "gaussian_calibration",
+      "t8_calibration",
+      "qqq_calibration",
+      "spx_calibration"
+    ],
+    "inherited_rows_exactly_preserved": 151,
+    "new_hypotheses": 7,
+    "tracked_cumulative_hypotheses": 158,
+    "all_seven_adjusted_differences_detected": false,
+    "leads": []
+  },
+  "persisted_counts": {
+    "original_archive_origins": 2463,
+    "coverage_origins": 2463,
+    "coverage_status_counts": {
+      "scored": 2190,
+      "warmup": 272,
+      "issued_unscored": 1
+    },
+    "applications": 2191,
+    "scored_origins": 2190,
+    "issued_joint_distributions": 8764,
+    "scored_joint_distributions": 8760,
+    "monthly_fits": 105,
+    "dependence_fits": 420,
+    "calibration_parameters": 420,
+    "first_fit_origin": "2017-02-01",
+    "last_fit_origin": "2025-10-01",
+    "train_n_min": 271,
+    "train_n_max": 2449,
+    "phases": {
+      "development": {
+        "scored_origins": 733,
+        "first_scored_origin": "2017-02-01",
+        "last_scored_origin": "2019-12-30",
+        "applications": 734,
+        "first_application_origin": "2017-02-01",
+        "last_application_origin": "2019-12-31"
+      },
+      "evaluation": {
+        "scored_origins": 1457,
+        "first_scored_origin": "2020-01-02",
+        "last_scored_origin": "2025-10-17",
+        "applications": 1457,
+        "first_application_origin": "2020-01-02",
+        "last_application_origin": "2025-10-17"
+      }
+    },
+    "unscored_issued_origin_dates": [
+      "2019-12-31"
+    ]
+  },
+  "saved_calibration_scale_ranges": {
+    "qqq": {
+      "b_min": 0.9636552358828863,
+      "b_max": 1.0636046180955694
+    },
+    "spx": {
+      "b_min": 0.9091075777548998,
+      "b_max": 0.9941768021231124
+    }
+  },
+  "verification_receipts": {
+    "forecast": {
+      "status": "VERIFIED",
+      "monthly_fits_verified": 105,
+      "dependence_fits_verified": 420,
+      "calibration_parameters_verified": 420,
+      "applications_verified": 2191,
+      "scored_origins": 2190,
+      "contrasts_verified": 7,
+      "largest_independent_global_gap": 9.82217918110706e-09,
+      "clock_verification": "full_reference_calendar"
+    },
+    "score": {
+      "status": "VERIFIED",
+      "contrasts_verified": 7,
+      "phases_verified": 2,
+      "common_scored_origins": 2190,
+      "inherited_hypotheses_verified": 151,
+      "density_scope": "independent normalized marginals and seven contrast identities; full joint fits covered by forecast verifier",
+      "inference": "independent explicit circular-index tables and Bartlett HAC; shared phase streams; Holm7/Holm158"
+    },
+    "independently_reconciled_with_saved_metadata": true
+  },
+  "descriptive_original_bridge": {
+    "status": "INDEPENDENTLY_CHECKED_SAVED_FORECAST_DENSITIES",
+    "source": "data/model_memory_study/joint_copula_wave27/panel.parquet",
+    "source_sha256": "c4caed2560d36180511efd28436fa344224031e44f039e55161af536d0de6347",
+    "matched_origins_sha256": "eef39abfc55b0a0b560c2a9af0ca7c0f393159065070b0ebd268051ef469ce54",
+    "formula": "t8-minus-Gaussian full joint loss gap equals Gaussian log copula minus t8 log copula because saved marginals are shared; Gaussian coordinates independently obtained with SciPy norm.isf(t.sf(abs(z),8)), signed, and closed-form copula densities. No producer density import.",
+    "tolerances": {
+      "atol": 1e-10,
+      "rtol": 1e-08
+    },
+    "phases": {
+      "development": {
+        "n": 733,
+        "saved_mean": -0.03644381828050168,
+        "independent_mean": -0.03644381828050253,
+        "absolute_difference": 8.465450562766819e-16
+      },
+      "evaluation": {
+        "n": 1457,
+        "saved_mean": -0.03101708150097848,
+        "independent_mean": -0.031017081500979215,
+        "absolute_difference": 7.355227538141662e-16
+      }
+    },
+    "additional_hypotheses": 0,
+    "fits_or_inference_rerun": false,
+    "separate_scope": "This audit adds a saved-density check of the descriptive bridge; the original score certificate still explicitly excludes it."
+  },
+  "figure_receipt_review": {
+    "metrics_input_hash_verified": true,
+    "plotted_points_exactly_transcribed": 6,
+    "export_hashes": {
+      "calibration_comparison.png": "879fb02465fac4ac2c2f7c6ab70ff74d271ff0f2b33fa8ff7621f55e23e18ec0",
+      "calibration_comparison.pdf": "6573bd7b922151936779bf00d2558460ec2dfe8f9dd7ac5e979d56cbdcac8c81"
+    },
+    "visual_review": "Root reported complete visual inspection; this reviewer checked receipt transcription and bytes only."
+  },
+  "evidence_class": "EXPLORATORY_POST_RESULT_MECHANISM_DIAGNOSTIC_REUSED_HISTORY",
+  "evidence_limitation": "All historical windows have been reused. Current-vintage inputs and imperfect marginal forecasts do not identify the true dependence law. This diagnostic cannot certify untouched confirmation, point-in-time vendor vintages, improved live volatility forecasts or trading profit.",
+  "limits": [
+    "This is a saved-artifact, provenance, count and narrowly authorized descriptive bridge audit; no model refits, resampling, source acquisition, test reruns or production verifier reruns occurred.",
+    "Forecast and score mathematical guarantees rely on the authenticated independent VERIFIED receipts; this audit does not duplicate those calculations.",
+    "The 671-file snapshot preserves executable code, protocols, reports and immediate inherited model outputs. Ancestral raw sources remain in place under the checked transitive hash closure; they are not all copied into the zip.",
+    "All 30,179 source pins were directly checked once; touched output/anchor/bridge hashes were checked again at completion. The local receipts provide ordering, not external timestamp attestation.",
+    "Numerical saved forecast inputs and the source ceiling remain at 2025-10-20; protected later market arrays were not decoded.",
+    "The descriptive old-study bridge is not an eighth registered contrast, causal attribution or replacement for the unchanged original result.",
+    "Tracked 158 comparisons are the declared inherited family, not a repository-lifetime census. Reused windows/current vintages and imperfect marginals prevent untouched-confirmation, true-dependence, live-volatility or trading-profit claims.",
+    "New narrative publication files and their descriptive tables are outside this certificate; the separately checked figure receipt binds six points and two exports."
+  ]
+}

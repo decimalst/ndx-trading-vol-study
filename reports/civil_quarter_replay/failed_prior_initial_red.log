@@ -1,0 +1,14 @@
+E
+======================================================================
+ERROR: test_failed_prior_proof_rejects_terminal_tamper_and_any_new_old_output (tests.test_verify_civil_quarter_replay.FailureContracts.test_failed_prior_proof_rejects_terminal_tamper_and_any_new_old_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_civil_quarter_replay.py", line 190, in test_failed_prior_proof_rejects_terminal_tamper_and_any_new_old_output
+    result=verify.verify_failed_attempt(root,info,pins)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_civil_quarter_replay' has no attribute 'verify_failed_attempt'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.020s
+
+FAILED (errors=1)

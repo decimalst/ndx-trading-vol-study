@@ -1,0 +1,53 @@
+EEEE......
+======================================================================
+ERROR: test_frozen_protocol_rejects_seed_timing_memory_weight_arithmetic_and_family_mutations (tests.test_verify_causal_pool.AdmissionAndFailureContracts.test_frozen_protocol_rejects_seed_timing_memory_weight_arithmetic_and_family_mutations)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_causal_pool.py", line 156, in test_frozen_protocol_rejects_seed_timing_memory_weight_arithmetic_and_family_mutations
+    p=yaml.safe_load((verify.ROOT/'causal_pool.yaml').read_text());verify.validate_protocol(p)
+                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_causal_pool' has no attribute 'validate_protocol'
+
+======================================================================
+ERROR: test_missing_original_code_pin_or_added_old_failure_rejected (tests.test_verify_causal_pool.AdmissionAndFailureContracts.test_missing_original_code_pin_or_added_old_failure_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_causal_pool.py", line 136, in test_missing_original_code_pin_or_added_old_failure_rejected
+    with patch.object(verify,'reconstruct_previous',side_effect=reconstruct),self.assertRaises(AssertionError):verify.validate_upstream(root)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.verify_causal_pool' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_causal_pool.py'> does not have the attribute 'reconstruct_previous'
+
+======================================================================
+ERROR: test_new_failure_retains_both_hypotheses_with_malformed_or_nonfinite_backup (tests.test_verify_causal_pool.AdmissionAndFailureContracts.test_new_failure_retains_both_hypotheses_with_malformed_or_nonfinite_backup)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_causal_pool.py", line 144, in test_new_failure_retains_both_hypotheses_with_malformed_or_nonfinite_backup
+    with patch.object(verify,'verify',side_effect=AssertionError('failure')),self.assertRaises(AssertionError):verify.verify_with_failure_guard(root)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.verify_causal_pool' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_causal_pool.py'> does not have the attribute 'verify'
+
+======================================================================
+ERROR: test_upstream_admission_writes_nothing_and_rejects_changed_raw_issued_or_verified_bytes (tests.test_verify_causal_pool.AdmissionAndFailureContracts.test_upstream_admission_writes_nothing_and_rejects_changed_raw_issued_or_verified_bytes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_causal_pool.py", line 121, in test_upstream_admission_writes_nothing_and_rejects_changed_raw_issued_or_verified_bytes
+    with patch.object(verify,'reconstruct_previous',return_value=(record,{})):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.verify_causal_pool' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_causal_pool.py'> does not have the attribute 'reconstruct_previous'
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.054s
+
+FAILED (errors=4)

@@ -1,0 +1,487 @@
+{
+  "admission_limits": {
+    "announcement_amounts_checked": false,
+    "first_vintage_admitted": false,
+    "full_history_admitted": false,
+    "historical_release_time_inferred_from_saved_timestamps": false,
+    "intraday_release_authenticated": false,
+    "known_correction_scope": "The 2010-06-22 event retains its 2010-06-25 SOMA/overall-total correction notice. Current PDF/XML agreement does not backdate corrected amounts.",
+    "other_remaining_work": "Full-history notice classification, original/correction relationships, offering-size and announcement-amount reconciliation, historical source completeness, and a prospective forecast protocol remain separate.",
+    "registered_comparisons_unchanged": 144
+  },
+  "audited_utc": "2026-09-09T00:48:07.335967+00:00",
+  "independence_and_execution": {
+    "audit_imported_or_called_source_parsers": false,
+    "earlier_pdf_parser_sha256": "5b157806442f1ee69ddec8713eafc33903024f0474d07d1959a6ac1d6e3be848",
+    "earlier_pdf_parser_unchanged_from_independent_authorship": true,
+    "market_arrays_targets_fits_or_scores_read_or_created": false,
+    "pinned_reconciliation_script_imports": [
+      "hashlib",
+      "json",
+      "collections",
+      "datetime",
+      "functools",
+      "pathlib",
+      "src.treasury_auction_amounts",
+      "src.treasury_pdf_amounts",
+      "src.treasury_pdf_header_layout",
+      "src.treasury_security_lineage",
+      "src.treasury_xml_identity"
+    ],
+    "private_saved_outputs_read_only_after_checkpoint_identity_and_lineage_checks": true,
+    "raw_documents_reextracted_or_reparsed": false,
+    "source_amount_parsers_rerun": false,
+    "static_script_dynamic_exec_eval_import_found": false,
+    "static_script_market_or_model_imports_found": false
+  },
+  "input_evidence_sha256": {
+    "data/source_discovery/treasury_auction/accounting_pilot_v1/2010_correction_original_match.json": "b8de662d3bcac0b8f8f5048a312b44ec1379241825af2c01c18f4cdc1e4044d2",
+    "reports/next_signal_review/TREASURY_ACCOUNTING_CHECKPOINT.json": "e5f0bea7cf0364e4dd7b991018c7e8f94f7a7980d9d2e1a1048976f3f65ab3be",
+    "reports/next_signal_review/TREASURY_ACCOUNTING_PRECHECK.json": "a5c97c178103c2d776797fa66cfec2b763b4c01670b6cc1056fead29999d787b",
+    "reports/next_signal_review/TREASURY_ACCOUNTING_PRECHECK.log": "4343e7697501ef9c31d5c5901dd140609785e93f559ac7dac0f2abe1b3eb5ee5",
+    "reports/next_signal_review/TREASURY_DOCUMENT_CAPTURE.json": "a1d954d4b8ffa9b840cef478e9a409db547abc94de2dbb3a76d37ac7c9c4f6b3",
+    "reports/next_signal_review/TREASURY_DOCUMENT_PILOT_SELECTION.json": "25d2ff3b2a619fe84e4354b9269826be8f007a55065123fc7bc41c134b45f417",
+    "reports/next_signal_review/TREASURY_PDF_METADATA.json": "a4f6e9cfeaedd63da49fefca4f163ac660c49bc7d29528ffa54224321b762fe1",
+    "reports/next_signal_review/TREASURY_PILOT_ACCOUNTING.json": "0ffc9634ecf32a0f4b2863050b23da694c733d03394982a9b10d3e9aab6d194d",
+    "reports/next_signal_review/TREASURY_PILOT_ACCOUNTING_SUMMARY.md": "52eeb32275265362adeb905d458f8118fafc33935ac8c5e0fd4dddafa8fd33a0",
+    "reports/next_signal_review/TREASURY_PILOT_IDENTITY.json": "addf52f117a214286dc9cafb7d2e22fd20b68ffb6426fb92c5efaad42d2c745f",
+    "scripts/reconcile_treasury_pilot_amounts.py": "8c91e25b75c34d99e529fd3370a08e1b9c98abac564af312d35c4864228f661b"
+  },
+  "issues": [],
+  "preservation": {
+    "all_checkpoint_pins_unchanged": true,
+    "all_selected_associations_and_document_memberships_preserved": true,
+    "captured_body_hashes_checked": 116,
+    "captured_receipt_hashes_checked": 116,
+    "checkpoint_pins_reverified_after_audit": 366,
+    "checkpoint_pins_verified_before_value_reads": 366,
+    "document_associations": 118,
+    "fixed_selection_events": 22,
+    "fixed_selection_order_preserved": true,
+    "only_new_file_written": "reports/next_signal_review/TREASURY_ACCOUNTING_INDEPENDENT_AUDIT.json",
+    "private_accounting_paths_and_hashes_verified": 20,
+    "receipt_binding": "Receipt hashes are transitively pinned through the checkpoint-bound capture manifest; not all receipts are separate checkpoint entries.",
+    "unique_documents": 116
+  },
+  "prior_generated_validation": {
+    "errors": 0,
+    "failures": 0,
+    "json_and_log_agree": true,
+    "successful": true,
+    "test_count": 140,
+    "test_modules": [
+      "tests.test_treasury_auction_amounts",
+      "tests.test_treasury_auction_archive",
+      "tests.test_treasury_auction_capture",
+      "tests.test_treasury_auction_capture_integration",
+      "tests.test_treasury_auction_document_probe",
+      "tests.test_treasury_auction_documents",
+      "tests.test_treasury_auction_inventory",
+      "tests.test_treasury_document_acquire",
+      "tests.test_treasury_inventory_capture_integration",
+      "tests.test_treasury_pdf_amounts",
+      "tests.test_treasury_pdf_header_layout",
+      "tests.test_treasury_pdf_identity",
+      "tests.test_treasury_security_lineage",
+      "tests.test_treasury_xml_identity",
+      "tests.test_verify_treasury_auction_archive",
+      "tests.test_verify_treasury_auction_inventory"
+    ],
+    "tests_rerun_during_this_audit": false
+  },
+  "saved_accounting": {
+    "decimal_semantically_equal_field_pairs": 320,
+    "events": [
+      {
+        "announcement_date": "2010-01-07",
+        "auction_date": "2010-01-12",
+        "cusip": "912828MG2",
+        "dated_identity_and_lineage_checked_before_value_read": true,
+        "decimal_semantically_equal_fields": 16,
+        "differing_fields": [],
+        "field_count_per_format": 16,
+        "first_vintage_admitted": false,
+        "formats": [
+          "pdf",
+          "xml"
+        ],
+        "path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2010-01-12_912828MG2.json",
+        "sha256": "f9644a51bb588003f711a2028759a509ac62626e09efb9333c9219bb1347f1da",
+        "source_pdf_sha256": "2b7f9224aa7a75db1130b093bf9e5d88f446e91d5d7c4e0c6fc883efe275e29a",
+        "source_xml_sha256": "4a7ab4e5a05d4640763ccd0ae3460b49bcea39fcd462f09e39263bb4cfb11a37"
+      },
+      {
+        "announcement_date": "2010-01-07",
+        "auction_date": "2010-01-13",
+        "cusip": "912828LY4",
+        "dated_identity_and_lineage_checked_before_value_read": true,
+        "decimal_semantically_equal_fields": 16,
+        "differing_fields": [],
+        "field_count_per_format": 16,
+        "first_vintage_admitted": false,
+        "formats": [
+          "pdf",
+          "xml"
+        ],
+        "path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2010-01-13_912828LY4.json",
+        "sha256": "093af9e294197a92d60b53460d62f95f399f721b3b0a9a5686ca19ae01ab97d0",
+        "source_pdf_sha256": "808659f930e62e0be3fbe8a77024c09ecd1bb2c6f4f1ea9ce7803dc2128b7ba4",
+        "source_xml_sha256": "9cb3361a9621954a12d033417db9f1ae11dc061597c81780cd9d66fe8154ce53"
+      },
+      {
+        "announcement_date": "2010-01-07",
+        "auction_date": "2010-01-14",
+        "cusip": "912810QD3",
+        "dated_identity_and_lineage_checked_before_value_read": true,
+        "decimal_semantically_equal_fields": 16,
+        "differing_fields": [],
+        "field_count_per_format": 16,
+        "first_vintage_admitted": false,
+        "formats": [
+          "pdf",
+          "xml"
+        ],
+        "path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2010-01-14_912810QD3.json",
+        "sha256": "9e88ae5673515923aff4b84389369456d1e0568f134c74665fd1beb1d2582083",
+        "source_pdf_sha256": "0fd1eb8d194df4c2e7e45573130d866f33ddb115c896b9e435cd9767e02f82a1",
+        "source_xml_sha256": "e207d95a20604af2a54996567761349d9901e9c5014a78cc01f7bfa9786a8a46"
+      },
+      {
+        "announcement_date": "2010-01-21",
+        "auction_date": "2010-01-26",
+        "cusip": "912828MJ6",
+        "dated_identity_and_lineage_checked_before_value_read": true,
+        "decimal_semantically_equal_fields": 16,
+        "differing_fields": [],
+        "field_count_per_format": 16,
+        "first_vintage_admitted": false,
+        "formats": [
+          "pdf",
+          "xml"
+        ],
+        "path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2010-01-26_912828MJ6.json",
+        "sha256": "f45bd2ccd35759a993b747d42cdce7acf9df18fdb66c31f479257c19afb06663",
+        "source_pdf_sha256": "8515e62e6ab2324e7f030048c0eeb8e1dd94955fe3814b671561da7f767729ba",
+        "source_xml_sha256": "0e226d38fff8acd695beffefe3d1dfcbe9c3cb8ab986858ec37bf759f31678a5"
+      },
+      {
+        "announcement_date": "2010-01-21",
+        "auction_date": "2010-01-27",
+        "cusip": "912828MH0",
+        "dated_identity_and_lineage_checked_before_value_read": true,
+        "decimal_semantically_equal_fields": 16,
+        "differing_fields": [],
+        "field_count_per_format": 16,
+        "first_vintage_admitted": false,
+        "formats": [
+          "pdf",
+          "xml"
+        ],
+        "path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2010-01-27_912828MH0.json",
+        "sha256": "47e22a9186e470c220c41cfdb38acdaa2f1a7fe548c1b57a31fb5da8ec14f66b",
+        "source_pdf_sha256": "82a3bb070934bbc4529e9e32f500a76ad7a9bc68af7d1704114f4ede9337895c",
+        "source_xml_sha256": "02bbb5fd30630d6e0abf6e2d9e13ea48b8f63951786a06ac84c328fb48fb0b5d"
+      },
+      {
+        "announcement_date": "2010-01-21",
+        "auction_date": "2010-01-28",
+        "cusip": "912828MK3",
+        "dated_identity_and_lineage_checked_before_value_read": true,
+        "decimal_semantically_equal_fields": 16,
+        "differing_fields": [],
+        "field_count_per_format": 16,
+        "first_vintage_admitted": false,
+        "formats": [
+          "pdf",
+          "xml"
+        ],
+        "path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2010-01-28_912828MK3.json",
+        "sha256": "71f3e4ed19c2cb3e447bcbf0881e255ee2c09e5e9bd3de0d98bc806913b8abf9",
+        "source_pdf_sha256": "5b7f0a2fd81aed50e975d8e2a0ddf8c380b3279f34566fb5fcef1eb19a3a24a1",
+        "source_xml_sha256": "4e895197783750cbc6220ca403aff18698d5fd7844133d1f484db8ae2bd4fdf5"
+      },
+      {
+        "announcement_date": "2010-06-17",
+        "auction_date": "2010-06-22",
+        "cusip": "912828NS5",
+        "dated_identity_and_lineage_checked_before_value_read": true,
+        "decimal_semantically_equal_fields": 16,
+        "differing_fields": [],
+        "field_count_per_format": 16,
+        "first_vintage_admitted": false,
+        "formats": [
+          "pdf",
+          "xml"
+        ],
+        "path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2010-06-22_912828NS5.json",
+        "sha256": "33f4d77dd125304680426c11aaeecba53db0800f310fc00f2cbfd182d43e287f",
+        "source_pdf_sha256": "e4d22940686c50e5f1eec170479276d4bcb54abef7a083f26fcf1370fbd8bdd2",
+        "source_xml_sha256": "a971c424f128bc18e3526f1a85accb2f9606ce8ffa08bd9c9506e392e2723fe1"
+      },
+      {
+        "announcement_date": "2016-01-07",
+        "auction_date": "2016-01-12",
+        "cusip": "912828N63",
+        "dated_identity_and_lineage_checked_before_value_read": true,
+        "decimal_semantically_equal_fields": 16,
+        "differing_fields": [],
+        "field_count_per_format": 16,
+        "first_vintage_admitted": false,
+        "formats": [
+          "pdf",
+          "xml"
+        ],
+        "path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2016-01-12_912828N63.json",
+        "sha256": "295015f0b71bb204b8d7a8c793d36cc477061ea19d4ab2b3cdb0de3b248c4160",
+        "source_pdf_sha256": "62912e35b59102526df129af0f462ab59ddfd4c8060782e21de81b8f063ae17d",
+        "source_xml_sha256": "846348ab86dca67eb142f2eeb232ca5cd2587e431b01cfe07d0fead068e03a49"
+      },
+      {
+        "announcement_date": "2016-01-07",
+        "auction_date": "2016-01-13",
+        "cusip": "912828M56",
+        "dated_identity_and_lineage_checked_before_value_read": true,
+        "decimal_semantically_equal_fields": 16,
+        "differing_fields": [],
+        "field_count_per_format": 16,
+        "first_vintage_admitted": false,
+        "formats": [
+          "pdf",
+          "xml"
+        ],
+        "path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2016-01-13_912828M56.json",
+        "sha256": "800a5ddd047fbd2111e56cdd239ae481857a9f5e27043f24902205edb3abce1f",
+        "source_pdf_sha256": "388e14f0a1b4edce0ad222503710bd99d445b8c29b262a5eccf4360bb9027b07",
+        "source_xml_sha256": "6839cfa21ec6a26ac1c1dc639a6ad6c71b2ded9265ce009560898356218a1807"
+      },
+      {
+        "announcement_date": "2016-01-21",
+        "auction_date": "2016-01-26",
+        "cusip": "912828P20",
+        "dated_identity_and_lineage_checked_before_value_read": true,
+        "decimal_semantically_equal_fields": 16,
+        "differing_fields": [],
+        "field_count_per_format": 16,
+        "first_vintage_admitted": false,
+        "formats": [
+          "pdf",
+          "xml"
+        ],
+        "path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2016-01-26_912828P20.json",
+        "sha256": "27332493ee9e5f5dc5e7b5c4a98a893da5860a1717a948cd885c4e32c4559a8e",
+        "source_pdf_sha256": "bfe5fc8069e4941566dbb227f2fc271fe8875948700d0eb1e20f4b80624d6e27",
+        "source_xml_sha256": "5350c516c392e821a10ca262c1ab63f5390e0d25d08252fbef729d909614a50e"
+      },
+      {
+        "announcement_date": "2016-01-21",
+        "auction_date": "2016-01-27",
+        "cusip": "912828N89",
+        "dated_identity_and_lineage_checked_before_value_read": true,
+        "decimal_semantically_equal_fields": 16,
+        "differing_fields": [],
+        "field_count_per_format": 16,
+        "first_vintage_admitted": false,
+        "formats": [
+          "pdf",
+          "xml"
+        ],
+        "path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2016-01-27_912828N89.json",
+        "sha256": "f0be27fbfae7480cf371d7ac841c97a9813c091b2df495cc3c18d31a6c7e7019",
+        "source_pdf_sha256": "809a9c1707936e824a9da22922f19bf581201f30e8af9396860b01b8772fbe01",
+        "source_xml_sha256": "1779d43a4c98273ef66a13c96bba4a19f2025a429ede9774da90ab2e6105a7d9"
+      },
+      {
+        "announcement_date": "2016-01-21",
+        "auction_date": "2016-01-28",
+        "cusip": "912828P38",
+        "dated_identity_and_lineage_checked_before_value_read": true,
+        "decimal_semantically_equal_fields": 16,
+        "differing_fields": [],
+        "field_count_per_format": 16,
+        "first_vintage_admitted": false,
+        "formats": [
+          "pdf",
+          "xml"
+        ],
+        "path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2016-01-28_912828P38.json",
+        "sha256": "7ce5c9bdb47101c4649694f76f6d8e70d7e5ddd3d89d412258db3a77385fa78d",
+        "source_pdf_sha256": "445380cfe8ef770ea75f6095b7c289c728ee1c54a3ac3f7ef6e544ca3cb98f6f",
+        "source_xml_sha256": "3ca31cf37fda3a01d7008b7cfef4e580ab4fa33575cef01aec5cf0139153bc33"
+      },
+      {
+        "announcement_date": "2019-06-06",
+        "auction_date": "2019-06-12",
+        "cusip": "9128286T2",
+        "dated_identity_and_lineage_checked_before_value_read": true,
+        "decimal_semantically_equal_fields": 16,
+        "differing_fields": [],
+        "field_count_per_format": 16,
+        "first_vintage_admitted": false,
+        "formats": [
+          "pdf",
+          "xml"
+        ],
+        "path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2019-06-12_9128286T2.json",
+        "sha256": "19d1cd4ed675926d6719ec247965edd6f743cf4ea93984bae138decf0d74e03a",
+        "source_pdf_sha256": "b6191fbfd65d983802d0dbd33393d4e1b82d91df0483a9143e4092362f7bc5b5",
+        "source_xml_sha256": "f6fa28fecc3230732301aa3f68d3ad78f9eb51e5c83488ef133786e04729e460"
+      },
+      {
+        "announcement_date": "2025-01-02",
+        "auction_date": "2025-01-06",
+        "cusip": "91282CMF5",
+        "dated_identity_and_lineage_checked_before_value_read": true,
+        "decimal_semantically_equal_fields": 16,
+        "differing_fields": [],
+        "field_count_per_format": 16,
+        "first_vintage_admitted": false,
+        "formats": [
+          "pdf",
+          "xml"
+        ],
+        "path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2025-01-06_91282CMF5.json",
+        "sha256": "1e965c0688d55e70c0230f12ef61ebda51aad62b7e895fa38d220adfc4122979",
+        "source_pdf_sha256": "f6346c3d3a59cc42a4cef3ae8c563f248db42d0605e1ab613bf6421292acb921",
+        "source_xml_sha256": "974cc1a351071f9ceca27adb869aea3f857fefbf68b36a5195ccf33ec3e941b7"
+      },
+      {
+        "announcement_date": "2025-01-02",
+        "auction_date": "2025-01-07",
+        "cusip": "91282CLW9",
+        "dated_identity_and_lineage_checked_before_value_read": true,
+        "decimal_semantically_equal_fields": 16,
+        "differing_fields": [],
+        "field_count_per_format": 16,
+        "first_vintage_admitted": false,
+        "formats": [
+          "pdf",
+          "xml"
+        ],
+        "path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2025-01-07_91282CLW9.json",
+        "sha256": "33d6879e8e95a1e2451059833b6695355d6710dcaaedbe5fd3c1be081d2726d3",
+        "source_pdf_sha256": "d8564988a612031a2f9c4191ea4eb8efcd9717ae16b73877919c8893ab6ed322",
+        "source_xml_sha256": "107f89f057d455733dffca7e3521e3f616259d883c15a092a382f08667b154b6"
+      },
+      {
+        "announcement_date": "2025-01-02",
+        "auction_date": "2025-01-08",
+        "cusip": "912810UE6",
+        "dated_identity_and_lineage_checked_before_value_read": true,
+        "decimal_semantically_equal_fields": 16,
+        "differing_fields": [],
+        "field_count_per_format": 16,
+        "first_vintage_admitted": false,
+        "formats": [
+          "pdf",
+          "xml"
+        ],
+        "path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2025-01-08_912810UE6.json",
+        "sha256": "976b419f850137899ff83b7d788457f86f27cba21cff1b528c421ea11b85952a",
+        "source_pdf_sha256": "53a2ef57acb50d12013d1f2b5f24e9bfd2c614fdc6c0c7392abb79d9763ca481",
+        "source_xml_sha256": "a3c734e032788baa6590a6fd0b95d552b58b8275b7160ac100ca49d35e98bda4"
+      },
+      {
+        "announcement_date": "2025-01-23",
+        "auction_date": "2025-01-27",
+        "cusip": "91282CMG3",
+        "dated_identity_and_lineage_checked_before_value_read": true,
+        "decimal_semantically_equal_fields": 16,
+        "differing_fields": [],
+        "field_count_per_format": 16,
+        "first_vintage_admitted": false,
+        "formats": [
+          "pdf",
+          "xml"
+        ],
+        "path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2025-01-27_91282CMG3.json",
+        "sha256": "9d4f1424c114d5e060a5e1c7bc644c4e10a2073ab46f7579687b4b7d2fb52d4e",
+        "source_pdf_sha256": "10243117dbab8e0b4ef6641b0e7babb04fd6aade0d5abbd016def882a7486db4",
+        "source_xml_sha256": "704c761c28ea8b96371a5f1e9b1ac6a787da0384eb337719aef525819788990e"
+      },
+      {
+        "announcement_date": "2025-01-23",
+        "auction_date": "2025-01-27",
+        "cusip": "91282CMH1",
+        "dated_identity_and_lineage_checked_before_value_read": true,
+        "decimal_semantically_equal_fields": 16,
+        "differing_fields": [],
+        "field_count_per_format": 16,
+        "first_vintage_admitted": false,
+        "formats": [
+          "pdf",
+          "xml"
+        ],
+        "path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2025-01-27_91282CMH1.json",
+        "sha256": "6d4f6f06f3c716303cd4ad3c43b50a2f9478a1e96db036036337a2cfa618d778",
+        "source_pdf_sha256": "eed239c1df6389827f10fc19cd08b0eea4a30cb6e4e7513c8f07055aa73debe6",
+        "source_xml_sha256": "c9d99ed04ff50428ba405db6a65325f7678e71391f65677a4d810b32ee73ed52"
+      },
+      {
+        "announcement_date": "2025-01-23",
+        "auction_date": "2025-01-28",
+        "cusip": "91282CMK4",
+        "dated_identity_and_lineage_checked_before_value_read": true,
+        "decimal_semantically_equal_fields": 16,
+        "differing_fields": [],
+        "field_count_per_format": 16,
+        "first_vintage_admitted": false,
+        "formats": [
+          "pdf",
+          "xml"
+        ],
+        "path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2025-01-28_91282CMK4.json",
+        "sha256": "8281f1eb9bdcecaa138cdca229af00ca2ec2fa4d765f83543b5b19ffaf0ef5d5",
+        "source_pdf_sha256": "fc307d572cfd38764e4f3ace154866e21f4c8e05614e12830e146abda08172ab",
+        "source_xml_sha256": "038e1903a2e02a56916a42e7ae1f84dc0ce3db5452719810dc7049161eda2ba0"
+      },
+      {
+        "announcement_date": "2025-08-21",
+        "auction_date": "2025-08-27",
+        "cusip": "91282CNX5",
+        "dated_identity_and_lineage_checked_before_value_read": true,
+        "decimal_semantically_equal_fields": 16,
+        "differing_fields": [],
+        "field_count_per_format": 16,
+        "first_vintage_admitted": false,
+        "formats": [
+          "pdf",
+          "xml"
+        ],
+        "path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2025-08-27_91282CNX5.json",
+        "sha256": "6a6e348f5f9dc2357bce65ad14bc2e491045219f1045c9f1cd46a2efc8b2652e",
+        "source_pdf_sha256": "deb7406ad5203b860caccf3823b59cc2262ede30fdccc99fafc006386606b730",
+        "source_xml_sha256": "222ff1df5175ffa91a0564125b9899f0b0b72b171a258b7bfc07c7e8ca17077e"
+      }
+    ],
+    "fields_per_format": 16,
+    "formats_per_event": 2,
+    "numerically_processed_events": 20,
+    "private_quantity_values_exported_in_this_audit": false,
+    "skipped_events": [
+      {
+        "auction_date": "2016-01-14",
+        "cusip": "912810RP5",
+        "first_vintage_admitted": false,
+        "numerically_processed": false,
+        "status": "METADATA_OR_LINEAGE_REQUIRES_REVIEW"
+      },
+      {
+        "auction_date": "2019-06-21",
+        "cusip": "9128286T2",
+        "first_vintage_admitted": false,
+        "numerically_processed": false,
+        "status": "EXCLUDED_DOCUMENTED_CONTINGENCY_TEST"
+      }
+    ],
+    "skipped_events_have_no_accounting_files_or_quantity_payloads": true,
+    "supplemental_correction_record": {
+      "body_values_read_in_this_audit": false,
+      "counts_as_additional_processed_event": false,
+      "path": "data/source_discovery/treasury_auction/accounting_pilot_v1/2010_correction_original_match.json",
+      "scope": "Post-accounting documentary supplement, separately hash recorded; not part of the frozen 366-pin input set or the twenty paired accounting outputs.",
+      "sha256": "b8de662d3bcac0b8f8f5048a312b44ec1379241825af2c01c18f4cdc1e4044d2"
+    }
+  },
+  "scope": "Saved-artifact consistency audit plus the earlier independently authored PDF parser. Not a third independent raw reconstruction, model validation, or authentication of historical publication time.",
+  "status": "VERIFIED_SAVED_ARTIFACT_AUDIT"
+}

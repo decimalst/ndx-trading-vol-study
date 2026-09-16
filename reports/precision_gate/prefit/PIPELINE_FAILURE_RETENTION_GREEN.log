@@ -1,0 +1,44 @@
+COMMAND: .venv/bin/python -m unittest tests.test_precision_gate_models tests.test_precision_gate_pipeline -v
+test_exact_log_linear_reconstruction_and_no_application_fit_influence (tests.test_precision_gate_models.PrecisionExpertTests.test_exact_log_linear_reconstruction_and_no_application_fit_influence) ... ok
+test_rank_scale_and_position_failures_have_no_fallback (tests.test_precision_gate_models.PrecisionExpertTests.test_rank_scale_and_position_failures_have_no_fallback) ... ok
+test_typed_and_aligned_inputs_and_immutability (tests.test_precision_gate_models.PrecisionExpertTests.test_typed_and_aligned_inputs_and_immutability) ... ok
+test_weighted_raw_normal_equations_and_exact_separate_smearing (tests.test_precision_gate_models.PrecisionExpertTests.test_weighted_raw_normal_equations_and_exact_separate_smearing) ... ok
+test_full_calendar_dates_and_target_schema_validated (tests.test_precision_gate_pipeline.PrecisionPipelineTests.test_full_calendar_dates_and_target_schema_validated) ... ok
+test_full_issued_membership_maturity_and_global_offsets (tests.test_precision_gate_pipeline.PrecisionPipelineTests.test_full_issued_membership_maturity_and_global_offsets) ... ok
+test_future_target_permutation_cannot_change_earlier_forecasts (tests.test_precision_gate_pipeline.PrecisionPipelineTests.test_future_target_permutation_cannot_change_earlier_forecasts) ... ok
+test_insufficient_scoring_month_aborts_and_retains_diagnostics (tests.test_precision_gate_pipeline.PrecisionPipelineTests.test_insufficient_scoring_month_aborts_and_retains_diagnostics) ... ok
+test_issued_state_is_saved_and_frozen_gate_gets_only_issued_mature_pairs (tests.test_precision_gate_pipeline.PrecisionPipelineTests.test_issued_state_is_saved_and_frozen_gate_gets_only_issued_mature_pairs) ... ok
+test_later_gate_failure_retains_earlier_issued_records_and_stage (tests.test_precision_gate_pipeline.PrecisionPipelineTests.test_later_gate_failure_retains_earlier_issued_records_and_stage) ... ok
+test_no_complete_month_and_input_immutability (tests.test_precision_gate_pipeline.PrecisionPipelineTests.test_no_complete_month_and_input_immutability) ... ok
+test_rank_failure_does_not_become_warmup_or_fallback (tests.test_precision_gate_pipeline.PrecisionPipelineTests.test_rank_failure_does_not_become_warmup_or_fallback) ... ok
+test_scoring_phase_endpoint_and_common_cohort (tests.test_precision_gate_pipeline.PrecisionPipelineTests.test_scoring_phase_endpoint_and_common_cohort) ... ok
+test_target_blind_month_start_and_previous_full_session (tests.test_precision_gate_pipeline.PrecisionPipelineTests.test_target_blind_month_start_and_previous_full_session) ... ok
+test_warmup_does_not_issue_or_refill_and_cold_start_is_baseline (tests.test_precision_gate_pipeline.PrecisionPipelineTests.test_warmup_does_not_issue_or_refill_and_cold_start_is_baseline) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.585s
+
+OK
+
+exit_code=0
+COMMAND: .venv/bin/ruff check src/precision_gate_models.py src/precision_gate_pipeline.py tests/test_precision_gate_models.py tests/test_precision_gate_pipeline.py
+SIM117 Use a single `with` statement with multiple contexts instead of nested `with` statements
+   --> tests/test_precision_gate_pipeline.py:177:9
+    |
+175 |               return fit_gate(*args, **kwargs)
+176 |
+177 | /         with patch.object(pipeline, "fit_gate", side_effect=failing_gate):
+178 | |             with self.assertRaises(pipeline.PipelineExecutionError) as caught:
+    | |______________________________________________________________________________^
+179 |                   build_panel(f, t, c)
+180 |           error = caught.exception
+    |
+help: Combine `with` statements
+
+Found 1 error.
+
+exit_code=1
+COMMAND: .venv/bin/ruff format --check src/precision_gate_models.py src/precision_gate_pipeline.py tests/test_precision_gate_models.py tests/test_precision_gate_pipeline.py
+4 files already formatted
+
+exit_code=0

@@ -1,0 +1,18 @@
+E
+======================================================================
+ERROR: test_dual_upstream_admission_is_read_only_and_rejects_source_or_issued_tamper (tests.test_verify_civil_quarter.PublicationContracts.test_dual_upstream_admission_is_read_only_and_rejects_source_or_issued_tamper)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_civil_quarter.py", line 208, in test_dual_upstream_admission_is_read_only_and_rejects_source_or_issued_tamper
+    with patch.object(verify, "reconstruct_previous", return_value=(records["upstream"], {})), patch.object(verify, "reconstruct_calendar", return_value=records["feature_source"]):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.verify_civil_quarter' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_civil_quarter.py'> does not have the attribute 'reconstruct_previous'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.009s
+
+FAILED (errors=1)

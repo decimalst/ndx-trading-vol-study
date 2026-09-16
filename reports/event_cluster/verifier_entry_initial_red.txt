@@ -1,0 +1,161 @@
+EEEEEEEEEEEEEE
+======================================================================
+ERROR: test_failure_guard_canonical_three_p1_with_malformed_numeric_diagnostics (tests.test_verify_event_cluster.RegisteredLayerContracts.test_failure_guard_canonical_three_p1_with_malformed_numeric_diagnostics) (original=b'{broken')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 460, in test_failure_guard_canonical_three_p1_with_malformed_numeric_diagnostics
+    with patch.object(v, 'verify', side_effect=ValueError('synthetic discrepancy')):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.verify_event_cluster' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_event_cluster.py'> does not have the attribute 'verify'
+
+======================================================================
+ERROR: test_failure_guard_canonical_three_p1_with_malformed_numeric_diagnostics (tests.test_verify_event_cluster.RegisteredLayerContracts.test_failure_guard_canonical_three_p1_with_malformed_numeric_diagnostics) (original=b'{"bad": NaN}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 460, in test_failure_guard_canonical_three_p1_with_malformed_numeric_diagnostics
+    with patch.object(v, 'verify', side_effect=ValueError('synthetic discrepancy')):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.verify_event_cluster' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_event_cluster.py'> does not have the attribute 'verify'
+
+======================================================================
+ERROR: test_failure_guard_canonical_three_p1_with_malformed_numeric_diagnostics (tests.test_verify_event_cluster.RegisteredLayerContracts.test_failure_guard_canonical_three_p1_with_malformed_numeric_diagnostics) (original=b'{"leads": ["cluster"], "rows": []}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 460, in test_failure_guard_canonical_three_p1_with_malformed_numeric_diagnostics
+    with patch.object(v, 'verify', side_effect=ValueError('synthetic discrepancy')):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.verify_event_cluster' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_event_cluster.py'> does not have the attribute 'verify'
+
+======================================================================
+ERROR: test_inherited_values_are_bound_before_decoding (tests.test_verify_event_cluster.RegisteredLayerContracts.test_inherited_values_are_bound_before_decoding)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 443, in test_inherited_values_are_bound_before_decoding
+    v.inherited_rows(r, p, pins={'prior.json': '0'*64})
+    ^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_event_cluster' has no attribute 'inherited_rows'
+
+======================================================================
+ERROR: test_literal_protocol_and_boolean_mutation (tests.test_verify_event_cluster.RegisteredLayerContracts.test_literal_protocol_and_boolean_mutation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 375, in test_literal_protocol_and_boolean_mutation
+    v.validate_protocol(p)
+    ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_event_cluster' has no attribute 'validate_protocol'
+
+======================================================================
+ERROR: test_marker_after_shared_admission_cannot_pass (tests.test_verify_event_cluster.RegisteredLayerContracts.test_marker_after_shared_admission_cannot_pass)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 433, in test_marker_after_shared_admission_cannot_pass
+    v.admit_upstream(r, f.expected, pins)
+    ^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_event_cluster' has no attribute 'admit_upstream'
+
+======================================================================
+ERROR: test_shared_admission_cannot_omit_registered_or_anchor_hashes (tests.test_verify_event_cluster.RegisteredLayerContracts.test_shared_admission_cannot_omit_registered_or_anchor_hashes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 415, in test_shared_admission_cannot_omit_registered_or_anchor_hashes
+    v.admit_upstream(r, f.expected, bad)
+    ^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_event_cluster' has no attribute 'admit_upstream'
+
+======================================================================
+ERROR: test_source_metadata_and_original_values_admitted_from_checked_snapshots (tests.test_verify_event_cluster.RegisteredLayerContracts.test_source_metadata_and_original_values_admitted_from_checked_snapshots)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 394, in test_source_metadata_and_original_values_admitted_from_checked_snapshots
+    audit, loaded = v.admit_upstream(root_path, f.expected, pins)
+                    ^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_event_cluster' has no attribute 'admit_upstream'
+
+======================================================================
+ERROR: setUpClass (tests.test_verify_event_cluster.InferenceContracts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 517, in setUpClass
+    cls.panel, cls.p, cls.metrics, cls.prior = inference_fixture()
+                                               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 506, in inference_fixture
+    panel = pd.concat(frames, ignore_index=True).loc[:, v.PANEL_COLUMNS]
+                                                        ^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_event_cluster' has no attribute 'PANEL_COLUMNS'
+
+======================================================================
+ERROR: test_complete_paths_real_admission_snapshots_and_eight_verified_outputs (tests.test_verify_event_cluster.CompleteEntryContracts.test_complete_paths_real_admission_snapshots_and_eight_verified_outputs)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 641, in test_complete_paths_real_admission_snapshots_and_eight_verified_outputs
+    _, _, checked = self.tree(r)
+                    ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 593, in tree
+    p = copy.deepcopy(v.CONTRACT)
+                      ^^^^^^^^^^
+AttributeError: module 'src.verify_event_cluster' has no attribute 'CONTRACT'
+
+======================================================================
+ERROR: test_missing_memory_output_fails_before_pipeline (tests.test_verify_event_cluster.CompleteEntryContracts.test_missing_memory_output_fails_before_pipeline)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 682, in test_missing_memory_output_fails_before_pipeline
+    _, _, checked = self.tree(r)
+                    ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 593, in tree
+    p = copy.deepcopy(v.CONTRACT)
+                      ^^^^^^^^^^
+AttributeError: module 'src.verify_event_cluster' has no attribute 'CONTRACT'
+
+======================================================================
+ERROR: test_new_upstream_failure_at_final_commit_blocks_success (tests.test_verify_event_cluster.CompleteEntryContracts.test_new_upstream_failure_at_final_commit_blocks_success) (prior='range_alert')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 669, in test_new_upstream_failure_at_final_commit_blocks_success
+    _, _, checked = self.tree(r)
+                    ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 593, in tree
+    p = copy.deepcopy(v.CONTRACT)
+                      ^^^^^^^^^^
+AttributeError: module 'src.verify_event_cluster' has no attribute 'CONTRACT'
+
+======================================================================
+ERROR: test_new_upstream_failure_at_final_commit_blocks_success (tests.test_verify_event_cluster.CompleteEntryContracts.test_new_upstream_failure_at_final_commit_blocks_success) (prior='issued_calibration')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 669, in test_new_upstream_failure_at_final_commit_blocks_success
+    _, _, checked = self.tree(r)
+                    ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 593, in tree
+    p = copy.deepcopy(v.CONTRACT)
+                      ^^^^^^^^^^
+AttributeError: module 'src.verify_event_cluster' has no attribute 'CONTRACT'
+
+======================================================================
+ERROR: test_output_mutation_during_reconstruction_blocks_commit (tests.test_verify_event_cluster.CompleteEntryContracts.test_output_mutation_during_reconstruction_blocks_commit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 655, in test_output_mutation_during_reconstruction_blocks_commit
+    _, _, checked = self.tree(r)
+                    ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster.py", line 593, in tree
+    p = copy.deepcopy(v.CONTRACT)
+                      ^^^^^^^^^^
+AttributeError: module 'src.verify_event_cluster' has no attribute 'CONTRACT'
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.486s
+
+FAILED (errors=14)

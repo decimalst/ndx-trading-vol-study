@@ -1,0 +1,33 @@
+COMMAND: .venv/bin/python -m unittest tests.test_precision_gate_score -v
+test_cold_start_rows_count_and_are_not_dropped (tests.test_precision_gate_score.PrecisionGateScoreTests.test_cold_start_rows_count_and_are_not_dropped) ... ok
+test_daily_slice_and_offset_floors_fail_before_sampling (tests.test_precision_gate_score.PrecisionGateScoreTests.test_daily_slice_and_offset_floors_fail_before_sampling) ... ok
+test_exact_pairing_dates_status_loss_and_state_guards (tests.test_precision_gate_score.PrecisionGateScoreTests.test_exact_pairing_dates_status_loss_and_state_guards) ... ok
+test_failure_and_unevaluable_treasury_inheritance_preserved (tests.test_precision_gate_score.PrecisionGateScoreTests.test_failure_and_unevaluable_treasury_inheritance_preserved) ... ok
+test_fitted_mechanism_floors_at_boundary_and_before_inference (tests.test_precision_gate_score.PrecisionGateScoreTests.test_fitted_mechanism_floors_at_boundary_and_before_inference) ... ok
+test_fixed_scientific_fields_and_prior_provenance (tests.test_precision_gate_score.PrecisionGateScoreTests.test_fixed_scientific_fields_and_prior_provenance) ... ok
+test_four_arms_three_contrasts_and_preserved_149_family (tests.test_precision_gate_score.PrecisionGateScoreTests.test_four_arms_three_contrasts_and_preserved_149_family) ... FAIL
+test_full_phase_calendar_holes_tail_and_shared_seed (tests.test_precision_gate_score.PrecisionGateScoreTests.test_full_phase_calendar_holes_tail_and_shared_seed) ... ok
+test_inclusive_probability_effect_boundaries_and_stability_veto (tests.test_precision_gate_score.PrecisionGateScoreTests.test_inclusive_probability_effect_boundaries_and_stability_veto) ... ok
+test_worst_phase_method_and_single_control_veto (tests.test_precision_gate_score.PrecisionGateScoreTests.test_worst_phase_method_and_single_control_veto) ... ok
+
+======================================================================
+FAIL: test_four_arms_three_contrasts_and_preserved_149_family (tests.test_precision_gate_score.PrecisionGateScoreTests.test_four_arms_three_contrasts_and_preserved_149_family)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_precision_gate_score.py", line 169, in test_four_arms_three_contrasts_and_preserved_149_family
+    self.assertEqual(result["leads"], ["precision_gate"])
+AssertionError: Lists differ: [] != ['precision_gate']
+
+Second list contains 1 additional elements.
+First extra element 0:
+'precision_gate'
+
+- []
++ ['precision_gate']
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.999s
+
+FAILED (failures=1)
+
+exit_code=1

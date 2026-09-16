@@ -1,0 +1,15 @@
+test_render_preserves_unscaled_intervals_threshold_and_writes_png_and_pdf (tests.test_plot_cross_moment.PlotContracts.test_render_preserves_unscaled_intervals_threshold_and_writes_png_and_pdf) ... ERROR
+
+======================================================================
+ERROR: test_render_preserves_unscaled_intervals_threshold_and_writes_png_and_pdf (tests.test_plot_cross_moment.PlotContracts.test_render_preserves_unscaled_intervals_threshold_and_writes_png_and_pdf)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_plot_cross_moment.py", line 158, in test_render_preserves_unscaled_intervals_threshold_and_writes_png_and_pdf
+    renderer = fig.canvas.get_renderer()
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'FigureCanvasBase' object has no attribute 'get_renderer'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.327s
+
+FAILED (errors=1)

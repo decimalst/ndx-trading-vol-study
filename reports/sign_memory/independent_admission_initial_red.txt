@@ -1,0 +1,31 @@
+EE...........
+======================================================================
+ERROR: test_chained_admission_is_readonly_and_rejects_source_output_identity_tampering (tests.test_verify_sign_memory.AdmissionContracts.test_chained_admission_is_readonly_and_rejects_source_output_identity_tampering)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_sign_memory.py", line 197, in test_chained_admission_is_readonly_and_rejects_source_output_identity_tampering
+    with patch.object(verify,'reconstruct_previous',return_value=(record,{})):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.verify_sign_memory' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_sign_memory.py'> does not have the attribute 'reconstruct_previous'
+
+======================================================================
+ERROR: test_new_prior_failure_or_missing_prior_code_pin_rejects (tests.test_verify_sign_memory.AdmissionContracts.test_new_prior_failure_or_missing_prior_code_pin_rejects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_sign_memory.py", line 212, in test_new_prior_failure_or_missing_prior_code_pin_rejects
+    with patch.object(verify,'reconstruct_previous',side_effect=reconstruct), self.assertRaises(AssertionError):verify.validate_upstream(root)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.verify_sign_memory' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_sign_memory.py'> does not have the attribute 'reconstruct_previous'
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.048s
+
+FAILED (errors=2)

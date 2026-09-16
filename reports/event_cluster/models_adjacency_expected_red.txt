@@ -1,0 +1,13 @@
+F
+======================================================================
+FAIL: test_no_adjacent_events_cannot_retune_varying_expectation (tests.test_event_cluster_models.StagedCluster.test_no_adjacent_events_cannot_retune_varying_expectation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_event_cluster_models.py", line 168, in test_no_adjacent_events_cannot_retune_varying_expectation
+    self.assertTrue(train[feature.MEMORY].eq(0).all())
+AssertionError: np.False_ is not true
+
+----------------------------------------------------------------------
+Ran 1 test in 0.010s
+
+FAILED (failures=1)

@@ -1,0 +1,69 @@
+{
+  "status": "ALL_PRIOR_REGISTERED_PINS_UNCHANGED",
+  "checked_utc": "2026-09-07T09:58:24.196065+00:00",
+  "prior_waves": 12,
+  "unique_pinned_files": 1454,
+  "manifest_counts": {
+    "iterative_signal_search": {
+      "code": 10,
+      "inputs": 9,
+      "preserved": 129
+    },
+    "international_volatility": {
+      "code": 11,
+      "inputs": 5,
+      "preserved": 150
+    },
+    "overnight_index": {
+      "code": 13,
+      "inputs": 10,
+      "preserved": 164
+    },
+    "macro_overnight": {
+      "code": 18,
+      "inputs": 805,
+      "preserved": 188
+    },
+    "measurement_memory": {
+      "code": 139,
+      "inputs": 19,
+      "preserved": 211
+    },
+    "index_hinge": {
+      "code": 147,
+      "inputs": 8,
+      "preserved": 230
+    },
+    "tail_shape": {
+      "code": 159,
+      "inputs": 11,
+      "preserved": 250
+    },
+    "calendar_variance": {
+      "code": 169,
+      "inputs": 808,
+      "preserved": 272
+    },
+    "relative_risk": {
+      "code": 179,
+      "inputs": 12,
+      "preserved": 298
+    },
+    "joint_risk": {
+      "code": 191,
+      "inputs": 12,
+      "preserved": 326
+    },
+    "cross_moment": {
+      "code": 200,
+      "inputs": 57,
+      "preserved": 326
+    },
+    "target_aligned": {
+      "code": 211,
+      "inputs": 97,
+      "preserved": 326
+    }
+  },
+  "rechecked_after_full_tests_utc": "2026-09-07T10:16:44.392011+00:00"
+}

@@ -1,0 +1,21 @@
+{
+  "captures": [
+    {
+      "end_date": "2010-12-31",
+      "error": "core metadata t3a must be a nonempty JSON string",
+      "headers_sha256": "210898c656be85531c3215ec14206100be80c467747a97240d08ff2768e02adf",
+      "receipt_path": "data/source_discovery/treasury_auction/archive_capture_v1/2010/receipt.json",
+      "receipt_sha256": "ea010b1f11f9fd15db53f5b7c2b1247ccae2dcd9e8815c3fc8a694acbd7ba9be",
+      "response_sha256": "a4f1eb0410d6295ead217ea97a42110ab30584ca825ec50212247868884bebfa",
+      "start_date": "2010-01-01",
+      "status": "REQUIRES_SOURCE_REVIEW",
+      "year": "2010"
+    }
+  ],
+  "checkpoint_sha256": "3221f6c96f9c5a0effccb366b706c2fe210a030a56469d7e97e639392868d2be",
+  "completed_utc": "2026-09-08T23:43:38.110849+00:00",
+  "cumulative_comparisons": 144,
+  "numerical_source_admitted": false,
+  "predictive_comparisons_added": 0,
+  "status": "REQUIRES_SOURCE_REVIEW"
+}

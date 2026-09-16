@@ -1,0 +1,17 @@
+test_metrics_changed_after_publication_cannot_keep_completed_status (tests.test_precision_gate_search.PrecisionGateSearchTests.test_metrics_changed_after_publication_cannot_keep_completed_status) ... FAIL
+
+======================================================================
+FAIL: test_metrics_changed_after_publication_cannot_keep_completed_status (tests.test_precision_gate_search.PrecisionGateSearchTests.test_metrics_changed_after_publication_cannot_keep_completed_status)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_precision_gate_search.py", line 249, in test_metrics_changed_after_publication_cannot_keep_completed_status
+    self.assertEqual(got["status"], "UNEVALUABLE")
+AssertionError: 'COMPLETED' != 'UNEVALUABLE'
+- COMPLETED
++ UNEVALUABLE
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.817s
+
+FAILED (failures=1)

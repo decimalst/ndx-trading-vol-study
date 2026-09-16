@@ -1,0 +1,16 @@
+{
+  "registered_utc": "2026-09-13T21:45:43.887417+00:00",
+  "freeze_sha256": "737d9b68bcebf3578efc9ee2dba9e8c4141dfab6a174e1ce39ad110bee831b03",
+  "contrasts": [
+    "qqq_shape",
+    "spx_shape",
+    "gaussian_shape",
+    "t8_shape",
+    "shape_gap",
+    "shape_interaction"
+  ],
+  "inherited": 158,
+  "new": 6,
+  "cumulative": 164,
+  "spread_scope": "All54 model/structure/distance risk cases and189 fixed conditional-premium policies, descriptive only."
+}

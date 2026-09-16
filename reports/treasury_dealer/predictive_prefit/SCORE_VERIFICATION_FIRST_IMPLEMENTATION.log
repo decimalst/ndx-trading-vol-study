@@ -1,0 +1,13 @@
+test_changed_panel_activity_and_protocol_cannot_reuse_old_proof (tests.test_verify_treasury_dealer_scores.VerifyTreasuryDealerScoresTests.test_changed_panel_activity_and_protocol_cannot_reuse_old_proof) ... ok
+test_every_inference_family_gate_and_diagnostic_group_corruption_rejected (tests.test_verify_treasury_dealer_scores.VerifyTreasuryDealerScoresTests.test_every_inference_family_gate_and_diagnostic_group_corruption_rejected) ... ok
+test_generated_end_to_end_verifies_both_masks_phases_controls (tests.test_verify_treasury_dealer_scores.VerifyTreasuryDealerScoresTests.test_generated_end_to_end_verifies_both_masks_phases_controls) ... ok
+test_indexed_bootstrap_and_hac_match_literal_calendar_oracle (tests.test_verify_treasury_dealer_scores.VerifyTreasuryDealerScoresTests.test_indexed_bootstrap_and_hac_match_literal_calendar_oracle) ... ok
+test_separate_indexed_implementation_matches_frozen_prefix_inference (tests.test_verify_treasury_dealer_scores.VerifyTreasuryDealerScoresTests.test_separate_indexed_implementation_matches_frozen_prefix_inference) ... ok
+test_zero_support_replicate_is_fatal_without_redraw (tests.test_verify_treasury_dealer_scores.VerifyTreasuryDealerScoresTests.test_zero_support_replicate_is_fatal_without_redraw) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 4.189s
+
+OK
+
+exit_code=0

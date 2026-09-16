@@ -1,0 +1,63 @@
+Prewritten regression: invalid issued marginal parameters cannot hide in an unscored final query.
+test_unscored_missing_label_queries_still_require_valid_issued_marginals (tests.test_copula_calibration.CrossedTimelineTests.test_unscored_missing_label_queries_still_require_valid_issued_marginals) ... 
+  test_unscored_missing_label_queries_still_require_valid_issued_marginals (tests.test_copula_calibration.CrossedTimelineTests.test_unscored_missing_label_queries_still_require_valid_issued_marginals) (column='h_qqq', value=0.0) ... FAIL
+  test_unscored_missing_label_queries_still_require_valid_issued_marginals (tests.test_copula_calibration.CrossedTimelineTests.test_unscored_missing_label_queries_still_require_valid_issued_marginals) (column='h_qqq', value=-0.1) ... FAIL
+  test_unscored_missing_label_queries_still_require_valid_issued_marginals (tests.test_copula_calibration.CrossedTimelineTests.test_unscored_missing_label_queries_still_require_valid_issued_marginals) (column='h_spx', value=nan) ... FAIL
+  test_unscored_missing_label_queries_still_require_valid_issued_marginals (tests.test_copula_calibration.CrossedTimelineTests.test_unscored_missing_label_queries_still_require_valid_issued_marginals) (column='h_spx', value=inf) ... FAIL
+  test_unscored_missing_label_queries_still_require_valid_issued_marginals (tests.test_copula_calibration.CrossedTimelineTests.test_unscored_missing_label_queries_still_require_valid_issued_marginals) (column='mu_qqq', value=nan) ... FAIL
+  test_unscored_missing_label_queries_still_require_valid_issued_marginals (tests.test_copula_calibration.CrossedTimelineTests.test_unscored_missing_label_queries_still_require_valid_issued_marginals) (column='mu_spx', value=inf) ... FAIL
+
+======================================================================
+FAIL: test_unscored_missing_label_queries_still_require_valid_issued_marginals (tests.test_copula_calibration.CrossedTimelineTests.test_unscored_missing_label_queries_still_require_valid_issued_marginals) (column='h_qqq', value=0.0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_calibration.py", line 413, in test_unscored_missing_label_queries_still_require_valid_issued_marginals
+    with self.subTest(column=column, value=value), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_unscored_missing_label_queries_still_require_valid_issued_marginals (tests.test_copula_calibration.CrossedTimelineTests.test_unscored_missing_label_queries_still_require_valid_issued_marginals) (column='h_qqq', value=-0.1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_calibration.py", line 413, in test_unscored_missing_label_queries_still_require_valid_issued_marginals
+    with self.subTest(column=column, value=value), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_unscored_missing_label_queries_still_require_valid_issued_marginals (tests.test_copula_calibration.CrossedTimelineTests.test_unscored_missing_label_queries_still_require_valid_issued_marginals) (column='h_spx', value=nan)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_calibration.py", line 413, in test_unscored_missing_label_queries_still_require_valid_issued_marginals
+    with self.subTest(column=column, value=value), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_unscored_missing_label_queries_still_require_valid_issued_marginals (tests.test_copula_calibration.CrossedTimelineTests.test_unscored_missing_label_queries_still_require_valid_issued_marginals) (column='h_spx', value=inf)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_calibration.py", line 413, in test_unscored_missing_label_queries_still_require_valid_issued_marginals
+    with self.subTest(column=column, value=value), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_unscored_missing_label_queries_still_require_valid_issued_marginals (tests.test_copula_calibration.CrossedTimelineTests.test_unscored_missing_label_queries_still_require_valid_issued_marginals) (column='mu_qqq', value=nan)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_calibration.py", line 413, in test_unscored_missing_label_queries_still_require_valid_issued_marginals
+    with self.subTest(column=column, value=value), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_unscored_missing_label_queries_still_require_valid_issued_marginals (tests.test_copula_calibration.CrossedTimelineTests.test_unscored_missing_label_queries_still_require_valid_issued_marginals) (column='mu_spx', value=inf)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_calibration.py", line 413, in test_unscored_missing_label_queries_still_require_valid_issued_marginals
+    with self.subTest(column=column, value=value), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.145s
+
+FAILED (failures=6)
+
+exit_code=1

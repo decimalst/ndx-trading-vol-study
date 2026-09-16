@@ -1,0 +1,32 @@
+test_buffered_stdout_does_not_mask_failed_or_empty_full_suite (tests.test_treasury_dealer_search.TreasuryDealerSearchTests.test_buffered_stdout_does_not_mask_failed_or_empty_full_suite) ... ok
+test_callback_cannot_rewrite_saved_inherited_family (tests.test_treasury_dealer_search.TreasuryDealerSearchTests.test_callback_cannot_rewrite_saved_inherited_family) ... ok
+test_every_outcome_carries_qualified_clock_limitation (tests.test_treasury_dealer_search.TreasuryDealerSearchTests.test_every_outcome_carries_qualified_clock_limitation) ... ok
+test_every_pin_is_readonly_enforced (tests.test_treasury_dealer_search.TreasuryDealerSearchTests.test_every_pin_is_readonly_enforced) ... ok
+test_existing_attempt_is_never_restarted (tests.test_treasury_dealer_search.TreasuryDealerSearchTests.test_existing_attempt_is_never_restarted) ... ok
+test_failure_keeps_both_registered_hypotheses_at_one (tests.test_treasury_dealer_search.TreasuryDealerSearchTests.test_failure_keeps_both_registered_hypotheses_at_one) ... ok
+test_freeze_with_empty_current_code_or_test_evidence_is_rejected (tests.test_treasury_dealer_search.TreasuryDealerSearchTests.test_freeze_with_empty_current_code_or_test_evidence_is_rejected) ... ok
+test_full_family_is_durable_before_numerical_callback (tests.test_treasury_dealer_search.TreasuryDealerSearchTests.test_full_family_is_durable_before_numerical_callback) ... ok
+test_invalid_prior_never_registers (tests.test_treasury_dealer_search.TreasuryDealerSearchTests.test_invalid_prior_never_registers) ... ok
+test_late_pin_failure_invalidates_published_attempt_without_losing_it (tests.test_treasury_dealer_search.TreasuryDealerSearchTests.test_late_pin_failure_invalidates_published_attempt_without_losing_it) ... ok
+test_missing_comparison_invalidates_whole_attempt (tests.test_treasury_dealer_search.TreasuryDealerSearchTests.test_missing_comparison_invalidates_whole_attempt) ... ok
+test_publication_failure_retains_both_rows_at_one (tests.test_treasury_dealer_search.TreasuryDealerSearchTests.test_publication_failure_retains_both_rows_at_one) ... ok
+test_real_runner_registers_before_decode_and_stops_before_fit_on_support_failure (tests.test_treasury_dealer_search.TreasuryDealerSearchTests.test_real_runner_registers_before_decode_and_stops_before_fit_on_support_failure) ... Two comparisons registered; reading bounded admitted sources
+Independently reconstructing joined inputs and sample support
+{"status": "UNEVALUABLE", "leads": [], "comparisons": 146}
+ok
+runTest (tests.test_treasury_dealer_test_gate.FakeCase.runTest) ... FAIL
+test_exact_quarantine_and_all_other_tests_remain_ordered (tests.test_treasury_dealer_test_gate.TreasuryTestGateTests.test_exact_quarantine_and_all_other_tests_remain_ordered) ... ok
+test_missing_quarantine_identity_or_duplicate_test_fails_closed (tests.test_treasury_dealer_test_gate.TreasuryTestGateTests.test_missing_quarantine_identity_or_duplicate_test_fails_closed) ... ok
+
+======================================================================
+FAIL: runTest (tests.test_treasury_dealer_test_gate.FakeCase.runTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_dealer_test_gate.py", line 17, in runTest
+    raise AssertionError("Selection must not execute a test")
+AssertionError: Selection must not execute a test
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.093s
+
+FAILED (failures=1)

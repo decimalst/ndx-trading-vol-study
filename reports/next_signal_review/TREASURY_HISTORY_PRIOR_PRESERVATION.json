@@ -1,0 +1,27 @@
+{
+  "anchor_path": "reports/commodity_implied/predictive/freeze_record.json",
+  "anchor_sha256": "a126d35cf061614631b7be2ab62b4f7f24d39a9c7c49059d2bb18ad54f5016b1",
+  "completed_utc": "2026-09-09T02:46:21.104610+00:00",
+  "maps": {
+    "code": {
+      "checked": 394,
+      "drift": []
+    },
+    "inputs": {
+      "checked": 1538,
+      "drift": []
+    },
+    "prefit": {
+      "checked": 5,
+      "drift": []
+    },
+    "preserved": {
+      "checked": 1181,
+      "drift": []
+    }
+  },
+  "method": "Opaque byte hashing only; no market arrays decoded or studies rerun.",
+  "new_predictive_comparisons": 0,
+  "registered_comparisons": 144,
+  "status": "VERIFIED_PREVIOUS_FROZEN_RESEARCH_UNCHANGED"
+}

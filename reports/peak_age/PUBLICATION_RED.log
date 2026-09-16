@@ -1,0 +1,1493 @@
+test_admission_failure_has_three_registrations_and137_inherited_before_fit (tests.test_peak_age_publication.PeakAgePublicationContracts.test_admission_failure_has_three_registrations_and137_inherited_before_fit) ... ERROR
+test_atomic_nonfinite_ledger_serialization_preserves_exact_existing_bytes (tests.test_peak_age_publication.PeakAgePublicationContracts.test_atomic_nonfinite_ledger_serialization_preserves_exact_existing_bytes) ... ERROR
+test_commit_rechecks_all_frozen_files_and_entire_code_inventory (tests.test_peak_age_publication.PeakAgePublicationContracts.test_commit_rechecks_all_frozen_files_and_entire_code_inventory) ... 
+  test_commit_rechecks_all_frozen_files_and_entire_code_inventory (tests.test_peak_age_publication.PeakAgePublicationContracts.test_commit_rechecks_all_frozen_files_and_entire_code_inventory) (mode='code') ... ERROR
+  test_commit_rechecks_all_frozen_files_and_entire_code_inventory (tests.test_peak_age_publication.PeakAgePublicationContracts.test_commit_rechecks_all_frozen_files_and_entire_code_inventory) (mode='input') ... ERROR
+  test_commit_rechecks_all_frozen_files_and_entire_code_inventory (tests.test_peak_age_publication.PeakAgePublicationContracts.test_commit_rechecks_all_frozen_files_and_entire_code_inventory) (mode='preserved') ... ERROR
+  test_commit_rechecks_all_frozen_files_and_entire_code_inventory (tests.test_peak_age_publication.PeakAgePublicationContracts.test_commit_rechecks_all_frozen_files_and_entire_code_inventory) (mode='protocol') ... ERROR
+  test_commit_rechecks_all_frozen_files_and_entire_code_inventory (tests.test_peak_age_publication.PeakAgePublicationContracts.test_commit_rechecks_all_frozen_files_and_entire_code_inventory) (mode='design') ... ERROR
+  test_commit_rechecks_all_frozen_files_and_entire_code_inventory (tests.test_peak_age_publication.PeakAgePublicationContracts.test_commit_rechecks_all_frozen_files_and_entire_code_inventory) (mode='full_log') ... ERROR
+  test_commit_rechecks_all_frozen_files_and_entire_code_inventory (tests.test_peak_age_publication.PeakAgePublicationContracts.test_commit_rechecks_all_frozen_files_and_entire_code_inventory) (mode='added_code') ... ERROR
+test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten (tests.test_peak_age_publication.PeakAgePublicationContracts.test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten) ... 
+  test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten (tests.test_peak_age_publication.PeakAgePublicationContracts.test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten) (existing='manifest.json') ... ERROR
+  test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten (tests.test_peak_age_publication.PeakAgePublicationContracts.test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten) (existing='trial_ledger.jsonl') ... ERROR
+  test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten (tests.test_peak_age_publication.PeakAgePublicationContracts.test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten) (existing='failure.json') ... ERROR
+  test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten (tests.test_peak_age_publication.PeakAgePublicationContracts.test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten) (existing='metrics.json') ... ERROR
+  test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten (tests.test_peak_age_publication.PeakAgePublicationContracts.test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten) (existing='verification.json') ... ERROR
+  test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten (tests.test_peak_age_publication.PeakAgePublicationContracts.test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten) (existing='publication_audit.json') ... ERROR
+  test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten (tests.test_peak_age_publication.PeakAgePublicationContracts.test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten) (existing='private') ... ERROR
+  test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten (tests.test_peak_age_publication.PeakAgePublicationContracts.test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten) (existing='dangling') ... ERROR
+test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks (tests.test_peak_age_publication.PeakAgePublicationContracts.test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks) ... 
+  test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks (tests.test_peak_age_publication.PeakAgePublicationContracts.test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks) (ancestor='index_hinge', dangling=False) ... ERROR
+  test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks (tests.test_peak_age_publication.PeakAgePublicationContracts.test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks) (ancestor='index_hinge', dangling=True) ... ERROR
+  test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks (tests.test_peak_age_publication.PeakAgePublicationContracts.test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks) (ancestor='range_alert', dangling=False) ... ERROR
+  test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks (tests.test_peak_age_publication.PeakAgePublicationContracts.test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks) (ancestor='range_alert', dangling=True) ... ERROR
+  test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks (tests.test_peak_age_publication.PeakAgePublicationContracts.test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks) (ancestor='issued_calibration', dangling=False) ... ERROR
+  test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks (tests.test_peak_age_publication.PeakAgePublicationContracts.test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks) (ancestor='issued_calibration', dangling=True) ... ERROR
+  test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks (tests.test_peak_age_publication.PeakAgePublicationContracts.test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks) (ancestor='event_cluster_replay', dangling=False) ... ERROR
+  test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks (tests.test_peak_age_publication.PeakAgePublicationContracts.test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks) (ancestor='event_cluster_replay', dangling=True) ... ERROR
+  test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks (tests.test_peak_age_publication.PeakAgePublicationContracts.test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks) (ancestor='peak_age', dangling=False) ... ERROR
+  test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks (tests.test_peak_age_publication.PeakAgePublicationContracts.test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks) (ancestor='peak_age', dangling=True) ... ERROR
+test_incomplete_or_duplicate_contrast_results_cannot_publish_a_partial_family (tests.test_peak_age_publication.PeakAgePublicationContracts.test_incomplete_or_duplicate_contrast_results_cannot_publish_a_partial_family) ... 
+  test_incomplete_or_duplicate_contrast_results_cannot_publish_a_partial_family (tests.test_peak_age_publication.PeakAgePublicationContracts.test_incomplete_or_duplicate_contrast_results_cannot_publish_a_partial_family) (mode='missing') ... ERROR
+  test_incomplete_or_duplicate_contrast_results_cannot_publish_a_partial_family (tests.test_peak_age_publication.PeakAgePublicationContracts.test_incomplete_or_duplicate_contrast_results_cannot_publish_a_partial_family) (mode='duplicate') ... ERROR
+  test_incomplete_or_duplicate_contrast_results_cannot_publish_a_partial_family (tests.test_peak_age_publication.PeakAgePublicationContracts.test_incomplete_or_duplicate_contrast_results_cannot_publish_a_partial_family) (mode='foreign') ... ERROR
+test_missing_inherited_evidence_is_explicit_and_never_fabricated (tests.test_peak_age_publication.PeakAgePublicationContracts.test_missing_inherited_evidence_is_explicit_and_never_fabricated) ... ERROR
+test_missing_required_bound_pin_cannot_be_omitted_from_manifest (tests.test_peak_age_publication.PeakAgePublicationContracts.test_missing_required_bound_pin_cannot_be_omitted_from_manifest) ... 
+  test_missing_required_bound_pin_cannot_be_omitted_from_manifest (tests.test_peak_age_publication.PeakAgePublicationContracts.test_missing_required_bound_pin_cannot_be_omitted_from_manifest) (name='reports/event_cluster/failure.json') ... ERROR
+  test_missing_required_bound_pin_cannot_be_omitted_from_manifest (tests.test_peak_age_publication.PeakAgePublicationContracts.test_missing_required_bound_pin_cannot_be_omitted_from_manifest) (name='reports/event_cluster/metrics.json') ... ERROR
+  test_missing_required_bound_pin_cannot_be_omitted_from_manifest (tests.test_peak_age_publication.PeakAgePublicationContracts.test_missing_required_bound_pin_cannot_be_omitted_from_manifest) (name='reports/event_cluster/verification.json') ... ERROR
+  test_missing_required_bound_pin_cannot_be_omitted_from_manifest (tests.test_peak_age_publication.PeakAgePublicationContracts.test_missing_required_bound_pin_cannot_be_omitted_from_manifest) (name='reports/event_cluster_replay/metrics.json') ... ERROR
+  test_missing_required_bound_pin_cannot_be_omitted_from_manifest (tests.test_peak_age_publication.PeakAgePublicationContracts.test_missing_required_bound_pin_cannot_be_omitted_from_manifest) (name='reports/event_cluster_replay/verification.json') ... ERROR
+  test_missing_required_bound_pin_cannot_be_omitted_from_manifest (tests.test_peak_age_publication.PeakAgePublicationContracts.test_missing_required_bound_pin_cannot_be_omitted_from_manifest) (name='reports/event_cluster_replay/publication_audit.json') ... ERROR
+test_partial_registration_bytes_are_preserved_and_all_three_failures_reconstructed (tests.test_peak_age_publication.PeakAgePublicationContracts.test_partial_registration_bytes_are_preserved_and_all_three_failures_reconstructed) ... ERROR
+test_pretest_failure_has_no_registration_or_source_admission (tests.test_peak_age_publication.PeakAgePublicationContracts.test_pretest_failure_has_no_registration_or_source_admission) ... ERROR
+test_pretests_recheck_frozen_code_inventory_protocol_design_and_full_suite_evidence (tests.test_peak_age_publication.PeakAgePublicationContracts.test_pretests_recheck_frozen_code_inventory_protocol_design_and_full_suite_evidence) ... 
+  test_pretests_recheck_frozen_code_inventory_protocol_design_and_full_suite_evidence (tests.test_peak_age_publication.PeakAgePublicationContracts.test_pretests_recheck_frozen_code_inventory_protocol_design_and_full_suite_evidence) (mode='code') ... ERROR
+  test_pretests_recheck_frozen_code_inventory_protocol_design_and_full_suite_evidence (tests.test_peak_age_publication.PeakAgePublicationContracts.test_pretests_recheck_frozen_code_inventory_protocol_design_and_full_suite_evidence) (mode='added_code') ... ERROR
+  test_pretests_recheck_frozen_code_inventory_protocol_design_and_full_suite_evidence (tests.test_peak_age_publication.PeakAgePublicationContracts.test_pretests_recheck_frozen_code_inventory_protocol_design_and_full_suite_evidence) (mode='protocol') ... ERROR
+  test_pretests_recheck_frozen_code_inventory_protocol_design_and_full_suite_evidence (tests.test_peak_age_publication.PeakAgePublicationContracts.test_pretests_recheck_frozen_code_inventory_protocol_design_and_full_suite_evidence) (mode='design') ... ERROR
+  test_pretests_recheck_frozen_code_inventory_protocol_design_and_full_suite_evidence (tests.test_peak_age_publication.PeakAgePublicationContracts.test_pretests_recheck_frozen_code_inventory_protocol_design_and_full_suite_evidence) (mode='full_log') ... ERROR
+test_produce_support_or_fit_failure_retains_all_three_without_scoring (tests.test_peak_age_publication.PeakAgePublicationContracts.test_produce_support_or_fit_failure_retains_all_three_without_scoring) ... ERROR
+test_registration_precedes_even_manifest_input_enumeration (tests.test_peak_age_publication.PeakAgePublicationContracts.test_registration_precedes_even_manifest_input_enumeration) ... ERROR
+test_report_or_partial_evaluated_write_failure_keeps_scored_backup (tests.test_peak_age_publication.PeakAgePublicationContracts.test_report_or_partial_evaluated_write_failure_keeps_scored_backup) ... 
+  test_report_or_partial_evaluated_write_failure_keeps_scored_backup (tests.test_peak_age_publication.PeakAgePublicationContracts.test_report_or_partial_evaluated_write_failure_keeps_scored_backup) (stage='report') ... ERROR
+  test_report_or_partial_evaluated_write_failure_keeps_scored_backup (tests.test_peak_age_publication.PeakAgePublicationContracts.test_report_or_partial_evaluated_write_failure_keeps_scored_backup) (stage='evaluated') ... ERROR
+test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop (tests.test_peak_age_publication.PeakAgePublicationContracts.test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop) ... 
+  test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop (tests.test_peak_age_publication.PeakAgePublicationContracts.test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop) (name='reports/event_cluster/failure.json', action='mutate') ... ERROR
+  test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop (tests.test_peak_age_publication.PeakAgePublicationContracts.test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop) (name='reports/event_cluster/failure.json', action='remove') ... ERROR
+  test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop (tests.test_peak_age_publication.PeakAgePublicationContracts.test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop) (name='reports/event_cluster/metrics.json', action='mutate') ... ERROR
+  test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop (tests.test_peak_age_publication.PeakAgePublicationContracts.test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop) (name='reports/event_cluster/metrics.json', action='remove') ... ERROR
+  test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop (tests.test_peak_age_publication.PeakAgePublicationContracts.test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop) (name='reports/event_cluster/verification.json', action='mutate') ... ERROR
+  test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop (tests.test_peak_age_publication.PeakAgePublicationContracts.test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop) (name='reports/event_cluster/verification.json', action='remove') ... ERROR
+  test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop (tests.test_peak_age_publication.PeakAgePublicationContracts.test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop) (name='reports/event_cluster_replay/metrics.json', action='mutate') ... ERROR
+  test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop (tests.test_peak_age_publication.PeakAgePublicationContracts.test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop) (name='reports/event_cluster_replay/metrics.json', action='remove') ... ERROR
+  test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop (tests.test_peak_age_publication.PeakAgePublicationContracts.test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop) (name='reports/event_cluster_replay/verification.json', action='mutate') ... ERROR
+  test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop (tests.test_peak_age_publication.PeakAgePublicationContracts.test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop) (name='reports/event_cluster_replay/verification.json', action='remove') ... ERROR
+  test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop (tests.test_peak_age_publication.PeakAgePublicationContracts.test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop) (name='reports/event_cluster_replay/publication_audit.json', action='mutate') ... ERROR
+  test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop (tests.test_peak_age_publication.PeakAgePublicationContracts.test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop) (name='reports/event_cluster_replay/publication_audit.json', action='remove') ... ERROR
+test_required_old_failed_family_remains_byte_exact_and_is_not_globally_blocked (tests.test_peak_age_publication.PeakAgePublicationContracts.test_required_old_failed_family_remains_byte_exact_and_is_not_globally_blocked) ... ERROR
+test_run_entrypoint_is_implemented (tests.test_peak_age_publication.PeakAgePublicationContracts.test_run_entrypoint_is_implemented) ... ERROR
+test_score_failure_keeps_written_diagnostics_and_canonical_p1 (tests.test_peak_age_publication.PeakAgePublicationContracts.test_score_failure_keeps_written_diagnostics_and_canonical_p1) ... ERROR
+test_scoring_follows_complete_production_and_uses_identical_declared_inputs (tests.test_peak_age_publication.PeakAgePublicationContracts.test_scoring_follows_complete_production_and_uses_identical_declared_inputs) ... ERROR
+test_success_has_full_inventory_exactten_outputs143events_and_unscored_applications (tests.test_peak_age_publication.PeakAgePublicationContracts.test_success_has_full_inventory_exactten_outputs143events_and_unscored_applications) ... ERROR
+test_successful_ancestor_or_current_markers_block_score_and_report_boundaries (tests.test_peak_age_publication.PeakAgePublicationContracts.test_successful_ancestor_or_current_markers_block_score_and_report_boundaries) ... 
+  test_successful_ancestor_or_current_markers_block_score_and_report_boundaries (tests.test_peak_age_publication.PeakAgePublicationContracts.test_successful_ancestor_or_current_markers_block_score_and_report_boundaries) (ancestor='index_hinge', stage='scoring') ... ERROR
+  test_successful_ancestor_or_current_markers_block_score_and_report_boundaries (tests.test_peak_age_publication.PeakAgePublicationContracts.test_successful_ancestor_or_current_markers_block_score_and_report_boundaries) (ancestor='index_hinge', stage='report') ... ERROR
+  test_successful_ancestor_or_current_markers_block_score_and_report_boundaries (tests.test_peak_age_publication.PeakAgePublicationContracts.test_successful_ancestor_or_current_markers_block_score_and_report_boundaries) (ancestor='range_alert', stage='scoring') ... ERROR
+  test_successful_ancestor_or_current_markers_block_score_and_report_boundaries (tests.test_peak_age_publication.PeakAgePublicationContracts.test_successful_ancestor_or_current_markers_block_score_and_report_boundaries) (ancestor='range_alert', stage='report') ... ERROR
+  test_successful_ancestor_or_current_markers_block_score_and_report_boundaries (tests.test_peak_age_publication.PeakAgePublicationContracts.test_successful_ancestor_or_current_markers_block_score_and_report_boundaries) (ancestor='issued_calibration', stage='scoring') ... ERROR
+  test_successful_ancestor_or_current_markers_block_score_and_report_boundaries (tests.test_peak_age_publication.PeakAgePublicationContracts.test_successful_ancestor_or_current_markers_block_score_and_report_boundaries) (ancestor='issued_calibration', stage='report') ... ERROR
+  test_successful_ancestor_or_current_markers_block_score_and_report_boundaries (tests.test_peak_age_publication.PeakAgePublicationContracts.test_successful_ancestor_or_current_markers_block_score_and_report_boundaries) (ancestor='event_cluster_replay', stage='scoring') ... ERROR
+  test_successful_ancestor_or_current_markers_block_score_and_report_boundaries (tests.test_peak_age_publication.PeakAgePublicationContracts.test_successful_ancestor_or_current_markers_block_score_and_report_boundaries) (ancestor='event_cluster_replay', stage='report') ... ERROR
+  test_successful_ancestor_or_current_markers_block_score_and_report_boundaries (tests.test_peak_age_publication.PeakAgePublicationContracts.test_successful_ancestor_or_current_markers_block_score_and_report_boundaries) (ancestor='peak_age', stage='scoring') ... ERROR
+  test_successful_ancestor_or_current_markers_block_score_and_report_boundaries (tests.test_peak_age_publication.PeakAgePublicationContracts.test_successful_ancestor_or_current_markers_block_score_and_report_boundaries) (ancestor='peak_age', stage='report') ... ERROR
+
+======================================================================
+ERROR: test_admission_failure_has_three_registrations_and137_inherited_before_fit (tests.test_peak_age_publication.PeakAgePublicationContracts.test_admission_failure_has_three_registrations_and137_inherited_before_fit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 158, in test_admission_failure_has_three_registrations_and137_inherited_before_fit
+    report, _ = self.fixture(Path(folder), stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_atomic_nonfinite_ledger_serialization_preserves_exact_existing_bytes (tests.test_peak_age_publication.PeakAgePublicationContracts.test_atomic_nonfinite_ledger_serialization_preserves_exact_existing_bytes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 438, in test_atomic_nonfinite_ledger_serialization_preserves_exact_existing_bytes
+    runner.ledger([{"event": "registered"}])
+    ^^^^^^^^^^^^^
+AttributeError: module 'src.peak_age_search' has no attribute 'ledger'
+
+======================================================================
+ERROR: test_commit_rechecks_all_frozen_files_and_entire_code_inventory (tests.test_peak_age_publication.PeakAgePublicationContracts.test_commit_rechecks_all_frozen_files_and_entire_code_inventory) (mode='code')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 260, in test_commit_rechecks_all_frozen_files_and_entire_code_inventory
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_commit_rechecks_all_frozen_files_and_entire_code_inventory (tests.test_peak_age_publication.PeakAgePublicationContracts.test_commit_rechecks_all_frozen_files_and_entire_code_inventory) (mode='input')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 260, in test_commit_rechecks_all_frozen_files_and_entire_code_inventory
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_commit_rechecks_all_frozen_files_and_entire_code_inventory (tests.test_peak_age_publication.PeakAgePublicationContracts.test_commit_rechecks_all_frozen_files_and_entire_code_inventory) (mode='preserved')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 260, in test_commit_rechecks_all_frozen_files_and_entire_code_inventory
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_commit_rechecks_all_frozen_files_and_entire_code_inventory (tests.test_peak_age_publication.PeakAgePublicationContracts.test_commit_rechecks_all_frozen_files_and_entire_code_inventory) (mode='protocol')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 260, in test_commit_rechecks_all_frozen_files_and_entire_code_inventory
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_commit_rechecks_all_frozen_files_and_entire_code_inventory (tests.test_peak_age_publication.PeakAgePublicationContracts.test_commit_rechecks_all_frozen_files_and_entire_code_inventory) (mode='design')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 260, in test_commit_rechecks_all_frozen_files_and_entire_code_inventory
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_commit_rechecks_all_frozen_files_and_entire_code_inventory (tests.test_peak_age_publication.PeakAgePublicationContracts.test_commit_rechecks_all_frozen_files_and_entire_code_inventory) (mode='full_log')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 260, in test_commit_rechecks_all_frozen_files_and_entire_code_inventory
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_commit_rechecks_all_frozen_files_and_entire_code_inventory (tests.test_peak_age_publication.PeakAgePublicationContracts.test_commit_rechecks_all_frozen_files_and_entire_code_inventory) (mode='added_code')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 260, in test_commit_rechecks_all_frozen_files_and_entire_code_inventory
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten (tests.test_peak_age_publication.PeakAgePublicationContracts.test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten) (existing='manifest.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 419, in test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten
+    report, _ = self.fixture(Path(folder), stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten (tests.test_peak_age_publication.PeakAgePublicationContracts.test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten) (existing='trial_ledger.jsonl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 419, in test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten
+    report, _ = self.fixture(Path(folder), stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten (tests.test_peak_age_publication.PeakAgePublicationContracts.test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten) (existing='failure.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 419, in test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten
+    report, _ = self.fixture(Path(folder), stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten (tests.test_peak_age_publication.PeakAgePublicationContracts.test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten) (existing='metrics.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 419, in test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten
+    report, _ = self.fixture(Path(folder), stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten (tests.test_peak_age_publication.PeakAgePublicationContracts.test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten) (existing='verification.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 419, in test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten
+    report, _ = self.fixture(Path(folder), stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten (tests.test_peak_age_publication.PeakAgePublicationContracts.test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten) (existing='publication_audit.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 419, in test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten
+    report, _ = self.fixture(Path(folder), stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten (tests.test_peak_age_publication.PeakAgePublicationContracts.test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten) (existing='private')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 419, in test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten
+    report, _ = self.fixture(Path(folder), stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten (tests.test_peak_age_publication.PeakAgePublicationContracts.test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten) (existing='dangling')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 419, in test_existing_registration_proof_metrics_private_outputs_or_dangling_markers_never_overwritten
+    report, _ = self.fixture(Path(folder), stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks (tests.test_peak_age_publication.PeakAgePublicationContracts.test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks) (ancestor='index_hinge', dangling=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 342, in test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks (tests.test_peak_age_publication.PeakAgePublicationContracts.test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks) (ancestor='index_hinge', dangling=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 342, in test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks (tests.test_peak_age_publication.PeakAgePublicationContracts.test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks) (ancestor='range_alert', dangling=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 342, in test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks (tests.test_peak_age_publication.PeakAgePublicationContracts.test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks) (ancestor='range_alert', dangling=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 342, in test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks (tests.test_peak_age_publication.PeakAgePublicationContracts.test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks) (ancestor='issued_calibration', dangling=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 342, in test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks (tests.test_peak_age_publication.PeakAgePublicationContracts.test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks) (ancestor='issued_calibration', dangling=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 342, in test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks (tests.test_peak_age_publication.PeakAgePublicationContracts.test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks) (ancestor='event_cluster_replay', dangling=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 342, in test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks (tests.test_peak_age_publication.PeakAgePublicationContracts.test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks) (ancestor='event_cluster_replay', dangling=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 342, in test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks (tests.test_peak_age_publication.PeakAgePublicationContracts.test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks) (ancestor='peak_age', dangling=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 342, in test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks (tests.test_peak_age_publication.PeakAgePublicationContracts.test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks) (ancestor='peak_age', dangling=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 342, in test_final_required_pin_hash_is_bracketed_by_fresh_marker_absence_checks
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_incomplete_or_duplicate_contrast_results_cannot_publish_a_partial_family (tests.test_peak_age_publication.PeakAgePublicationContracts.test_incomplete_or_duplicate_contrast_results_cannot_publish_a_partial_family) (mode='missing')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 482, in test_incomplete_or_duplicate_contrast_results_cannot_publish_a_partial_family
+    report, _ = self.fixture(Path(folder), stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_incomplete_or_duplicate_contrast_results_cannot_publish_a_partial_family (tests.test_peak_age_publication.PeakAgePublicationContracts.test_incomplete_or_duplicate_contrast_results_cannot_publish_a_partial_family) (mode='duplicate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 482, in test_incomplete_or_duplicate_contrast_results_cannot_publish_a_partial_family
+    report, _ = self.fixture(Path(folder), stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_incomplete_or_duplicate_contrast_results_cannot_publish_a_partial_family (tests.test_peak_age_publication.PeakAgePublicationContracts.test_incomplete_or_duplicate_contrast_results_cannot_publish_a_partial_family) (mode='foreign')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 482, in test_incomplete_or_duplicate_contrast_results_cannot_publish_a_partial_family
+    report, _ = self.fixture(Path(folder), stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_missing_inherited_evidence_is_explicit_and_never_fabricated (tests.test_peak_age_publication.PeakAgePublicationContracts.test_missing_inherited_evidence_is_explicit_and_never_fabricated)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 251, in test_missing_inherited_evidence_is_explicit_and_never_fabricated
+    report, _ = self.fixture(Path(folder), stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_missing_required_bound_pin_cannot_be_omitted_from_manifest (tests.test_peak_age_publication.PeakAgePublicationContracts.test_missing_required_bound_pin_cannot_be_omitted_from_manifest) (name='reports/event_cluster/failure.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 372, in test_missing_required_bound_pin_cannot_be_omitted_from_manifest
+    report, inputs = self.fixture(Path(folder), stack)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_missing_required_bound_pin_cannot_be_omitted_from_manifest (tests.test_peak_age_publication.PeakAgePublicationContracts.test_missing_required_bound_pin_cannot_be_omitted_from_manifest) (name='reports/event_cluster/metrics.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 372, in test_missing_required_bound_pin_cannot_be_omitted_from_manifest
+    report, inputs = self.fixture(Path(folder), stack)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_missing_required_bound_pin_cannot_be_omitted_from_manifest (tests.test_peak_age_publication.PeakAgePublicationContracts.test_missing_required_bound_pin_cannot_be_omitted_from_manifest) (name='reports/event_cluster/verification.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 372, in test_missing_required_bound_pin_cannot_be_omitted_from_manifest
+    report, inputs = self.fixture(Path(folder), stack)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_missing_required_bound_pin_cannot_be_omitted_from_manifest (tests.test_peak_age_publication.PeakAgePublicationContracts.test_missing_required_bound_pin_cannot_be_omitted_from_manifest) (name='reports/event_cluster_replay/metrics.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 372, in test_missing_required_bound_pin_cannot_be_omitted_from_manifest
+    report, inputs = self.fixture(Path(folder), stack)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_missing_required_bound_pin_cannot_be_omitted_from_manifest (tests.test_peak_age_publication.PeakAgePublicationContracts.test_missing_required_bound_pin_cannot_be_omitted_from_manifest) (name='reports/event_cluster_replay/verification.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 372, in test_missing_required_bound_pin_cannot_be_omitted_from_manifest
+    report, inputs = self.fixture(Path(folder), stack)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_missing_required_bound_pin_cannot_be_omitted_from_manifest (tests.test_peak_age_publication.PeakAgePublicationContracts.test_missing_required_bound_pin_cannot_be_omitted_from_manifest) (name='reports/event_cluster_replay/publication_audit.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 372, in test_missing_required_bound_pin_cannot_be_omitted_from_manifest
+    report, inputs = self.fixture(Path(folder), stack)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_partial_registration_bytes_are_preserved_and_all_three_failures_reconstructed (tests.test_peak_age_publication.PeakAgePublicationContracts.test_partial_registration_bytes_are_preserved_and_all_three_failures_reconstructed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 380, in test_partial_registration_bytes_are_preserved_and_all_three_failures_reconstructed
+    report, _ = self.fixture(Path(folder), stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_pretest_failure_has_no_registration_or_source_admission (tests.test_peak_age_publication.PeakAgePublicationContracts.test_pretest_failure_has_no_registration_or_source_admission)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 200, in test_pretest_failure_has_no_registration_or_source_admission
+    report, _ = self.fixture(Path(folder), stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_pretests_recheck_frozen_code_inventory_protocol_design_and_full_suite_evidence (tests.test_peak_age_publication.PeakAgePublicationContracts.test_pretests_recheck_frozen_code_inventory_protocol_design_and_full_suite_evidence) (mode='code')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 213, in test_pretests_recheck_frozen_code_inventory_protocol_design_and_full_suite_evidence
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_pretests_recheck_frozen_code_inventory_protocol_design_and_full_suite_evidence (tests.test_peak_age_publication.PeakAgePublicationContracts.test_pretests_recheck_frozen_code_inventory_protocol_design_and_full_suite_evidence) (mode='added_code')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 213, in test_pretests_recheck_frozen_code_inventory_protocol_design_and_full_suite_evidence
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_pretests_recheck_frozen_code_inventory_protocol_design_and_full_suite_evidence (tests.test_peak_age_publication.PeakAgePublicationContracts.test_pretests_recheck_frozen_code_inventory_protocol_design_and_full_suite_evidence) (mode='protocol')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 213, in test_pretests_recheck_frozen_code_inventory_protocol_design_and_full_suite_evidence
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_pretests_recheck_frozen_code_inventory_protocol_design_and_full_suite_evidence (tests.test_peak_age_publication.PeakAgePublicationContracts.test_pretests_recheck_frozen_code_inventory_protocol_design_and_full_suite_evidence) (mode='design')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 213, in test_pretests_recheck_frozen_code_inventory_protocol_design_and_full_suite_evidence
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_pretests_recheck_frozen_code_inventory_protocol_design_and_full_suite_evidence (tests.test_peak_age_publication.PeakAgePublicationContracts.test_pretests_recheck_frozen_code_inventory_protocol_design_and_full_suite_evidence) (mode='full_log')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 213, in test_pretests_recheck_frozen_code_inventory_protocol_design_and_full_suite_evidence
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_produce_support_or_fit_failure_retains_all_three_without_scoring (tests.test_peak_age_publication.PeakAgePublicationContracts.test_produce_support_or_fit_failure_retains_all_three_without_scoring)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 229, in test_produce_support_or_fit_failure_retains_all_three_without_scoring
+    report, _ = self.fixture(Path(folder), stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_registration_precedes_even_manifest_input_enumeration (tests.test_peak_age_publication.PeakAgePublicationContracts.test_registration_precedes_even_manifest_input_enumeration)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 145, in test_registration_precedes_even_manifest_input_enumeration
+    report, _ = self.fixture(Path(folder), stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_report_or_partial_evaluated_write_failure_keeps_scored_backup (tests.test_peak_age_publication.PeakAgePublicationContracts.test_report_or_partial_evaluated_write_failure_keeps_scored_backup) (stage='report')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 394, in test_report_or_partial_evaluated_write_failure_keeps_scored_backup
+    report, _ = self.fixture(Path(folder), stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_report_or_partial_evaluated_write_failure_keeps_scored_backup (tests.test_peak_age_publication.PeakAgePublicationContracts.test_report_or_partial_evaluated_write_failure_keeps_scored_backup) (stage='evaluated')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 394, in test_report_or_partial_evaluated_write_failure_keeps_scored_backup
+    report, _ = self.fixture(Path(folder), stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop (tests.test_peak_age_publication.PeakAgePublicationContracts.test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop) (name='reports/event_cluster/failure.json', action='mutate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 283, in test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop (tests.test_peak_age_publication.PeakAgePublicationContracts.test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop) (name='reports/event_cluster/failure.json', action='remove')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 283, in test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop (tests.test_peak_age_publication.PeakAgePublicationContracts.test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop) (name='reports/event_cluster/metrics.json', action='mutate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 283, in test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop (tests.test_peak_age_publication.PeakAgePublicationContracts.test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop) (name='reports/event_cluster/metrics.json', action='remove')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 283, in test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop (tests.test_peak_age_publication.PeakAgePublicationContracts.test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop) (name='reports/event_cluster/verification.json', action='mutate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 283, in test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop (tests.test_peak_age_publication.PeakAgePublicationContracts.test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop) (name='reports/event_cluster/verification.json', action='remove')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 283, in test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop (tests.test_peak_age_publication.PeakAgePublicationContracts.test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop) (name='reports/event_cluster_replay/metrics.json', action='mutate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 283, in test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop (tests.test_peak_age_publication.PeakAgePublicationContracts.test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop) (name='reports/event_cluster_replay/metrics.json', action='remove')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 283, in test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop (tests.test_peak_age_publication.PeakAgePublicationContracts.test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop) (name='reports/event_cluster_replay/verification.json', action='mutate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 283, in test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop (tests.test_peak_age_publication.PeakAgePublicationContracts.test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop) (name='reports/event_cluster_replay/verification.json', action='remove')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 283, in test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop (tests.test_peak_age_publication.PeakAgePublicationContracts.test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop) (name='reports/event_cluster_replay/publication_audit.json', action='mutate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 283, in test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop (tests.test_peak_age_publication.PeakAgePublicationContracts.test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop) (name='reports/event_cluster_replay/publication_audit.json', action='remove')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 283, in test_required_failed20_and_latest21_pins_rechecked_after_general_hash_loop
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_required_old_failed_family_remains_byte_exact_and_is_not_globally_blocked (tests.test_peak_age_publication.PeakAgePublicationContracts.test_required_old_failed_family_remains_byte_exact_and_is_not_globally_blocked)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 449, in test_required_old_failed_family_remains_byte_exact_and_is_not_globally_blocked
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_run_entrypoint_is_implemented (tests.test_peak_age_publication.PeakAgePublicationContracts.test_run_entrypoint_is_implemented)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 141, in test_run_entrypoint_is_implemented
+    self.assertTrue(callable(runner.run))
+                             ^^^^^^^^^^
+AttributeError: module 'src.peak_age_search' has no attribute 'run'
+
+======================================================================
+ERROR: test_score_failure_keeps_written_diagnostics_and_canonical_p1 (tests.test_peak_age_publication.PeakAgePublicationContracts.test_score_failure_keeps_written_diagnostics_and_canonical_p1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 241, in test_score_failure_keeps_written_diagnostics_and_canonical_p1
+    report, _ = self.fixture(Path(folder), stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_scoring_follows_complete_production_and_uses_identical_declared_inputs (tests.test_peak_age_publication.PeakAgePublicationContracts.test_scoring_follows_complete_production_and_uses_identical_declared_inputs)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 459, in test_scoring_follows_complete_production_and_uses_identical_declared_inputs
+    self.fixture(Path(folder), stack)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_success_has_full_inventory_exactten_outputs143events_and_unscored_applications (tests.test_peak_age_publication.PeakAgePublicationContracts.test_success_has_full_inventory_exactten_outputs143events_and_unscored_applications)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 175, in test_success_has_full_inventory_exactten_outputs143events_and_unscored_applications
+    report, inputs = self.fixture(root, stack)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_successful_ancestor_or_current_markers_block_score_and_report_boundaries (tests.test_peak_age_publication.PeakAgePublicationContracts.test_successful_ancestor_or_current_markers_block_score_and_report_boundaries) (ancestor='index_hinge', stage='scoring')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 314, in test_successful_ancestor_or_current_markers_block_score_and_report_boundaries
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_successful_ancestor_or_current_markers_block_score_and_report_boundaries (tests.test_peak_age_publication.PeakAgePublicationContracts.test_successful_ancestor_or_current_markers_block_score_and_report_boundaries) (ancestor='index_hinge', stage='report')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 314, in test_successful_ancestor_or_current_markers_block_score_and_report_boundaries
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_successful_ancestor_or_current_markers_block_score_and_report_boundaries (tests.test_peak_age_publication.PeakAgePublicationContracts.test_successful_ancestor_or_current_markers_block_score_and_report_boundaries) (ancestor='range_alert', stage='scoring')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 314, in test_successful_ancestor_or_current_markers_block_score_and_report_boundaries
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_successful_ancestor_or_current_markers_block_score_and_report_boundaries (tests.test_peak_age_publication.PeakAgePublicationContracts.test_successful_ancestor_or_current_markers_block_score_and_report_boundaries) (ancestor='range_alert', stage='report')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 314, in test_successful_ancestor_or_current_markers_block_score_and_report_boundaries
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_successful_ancestor_or_current_markers_block_score_and_report_boundaries (tests.test_peak_age_publication.PeakAgePublicationContracts.test_successful_ancestor_or_current_markers_block_score_and_report_boundaries) (ancestor='issued_calibration', stage='scoring')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 314, in test_successful_ancestor_or_current_markers_block_score_and_report_boundaries
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_successful_ancestor_or_current_markers_block_score_and_report_boundaries (tests.test_peak_age_publication.PeakAgePublicationContracts.test_successful_ancestor_or_current_markers_block_score_and_report_boundaries) (ancestor='issued_calibration', stage='report')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 314, in test_successful_ancestor_or_current_markers_block_score_and_report_boundaries
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_successful_ancestor_or_current_markers_block_score_and_report_boundaries (tests.test_peak_age_publication.PeakAgePublicationContracts.test_successful_ancestor_or_current_markers_block_score_and_report_boundaries) (ancestor='event_cluster_replay', stage='scoring')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 314, in test_successful_ancestor_or_current_markers_block_score_and_report_boundaries
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_successful_ancestor_or_current_markers_block_score_and_report_boundaries (tests.test_peak_age_publication.PeakAgePublicationContracts.test_successful_ancestor_or_current_markers_block_score_and_report_boundaries) (ancestor='event_cluster_replay', stage='report')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 314, in test_successful_ancestor_or_current_markers_block_score_and_report_boundaries
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_successful_ancestor_or_current_markers_block_score_and_report_boundaries (tests.test_peak_age_publication.PeakAgePublicationContracts.test_successful_ancestor_or_current_markers_block_score_and_report_boundaries) (ancestor='peak_age', stage='scoring')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 314, in test_successful_ancestor_or_current_markers_block_score_and_report_boundaries
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+======================================================================
+ERROR: test_successful_ancestor_or_current_markers_block_score_and_report_boundaries (tests.test_peak_age_publication.PeakAgePublicationContracts.test_successful_ancestor_or_current_markers_block_score_and_report_boundaries) (ancestor='peak_age', stage='report')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 314, in test_successful_ancestor_or_current_markers_block_score_and_report_boundaries
+    report, _ = self.fixture(root, stack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_publication.py", line 89, in fixture
+    stack.enter_context(patch.object(runner, "input_paths", return_value=inputs))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.peak_age_search' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py'> does not have the attribute 'input_paths'
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.603s
+
+FAILED (errors=75)

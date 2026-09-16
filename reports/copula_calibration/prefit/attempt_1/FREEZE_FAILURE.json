@@ -1,0 +1,9 @@
+{
+  "recorded_utc": "2026-09-09T16:25:07.165448+00:00",
+  "stage": "pre-registration source manifest adapter",
+  "error": "FileNotFoundError: repository-root metrics.json; old terminal report_artifact_hashes use report-directory-relative names",
+  "scientific_registration_created": false,
+  "market_arrays_decoded": false,
+  "new_market_fits": 0,
+  "resolution": "Resolve old terminal report_artifact_hashes relative to reports/joint_copula/predictive; preserve every original hash."
+}

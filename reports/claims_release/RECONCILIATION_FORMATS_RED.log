@@ -1,0 +1,309 @@
+test_body_date_space_before_comma_preserves_explicit_evidence (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_body_date_space_before_comma_preserves_explicit_evidence) ... 
+  test_body_date_space_before_comma_preserves_explicit_evidence (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_body_date_space_before_comma_preserves_explicit_evidence) (header='June 20 , 2024', source_url='https://oui.doleta.gov/press/2024/062024.pdf') ... FAIL
+  test_body_date_space_before_comma_preserves_explicit_evidence (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_body_date_space_before_comma_preserves_explicit_evidence) (header='June 20 , 2024', source_url='https://www.dol.gov/sites/dolgov/files/OPA/newsreleases/ui-claims/20249999.pdf') ... ERROR
+  test_body_date_space_before_comma_preserves_explicit_evidence (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_body_date_space_before_comma_preserves_explicit_evidence) (header='Jun. 20\n, 2024', source_url='https://oui.doleta.gov/press/2024/062024.pdf') ... FAIL
+  test_body_date_space_before_comma_preserves_explicit_evidence (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_body_date_space_before_comma_preserves_explicit_evidence) (header='Jun. 20\n, 2024', source_url='https://www.dol.gov/sites/dolgov/files/OPA/newsreleases/ui-claims/20249999.pdf') ... ERROR
+  test_body_date_space_before_comma_preserves_explicit_evidence (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_body_date_space_before_comma_preserves_explicit_evidence) (header='June 20\t,\n2024', source_url='https://oui.doleta.gov/press/2024/062024.pdf') ... FAIL
+  test_body_date_space_before_comma_preserves_explicit_evidence (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_body_date_space_before_comma_preserves_explicit_evidence) (header='June 20\t,\n2024', source_url='https://www.dol.gov/sites/dolgov/files/OPA/newsreleases/ui-claims/20249999.pdf') ... ERROR
+test_dummy_file_has_no_headline_and_cannot_become_a_report (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_dummy_file_has_no_headline_and_cannot_become_a_report) ... ok
+test_format_support_does_not_relax_number_validation (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_format_support_does_not_relax_number_validation) ... ok
+test_format_support_does_not_repair_invalid_dates_or_delimiters (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_format_support_does_not_repair_invalid_dates_or_delimiters) ... ok
+test_formats_compose_without_changing_first_count_or_source_text_hash (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_formats_compose_without_changing_first_count_or_source_text_hash) ... ERROR
+test_letter_punctuation_and_other_word_repairs_are_not_allowed (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_letter_punctuation_and_other_word_repairs_are_not_allowed) ... ok
+test_new_format_headlines_are_counted_for_ambiguity (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_new_format_headlines_are_counted_for_ambiguity) ... 
+  test_new_format_headlines_are_counted_for_ambiguity (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_new_format_headlines_are_counted_for_ambiguity) (second='For release at 8:30 A.M. Thursday, June 20, 2024\nUNEMPLOYMENT INSURANCE WEE') ... FAIL
+  test_new_format_headlines_are_counted_for_ambiguity (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_new_format_headlines_are_counted_for_ambiguity) (second='For release at 8:30 A.M. Thursday, June 20, 2024\nUNEMPLOYMENT INSURANCE WEE') ... FAIL
+  test_new_format_headlines_are_counted_for_ambiguity (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_new_format_headlines_are_counted_for_ambiguity) (second='For release at 8:30 A.M. Thursday, June 20, 2024\nUNEMPLOYMENT INSURANCE WEE') ... FAIL
+test_newly_recognized_wrong_or_conflicting_body_dates_fail (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_newly_recognized_wrong_or_conflicting_body_dates_fail) ... 
+  test_newly_recognized_wrong_or_conflicting_body_dates_fail (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_newly_recognized_wrong_or_conflicting_body_dates_fail) (source_url='https://oui.doleta.gov/press/2024/062024.pdf', text='For release at 8:30 A.M. Thursday, June 21 , 2024\nUNEMPLOYMENT INSURANCE WE') ... FAIL
+  test_newly_recognized_wrong_or_conflicting_body_dates_fail (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_newly_recognized_wrong_or_conflicting_body_dates_fail) (source_url='https://oui.doleta.gov/press/2024/062024.pdf', text='For release at 8:30 A.M. Thursday, June 20, 2024\nUNEMPLOYMENT INSURANCE WEE') ... FAIL
+  test_newly_recognized_wrong_or_conflicting_body_dates_fail (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_newly_recognized_wrong_or_conflicting_body_dates_fail) (source_url='https://oui.doleta.gov/press/2024/062024.pdf', text='For release at 8:30 A.M. Thursday, June 20 , 2023\nUNEMPLOYMENT INSURANCE WE') ... FAIL
+  test_newly_recognized_wrong_or_conflicting_body_dates_fail (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_newly_recognized_wrong_or_conflicting_body_dates_fail) (source_url='https://www.dol.gov/sites/dolgov/files/OPA/newsreleases/ui-claims/20249999.pdf', text='For release at 8:30 A.M. Thursday, June 20, 2024\nUNEMPLOYMENT INSURANCE WEE') ... FAIL
+test_only_whitespace_may_split_the_exact_headline_word_advance (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_only_whitespace_may_split_the_exact_headline_word_advance) ... 
+  test_only_whitespace_may_split_the_exact_headline_word_advance (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_only_whitespace_may_split_the_exact_headline_word_advance) (advance='a dvance') ... ERROR
+  test_only_whitespace_may_split_the_exact_headline_word_advance (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_only_whitespace_may_split_the_exact_headline_word_advance) (advance='adv ance') ... ERROR
+  test_only_whitespace_may_split_the_exact_headline_word_advance (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_only_whitespace_may_split_the_exact_headline_word_advance) (advance='a\ndvance') ... ERROR
+  test_only_whitespace_may_split_the_exact_headline_word_advance (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_only_whitespace_may_split_the_exact_headline_word_advance) (advance='adv\tance') ... ERROR
+  test_only_whitespace_may_split_the_exact_headline_word_advance (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_only_whitespace_may_split_the_exact_headline_word_advance) (advance='a\xa0dvance') ... ERROR
+  test_only_whitespace_may_split_the_exact_headline_word_advance (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_only_whitespace_may_split_the_exact_headline_word_advance) (advance='a d v a n c e') ... ERROR
+test_recognized_body_weekday_still_must_match_spaced_date (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_recognized_body_weekday_still_must_match_spaced_date) ... FAIL
+test_reference_day_comma_is_optional_without_erasing_boundaries (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_reference_day_comma_is_optional_without_erasing_boundaries) ... 
+  test_reference_day_comma_is_optional_without_erasing_boundaries (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_reference_day_comma_is_optional_without_erasing_boundaries) (reference='June 15') ... ERROR
+  test_reference_day_comma_is_optional_without_erasing_boundaries (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_reference_day_comma_is_optional_without_erasing_boundaries) (reference='June 15\n') ... ERROR
+test_revised_continued_and_unadjusted_substitutions_still_fail (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_revised_continued_and_unadjusted_substitutions_still_fail) ... ok
+
+======================================================================
+ERROR: test_body_date_space_before_comma_preserves_explicit_evidence (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_body_date_space_before_comma_preserves_explicit_evidence) (header='June 20 , 2024', source_url='https://www.dol.gov/sites/dolgov/files/OPA/newsreleases/ui-claims/20249999.pdf')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 57, in test_body_date_space_before_comma_preserves_explicit_evidence
+    self.assert_literal_report(fixture(header=header), source_url)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 26, in assert_literal_report
+    report = reconcile.parse_release_text(text, RELEASE, source_url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/claims_release_reconcile.py", line 163, in parse_release_text
+    raise ValueError(
+ValueError: Noncalendar source identity requires an explicit agreeing body release date
+
+======================================================================
+ERROR: test_body_date_space_before_comma_preserves_explicit_evidence (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_body_date_space_before_comma_preserves_explicit_evidence) (header='Jun. 20\n, 2024', source_url='https://www.dol.gov/sites/dolgov/files/OPA/newsreleases/ui-claims/20249999.pdf')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 57, in test_body_date_space_before_comma_preserves_explicit_evidence
+    self.assert_literal_report(fixture(header=header), source_url)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 26, in assert_literal_report
+    report = reconcile.parse_release_text(text, RELEASE, source_url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/claims_release_reconcile.py", line 163, in parse_release_text
+    raise ValueError(
+ValueError: Noncalendar source identity requires an explicit agreeing body release date
+
+======================================================================
+ERROR: test_body_date_space_before_comma_preserves_explicit_evidence (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_body_date_space_before_comma_preserves_explicit_evidence) (header='June 20\t,\n2024', source_url='https://www.dol.gov/sites/dolgov/files/OPA/newsreleases/ui-claims/20249999.pdf')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 57, in test_body_date_space_before_comma_preserves_explicit_evidence
+    self.assert_literal_report(fixture(header=header), source_url)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 26, in assert_literal_report
+    report = reconcile.parse_release_text(text, RELEASE, source_url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/claims_release_reconcile.py", line 163, in parse_release_text
+    raise ValueError(
+ValueError: Noncalendar source identity requires an explicit agreeing body release date
+
+======================================================================
+ERROR: test_formats_compose_without_changing_first_count_or_source_text_hash (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_formats_compose_without_changing_first_count_or_source_text_hash)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 60, in test_formats_compose_without_changing_first_count_or_source_text_hash
+    self.assert_literal_report(
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 26, in assert_literal_report
+    report = reconcile.parse_release_text(text, RELEASE, source_url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/claims_release_reconcile.py", line 149, in parse_release_text
+    raise ValueError(
+ValueError: Exactly one advance seasonally adjusted initial-claims headline required
+
+======================================================================
+ERROR: test_only_whitespace_may_split_the_exact_headline_word_advance (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_only_whitespace_may_split_the_exact_headline_word_advance) (advance='a dvance')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 51, in test_only_whitespace_may_split_the_exact_headline_word_advance
+    self.assert_literal_report(fixture(advance=advance))
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 26, in assert_literal_report
+    report = reconcile.parse_release_text(text, RELEASE, source_url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/claims_release_reconcile.py", line 149, in parse_release_text
+    raise ValueError(
+ValueError: Exactly one advance seasonally adjusted initial-claims headline required
+
+======================================================================
+ERROR: test_only_whitespace_may_split_the_exact_headline_word_advance (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_only_whitespace_may_split_the_exact_headline_word_advance) (advance='adv ance')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 51, in test_only_whitespace_may_split_the_exact_headline_word_advance
+    self.assert_literal_report(fixture(advance=advance))
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 26, in assert_literal_report
+    report = reconcile.parse_release_text(text, RELEASE, source_url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/claims_release_reconcile.py", line 149, in parse_release_text
+    raise ValueError(
+ValueError: Exactly one advance seasonally adjusted initial-claims headline required
+
+======================================================================
+ERROR: test_only_whitespace_may_split_the_exact_headline_word_advance (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_only_whitespace_may_split_the_exact_headline_word_advance) (advance='a\ndvance')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 51, in test_only_whitespace_may_split_the_exact_headline_word_advance
+    self.assert_literal_report(fixture(advance=advance))
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 26, in assert_literal_report
+    report = reconcile.parse_release_text(text, RELEASE, source_url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/claims_release_reconcile.py", line 149, in parse_release_text
+    raise ValueError(
+ValueError: Exactly one advance seasonally adjusted initial-claims headline required
+
+======================================================================
+ERROR: test_only_whitespace_may_split_the_exact_headline_word_advance (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_only_whitespace_may_split_the_exact_headline_word_advance) (advance='adv\tance')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 51, in test_only_whitespace_may_split_the_exact_headline_word_advance
+    self.assert_literal_report(fixture(advance=advance))
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 26, in assert_literal_report
+    report = reconcile.parse_release_text(text, RELEASE, source_url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/claims_release_reconcile.py", line 149, in parse_release_text
+    raise ValueError(
+ValueError: Exactly one advance seasonally adjusted initial-claims headline required
+
+======================================================================
+ERROR: test_only_whitespace_may_split_the_exact_headline_word_advance (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_only_whitespace_may_split_the_exact_headline_word_advance) (advance='a\xa0dvance')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 51, in test_only_whitespace_may_split_the_exact_headline_word_advance
+    self.assert_literal_report(fixture(advance=advance))
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 26, in assert_literal_report
+    report = reconcile.parse_release_text(text, RELEASE, source_url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/claims_release_reconcile.py", line 149, in parse_release_text
+    raise ValueError(
+ValueError: Exactly one advance seasonally adjusted initial-claims headline required
+
+======================================================================
+ERROR: test_only_whitespace_may_split_the_exact_headline_word_advance (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_only_whitespace_may_split_the_exact_headline_word_advance) (advance='a d v a n c e')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 51, in test_only_whitespace_may_split_the_exact_headline_word_advance
+    self.assert_literal_report(fixture(advance=advance))
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 26, in assert_literal_report
+    report = reconcile.parse_release_text(text, RELEASE, source_url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/claims_release_reconcile.py", line 149, in parse_release_text
+    raise ValueError(
+ValueError: Exactly one advance seasonally adjusted initial-claims headline required
+
+======================================================================
+ERROR: test_reference_day_comma_is_optional_without_erasing_boundaries (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_reference_day_comma_is_optional_without_erasing_boundaries) (reference='June 15')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 38, in test_reference_day_comma_is_optional_without_erasing_boundaries
+    self.assert_literal_report(fixture(reference=reference))
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 26, in assert_literal_report
+    report = reconcile.parse_release_text(text, RELEASE, source_url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/claims_release_reconcile.py", line 149, in parse_release_text
+    raise ValueError(
+ValueError: Exactly one advance seasonally adjusted initial-claims headline required
+
+======================================================================
+ERROR: test_reference_day_comma_is_optional_without_erasing_boundaries (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_reference_day_comma_is_optional_without_erasing_boundaries) (reference='June 15\n')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 38, in test_reference_day_comma_is_optional_without_erasing_boundaries
+    self.assert_literal_report(fixture(reference=reference))
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 26, in assert_literal_report
+    report = reconcile.parse_release_text(text, RELEASE, source_url)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/claims_release_reconcile.py", line 149, in parse_release_text
+    raise ValueError(
+ValueError: Exactly one advance seasonally adjusted initial-claims headline required
+
+======================================================================
+FAIL: test_body_date_space_before_comma_preserves_explicit_evidence (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_body_date_space_before_comma_preserves_explicit_evidence) (header='June 20 , 2024', source_url='https://oui.doleta.gov/press/2024/062024.pdf')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 57, in test_body_date_space_before_comma_preserves_explicit_evidence
+    self.assert_literal_report(fixture(header=header), source_url)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 30, in assert_literal_report
+    self.assertEqual(report["body_release_dates"], [RELEASE])
+AssertionError: Lists differ: [] != ['2024-06-20']
+
+Second list contains 1 additional elements.
+First extra element 0:
+'2024-06-20'
+
+- []
++ ['2024-06-20']
+
+======================================================================
+FAIL: test_body_date_space_before_comma_preserves_explicit_evidence (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_body_date_space_before_comma_preserves_explicit_evidence) (header='Jun. 20\n, 2024', source_url='https://oui.doleta.gov/press/2024/062024.pdf')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 57, in test_body_date_space_before_comma_preserves_explicit_evidence
+    self.assert_literal_report(fixture(header=header), source_url)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 30, in assert_literal_report
+    self.assertEqual(report["body_release_dates"], [RELEASE])
+AssertionError: Lists differ: [] != ['2024-06-20']
+
+Second list contains 1 additional elements.
+First extra element 0:
+'2024-06-20'
+
+- []
++ ['2024-06-20']
+
+======================================================================
+FAIL: test_body_date_space_before_comma_preserves_explicit_evidence (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_body_date_space_before_comma_preserves_explicit_evidence) (header='June 20\t,\n2024', source_url='https://oui.doleta.gov/press/2024/062024.pdf')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 57, in test_body_date_space_before_comma_preserves_explicit_evidence
+    self.assert_literal_report(fixture(header=header), source_url)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 30, in assert_literal_report
+    self.assertEqual(report["body_release_dates"], [RELEASE])
+AssertionError: Lists differ: [] != ['2024-06-20']
+
+Second list contains 1 additional elements.
+First extra element 0:
+'2024-06-20'
+
+- []
++ ['2024-06-20']
+
+======================================================================
+FAIL: test_new_format_headlines_are_counted_for_ambiguity (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_new_format_headlines_are_counted_for_ambiguity) (second='For release at 8:30 A.M. Thursday, June 20, 2024\nUNEMPLOYMENT INSURANCE WEE')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 87, in test_new_format_headlines_are_counted_for_ambiguity
+    with self.subTest(second=second[:75]), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_new_format_headlines_are_counted_for_ambiguity (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_new_format_headlines_are_counted_for_ambiguity) (second='For release at 8:30 A.M. Thursday, June 20, 2024\nUNEMPLOYMENT INSURANCE WEE')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 87, in test_new_format_headlines_are_counted_for_ambiguity
+    with self.subTest(second=second[:75]), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_new_format_headlines_are_counted_for_ambiguity (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_new_format_headlines_are_counted_for_ambiguity) (second='For release at 8:30 A.M. Thursday, June 20, 2024\nUNEMPLOYMENT INSURANCE WEE')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 87, in test_new_format_headlines_are_counted_for_ambiguity
+    with self.subTest(second=second[:75]), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_newly_recognized_wrong_or_conflicting_body_dates_fail (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_newly_recognized_wrong_or_conflicting_body_dates_fail) (source_url='https://oui.doleta.gov/press/2024/062024.pdf', text='For release at 8:30 A.M. Thursday, June 21 , 2024\nUNEMPLOYMENT INSURANCE WE')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 72, in test_newly_recognized_wrong_or_conflicting_body_dates_fail
+    with self.subTest(source_url=source_url, text=text[:75]), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_newly_recognized_wrong_or_conflicting_body_dates_fail (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_newly_recognized_wrong_or_conflicting_body_dates_fail) (source_url='https://oui.doleta.gov/press/2024/062024.pdf', text='For release at 8:30 A.M. Thursday, June 20, 2024\nUNEMPLOYMENT INSURANCE WEE')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 72, in test_newly_recognized_wrong_or_conflicting_body_dates_fail
+    with self.subTest(source_url=source_url, text=text[:75]), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_newly_recognized_wrong_or_conflicting_body_dates_fail (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_newly_recognized_wrong_or_conflicting_body_dates_fail) (source_url='https://oui.doleta.gov/press/2024/062024.pdf', text='For release at 8:30 A.M. Thursday, June 20 , 2023\nUNEMPLOYMENT INSURANCE WE')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 72, in test_newly_recognized_wrong_or_conflicting_body_dates_fail
+    with self.subTest(source_url=source_url, text=text[:75]), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_newly_recognized_wrong_or_conflicting_body_dates_fail (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_newly_recognized_wrong_or_conflicting_body_dates_fail) (source_url='https://www.dol.gov/sites/dolgov/files/OPA/newsreleases/ui-claims/20249999.pdf', text='For release at 8:30 A.M. Thursday, June 20, 2024\nUNEMPLOYMENT INSURANCE WEE')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 72, in test_newly_recognized_wrong_or_conflicting_body_dates_fail
+    with self.subTest(source_url=source_url, text=text[:75]), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_recognized_body_weekday_still_must_match_spaced_date (tests.test_claims_release_reconcile_formats.ClaimsReleaseExtractionFormatTests.test_recognized_body_weekday_still_must_match_spaced_date)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_formats.py", line 77, in test_recognized_body_weekday_still_must_match_spaced_date
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.008s
+
+FAILED (failures=11, errors=12)

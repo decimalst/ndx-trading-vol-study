@@ -1,0 +1,2 @@
+Prewritten registered-pin contract fails before implementation:
+inherited() takes 1 positional argument but 2 were given

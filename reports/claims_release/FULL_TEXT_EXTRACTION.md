@@ -1,0 +1,15 @@
+# Full-document source text extraction
+
+This separate stage extracts document text without parsing claims counts or constructing a model cohort. It uses the completed 852-release raw acquisition plus the separately authenticated 2019-10-17 document. The original archive-list plan and raw files remain unchanged.
+
+Before extraction, the private plan pinned `data/claims_release/dol_bulk/acquisition_ledger.json` at SHA-256 `ba8f5919f5e7e211d506616d48980e48a8bce101d47bf655cc4530232747087d` and `data/claims_release/dol_resolution/coverage_resolution.json` at `fbcae21d009257679ea997ae56cf4e8e23dde6d7584e23048527b1132be64902`. It verified each input body and source receipt hash. The resulting plan is `data/claims_release/dol_text/plan.json`, SHA-256 `bb276167d8fc45a33e9f2a90460046f9baf0dad8e98c302cdd3210277e9fc059`, covering **853 documents: 253 HTML and 600 PDF**.
+
+The extraction methods are identical to the five validated pilot cases. The repository's Python 3.11 environment uses BeautifulSoup 4.15.0 with `html.parser`, removes script/style nodes and obtains space-separated stripped text. In a separate interpreter stage, bundled Python uses pypdf 6.10.0 to read every PDF page, applies each page's `extract_text()` and joins the page results with newline characters. The two stages run sequentially with at most two workers. Runtime binary packages are not mixed.
+
+Five pilot text files are reused only after matching the pinned raw body, complete extractor identity and library version. Their original text and extraction-receipt hashes remain linked in the new record. Newly extracted text and each extraction receipt are saved privately under `data/claims_release/dol_text/text/`; failures remain separate explicit records. Raw body bytes are never edited, and neither adapter stage imports a source-count parser or model module.
+
+The final flat ledger, `data/claims_release/dol_text/text_ledger.json`, exposes release date/URL, original body and source-receipt paths/hashes, source format, full text path/hash, extraction-receipt path/hash, extractor/version, PDF page count, status and extraction success. Its SHA-256 is `1fca7e8b7da12e388a8a4e982c6ffe18cf48c11bdbd13e4442223d110d8b5ceb`.
+
+Both stages completed successfully by **2026-09-08 21:09:56 UTC**. All **853 documents** have full text, with **zero extraction failures**: 253 HTML documents and 600 PDFs covering all 5,594 PDF pages. Five of the successful records reuse pinned pilot text; the other 848 were extracted in this stage. Every source body/ledger pin and output text/extraction-receipt hash was rechecked at completion. All private directory/file permissions passed the check.
+
+The ledger status is `FULL_TEXT_EXTRACTION_COMPLETED_NOT_CLAIMS_PARSED`. Individual successful records carry `EXTRACTED_FULL_TEXT` or `REUSED_PINNED_FULL_TEXT` and `extraction_success=true`. The tested headline parser has not been invoked by this task. Extraction success does not itself authenticate the numerical first-release headline or imply source readiness for forecasting.

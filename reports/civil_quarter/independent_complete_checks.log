@@ -1,0 +1,22 @@
+..............E..
+======================================================================
+ERROR: test_independent_inference_matches_complete_synthetic_producer_and_rejects_gates (tests.test_verify_civil_quarter.PublicationContracts.test_independent_inference_matches_complete_synthetic_producer_and_rejects_gates)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_civil_quarter.py", line 198, in test_independent_inference_matches_complete_synthetic_producer_and_rejects_gates
+    metrics = search.evaluate(rows, features, protocol, 118, prior=prior)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/civil_quarter_search.py", line 564, in evaluate
+    phase = paired_inference(
+            ^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/civil_quarter_search.py", line 455, in paired_inference
+    result = old_inference.paired_inference(candidate, control, difference, p, seed)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/cross_moment_search.py", line 123, in paired_inference
+    raise ValueError(
+ValueError: Aligned finite nonnegative product losses and finite paired gaps required
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.540s
+
+FAILED (errors=1)

@@ -1,0 +1,13 @@
+test_all_five_cohorts_and_products_validated (tests.test_target_aligned_panel.TargetAlignedPanel.test_all_five_cohorts_and_products_validated) ... ok
+test_all_original_rows_exact_and_both_new_models_on_same_origins (tests.test_target_aligned_panel.TargetAlignedPanel.test_all_original_rows_exact_and_both_new_models_on_same_origins) ... ok
+test_changed_frozen_metadata_missing_fit_and_wrong_issued_marginals_reject (tests.test_target_aligned_panel.TargetAlignedPanel.test_changed_frozen_metadata_missing_fit_and_wrong_issued_marginals_reject) ... ok
+test_entire_unscored_application_month_still_retains_both_scalar_fits (tests.test_target_aligned_panel.TargetAlignedPanel.test_entire_unscored_application_month_still_retains_both_scalar_fits) ... ok
+test_future_labels_do_not_change_first_scalar_fit (tests.test_target_aligned_panel.TargetAlignedPanel.test_future_labels_do_not_change_first_scalar_fit) ... ok
+test_invalid_saved_geometry_is_not_refitted_or_repaired (tests.test_target_aligned_panel.TargetAlignedPanel.test_invalid_saved_geometry_is_not_refitted_or_repaired) ... ok
+test_replay_uses_stored_nonzero_coefficients_and_scaled_variance (tests.test_target_aligned_panel.TargetAlignedPanel.test_replay_uses_stored_nonzero_coefficients_and_scaled_variance) ... ok
+test_saved_coefficients_replayed_without_new_marginal_fit (tests.test_target_aligned_panel.TargetAlignedPanel.test_saved_coefficients_replayed_without_new_marginal_fit) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.062s
+
+OK

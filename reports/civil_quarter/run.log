@@ -1,0 +1,33 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/civil_quarter_search.py", line 926, in <module>
+    run()
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/civil_quarter_search.py", line 869, in run
+    proof = validate_upstream(ROOT)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_civil_quarter.py", line 1116, in validate_upstream
+    rebuilt = reconstruct(root, info, pins)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_civil_quarter.py", line 974, in reconstruct_calendar
+    features, targets, audit = calendar_old.reconstruct(staged, oldp)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_calendar_variance.py", line 255, in reconstruct
+    daily, iv, bls, annual, market, plans = load_source_tables(root, protocol)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_calendar_variance.py", line 241, in load_source_tables
+    scan = scan_source_admissions(root, protocol)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_macro_overnight.py", line 104, in scan_source_admissions
+    if digest(snapshot) != record["snapshot_sha256"]:
+       ^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_iterative_signal_search.py", line 186, in digest
+    return hashlib.sha256(pathlib.Path(path).read_bytes()).hexdigest()
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py", line 1050, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/folders/jn/2wqppgv57cx3k54l_dqt9sl00000gn/T/civil-quarter-old-source-gtixn8tx/data/source_discovery/bls_plan_capture/cpi_12152015.web-extract.txt'

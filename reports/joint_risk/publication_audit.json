@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-09-07T08:27:24.048336+00:00",
+  "independent_review": "model_family",
+  "artifact_hashes_checked": 529,
+  "protocol_hash_matches": true,
+  "cumulative_hypotheses": 112,
+  "ledger_events": 114,
+  "forecasts": 7386,
+  "monthly_fits": 118,
+  "scalar_fits": 236,
+  "certificate_intervals": 14946,
+  "full_pre_run_tests": 1218,
+  "focused_pre_run_tests": 127,
+  "local_links_checked": 15,
+  "figure_visually_reviewed": true,
+  "recent_ten_wave_comparisons": 58,
+  "recent_ten_wave_forecasts": 121279,
+  "effect_and_stability_gates_pass": true,
+  "multiplicity_gates_pass": false,
+  "findings": [],
+  "scope": "Publication statements, saved metrics and verification, frozen artifact hashes, links and figure; no new fitting or frozen artifact changes."
+}

@@ -1,0 +1,181 @@
+{
+  "accounting": {
+    "all_three_verdicts_checked": true,
+    "cumulative_hypotheses": 149,
+    "evaluated": 3,
+    "inherited": 146,
+    "journal_rows": 152,
+    "leads": [],
+    "prior_records_exactly_preserved": true,
+    "registered": 3,
+    "registration_prefix_sha256": "d56a72e0a0d0e730394f64b30122b3295c1eba8e8565d3f9078fed69c0a8b134"
+  },
+  "artifact_hashes": {
+    "FULL_PRECHECK.json": "f6ec4b617c6e3da95868d61a3d81c677a9aa0e65d3a0f941fc17813e45cbc0c4",
+    "FULL_PRECHECK.log": "5be4435c043a9011affbf4fd7b891413a7deb8b2242ff864ca89031879a8ee6e",
+    "TEST_GATE_RESULT.json": "1433cd160bb68b775aed22697e23ef8c480f99017c1486bde37156664f210efd",
+    "TEST_SELECTION.json": "06793e70074b402aa1ac83bfef80f89f5694143f2a0154a05a9f3ba346ffe589",
+    "forecast_verification.json": "e4f168e2679a61ca4075f7221d431e76144a50a178f31ab3fe591147e44463c3",
+    "freeze_record.json": "3ff970b3e4fa0ed77e862cd1f1fe2f8e872378f643bd1366f4fa81e7e4c95b43",
+    "manifest.json": "a7acefd1a8724eef86aeafce589d771418221669135cc2540dbb4630c9a33a83",
+    "metrics.json": "3ad635e31bf81f224ccf690bb0efd109b8f0b23dea6fc7bfb30d6073b7ffde58",
+    "score_verification.json": "1f3938eb02f0ceb7493505a1bac8790f2d5c42c9654e31d5fe722a0b62cb09f6",
+    "terminal.json": "85e66cca0c8750fb994fbb5e11256ada8a274206487564c7a7e8b186b00030bf",
+    "trial_ledger.jsonl": "b9af3ce5fa61780080f8c599133ebdc44b3c5782a5d98b95aa0f93efbdf874f1",
+    "verification.json": "c78af4d31336dceb585c60f02823c964c5503f56745b489dfd0695ee4433a92f"
+  },
+  "audit_operations": [
+    "Hash authentication of all frozen code/input/research/test-receipt pins before and after audit.",
+    "Exact equality of published146 inherited rows to pinned prior144 records plus two Treasury rows and the original registration prefix.",
+    "Saved metadata-only calendar/arm/status/endpoint/offset/count reconciliation; no numerical forecast or market feature columns decoded.",
+    "Bookkeeping reconstruction of conservative maxima, Holm3/Holm149, support/effect/stability gates and all three verdicts from stored metrics; no fits, loss rescoring, bootstrap, HAC or gate-parameter optimization rerun.",
+    "Saved terminal, manifest, verification proofs, seven output hashes and journal are mutually bound."
+  ],
+  "comparisons": [
+    {
+      "control": "base",
+      "development_mean": 0.01942316096554536,
+      "effect_gate_passed": false,
+      "evaluation_mean": 0.002860800116638488,
+      "p_conservative": 0.12999357577290055,
+      "p_holm_cumulative": 1.0,
+      "p_holm_wave": 0.38998072731870165,
+      "stability_gate_passed": false,
+      "statistical_gate_passed": false,
+      "verdict": "DOES_NOT_QUALIFY"
+    },
+    {
+      "control": "adaptive",
+      "development_mean": -0.004411193016234461,
+      "effect_gate_passed": false,
+      "evaluation_mean": -0.010678585580968096,
+      "p_conservative": 0.163955,
+      "p_holm_cumulative": 1.0,
+      "p_holm_wave": 0.38998072731870165,
+      "stability_gate_passed": true,
+      "statistical_gate_passed": false,
+      "verdict": "DOES_NOT_QUALIFY"
+    },
+    {
+      "control": "constant",
+      "development_mean": -3.733743538667835e-05,
+      "effect_gate_passed": false,
+      "evaluation_mean": 0.0002596090062137894,
+      "p_conservative": 0.8852749766199459,
+      "p_holm_cumulative": 1.0,
+      "p_holm_wave": 0.8852749766199459,
+      "stability_gate_passed": false,
+      "statistical_gate_passed": false,
+      "verdict": "DOES_NOT_QUALIFY"
+    }
+  ],
+  "completed_utc": "2026-09-09T05:27:15.673468+00:00",
+  "discrepancies": [],
+  "evidence_class": "EXPLORATORY_REUSED_MARKET_HISTORY_CURRENT_VINTAGES",
+  "evidence_limitation": "Historical development and evaluation windows have been reused. Prior regression tests accessed the period beginning 2025-11-03; it is not untouched confirmation. Current vendor snapshots do not certify complete point-in-time price or implied-volatility vintages. Numerical inputs in this experiment end 2025-10-20.",
+  "limits": [
+    "This audit validates saved publication consistency and preserves prior independent runtime proofs; it does not claim a new independent forecasting experiment.",
+    "Exact statistical reconstruction was performed by the registered independent verifier; this audit did not resample or rerun fitting.",
+    "Current vendor snapshots and reused historical windows retain the stated limitations. The six later-period historical regression tests were quarantined; their previous access is disclosed.",
+    "New summary, charts and post-terminal publication artifacts are outside this audit.",
+    "Calendar/status/count metadata were read from saved outputs; market price/return arrays, forecast numerical columns and optimizer coefficients were not decoded for this audit."
+  ],
+  "output_hashes": {
+    "data/model_memory_study/precision_gate_wave26/applications.parquet": "e94c62a1bb947af96a838535ddb49e2fa58f4767c0195a5a35a5c035c96db55d",
+    "data/model_memory_study/precision_gate_wave26/coverage.parquet": "b13ea685556aea6fa0a83c19e4a0828f3dc73359cb19cfcf5f022b35700e1b02",
+    "data/model_memory_study/precision_gate_wave26/features.parquet": "78140d5b46cfefcaf9843630ed44f046389bd10b2d12c75b0e6e40179ac242f3",
+    "data/model_memory_study/precision_gate_wave26/fits.json": "5eece57f5a8567219f7fb0d5c7b0e600e926f09a6b8ee7f16dfd8d1de48bbb96",
+    "data/model_memory_study/precision_gate_wave26/panel.parquet": "e2c171e91c96db7951b87fa596ebc8242265b12384aa4ac53653a99cc41504e0",
+    "data/model_memory_study/precision_gate_wave26/schedules.parquet": "3bf856bbda9373ab00401255dd5c274b0370971cf869aac0becbb2794c1b190a",
+    "data/model_memory_study/precision_gate_wave26/targets.parquet": "ef47b14b888a564897ca8d72b5cfd193d89a6407dc9820a5fb3ffe6cd12ed0d5"
+  },
+  "preflight": {
+    "current_code_inventory_exact": true,
+    "discovered_tests": 3319,
+    "excluded_test_ids": [
+      "tests.test_methodology.TestDiagnosticOnlyQuarantine.test_qlike_series_refuses_the_clean_window",
+      "tests.test_methodology.TestEstimatorReconstructionAccuracy.test_reconstruction_matches_exact_smearing_on_the_har_family",
+      "tests.test_methodology.TestEstimatorReconstructionAccuracy.test_reconstruction_table_matches_the_published_one",
+      "tests.test_methodology.TestEstimatorReconstructionAccuracy.test_the_near_common_factor_claim_is_scoped_to_its_own_model_set",
+      "tests.test_methodology.TestFrozenReportsUnchanged.test_corrected_run_writes_a_separate_file",
+      "tests.test_methodology.TestFrozenReportsUnchanged.test_default_evaluate_reproduces_the_frozen_reports"
+    ],
+    "freeze_sha256": "3ff970b3e4fa0ed77e862cd1f1fe2f8e872378f643bd1366f4fa81e7e4c95b43",
+    "full_precheck_seconds": 551.2566436249763,
+    "inherited_comparisons": 146,
+    "inherited_records_canonical_sha256": "e60dc1befec62b92834e5818cfdcd27b645661a139c9410e2ae074afc387656a",
+    "old_research_read_mode": "Bytes hashed; no historical forecasts, arrays or scoring rerun.",
+    "pin_discrepancies": [],
+    "pin_group_counts": {
+      "code": 497,
+      "inputs": 29966,
+      "prefit": 4,
+      "preserved": 1509
+    },
+    "pin_set_sha256": "726e7440c47d0b1645c0e09ae4cc4347aea499b6d488aca5800a228ed556f2d1",
+    "protocol_sha256": "c9ac4c6f238cc898e219b8e1b1e9c8f1bf84371e40bf363a7572ee63182f11a2",
+    "quarantined_tests": 6,
+    "receipt_hashes": {
+      "FULL_PRECHECK.json": "f6ec4b617c6e3da95868d61a3d81c677a9aa0e65d3a0f941fc17813e45cbc0c4",
+      "FULL_PRECHECK.log": "5be4435c043a9011affbf4fd7b891413a7deb8b2242ff864ca89031879a8ee6e",
+      "TEST_GATE_RESULT.json": "1433cd160bb68b775aed22697e23ef8c480f99017c1486bde37156664f210efd",
+      "TEST_SELECTION.json": "06793e70074b402aa1ac83bfef80f89f5694143f2a0154a05a9f3ba346ffe589"
+    },
+    "registered_comparisons": 3,
+    "registration_prefix_rows": 149,
+    "registration_prefix_sha256": "d56a72e0a0d0e730394f64b30122b3295c1eba8e8565d3f9078fed69c0a8b134",
+    "reviewed_utc": "2026-09-09T05:23:06.882327+00:00",
+    "selected_tests": 3313,
+    "stage": "PREFLIGHT_PIN_AND_REGISTRATION_REVIEW_COMPLETE",
+    "test_completion_precedes_freeze": true,
+    "unique_pins_checked": 30020
+  },
+  "preservation": {
+    "all_frozen_groups_unchanged": true,
+    "exact_seven_forecast_outputs": true,
+    "frozen_python_files": 497,
+    "pin_set_sha256": "726e7440c47d0b1645c0e09ae4cc4347aea499b6d488aca5800a228ed556f2d1",
+    "unique_pins_checked_before_and_after": 30020
+  },
+  "reviewer": "replay_entry_finish",
+  "runtime_proofs": {
+    "bootstrap_checks": 18,
+    "combined_status": "VERIFIED",
+    "endpoint_checks": 6,
+    "forecast_status": "VERIFIED",
+    "hac_checks": 6,
+    "score_status": "VERIFIED"
+  },
+  "saved_counts": {
+    "application_forecasts": 10784,
+    "application_origins": 2696,
+    "calendar_rows": 6696,
+    "cold_start_months": 13,
+    "cold_start_scored_origins": 39,
+    "coverage_origins": 3974,
+    "expert_fits": 258,
+    "expert_warmup_months": 49,
+    "fitted_gate_scored_origins": 2415,
+    "gate_fits": 232,
+    "monthly_fits": 129,
+    "phases": {
+      "development": {
+        "cold_start_origins": 39,
+        "fitted_gate_origins": 962,
+        "full_calendar_origins": 1006,
+        "scored_origins": 1001
+      },
+      "evaluation": {
+        "cold_start_origins": 0,
+        "fitted_gate_origins": 1453,
+        "full_calendar_origins": 1458,
+        "scored_origins": 1453
+      }
+    },
+    "scored_forecasts": 9816,
+    "scored_origins": 2454,
+    "unscored_application_origins": 242
+  },
+  "status": "VERIFIED_QUALIFIED_SAVED_PUBLICATION",
+  "study": "precision_gate_wave26"
+}

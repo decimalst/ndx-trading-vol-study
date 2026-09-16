@@ -1,0 +1,8 @@
+test_boundary_label_is_unscored_but_arrives_on_full_clock_without_reset (tests.test_causal_pool_integration.CausalPoolPipeline.test_boundary_label_is_unscored_but_arrives_on_full_clock_without_reset) ... ok
+test_dropped_unscored_state_blocks_independent_admission_before_inference (tests.test_causal_pool_integration.CausalPoolPipeline.test_dropped_unscored_state_blocks_independent_admission_before_inference) ... ok
+test_snapshots_roundtrip_full_filter_independent_proof_scoring_and_plot_admission (tests.test_causal_pool_integration.CausalPoolPipeline.test_snapshots_roundtrip_full_filter_independent_proof_scoring_and_plot_admission) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 5.552s
+
+OK

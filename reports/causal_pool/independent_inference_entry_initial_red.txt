@@ -1,0 +1,44 @@
+..............EEE
+======================================================================
+ERROR: test_entire_temporary_tree_entrypoint_reads_all_declared_paths_and_writes_only_new_record (tests.test_verify_causal_pool.InferenceAndPublicationContracts.test_entire_temporary_tree_entrypoint_reads_all_declared_paths_and_writes_only_new_record)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_causal_pool.py", line 285, in test_entire_temporary_tree_entrypoint_reads_all_declared_paths_and_writes_only_new_record
+    stack.enter_context(patch.object(verify,'validate_upstream',return_value=proof));stack.enter_context(patch.object(verify,'verify_metrics',return_value={'synthetic':True}))
+                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.verify_causal_pool' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_causal_pool.py'> does not have the attribute 'verify_metrics'
+
+======================================================================
+ERROR: test_four_phase_inference_calibration_and_123_events_preserve_121_hypotheses (tests.test_verify_causal_pool.InferenceAndPublicationContracts.test_four_phase_inference_calibration_and_123_events_preserve_121_hypotheses)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_causal_pool.py", line 232, in test_four_phase_inference_calibration_and_123_events_preserve_121_hypotheses
+    with patch.object(verify,'inherited_rows',return_value=prior):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.verify_causal_pool' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_causal_pool.py'> does not have the attribute 'inherited_rows'
+
+======================================================================
+ERROR: test_inherited_metric_snapshot_identity_cannot_change_between_decode_and_digest (tests.test_verify_causal_pool.InferenceAndPublicationContracts.test_inherited_metric_snapshot_identity_cannot_change_between_decode_and_digest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_causal_pool.py", line 261, in test_inherited_metric_snapshot_identity_cannot_change_between_decode_and_digest
+    checked=verify.inherited_rows(root,p)
+            ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_causal_pool' has no attribute 'inherited_rows'
+
+----------------------------------------------------------------------
+Ran 17 tests in 1.141s
+
+FAILED (errors=3)

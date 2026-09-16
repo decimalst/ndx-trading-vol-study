@@ -1,0 +1,25 @@
+I001 [*] Import block is un-sorted or un-formatted
+  --> tests/test_verify_model_memory_study.py:2:1
+   |
+ 1 |   """Pre-score synthetic contracts for the independent model-memory verifier."""
+ 2 | / import unittest
+ 3 | | import copy
+ 4 | |
+ 5 | | import numpy as np
+ 6 | | import pandas as pd
+ 7 | | from sklearn.linear_model import GammaRegressor
+ 8 | | from sklearn.preprocessing import SplineTransformer
+ 9 | |
+10 | | from src import verify_model_memory_study as v
+   | |______________________________________________^
+help: Organize imports
+  |
+1 | """Pre-score synthetic contracts for the independent model-memory verifier."""
+2 + import copy
+3 | import unittest
+  - import copy
+4 |
+  |
+
+Found 1 error.
+[*] 1 fixable with the `--fix` option.

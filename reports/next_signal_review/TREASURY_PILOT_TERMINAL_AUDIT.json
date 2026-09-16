@@ -1,0 +1,61 @@
+{
+  "artifact_pins": {
+    "data/source_discovery/treasury_auction/accounting_pilot_v1/2010-01-12_912828MG2.json": "f9644a51bb588003f711a2028759a509ac62626e09efb9333c9219bb1347f1da",
+    "data/source_discovery/treasury_auction/accounting_pilot_v1/2010-01-13_912828LY4.json": "093af9e294197a92d60b53460d62f95f399f721b3b0a9a5686ca19ae01ab97d0",
+    "data/source_discovery/treasury_auction/accounting_pilot_v1/2010-01-14_912810QD3.json": "9e88ae5673515923aff4b84389369456d1e0568f134c74665fd1beb1d2582083",
+    "data/source_discovery/treasury_auction/accounting_pilot_v1/2010-01-26_912828MJ6.json": "f45bd2ccd35759a993b747d42cdce7acf9df18fdb66c31f479257c19afb06663",
+    "data/source_discovery/treasury_auction/accounting_pilot_v1/2010-01-27_912828MH0.json": "47e22a9186e470c220c41cfdb38acdaa2f1a7fe548c1b57a31fb5da8ec14f66b",
+    "data/source_discovery/treasury_auction/accounting_pilot_v1/2010-01-28_912828MK3.json": "71f3e4ed19c2cb3e447bcbf0881e255ee2c09e5e9bd3de0d98bc806913b8abf9",
+    "data/source_discovery/treasury_auction/accounting_pilot_v1/2010-06-22_912828NS5.json": "33f4d77dd125304680426c11aaeecba53db0800f310fc00f2cbfd182d43e287f",
+    "data/source_discovery/treasury_auction/accounting_pilot_v1/2010_correction_original_match.json": "b8de662d3bcac0b8f8f5048a312b44ec1379241825af2c01c18f4cdc1e4044d2",
+    "data/source_discovery/treasury_auction/accounting_pilot_v1/2016-01-12_912828N63.json": "295015f0b71bb204b8d7a8c793d36cc477061ea19d4ab2b3cdb0de3b248c4160",
+    "data/source_discovery/treasury_auction/accounting_pilot_v1/2016-01-13_912828M56.json": "800a5ddd047fbd2111e56cdd239ae481857a9f5e27043f24902205edb3abce1f",
+    "data/source_discovery/treasury_auction/accounting_pilot_v1/2016-01-26_912828P20.json": "27332493ee9e5f5dc5e7b5c4a98a893da5860a1717a948cd885c4e32c4559a8e",
+    "data/source_discovery/treasury_auction/accounting_pilot_v1/2016-01-27_912828N89.json": "f0be27fbfae7480cf371d7ac841c97a9813c091b2df495cc3c18d31a6c7e7019",
+    "data/source_discovery/treasury_auction/accounting_pilot_v1/2016-01-28_912828P38.json": "7ce5c9bdb47101c4649694f76f6d8e70d7e5ddd3d89d412258db3a77385fa78d",
+    "data/source_discovery/treasury_auction/accounting_pilot_v1/2019-06-12_9128286T2.json": "19d1cd4ed675926d6719ec247965edd6f743cf4ea93984bae138decf0d74e03a",
+    "data/source_discovery/treasury_auction/accounting_pilot_v1/2025-01-06_91282CMF5.json": "1e965c0688d55e70c0230f12ef61ebda51aad62b7e895fa38d220adfc4122979",
+    "data/source_discovery/treasury_auction/accounting_pilot_v1/2025-01-07_91282CLW9.json": "33d6879e8e95a1e2451059833b6695355d6710dcaaedbe5fd3c1be081d2726d3",
+    "data/source_discovery/treasury_auction/accounting_pilot_v1/2025-01-08_912810UE6.json": "976b419f850137899ff83b7d788457f86f27cba21cff1b528c421ea11b85952a",
+    "data/source_discovery/treasury_auction/accounting_pilot_v1/2025-01-27_91282CMG3.json": "9d4f1424c114d5e060a5e1c7bc644c4e10a2073ab46f7579687b4b7d2fb52d4e",
+    "data/source_discovery/treasury_auction/accounting_pilot_v1/2025-01-27_91282CMH1.json": "6d4f6f06f3c716303cd4ad3c43b50a2f9478a1e96db036036337a2cfa618d778",
+    "data/source_discovery/treasury_auction/accounting_pilot_v1/2025-01-28_91282CMK4.json": "8281f1eb9bdcecaa138cdca229af00ca2ec2fa4d765f83543b5b19ffaf0ef5d5",
+    "data/source_discovery/treasury_auction/accounting_pilot_v1/2025-08-27_91282CNX5.json": "6a6e348f5f9dc2357bce65ad14bc2e491045219f1045c9f1cd46a2efc8b2652e",
+    "data/source_discovery/treasury_auction/accounting_pilot_v1/started.json": "150a747a0b4f6edf464294897db302b35f12a7482ad1bbd472b40cf899935462",
+    "reports/next_signal_review/TREASURY_ACCOUNTING_CHECKPOINT.json": "e5f0bea7cf0364e4dd7b991018c7e8f94f7a7980d9d2e1a1048976f3f65ab3be",
+    "reports/next_signal_review/TREASURY_ACCOUNTING_INDEPENDENT_AUDIT.json": "253448a1dfa57b3db5ebc571327b1ecd857e8d23228df5665efe37c88ab12bb4",
+    "reports/next_signal_review/TREASURY_FULL_NOTICE_METADATA_SELECTION.json": "7f1fb67ffb6b8543d40ec15fd51d54cea76bf89575dfa32cac14ecae17599971",
+    "reports/next_signal_review/TREASURY_PILOT_ACCOUNTING.json": "0ffc9634ecf32a0f4b2863050b23da694c733d03394982a9b10d3e9aab6d194d",
+    "reports/next_signal_review/TREASURY_PILOT_ACCOUNTING_SUMMARY.md": "52eeb32275265362adeb905d458f8118fafc33935ac8c5e0fd4dddafa8fd33a0"
+  },
+  "completed_utc": "2026-09-09T00:49:08.877582+00:00",
+  "current_goal_turn": "PROGRESS_SOURCE_ACCOUNTING_AND_DOCUMENTARY_RECONCILIATION",
+  "goal_blocked": false,
+  "goal_complete": false,
+  "new_predictive_comparisons": 0,
+  "new_signal_qualifies": false,
+  "next_action": "Bounded capture/classification of246knownnominalspecialnotices using fixed metadata selection and reusing7pilot originals; then complete source-history and offering-control admission before new forecasting protocol.",
+  "preservation": {
+    "code": {
+      "checked": 394,
+      "drift": []
+    },
+    "inputs": {
+      "checked": 1538,
+      "drift": []
+    },
+    "prefit": {
+      "checked": 5,
+      "drift": []
+    },
+    "preserved": {
+      "checked": 1181,
+      "drift": []
+    }
+  },
+  "previous_goal_turn": "NO_NEW_EXPERIMENTAL_PROGRESS_STATUS_ONLY",
+  "registered_comparisons": 144,
+  "runner_observed_exit_code": 0,
+  "source_checkpoint_pins_verified": 366,
+  "status": "VERIFIED_PILOT_TERMINAL_PRESERVATION"
+}

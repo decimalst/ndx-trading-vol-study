@@ -1,0 +1,26 @@
+{
+  "modules": [
+    "tests.test_treasury_auction_amounts",
+    "tests.test_treasury_auction_archive",
+    "tests.test_treasury_auction_capture",
+    "tests.test_treasury_auction_capture_integration",
+    "tests.test_treasury_auction_document_probe",
+    "tests.test_treasury_auction_documents",
+    "tests.test_treasury_auction_inventory",
+    "tests.test_treasury_document_acquire",
+    "tests.test_treasury_inventory_capture_integration",
+    "tests.test_treasury_pdf_amounts",
+    "tests.test_treasury_pdf_header_layout",
+    "tests.test_treasury_pdf_identity",
+    "tests.test_treasury_security_lineage",
+    "tests.test_treasury_xml_identity",
+    "tests.test_verify_treasury_auction_archive",
+    "tests.test_verify_treasury_auction_inventory"
+  ],
+  "test_count": 140,
+  "successful": true,
+  "failures": 0,
+  "errors": 0,
+  "interpreter": "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/bin/python",
+  "python": "3.11.7 (v3.11.7:fa7a6f2303, Dec  4 2023, 15:22:56) [Clang 13.0.0 (clang-1300.0.29.30)]"
+}

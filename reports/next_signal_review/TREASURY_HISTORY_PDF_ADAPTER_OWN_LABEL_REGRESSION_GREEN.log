@@ -1,0 +1,17 @@
+test_amended_role_is_exposed_and_bogus_or_duplicate_titles_fail (tests.test_treasury_history_pdf_layout.TreasuryHistoryPdfLayoutTests.test_amended_role_is_exposed_and_bogus_or_duplicate_titles_fail) ... ok
+test_bounded_typed_input_and_release_header (tests.test_treasury_history_pdf_layout.TreasuryHistoryPdfLayoutTests.test_bounded_typed_input_and_release_header) ... ok
+test_column_shape_missing_duplicate_and_reordered_labels_fail (tests.test_treasury_history_pdf_layout.TreasuryHistoryPdfLayoutTests.test_column_shape_missing_duplicate_and_reordered_labels_fail) ... ok
+test_duplicate_empty_or_conflicting_own_labels_fail (tests.test_treasury_history_pdf_layout.TreasuryHistoryPdfLayoutTests.test_duplicate_empty_or_conflicting_own_labels_fail) ... ok
+test_empty_duplicate_invalid_or_missing_metadata_fail (tests.test_treasury_history_pdf_layout.TreasuryHistoryPdfLayoutTests.test_empty_duplicate_invalid_or_missing_metadata_fail) ... ok
+test_expected_cusip_in_other_cells_cannot_override_own_mismatch (tests.test_treasury_history_pdf_layout.TreasuryHistoryPdfLayoutTests.test_expected_cusip_in_other_cells_cannot_override_own_mismatch) ... ok
+test_observed_column_order_maps_dates_and_cusip_without_search (tests.test_treasury_history_pdf_layout.TreasuryHistoryPdfLayoutTests.test_observed_column_order_maps_dates_and_cusip_without_search) ... ok
+test_opaque_financial_cells_are_never_converted_or_returned (tests.test_treasury_history_pdf_layout.TreasuryHistoryPdfLayoutTests.test_opaque_financial_cells_are_never_converted_or_returned) ... ok
+test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction (tests.test_treasury_history_pdf_layout.TreasuryHistoryPdfLayoutTests.test_punctuated_own_cusip_conflicts_cannot_be_hidden_by_header_reconstruction) ... ok
+test_results_omit_absent_auction_date_and_optional_fields (tests.test_treasury_history_pdf_layout.TreasuryHistoryPdfLayoutTests.test_results_omit_absent_auction_date_and_optional_fields) ... ok
+test_standard_row_fields_and_own_identity_are_retained (tests.test_treasury_history_pdf_layout.TreasuryHistoryPdfLayoutTests.test_standard_row_fields_and_own_identity_are_retained) ... ok
+test_supplemental_identifiers_never_supply_missing_own_field (tests.test_treasury_history_pdf_layout.TreasuryHistoryPdfLayoutTests.test_supplemental_identifiers_never_supply_missing_own_field) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.005s
+
+OK

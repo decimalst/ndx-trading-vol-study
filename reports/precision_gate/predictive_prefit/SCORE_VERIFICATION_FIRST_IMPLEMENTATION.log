@@ -1,0 +1,22 @@
+COMMAND: .venv/bin/python -m unittest tests.test_verify_precision_gate_scores -v
+test_all_inference_and_gate_diagnostic_corruptions_reject (tests.test_verify_precision_gate_scores.VerifyPrecisionGateScoresTests.test_all_inference_and_gate_diagnostic_corruptions_reject) ... ok
+test_all_three_paired_scores_and_149_family_reconstruct (tests.test_verify_precision_gate_scores.VerifyPrecisionGateScoresTests.test_all_three_paired_scores_and_149_family_reconstruct) ... ok
+test_consistent_cold_start_relabel_cannot_reuse_prior_counts (tests.test_verify_precision_gate_scores.VerifyPrecisionGateScoresTests.test_consistent_cold_start_relabel_cannot_reuse_prior_counts) ... ok
+test_exact_inherited_rows_and_market_only_qualification (tests.test_verify_precision_gate_scores.VerifyPrecisionGateScoresTests.test_exact_inherited_rows_and_market_only_qualification) ... ok
+test_protocol_scope_and_paired_metadata_corruption_reject (tests.test_verify_precision_gate_scores.VerifyPrecisionGateScoresTests.test_protocol_scope_and_paired_metadata_corruption_reject) ... ERROR
+
+======================================================================
+ERROR: test_protocol_scope_and_paired_metadata_corruption_reject (tests.test_verify_precision_gate_scores.VerifyPrecisionGateScoresTests.test_protocol_scope_and_paired_metadata_corruption_reject)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_precision_gate_scores.py", line 149, in test_protocol_scope_and_paired_metadata_corruption_reject
+    bad[0] = bad[0].iloc[1:].copy()
+    ~~~^^^
+TypeError: 'tuple' object does not support item assignment
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.753s
+
+FAILED (errors=1)
+
+exit_code=1

@@ -1,0 +1,18 @@
+E
+======================================================================
+ERROR: test_peak_age_admission (unittest.loader._FailedTest.test_peak_age_admission)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_peak_age_admission
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_admission.py", line 17, in <module>
+    from src import peak_age_admission as source
+ImportError: cannot import name 'peak_age_admission' from 'src' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/__init__.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

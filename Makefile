@@ -253,3 +253,205 @@ signals-confirm: test-signal-safety
 
 verify-signals:
 	$(PY) -m src.verify_signal_results
+
+# Additive exploratory search on already-open history; never uses the sealed phase.
+test-orthogonal-round2:
+	$(PY) -m unittest tests.test_orthogonal_round2 tests.test_verify_orthogonal_round2 tests.test_round2_inference -v
+
+orthogonal-round2: test-orthogonal-round2
+	$(PY) -m src.orthogonal_round2 calibrate
+	$(PY) -m src.orthogonal_round2 run
+	$(PY) -m src.verify_orthogonal_round2
+
+verify-orthogonal-round2: test-orthogonal-round2
+	$(PY) -m src.verify_orthogonal_round2
+
+test-model-memory-study:
+	$(PY) -m unittest tests.test_model_memory_estimators tests.test_model_memory_study tests.test_verify_model_memory_study -v
+
+model-memory-study: test-model-memory-study
+	$(PY) -m src.model_memory_study
+	$(PY) -m src.verify_model_memory_study
+
+verify-model-memory-study: test-model-memory-study
+	$(PY) -m src.verify_model_memory_study
+
+test-model-memory-reference:
+	$(PY) -m unittest tests.test_model_memory_reference tests.test_reference_xlstm tests.test_reference_moirai tests.test_verify_model_memory_reference -v
+
+# These extraction targets require the separately pinned local model environment.
+# Extraction refuses to overwrite existing hash-audited artifacts.
+model-memory-moirai: test-model-memory-reference
+	data/model_memory_reference/moirai2_env/bin/python -m src.reference_moirai synthetic-check
+	data/model_memory_reference/moirai2_env/bin/python -m src.reference_moirai extract
+
+model-memory-neural: test-model-memory-reference
+	$(PY) -m src.run_reference_xlstm
+
+# Uses completed core, neural and Moirai local caches.
+model-memory-reference: test-model-memory-reference
+	$(PY) -m src.model_memory_reference
+	$(PY) -m src.verify_model_memory_reference
+
+verify-model-memory-reference: test-model-memory-reference
+	$(PY) -m src.verify_model_memory_reference
+
+test-iterative-signal-search:
+	$(PY) -m unittest tests.test_iterative_signal_search tests.test_iterative_hf tests.test_iterative_index tests.test_verify_iterative_signal_search tests.test_round2_inference -v
+
+iterative-signal-search: test-iterative-signal-search
+	$(PY) -m src.iterative_signal_search
+	$(PY) -m src.verify_iterative_signal_search
+
+verify-iterative-signal-search: test-iterative-signal-search
+	$(PY) -m src.verify_iterative_signal_search
+
+test-international-volatility:
+	$(PY) -m unittest tests.test_international_search tests.test_international_volatility tests.test_verify_international_volatility tests.test_round2_inference -v
+
+international-volatility: test-international-volatility
+	$(PY) -m src.international_search
+	$(PY) -m src.verify_international_volatility
+
+verify-international-volatility: test-international-volatility
+	$(PY) -m src.verify_international_volatility
+
+test-overnight-index:
+	$(PY) -m unittest tests.test_overnight_search tests.test_overnight_index tests.test_verify_overnight_index tests.test_round2_inference -v
+
+overnight-index: test-overnight-index
+	$(PY) -m src.overnight_search
+	$(PY) -m src.verify_overnight_index
+
+verify-overnight-index: test-overnight-index
+	$(PY) -m src.verify_overnight_index
+
+.PHONY: test-volatility-source-audits
+test-volatility-source-audits:
+	$(PY) -m unittest tests.test_audit_harnet_extension tests.test_audit_risklab_source -v
+
+.PHONY: test-macro-overnight macro-overnight verify-macro-overnight
+test-macro-overnight:
+	$(PY) -m unittest tests.test_macro_second_moment tests.test_macro_plan_features tests.test_macro_overnight tests.test_macro_search tests.test_verify_macro_overnight tests.test_round2_inference -v
+
+macro-overnight: test-macro-overnight
+	$(PY) -m src.macro_search
+	$(PY) -m src.verify_macro_overnight
+
+verify-macro-overnight: test-macro-overnight
+	$(PY) -m src.verify_macro_overnight
+
+.PHONY: test-measurement-memory measurement-memory verify-measurement-memory
+test-measurement-memory:
+	$(PY) -m unittest tests.test_measurement_memory tests.test_measurement_search tests.test_measurement_publication tests.test_verify_measurement_memory tests.test_macro_second_moment tests.test_round2_inference -v
+
+measurement-memory: test-measurement-memory
+	$(PY) -m src.measurement_search
+	$(PY) -m src.verify_measurement_memory
+
+verify-measurement-memory: test-measurement-memory
+	$(PY) -m src.verify_measurement_memory
+
+.PHONY: index-hinge verify-index-hinge plot-index-hinge
+index-hinge:
+	OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 LOKY_MAX_CPU_COUNT=2 $(PY) -m src.index_hinge_search
+
+verify-index-hinge:
+	OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 LOKY_MAX_CPU_COUNT=2 $(PY) -m src.verify_index_hinge
+
+plot-index-hinge:
+	$(PY) -m src.plot_index_hinge
+
+.PHONY: tail-shape verify-tail-shape plot-tail-shape
+tail-shape:
+	OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 LOKY_MAX_CPU_COUNT=2 $(PY) -m src.tail_shape_search
+
+verify-tail-shape:
+	OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 LOKY_MAX_CPU_COUNT=2 $(PY) -m src.verify_tail_shape
+
+plot-tail-shape:
+	$(PY) -m src.plot_tail_shape
+
+.PHONY: calendar-variance verify-calendar-variance
+calendar-variance:
+	OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 LOKY_MAX_CPU_COUNT=2 $(PY) -m src.calendar_variance_search
+
+verify-calendar-variance:
+	OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 LOKY_MAX_CPU_COUNT=2 $(PY) -m src.verify_calendar_variance
+
+.PHONY: relative-risk verify-relative-risk
+relative-risk:
+	OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 LOKY_MAX_CPU_COUNT=2 $(PY) -m src.relative_risk_search
+
+verify-relative-risk:
+	OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 LOKY_MAX_CPU_COUNT=2 $(PY) -m src.verify_relative_risk
+
+.PHONY: joint-risk verify-joint-risk
+joint-risk:
+	OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 LOKY_MAX_CPU_COUNT=2 $(PY) -m src.joint_risk_search
+
+verify-joint-risk:
+	OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 LOKY_MAX_CPU_COUNT=2 $(PY) -m src.verify_joint_risk
+
+.PHONY: cross-moment verify-cross-moment
+cross-moment:
+	OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 LOKY_MAX_CPU_COUNT=2 $(PY) -m src.cross_moment_search
+
+verify-cross-moment:
+	OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 LOKY_MAX_CPU_COUNT=2 $(PY) -m src.verify_cross_moment
+
+.PHONY: target-aligned verify-target-aligned
+target-aligned:
+	OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 LOKY_MAX_CPU_COUNT=2 $(PY) -m src.target_aligned_search
+
+verify-target-aligned:
+	OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 LOKY_MAX_CPU_COUNT=2 $(PY) -m src.verify_target_aligned
+
+.PHONY: sign-memory verify-sign-memory
+sign-memory:
+	OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 LOKY_MAX_CPU_COUNT=2 $(PY) -m src.sign_memory_search
+
+verify-sign-memory:
+	OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 LOKY_MAX_CPU_COUNT=2 $(PY) -m src.verify_sign_memory
+
+.PHONY: causal-pool verify-causal-pool
+causal-pool:
+	OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 LOKY_MAX_CPU_COUNT=2 $(PY) -m src.causal_pool_search
+
+verify-causal-pool:
+	OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 LOKY_MAX_CPU_COUNT=2 $(PY) -m src.verify_causal_pool
+
+.PHONY: civil-quarter verify-civil-quarter
+civil-quarter:
+	OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 LOKY_MAX_CPU_COUNT=2 $(PY) -m src.civil_quarter_search
+
+verify-civil-quarter:
+	OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 LOKY_MAX_CPU_COUNT=2 $(PY) -m src.verify_civil_quarter
+
+.PHONY: civil-quarter-replay verify-civil-quarter-replay
+civil-quarter-replay:
+	OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 LOKY_MAX_CPU_COUNT=2 $(PY) -m src.civil_quarter_replay_search
+
+verify-civil-quarter-replay:
+	OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 LOKY_MAX_CPU_COUNT=2 $(PY) -m src.verify_civil_quarter_replay
+
+.PHONY: profiled-quarter verify-profiled-quarter
+profiled-quarter:
+	OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 LOKY_MAX_CPU_COUNT=2 $(PY) -m src.profiled_quarter_search
+
+verify-profiled-quarter:
+	OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 LOKY_MAX_CPU_COUNT=2 $(PY) -m src.verify_profiled_quarter
+
+.PHONY: range-alert verify-range-alert
+range-alert:
+	MPLCONFIGDIR=/tmp/ndx-vol-mplcache OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 LOKY_MAX_CPU_COUNT=2 $(PY) -m src.range_alert_search
+
+verify-range-alert:
+	MPLCONFIGDIR=/tmp/ndx-vol-mplcache OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 LOKY_MAX_CPU_COUNT=2 $(PY) -m src.verify_range_alert
+
+.PHONY: issued-calibration verify-issued-calibration
+issued-calibration:
+	MPLCONFIGDIR=/tmp/ndx-vol-mplcache OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 LOKY_MAX_CPU_COUNT=2 $(PY) -m src.issued_calibration_search
+
+verify-issued-calibration:
+	MPLCONFIGDIR=/tmp/ndx-vol-mplcache OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 LOKY_MAX_CPU_COUNT=2 $(PY) -m src.verify_issued_calibration

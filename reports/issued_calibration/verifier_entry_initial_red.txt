@@ -1,0 +1,18 @@
+E
+======================================================================
+ERROR: test_complete_new_output_paths_and_serialized_hash_identity (tests.test_verify_issued_calibration.WholeEntryContracts.test_complete_new_output_paths_and_serialized_hash_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_issued_calibration.py", line 185, in test_complete_new_output_paths_and_serialized_hash_identity
+    with patch.object(v,'collect_closure',return_value=(audit,{})),patch.object(v,'verify_manifest_coverage'),patch.object(v,'admit_upstream',return_value=(audit,loaded)),patch.object(v,'verify_forecasts',return_value=proof) as vf,patch.object(v,'verify_metrics',return_value={'new_hypotheses_verified':2}),patch.object(v,'verify_ledger',return_value={}) as ledger:
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.verify_issued_calibration' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_issued_calibration.py'> does not have the attribute 'verify_manifest_coverage'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.062s
+
+FAILED (errors=1)

@@ -1,0 +1,42 @@
+{
+  "status": "VERIFIED",
+  "forecasts": {
+    "status": "VERIFIED",
+    "calendar_rows": 6696,
+    "coverage_origins": 3974,
+    "application_origins": 2696,
+    "application_forecasts_verified": 10784,
+    "scored_origins": 2454,
+    "forecasts_verified": 9816,
+    "monthly_fits": 129,
+    "expert_fits": 258,
+    "warmup_months": 49,
+    "gate_fits": 232,
+    "cold_start_months": 13,
+    "gate_solver": "Independent SLSQP; saved coefficient stationarity and objective reconstructed",
+    "limits": [
+      "Producer optimizer iteration counts are checked as bounded metadata, not independently reproduced.",
+      "Source byte authentication and original market oracle certification are separate; historically accessed later periods are not untouched confirmation."
+    ]
+  },
+  "scores": {
+    "status": "VERIFIED",
+    "comparisons_verified": 3,
+    "endpoints_verified": 6,
+    "bootstrap_runs_verified": 18,
+    "hac_runs_verified": 6,
+    "inherited_comparisons_verified": 146,
+    "common_scored_origins": 2454,
+    "fitted_gate_scored_origins": 2415
+  },
+  "protocol_sha256": "c9ac4c6f238cc898e219b8e1b1e9c8f1bf84371e40bf363a7572ee63182f11a2",
+  "outputs": {
+    "data/model_memory_study/precision_gate_wave26/features.parquet": "78140d5b46cfefcaf9843630ed44f046389bd10b2d12c75b0e6e40179ac242f3",
+    "data/model_memory_study/precision_gate_wave26/targets.parquet": "ef47b14b888a564897ca8d72b5cfd193d89a6407dc9820a5fb3ffe6cd12ed0d5",
+    "data/model_memory_study/precision_gate_wave26/applications.parquet": "e94c62a1bb947af96a838535ddb49e2fa58f4767c0195a5a35a5c035c96db55d",
+    "data/model_memory_study/precision_gate_wave26/panel.parquet": "e2c171e91c96db7951b87fa596ebc8242265b12384aa4ac53653a99cc41504e0",
+    "data/model_memory_study/precision_gate_wave26/coverage.parquet": "b13ea685556aea6fa0a83c19e4a0828f3dc73359cb19cfcf5f022b35700e1b02",
+    "data/model_memory_study/precision_gate_wave26/schedules.parquet": "3bf856bbda9373ab00401255dd5c274b0370971cf869aac0becbb2794c1b190a",
+    "data/model_memory_study/precision_gate_wave26/fits.json": "5eece57f5a8567219f7fb0d5c7b0e600e926f09a6b8ee7f16dfd8d1de48bbb96"
+  }
+}

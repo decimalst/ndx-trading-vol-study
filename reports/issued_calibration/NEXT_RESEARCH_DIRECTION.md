@@ -1,0 +1,53 @@
+# Adaptive, UNREGISTERED proposal: opening information and remaining intraday risk
+
+Wave 19 remains **VERIFIED, with no qualifying model**. Calibration moved the average probability closer to the observed frequency, but its baseline comparison worsened in development and improved by less than the fixed `.0005` Brier threshold in evaluation. Better average calibration did not establish the required forecast improvement. This proposal follows those results; it is neither an untouched hypothesis nor a reason to change the completed trial.
+
+The next question should add information at a different decision point: **does the early-session index-price shock improve a forecast of risk strictly after a fixed observation cutoff?** This requires timestamped source admission before modeling. A daily opening field alone cannot establish this remaining-risk experiment. It does not tune the previous half-life, penalty, alert threshold or calibration algorithm.
+
+## Bounded overlap audit
+
+Three closed studies were read for this note:
+
+- The [relative-risk design](/Users/byrons/code/trading-vol/ndx-vol-experiment/reports/relative_risk/DESIGN.md) used historical intraday/overnight risk and correlation, but every market predictor ended at the preceding session. It also explicitly left exact historical release latency and synchronized opening observations uncertified.
+- The [range-alert design](/Users/byrons/code/trading-vol/ndx-vol-experiment/reports/range_alert/DESIGN.md) added prior close location and controlled prior intraday/overnight returns and their squares. Its inputs likewise ended at the previous session. Wave 19 changed only its subsequent forecast calibration.
+- The [sequential-search design](/Users/byrons/code/trading-vol/ndx-vol-experiment/reports/iterative_signal_search/SEARCH_DESIGN.md) requires a changed information set or target to be registered as another trial, retaining earlier failures and the history-reuse qualification.
+
+This is a narrow overlap finding, not a claim to have searched every historical experiment. Earlier memory, relative/joint-risk and forecast-calibration approaches summarize past information. They cannot respond to a price innovation that occurs after their last allowed market observation. Observing the early-session shock is a concrete addition to the information set. Whether it predicts *subsequent* intraday risk remains falsifiable; economic intuition alone does not establish that relationship.
+
+## One candidate, conditional on source admission
+
+Keep SPX as the asset and the same nominal development/evaluation periods, subject to admitting the required new timestamped history. Propose one fixed information cutoff, **09:35 America/New_York**, rather than choosing a time from outcomes. Let `P_t` be the index value demonstrably observable by that cutoff under an exact source timestamp/sampling rule fixed before any measurements. Build the target interval only from that cutoff onward through the regular-session close; its open/reference value is `P_t`, while its high, low and close must belong to this post-cutoff interval. Define `K_t` as the strict mean GK over the equivalent post-cutoff intervals of the preceding 22 sessions.
+
+The proposed binary target is `1{GK_postcutoff_t > 2*K_t}`, with equality a nonevent. Both the response and its reference use **the same post-cutoff interval only**. Do not add the already observed prior-close-to-cutoff shock square to the response. Do not reuse the full-day high/low range, which can include already elapsed movement. This is a deliberately different functional from the completed total-risk alert, justified by the changed information cutoff, not selected from inspected event counts.
+
+Use exactly one new input:
+
+`early_shock_t = log1p(log(P_t/C_(t−1))² / K_t)`.
+
+Its units cancel. A zero gap is valid. No alternative sign split, shock threshold, lag, window, asset, interaction or opening-time variant is included. Nonpositive reference risk, invalid observed prices and unrepresentable arithmetic must be handled by fixed prospective source/numerical rules, never by selecting favorable rows after inspection.
+
+The existing 26 prior-state columns and training geometry are a starting point for a strong logistic baseline against this new target. There is one **unresolved pre-registration control requirement**: `K_t` is new post-cutoff interval history, absent from the old full-day baseline. The matched baseline must also control this history, including the denominator's functional role, under a fixed specification chosen before any values or associations are inspected. Otherwise the normalized candidate can gain through its denominator and cannot isolate the current early-session observation. A linear `log(K_t)` term alone is not assumed to settle arbitrary nonlinear normalization effects. Source feasibility must precede a documented, adequately matched nuisance design; this note is not ready to serve as a numerical registration.
+
+Conditional on resolving that control requirement, freeze the matched baseline's fitted logit and estimate only one `.01`-penalized coefficient on the training-centered early-shock input, with fixed scale one. An exactly constant input retains canonical zero correction. Use the already tested normalized logistic objective and declare all numerical rules before new measurements. No extra model-selection arms are proposed here. Without the matched-history control, the scientific interpretation would instead be a joint current-shock/new-interval-history increment, which is not the isolated information question proposed above.
+
+Require two controls on identical applications and scored rows: that matched prior-state baseline, and the same fixed 63-session recent-frequency **algorithm fitted to the new intraday event**. Neither old control's probabilities can simply be copied across a changed target. Do not register the baseline-versus-frequency comparison as another opportunity for the previous result to pass.
+
+## Source gate and causal chronology
+
+The existing archived daily `open` field is not, by its name alone, proof of a contemporaneously available opening quote. The closed reports explicitly leave exact publication latency and vintage uncertain. Even establishing when that opening value was disseminated would not make the full-day GK a strictly future target: part of its range can already have elapsed. Index opening construction can also involve staggered constituent openings. Do not assert that SPX opens are executable prices or synchronous ETF auctions.
+
+The source gate is unresolved in the documents inspected here. The immediate next action would therefore be a **documentary timestamped-data admission review**, using primary source definitions and existing provenance metadata, without market-value parsing or model fitting. It must identify permission/provenance, index-value timestamp semantics and dissemination timing, a deterministic as-of sampling rule, bars or observations that isolate the post-09:35 interval, regular/early-close handling, and sufficient historical coverage for the unchanged phases. A current field description alone cannot certify all historical publication vintages. A coarse completed bar labeled 09:35 must not supply future values as if they were available at 09:35.
+
+Existing daily data are insufficient for that temporal separation. If the required timestamped source and availability convention cannot be admitted, this route remains **source-blocked**. Do not quietly substitute a full-day target, shorten the sample to available favorable years, or rebrand an archival opening-conditioned nowcast as remaining-session prediction. Any acquisition or changed source requires a separate explicit source plan; none is performed or requested by this note.
+
+If admitted, enforce the fixed 09:35 local cutoff with daylight-saving conversion and only observations actually available by it. A missing eligible price is unknown; do not substitute a later print. All other market inputs remain limited to the preceding session. The outcome matures only at the current session's close. Training at the cutoff may use labels completed by the preceding close, never the current session's later high, low, close or eventual event. Date equality between this decision and a closing label must be distinguished by explicit time/session phase; an inherited next-session date validator cannot be reused unchanged.
+
+Select monthly first applications from prior features and the admitted cutoff observation, before checking post-cutoff high/low/close or target presence. Retain issued applications with missing eventual labels. Rolling histories preserve the full reference calendar and exact predecessors. The recent-frequency state also stops at the preceding close, with the fixed cold-start and missing-label behavior. No future observed closure, completed-bar consistency field, same-day IV close or later price revision may silently enter the cutoff information set.
+
+## Prospective falsification and limits
+
+If source admission succeeds and a trial is registered, retain all **131** previous hypotheses and add only the two candidate/control Brier contrasts, giving 133 cumulatively. Preserve the `.0005` improvement requirement against both controls in both phases, negative gaps in both fixed evaluation slices, existing class/count support gates, and cumulative Holm below `.05`. For wave 20, use the stricter wave Holm2 threshold `.05/(20*21)`. Keep the established HAC126 and 21/63/126 block-bootstrap design; fix the seed and numerical resolution before any new calculation. Do not choose a favorable time slice or inspect the protected period beginning November 3, 2025.
+
+Prewritten tests must show that changing post-cutoff high/low/close changes the target but not its already issued forecast; changing the admitted cutoff value may change the candidate input; no pre-cutoff high/low leaks into the future interval; changing a later day cannot change earlier training or forecasts; the known shock is absent from the target's additive risk components; and all source, support, missingness, control and ledger rules survive independent reconstruction. No new event counts, measurements, associations or fits were calculated for this note.
+
+A passing result would concern a later information set and a narrower post-cutoff OHLC-risk event. It would not improve a forecast that had to be issued before the opening, validate index execution, establish high-frequency integrated variance, or prove trading value. Its distinction is the new observable information and honest timing, not an easier interpretation of wave 19.

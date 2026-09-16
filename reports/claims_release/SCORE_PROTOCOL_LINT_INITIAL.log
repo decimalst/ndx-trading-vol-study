@@ -1,0 +1,111 @@
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_claims_release_protocol.py:28:46
+   |
+26 |             ("comparisons", "controls", ["market"]),
+27 |         ):
+28 |             changed = copy.deepcopy(CONTRACT); changed[section][key] = value
+   |                                              ^
+29 |             with self.subTest(key=key), self.assertRaises(ValueError):
+30 |                 validate(changed)
+   |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_claims_release_score.py:108:30
+    |
+106 |         panel, calendar, prior, config = fixture()
+107 |         cases = []
+108 |         broken = panel.copy(); broken.loc[0, "loss"] += .1; cases.append(broken)
+    |                              ^
+109 |         broken = panel.copy(); broken.loc[0, "y"] = 0.; cases.append(broken)
+110 |         broken = panel.copy(); broken.loc[0, "offset"] = 4; cases.append(broken)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_claims_release_score.py:108:59
+    |
+106 |         panel, calendar, prior, config = fixture()
+107 |         cases = []
+108 |         broken = panel.copy(); broken.loc[0, "loss"] += .1; cases.append(broken)
+    |                                                           ^
+109 |         broken = panel.copy(); broken.loc[0, "y"] = 0.; cases.append(broken)
+110 |         broken = panel.copy(); broken.loc[0, "offset"] = 4; cases.append(broken)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_claims_release_score.py:109:30
+    |
+107 |         cases = []
+108 |         broken = panel.copy(); broken.loc[0, "loss"] += .1; cases.append(broken)
+109 |         broken = panel.copy(); broken.loc[0, "y"] = 0.; cases.append(broken)
+    |                              ^
+110 |         broken = panel.copy(); broken.loc[0, "offset"] = 4; cases.append(broken)
+111 |         broken = panel.copy(); broken.loc[0, "phase"] = "evaluation"; cases.append(broken)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_claims_release_score.py:109:55
+    |
+107 |         cases = []
+108 |         broken = panel.copy(); broken.loc[0, "loss"] += .1; cases.append(broken)
+109 |         broken = panel.copy(); broken.loc[0, "y"] = 0.; cases.append(broken)
+    |                                                       ^
+110 |         broken = panel.copy(); broken.loc[0, "offset"] = 4; cases.append(broken)
+111 |         broken = panel.copy(); broken.loc[0, "phase"] = "evaluation"; cases.append(broken)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_claims_release_score.py:110:30
+    |
+108 |         broken = panel.copy(); broken.loc[0, "loss"] += .1; cases.append(broken)
+109 |         broken = panel.copy(); broken.loc[0, "y"] = 0.; cases.append(broken)
+110 |         broken = panel.copy(); broken.loc[0, "offset"] = 4; cases.append(broken)
+    |                              ^
+111 |         broken = panel.copy(); broken.loc[0, "phase"] = "evaluation"; cases.append(broken)
+112 |         cases.extend([panel.iloc[1:], pd.concat([panel, panel.iloc[:1]])])
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_claims_release_score.py:110:59
+    |
+108 |         broken = panel.copy(); broken.loc[0, "loss"] += .1; cases.append(broken)
+109 |         broken = panel.copy(); broken.loc[0, "y"] = 0.; cases.append(broken)
+110 |         broken = panel.copy(); broken.loc[0, "offset"] = 4; cases.append(broken)
+    |                                                           ^
+111 |         broken = panel.copy(); broken.loc[0, "phase"] = "evaluation"; cases.append(broken)
+112 |         cases.extend([panel.iloc[1:], pd.concat([panel, panel.iloc[:1]])])
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_claims_release_score.py:111:30
+    |
+109 |         broken = panel.copy(); broken.loc[0, "y"] = 0.; cases.append(broken)
+110 |         broken = panel.copy(); broken.loc[0, "offset"] = 4; cases.append(broken)
+111 |         broken = panel.copy(); broken.loc[0, "phase"] = "evaluation"; cases.append(broken)
+    |                              ^
+112 |         cases.extend([panel.iloc[1:], pd.concat([panel, panel.iloc[:1]])])
+113 |         for broken in cases:
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_claims_release_score.py:111:69
+    |
+109 |         broken = panel.copy(); broken.loc[0, "y"] = 0.; cases.append(broken)
+110 |         broken = panel.copy(); broken.loc[0, "offset"] = 4; cases.append(broken)
+111 |         broken = panel.copy(); broken.loc[0, "phase"] = "evaluation"; cases.append(broken)
+    |                                                                     ^
+112 |         cases.extend([panel.iloc[1:], pd.concat([panel, panel.iloc[:1]])])
+113 |         for broken in cases:
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_claims_release_score.py:119:35
+    |
+117 |     def test_prior_comparisons_cannot_be_dropped_or_invalid(self):
+118 |         panel, calendar, prior, config = fixture()
+119 |         bad = copy.deepcopy(prior); bad[0]["p_conservative"] = True
+    |                                   ^
+120 |         for rows in (prior[:-1], bad):
+121 |             with self.assertRaises(ValueError):
+    |
+
+Found 10 errors.

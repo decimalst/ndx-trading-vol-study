@@ -1,0 +1,148 @@
+{
+  "combined_forecast_rows": 73740,
+  "combined_hypotheses_checked": 46,
+  "common_panel_verification": "PASS",
+  "contrasts_checked": 14,
+  "independent_inference_verification": "PASS",
+  "independent_neural_warmup_exclusions": [
+    {
+      "origin": "2013-02-01",
+      "train_n": 496
+    },
+    {
+      "origin": "2013-02-04",
+      "train_n": 497
+    },
+    {
+      "origin": "2013-02-05",
+      "train_n": 498
+    },
+    {
+      "origin": "2013-02-06",
+      "train_n": 499
+    }
+  ],
+  "inference_method": "Explicit circular bootstrap row indices for all draws; statsmodels Bartlett HAC and Holm across 14 contrasts",
+  "limitations": "All reference predictions replayed; first neural annual pair independently retrained, later training checked by independently reconstructed eligibility/maps and saved-state replay. Unknown foundation checkpoint pretraining overlap and reused historical sample prevent confirmatory claims.",
+  "maximum_moirai_gamma_gradient": 9.745505156338874e-09,
+  "maximum_moirai_native_replay_error": 0.0,
+  "maximum_neural_replay_error": 0.0,
+  "moirai_calibrated_forecasts_checked": 9832,
+  "moirai_context_sessions": 512,
+  "moirai_contexts_checked": 3968,
+  "moirai_fresh_context_hash": "d762a3e2c81a6df4b3f5751566cfa24b079b929f8ea1598c8577a7101ed3e49b",
+  "moirai_independent_scipy_refits": 40,
+  "moirai_installed_official_files_checked": 95,
+  "moirai_monthly_calibrations_checked": 472,
+  "moirai_quantile_values_checked": 178560,
+  "moirai_raw_forecasts_replayed": 3968,
+  "neural_annual_models_checked": 26,
+  "neural_models_independently_retrained": 2,
+  "neural_predictions_replayed": 12752,
+  "neural_verification_scope": "Every causal training-window/scaler audit and saved forecast replayed using separately assembled architecture; first annual pair retrained from independently selected completed targets",
+  "reference_protocol_sha256": "e937d88080e6e508cf8688bafccc6d6eb4626a3d83397adb210b1d2132f12956",
+  "reference_rows": 19664,
+  "status": "PASS",
+  "verified_verdicts": [
+    {
+      "candidate": "nlinear",
+      "control": "baseline",
+      "horizon": 1,
+      "p_holm": 0.2085329701700993,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "xlstm",
+      "control": "baseline",
+      "horizon": 1,
+      "p_holm": 0.0028,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "moirai_univariate_gamma",
+      "control": "baseline",
+      "horizon": 1,
+      "p_holm": 0.0028,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "moirai_augmented_gamma",
+      "control": "baseline",
+      "horizon": 1,
+      "p_holm": 0.7310860147159602,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "xlstm",
+      "control": "nlinear",
+      "horizon": 1,
+      "p_holm": 0.004,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "moirai_augmented_gamma",
+      "control": "gamma",
+      "horizon": 1,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "moirai_augmented_gamma",
+      "control": "moirai_univariate_gamma",
+      "horizon": 1,
+      "p_holm": 0.0028,
+      "verdict": "EXPLORATORY_SHORTLIST"
+    },
+    {
+      "candidate": "nlinear",
+      "control": "baseline",
+      "horizon": 5,
+      "p_holm": 0.659,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "xlstm",
+      "control": "baseline",
+      "horizon": 5,
+      "p_holm": 0.1568,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "moirai_univariate_gamma",
+      "control": "baseline",
+      "horizon": 5,
+      "p_holm": 0.0028,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "moirai_augmented_gamma",
+      "control": "baseline",
+      "horizon": 5,
+      "p_holm": 0.004,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "xlstm",
+      "control": "nlinear",
+      "horizon": 5,
+      "p_holm": 0.24839708412744432,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "moirai_augmented_gamma",
+      "control": "gamma",
+      "horizon": 5,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "moirai_augmented_gamma",
+      "control": "moirai_univariate_gamma",
+      "horizon": 5,
+      "p_holm": 0.7192,
+      "verdict": "INCONCLUSIVE"
+    }
+  ],
+  "verifier_sha256": "cbfa9183c28c59f36967a3666c8278ed06394de675b96c435e20cc4122aadaae",
+  "verifier_tests_sha256": "7c38f6ced149f1f7c544f2e80d2c22719325f7c0214847923851297427477944"
+}

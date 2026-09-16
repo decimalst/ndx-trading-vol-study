@@ -1,0 +1,13 @@
+{
+  "status": "VERIFIED",
+  "origins": 2190,
+  "cases_per_origin": 9,
+  "policies": 7,
+  "credit_scenarios": 3,
+  "positions": 137970,
+  "outcomes": 19710,
+  "paths": 413910,
+  "summaries": 378,
+  "scope": "Independent saved probability decisions and account reconstruction; universal payoff bound is not a tail estimate.",
+  "original_failed_result_preserved": true
+}

@@ -1,0 +1,18 @@
+F
+======================================================================
+FAIL: test_whole_entrypoint_reads_declared_artifacts_and_checks_final_protocol (tests.test_verify_profiled_quarter.EntryContracts.test_whole_entrypoint_reads_declared_artifacts_and_checks_final_protocol)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_profiled_quarter.py", line 532, in test_whole_entrypoint_reads_declared_artifacts_and_checks_final_protocol
+    result = verify.verify(root)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_profiled_quarter.py", line 1732, in verify
+    validate_protocol(protocol)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_profiled_quarter.py", line 1542, in validate_protocol
+    raise AssertionError("Independent solver specification is not yet final")
+AssertionError: Independent solver specification is not yet final
+
+----------------------------------------------------------------------
+Ran 1 test in 0.089s
+
+FAILED (failures=1)

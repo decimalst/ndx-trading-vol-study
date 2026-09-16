@@ -1,0 +1,19 @@
+test_joint_risk_models (unittest.loader._FailedTest.test_joint_risk_models) ... ERROR
+
+======================================================================
+ERROR: test_joint_risk_models (unittest.loader._FailedTest.test_joint_risk_models)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_joint_risk_models
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_joint_risk_models.py", line 8, in <module>
+    from src import joint_risk_models as model
+ImportError: cannot import name 'joint_risk_models' from 'src' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/__init__.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

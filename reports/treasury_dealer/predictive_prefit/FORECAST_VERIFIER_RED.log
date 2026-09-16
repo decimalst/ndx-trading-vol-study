@@ -1,0 +1,19 @@
+test_verify_treasury_dealer_forecasts (unittest.loader._FailedTest.test_verify_treasury_dealer_forecasts) ... ERROR
+
+======================================================================
+ERROR: test_verify_treasury_dealer_forecasts (unittest.loader._FailedTest.test_verify_treasury_dealer_forecasts)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_verify_treasury_dealer_forecasts
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_treasury_dealer_forecasts.py", line 11, in <module>
+    from src import verify_treasury_dealer_forecasts as verify
+ImportError: cannot import name 'verify_treasury_dealer_forecasts' from 'src' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/__init__.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

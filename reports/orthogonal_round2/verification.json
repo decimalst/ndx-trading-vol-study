@@ -1,0 +1,234 @@
+{
+  "bootstrap_method": "explicit circular row indices, all 4999 draws for all block lengths and hypotheses",
+  "bounded_sources": {
+    "cross": {
+      "bounded_content_sha256": "359e8f38a9989897fb678a0020085f8b4f00156e907ee1e7d41a6949b4178c39",
+      "end": "2025-10-20",
+      "path": "data/raw/cross_asset_daily.parquet",
+      "rows": 5845,
+      "start": "2002-07-30"
+    },
+    "daily": {
+      "bounded_content_sha256": "84027ed402d1d3d6d509f417aad422caca4ab0760a0f924a473e293af25a380a",
+      "end": "2025-10-20",
+      "path": "data/raw/daily_ohlc.parquet",
+      "rows": 6696,
+      "start": "1999-03-10"
+    },
+    "short": {
+      "bounded_content_sha256": "07b45eb7dd60fab3382c39f261908044dd654b1e064225e8acc8d79c7dbc1bac",
+      "end": "2025-10-20",
+      "path": "data/raw/short_dated_iv.parquet",
+      "rows": 9040,
+      "start": "1990-01-02"
+    },
+    "vvix": {
+      "bounded_content_sha256": "947c997802ecac8b2e3f09cb22e9e9eecc2a497ccf8a2317205df1724e41f4d0",
+      "end": "2025-10-20",
+      "path": "data/free_sources/raw/cboe/VVIX_History.csv",
+      "rows": 4878,
+      "start": "2006-03-06"
+    },
+    "vxn": {
+      "bounded_content_sha256": "12bd8e3125f2e8dcd0939a9a33b141321f292a6063139991c61f8eb4ce093d57",
+      "end": "2025-10-20",
+      "path": "data/raw/vxn_daily.parquet",
+      "rows": 4053,
+      "start": "2009-09-14"
+    }
+  },
+  "comparisons": [
+    {
+      "baseline_qlike": 0.32221520315482144,
+      "candidate": "vvix",
+      "candidate_qlike": 0.3224739718872904,
+      "gap": 0.00025876873246896166,
+      "horizon": 1,
+      "improvement_pct": -0.08030928706508789,
+      "n": 2463,
+      "period_gaps": [
+        0.00016404156953149344,
+        -0.00016423699012379996,
+        0.0008509054688387487
+      ],
+      "win_rate": 0.535931790499391
+    },
+    {
+      "baseline_qlike": 0.32221520315482144,
+      "candidate": "rv_dispersion",
+      "candidate_qlike": 0.3224131498776168,
+      "gap": 0.0001979467227953922,
+      "horizon": 1,
+      "improvement_pct": -0.061433079773172784,
+      "n": 2463,
+      "period_gaps": [
+        0.0010194061244033514,
+        -0.00039945044893931506,
+        -0.00033665512625762967
+      ],
+      "win_rate": 0.5184734064149411
+    },
+    {
+      "baseline_qlike": 0.32221520315482144,
+      "candidate": "stock_bond_corr",
+      "candidate_qlike": 0.322361479238312,
+      "gap": 0.00014627608349054811,
+      "horizon": 1,
+      "improvement_pct": -0.045397014808225486,
+      "n": 2463,
+      "period_gaps": [
+        -0.00030224404236820835,
+        0.0007477585824063594,
+        0.0001412696318979029
+      ],
+      "win_rate": 0.5209094600081202
+    },
+    {
+      "baseline_qlike": 0.32221520315482144,
+      "candidate": "close_pressure",
+      "candidate_qlike": 0.32332389208682155,
+      "gap": 0.0011086889320001457,
+      "horizon": 1,
+      "improvement_pct": -0.34408337072395395,
+      "n": 2463,
+      "period_gaps": [
+        0.0017476501730280722,
+        0.0004906362607165226,
+        0.0008582649819521067
+      ],
+      "win_rate": 0.4993909866017052
+    },
+    {
+      "baseline_qlike": 0.18663895667204566,
+      "candidate": "vvix",
+      "candidate_qlike": 0.18694409869063566,
+      "gap": 0.00030514201858998713,
+      "horizon": 5,
+      "improvement_pct": -0.1634932085085378,
+      "n": 2459,
+      "period_gaps": [
+        -0.0001202625851112381,
+        -0.00019010111111741288,
+        0.001456305343385148
+      ],
+      "win_rate": 0.5335502236681577
+    },
+    {
+      "baseline_qlike": 0.18663895667204566,
+      "candidate": "rv_dispersion",
+      "candidate_qlike": 0.18621457674201525,
+      "gap": -0.0004243799300304165,
+      "horizon": 5,
+      "improvement_pct": 0.2273801448516022,
+      "n": 2459,
+      "period_gaps": [
+        0.0006643333846055938,
+        -0.0017094915207638624,
+        -0.0006018565899003467
+      ],
+      "win_rate": 0.5144367629117528
+    },
+    {
+      "baseline_qlike": 0.18663895667204566,
+      "candidate": "stock_bond_corr",
+      "candidate_qlike": 0.18713897369040117,
+      "gap": 0.0005000170183554996,
+      "horizon": 5,
+      "improvement_pct": -0.26790602951885817,
+      "n": 2459,
+      "period_gaps": [
+        0.00035370895458943885,
+        0.000970008738584599,
+        0.00020141181269618539
+      ],
+      "win_rate": 0.5185034566897113
+    },
+    {
+      "baseline_qlike": 0.18663895667204566,
+      "candidate": "close_pressure",
+      "candidate_qlike": 0.18741175499873494,
+      "gap": 0.0007727983266892463,
+      "horizon": 5,
+      "improvement_pct": -0.41406056938433056,
+      "n": 2459,
+      "period_gaps": [
+        0.00026260537730147745,
+        0.0018023144025272337,
+        0.0003925113162883521
+      ],
+      "win_rate": 0.48962993086620576
+    }
+  ],
+  "feature_rows": 6696,
+  "hac_method": "statsmodels Bartlett HAC(126), no small-sample correction",
+  "holm_method": "statsmodels multipletests across all eight comparisons",
+  "independent_feature_verification": "PASS",
+  "independent_forecast_verification": "PASS",
+  "independent_inference_verification": "PASS",
+  "independent_manifest_verification": "PASS",
+  "limitation": "The finite AR(1) calibration is hash-bound but not independently rerun; market-data inference remains exploratory.",
+  "max_absolute_error": 5.773159728050814e-15,
+  "max_relative_error": 6.070513585794474e-14,
+  "monthly_model_fits": 1180,
+  "n": 24610,
+  "preserved_artifact_count": 85,
+  "protocol_sha256": "2c081c8e9dcc9a407cd19d2d49c5e8b76462befeabcebc9a3539dbf69d516c93",
+  "source_sha256": {
+    "data/free_sources/raw/cboe/VVIX_History.csv": "f6bc726455fa3859c662875a005e97ba656b9536ae58fa6977ad24c6228e4f6a",
+    "data/raw/cross_asset_daily.parquet": "53f11ec90fc4f68d8d5592af7d893f7b5707bfbd7799b0735681acc18e72ac53",
+    "data/raw/daily_ohlc.parquet": "710290d8ad8569172559334b23e423b50ecf7cd10f0fd8ec24a9fc29608bca4d",
+    "data/raw/short_dated_iv.parquet": "b238e404c661140a47f8eb7cd2bbdf5931fe7f2aa62151a08f71b52a20bfd39c",
+    "data/raw/vxn_daily.parquet": "61c4dec804140831dadb05d0cc34ee38a3d662d31c5b6fc258eae6918b455731"
+  },
+  "verified_verdicts": [
+    {
+      "candidate": "vvix",
+      "horizon": 1,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "rv_dispersion",
+      "horizon": 1,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "stock_bond_corr",
+      "horizon": 1,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "close_pressure",
+      "horizon": 1,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "vvix",
+      "horizon": 5,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "rv_dispersion",
+      "horizon": 5,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "stock_bond_corr",
+      "horizon": 5,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "close_pressure",
+      "horizon": 5,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    }
+  ],
+  "verifier_sha256": "f99ce41bb68c448c132ef9ddd826e66ba01043cd11673c5671dc3b22792b22cf"
+}

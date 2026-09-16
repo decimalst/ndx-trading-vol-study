@@ -1,0 +1,13 @@
+test_all_parsed_dates_preflight_before_any_numeric_decode (tests.test_commodity_implied_inputs.CommodityImpliedInputTests.test_all_parsed_dates_preflight_before_any_numeric_decode) ... ok
+test_duplicate_or_descending_parsed_dates_fail_preflight (tests.test_commodity_implied_inputs.CommodityImpliedInputTests.test_duplicate_or_descending_parsed_dates_fail_preflight) ... ok
+test_every_byte_pin_before_any_json_numerical_decode (tests.test_commodity_implied_inputs.CommodityImpliedInputTests.test_every_byte_pin_before_any_json_numerical_decode) ... ok
+test_exact_inventory_sha_types_and_safe_relative_paths (tests.test_commodity_implied_inputs.CommodityImpliedInputTests.test_exact_inventory_sha_types_and_safe_relative_paths) ... ok
+test_independent_reconstruction_rejects_metadata_and_missingness (tests.test_commodity_implied_inputs.CommodityImpliedInputTests.test_independent_reconstruction_rejects_metadata_and_missingness) ... ok
+test_independent_reconstruction_rejects_rehashed_value_corruption (tests.test_commodity_implied_inputs.CommodityImpliedInputTests.test_independent_reconstruction_rejects_rehashed_value_corruption) ... ok
+test_no_mutation_or_source_replacement (tests.test_commodity_implied_inputs.CommodityImpliedInputTests.test_no_mutation_or_source_replacement) ... ok
+test_outer_calendar_preserves_absent_dates_and_explicit_missing (tests.test_commodity_implied_inputs.CommodityImpliedInputTests.test_outer_calendar_preserves_absent_dates_and_explicit_missing) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.021s
+
+OK

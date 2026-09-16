@@ -1,0 +1,214 @@
+study_id: target_aligned_wave12
+specified_on: '2026-09-07'
+status: specified_before_new_training_products_or_scalar_fits
+wave: 12
+wave_alpha: 0.0003205128205128205
+objective: Test direct unweighted residual cross-moment fitting with frozen shared means and marginal moments
+evidence_class: exploratory_reused_history_new_target_aligned_scalar_models_frozen_marginals
+upstream:
+  protocol: cross_moment.yaml
+  reports: reports/cross_moment
+  data: data/cross_moment
+  forecasts: data/cross_moment/scored_forecasts.parquet
+  features: data/joint_risk/features.parquet
+  targets: data/joint_risk/targets.parquet
+  fits: data/joint_risk/fits.json
+  joint_protocol: joint_risk.yaml
+  protocol_sha256: edeb72e2d7708c0a5227318d1ea54742050f9be0b761941ce598cdda28c26ed0
+  verifier_sha256: d1cb8c3fc69e44646359b839aac160acf6ed4be6cc043e2f2ca23f7c979430fa
+  manifest_sha256: 28a3fa3975bd58789d6859850579a472671443937e4de641351eb8f8217c969a
+  verification_sha256: b3745d90db160e1102f2c3b987627add1d890958e38b52bb30499b77f5c13fa0
+  required_status: VERIFIED
+  forecasts_expected: 7386
+  scored_origins_expected: 2462
+  monthly_fits_expected: 118
+  admission: Pin original wave11 registration/code/inputs/preserved plus every current upstream output; reconstruct
+    original VERIFIED record and wave10 read-only admission without any prior writer. Historical manifest coverage
+    anchored by exact old manifest hash, not a current-tree enumeration that includes later studies.
+index:
+  asset: QQQ_ETF_and_SPX_price_index
+  source_end: '2025-10-20'
+  sealed_start: '2025-11-03'
+  origin_start: '2016-01-04'
+  origin_end: '2025-10-17'
+  latest_target: '2025-10-20'
+  development:
+  - '2016-01-04'
+  - '2019-12-31'
+  development_target_available_by: '2019-12-31'
+  evaluation:
+  - '2020-01-02'
+  - '2025-10-17'
+  evaluation_stability:
+  - - '2020-01-02'
+    - '2022-12-31'
+  - - '2023-01-01'
+    - '2025-10-17'
+  horizons:
+  - 1
+  models:
+  - constant_matrix
+  - constant_correlation
+  - dynamic_correlation
+  - aligned_constant
+  - aligned_dynamic
+  market_lag: 1
+  minimum_train: 1000
+scoring:
+  target: Y=(y_qqq-issued_mu_qqq)*(y_spx-issued_mu_spx)
+  forecast: q=issued_rho*(sqrt(issued_h_qqq)*sqrt(issued_h_spx)); geometric mean first
+  loss: (Y-q)^2, finite nonnegative, with signed and zero Y/q valid
+  paired_difference: (q_candidate-q_control)*((q_candidate-Y)+(q_control-Y)) after separately validating both
+    individual squared losses
+  units: Decimal raw intraday log returns; product has squared-return units and MSE has fourth-power-return
+    units
+  effect_threshold_absolute: 1.0e-10
+  effect_reference: '(0.01*0.001)^2: squared cross-moment error of a1percent by10basispoint reference return
+    pair; fixed exante reference scale, not measured profitability or forecast-RMSE reduction'
+  new_model_fits: 236
+  common_sample: All original three-model rows retained exactly, plus both new models for every original scored
+    origin; exact shared labels/means/timing and conditional diagonals. No target/loss selection.
+  conditional_rho_max: 0.995
+  constant_matrix_rho_max: 0.999999
+  arithmetic: Reject all nonfinite intermediates/results and nonzero-input products/squares underflowing to
+    zero. Exact zeros are valid. Individual MSE must remain finite even when paired predictions are equal.
+    Separate roots before geometric mean avoid variance-product overflow.
+  coherence_eps_multiplier: 64
+  coherence_rule: abs(factored_difference-(candidate_mse-control_mse)) <=sum64*max(eps*abs(term),abs(term)-nextafter(abs(term),0))
+    over candidate_mse/control_mse/factored_difference; finite bound, no unit-dependent absolute floor
+  auxiliary_matrix_loss: For new rows recompute the original matrix loss solely as a validity field; no matrix-score
+    hypothesis, comparison or promotion analysis in this wave.
+comparisons:
+  new_hypotheses: 3
+  inherited_hypotheses: 114
+  cumulative_hypotheses: 117
+  inherited_sources:
+  - reports/orthogonal_round2/metrics.json
+  - reports/model_memory_study/combined_metrics.json
+  - reports/iterative_signal_search/metrics.json
+  - reports/international_volatility/metrics.json
+  - reports/overnight_index/metrics.json
+  - reports/macro_overnight/metrics.json
+  - reports/measurement_memory/metrics.json
+  - reports/index_hinge/metrics.json
+  - reports/tail_shape/metrics.json
+  - reports/calendar_variance/metrics.json
+  - reports/relative_risk/metrics.json
+  - reports/joint_risk/metrics.json
+  - reports/cross_moment/metrics.json
+  controls:
+  - aligned_constant
+  - constant_matrix
+  - dynamic_correlation
+  contrasts:
+  - - aligned_dynamic
+    - aligned_constant
+    - product_mse
+  - - aligned_dynamic
+    - constant_matrix
+    - product_mse
+  - - aligned_dynamic
+    - dynamic_correlation
+    - product_mse
+  candidate_gate: All three registered comparisons must pass. A changed bounded affine model class prevents
+    attribution solely to changing the training loss.
+inference:
+  blocks:
+  - 21
+  - 63
+  - 126
+  hac_lags: 126
+  minimum_phase_observations: 127
+  bootstrap_draws: 99999
+  seed: 20260918
+  seed_rule: seed+phase_code*10000+block;development0,evaluation1
+  inference_scale: 1.0e-10
+  normalization: One fixed positive units conversion d/inference_scale for mean/HAC/bootstrap and annual/fixed-slice
+    means; restore all dimensional mean/CI/SE/MDE by same scale. No model-dependent weighting.
+  arithmetic: Normalized differences, means, centered sum of squares and all bootstrap/HAC/restored results
+    finite; a nonconstant normalized series with zero centered sum of squares fails as numerical underflow.
+    Exact constant difference allowed.
+  p_phase: Maximum two-sided centered-null circular bootstrap p across allblocks and Bartlett HAC126 p
+  p_hypothesis: Maximum development and evaluation p
+  multiplicity: Holm3 at0.05/(12*13), separately Holm117 at0.05
+  gate: Absolute paired product-MSE decrease>=1e-10 bothphases vsALL3controls; negativepaired differences in
+    bothfixed evaluation slices; waveHolm<.05/156 andcumulativeHolm<.05
+  power: 'Report nominal HAC80percent MDE in original units and divided by fixed effect threshold. Diagnostic
+    only: no retrospective effect/sample/power gate, and failure to reject is not equivalence.'
+  resolution: Minimum p1/100000 below one tenth strictest raw three-comparison wave cutoff1/9360
+  failure_rule: Any admission/arithmetic/replay/fitting/scoring/verification/publication failure retains all3
+    new hypotheses UNEVALUABLEp1, available diagnostics and all previous files unchanged.
+  limitations: Reused history; noisy daily products and cross fourth moments; shared-mean error; fixed issued
+    diagonals enter q. Product-score success does not certify true correlation dynamics, HF covariance or trading
+    profit.
+verification:
+  product_comparison_eps_multiplier: 256
+  coherence_eps_multiplier: 64
+  dimensionless_relative_tolerance: 1.0e-09
+  probability_absolute_tolerance: 1.0e-14
+  dimensional_comparison: Adaptive256*max(eps*abs(expected),abs(expected)-nextafter(abs(expected),0)); exact
+    zero/sign masks for primitive product/individual-MSE columns; no fixed unit absolute tolerance. Dimensional
+    inference comparison uses rtol1e-9,atol0 with declared ULP allowance.
+  upstream_replay: Read-only original frozen independent verifier functions reconstruct all inputs/features/targets/fits/certificates/forecasts/inference/ledger
+    and compare exact original VERIFIED identity; new forecasts remain original bytes.
+  new_reconstruction: Independent original training masks, frozen-coefficient mean/variance replay, both scalar
+    constrained optima including flat cases, all five-model forecasts and original-row preservation, sixphase
+    analyses,18bootstrap runs, bothHolm families,120ledger events.
+  coefficient_relative_tolerance: 1.0e-10
+  coefficient_absolute_tolerance: 1.0e-12
+  fit_statistic_eps_multiplier: 256
+  fit_gradient_eps_multiplier: 512
+  marginal_replay_relative_tolerance: 1.0e-10
+  marginal_replay_absolute_tolerance: 1.0e-12
+  fit_statistic_comparison: Primitive common units, sufficient statistics, unconstrained ratios and objectives
+    require finite values, exact zero/sign masks and adaptive256*max(eps*abs(expected),abs(expected)-nextafter(abs(expected),0))
+    tolerance. Signed gradient/projected-gradient differences use the fixed512-epsilon/downward-ULP allowance
+    summed over their two gradient terms, rather than a relative bound on a cancellation-near-zero gradient.
+    Each projected KKT residual must independently satisfy that allowance; no unit absolute floor.
+outputs:
+  data: data/target_aligned
+  reports: reports/target_aligned
+  forecasts: data/target_aligned/forecasts.parquet
+  fits: data/target_aligned/fits.json
+  admission: data/target_aligned/upstream_admission.json
+fitting:
+  new_models:
+  - aligned_constant
+  - aligned_dynamic
+  cap: 0.995
+  training_staging: current_monthly_frozen_fit_training_residuals
+  marginals: Apply saved mean coefficients and saved scaled variance coefficients with their saved train_mean
+    and original feature transforms; no refit or recalibration. Keep exact issued means/diagonals on scored
+    application rows.
+  training_rows: Exact original mature paired-label complete-feature mask at each original monthly fit; retain
+    every original monthly application, including unscored applications.
+  numerical_unit: k=mean(D) where D=sqrt(h_qqq)*sqrt(h_spx); use d=D/k and y=(e_qqq*e_spx)/k for both scalar
+    objectives. One common training scalar preserves unweighted original squared loss.
+  constant: "a=project_[\u2212c,c](mean(d*y)/mean(d*d)); q0=a*d"
+  increment: "phi=tanh(z_corr22); headroom=c-abs(a); w=headroom*d*phi; b=project_[\u22121,1](mean(w*(y-a*d))/mean(w*w));\
+    \ hold a fixed"
+  prediction: rho0=a; rho1=a+b*headroom*tanh(z_corr22); multiply each by exact issued sqrt(h_qqq)*sqrt(h_spx)
+  flat_objective: 'If every constructed w is exactly zero after checking operand arithmetic, use canonical
+    b=0 with status FLAT_OBJECTIVE, retain fold and model. This is a prefit amendment to the unregistered prospectus:
+    every b is an optimizer of a flat objective. Nonzero w whose squared norm underflows is invalid.'
+  optimization_claim: Each stage is a global one-dimensional constrained least-squares minimizer; the staged
+    pair is not a jointly optimized two-parameter fit. No penalty, grid or optimizer search.
+  minimum_correlation_eigenvalue: 0.005
+  new_monthly_fits_expected: 118
+  new_scalar_fits_expected: 236
+  new_forecasts_expected: 4924
+  combined_forecast_rows_expected: 12310
+  coefficient_bounds:
+    a:
+    - -0.995
+    - 0.995
+    b:
+    - -1.0
+    - 1.0
+  gradient_eps_multiplier: 512
+  arithmetic: Finite real inputs/intermediates/results, positive diagonals and common unit, distinguish true
+    zeros from nonzero multiplication/square/division underflow; no row deletion, variance weighting or application
+    forecast clipping.
+  reduction: Every new scalar reduction uses math.fsum(values)/n, including the common unit, sufficient statistics
+    and squared objectives. Reject unrepresentable totals or nonzero quotient underflow; frozen feature and
+    marginal transforms retain their original algorithms.

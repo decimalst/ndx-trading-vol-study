@@ -1,0 +1,13 @@
+F
+======================================================================
+FAIL: test_independent_inference_matches_complete_synthetic_producer_and_rejects_gates (tests.test_verify_civil_quarter.PublicationContracts.test_independent_inference_matches_complete_synthetic_producer_and_rejects_gates)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_civil_quarter.py", line 277, in test_independent_inference_matches_complete_synthetic_producer_and_rejects_gates
+    with self.assertRaises(AssertionError):
+AssertionError: AssertionError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.225s
+
+FAILED (failures=1)

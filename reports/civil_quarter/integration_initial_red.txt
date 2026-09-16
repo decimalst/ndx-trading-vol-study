@@ -1,0 +1,19 @@
+test_civil_quarter_integration (unittest.loader._FailedTest.test_civil_quarter_integration) ... ERROR
+
+======================================================================
+ERROR: test_civil_quarter_integration (unittest.loader._FailedTest.test_civil_quarter_integration)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_civil_quarter_integration
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_civil_quarter_integration.py", line 22, in <module>
+    from src import civil_quarter_search as search
+ImportError: cannot import name 'civil_quarter_search' from 'src' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/__init__.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

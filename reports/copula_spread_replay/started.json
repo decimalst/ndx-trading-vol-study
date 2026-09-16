@@ -1,0 +1,7 @@
+{
+  "started_utc": "2026-09-13T22:09:14.114696+00:00",
+  "anchors": {
+    "reports/copula_spread_replay/freeze.json": "7d96b280283fa2ea88c7778d52bb57f6a13d15a4bfc10daa3a5f5277286ef31f",
+    "reports/copula_spread_replay/registration.json": "f9ffbd3d870fe06c3ea2c9dec45337889fdbe2861e2ff80c65fd4ef5f1ef9427"
+  }
+}

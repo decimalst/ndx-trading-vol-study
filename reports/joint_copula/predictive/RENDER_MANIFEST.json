@@ -1,0 +1,52 @@
+{
+  "status": "RENDERED_FROM_SAVED_ESTIMATES_ONLY",
+  "metrics_sha256": "d1de728c8fb6909a4ce8ecd6edb055d8b3652693550de140dfca3ff688593442",
+  "script_sha256": "471ef02c0ac520199c2e8fa414122f4d43ea7e10161912f84b4c3400a4da300b",
+  "estimates": [
+    {
+      "control": "gaussian_copula",
+      "phase": "development",
+      "mean": -0.030568715957402973,
+      "ci95_envelope": [
+        -0.04125171516797149,
+        -0.01988571674683445
+      ],
+      "n": 1005
+    },
+    {
+      "control": "gaussian_copula",
+      "phase": "evaluation",
+      "mean": -0.031017081500978507,
+      "ci95_envelope": [
+        -0.04117759022050474,
+        -0.02085657278145227
+      ],
+      "n": 1457
+    },
+    {
+      "control": "independence",
+      "phase": "development",
+      "mean": -0.6067968120341651,
+      "ci95_envelope": [
+        -0.7043435042556597,
+        -0.5092501198126705
+      ],
+      "n": 1005
+    },
+    {
+      "control": "independence",
+      "phase": "evaluation",
+      "mean": -0.7469353249639794,
+      "ci95_envelope": [
+        -0.8422456481825161,
+        -0.6498442246294044
+      ],
+      "n": 1457
+    }
+  ],
+  "outputs": {
+    "reports/joint_copula/predictive/comparison_intervals.png": "f61696ac97677fac941c81b06043fb9cef466274b80aeaa0e7b1d449e2355002",
+    "reports/joint_copula/predictive/comparison_intervals.pdf": "e8357a300a0c5c65bfdaf10a4b19c98c0825176a43888366459e63e44c7af8fe"
+  },
+  "model_or_inference_rerun": false
+}

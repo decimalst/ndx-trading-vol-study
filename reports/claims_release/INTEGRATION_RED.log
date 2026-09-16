@@ -1,0 +1,7 @@
+test_generated_source_gaps_and_opaque_audit_counts_survive_full_chain (tests.test_claims_release_integration.ClaimsReleaseIntegrationTests.test_generated_source_gaps_and_opaque_audit_counts_survive_full_chain) ... ok
+test_generated_sources_to_independently_verified_forecasts_and_scores (tests.test_claims_release_integration.ClaimsReleaseIntegrationTests.test_generated_sources_to_independently_verified_forecasts_and_scores) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 1.713s
+
+OK

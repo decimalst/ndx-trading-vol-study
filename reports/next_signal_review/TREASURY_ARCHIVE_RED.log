@@ -1,0 +1,19 @@
+test_treasury_auction_archive (unittest.loader._FailedTest.test_treasury_auction_archive) ... ERROR
+
+======================================================================
+ERROR: test_treasury_auction_archive (unittest.loader._FailedTest.test_treasury_auction_archive)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_treasury_auction_archive
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_auction_archive.py", line 8, in <module>
+    from src import treasury_auction_archive as archive
+ImportError: cannot import name 'treasury_auction_archive' from 'src' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/__init__.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

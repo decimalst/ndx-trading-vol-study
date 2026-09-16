@@ -1,0 +1,80 @@
+{
+  "approval_limit": "Approval covers the interpretation in the exact hashed documents only. It does not validate generated forecasts, admit option-source modeling, authorize a repair of either failed attempt, or register or execute the proposed next verifier.",
+  "findings": [
+    {
+      "finding": "Wave16 is consistently UNEVALUABLE, with both comparisons p1, no lead and no accepted predictive evidence. The failure values are not described as statistical null results.",
+      "status": "PASS",
+      "topic": "Failure interpretation"
+    },
+    {
+      "finding": "6297 forecast rows and 101 monthly fit records match the metadata-based failure audit. The 144810 generated sequence total includes those unverified rows; 138513 earlier generated rows plus 6297 equals 144810. The text does not promote the combined total as independently verified.",
+      "status": "PASS",
+      "topic": "Generated versus verified counts"
+    },
+    {
+      "finding": "399 source files, 1684 current manifest entries, 1631 unique prior pins, 129 ledger events and 125 cumulative hypotheses agree with the failure audit. The earlier 125-event wave15 failure remains separately preserved.",
+      "status": "PASS",
+      "topic": "Frozen accounting and source admission"
+    },
+    {
+      "finding": "The 99th baseline replay, 2025-08-01, 3055 training rows, 20 iterations and reported gradients/objective match the saved diagnosis. The 98 preceding accepted baseline checks are explicitly partial, not full forecast verification. Finite-precision stopping is a supported explanation, not a proven reconstruction of the exact unsaved trial step.",
+      "status": "PASS",
+      "topic": "Numerical diagnosis"
+    },
+    {
+      "finding": "Analytic intercept profiling retains the actual sample-mean term and .01 slope penalty. The stated gradient and weighted-covariance Hessian are correct; Hessian>=.02I gives the stated slope-distance and objective-gap bounds in exact arithmetic. For unit descent direction v, R=2*(-g.v)/.02 makes the directional derivative positive at R under the curvature bound.",
+      "status": "PASS",
+      "topic": "Prospective profiling mathematics"
+    },
+    {
+      "finding": "The original full-gradient, coefficient, normalized-prediction, source and scientific gates remain. Floating-point residual bounds are not called interval proofs. The new note recognizes that auxiliary weight underflow at a trial bracket endpoint can fail the proposed algorithm even when a valid optimum exists; feasibility must be established synthetically before registration. No algorithm implementation or historical rerun is approved by this publication review.",
+      "status": "PASS",
+      "topic": "Prospective numerical limits"
+    },
+    {
+      "finding": "Summary accurately reflects the reviewed documentary note: quote width remains unadmitted; quarterly archive delivery, unresolved mirror permission and quote-clock semantics do not establish next-session availability or executable quotes. Existing private diagnostics are not treated as source authorization. This review did not independently refetch external sources.",
+      "status": "PASS",
+      "topic": "Option-quote admission limits"
+    },
+    {
+      "finding": "All absolute local links in the four reviewed narrative documents resolve to existing files.",
+      "status": "PASS",
+      "topic": "Publication links"
+    }
+  ],
+  "material_unresolved_issues": [],
+  "protocol_sha256": "99ff8102daf12a451f4bf2c50ddd4326dcf6b79873ad31a399c319b708ebac22",
+  "resolved_findings": [
+    {
+      "issue": "An earlier summary sentence could imply the independent optimizer was never replayed.",
+      "resolution": "Final summary explicitly distinguishes unchanged frozen settings and no full verifier rerun from the separate chronological baseline-only diagnostic replay."
+    },
+    {
+      "issue": "The initial prospective note used two relative code links.",
+      "resolution": "Both links are absolute local file links in the reviewed final bytes."
+    }
+  ],
+  "reviewed_document_hashes": {
+    "reports/civil_quarter_replay/NEXT_NUMERICAL_VERIFICATION.md": "4e1d508593b78175634c39143160c1e8c7fc3c0956132b90bc0183c6484808bc",
+    "reports/civil_quarter_replay/NUMERICAL_FAILURE_DIAGNOSIS.md": "8fa268c5ac6965dc459afc3741c618fc5f78f0fe1aeac8dead08c7c93d6169ca",
+    "reports/civil_quarter_replay/QUOTE_SOURCE_DOCUMENTATION.md": "220c9fa16b7c9c8b6d878ea345712f0cda9e386564aa7e0e3f44ea987d141ea3",
+    "reports/civil_quarter_replay/SUMMARY.md": "c945ade0ae38b1464725bf5844bc4077b711a9ec7ee0e3c3d1cb9c55c9b3a12f",
+    "reports/civil_quarter_replay/VERIFICATION_FAILURE_AUDIT.md": "89ac5ce4665f72248d09139f5b7f104a8fcced3f46423373f37479a96c3c3df2",
+    "reports/civil_quarter_replay/numerical_failure_diagnosis.json": "13be3e97d9edfd71c3ba0a887c22ba5b0ecdbc0802255f7409ae886c9ec6d9e6",
+    "reports/civil_quarter_replay/verification_failure_audit.json": "49bb09229a2317dc5a33d0711389d1e0f554be4e17ba390676892a52dbe7c708"
+  },
+  "reviewed_utc": "2026-09-07T12:50:00.580791+00:00",
+  "scope": {
+    "external_documentation_refetched": false,
+    "ledger_score_payloads_read": false,
+    "new_empirical_features_or_targets_constructed": false,
+    "new_fits_or_verifier_runs": false,
+    "review": "Read-only review of final summary interpretation/counts, existing failure/preservation audit, completed training-only numerical diagnosis, option-quote documentary admission limits, and the unregistered numerical-verifier prospectus.",
+    "sole_output": "reports/civil_quarter_replay/publication_review.json",
+    "source_or_model_or_frozen_report_changes": false,
+    "training_only_diagnostic_records_read": true,
+    "unpublished_scored_metrics_read": false
+  },
+  "status": "APPROVED_UNEVALUABLE_INTERPRETATION",
+  "summary_sha256": "c945ade0ae38b1464725bf5844bc4077b711a9ec7ee0e3c3d1cb9c55c9b3a12f"
+}

@@ -1,0 +1,22 @@
+test_frozen_verification_ledger_uses_typed_role_count_map (tests.test_event_cluster_admission.AdmissionTests.test_frozen_verification_ledger_uses_typed_role_count_map) ... ERROR
+
+======================================================================
+ERROR: test_frozen_verification_ledger_uses_typed_role_count_map (tests.test_event_cluster_admission.AdmissionTests.test_frozen_verification_ledger_uses_typed_role_count_map)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_event_cluster_admission.py", line 237, in test_frozen_verification_ledger_uses_typed_role_count_map
+    pins = admission.collect_input_pins(self.root, self.f.expected)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/event_cluster_admission.py", line 289, in collect_input_pins
+    c = _collect(root, expected)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/event_cluster_admission.py", line 240, in _collect
+    old._same(verified["ledger_events_verified"], 133, "verified terminal ledger")
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/issued_calibration_admission.py", line 94, in _same
+    raise ValueError("Typed identity differs: " + label)
+ValueError: Typed identity differs: verified terminal ledger
+
+----------------------------------------------------------------------
+Ran 1 test in 0.066s
+
+FAILED (errors=1)

@@ -1,0 +1,231 @@
+{
+  "checkpoint_sha256": "72e366ae4a3e310547dd6ea987dd18cbad2a214d3f298b945ef16049f4fd7d66",
+  "completed_utc": "2026-09-09T02:00:40.472868+00:00",
+  "counts": {
+    "NOT_APPLIED_PRIOR_SOURCE_DISPOSITION_RETAINED": 2,
+    "VERIFIED_STATED_OFFERING_AGREEMENT": 20
+  },
+  "events": [
+    {
+      "announcement_date": "2010-01-07",
+      "auction_date": "2010-01-12",
+      "cusip": "912828MG2",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "private_offering_path": "data/source_discovery/treasury_auction/offering_pilot_v2/2010-01-12_912828MG2.json",
+      "private_offering_sha256": "0b4e5b6844f7407b6002e5fd1bb9f6d90896465aa350bf11e31e798638d140d4",
+      "source_admitted": false,
+      "status": "VERIFIED_STATED_OFFERING_AGREEMENT"
+    },
+    {
+      "announcement_date": "2010-01-07",
+      "auction_date": "2010-01-13",
+      "cusip": "912828LY4",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "private_offering_path": "data/source_discovery/treasury_auction/offering_pilot_v2/2010-01-13_912828LY4.json",
+      "private_offering_sha256": "cf12b03d4dbf15f790bae5bcc878b9fee7561a2fc5dcf325a3ef0a83596d23bf",
+      "source_admitted": false,
+      "status": "VERIFIED_STATED_OFFERING_AGREEMENT"
+    },
+    {
+      "announcement_date": "2010-01-07",
+      "auction_date": "2010-01-14",
+      "cusip": "912810QD3",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "private_offering_path": "data/source_discovery/treasury_auction/offering_pilot_v2/2010-01-14_912810QD3.json",
+      "private_offering_sha256": "44acac1b3fc7261df4b83d118d558341c72a5ff36c30962ba17da7697e8e2162",
+      "source_admitted": false,
+      "status": "VERIFIED_STATED_OFFERING_AGREEMENT"
+    },
+    {
+      "announcement_date": "2010-01-21",
+      "auction_date": "2010-01-26",
+      "cusip": "912828MJ6",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "private_offering_path": "data/source_discovery/treasury_auction/offering_pilot_v2/2010-01-26_912828MJ6.json",
+      "private_offering_sha256": "8ebe0ad7c44a45650d1c81c4ae66be49c1e3bde9efe35754c4a6e227f3c4bff7",
+      "source_admitted": false,
+      "status": "VERIFIED_STATED_OFFERING_AGREEMENT"
+    },
+    {
+      "announcement_date": "2010-01-21",
+      "auction_date": "2010-01-27",
+      "cusip": "912828MH0",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "private_offering_path": "data/source_discovery/treasury_auction/offering_pilot_v2/2010-01-27_912828MH0.json",
+      "private_offering_sha256": "7d777ea03f0d224d4f244e8d51090b3fa3c2cc48e33fa8e7a534faaa09fce05e",
+      "source_admitted": false,
+      "status": "VERIFIED_STATED_OFFERING_AGREEMENT"
+    },
+    {
+      "announcement_date": "2010-01-21",
+      "auction_date": "2010-01-28",
+      "cusip": "912828MK3",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "private_offering_path": "data/source_discovery/treasury_auction/offering_pilot_v2/2010-01-28_912828MK3.json",
+      "private_offering_sha256": "99ece3b1a857750084e81530063f0447f4d75ddde411833a18e282d018997665",
+      "source_admitted": false,
+      "status": "VERIFIED_STATED_OFFERING_AGREEMENT"
+    },
+    {
+      "announcement_date": "2010-06-17",
+      "auction_date": "2010-06-22",
+      "cusip": "912828NS5",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "private_offering_path": "data/source_discovery/treasury_auction/offering_pilot_v2/2010-06-22_912828NS5.json",
+      "private_offering_sha256": "c857fd270e83b31ed76ccbcf4c89fa987a594a418d845823f2f7135d1080301c",
+      "source_admitted": false,
+      "status": "VERIFIED_STATED_OFFERING_AGREEMENT"
+    },
+    {
+      "announcement_date": "2016-01-07",
+      "auction_date": "2016-01-12",
+      "cusip": "912828N63",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "private_offering_path": "data/source_discovery/treasury_auction/offering_pilot_v2/2016-01-12_912828N63.json",
+      "private_offering_sha256": "330e994d8811b39473e087d335f9a514c09a1a5e165e683d30bb7c14f3ad8a7e",
+      "source_admitted": false,
+      "status": "VERIFIED_STATED_OFFERING_AGREEMENT"
+    },
+    {
+      "announcement_date": "2016-01-07",
+      "auction_date": "2016-01-13",
+      "cusip": "912828M56",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "private_offering_path": "data/source_discovery/treasury_auction/offering_pilot_v2/2016-01-13_912828M56.json",
+      "private_offering_sha256": "85627cd3877de4724d5b8f9f88b94b619efcf1e09cf861fbdd5008bff8ca658c",
+      "source_admitted": false,
+      "status": "VERIFIED_STATED_OFFERING_AGREEMENT"
+    },
+    {
+      "announcement_date": "2016-01-07",
+      "auction_date": "2016-01-14",
+      "cusip": "912810RP5",
+      "prior_accounting_status": "METADATA_OR_LINEAGE_REQUIRES_REVIEW",
+      "source_admitted": false,
+      "status": "NOT_APPLIED_PRIOR_SOURCE_DISPOSITION_RETAINED"
+    },
+    {
+      "announcement_date": "2016-01-21",
+      "auction_date": "2016-01-26",
+      "cusip": "912828P20",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "private_offering_path": "data/source_discovery/treasury_auction/offering_pilot_v2/2016-01-26_912828P20.json",
+      "private_offering_sha256": "d26b3d6a80066a8e3510716b259bbf9aec15055bb55afef9aaa94a717bb3dab0",
+      "source_admitted": false,
+      "status": "VERIFIED_STATED_OFFERING_AGREEMENT"
+    },
+    {
+      "announcement_date": "2016-01-21",
+      "auction_date": "2016-01-27",
+      "cusip": "912828N89",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "private_offering_path": "data/source_discovery/treasury_auction/offering_pilot_v2/2016-01-27_912828N89.json",
+      "private_offering_sha256": "6c29b9b8f6e6d3fc50eca8f8ac413b124107798a6cad816e8f2c1d469c3a7b61",
+      "source_admitted": false,
+      "status": "VERIFIED_STATED_OFFERING_AGREEMENT"
+    },
+    {
+      "announcement_date": "2016-01-21",
+      "auction_date": "2016-01-28",
+      "cusip": "912828P38",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "private_offering_path": "data/source_discovery/treasury_auction/offering_pilot_v2/2016-01-28_912828P38.json",
+      "private_offering_sha256": "77ffe27b617823d30b557034bd30659bfbdfea771744c77d2a616141fde32e9a",
+      "source_admitted": false,
+      "status": "VERIFIED_STATED_OFFERING_AGREEMENT"
+    },
+    {
+      "announcement_date": "2019-06-06",
+      "auction_date": "2019-06-12",
+      "cusip": "9128286T2",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "private_offering_path": "data/source_discovery/treasury_auction/offering_pilot_v2/2019-06-12_9128286T2.json",
+      "private_offering_sha256": "2604c9b593f579becddc4e9e9b668d25433451247dff622fde899cb80f06748a",
+      "source_admitted": false,
+      "status": "VERIFIED_STATED_OFFERING_AGREEMENT"
+    },
+    {
+      "announcement_date": "2019-06-21",
+      "auction_date": "2019-06-21",
+      "cusip": "9128286T2",
+      "prior_accounting_status": "EXCLUDED_DOCUMENTED_CONTINGENCY_TEST",
+      "source_admitted": false,
+      "status": "NOT_APPLIED_PRIOR_SOURCE_DISPOSITION_RETAINED"
+    },
+    {
+      "announcement_date": "2025-01-02",
+      "auction_date": "2025-01-06",
+      "cusip": "91282CMF5",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "private_offering_path": "data/source_discovery/treasury_auction/offering_pilot_v2/2025-01-06_91282CMF5.json",
+      "private_offering_sha256": "497a538d3801d35e3a0318a6f5471be4b4b5c088c46c94e0b1ffe65ca2f75e1e",
+      "source_admitted": false,
+      "status": "VERIFIED_STATED_OFFERING_AGREEMENT"
+    },
+    {
+      "announcement_date": "2025-01-02",
+      "auction_date": "2025-01-07",
+      "cusip": "91282CLW9",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "private_offering_path": "data/source_discovery/treasury_auction/offering_pilot_v2/2025-01-07_91282CLW9.json",
+      "private_offering_sha256": "35748160dc5a889dfb9a14629e9de69e92932f37e82c7af24d3bdaf7d9f0947b",
+      "source_admitted": false,
+      "status": "VERIFIED_STATED_OFFERING_AGREEMENT"
+    },
+    {
+      "announcement_date": "2025-01-02",
+      "auction_date": "2025-01-08",
+      "cusip": "912810UE6",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "private_offering_path": "data/source_discovery/treasury_auction/offering_pilot_v2/2025-01-08_912810UE6.json",
+      "private_offering_sha256": "3564437edfb9a4ea568da86fcedee88db24f2e72c1aa51768bfc4dc2e9e57cba",
+      "source_admitted": false,
+      "status": "VERIFIED_STATED_OFFERING_AGREEMENT"
+    },
+    {
+      "announcement_date": "2025-01-23",
+      "auction_date": "2025-01-27",
+      "cusip": "91282CMG3",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "private_offering_path": "data/source_discovery/treasury_auction/offering_pilot_v2/2025-01-27_91282CMG3.json",
+      "private_offering_sha256": "31ebaf51fada69886d81beb56bb2ddaf0e7dc81e32f8bb496a4910f98ba2d9c4",
+      "source_admitted": false,
+      "status": "VERIFIED_STATED_OFFERING_AGREEMENT"
+    },
+    {
+      "announcement_date": "2025-01-23",
+      "auction_date": "2025-01-27",
+      "cusip": "91282CMH1",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "private_offering_path": "data/source_discovery/treasury_auction/offering_pilot_v2/2025-01-27_91282CMH1.json",
+      "private_offering_sha256": "1fc892f19fcd8fc7a41070694fc60af9988eb2726441f0570256dbce399d3e74",
+      "source_admitted": false,
+      "status": "VERIFIED_STATED_OFFERING_AGREEMENT"
+    },
+    {
+      "announcement_date": "2025-01-23",
+      "auction_date": "2025-01-28",
+      "cusip": "91282CMK4",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "private_offering_path": "data/source_discovery/treasury_auction/offering_pilot_v2/2025-01-28_91282CMK4.json",
+      "private_offering_sha256": "37b0b6212cfc29d996fdee890418e9c36e8b960cbba3ecfae748657a1fac7f9b",
+      "source_admitted": false,
+      "status": "VERIFIED_STATED_OFFERING_AGREEMENT"
+    },
+    {
+      "announcement_date": "2025-08-21",
+      "auction_date": "2025-08-27",
+      "cusip": "91282CNX5",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "private_offering_path": "data/source_discovery/treasury_auction/offering_pilot_v2/2025-08-27_91282CNX5.json",
+      "private_offering_sha256": "d18fb8eed55c1c58ab6d6c51edcf17c0d4a8da5f02a8fff8e072e18686c3993f",
+      "source_admitted": false,
+      "status": "VERIFIED_STATED_OFFERING_AGREEMENT"
+    }
+  ],
+  "new_predictive_comparisons": 0,
+  "registered_comparisons": 144,
+  "source_history_admitted": false,
+  "started_utc": "2026-09-09T02:00:40.452752+00:00",
+  "status": "COMPLETED_FIXED_PILOT_OFFERING_RECONCILIATION"
+}

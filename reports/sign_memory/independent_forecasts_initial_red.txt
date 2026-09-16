@@ -1,0 +1,95 @@
+..EEEEEEEEEE...........
+======================================================================
+ERROR: test_entire_unscored_month_is_still_fitted_and_checked (tests.test_verify_sign_memory.FullForecastContracts.test_entire_unscored_month_is_still_fitted_and_checked)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_sign_memory.py", line 252, in test_entire_unscored_month_is_still_fitted_and_checked
+    result=verify.verify_forecasts(f,t,panel,fits,p)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_sign_memory' has no attribute 'verify_forecasts'
+
+======================================================================
+ERROR: test_fit_support_geometry_probability_and_timing_tampering_rejects (tests.test_verify_sign_memory.FullForecastContracts.test_fit_support_geometry_probability_and_timing_tampering_rejects) (fault='beta')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_sign_memory.py", line 248, in test_fit_support_geometry_probability_and_timing_tampering_rejects
+    verify.verify_forecasts(f,t,panel,fits,p)
+    ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_sign_memory' has no attribute 'verify_forecasts'
+
+======================================================================
+ERROR: test_fit_support_geometry_probability_and_timing_tampering_rejects (tests.test_verify_sign_memory.FullForecastContracts.test_fit_support_geometry_probability_and_timing_tampering_rejects) (fault='memory')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_sign_memory.py", line 248, in test_fit_support_geometry_probability_and_timing_tampering_rejects
+    verify.verify_forecasts(f,t,panel,fits,p)
+    ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_sign_memory' has no attribute 'verify_forecasts'
+
+======================================================================
+ERROR: test_fit_support_geometry_probability_and_timing_tampering_rejects (tests.test_verify_sign_memory.FullForecastContracts.test_fit_support_geometry_probability_and_timing_tampering_rejects) (fault='center')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_sign_memory.py", line 248, in test_fit_support_geometry_probability_and_timing_tampering_rejects
+    verify.verify_forecasts(f,t,panel,fits,p)
+    ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_sign_memory' has no attribute 'verify_forecasts'
+
+======================================================================
+ERROR: test_fit_support_geometry_probability_and_timing_tampering_rejects (tests.test_verify_sign_memory.FullForecastContracts.test_fit_support_geometry_probability_and_timing_tampering_rejects) (fault='gradient')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_sign_memory.py", line 248, in test_fit_support_geometry_probability_and_timing_tampering_rejects
+    verify.verify_forecasts(f,t,panel,fits,p)
+    ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_sign_memory' has no attribute 'verify_forecasts'
+
+======================================================================
+ERROR: test_fit_support_geometry_probability_and_timing_tampering_rejects (tests.test_verify_sign_memory.FullForecastContracts.test_fit_support_geometry_probability_and_timing_tampering_rejects) (fault='support')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_sign_memory.py", line 248, in test_fit_support_geometry_probability_and_timing_tampering_rejects
+    verify.verify_forecasts(f,t,panel,fits,p)
+    ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_sign_memory' has no attribute 'verify_forecasts'
+
+======================================================================
+ERROR: test_fit_support_geometry_probability_and_timing_tampering_rejects (tests.test_verify_sign_memory.FullForecastContracts.test_fit_support_geometry_probability_and_timing_tampering_rejects) (fault='timing')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_sign_memory.py", line 248, in test_fit_support_geometry_probability_and_timing_tampering_rejects
+    verify.verify_forecasts(f,t,panel,fits,p)
+    ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_sign_memory' has no attribute 'verify_forecasts'
+
+======================================================================
+ERROR: test_fit_support_geometry_probability_and_timing_tampering_rejects (tests.test_verify_sign_memory.FullForecastContracts.test_fit_support_geometry_probability_and_timing_tampering_rejects) (fault='probability')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_sign_memory.py", line 248, in test_fit_support_geometry_probability_and_timing_tampering_rejects
+    verify.verify_forecasts(f,t,panel,fits,p)
+    ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_sign_memory' has no attribute 'verify_forecasts'
+
+======================================================================
+ERROR: test_fit_support_geometry_probability_and_timing_tampering_rejects (tests.test_verify_sign_memory.FullForecastContracts.test_fit_support_geometry_probability_and_timing_tampering_rejects) (fault='missing')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_sign_memory.py", line 248, in test_fit_support_geometry_probability_and_timing_tampering_rejects
+    verify.verify_forecasts(f,t,panel,fits,p)
+    ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_sign_memory' has no attribute 'verify_forecasts'
+
+======================================================================
+ERROR: test_independent_optimizers_replay_all_stages_probabilities_and_mature_cohorts (tests.test_verify_sign_memory.FullForecastContracts.test_independent_optimizers_replay_all_stages_probabilities_and_mature_cohorts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_sign_memory.py", line 228, in test_independent_optimizers_replay_all_stages_probabilities_and_mature_cohorts
+    args=self.fixture();result=verify.verify_forecasts(*args)
+                               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_sign_memory' has no attribute 'verify_forecasts'
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.517s
+
+FAILED (errors=10)

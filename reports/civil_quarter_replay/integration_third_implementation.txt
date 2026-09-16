@@ -1,0 +1,11 @@
+test_actual_synthetic_metrics_render_only_with_same_verified_counts (tests.test_civil_quarter_replay_integration.ReplayIntegration.test_actual_synthetic_metrics_render_only_with_same_verified_counts) ... ok
+test_complete_failed_predecessor_slots_cannot_be_dropped (tests.test_civil_quarter_replay_integration.ReplayIntegration.test_complete_failed_predecessor_slots_cannot_be_dropped) ... ok
+test_independent_all_fit_support_geometry_and_native_forecast_replay (tests.test_civil_quarter_replay_integration.ReplayIntegration.test_independent_all_fit_support_geometry_and_native_forecast_replay) ... ok
+test_independent_replay_rejects_coefficients_support_metadata_and_missing_unscored_fit (tests.test_civil_quarter_replay_integration.ReplayIntegration.test_independent_replay_rejects_coefficients_support_metadata_and_missing_unscored_fit) ... ok
+test_real_synthetic_four_phase_inference_and_full_new_family (tests.test_civil_quarter_replay_integration.ReplayIntegration.test_real_synthetic_four_phase_inference_and_full_new_family) ... ok
+test_unknown_source_month_and_wholly_unscored_first_month_are_distinct (tests.test_civil_quarter_replay_integration.ReplayIntegration.test_unknown_source_month_and_wholly_unscored_first_month_are_distinct) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 9.290s
+
+OK

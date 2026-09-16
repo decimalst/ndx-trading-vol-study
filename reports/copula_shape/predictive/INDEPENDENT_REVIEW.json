@@ -1,0 +1,158 @@
+{
+  "status": "VERIFIED_PRESERVATION_OF_UNEVALUABLE_WAVE29",
+  "completed_utc": "2026-09-13T21:55:11.012716+00:00",
+  "formal_attempt_status": "UNEVALUABLE",
+  "original_failure": "Fixed QMC consistency check failed: var97_5=0.036200628242171795",
+  "discrepancies": [],
+  "artifact_hashes": {
+    "reports/copula_shape/predictive/terminal.json": "9f7a1ef5d19c16305f708aaa9bf8ce832c6de8d8e13ca73b9c4899a66e385a0c",
+    "reports/copula_shape/predictive/failure.json": "9f7a1ef5d19c16305f708aaa9bf8ce832c6de8d8e13ca73b9c4899a66e385a0c",
+    "reports/copula_shape/predictive/freeze.json": "737d9b68bcebf3578efc9ee2dba9e8c4141dfab6a174e1ce39ad110bee831b03",
+    "reports/copula_shape/predictive/registration.json": "0b38e60b8229492b0e1f26aa21a1ce6d9d0c31cd4b0cf8f1eab984f634bf8218",
+    "reports/copula_shape/predictive/started.json": "2f820afe4f84175fa432fc6dfb2832e59ad947feaf439558f960fc829de368db",
+    "reports/copula_shape/predictive/forecast_verification.json": "8821bf79c24eb354599d8d1127a83699426ddc25a57fb7e5bcc94c5b1411f983",
+    "reports/copula_shape/predictive/score_verification.json": "dbb961811b5ed8e062fa41d6b344ea1d658a0aa8b3e115d5256d65ae9fda6804"
+  },
+  "expected_partial_output_hashes": {
+    "reports/copula_shape/predictive/started.json": "2f820afe4f84175fa432fc6dfb2832e59ad947feaf439558f960fc829de368db",
+    "data/model_memory_study/copula_shape_wave29/snapshot.zip": "d6fd4eb3cbb84d9769d34d45529a8ce5968df2decaafe9c7de894b5cb17656e6",
+    "data/model_memory_study/copula_shape_wave29/applications.parquet": "afceea26a32581da852b47a9a89776e0dccc2349e4ad19ce329ee6e9ad6d0ab5",
+    "data/model_memory_study/copula_shape_wave29/panel.parquet": "f1f74fb53bfbfb4cdb2b5542b72001acab86bd896bd8d82d153872211675fedc",
+    "data/model_memory_study/copula_shape_wave29/fits.json": "55932cfb6506aefe7a101da97d55e4b9d258947a495f6c781743e8b6a2bd25ea",
+    "reports/copula_shape/predictive/forecast_verification.json": "8821bf79c24eb354599d8d1127a83699426ddc25a57fb7e5bcc94c5b1411f983",
+    "reports/copula_shape/predictive/score_verification.json": "dbb961811b5ed8e062fa41d6b344ea1d658a0aa8b3e115d5256d65ae9fda6804",
+    "data/model_memory_study/copula_shape_wave29/spread_risks.parquet": "057e6f3035e95428fd07176db10d1a46a7e41deb6d0ce2cd4824bf07b4dcdf53",
+    "data/model_memory_study/copula_shape_wave29/integration_diagnostics.json": "64925f056c43cc42a561df632118847583aededfc1ef49a3aa53b4bef2f2b19a"
+  },
+  "expected_partial_artifacts_verified": 9,
+  "private_files_verified": 6,
+  "private_directory_mode": "0700",
+  "private_file_modes": "0600",
+  "family": {
+    "inherited_full_records_preserved": 158,
+    "new_failed_comparisons": 6,
+    "cumulative_tracked_comparisons": 164,
+    "all_new_probabilities_one": true,
+    "leads": [],
+    "completed_metrics_written": false
+  },
+  "counts": {
+    "applications": 2191,
+    "scored_origins": 2190,
+    "unscored_applications": 1,
+    "monthly_fits": 105,
+    "new_shape_fits": 210,
+    "new_dependence_fits": 210,
+    "spread_risk_rows": 118260,
+    "spread_cases_per_scored_origin": 54,
+    "numerically_ambiguous_threshold_rows": 69,
+    "phases": {
+      "development": {
+        "scored_origins": 733,
+        "first_scored_origin": "2017-02-01",
+        "last_scored_origin": "2019-12-30",
+        "applications": 734,
+        "spread_risk_rows": 39582
+      },
+      "evaluation": {
+        "scored_origins": 1457,
+        "first_scored_origin": "2020-01-02",
+        "last_scored_origin": "2025-10-17",
+        "applications": 1457,
+        "spread_risk_rows": 78678
+      }
+    },
+    "training_archive_n_min": 271,
+    "training_archive_n_max": 2449
+  },
+  "passed_stage_certificates": {
+    "forecast": {
+      "status": "VERIFIED",
+      "monthly_fits_verified": 105,
+      "shape_fits_verified": 210,
+      "dependence_fits_verified": 210,
+      "applications_verified": 2191,
+      "scored_origins": 2190,
+      "contrasts_verified": 6,
+      "maximum_box_gap": 3.728451100672711e-15,
+      "maximum_projected_gradient": 3.6637359812630166e-15,
+      "largest_independent_dependence_gap": 9.937041411944847e-9,
+      "clock_verification": "full_reference_calendar",
+      "scope": "Saved shape density and forecasts; source authentication and prior baseline verification remain external; no economic payoff or live execution validation"
+    },
+    "score": {
+      "status": "VERIFIED",
+      "contrasts": 6,
+      "scope": "Independent resampling/HAC primitive; shared declarative comparison assembly and Holm implementation. Row density and contrast identities independently reconstructed by forecast verifier."
+    }
+  },
+  "final_selected_source_code_hashes_checked": 548,
+  "source_ceiling": "2025-10-20",
+  "limits": [
+    "This receipt certifies preservation and saved-artifact accounting for a failed attempt, not a completed scientific or economic result. The original six comparisons remain p1.",
+    "The saved forecast and score stage certificates predate the integration failure and do not override the whole-attempt UNEVALUABLE terminal. No completed metrics or spread-accounting outputs were published by this attempt.",
+    "One complete source-pin scan was performed during the live run, followed after failure by selected executable/config and immediate-input hash checks; no repeated full source scan, model refit, resampling, QMC rerun or test execution occurred.",
+    "Only saved metadata, record identities, counts, exact error text and hashes were inspected here. No partial density scores or model parameters were interpreted.",
+    "A future probability-only descriptive replay is a separate artifact/contract and cannot restore this failure or imply actual option profits. Hypothetical spread geometry, unavailable option quotes and reused current-vintage history remain material limitations.",
+    "The tracked164 comparisons are the declared inherited family, not a repository-lifetime census. Local timestamps are not external attestations."
+  ],
+  "reviewer": "replay_entry_finish",
+  "immutable_prefit_and_snapshot_audit": {
+    "status": "IMMUTABLE_PREFLIGHT_SAVED_ARTIFACTS_VERIFIED_AWAITING_TERMINAL",
+    "started_utc": "2026-09-13T21:49:20.151382+00:00",
+    "completed_utc": "2026-09-13T21:49:21.843286+00:00",
+    "artifact_hashes": {
+      "reports/copula_shape/predictive/freeze.json": "737d9b68bcebf3578efc9ee2dba9e8c4141dfab6a174e1ce39ad110bee831b03",
+      "reports/copula_shape/predictive/registration.json": "0b38e60b8229492b0e1f26aa21a1ce6d9d0c31cd4b0cf8f1eab984f634bf8218",
+      "copula_shape.yaml": "98618511b3ce818677439eca6e0c8920824bc83bfd14d7ea9289fc61fa958249",
+      "reports/copula_shape/PREFIT.json": "5c942826218d760cf39473e3ccfa2c72fa3055f94ebd942103126a205654dc76",
+      "reports/copula_shape/PREFIT.log": "9db78121206f7d3c4d107de15441f04de85cff98645ee3815d54201c3b524e8d",
+      "reports/copula_calibration/predictive/terminal.json": "483c26aac77924a64cc9d87fc017dd60c50dab9d7bdd8004c69343501b685587",
+      "reports/copula_calibration/predictive/freeze.json": "d10dd138bd4db433256783f79ef5161a4cf5a05f3632a7dce757224aef3c47ff",
+      "reports/copula_calibration/predictive/registration.json": "e1c0af5de87b0d99c7c409f580d6af5a19c2487a34380dbbc8ff956a2e41c2dc",
+      "reports/copula_calibration/predictive/metrics.json": "d1c2e51baa5b53b2d869ac6a09c8412aaca1baa6d8eab273fc184e03c78e79b4",
+      "data/model_memory_study/copula_shape_wave29/snapshot.zip": "d6fd4eb3cbb84d9769d34d45529a8ce5968df2decaafe9c7de894b5cb17656e6"
+    },
+    "freeze_pins_verified": 30233,
+    "source_bytes_hashed": 553017043,
+    "original_freeze_pins_preserved": 30179,
+    "original_output_pins_preserved": 6,
+    "original_report_pins_preserved": 4,
+    "original_full_family_records_preserved": 158,
+    "new_contrasts": [
+      "qqq_shape",
+      "spx_shape",
+      "gaussian_shape",
+      "t8_shape",
+      "shape_gap",
+      "shape_interaction"
+    ],
+    "tracked_family_count": 164,
+    "snapshot_members_verified": 562,
+    "snapshot_bytes": 4203989,
+    "snapshot_scope": "Exact frozen runner selection: source/tests, benchmark design, shape/spread reports, current protocol and four immediate old archive/application/panel/fit files; not every ancestral raw input. Archive members hashed without numerical decoding.",
+    "test_receipt": {
+      "selected": 173,
+      "run": 173,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "tested_source_and_config_pins": 539,
+      "actual_log_terminal_verified": true
+    },
+    "local_receipt_order": [
+      "2026-09-13T21:44:50.744412+00:00",
+      "2026-09-13T21:45:10.226061+00:00",
+      "2026-09-13T21:45:43.856796+00:00",
+      "2026-09-13T21:45:43.887417+00:00"
+    ],
+    "private_directory_mode": "0700",
+    "snapshot_mode": "0600",
+    "full_source_pin_passes": 1,
+    "discrepancies": [],
+    "numerical_partial_results_read": false,
+    "source_ceiling": "2025-10-20"
+  },
+  "source_admitted_for_success": false,
+  "new_empirical_execution_performed_by_this_audit": false
+}

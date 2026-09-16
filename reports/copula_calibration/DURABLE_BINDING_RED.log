@@ -1,0 +1,94 @@
+Prewritten generated durable publication binding regressions, before new helpers exist.
+test_exclusive_first_save_and_checked_reload_preserve_expected_bytes (tests.test_copula_calibration_run.DurableBindingContracts.test_exclusive_first_save_and_checked_reload_preserve_expected_bytes) ... ERROR
+test_metrics_mutation_during_terminal_write_cannot_receive_success (tests.test_copula_calibration_run.DurableBindingContracts.test_metrics_mutation_during_terminal_write_cannot_receive_success) ... ERROR
+test_mutation_during_first_write_cannot_be_adopted_as_expected_hash (tests.test_copula_calibration_run.DurableBindingContracts.test_mutation_during_first_write_cannot_be_adopted_as_expected_hash) ... ERROR
+test_mutation_during_metrics_write_invalidates_all_seven_and_preserves_provisional_metrics (tests.test_copula_calibration_run.DurableBindingContracts.test_mutation_during_metrics_write_invalidates_all_seven_and_preserves_provisional_metrics) ... 
+  test_mutation_during_metrics_write_invalidates_all_seven_and_preserves_provisional_metrics (tests.test_copula_calibration_run.DurableBindingContracts.test_mutation_during_metrics_write_invalidates_all_seven_and_preserves_provisional_metrics) (kind='data') ... ERROR
+  test_mutation_during_metrics_write_invalidates_all_seven_and_preserves_provisional_metrics (tests.test_copula_calibration_run.DurableBindingContracts.test_mutation_during_metrics_write_invalidates_all_seven_and_preserves_provisional_metrics) (kind='proof') ... ERROR
+  test_mutation_during_metrics_write_invalidates_all_seven_and_preserves_provisional_metrics (tests.test_copula_calibration_run.DurableBindingContracts.test_mutation_during_metrics_write_invalidates_all_seven_and_preserves_provisional_metrics) (kind='frozen_source') ... ERROR
+test_successful_terminal_uses_verified_data_and_proof_hashes (tests.test_copula_calibration_run.DurableBindingContracts.test_successful_terminal_uses_verified_data_and_proof_hashes) ... ERROR
+
+======================================================================
+ERROR: test_exclusive_first_save_and_checked_reload_preserve_expected_bytes (tests.test_copula_calibration_run.DurableBindingContracts.test_exclusive_first_save_and_checked_reload_preserve_expected_bytes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_calibration_run.py", line 134, in test_exclusive_first_save_and_checked_reload_preserve_expected_bytes
+    self.assertEqual(run.save_bound_bytes(root, path, payload, bound), expected)
+                     ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.copula_calibration_run' has no attribute 'save_bound_bytes'
+
+======================================================================
+ERROR: test_metrics_mutation_during_terminal_write_cannot_receive_success (tests.test_copula_calibration_run.DurableBindingContracts.test_metrics_mutation_during_terminal_write_cannot_receive_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_calibration_run.py", line 201, in test_metrics_mutation_during_terminal_write_cannot_receive_success
+    root, report, data, bound, anchors, metrics = self.fixture(directory)
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_calibration_run.py", line 122, in fixture
+    run.save_bound_bytes(root, path, payload, bound)
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.copula_calibration_run' has no attribute 'save_bound_bytes'
+
+======================================================================
+ERROR: test_mutation_during_first_write_cannot_be_adopted_as_expected_hash (tests.test_copula_calibration_run.DurableBindingContracts.test_mutation_during_first_write_cannot_be_adopted_as_expected_hash)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_calibration_run.py", line 157, in test_mutation_during_first_write_cannot_be_adopted_as_expected_hash
+    run.save_bound_bytes(root, path, payload, bound)
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.copula_calibration_run' has no attribute 'save_bound_bytes'
+
+======================================================================
+ERROR: test_mutation_during_metrics_write_invalidates_all_seven_and_preserves_provisional_metrics (tests.test_copula_calibration_run.DurableBindingContracts.test_mutation_during_metrics_write_invalidates_all_seven_and_preserves_provisional_metrics) (kind='data')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_calibration_run.py", line 179, in test_mutation_during_metrics_write_invalidates_all_seven_and_preserves_provisional_metrics
+    root, report, data, bound, anchors, metrics = self.fixture(directory)
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_calibration_run.py", line 122, in fixture
+    run.save_bound_bytes(root, path, payload, bound)
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.copula_calibration_run' has no attribute 'save_bound_bytes'
+
+======================================================================
+ERROR: test_mutation_during_metrics_write_invalidates_all_seven_and_preserves_provisional_metrics (tests.test_copula_calibration_run.DurableBindingContracts.test_mutation_during_metrics_write_invalidates_all_seven_and_preserves_provisional_metrics) (kind='proof')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_calibration_run.py", line 179, in test_mutation_during_metrics_write_invalidates_all_seven_and_preserves_provisional_metrics
+    root, report, data, bound, anchors, metrics = self.fixture(directory)
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_calibration_run.py", line 122, in fixture
+    run.save_bound_bytes(root, path, payload, bound)
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.copula_calibration_run' has no attribute 'save_bound_bytes'
+
+======================================================================
+ERROR: test_mutation_during_metrics_write_invalidates_all_seven_and_preserves_provisional_metrics (tests.test_copula_calibration_run.DurableBindingContracts.test_mutation_during_metrics_write_invalidates_all_seven_and_preserves_provisional_metrics) (kind='frozen_source')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_calibration_run.py", line 179, in test_mutation_during_metrics_write_invalidates_all_seven_and_preserves_provisional_metrics
+    root, report, data, bound, anchors, metrics = self.fixture(directory)
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_calibration_run.py", line 122, in fixture
+    run.save_bound_bytes(root, path, payload, bound)
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.copula_calibration_run' has no attribute 'save_bound_bytes'
+
+======================================================================
+ERROR: test_successful_terminal_uses_verified_data_and_proof_hashes (tests.test_copula_calibration_run.DurableBindingContracts.test_successful_terminal_uses_verified_data_and_proof_hashes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_calibration_run.py", line 163, in test_successful_terminal_uses_verified_data_and_proof_hashes
+    root, report, data, bound, anchors, metrics = self.fixture(directory)
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_calibration_run.py", line 122, in fixture
+    run.save_bound_bytes(root, path, payload, bound)
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.copula_calibration_run' has no attribute 'save_bound_bytes'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.012s
+
+FAILED (errors=7)
+
+exit_code=1

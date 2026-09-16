@@ -1,0 +1,258 @@
+study_id: event_cluster_wave20
+specified_on: '2026-09-07'
+status: specified_before_new_event_history_or_fits
+wave: 20
+evidence_class: exploratory_reused_history_archival_SPX_daily_risk_event
+objective: Test within-series adjacent mature risk events beyond fixed market forecast and matched event
+  count/recency controls
+original_index:
+  asset: SPX
+  source_end: '2025-10-20'
+  sealed_start: '2025-11-03'
+  origin_start: '2016-01-04'
+  origin_end: '2025-10-17'
+  latest_target: '2025-10-20'
+  development:
+  - '2016-01-04'
+  - '2019-12-31'
+  development_target_available_by: '2019-12-31'
+  evaluation:
+  - '2020-01-02'
+  - '2025-10-17'
+  evaluation_stability:
+  - - '2020-01-02'
+    - '2022-12-31'
+  - - '2023-01-01'
+    - '2025-10-17'
+  horizons:
+  - 1
+  market_lag: 1
+  minimum_train: 1000
+  models:
+  - baseline
+  - recent_frequency
+  - location
+  minimum_train_per_class: 50
+  minimum_phase_per_class: 30
+  minimum_slice_per_class: 15
+  minimum_phase_observations: 127
+  baseline:
+  - const
+  - I
+  - R
+  - ret_d
+  - ret_w
+  - ret_m
+  - ret_q
+  - lr_d
+  - lr_w
+  - term
+  - lvvix
+  - entry_dow_1
+  - entry_dow_2
+  - entry_dow_3
+  - entry_dow_4
+  - neg_d
+  - neg_w
+  - neg_m
+  - skew
+  - I_square
+  - R_square
+  - skew_square
+  - intraday
+  - intraday_sq
+  - overnight
+  - overnight_sq
+  all_features:
+  - const
+  - I
+  - R
+  - ret_d
+  - ret_w
+  - ret_m
+  - ret_q
+  - lr_d
+  - lr_w
+  - term
+  - lvvix
+  - entry_dow_1
+  - entry_dow_2
+  - entry_dow_3
+  - entry_dow_4
+  - neg_d
+  - neg_w
+  - neg_m
+  - skew
+  - intraday
+  - intraday_sq
+  - overnight
+  - overnight_sq
+  - range_extremity
+history:
+  window: 22
+  ordered_by: available_date on full original SPX calendar, oldest first, through previous-close cutoff
+  origin_position_rule: at i>=23 use y.iloc[i-23:i-1], whose available positions are i-22..i-1
+  labels: all known original target labels, including unissued/unscored/feature-incomplete origins; not
+    historical forecast errors
+  unknown: every original training/application window must contain22 known labels; otherwise whole-trial
+    failure before fitting; never fill, compress or drop original rows
+  nuisance:
+  - event_fraction22
+  - event_fraction22_sq
+  - last_event
+  - expected_adjacency22
+  - linear_recency22
+  nuisance_formula:
+  - N/22
+  - N*N/484
+  - last_event
+  - (N-last_event)*(N-1)/441
+  - sum((2*i-23)*e_i for i=1..22)/462
+  candidate: adjacency_fraction22
+  candidate_formula: C/21; C=sum(e_i*e_(i-1) for i=2..22)
+  diagnostic: excess_adjacency22=(21*C-(N-last_event)*(N-1))/441; never enters fit or promotion
+  arithmetic: exact Python integer numerators followed by single fixed division; N*N/484 is not square
+    of rounded N/22
+  centering: training-only math.fsum/n; exactconstant uses firstvalue; fixedscale1 and no rank/column
+    deletion
+models:
+- baseline
+- recent_frequency
+- nuisance
+- cluster
+model:
+  baseline: original wave18 saved26-coefficient monthly fit; no refitting; original issuedquery probabilities
+    strictlyreplayed and retained
+  training_offset: apply that same savedmonthlyfit to its original maturetrainingrows; in-sample currentfit
+    offsets, not historicalissuances
+  nuisance: mean Bernoulli NLL with frozenbaselineoffset +freeintercept +five centeredboundedslopes, .01sum(slope^2)
+  candidate: mean Bernoulli NLL with frozennuisanceoffset +one centeredC/21 slope, .01coefficient^2; no
+    newintercept
+  ridge: 0.01
+  producer_nuisance:
+    method: frozen sign_memory_models._newton
+    start: six literalzeros
+    maxiter: 200
+    max_backtracks: 60
+    armijo: 0.0001
+    gradient_tolerance: 1.0e-08
+  producer_scalar:
+    method: brentq
+    bracket: +/- (mean(abs(centered_candidate))+1)/.02
+    xtol: 1.0e-12
+    rtol: 1.0e-14
+    maxiter: 200
+    gradient_tolerance: 1.0e-08
+  constant: center exactconstants exactly; constantnuisances retainzerocoefficients; constantadjacency
+    retainsscalarzero and nuisanceprobability
+  probability: copy checkedparent probability when addedquerycorrection exactlyzero; otherwise expit(parentlogit+correction);
+    no clipping
+  scalar_arithmetic: finitefloat64; signedsoftplus and signedresidual remain nonzero for finite logits;
+    checked nonzero products rejectunderflow; compensated scalar reductions
+  nuisance_arithmetic: frozen logistic_state numerical contract; finite objective, fullgradient and Hessian;
+    no optional unusedcurvature admission gate
+  fallback: none; no empiricalrepair or tolerance change
+comparisons:
+  new_hypotheses: 3
+  inherited_hypotheses: 131
+  cumulative_hypotheses: 134
+  inherited_sources:
+  - reports/orthogonal_round2/metrics.json
+  - reports/model_memory_study/combined_metrics.json
+  - reports/iterative_signal_search/metrics.json
+  - reports/international_volatility/metrics.json
+  - reports/overnight_index/metrics.json
+  - reports/macro_overnight/metrics.json
+  - reports/measurement_memory/metrics.json
+  - reports/index_hinge/metrics.json
+  - reports/tail_shape/metrics.json
+  - reports/calendar_variance/metrics.json
+  - reports/relative_risk/metrics.json
+  - reports/joint_risk/metrics.json
+  - reports/cross_moment/metrics.json
+  - reports/target_aligned/metrics.json
+  - reports/sign_memory/metrics.json
+  - reports/causal_pool/metrics.json
+  - reports/civil_quarter/metrics.json
+  - reports/civil_quarter_replay/metrics.json
+  - reports/profiled_quarter/metrics.json
+  - reports/range_alert/metrics.json
+  - reports/issued_calibration/metrics.json
+  contrasts:
+  - - cluster
+    - baseline
+    - brier
+  - - cluster
+    - nuisance
+    - brier
+  - - cluster
+    - recent_frequency
+    - brier
+  gate: allthreecontrols must improve in bothphases by>=.0005 Brier, bothfixedlateslices negative, bothmultiplicity
+    gates; nootherpromotion contrast
+inference:
+  loss: brier
+  effect_absolute: 0.0005
+  blocks:
+  - 21
+  - 63
+  - 126
+  hac_lags: 126
+  bootstrap_draws: 399999
+  seed: 20260926
+  seed_rule: seed+phase_code*10000+block; development0,evaluation1; same drawdesign acrosscontrols
+  wave_alpha: 0.00011904761904761905
+  cumulative_alpha: 0.05
+  p_phase: maximum two-sided centered-null circularblock bootstrap and BartlettHAC126p
+  p_hypothesis: maximumdevelopment/evaluationp
+  multiplicity: Holm3 versus wave_alpha and cumulativeHolm134 versus.05
+  resolution: 1/400000 below one tenth minimumHolm3rawwavecutoff1/25200
+  support:
+    minimum_train: 1000
+    train_per_class: 50
+    phase_observations: 127
+    phase_per_class: 30
+    slice_per_class: 15
+  failure: anysource,history,support,arithmetic,solver,forecast,inference,verificationorpublication failure
+    keepsall3UNEVALUABLEp1; retainpriorfailures
+  calibration: descriptivein-the-large meanprob,eventrate,gap,Brier perphase/model; no fittedcalibrationbins
+  power: nominal HAC80percentMDE/.0005 descriptive; not equivalence or post-hocselection
+verification:
+  nuisance:
+    method: root_hybr
+    start: six literalzeros
+    xtol: 1.0e-10
+    maxfev: 2000
+    factor: 1.0
+    analytic_jacobian: true
+    full_gradient_tolerance: 1.0001e-08
+  scalar:
+    method: bisect
+    bracket: +/- (mean(abs(centered_candidate))+1)/.02
+    xtol: 1.0e-12
+    rtol: 1.0e-14
+    maxiter: 200
+    full_gradient_tolerance: 1.0001e-08
+  coefficient_rtol: 1.0e-07
+  coefficient_atol: 1.0e-06
+  replay_rtol: 1.0e-10
+  replay_atol: 1.0e-12
+  inference_rtol: 1.0e-09
+  inference_atol: 1.0e-14
+  conditional_scalar: independentlysolve using saved independentlyvalidated nuisancebeta, preservingactualfrozenoffsetobjective
+  scope: fullnewhistory, originalcohortsandissuedcontrols, allnewmonthlystages/applicationpredictionsincludingunscored,
+    scores,inference,ledger,sourceclosure
+upstream:
+  anchors:
+    issued_calibration.yaml: f4c03c25718439432c176aba36ce3bc572776b67a5ff80f906ddc00cd85b2051
+    reports/issued_calibration/manifest.json: 5d824aad69991ea06cc35916be2e9852d9f5613c17bafe7b18e46047d93bdf6a
+    reports/issued_calibration/freeze_record.json: d12459d404d4bb7cfab43a351764b1c29353d0e2dbfbec6af689ffc411ba0c71
+    reports/issued_calibration/verification.json: 5de5f8ed0f4a7757c475e0557b9798fe04d8fea33714a5c68437fbb181d48d14
+    reports/issued_calibration/publication_audit.json: 17275a47b0c8738e3177e905025869fd69523cfc4cdcca45d4fd0cbd49d45be8
+    reports/issued_calibration/publication_review.json: 481565b24889457d8bf87ee824aac1284e688418a02fe7b4715aeee935e96003
+    reports/early_session_feasibility/preservation_audit.json: feb526675c97a52bc13f372dd50024093d9fc6a7fe3580859fd20f7ab585dc41
+  admission: fullwave19successandpublicationclosure plusoriginalwave18tables andzero-hypothesisearlysessiondocumentation;
+    checkedbytes beforedecode
+outputs:
+  data: data/event_cluster
+  reports: reports/event_cluster

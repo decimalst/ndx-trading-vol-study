@@ -1,0 +1,33 @@
+test_candidate_rejects_inconsistent_lower_bound_above_upper_bound (tests.test_joint_risk_density.GlobalOptimizationTests.test_candidate_rejects_inconsistent_lower_bound_above_upper_bound) ... FAIL
+test_constant_rejects_negative_or_nonfinite_certificate_gap (tests.test_joint_risk_density.GlobalOptimizationTests.test_constant_rejects_negative_or_nonfinite_certificate_gap) ... 
+  test_constant_rejects_negative_or_nonfinite_certificate_gap (tests.test_joint_risk_density.GlobalOptimizationTests.test_constant_rejects_negative_or_nonfinite_certificate_gap) (inflation=-1.0) ... FAIL
+  test_constant_rejects_negative_or_nonfinite_certificate_gap (tests.test_joint_risk_density.GlobalOptimizationTests.test_constant_rejects_negative_or_nonfinite_certificate_gap) (inflation=nan) ... FAIL
+
+======================================================================
+FAIL: test_candidate_rejects_inconsistent_lower_bound_above_upper_bound (tests.test_joint_risk_density.GlobalOptimizationTests.test_candidate_rejects_inconsistent_lower_bound_above_upper_bound)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_joint_risk_density.py", line 255, in test_candidate_rejects_inconsistent_lower_bound_above_upper_bound
+    with (
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_constant_rejects_negative_or_nonfinite_certificate_gap (tests.test_joint_risk_density.GlobalOptimizationTests.test_constant_rejects_negative_or_nonfinite_certificate_gap) (inflation=-1.0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_joint_risk_density.py", line 263, in test_constant_rejects_negative_or_nonfinite_certificate_gap
+    with (
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_constant_rejects_negative_or_nonfinite_certificate_gap (tests.test_joint_risk_density.GlobalOptimizationTests.test_constant_rejects_negative_or_nonfinite_certificate_gap) (inflation=nan)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_joint_risk_density.py", line 263, in test_constant_rejects_negative_or_nonfinite_certificate_gap
+    with (
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.002s
+
+FAILED (failures=3)

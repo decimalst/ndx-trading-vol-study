@@ -1,0 +1,149 @@
+{
+  "scope": "Descriptive verified saved rows only; original six p1 results unchanged.",
+  "rows": [
+    {
+      "phase": "development",
+      "asset": "qqq",
+      "margin": "original",
+      "n": 733,
+      "mean_loss": -3.464697581660858,
+      "normal_mean": -0.014512655197419372,
+      "normal_variance": 1.08126586219006,
+      "normal_skew": -0.4236181644442933,
+      "pit_lower": 0.0504774897680764,
+      "pit_upper": 0.017735334242837655
+    },
+    {
+      "phase": "development",
+      "asset": "qqq",
+      "margin": "calibrated",
+      "n": 733,
+      "mean_loss": -3.4607642720281695,
+      "normal_mean": -0.024971702579503718,
+      "normal_variance": 1.045292474466895,
+      "normal_skew": -0.45972648284105,
+      "pit_lower": 0.04638472032742155,
+      "pit_upper": 0.015006821282401092
+    },
+    {
+      "phase": "development",
+      "asset": "qqq",
+      "margin": "shape",
+      "n": 733,
+      "mean_loss": -3.4669888740479715,
+      "normal_mean": 0.03191495303179532,
+      "normal_variance": 0.9930701796484248,
+      "normal_skew": -0.36630314855114193,
+      "pit_lower": 0.040927694406548434,
+      "pit_upper": 0.019099590723055934
+    },
+    {
+      "phase": "development",
+      "asset": "spx",
+      "margin": "original",
+      "n": 733,
+      "mean_loss": -3.8091895750941807,
+      "normal_mean": -0.03179154344295171,
+      "normal_variance": 0.9943362669382387,
+      "normal_skew": -0.5164033523255102,
+      "pit_lower": 0.03819918144611187,
+      "pit_upper": 0.01227830832196453
+    },
+    {
+      "phase": "development",
+      "asset": "spx",
+      "margin": "calibrated",
+      "n": 733,
+      "mean_loss": -3.8029081673930247,
+      "normal_mean": -0.0439862873496329,
+      "normal_variance": 1.0930997499454276,
+      "normal_skew": -0.5287443262962747,
+      "pit_lower": 0.040927694406548434,
+      "pit_upper": 0.013642564802182811
+    },
+    {
+      "phase": "development",
+      "asset": "spx",
+      "margin": "shape",
+      "n": 733,
+      "mean_loss": -3.8109431393250612,
+      "normal_mean": 0.01620392498953518,
+      "normal_variance": 1.0530103840145848,
+      "normal_skew": -0.44603342798582585,
+      "pit_lower": 0.03547066848567531,
+      "pit_upper": 0.015006821282401092
+    },
+    {
+      "phase": "evaluation",
+      "asset": "qqq",
+      "margin": "original",
+      "n": 1457,
+      "mean_loss": -3.121446705140732,
+      "normal_mean": 0.0069523806355235454,
+      "normal_variance": 1.09663698729884,
+      "normal_skew": -0.33712860271551187,
+      "pit_lower": 0.038435140700068635,
+      "pit_upper": 0.016472203157172273
+    },
+    {
+      "phase": "evaluation",
+      "asset": "qqq",
+      "margin": "calibrated",
+      "n": 1457,
+      "mean_loss": -3.1227507526237166,
+      "normal_mean": 0.007086203717581794,
+      "normal_variance": 1.0209809283772269,
+      "normal_skew": -0.33905216034411895,
+      "pit_lower": 0.03568977350720659,
+      "pit_upper": 0.013040494166094716
+    },
+    {
+      "phase": "evaluation",
+      "asset": "qqq",
+      "margin": "shape",
+      "n": 1457,
+      "mean_loss": -3.1250257426494246,
+      "normal_mean": 0.06619585801561115,
+      "normal_variance": 1.0070137277669198,
+      "normal_skew": -0.2713567903369375,
+      "pit_lower": 0.028140013726835965,
+      "pit_upper": 0.016472203157172273
+    },
+    {
+      "phase": "evaluation",
+      "asset": "spx",
+      "margin": "original",
+      "n": 1457,
+      "mean_loss": -3.407025721598139,
+      "normal_mean": 0.008067874991268886,
+      "normal_variance": 0.9981469624879205,
+      "normal_skew": -0.44161857520933034,
+      "pit_lower": 0.032944406314344546,
+      "pit_upper": 0.008236101578586136
+    },
+    {
+      "phase": "evaluation",
+      "asset": "spx",
+      "margin": "calibrated",
+      "n": 1457,
+      "mean_loss": -3.4059610788707704,
+      "normal_mean": 0.023821017059667965,
+      "normal_variance": 1.040760429350862,
+      "normal_skew": -0.4421686157879719,
+      "pit_lower": 0.03431708991077557,
+      "pit_upper": 0.011667810569663692
+    },
+    {
+      "phase": "evaluation",
+      "asset": "spx",
+      "margin": "shape",
+      "n": 1457,
+      "mean_loss": -3.4078354749644424,
+      "normal_mean": 0.09906422025200422,
+      "normal_variance": 1.0257727205619795,
+      "normal_skew": -0.3518525223365709,
+      "pit_lower": 0.028826355525051476,
+      "pit_upper": 0.02196293754289636
+    }
+  ]
+}

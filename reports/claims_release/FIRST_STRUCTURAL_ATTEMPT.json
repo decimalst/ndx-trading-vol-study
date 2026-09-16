@@ -1,0 +1,26 @@
+{
+  "created_utc": "2026-09-08T20:55:25.896059+00:00",
+  "purpose": "Source-only structural parse; no market cohort, feature, support, model or score",
+  "source_ceiling": "2025-10-20",
+  "raw_path": "data/claims_release/source_metadata/alfred_initial_claims_quarantine_v3.response",
+  "raw_sha256": "4d182029a97b16b48a116168f8191d30bd769520182b2f578625c4b71a65ac4d",
+  "request_path": "data/claims_release/source_metadata/export_request_v3.json",
+  "request_sha256": "856b700e8453018c42ffb21cf9630d0ef8ceaac9d54f0c71b479ab1fc43fcfe7",
+  "checks_path": "reports/claims_release/SOURCE_COMPONENTS_GREEN.json",
+  "checks_sha256": "0f31ec3804f88dd555d080d0186fdcda9d33eb4f97a620f2d8e40bdee128c7a6",
+  "code_test_sha256": {
+    "src/claims_release_archive.py": "a2ab878ea7d0599a39146e4b21f0e5d0e93e936d6759f316fea896181519dc39",
+    "src/claims_release_reconcile.py": "8c298b9acab5b0c104e498fab83f3a3649fa82191aaedd7462e441b459b720f9",
+    "src/claims_release_source.py": "9c0a0cc409bfac6989bb5a3c9207e02ea03d448d7ef7ed6c56c23484b8ad285f",
+    "tests/test_claims_release_archive.py": "44e9e40e41d9be15698bff648937d9bd146113561fcb093b1b4e81d74981ef2d",
+    "tests/test_claims_release_reconcile.py": "3db2ad43f2cc7e3a077dca7284af92e91e87728f40f71e71af0e45e12588f0fd",
+    "tests/test_claims_release_source.py": "0ba7f577f09acc26a3f7ca8379579f49e97cb28b141e29983b90e144e8e1ca42",
+    "tests/test_claims_release_source_attributes.py": "b6d512a9a098675a732715561731e56cb064fe2ac5d69e3ae92a20c65f0be8b7"
+  },
+  "output_path": "data/claims_release/alfred_structural.json",
+  "prior_publication_sha256": "45e60e48cbb4a3aa65f3ce7909f4b9d21c4621061e7706979054fc88e7641730",
+  "prior_python_files_verified_unchanged": 336,
+  "prior_report_artifacts_verified_unchanged": 90,
+  "new_predictive_hypotheses": 0,
+  "cumulative_predictive_hypotheses": 140
+}

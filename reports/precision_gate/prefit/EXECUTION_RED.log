@@ -1,0 +1,149 @@
+test_altered_rule_or_raw_protocol_bytes_rejected (tests.test_precision_gate_search.PrecisionGateProtocolTests.test_altered_rule_or_raw_protocol_bytes_rejected) ... ERROR
+test_fixed_design_and_projection (tests.test_precision_gate_search.PrecisionGateProtocolTests.test_fixed_design_and_projection) ... ERROR
+test_mandatory_market_inventory_excludes_treasury_quantities (tests.test_precision_gate_search.PrecisionGateProtocolTests.test_mandatory_market_inventory_excludes_treasury_quantities) ... ERROR
+test_existing_attempt_and_invalid_family_prevent_callback (tests.test_precision_gate_search.PrecisionGateSearchTests.test_existing_attempt_and_invalid_family_prevent_callback) ... ERROR
+test_late_preservation_failure_retains_provisional_result (tests.test_precision_gate_search.PrecisionGateSearchTests.test_late_preservation_failure_retains_provisional_result) ... ERROR
+test_missing_or_reordered_control_invalidates_whole_attempt (tests.test_precision_gate_search.PrecisionGateSearchTests.test_missing_or_reordered_control_invalidates_whole_attempt) ... ERROR
+test_publication_write_failure_and_mutable_caller_prior_preserve_family (tests.test_precision_gate_search.PrecisionGateSearchTests.test_publication_write_failure_and_mutable_caller_prior_preserve_family) ... ERROR
+test_registration_and_inherited_identities_are_durable_before_work (tests.test_precision_gate_search.PrecisionGateSearchTests.test_registration_and_inherited_identities_are_durable_before_work) ... ERROR
+test_support_failure_preserves_all_three_as_unevaluable (tests.test_precision_gate_search.PrecisionGateSearchTests.test_support_failure_preserves_all_three_as_unevaluable) ... ERROR
+
+======================================================================
+ERROR: test_altered_rule_or_raw_protocol_bytes_rejected (tests.test_precision_gate_search.PrecisionGateProtocolTests.test_altered_rule_or_raw_protocol_bytes_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_precision_gate_search.py", line 111, in setUp
+    self.protocol = importlib.import_module("src.precision_gate_protocol")
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'src.precision_gate_protocol'
+
+======================================================================
+ERROR: test_fixed_design_and_projection (tests.test_precision_gate_search.PrecisionGateProtocolTests.test_fixed_design_and_projection)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_precision_gate_search.py", line 111, in setUp
+    self.protocol = importlib.import_module("src.precision_gate_protocol")
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'src.precision_gate_protocol'
+
+======================================================================
+ERROR: test_mandatory_market_inventory_excludes_treasury_quantities (tests.test_precision_gate_search.PrecisionGateProtocolTests.test_mandatory_market_inventory_excludes_treasury_quantities)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_precision_gate_search.py", line 111, in setUp
+    self.protocol = importlib.import_module("src.precision_gate_protocol")
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'src.precision_gate_protocol'
+
+======================================================================
+ERROR: test_existing_attempt_and_invalid_family_prevent_callback (tests.test_precision_gate_search.PrecisionGateSearchTests.test_existing_attempt_and_invalid_family_prevent_callback)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_precision_gate_search.py", line 14, in setUp
+    self.search = importlib.import_module("src.precision_gate_search")
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'src.precision_gate_search'
+
+======================================================================
+ERROR: test_late_preservation_failure_retains_provisional_result (tests.test_precision_gate_search.PrecisionGateSearchTests.test_late_preservation_failure_retains_provisional_result)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_precision_gate_search.py", line 14, in setUp
+    self.search = importlib.import_module("src.precision_gate_search")
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'src.precision_gate_search'
+
+======================================================================
+ERROR: test_missing_or_reordered_control_invalidates_whole_attempt (tests.test_precision_gate_search.PrecisionGateSearchTests.test_missing_or_reordered_control_invalidates_whole_attempt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_precision_gate_search.py", line 14, in setUp
+    self.search = importlib.import_module("src.precision_gate_search")
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'src.precision_gate_search'
+
+======================================================================
+ERROR: test_publication_write_failure_and_mutable_caller_prior_preserve_family (tests.test_precision_gate_search.PrecisionGateSearchTests.test_publication_write_failure_and_mutable_caller_prior_preserve_family)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_precision_gate_search.py", line 14, in setUp
+    self.search = importlib.import_module("src.precision_gate_search")
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'src.precision_gate_search'
+
+======================================================================
+ERROR: test_registration_and_inherited_identities_are_durable_before_work (tests.test_precision_gate_search.PrecisionGateSearchTests.test_registration_and_inherited_identities_are_durable_before_work)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_precision_gate_search.py", line 14, in setUp
+    self.search = importlib.import_module("src.precision_gate_search")
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'src.precision_gate_search'
+
+======================================================================
+ERROR: test_support_failure_preserves_all_three_as_unevaluable (tests.test_precision_gate_search.PrecisionGateSearchTests.test_support_failure_preserves_all_three_as_unevaluable)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_precision_gate_search.py", line 14, in setUp
+    self.search = importlib.import_module("src.precision_gate_search")
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'src.precision_gate_search'
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.002s
+
+FAILED (errors=9)

@@ -1,0 +1,18 @@
+E
+======================================================================
+ERROR: test_copula_calibration_run (unittest.loader._FailedTest.test_copula_calibration_run)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_copula_calibration_run
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_calibration_run.py", line 10, in <module>
+    from src import copula_calibration_run as run
+ImportError: cannot import name 'copula_calibration_run' from 'src' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/__init__.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

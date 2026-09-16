@@ -1,0 +1,187 @@
+study_id: causal_pool_wave14
+specified_on: '2026-09-07'
+status: specified_before_new_filter_states_forecasts_or_scores
+wave: 14
+wave_alpha: 0.0002380952380952381
+objective: Test one fixed probability pool against both its frozen conditional baseline and causal recent-frequency
+  component
+evidence_class: exploratory_reused_history_archival_QQQ_SPX_raw_sign_agreement
+index:
+  asset: QQQ_ETF_and_SPX_price_index
+  source_end: '2025-10-20'
+  sealed_start: '2025-11-03'
+  origin_start: '2016-01-04'
+  origin_end: '2025-10-17'
+  latest_target: '2025-10-20'
+  development:
+  - '2016-01-04'
+  - '2019-12-31'
+  development_target_available_by: '2019-12-31'
+  evaluation:
+  - '2020-01-02'
+  - '2025-10-17'
+  evaluation_stability:
+  - - '2020-01-02'
+    - '2022-12-31'
+  - - '2023-01-01'
+    - '2025-10-17'
+  horizons:
+  - 1
+  market_lag: 1
+  minimum_train: 1000
+  models:
+  - frozen_baseline
+  - recent_frequency
+  - pooled
+  minimum_train_per_class: 50
+upstream:
+  protocol: sign_memory.yaml
+  reports: reports/sign_memory
+  data: data/sign_memory
+  features: data/sign_memory/features.parquet
+  targets: data/sign_memory/targets.parquet
+  forecasts: data/sign_memory/forecasts.parquet
+  fits: data/sign_memory/fits.json
+  protocol_sha256: a825704da953cd84302ee37430e446f8558d700859ccc7d2b44fbf5e2268f3d0
+  manifest_sha256: 47c6bc32556a30ae444a80380a2cd3a0076aa2df511d6814c5cec359cf1dcb0c
+  verification_sha256: 6a9e1348e93b44e6d0e88aba9b977f85b29489d1913834bbec58e267bafe4039
+  verifier_sha256: 44c0dc5ab288dfd95cc483b98ea7f198bd587830a24141baa210d259b13b5c27
+  prospectus: reports/sign_memory/NEXT_CAUSAL_CALIBRATION_DESIGN.md
+  prospectus_sha256: e74e8a8182a8af5e6da6551e4d0d1df3ada7c13e37b2553819a77d23f58a9f7f
+  required_status: VERIFIED
+  admission: Reconstruct complete original VERIFIED record through frozen read-only functions; anchor historical
+    inventory by its exact original manifest hash, never by enumerating the expanded current source tree; pin
+    all previous code, inputs, preserved and output/report artifacts
+target:
+  event: Both next observed SPX-session raw log(close/open) returns strictly positive, or both strictly negative
+  zero: Either or both exactly zero gives class0; complement includes opposite directions and ties
+  missing: Any missing return gives unknown, never class0; reject infinity or invalid observed source
+  sign_arithmetic: Direct comparisons, never multiplication of returns or epsilon sign threshold
+  positive_rescaling: Within-session positive price unit changes preserve each raw return; no total-return
+    or executable auction equivalence
+  fit_schedule: Monthly first feature-complete origin before future query-label filtering; expanding training
+    labels mature by prior SPX close; retain unscored applications and folds
+source_contract:
+  reference_calendar: Exact full bounded SPX reference calendar from frozen wave13 features; no compressed
+    dates or new source acquisition
+  source_and_measurement: All frozen wave13 raw-source, whole-measurement and feature/target gates remain enforced
+    by complete read-only independent replay
+  immutable_read: Decode each admitted parquet/json input from a single hash-checked byte snapshot; final rehash
+    all pins; no previous file writes
+  limitations: Archival QQQ ETF versus SPX price index, vendor revisions and unsynchronized opens, unverified
+    historical publication latency and back-calculated early VIX9D remain; no new untouched validation
+pooling:
+  half_life_sessions: 63
+  decay: 2**(-1/63)
+  baseline_weight: 0.5
+  recent_weight: 0.5
+  baseline: Exact original issued baseline probability on every original scored origin; no refit, memory-arm
+    substitution or reconstructed in-sample predictions
+  seed: At first original feature-complete monthly application origin preceding-session cutoff k0, S=f0,W=1;
+    f0 exact original first fit frequency on its eligible mature training subset
+  seed_provenance: Record first fit train_last_available separately from state cutoff k0; excluded old labels
+    intentionally absent; never refeed any target available<=k0
+  update: 'Every subsequent full reference session k: S=delta*S,W=delta*W, then for its unique finite binary
+    target add (1-delta)*y to S and (1-delta) to W; advance only through previous-session cutoff of prediction'
+  labels: Full immutable target table, including labels whose original origin was unscored or feature-incomplete;
+    require exact next-reference-session target_end=available_date, duplicate or misaligned availability invalid
+  missing: Decay numerator and mass on every reference session; missing paired return adds nothing, never class0;
+    zero raw return remains valid nonevent; no compressing observations
+  continuity: Single initialization and no resets across phases, feature gaps, all-unscored months or fixed
+    evaluation slices; no burn-in or scored-origin deletion
+  outputs: For every original application save state cutoff, latest included label availability, cumulative
+    post-seed observation update count, S,W,q and original fit identity. Only original scored origins receive
+    three probability rows; unscored applications have state audit only
+  arithmetic: 'IEEE float64 in fixed operation order: delta*S and delta*W; (1-delta)*y; additions; q=S/W; separate
+    0.5*p and 0.5*q products then sum. All state finite,0<=S<=W,W>0,probabilities in[0,1]. Reject unsupported
+    nonzero products/divisions underflowing tozero; allow nonzero subnormals and exactzero outcomes; no clipping,
+    reset, omission or alternative memory'
+scoring:
+  loss: brier
+  effect_threshold_absolute: 0.0005
+  paired_difference: (p_candidate-p_control)*((p_candidate-y)+(p_control-y)), after finite individual squared
+    loss validation
+  arithmetic: Binary finite y and finite probabilities in[0,1]; loss in[0,1]; exactzero errors valid; nonzero
+    squares/products underflowing tozero reject; coherence64epsilon/downwardULP no arbitrary absolute floor
+  functional: Conditional strict-agreement probability; expected Brier pi(1-pi)+(p-pi)^2; bounded loss needs
+    no return fourth moments
+  effect_reference: Absolute squared-probability error decrease .0005 bothphases; fixed statistical reference,
+    not profit or direct probability-point improvement
+comparisons:
+  new_hypotheses: 2
+  inherited_hypotheses: 119
+  cumulative_hypotheses: 121
+  inherited_sources:
+  - reports/orthogonal_round2/metrics.json
+  - reports/model_memory_study/combined_metrics.json
+  - reports/iterative_signal_search/metrics.json
+  - reports/international_volatility/metrics.json
+  - reports/overnight_index/metrics.json
+  - reports/macro_overnight/metrics.json
+  - reports/measurement_memory/metrics.json
+  - reports/index_hinge/metrics.json
+  - reports/tail_shape/metrics.json
+  - reports/calendar_variance/metrics.json
+  - reports/relative_risk/metrics.json
+  - reports/joint_risk/metrics.json
+  - reports/cross_moment/metrics.json
+  - reports/target_aligned/metrics.json
+  - reports/sign_memory/metrics.json
+  controls:
+  - frozen_baseline
+  - recent_frequency
+  contrasts:
+  - - pooled
+    - frozen_baseline
+    - brier
+  - - pooled
+    - recent_frequency
+    - brier
+  candidate_gate: Both registered contrasts must pass all fixed phase/effect/stability/multiplicity gates
+inference:
+  blocks:
+  - 21
+  - 63
+  - 126
+  hac_lags: 126
+  minimum_phase_observations: 127
+  minimum_phase_per_class: 30
+  minimum_slice_per_class: 15
+  bootstrap_draws: 99999
+  seed: 20260920
+  inference_scale: 1.0
+  seed_rule: seed+phase_code*10000+block; development0,evaluation1
+  p_phase: Maximum two-sided centered-null circular-block bootstrap p and Bartlett HAC126 p
+  p_hypothesis: Maximum development/evaluation p
+  multiplicity: Holm2 at.05/(14*15), separately cumulativeHolm121 at.05
+  gate: Bothphase absolute Brier decrease>=.0005 against BOTHcontrols; negative differences in bothfixed evaluation
+    slices; waveHolm<.05/210,cumulativeHolm<.05
+  support: Original fits retain at least50events/50nonevents;30/class perphase;15/class perfixed evaluationslice;
+    any insufficient support aborts wholefamily; no droppedfolds
+  power: Nominal HAC80percent MDE diagnostic only, divided by fixed .0005 effect; no postscore power gate or
+    equivalence claim
+  resolution: Minimum p1/100000 below one tenth strictest two-comparison raw wave cutoff1/8400
+  failure_rule: All2new hypotheses UNEVALUABLEp1 after any admission/measurement/support/fit/scoring/verification/publication
+    failure; preserve all diagnostics and old artifacts; no outcome-dependent repair
+  calibration: 'Descriptive calibration in the large only: perphase/model n, observed binary frequency, mean
+    issued probability, probability-minus-frequency gap and Brier. No bins, calibration fitting, hypothesis,
+    selection or promotion gate; not a full conditional calibration claim.'
+verification:
+  state_relative_roundoff_multiplier: 64
+  state_roundoff: At k full reference sessions after k0, abs(actual-explicit)<=64*(k+1)*max(eps*abs(explicit),abs(explicit)-nextafter(abs(explicit),0));
+    exactzero and sign masks, strict state/probability domain first
+  independent_state: Explicit compensated sum of seed*delta**k and observed (1-delta)*delta**age weights; denominator
+    seed mass delta**k plus same weights; do not call producer recurrence
+  saved_replay: Exact float64 bits for q from saved S/W, pooled from two separate half products, preserved
+    baseline and all Brier losses; no tolerance permitting domain violation
+  inference_relative_tolerance: 1.0e-09
+  inference_absolute_tolerance: 1.0e-14
+  reconstruction: Complete frozen upstream proof; independent application and scored cohorts, every state/probability/primitive
+    Brier/difference, four phase analyses, six calibration rows, complete121family ledger, immutable output
+    snapshots and final pin rehash
+outputs:
+  data: data/causal_pool
+  reports: reports/causal_pool
+  forecasts: data/causal_pool/forecasts.parquet
+  states: data/causal_pool/states.parquet
+  admission: data/causal_pool/upstream_admission.json

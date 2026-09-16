@@ -1,0 +1,13 @@
+test_body_dates_do_not_supply_missing_header (tests.test_treasury_pdf_identity.PDFIdentityTests.test_body_dates_do_not_supply_missing_header) ... ok
+test_case_whitespace_and_repeated_identity (tests.test_treasury_pdf_identity.PDFIdentityTests.test_case_whitespace_and_repeated_identity) ... ok
+test_header_exports_only_dates_cusips_and_release_marker (tests.test_treasury_pdf_identity.PDFIdentityTests.test_header_exports_only_dates_cusips_and_release_marker) ... ok
+test_invalid_dates_and_nonstring_input (tests.test_treasury_pdf_identity.PDFIdentityTests.test_invalid_dates_and_nonstring_input) ... ok
+test_lowercase_and_long_cusip_substrings_are_not_accepted (tests.test_treasury_pdf_identity.PDFIdentityTests.test_lowercase_and_long_cusip_substrings_are_not_accepted) ... ok
+test_special_notice_date_can_be_checked_without_assumed_event_date (tests.test_treasury_pdf_identity.PDFIdentityTests.test_special_notice_date_can_be_checked_without_assumed_event_date) ... ok
+test_standard_document_date_and_identity_must_match (tests.test_treasury_pdf_identity.PDFIdentityTests.test_standard_document_date_and_identity_must_match) ... ok
+test_unique_date_release_label_and_scope_required (tests.test_treasury_pdf_identity.PDFIdentityTests.test_unique_date_release_label_and_scope_required) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.001s
+
+OK

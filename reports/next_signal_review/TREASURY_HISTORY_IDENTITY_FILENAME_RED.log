@@ -1,0 +1,21 @@
+FF
+======================================================================
+FAIL: test_amendment_notice_filename_dates_are_bounded_and_valid (tests.test_treasury_history_identity.HistoryIdentityTests.test_amendment_notice_filename_dates_are_bounded_and_valid) (token='20251021')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_history_identity.py", line 113, in test_amendment_notice_filename_dates_are_bounded_and_valid
+    with self.subTest(token=token), self.assertRaises(ValueError): run(f)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_amendment_notice_filename_dates_are_bounded_and_valid (tests.test_treasury_history_identity.HistoryIdentityTests.test_amendment_notice_filename_dates_are_bounded_and_valid) (token='20170230')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_history_identity.py", line 113, in test_amendment_notice_filename_dates_are_bounded_and_valid
+    with self.subTest(token=token), self.assertRaises(ValueError): run(f)
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.004s
+
+FAILED (failures=2)

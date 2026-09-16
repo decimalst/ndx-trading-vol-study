@@ -1,0 +1,15 @@
+/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_cross_moment.py:263: ComplexWarning: Casting complex values to real discards the imaginary part
+  value = float(value)
+F
+======================================================================
+FAIL: test_nonreal_state_values_cannot_be_cast_to_an_accepted_real_state (tests.test_verify_causal_pool.ExplicitStateContracts.test_nonreal_state_values_cannot_be_cast_to_an_accepted_real_state)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_causal_pool.py", line 130, in test_nonreal_state_values_cannot_be_cast_to_an_accepted_real_state
+    with self.assertRaises((AssertionError,ValueError,TypeError)):
+AssertionError: (<class 'AssertionError'>, <class 'ValueError'>, <class 'TypeError'>) not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)

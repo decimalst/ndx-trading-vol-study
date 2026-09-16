@@ -1,0 +1,21 @@
+FF
+======================================================================
+FAIL: test_failure_report_directory_links_rejected_before_mutation (tests.test_verify_peak_age.EnvelopeAndFailureTests.test_failure_report_directory_links_rejected_before_mutation) (component='reports')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 490, in test_failure_report_directory_links_rejected_before_mutation
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_failure_report_directory_links_rejected_before_mutation (tests.test_verify_peak_age.EnvelopeAndFailureTests.test_failure_report_directory_links_rejected_before_mutation) (component='reports/peak_age')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 490, in test_failure_report_directory_links_rejected_before_mutation
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.004s
+
+FAILED (failures=2)

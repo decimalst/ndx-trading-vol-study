@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_civil_quarter_replay.py", line 1676, in <module>
+    print(json.dumps(verify_with_failure_guard(), indent=2, allow_nan=False), flush=True)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_civil_quarter_replay.py", line 367, in verify_with_failure_guard
+    return verify(root)
+           ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_civil_quarter_replay.py", line 1631, in verify
+    "forecast_reconstruction": verify_forecasts(features, targets, panel, fits, protocol),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_civil_quarter.py", line 753, in verify_forecasts
+    replay, proof = verify_fit(
+                    ^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_civil_quarter.py", line 384, in verify_fit
+    independently = independent_fit(training, y, application)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_civil_quarter.py", line 293, in independent_fit
+    raise AssertionError("Independent baseline stationarity failed")
+AssertionError: Independent baseline stationarity failed

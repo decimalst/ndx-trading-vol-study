@@ -1,0 +1,25 @@
+{
+  "status": "VERIFIED",
+  "protocol_sha256": "e204412d93c3907021355888e322e7d7498b6e62e21a3ca4808378746d429cef",
+  "verifier_sha256": "77fef56b7a414598b3ced3ab5679003cc6da1f2a1ce6b5850629f6d0df1c005d",
+  "foreign_source_rows_verified": 27312,
+  "forecast_reconstruction": {
+    "forecasts_verified": 17703,
+    "monthly_fits_verified": 282,
+    "common_origins": 1967,
+    "pca_projectors_verified": 282
+  },
+  "inference": {
+    "phase_comparisons_verified": 12,
+    "bootstrap_runs_verified": 36,
+    "new_hypotheses_verified": 6,
+    "cumulative_hypotheses_verified": 72,
+    "leads": []
+  },
+  "ledger_events_verified": {
+    "inherited": 66,
+    "registered": 6,
+    "evaluated": 6
+  },
+  "limitation": "Historical reuse and unknown publication vintages remain exploratory despite verified construction and cumulative correction."
+}

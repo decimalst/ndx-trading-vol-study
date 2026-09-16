@@ -1,0 +1,213 @@
+{
+  "checkpoint_sha256": "b6e0783a74746b363c7464fd9f2444f5af1e7f951e49a74f9e7e25f67c64b699",
+  "completed_utc": "2026-09-09T01:51:51.335973+00:00",
+  "counts": {
+    "NOT_APPLIED_PRIOR_SOURCE_DISPOSITION_RETAINED": 2,
+    "OFFERING_RECONCILIATION_REQUIRES_REVIEW": 19,
+    "VERIFIED_STATED_OFFERING_AGREEMENT": 1
+  },
+  "events": [
+    {
+      "announcement_date": "2010-01-07",
+      "auction_date": "2010-01-12",
+      "cusip": "912828MG2",
+      "error": "Unique labelled announcement CUSIP required",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "source_admitted": false,
+      "status": "OFFERING_RECONCILIATION_REQUIRES_REVIEW"
+    },
+    {
+      "announcement_date": "2010-01-07",
+      "auction_date": "2010-01-13",
+      "cusip": "912828LY4",
+      "error": "Unique labelled announcement CUSIP required",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "source_admitted": false,
+      "status": "OFFERING_RECONCILIATION_REQUIRES_REVIEW"
+    },
+    {
+      "announcement_date": "2010-01-07",
+      "auction_date": "2010-01-14",
+      "cusip": "912810QD3",
+      "error": "Unique labelled announcement CUSIP required",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "source_admitted": false,
+      "status": "OFFERING_RECONCILIATION_REQUIRES_REVIEW"
+    },
+    {
+      "announcement_date": "2010-01-21",
+      "auction_date": "2010-01-26",
+      "cusip": "912828MJ6",
+      "error": "Unique labelled announcement CUSIP required",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "source_admitted": false,
+      "status": "OFFERING_RECONCILIATION_REQUIRES_REVIEW"
+    },
+    {
+      "announcement_date": "2010-01-21",
+      "auction_date": "2010-01-27",
+      "cusip": "912828MH0",
+      "error": "Unique labelled announcement CUSIP required",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "source_admitted": false,
+      "status": "OFFERING_RECONCILIATION_REQUIRES_REVIEW"
+    },
+    {
+      "announcement_date": "2010-01-21",
+      "auction_date": "2010-01-28",
+      "cusip": "912828MK3",
+      "error": "Unique labelled announcement CUSIP required",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "source_admitted": false,
+      "status": "OFFERING_RECONCILIATION_REQUIRES_REVIEW"
+    },
+    {
+      "announcement_date": "2010-06-17",
+      "auction_date": "2010-06-22",
+      "cusip": "912828NS5",
+      "error": "Unique labelled announcement CUSIP required",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "source_admitted": false,
+      "status": "OFFERING_RECONCILIATION_REQUIRES_REVIEW"
+    },
+    {
+      "announcement_date": "2016-01-07",
+      "auction_date": "2016-01-12",
+      "cusip": "912828N63",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "private_offering_path": "data/source_discovery/treasury_auction/offering_pilot_v1/2016-01-12_912828N63.json",
+      "private_offering_sha256": "330e994d8811b39473e087d335f9a514c09a1a5e165e683d30bb7c14f3ad8a7e",
+      "source_admitted": false,
+      "status": "VERIFIED_STATED_OFFERING_AGREEMENT"
+    },
+    {
+      "announcement_date": "2016-01-07",
+      "auction_date": "2016-01-13",
+      "cusip": "912828M56",
+      "error": "Unique labelled announcement CUSIP required",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "source_admitted": false,
+      "status": "OFFERING_RECONCILIATION_REQUIRES_REVIEW"
+    },
+    {
+      "announcement_date": "2016-01-07",
+      "auction_date": "2016-01-14",
+      "cusip": "912810RP5",
+      "prior_accounting_status": "METADATA_OR_LINEAGE_REQUIRES_REVIEW",
+      "source_admitted": false,
+      "status": "NOT_APPLIED_PRIOR_SOURCE_DISPOSITION_RETAINED"
+    },
+    {
+      "announcement_date": "2016-01-21",
+      "auction_date": "2016-01-26",
+      "cusip": "912828P20",
+      "error": "Unique labelled announcement CUSIP required",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "source_admitted": false,
+      "status": "OFFERING_RECONCILIATION_REQUIRES_REVIEW"
+    },
+    {
+      "announcement_date": "2016-01-21",
+      "auction_date": "2016-01-27",
+      "cusip": "912828N89",
+      "error": "Unique labelled announcement CUSIP required",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "source_admitted": false,
+      "status": "OFFERING_RECONCILIATION_REQUIRES_REVIEW"
+    },
+    {
+      "announcement_date": "2016-01-21",
+      "auction_date": "2016-01-28",
+      "cusip": "912828P38",
+      "error": "Unique labelled announcement CUSIP required",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "source_admitted": false,
+      "status": "OFFERING_RECONCILIATION_REQUIRES_REVIEW"
+    },
+    {
+      "announcement_date": "2019-06-06",
+      "auction_date": "2019-06-12",
+      "cusip": "9128286T2",
+      "error": "Unique labelled announcement CUSIP required",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "source_admitted": false,
+      "status": "OFFERING_RECONCILIATION_REQUIRES_REVIEW"
+    },
+    {
+      "announcement_date": "2019-06-21",
+      "auction_date": "2019-06-21",
+      "cusip": "9128286T2",
+      "prior_accounting_status": "EXCLUDED_DOCUMENTED_CONTINGENCY_TEST",
+      "source_admitted": false,
+      "status": "NOT_APPLIED_PRIOR_SOURCE_DISPOSITION_RETAINED"
+    },
+    {
+      "announcement_date": "2025-01-02",
+      "auction_date": "2025-01-06",
+      "cusip": "91282CMF5",
+      "error": "Unique labelled announcement CUSIP required",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "source_admitted": false,
+      "status": "OFFERING_RECONCILIATION_REQUIRES_REVIEW"
+    },
+    {
+      "announcement_date": "2025-01-02",
+      "auction_date": "2025-01-07",
+      "cusip": "91282CLW9",
+      "error": "Unique labelled announcement CUSIP required",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "source_admitted": false,
+      "status": "OFFERING_RECONCILIATION_REQUIRES_REVIEW"
+    },
+    {
+      "announcement_date": "2025-01-02",
+      "auction_date": "2025-01-08",
+      "cusip": "912810UE6",
+      "error": "Unique labelled announcement CUSIP required",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "source_admitted": false,
+      "status": "OFFERING_RECONCILIATION_REQUIRES_REVIEW"
+    },
+    {
+      "announcement_date": "2025-01-23",
+      "auction_date": "2025-01-27",
+      "cusip": "91282CMG3",
+      "error": "Unique labelled announcement CUSIP required",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "source_admitted": false,
+      "status": "OFFERING_RECONCILIATION_REQUIRES_REVIEW"
+    },
+    {
+      "announcement_date": "2025-01-23",
+      "auction_date": "2025-01-27",
+      "cusip": "91282CMH1",
+      "error": "Unique labelled announcement CUSIP required",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "source_admitted": false,
+      "status": "OFFERING_RECONCILIATION_REQUIRES_REVIEW"
+    },
+    {
+      "announcement_date": "2025-01-23",
+      "auction_date": "2025-01-28",
+      "cusip": "91282CMK4",
+      "error": "Unique labelled announcement CUSIP required",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "source_admitted": false,
+      "status": "OFFERING_RECONCILIATION_REQUIRES_REVIEW"
+    },
+    {
+      "announcement_date": "2025-08-21",
+      "auction_date": "2025-08-27",
+      "cusip": "91282CNX5",
+      "error": "Unique labelled announcement CUSIP required",
+      "prior_accounting_status": "PAIRED_SOURCE_AMOUNTS_MATCH",
+      "source_admitted": false,
+      "status": "OFFERING_RECONCILIATION_REQUIRES_REVIEW"
+    }
+  ],
+  "new_predictive_comparisons": 0,
+  "registered_comparisons": 144,
+  "source_history_admitted": false,
+  "started_utc": "2026-09-09T01:51:51.324825+00:00",
+  "status": "COMPLETED_FIXED_PILOT_OFFERING_RECONCILIATION"
+}

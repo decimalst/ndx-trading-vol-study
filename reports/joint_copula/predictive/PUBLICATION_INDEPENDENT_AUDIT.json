@@ -1,0 +1,296 @@
+{
+  "status": "VERIFIED_QUALIFIED_SAVED_PUBLICATION",
+  "reviewer": "new_study_tests",
+  "completed_utc": "2026-09-09T06:27:17.973724+00:00",
+  "scope": "Saved-artifact terminal audit plus hash preservation and summary arithmetic; no source numerical decoding, raw forecast-array inspection, fits, copula optimization, HAC estimation or resampling repeated. Summary/figure/new root publication renders excluded.",
+  "checks_performed": 34992,
+  "discrepancies": [],
+  "audited_input_hashes": {
+    "reports/joint_copula/predictive/freeze_record.json": "f98fddc72c6180a92445a36e4c41cac07c4b1ff2d29aab5aa3ef5ac929a1c265",
+    "reports/joint_copula/predictive/terminal.json": "9dfbe34029b5b8095fd68ff0c3e1e624bd854de287449a1045b6700906742b2f",
+    "reports/joint_copula/predictive/metrics.json": "d1de728c8fb6909a4ce8ecd6edb055d8b3652693550de140dfca3ff688593442",
+    "reports/joint_copula/predictive/verification.json": "6abe3595a307ba61860093b12d891696d95ca41451f68397ad470f8840d907d4",
+    "reports/joint_copula/predictive/forecast_verification.json": "a712dc8016689c0df0b3a2c8a4eedc9e3f995563baa80d408839851a65052dc2",
+    "reports/joint_copula/predictive/score_verification.json": "e37fa59942dae4249a0ea41a31eff022916b14f929b41dfe5cb44bf4c1239639",
+    "reports/joint_copula/predictive/TEST_SELECTION.json": "25a1607f19e1f5f27add5e754cbb1ced6be728c853f89df6ab4df5c49a43b343",
+    "reports/joint_copula/predictive/TEST_GATE_RESULT.json": "a5e9c02dd1958351adf9bbbcd30ccb62bb8ad69da5f98caac37ffbc9cbce9d11",
+    "reports/joint_copula/predictive/FULL_PRECHECK.json": "ae06519b67ed7bc8dba81143a4a54266c9f6f1059dbc6f670ac6ab955a889554",
+    "reports/joint_copula/predictive/FULL_PRECHECK.log": "d7ba7cad5d54f9f7eb18d411022b0b4bbb54d1bf43b370f782d9a32d840cc4c2",
+    "reports/joint_copula/predictive/manifest.json": "13dbaa9e3ed0830981f6e1b6bc24a1c871f123bffb2d035d4073e3aab3715f5b",
+    "reports/joint_copula/predictive/source_admission.json": "9dae4d3547303628d08320f21c20faa4bdd2a80d595342050b4fc35f6ced0699",
+    "reports/joint_copula/predictive/measurement_audit.json": "b5d9c1272239cd5b1a3c85c1619068ae491252444249c61c2b7caa34d4c2f5f0",
+    "reports/joint_copula/predictive/trial_ledger.jsonl": "1789cf5b82a0c22a851716831bc445804dce346e4339bc1fe130c49d61311e50",
+    "joint_copula.yaml": "cf43700c6c37ba860e9ef8ae4adb4c70158030efeedd3bca9b073f0691cd5d50",
+    "reports/precision_gate/predictive/TEST_SELECTION.json": "06793e70074b402aa1ac83bfef80f89f5694143f2a0154a05a9f3ba346ffe589",
+    "reports/precision_gate/predictive/freeze_record.json": "3ff970b3e4fa0ed77e862cd1f1fe2f8e872378f643bd1366f4fa81e7e4c95b43",
+    "reports/precision_gate/predictive/metrics.json": "3ad635e31bf81f224ccf690bb0efd109b8f0b23dea6fc7bfb30d6073b7ffde58"
+  },
+  "audited_hash_maps": {
+    "freeze.code": {
+      "entries": 514,
+      "canonical_map_sha256": "8fd6e4e55f922a826b19184f6133f6d41672aee410de04c2b33ce33c6df89254"
+    },
+    "freeze.inputs": {
+      "entries": 30050,
+      "canonical_map_sha256": "b7fbfd95b190ab9c81995137bb301449abdd410f22c268c6f450540b17516846"
+    },
+    "freeze.preserved": {
+      "entries": 1562,
+      "canonical_map_sha256": "110ffce0b8370e826cb6eb3523bf9d7eed2f33891267b3b823060f96579e9f3b"
+    },
+    "freeze.prefit": {
+      "entries": 4,
+      "canonical_map_sha256": "6defba1ab2424f6dae4991b5584168e0f013aae0c2878ded19968297168ba837"
+    },
+    "freeze.execution.market_pins": {
+      "entries": 6,
+      "canonical_map_sha256": "bf6e3ff87345939a6c297b1d48d101fa08ae3b189cfd4477df36bccc2890f5e1"
+    },
+    "freeze.execution.proposal_pins": {
+      "entries": 2,
+      "canonical_map_sha256": "aea8995c2304e6473cb753e928e2d3f78b348ae2a78ab272e20b9038dd8c8823"
+    },
+    "terminal.output_hashes": {
+      "entries": 7,
+      "canonical_map_sha256": "a888d7e335806ed9740fb3ff7a7705a046b794878926c4f186acb41eda04eb49"
+    },
+    "terminal.report_artifact_hashes": {
+      "entries": 13,
+      "canonical_map_sha256": "ac3126ce6abd4c92deb00a13c630ab8dd95f23e97a28e63f133800e378b4b76c"
+    },
+    "verification.outputs": {
+      "entries": 7,
+      "canonical_map_sha256": "a888d7e335806ed9740fb3ff7a7705a046b794878926c4f186acb41eda04eb49"
+    },
+    "source_admission.source_sha256": {
+      "entries": 6,
+      "canonical_map_sha256": "bf6e3ff87345939a6c297b1d48d101fa08ae3b189cfd4477df36bccc2890f5e1"
+    }
+  },
+  "hash_map_entries": 32171,
+  "unique_pinned_paths": 30119,
+  "hash_passes": [
+    {
+      "pass": "initial",
+      "unique_paths": 30119,
+      "mismatches": []
+    },
+    {
+      "pass": "final",
+      "unique_paths": 30119,
+      "mismatches": []
+    }
+  ],
+  "frozen_code_files": 514,
+  "code_inventory_added_or_missing": [],
+  "test_evidence": {
+    "selected_executed": 3400,
+    "discovered": 3406,
+    "quarantined": [
+      "tests.test_methodology.TestDiagnosticOnlyQuarantine.test_qlike_series_refuses_the_clean_window",
+      "tests.test_methodology.TestEstimatorReconstructionAccuracy.test_reconstruction_matches_exact_smearing_on_the_har_family",
+      "tests.test_methodology.TestEstimatorReconstructionAccuracy.test_reconstruction_table_matches_the_published_one",
+      "tests.test_methodology.TestEstimatorReconstructionAccuracy.test_the_near_common_factor_claim_is_scoped_to_its_own_model_set",
+      "tests.test_methodology.TestFrozenReportsUnchanged.test_corrected_run_writes_a_separate_file",
+      "tests.test_methodology.TestFrozenReportsUnchanged.test_default_evaluate_reproduces_the_frozen_reports"
+    ],
+    "new_methods": 87,
+    "new_methods_by_module": {
+      "tests.test_joint_copula_density": 15,
+      "tests.test_joint_copula_inputs": 5,
+      "tests.test_joint_copula_models": 4,
+      "tests.test_joint_copula_pipeline": 9,
+      "tests.test_joint_copula_score": 11,
+      "tests.test_joint_copula_search": 13,
+      "tests.test_verify_joint_copula_forecasts": 24,
+      "tests.test_verify_joint_copula_scores": 6
+    },
+    "previous_methods_retained": 3313,
+    "new_method_ids": [
+      "tests.test_joint_copula_density.JointCopulaDensityTests.test_analytic_objective_derivative",
+      "tests.test_joint_copula_density.JointCopulaDensityTests.test_boundary_tie_is_deterministic_and_not_local_stationary_maximum",
+      "tests.test_joint_copula_density.JointCopulaDensityTests.test_certificate_budget_exhaustion_is_failure",
+      "tests.test_joint_copula_density.JointCopulaDensityTests.test_each_dependence_family_preserves_marginals",
+      "tests.test_joint_copula_density.JointCopulaDensityTests.test_extreme_finite_values_and_vector_rho_remain_finite",
+      "tests.test_joint_copula_density.JointCopulaDensityTests.test_fixed_marginal_has_specified_variance_and_location",
+      "tests.test_joint_copula_density.JointCopulaDensityTests.test_gaussian_density_matches_transformed_distribution_ratio",
+      "tests.test_joint_copula_density.JointCopulaDensityTests.test_generated_optima_are_no_worse_than_independent_grid",
+      "tests.test_joint_copula_density.JointCopulaDensityTests.test_global_certificate_covers_whole_interval_and_bounds_interior",
+      "tests.test_joint_copula_density.JointCopulaDensityTests.test_invalid_data_domain_and_nonzero_independence_fail",
+      "tests.test_joint_copula_density.JointCopulaDensityTests.test_shared_marginal_scores_cancel_exactly_up_to_roundoff",
+      "tests.test_joint_copula_density.JointCopulaDensityTests.test_stable_logtail_transform_does_not_saturate",
+      "tests.test_joint_copula_density.JointCopulaDensityTests.test_symmetry_and_rowwise_parameters",
+      "tests.test_joint_copula_density.JointCopulaDensityTests.test_t_density_matches_independent_distribution_ratio",
+      "tests.test_joint_copula_density.JointCopulaDensityTests.test_zero_correlation_t_is_not_independence",
+      "tests.test_joint_copula_inputs.JointCopulaInputsTests.test_all_date_metadata_precedes_any_numeric_decode",
+      "tests.test_joint_copula_inputs.JointCopulaInputsTests.test_bounded_numerical_decode_keeps_sources_and_dates",
+      "tests.test_joint_copula_inputs.JointCopulaInputsTests.test_every_hash_precedes_any_metadata_or_numeric_decode",
+      "tests.test_joint_copula_inputs.JointCopulaInputsTests.test_numeric_decode_uses_original_checked_buffers_after_file_change",
+      "tests.test_joint_copula_inputs.JointCopulaInputsTests.test_wrong_inventory_and_unbounded_source_end_rejected",
+      "tests.test_joint_copula_models.JointCopulaModelsTests.test_exact_shared_marginals_and_current_fit_t8_coordinates",
+      "tests.test_joint_copula_models.JointCopulaModelsTests.test_individual_signed_zero_return_is_valid_and_input_unchanged",
+      "tests.test_joint_copula_models.JointCopulaModelsTests.test_order_types_zero_scale_and_all_zero_risk_rejected",
+      "tests.test_joint_copula_models.JointCopulaModelsTests.test_unit_changes_and_application_values_do_not_change_dependence_fit",
+      "tests.test_joint_copula_pipeline.JointCopulaPipelineTests.test_feature_construction_and_alignment_failures_retain_available_outputs",
+      "tests.test_joint_copula_pipeline.JointCopulaPipelineTests.test_final_coverage_or_panel_failure_retains_all_issued_months",
+      "tests.test_joint_copula_pipeline.JointCopulaPipelineTests.test_fit_failure_and_insufficient_rows_preserve_attempt_diagnostics",
+      "tests.test_joint_copula_pipeline.JointCopulaPipelineTests.test_full_reference_monthly_maturity_and_all_unscored_applications",
+      "tests.test_joint_copula_pipeline.JointCopulaPipelineTests.test_future_source_dates_fail_before_measurement_arithmetic",
+      "tests.test_joint_copula_pipeline.JointCopulaPipelineTests.test_future_sources_do_not_change_earlier_issued_forecasts",
+      "tests.test_joint_copula_pipeline.JointCopulaPipelineTests.test_measurement_gate_sees_unusable_row_before_features_or_fit",
+      "tests.test_joint_copula_pipeline.JointCopulaPipelineTests.test_missing_source_predecessor_and_source_immutability",
+      "tests.test_joint_copula_pipeline.JointCopulaPipelineTests.test_unknown_query_label_does_not_move_monthly_fit",
+      "tests.test_joint_copula_score.JointCopulaScoreTests.test_all_support_checks_precede_sampling",
+      "tests.test_joint_copula_score.JointCopulaScoreTests.test_common_marginal_cancellation_and_unit_transport",
+      "tests.test_joint_copula_score.JointCopulaScoreTests.test_finite_extreme_standardized_tails_and_invalid_values",
+      "tests.test_joint_copula_score.JointCopulaScoreTests.test_fixed_protocol_and_exact_probability_effect_boundaries",
+      "tests.test_joint_copula_score.JointCopulaScoreTests.test_full_joint_density_matches_distribution_oracles",
+      "tests.test_joint_copula_score.JointCopulaScoreTests.test_inherited_precision_rows_and_failure_preservation",
+      "tests.test_joint_copula_score.JointCopulaScoreTests.test_last_control_worst_method_veto",
+      "tests.test_joint_copula_score.JointCopulaScoreTests.test_negative_full_density_loss_is_valid",
+      "tests.test_joint_copula_score.JointCopulaScoreTests.test_pairing_identity_and_conservative_lag_guards",
+      "tests.test_joint_copula_score.JointCopulaScoreTests.test_phase_calendar_gaps_final_origin_and_shared_rng",
+      "tests.test_joint_copula_score.JointCopulaScoreTests.test_three_models_two_comparisons_151_family_and_qualification",
+      "tests.test_joint_copula_search.JointCopulaProtocolTests.test_altered_rule_or_protocol_bytes_rejected",
+      "tests.test_joint_copula_search.JointCopulaProtocolTests.test_exact_original_six_sources_and_prior_are_bound",
+      "tests.test_joint_copula_search.JointCopulaProtocolTests.test_fixed_design_and_projection",
+      "tests.test_joint_copula_search.JointCopulaSearchTests.test_changed_freeze_record_bytes_after_registration_invalidate_attempt",
+      "tests.test_joint_copula_search.JointCopulaSearchTests.test_changed_output_during_verification_invalidates_saved_result",
+      "tests.test_joint_copula_search.JointCopulaSearchTests.test_empty_current_inventory_or_missing_selected_receipts_cannot_freeze",
+      "tests.test_joint_copula_search.JointCopulaSearchTests.test_existing_attempt_and_invalid_family_prevent_callback",
+      "tests.test_joint_copula_search.JointCopulaSearchTests.test_late_preservation_failure_retains_provisional_result",
+      "tests.test_joint_copula_search.JointCopulaSearchTests.test_metrics_changed_after_publication_cannot_keep_completed_status",
+      "tests.test_joint_copula_search.JointCopulaSearchTests.test_missing_or_reordered_control_invalidates_whole_attempt",
+      "tests.test_joint_copula_search.JointCopulaSearchTests.test_publication_write_failure_and_mutable_caller_prior_preserve_family",
+      "tests.test_joint_copula_search.JointCopulaSearchTests.test_registration_and_inherited_identities_are_durable_before_work",
+      "tests.test_joint_copula_search.JointCopulaSearchTests.test_support_failure_preserves_both_as_unevaluable",
+      "tests.test_verify_joint_copula_forecasts.DependenceCertificateTests.test_both_saved_certificates_independently_reconstruct",
+      "tests.test_verify_joint_copula_forecasts.DependenceCertificateTests.test_gaussian_omitted_stationary_candidate_and_root_corruption_rejected",
+      "tests.test_verify_joint_copula_forecasts.DependenceCertificateTests.test_interval_missing_overlap_inflated_bound_and_global_gap_rejected",
+      "tests.test_verify_joint_copula_forecasts.DependenceCertificateTests.test_wrong_objective_kkt_rho_training_and_unknown_schema_rejected",
+      "tests.test_verify_joint_copula_forecasts.IndependentCopulaMathTests.test_copula_preserves_marginal_by_independent_quadrature",
+      "tests.test_verify_joint_copula_forecasts.IndependentCopulaMathTests.test_domain_shape_and_real_numeric_validation",
+      "tests.test_verify_joint_copula_forecasts.IndependentCopulaMathTests.test_gaussian_density_and_zero_parameter_are_exact_independence",
+      "tests.test_verify_joint_copula_forecasts.IndependentCopulaMathTests.test_gaussian_stationary_candidates_include_all_three_roots_and_endpoints",
+      "tests.test_verify_joint_copula_forecasts.IndependentCopulaMathTests.test_interval_lower_bound_covers_full_interval_including_negative_curvature",
+      "tests.test_verify_joint_copula_forecasts.IndependentCopulaMathTests.test_saved_forecast_absolute_tolerance_is_tight_in_variance_units",
+      "tests.test_verify_joint_copula_forecasts.IndependentCopulaMathTests.test_saved_forecasts_retain_strict_domains_even_within_roundoff_tolerance",
+      "tests.test_verify_joint_copula_forecasts.IndependentCopulaMathTests.test_t8_density_matches_separate_multivariate_and_marginal_formula",
+      "tests.test_verify_joint_copula_forecasts.IndependentCopulaMathTests.test_t8_objective_gradient_and_curvature_match_independent_differences",
+      "tests.test_verify_joint_copula_forecasts.IndependentCopulaMathTests.test_tail_signs_and_extreme_finite_values_do_not_clip_cdf",
+      "tests.test_verify_joint_copula_forecasts.IssuedForecastVerificationTests.test_exact_shared_marginals_and_independence_placeholder_on_unscored_origins",
+      "tests.test_verify_joint_copula_forecasts.IssuedForecastVerificationTests.test_feature_target_calendar_and_cutoff_corruption_rejected",
+      "tests.test_verify_joint_copula_forecasts.IssuedForecastVerificationTests.test_fit_training_membership_maturity_and_schedule_are_reconstructed",
+      "tests.test_verify_joint_copula_forecasts.IssuedForecastVerificationTests.test_future_source_calendar_is_rejected_before_numeric_data",
+      "tests.test_verify_joint_copula_forecasts.IssuedForecastVerificationTests.test_generated_all_issued_and_scored_forecasts_reconstruct",
+      "tests.test_verify_joint_copula_forecasts.IssuedForecastVerificationTests.test_insufficient_rows_and_measurement_failure_are_not_verified",
+      "tests.test_verify_joint_copula_forecasts.IssuedForecastVerificationTests.test_phase_maturity_and_original_calendar_offsets_cannot_be_relabelled",
+      "tests.test_verify_joint_copula_forecasts.IssuedForecastVerificationTests.test_serialized_six_parquet_and_fits_json_reconstruct_same_forecasts",
+      "tests.test_verify_joint_copula_forecasts.IssuedForecastVerificationTests.test_shared_marginals_and_dependence_audits_cannot_be_changed",
+      "tests.test_verify_joint_copula_forecasts.IssuedForecastVerificationTests.test_unknown_query_and_unscored_forecast_cannot_be_dropped_or_tampered",
+      "tests.test_verify_joint_copula_scores.VerifyJointCopulaScoresTests.test_every_metric_and_exact_discrete_probability_corruption_rejected",
+      "tests.test_verify_joint_copula_scores.VerifyJointCopulaScoresTests.test_extreme_and_near_zero_tails_match_high_precision",
+      "tests.test_verify_joint_copula_scores.VerifyJointCopulaScoresTests.test_full_components_and_generated_scores_independently_verify",
+      "tests.test_verify_joint_copula_scores.VerifyJointCopulaScoresTests.test_independent_formulas_match_distribution_ratios",
+      "tests.test_verify_joint_copula_scores.VerifyJointCopulaScoresTests.test_nonshared_marginals_wrong_dates_and_rho_fail",
+      "tests.test_verify_joint_copula_scores.VerifyJointCopulaScoresTests.test_source_qualification_and_scientific_contract_cannot_change"
+    ],
+    "ordinary_skips": [],
+    "errors": 0,
+    "failures": 0
+  },
+  "durable_family": {
+    "inherited_unchanged_full_records": 149,
+    "new_comparisons": 2,
+    "cumulative": 151,
+    "journal_rows": 153,
+    "registered": 2,
+    "inherited": 149,
+    "evaluated": 2,
+    "no_prior_rows_collapsed_or_filtered": true
+  },
+  "output_counts": {
+    "targets": 4226,
+    "applications": 7389,
+    "panel": 7386,
+    "features": 4226,
+    "coverage": 2463,
+    "schedules": 118
+  },
+  "forecast_certificate": {
+    "status": "VERIFIED",
+    "calendar_rows": 4226,
+    "coverage_origins": 2463,
+    "application_forecasts_verified": 7389,
+    "forecasts_verified": 7386,
+    "monthly_fits": 118,
+    "marginal_models_verified": 472,
+    "dependence_fits_verified": 236,
+    "largest_independent_global_gap": 9.974728820694168e-09,
+    "limits": [
+      "Frozen independent joint-risk feature and marginal reconstruction is reused.",
+      "Current-fit training residuals are in-sample staged residuals, not issued historical errors.",
+      "Global certificate values and stationarity are reconstructed; local optimizer messages are not independently reproduced.",
+      "Source hash authentication, historical-vintage limitations and statistical inference are separate checks."
+    ]
+  },
+  "score_certificate": {
+    "status": "VERIFIED",
+    "comparisons_verified": 2,
+    "endpoints_verified": 4,
+    "bootstrap_runs_verified": 12,
+    "hac_runs_verified": 4,
+    "inherited_comparisons_verified": 149,
+    "density_rows_verified": 7386,
+    "common_scored_origins": 2462
+  },
+  "output_hashes": {
+    "data/model_memory_study/joint_copula_wave27/features.parquet": "c064880974725ef1647d4e300f1b87a85ee8aaf306c8d702f0267e57bc16a683",
+    "data/model_memory_study/joint_copula_wave27/targets.parquet": "21cfdd9a10e50c073865747dfb5cd809033e5005629ef9a2cf595a993afaef19",
+    "data/model_memory_study/joint_copula_wave27/applications.parquet": "0ce97f4708e8c3f3a24b2223f04eb34d7a06802fe905acb4d06d633e3d883222",
+    "data/model_memory_study/joint_copula_wave27/panel.parquet": "c4caed2560d36180511efd28436fa344224031e44f039e55161af536d0de6347",
+    "data/model_memory_study/joint_copula_wave27/coverage.parquet": "bcc430b0235744f7b65dcab905bb16c2f59d98d2bc0222d643545c516b084c14",
+    "data/model_memory_study/joint_copula_wave27/schedules.parquet": "37d4d6c7cdc613501cc63d52c7ba2a828e936a1974daa995aac67cdffebf1232",
+    "data/model_memory_study/joint_copula_wave27/fits.json": "be070e131e96faa7939be052838beb16594825a1afe451c5deb01448fe1bae91"
+  },
+  "comparison_gates": [
+    {
+      "control": "gaussian_copula",
+      "phase_means": {
+        "development": -0.030568715957402973,
+        "evaluation": -0.031017081500978507
+      },
+      "support_and_all_effect_stability_gates": true,
+      "p_conservative": 2.5e-06,
+      "p_holm_wave": 5e-06,
+      "p_holm_cumulative": 0.0003775,
+      "comparison_gate_pass": true
+    },
+    {
+      "control": "independence",
+      "phase_means": {
+        "development": -0.6067968120341651,
+        "evaluation": -0.7469353249639794
+      },
+      "support_and_all_effect_stability_gates": true,
+      "p_conservative": 2.5e-06,
+      "p_holm_wave": 5e-06,
+      "p_holm_cumulative": 0.0003775,
+      "comparison_gate_pass": true
+    }
+  ],
+  "lead": [
+    "joint_copula"
+  ],
+  "evidence_class": "EXPLORATORY_REUSED_MARKET_HISTORY_CURRENT_VINTAGES",
+  "evidence_limitation": "Historical development and evaluation windows have been reused. Prior regression tests accessed the period beginning 2025-11-03; it is not untouched confirmation. Current vendor snapshots do not certify complete point-in-time price or implied-volatility vintages. Numerical inputs in this experiment end 2025-10-20. QQQ ETF and SPX price index are distinct instruments; exact synchronized auctions and historical publication latency are not certified.",
+  "limits": [
+    "The earlier independent numerical checker executed inside the registered run; this saved-artifact audit does not claim a third raw numerical reconstruction.",
+    "Private output payloads were hashed and Parquet footers read; neither forecast/marginal arrays nor fits JSON quantities were decoded in this audit.",
+    "All twelve bootstrap probabilities are at the finite-draw floor1/(399999+1)=0.0000025; this is not an exact tail probability or proof it is smaller.",
+    "The pass concerns the specified joint next-session density under identical modeled t8 marginals, not a new external signal, better standalone volatility, proven pure tail dependence or tradable profit.",
+    "Reused historical windows, current vendor vintages, previously accessed later outcomes and uncertified QQQ/SPX synchronization still require subsequently untouched confirmation.",
+    "No equivalence or exact market-coverage conclusion is inferred from the reported confidence intervals.",
+    "Root summary, chart and post-run publication audit are outside this saved terminal scope."
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "component_forecasts_checked": 38304,
+  "component_method": "Independent source/train/map reconstruction; all OLS refit, all convex Gamma stationarity checked, January Gamma fits independently refit with scipy trust-exact",
+  "contrasts_checked": 32,
+  "feature_rows": 6696,
+  "final_forecasts_checked": 54076,
+  "independent_feature_verification": "PASS",
+  "independent_inference_verification": "PASS",
+  "independent_scipy_gamma_refits": 100,
+  "inference_method": "Explicit circular bootstrap row indices for all draws; statsmodels Bartlett HAC and Holm across 32 contrasts",
+  "limitations": "Cached TiRex representations are hash-bound but checkpoint pretraining cleanliness is unknown. Parent AR1 calibration is not independently rerun. Historical evidence remains exploratory.",
+  "maximum_gamma_gradient": 9.974344482299724e-09,
+  "maximum_layer_prediction_error": 0.0,
+  "monthly_component_fits_checked": 1836,
+  "monthly_memory_maps_checked": 236,
+  "neighbor_records_checked": 629248,
+  "preserved_artifact_count": 97,
+  "protocol_sha256": "6527552f970c51b8713c2cfd9c5c547612509e13337bfe563c4aa9d82cbef450",
+  "retrieval_method": "All eligible OOS ratios, map fitting pools, direct-SVD PCA distances, stable nearest neighbors and ensemble weights independently reconstructed",
+  "status": "PASS",
+  "verified_verdicts": [
+    {
+      "candidate": "gamma",
+      "control": "baseline",
+      "horizon": 1,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "adaptive_ols",
+      "control": "baseline",
+      "horizon": 1,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "adaptive_gamma",
+      "control": "baseline",
+      "horizon": 1,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "ridge_gamma",
+      "control": "baseline",
+      "horizon": 1,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "spline_gamma",
+      "control": "baseline",
+      "horizon": 1,
+      "p_holm": 0.7632000000000001,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "global_calibration",
+      "control": "baseline",
+      "horizon": 1,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "observable_memory",
+      "control": "baseline",
+      "horizon": 1,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "latent_memory",
+      "control": "baseline",
+      "horizon": 1,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "equal_ensemble",
+      "control": "baseline",
+      "horizon": 1,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "dynamic_ensemble",
+      "control": "baseline",
+      "horizon": 1,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "adaptive_gamma",
+      "control": "gamma",
+      "horizon": 1,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "spline_gamma",
+      "control": "ridge_gamma",
+      "horizon": 1,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "observable_memory",
+      "control": "global_calibration",
+      "horizon": 1,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "latent_memory",
+      "control": "global_calibration",
+      "horizon": 1,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "latent_memory",
+      "control": "observable_memory",
+      "horizon": 1,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "dynamic_ensemble",
+      "control": "equal_ensemble",
+      "horizon": 1,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "gamma",
+      "control": "baseline",
+      "horizon": 5,
+      "p_holm": 0.032,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "adaptive_ols",
+      "control": "baseline",
+      "horizon": 5,
+      "p_holm": 0.168,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "adaptive_gamma",
+      "control": "baseline",
+      "horizon": 5,
+      "p_holm": 0.1998,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "ridge_gamma",
+      "control": "baseline",
+      "horizon": 5,
+      "p_holm": 0.0434,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "spline_gamma",
+      "control": "baseline",
+      "horizon": 5,
+      "p_holm": 0.3068,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "global_calibration",
+      "control": "baseline",
+      "horizon": 5,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "observable_memory",
+      "control": "baseline",
+      "horizon": 5,
+      "p_holm": 0.6649155466492738,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "latent_memory",
+      "control": "baseline",
+      "horizon": 5,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "equal_ensemble",
+      "control": "baseline",
+      "horizon": 5,
+      "p_holm": 0.06380000000000001,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "dynamic_ensemble",
+      "control": "baseline",
+      "horizon": 5,
+      "p_holm": 0.06,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "adaptive_gamma",
+      "control": "gamma",
+      "horizon": 5,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "spline_gamma",
+      "control": "ridge_gamma",
+      "horizon": 5,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "observable_memory",
+      "control": "global_calibration",
+      "horizon": 5,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "latent_memory",
+      "control": "global_calibration",
+      "horizon": 5,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "latent_memory",
+      "control": "observable_memory",
+      "horizon": 5,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "candidate": "dynamic_ensemble",
+      "control": "equal_ensemble",
+      "horizon": 5,
+      "p_holm": 1.0,
+      "verdict": "INCONCLUSIVE"
+    }
+  ],
+  "verifier_sha256": "372f396fe09a919e5957630dbb30cd94fbec733d708e41bfabd8628dba5a21da"
+}

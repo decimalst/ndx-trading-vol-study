@@ -1,0 +1,14 @@
+test_exact_old_failure_marker_rechecked_after_last_closure_hash_loop (tests.test_verify_event_cluster_replay.CompleteEntryContracts.test_exact_old_failure_marker_rechecked_after_last_closure_hash_loop) ... FAIL
+
+======================================================================
+FAIL: test_exact_old_failure_marker_rechecked_after_last_closure_hash_loop (tests.test_verify_event_cluster_replay.CompleteEntryContracts.test_exact_old_failure_marker_rechecked_after_last_closure_hash_loop)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_event_cluster_replay.py", line 518, in test_exact_old_failure_marker_rechecked_after_last_closure_hash_loop
+    with self.assertRaises((ValueError, AssertionError)):
+AssertionError: (<class 'ValueError'>, <class 'AssertionError'>) not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.027s
+
+FAILED (failures=1)

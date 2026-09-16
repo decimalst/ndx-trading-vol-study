@@ -1,0 +1,15 @@
+test_all_unscored_state_fields_remain_bound (tests.test_event_cluster_verification.VerificationTests.test_all_unscored_state_fields_remain_bound) ... ok
+test_coherent_finite_unscored_probability_tamper_needs_stage_replay (tests.test_event_cluster_verification.VerificationTests.test_coherent_finite_unscored_probability_tamper_needs_stage_replay) ... ok
+test_complete_pipeline_and_unscored_application_counts (tests.test_event_cluster_verification.VerificationTests.test_complete_pipeline_and_unscored_application_counts) ... ok
+test_full_memory_value_date_and_unknown_mask_before_independent_fits (tests.test_event_cluster_verification.VerificationTests.test_full_memory_value_date_and_unknown_mask_before_independent_fits) ... ok
+test_missing_original_application_or_fit_rejects (tests.test_event_cluster_verification.VerificationTests.test_missing_original_application_or_fit_rejects) ... ok
+test_new_producer_calculations_and_old_optimizer_never_called (tests.test_event_cluster_verification.VerificationTests.test_new_producer_calculations_and_old_optimizer_never_called) ... ok
+test_panel_controls_scores_and_cohort_cannot_be_replaced (tests.test_event_cluster_verification.VerificationTests.test_panel_controls_scores_and_cohort_cannot_be_replaced) ... ok
+test_saved_new_coefficients_and_stationarity_are_independent (tests.test_event_cluster_verification.VerificationTests.test_saved_new_coefficients_and_stationarity_are_independent) ... ok
+test_support_history_counts_and_old_geometry_are_exact (tests.test_event_cluster_verification.VerificationTests.test_support_history_counts_and_old_geometry_are_exact) ... ok
+test_training_and_application_metadata_cannot_be_changed (tests.test_event_cluster_verification.VerificationTests.test_training_and_application_metadata_cannot_be_changed) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 42.201s
+
+OK

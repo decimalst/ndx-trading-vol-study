@@ -1,0 +1,15 @@
+test_upstream_failure_created_during_scoring_blocks_publication (tests.test_issued_calibration_publication.PublicationTests.test_upstream_failure_created_during_scoring_blocks_publication) ... FAIL
+
+======================================================================
+FAIL: test_upstream_failure_created_during_scoring_blocks_publication (tests.test_issued_calibration_publication.PublicationTests.test_upstream_failure_created_during_scoring_blocks_publication)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_issued_calibration_publication.py", line 219, in test_upstream_failure_created_during_scoring_blocks_publication
+    with (
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.279s
+
+FAILED (failures=1)
+{"status": "SCORED_AWAITING_INDEPENDENT_VERIFICATION", "forecasts": 1, "monthly_fits": 0}

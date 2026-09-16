@@ -1,0 +1,14 @@
+test_failure_marker_created_during_last_rehash_blocks_return (tests.test_issued_calibration_admission.AdmissionTests.test_failure_marker_created_during_last_rehash_blocks_return) ... FAIL
+
+======================================================================
+FAIL: test_failure_marker_created_during_last_rehash_blocks_return (tests.test_issued_calibration_admission.AdmissionTests.test_failure_marker_created_during_last_rehash_blocks_return)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_issued_calibration_admission.py", line 429, in test_failure_marker_created_during_last_rehash_blocks_return
+    with (
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.030s
+
+FAILED (failures=1)

@@ -1,0 +1,8 @@
+{
+  "status": "COMPLETED",
+  "completed_utc": "2026-09-08T22:15:25.142638+00:00",
+  "metrics_sha256": "3d0325eb0ba493a436abd539dde41a9b9dcbc90b57c380e3494e6b7f99f76f24",
+  "trial_ledger_sha256": "cba4c90d04cd42224c8f1ad42bbe9276c6d93fac22afa80078898f58d724fc3f",
+  "leads": [],
+  "cumulative_hypotheses": 142
+}

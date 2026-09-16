@@ -1,0 +1,21 @@
+FF
+======================================================================
+FAIL: test_boolean_cannot_substitute_for_integer_or_float (tests.test_verify_range_alert.TypedProtocolContracts.test_boolean_cannot_substitute_for_integer_or_float) (path=('index', 'market_lag'))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_range_alert.py", line 462, in test_boolean_cannot_substitute_for_integer_or_float
+    with self.subTest(path=path),self.assertRaises(ValueError):v.validate_protocol(p)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_boolean_cannot_substitute_for_integer_or_float (tests.test_verify_range_alert.TypedProtocolContracts.test_boolean_cannot_substitute_for_integer_or_float) (path=('verification', 'baseline', 'factor'))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_range_alert.py", line 462, in test_boolean_cannot_substitute_for_integer_or_float
+    with self.subTest(path=path),self.assertRaises(ValueError):v.validate_protocol(p)
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=2)

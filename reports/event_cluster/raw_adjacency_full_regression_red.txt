@@ -1,0 +1,14 @@
+test_fitted_adjacency_is_constant_when_only_reference_changes (tests.test_event_cluster_features.ClusterSummary.test_fitted_adjacency_is_constant_when_only_reference_changes) ... FAIL
+
+======================================================================
+FAIL: test_fitted_adjacency_is_constant_when_only_reference_changes (tests.test_event_cluster_features.ClusterSummary.test_fitted_adjacency_is_constant_when_only_reference_changes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_event_cluster_features.py", line 60, in test_fitted_adjacency_is_constant_when_only_reference_changes
+    self.assertEqual(a[cf.MEMORY], 0.)
+AssertionError: -0.0045351473922902496 != 0.0
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)

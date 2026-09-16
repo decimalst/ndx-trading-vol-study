@@ -1,0 +1,15 @@
+test_fixed_two_comparison_wave_and_date_fences (tests.test_claims_release_protocol.ClaimsReleaseProtocolTests.test_fixed_two_comparison_wave_and_date_fences) ... ok
+test_no_grid_timing_or_gate_mutation (tests.test_claims_release_protocol.ClaimsReleaseProtocolTests.test_no_grid_timing_or_gate_mutation) ... ok
+test_complete_family_effect_support_and_shared_inference (tests.test_claims_release_score.ClaimsReleaseScoreTests.test_complete_family_effect_support_and_shared_inference) ... ok
+test_inheritance_preserves_every_existing_row_and_new_three (tests.test_claims_release_score.ClaimsReleaseScoreTests.test_inheritance_preserves_every_existing_row_and_new_three) ... ok
+test_one_improving_contrast_is_not_a_lead (tests.test_claims_release_score.ClaimsReleaseScoreTests.test_one_improving_contrast_is_not_a_lead) ... ok
+test_panel_corruptions_rejected_before_inference (tests.test_claims_release_score.ClaimsReleaseScoreTests.test_panel_corruptions_rejected_before_inference) ... ok
+test_phase_slice_release_and_offset_support_fail_whole_wave (tests.test_claims_release_score.ClaimsReleaseScoreTests.test_phase_slice_release_and_offset_support_fail_whole_wave) ... ok
+test_prior_comparisons_cannot_be_dropped_or_invalid (tests.test_claims_release_score.ClaimsReleaseScoreTests.test_prior_comparisons_cannot_be_dropped_or_invalid) ... ok
+test_registered_failures_keep_two_p_one_comparisons (tests.test_claims_release_score.ClaimsReleaseScoreTests.test_registered_failures_keep_two_p_one_comparisons) ... ok
+test_release_weighted_mean_is_mean_of_group_means (tests.test_claims_release_score.ClaimsReleaseScoreTests.test_release_weighted_mean_is_mean_of_group_means) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.092s
+
+OK

@@ -1,0 +1,119 @@
+EEEEEEEE
+======================================================================
+ERROR: test_complete_entry_ten_snapshots_protocol_source_and_pipeline_wiring (tests.test_verify_peak_age.CompleteEntryTests.test_complete_entry_ten_snapshots_protocol_source_and_pipeline_wiring)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 305, in test_complete_entry_ten_snapshots_protocol_source_and_pipeline_wiring
+    proof=self.run_entry()
+          ^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 301, in run_entry
+    with patch.object(v,'CONTRACT',self.protocol),patch.object(v,'verify_pipeline',side_effect=numerical),patch.object(v,'verify_metrics',side_effect=inference):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.verify_peak_age' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_peak_age.py'> does not have the attribute 'verify_pipeline'
+
+======================================================================
+ERROR: test_failure_guard_diagnostics_do_not_destroy_registered_ledger_bytes (tests.test_verify_peak_age.CompleteEntryTests.test_failure_guard_diagnostics_do_not_destroy_registered_ledger_bytes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 345, in test_failure_guard_diagnostics_do_not_destroy_registered_ledger_bytes
+    with patch.object(v,'verify',side_effect=ValueError('generated late audit failure')):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.verify_peak_age' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_peak_age.py'> does not have the attribute 'verify'
+
+======================================================================
+ERROR: test_incomplete_manifest_or_output_symlink_reject_before_solves (tests.test_verify_peak_age.CompleteEntryTests.test_incomplete_manifest_or_output_symlink_reject_before_solves)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 338, in test_incomplete_manifest_or_output_symlink_reject_before_solves
+    with patch.object(v,'CONTRACT',self.protocol),patch.object(v,'verify_pipeline') as solved:
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.verify_peak_age' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_peak_age.py'> does not have the attribute 'verify_pipeline'
+
+======================================================================
+ERROR: test_output_mutation_during_inference_rejects_publication (tests.test_verify_peak_age.CompleteEntryTests.test_output_mutation_during_inference_rejects_publication)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 316, in test_output_mutation_during_inference_rejects_publication
+    with self.assertRaises((ValueError,AssertionError)):self.run_entry(mutation)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 301, in run_entry
+    with patch.object(v,'CONTRACT',self.protocol),patch.object(v,'verify_pipeline',side_effect=numerical),patch.object(v,'verify_metrics',side_effect=inference):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.verify_peak_age' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_peak_age.py'> does not have the attribute 'verify_pipeline'
+
+======================================================================
+ERROR: test_protocol_or_preserved_file_mutation_after_solves_rejects (tests.test_verify_peak_age.CompleteEntryTests.test_protocol_or_preserved_file_mutation_after_solves_rejects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 333, in test_protocol_or_preserved_file_mutation_after_solves_rejects
+    self.run_entry(lambda:path.write_bytes(path.read_bytes()+b'\n# changed'))
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 301, in run_entry
+    with patch.object(v,'CONTRACT',self.protocol),patch.object(v,'verify_pipeline',side_effect=numerical),patch.object(v,'verify_metrics',side_effect=inference):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.verify_peak_age' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_peak_age.py'> does not have the attribute 'verify_pipeline'
+
+======================================================================
+ERROR: test_required_old_failure_removed_after_solves_rejects (tests.test_verify_peak_age.CompleteEntryTests.test_required_old_failure_removed_after_solves_rejects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 328, in test_required_old_failure_removed_after_solves_rejects
+    self.run_entry(lambda:(self.root/'reports/event_cluster/failure.json').unlink())
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 301, in run_entry
+    with patch.object(v,'CONTRACT',self.protocol),patch.object(v,'verify_pipeline',side_effect=numerical),patch.object(v,'verify_metrics',side_effect=inference):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.verify_peak_age' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_peak_age.py'> does not have the attribute 'verify_pipeline'
+
+======================================================================
+ERROR: test_upstream_source_or_new_failure_mutation_after_solves_rejects (tests.test_verify_peak_age.CompleteEntryTests.test_upstream_source_or_new_failure_mutation_after_solves_rejects) (name='reports/event_cluster_replay/failure.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 323, in test_upstream_source_or_new_failure_mutation_after_solves_rejects
+    with self.subTest(name=name),self.assertRaises((ValueError,AssertionError)):self.run_entry(mutation)
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 301, in run_entry
+    with patch.object(v,'CONTRACT',self.protocol),patch.object(v,'verify_pipeline',side_effect=numerical),patch.object(v,'verify_metrics',side_effect=inference):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.verify_peak_age' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_peak_age.py'> does not have the attribute 'verify_pipeline'
+
+======================================================================
+ERROR: test_upstream_source_or_new_failure_mutation_after_solves_rejects (tests.test_verify_peak_age.CompleteEntryTests.test_upstream_source_or_new_failure_mutation_after_solves_rejects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_peak_age.py", line 324, in test_upstream_source_or_new_failure_mutation_after_solves_rejects
+    (self.root/name).unlink()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py", line 1147, in unlink
+    os.unlink(self)
+FileNotFoundError: [Errno 2] No such file or directory: '/var/folders/jn/2wqppgv57cx3k54l_dqt9sl00000gn/T/tmpndcwux5x/reports/event_cluster_replay/failure.json'
+
+----------------------------------------------------------------------
+Ran 7 tests in 2.649s
+
+FAILED (errors=8)

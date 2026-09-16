@@ -1,0 +1,14 @@
+test_current_and_future_prices_cannot_change_earlier_output (tests.test_treasury_market_context.TreasuryMarketContextTests.test_current_and_future_prices_cannot_change_earlier_output) ... ok
+test_full_date_envelopes_checked_before_values (tests.test_treasury_market_context.TreasuryMarketContextTests.test_full_date_envelopes_checked_before_values) ... ok
+test_independent_delayed_return_and_rolling_oracle (tests.test_treasury_market_context.TreasuryMarketContextTests.test_independent_delayed_return_and_rolling_oracle) ... ok
+test_input_preservation_and_date_units (tests.test_treasury_market_context.TreasuryMarketContextTests.test_input_preservation_and_date_units) ... ok
+test_missing_session_never_compresses_history (tests.test_treasury_market_context.TreasuryMarketContextTests.test_missing_session_never_compresses_history) ... ok
+test_other_cross_asset_values_are_opaque (tests.test_treasury_market_context.TreasuryMarketContextTests.test_other_cross_asset_values_are_opaque) ... ok
+test_positive_price_and_native_numeric_validation (tests.test_treasury_market_context.TreasuryMarketContextTests.test_positive_price_and_native_numeric_validation) ... ok
+test_source_floor_prevents_pre_2010_history (tests.test_treasury_market_context.TreasuryMarketContextTests.test_source_floor_prevents_pre_2010_history) ... ok
+test_weekday_reference_and_zero_returns (tests.test_treasury_market_context.TreasuryMarketContextTests.test_weekday_reference_and_zero_returns) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.070s
+
+OK

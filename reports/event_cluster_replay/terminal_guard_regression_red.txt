@@ -1,0 +1,62 @@
+.............FFFFFF..
+======================================================================
+FAIL: test_required_old_failure_trio_rechecked_after_general_hash_loop (tests.test_event_cluster_replay_publication.TransactionContracts.test_required_old_failure_trio_rechecked_after_general_hash_loop) (name='failure.json', action='mutate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_event_cluster_replay_publication.py", line 587, in test_required_old_failure_trio_rechecked_after_general_hash_loop
+    with patch.object(runner,'report',side_effect=staging), patch.object(runner.inference,'digest',side_effect=late_digest), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_required_old_failure_trio_rechecked_after_general_hash_loop (tests.test_event_cluster_replay_publication.TransactionContracts.test_required_old_failure_trio_rechecked_after_general_hash_loop) (name='failure.json', action='remove')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_event_cluster_replay_publication.py", line 587, in test_required_old_failure_trio_rechecked_after_general_hash_loop
+    with patch.object(runner,'report',side_effect=staging), patch.object(runner.inference,'digest',side_effect=late_digest), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_required_old_failure_trio_rechecked_after_general_hash_loop (tests.test_event_cluster_replay_publication.TransactionContracts.test_required_old_failure_trio_rechecked_after_general_hash_loop) (name='metrics.json', action='mutate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_event_cluster_replay_publication.py", line 587, in test_required_old_failure_trio_rechecked_after_general_hash_loop
+    with patch.object(runner,'report',side_effect=staging), patch.object(runner.inference,'digest',side_effect=late_digest), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_required_old_failure_trio_rechecked_after_general_hash_loop (tests.test_event_cluster_replay_publication.TransactionContracts.test_required_old_failure_trio_rechecked_after_general_hash_loop) (name='metrics.json', action='remove')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_event_cluster_replay_publication.py", line 587, in test_required_old_failure_trio_rechecked_after_general_hash_loop
+    with patch.object(runner,'report',side_effect=staging), patch.object(runner.inference,'digest',side_effect=late_digest), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_required_old_failure_trio_rechecked_after_general_hash_loop (tests.test_event_cluster_replay_publication.TransactionContracts.test_required_old_failure_trio_rechecked_after_general_hash_loop) (name='verification.json', action='mutate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_event_cluster_replay_publication.py", line 587, in test_required_old_failure_trio_rechecked_after_general_hash_loop
+    with patch.object(runner,'report',side_effect=staging), patch.object(runner.inference,'digest',side_effect=late_digest), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_required_old_failure_trio_rechecked_after_general_hash_loop (tests.test_event_cluster_replay_publication.TransactionContracts.test_required_old_failure_trio_rechecked_after_general_hash_loop) (name='verification.json', action='remove')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_event_cluster_replay_publication.py", line 587, in test_required_old_failure_trio_rechecked_after_general_hash_loop
+    with patch.object(runner,'report',side_effect=staging), patch.object(runner.inference,'digest',side_effect=late_digest), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.885s
+
+FAILED (failures=6)
+{"status": "REPLAY_SCORED_AWAITING_INDEPENDENT_PUBLICATION_VERIFICATION", "retained_forecasts": 4, "retained_monthly_schedules": 1, "new_producer_fits": 0, "newly_generated_forecasts": 0}
+{"status": "REPLAY_SCORED_AWAITING_INDEPENDENT_PUBLICATION_VERIFICATION", "retained_forecasts": 4, "retained_monthly_schedules": 1, "new_producer_fits": 0, "newly_generated_forecasts": 0}
+{"status": "REPLAY_SCORED_AWAITING_INDEPENDENT_PUBLICATION_VERIFICATION", "retained_forecasts": 4, "retained_monthly_schedules": 1, "new_producer_fits": 0, "newly_generated_forecasts": 0}
+{"status": "REPLAY_SCORED_AWAITING_INDEPENDENT_PUBLICATION_VERIFICATION", "retained_forecasts": 4, "retained_monthly_schedules": 1, "new_producer_fits": 0, "newly_generated_forecasts": 0}
+{"status": "REPLAY_SCORED_AWAITING_INDEPENDENT_PUBLICATION_VERIFICATION", "retained_forecasts": 4, "retained_monthly_schedules": 1, "new_producer_fits": 0, "newly_generated_forecasts": 0}
+{"status": "REPLAY_SCORED_AWAITING_INDEPENDENT_PUBLICATION_VERIFICATION", "retained_forecasts": 4, "retained_monthly_schedules": 1, "new_producer_fits": 0, "newly_generated_forecasts": 0}
+{"status": "REPLAY_SCORED_AWAITING_INDEPENDENT_PUBLICATION_VERIFICATION", "retained_forecasts": 4, "retained_monthly_schedules": 1, "new_producer_fits": 0, "newly_generated_forecasts": 0}
+{"status": "REPLAY_SCORED_AWAITING_INDEPENDENT_PUBLICATION_VERIFICATION", "retained_forecasts": 4, "retained_monthly_schedules": 1, "new_producer_fits": 0, "newly_generated_forecasts": 0}
+{"status": "REPLAY_SCORED_AWAITING_INDEPENDENT_PUBLICATION_VERIFICATION", "retained_forecasts": 4, "retained_monthly_schedules": 1, "new_producer_fits": 0, "newly_generated_forecasts": 0}

@@ -1,0 +1,40 @@
+COMMAND ['.venv/bin/python', '-m', 'unittest', 'tests.test_joint_copula_inputs', 'tests.test_joint_copula_models', 'tests.test_joint_copula_pipeline', '-v']
+test_all_date_metadata_precedes_any_numeric_decode (tests.test_joint_copula_inputs.JointCopulaInputsTests.test_all_date_metadata_precedes_any_numeric_decode) ... ok
+test_bounded_numerical_decode_keeps_sources_and_dates (tests.test_joint_copula_inputs.JointCopulaInputsTests.test_bounded_numerical_decode_keeps_sources_and_dates) ... ok
+test_every_hash_precedes_any_metadata_or_numeric_decode (tests.test_joint_copula_inputs.JointCopulaInputsTests.test_every_hash_precedes_any_metadata_or_numeric_decode) ... ok
+test_numeric_decode_uses_original_checked_buffers_after_file_change (tests.test_joint_copula_inputs.JointCopulaInputsTests.test_numeric_decode_uses_original_checked_buffers_after_file_change) ... ok
+test_wrong_inventory_and_unbounded_source_end_rejected (tests.test_joint_copula_inputs.JointCopulaInputsTests.test_wrong_inventory_and_unbounded_source_end_rejected) ... ok
+test_exact_shared_marginals_and_current_fit_t8_coordinates (tests.test_joint_copula_models.JointCopulaModelsTests.test_exact_shared_marginals_and_current_fit_t8_coordinates) ... ok
+test_individual_signed_zero_return_is_valid_and_input_unchanged (tests.test_joint_copula_models.JointCopulaModelsTests.test_individual_signed_zero_return_is_valid_and_input_unchanged) ... ok
+test_order_types_zero_scale_and_all_zero_risk_rejected (tests.test_joint_copula_models.JointCopulaModelsTests.test_order_types_zero_scale_and_all_zero_risk_rejected) ... ok
+test_unit_changes_and_application_values_do_not_change_dependence_fit (tests.test_joint_copula_models.JointCopulaModelsTests.test_unit_changes_and_application_values_do_not_change_dependence_fit) ... ok
+test_feature_construction_and_alignment_failures_retain_available_outputs (tests.test_joint_copula_pipeline.JointCopulaPipelineTests.test_feature_construction_and_alignment_failures_retain_available_outputs) ... ok
+test_final_coverage_or_panel_failure_retains_all_issued_months (tests.test_joint_copula_pipeline.JointCopulaPipelineTests.test_final_coverage_or_panel_failure_retains_all_issued_months) ... ok
+test_fit_failure_and_insufficient_rows_preserve_attempt_diagnostics (tests.test_joint_copula_pipeline.JointCopulaPipelineTests.test_fit_failure_and_insufficient_rows_preserve_attempt_diagnostics) ... ok
+test_full_reference_monthly_maturity_and_all_unscored_applications (tests.test_joint_copula_pipeline.JointCopulaPipelineTests.test_full_reference_monthly_maturity_and_all_unscored_applications) ... ok
+test_future_source_dates_fail_before_measurement_arithmetic (tests.test_joint_copula_pipeline.JointCopulaPipelineTests.test_future_source_dates_fail_before_measurement_arithmetic) ... ok
+test_future_sources_do_not_change_earlier_issued_forecasts (tests.test_joint_copula_pipeline.JointCopulaPipelineTests.test_future_sources_do_not_change_earlier_issued_forecasts) ... ok
+test_measurement_gate_sees_unusable_row_before_features_or_fit (tests.test_joint_copula_pipeline.JointCopulaPipelineTests.test_measurement_gate_sees_unusable_row_before_features_or_fit) ... ok
+test_missing_source_predecessor_and_source_immutability (tests.test_joint_copula_pipeline.JointCopulaPipelineTests.test_missing_source_predecessor_and_source_immutability) ... ok
+test_unknown_query_label_does_not_move_monthly_fit (tests.test_joint_copula_pipeline.JointCopulaPipelineTests.test_unknown_query_label_does_not_move_monthly_fit) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.907s
+
+OK
+
+EXIT_CODE=0
+COMMAND ['.venv/bin/ruff', 'check', 'src/joint_copula_inputs.py', 'src/joint_copula_models.py', 'src/joint_copula_pipeline.py', 'tests/test_joint_copula_inputs.py', 'tests/test_joint_copula_models.py', 'tests/test_joint_copula_pipeline.py']
+All checks passed!
+
+EXIT_CODE=0
+COMMAND ['.venv/bin/ruff', 'format', '--check', 'src/joint_copula_inputs.py', 'src/joint_copula_models.py', 'src/joint_copula_pipeline.py', 'tests/test_joint_copula_inputs.py', 'tests/test_joint_copula_models.py', 'tests/test_joint_copula_pipeline.py']
+6 files already formatted
+
+EXIT_CODE=0
+1d6ef58f203682dae6dbdf1f55ac9a50f34308c05bcd647d63dab385bb689cec  src/joint_copula_inputs.py
+4ab1eb02fe7703cf8639f062e9fb976f7ee22ddd4cc13451566c0e4660558c86  src/joint_copula_models.py
+0ea290b36f15adfb5cc59147ae7132848358ff84795f3c6008a2e089bc8eecac  src/joint_copula_pipeline.py
+d3bf6f3ef583527cf224e7af051af1a8af1f281070c147443a88591a02b9e308  tests/test_joint_copula_inputs.py
+a9adbe3c3b79a8e2f5fad232be4d76a18c23e90e0359334a695d6e92e3a68652  tests/test_joint_copula_models.py
+bfb1cba23fb987dfb0e3182d5fea08a0bf62ba1cfe5fd3b1b4c53a1ce29ad41c  tests/test_joint_copula_pipeline.py

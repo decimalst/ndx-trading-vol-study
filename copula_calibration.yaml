@@ -1,0 +1,123 @@
+study_id: copula_calibration_wave28
+specified_on: '2026-09-09'
+question: How does causal marginal recalibration change the Gaussian-versus-t8 joint-density contrast when both dependence models use the same issued-forecast archive?
+evidence_class: EXPLORATORY_POST_RESULT_MECHANISM_DIAGNOSTIC_REUSED_HISTORY
+evidence_limitation: All historical windows have been reused. Current-vintage inputs and imperfect marginal forecasts do not identify the true dependence law. This diagnostic cannot certify untouched confirmation, point-in-time vendor vintages, improved live volatility forecasts or trading profit.
+literature_review: reports/copula_calibration/LITERATURE_REVIEW.md
+literature_interpretation: Fissler-Hoga restricted-class true-copula guarantees require correct common marginals. This seven-scalar-comparison diagnostic is not their lexicographic sequential attribution test. Report summed marginal and copula loss components descriptively; do not treat them as extra tests. Rank and asymmetric dependence extensions require separately specified forecasting densities and chronology.
+source:
+  ceiling: '2025-10-20'
+  numerical_exclusion_start: '2025-11-03'
+  original_study: joint_copula_wave27
+  inputs:
+    - data/model_memory_study/joint_copula_wave27/applications.parquet
+    - data/model_memory_study/joint_copula_wave27/targets.parquet
+    - data/model_memory_study/joint_copula_wave27/coverage.parquet
+    - data/model_memory_study/joint_copula_wave27/features.parquet
+    - data/model_memory_study/joint_copula_wave27/panel.parquet
+    - data/model_memory_study/joint_copula_wave27/fits.json
+    - reports/joint_copula/predictive/terminal.json
+    - reports/joint_copula/predictive/metrics.json
+  features_access: Decode date index only to retain the full original SPX calendar; do not decode feature numerics.
+  panel_access: Descriptive bridge to original saved contrast on the matched subset only; never a substitute calibration archive or an additional tested contrast.
+  admission: Authenticate completed wave27, exact saved inputs, original fit bytes and certificates, inherited transitive source closure, and old report hash map before market numerical access. No source substitution, external data, new vintage, repaired measurement or pre-2016 issuance.
+forecast:
+  origin_start: '2016-01-04'
+  origin_end: '2025-10-17'
+  source_end: '2025-10-20'
+  development: ['2016-01-04', '2019-12-31']
+  evaluation: ['2020-01-01', '2025-10-20']
+  stability: [['2020-01-01', '2022-12-31'], ['2023-01-01', '2025-10-20']]
+  horizon: 1
+  target: Original next actual SPX-session QQQ/SPX raw intraday return pair, with original target_end and available_date; missing remains unknown and zero returns remain valid.
+  arms: [orig_gaussian, orig_t8, cal_gaussian, cal_t8]
+  marginals: Preserve original issued mu_qqq,mu_spx,h_qqq,h_spx exactly. These are base-density parameters; h is not asserted to equal the recalibrated variance.
+  archive: One authenticated shared-marginal row per original application origin joined to original targets. Validate exact agreement across the original three arms; include genuine issued phase-unscored outcomes once mature.
+  minimum_archive: 252
+  archive_window: Expanding from first original issued forecast; complete finite pairs only after their recorded availability date.
+  schedule: First original monthly fit whose preceding-session cutoff has at least252 mature issued pairs, then every subsequent original monthly fit. Earlier whole months are warm-up; no within-month startup or opportunistic refit.
+  clock: Archive origin strictly before fit origin AND target_end and available_date at or before the preceding full SPX calendar session. Apply fixed monthly parameters to original issued origins in that month without their labels.
+  common_rows: Both assets, both marginal systems and both dependence families use exactly the same ordered eligible archive pairs and exactly the same scored origins.
+  baseline_change: Refit original-marginal dependence on genuine archived issued errors. Original wave27 dependence used current-fit in-sample residuals; its saved rho is not used in the four experimental cells.
+calibration:
+  family: Per-asset affine calibration of Gaussianized original t8 PITs
+  original_standardization: z_j=(y_j-mu_j)/sqrt(0.75*h_j)
+  original_normal_score: w_j=Phi_inverse(T8_CDF(z_j)), evaluated through stable log tails without clipping
+  location: a_j=mean(w_j) on common mature issued pairs
+  scale: b_j=sqrt(mean((w_j-a_j)^2)) using population convention on the same pairs
+  scale_minimum: 0.000000000001
+  scale_domain: b_j strictly greater than1e-12 and finite; no clipping, shrinkage, cap, fallback or dropped asset
+  calibrated_normal_score: v_j=(w_j-a_j)/b_j
+  cdf: Fcal_j(y)=Phi(v_j)
+  marginal_log_density: log_fcal_j=log_f0_j+log_phi(v_j)-log_phi(w_j)-log(b_j)
+  normalization: Retain the exact density Jacobian for every cross-marginal comparison. Identity a0,b1 reproduces the original density.
+  scope: Corrects normal-score location and scale only; does not guarantee removal of skewness or other shape misspecification. A normalized density need not have a finite second moment.
+dependence:
+  degrees_of_freedom: 8
+  domain: [-0.995, 0.995]
+  original_coordinates: Original Gaussian copula uses w; original t8 copula uses z.
+  calibrated_coordinates: Calibrated Gaussian copula uses v; calibrated t8 copula uses T8_inverse(Phi(v)) via stable unclipped tails.
+  fitting: Fit each of the four scalar correlations by its own copula likelihood on the same complete mature archive pairs under that marginal system.
+  solver: Reuse frozen wave27 Gaussian all-stationary-roots/endpoints solver and t8 likelihood/gradient/global interval certificate with the same bounds, tolerances, limits and tie rule. Inverse-coordinate arithmetic must be separately tested.
+  verification: Independently reconstruct calibration parameters, coordinate transforms, each dependence fit and its certificate, original-marginal identity, row marginal densities and full joint densities.
+support:
+  phase_daily: 505
+  slice_daily: 252
+  offset_daily: 63
+  rule: Identical four-cell masks; each literal phase, both fixed later slices and each global modulo-five group meet the original support floors. Target ends must remain within their scored literal phase.
+  warmup: Keep earlier full months on the original calendar with mask0; do not compress or renumber positions.
+inference:
+  loss: Negative full normalized joint log density in nats per pair; individual contrasts use negative normalized marginal log density in nats per asset. Negative density losses are valid.
+  blocks: [21, 63, 126]
+  hac_lags: 126
+  bootstrap_draws: 399999
+  seed: 20260910
+  phase_codes: {development: 0, evaluation: 1}
+  domain: Full original SPX calendar within each literal phase, retaining warm-up, missing, unissued and unavailable endpoint positions. Offset is original global origin position modulo5.
+  bootstrap: Frozen circular masked ratio-of-sums inference; identical draws for all seven contrasts, base seed plus phase_code*10000, core adds block length. Zero-support replicate fatal; never redraw or discard.
+  hac: Bartlett HAC126 on mask*(difference-observed_mean)/mean(mask); invalid variance fatal.
+  conservative_p: Maximum two-sided p across both phases, three block lengths and HAC126.
+  uncertainty: Report phase-specific means and dependence-aware intervals, fixed later slices, global modulo-five groups and annual descriptive means.
+  detection: Label adjusted_difference_detected only when both phase means have the same strict direction and both wave and cumulative Holm adjustments pass. This is a detected score difference, not automatic signal promotion.
+  diagnostics: Per phase and asset report original/calibrated held-out marginal losses, PIT fractions below.025 and above.975, and normal-score population mean, variance and standardized third moment. These diagnostics are descriptive and add no tested hypotheses.
+comparisons:
+  wave: 28
+  inherited: 151
+  new: 7
+  cumulative: 158
+  ordered_contrasts:
+    - original_gap
+    - calibrated_gap
+    - interaction
+    - gaussian_calibration
+    - t8_calibration
+    - qqq_calibration
+    - spx_calibration
+  definitions:
+    original_gap: L_orig_t8-L_orig_gaussian
+    calibrated_gap: L_cal_t8-L_cal_gaussian
+    interaction: (L_cal_t8-L_cal_gaussian)-(L_orig_t8-L_orig_gaussian)
+    gaussian_calibration: L_cal_gaussian-L_orig_gaussian
+    t8_calibration: L_cal_t8-L_orig_t8
+    qqq_calibration: L_cal_qqq-L_orig_qqq
+    spx_calibration: L_cal_spx-L_orig_spx
+  interaction_sign: Positive means attenuation of the t8-minus-Gaussian advantage; negative means strengthening. Interpret alongside held-out marginal scores and PIT descriptions, never assume calibration improved.
+  wave_alpha: 0.00006157635467980296
+  cumulative_alpha: 0.05
+  multiplicity: Holm7 at.05/(28*29) and Holm158 at.05, inheriting all151 identities, probabilities and failures from completed wave27. Preserve old reports and their originally published probabilities unchanged.
+  promotion: None; this is a mechanistic diagnostic. No interaction, isolated p value or apparent calibration change qualifies a new predictive signal automatically.
+  failures: Any source, support, fit, numerical, certificate, verification or preservation failure makes the entire registered seven-comparison family unevaluable with p1. No substituted model or unrecorded retry.
+execution:
+  freeze: Before market numerical access retain exact protocol, new executable source/test inventory, selected test receipts, old source-closure bytes/hashes, old report hash map and all151 inherited records; then issue durable seven-comparison registration.
+  tests: Prewritten targeted new synthetic tests plus relevant existing copula density, independent forecast/score verifier and full-calendar inference tests. The unrelated complete repository suite is not required.
+  required_contracts: Identity calibration, finite normalized densities and exact Jacobian, tail roundtrip without clipping, zero-scale rejection, proper marginal/dependence coordinates, original monthly whole-month warm-up, preceding-session maturity, future-label invariance, shared pairs/masks, seven contrast signs and failed-family p1 retention.
+outputs:
+  data: data/model_memory_study/copula_calibration_wave28
+  reports: reports/copula_calibration/predictive
+  privacy: Keep numerical forecast archives and inherited private source material local and private.
+restrictions:
+  - Old frozen protocols, forecasts, fit records, certificates, results and unrelated files remain unchanged.
+  - No external data, pre-2016 OOS history generation, new model selection or tuning after results.
+  - No omitted density normalization or PIT clipping and no claim that base h is recalibrated variance.
+  - No rerun of the critic simulation and no simulated contrast used as a target, ceiling or pass threshold.
+  - No untouched-confirmation, unique-dependence-mechanism, live-volatility or trading-profit claim.

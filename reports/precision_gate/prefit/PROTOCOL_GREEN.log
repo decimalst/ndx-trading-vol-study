@@ -1,0 +1,8 @@
+test_altered_rule_or_raw_protocol_bytes_rejected (tests.test_precision_gate_search.PrecisionGateProtocolTests.test_altered_rule_or_raw_protocol_bytes_rejected) ... ok
+test_fixed_design_and_projection (tests.test_precision_gate_search.PrecisionGateProtocolTests.test_fixed_design_and_projection) ... ok
+test_mandatory_market_inventory_excludes_treasury_quantities (tests.test_precision_gate_search.PrecisionGateProtocolTests.test_mandatory_market_inventory_excludes_treasury_quantities) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.298s
+
+OK

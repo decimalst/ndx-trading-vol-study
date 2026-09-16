@@ -1,0 +1,39 @@
+{
+  "status": "VERIFIED",
+  "protocol_sha256": "33cb665ba62f114a38b35b7c3ba77838378aedf075c11753806afe2adf51dbfb",
+  "verifier_sha256": "f4384ffda3b292a51bc5cab716bd4bc19b2d0701ea6df4c583dcffce090c1a53",
+  "methods": {
+    "hf": {
+      "forecasts_verified": 17730,
+      "monthly_fits_verified": 282,
+      "common_origins": 1970,
+      "features_reconstructed": 17
+    },
+    "index": {
+      "forecasts_verified": 12310,
+      "monthly_fits_verified": 118,
+      "common_origins": 2462,
+      "features_reconstructed": 22
+    }
+  },
+  "inference": {
+    "new_hypotheses_verified": 12,
+    "inherited_hypotheses_verified": 54,
+    "phase_comparisons_verified": 24,
+    "bootstrap_runs_verified": 72,
+    "leads": []
+  },
+  "execution": {
+    "execution_scenarios_verified": 36,
+    "two_legs_charged_each_held_day": true
+  },
+  "ledger_events_verified": {
+    "inherited": 54,
+    "registered": 12,
+    "evaluated": 12
+  },
+  "limitations": [
+    "Reused historical data remains exploratory.",
+    "Cumulative correction covers the 66 enumerated conversation contrasts, not every older unlogged search."
+  ]
+}

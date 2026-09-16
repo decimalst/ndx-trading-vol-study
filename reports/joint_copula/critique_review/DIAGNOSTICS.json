@@ -1,0 +1,139 @@
+{
+  "status": "VERIFIED_DESCRIPTIVE_RECONSTRUCTION",
+  "scope": "Post-result critique audit; original trial and verdict unchanged; no additional registered hypothesis.",
+  "panel_sha256": "c4caed2560d36180511efd28436fa344224031e44f039e55161af536d0de6347",
+  "metrics_sha256": "d1de728c8fb6909a4ce8ecd6edb055d8b3652693550de140dfca3ff688593442",
+  "pooled": {
+    "n": 2462,
+    "nominal_variance": 1.3333333333333333,
+    "assets": [
+      {
+        "mean": -0.013307076621184032,
+        "variance_ddof0": 1.4879634043469094,
+        "second_moment": 1.4881404826351115,
+        "lower_tail_count": 100,
+        "upper_tail_count": 47,
+        "lower_tail_rate": 0.04061738424045491,
+        "upper_tail_rate": 0.019090170593013808
+      },
+      {
+        "mean": -0.02203358791181085,
+        "variance_ddof0": 1.3540779589149625,
+        "second_moment": 1.3545634379112301,
+        "lower_tail_count": 83,
+        "upper_tail_count": 25,
+        "lower_tail_rate": 0.033712428919577576,
+        "upper_tail_rate": 0.010154346060113728
+      }
+    ],
+    "squared_coordinate_correlation": 0.7614133843221086,
+    "mean_gain": 0.03083405657356521,
+    "central": {
+      "n": 625,
+      "fraction_of_days": 0.2538586515028432,
+      "gain_sum": 32.651910845426464,
+      "share_of_total_gain": 0.4301202489622392
+    },
+    "extreme": {
+      "n": 27,
+      "fraction_of_days": 0.010966693744922826,
+      "gain_sum": 7.824258332534005,
+      "share_of_total_gain": 0.10306814684953688
+    },
+    "gain_trimmed_one_percent_each_end": 0.02977824138210891,
+    "trimmed_count_each_end": 24,
+    "interpretation": "Post-result descriptions; no new significance test or mechanism identification."
+  },
+  "phases": {
+    "development": {
+      "n": 1005,
+      "nominal_variance": 1.3333333333333333,
+      "assets": [
+        {
+          "mean": -0.020532863767708937,
+          "variance_ddof0": 1.4969278853650887,
+          "second_moment": 1.497349483859592,
+          "lower_tail_count": 44,
+          "upper_tail_count": 23,
+          "lower_tail_rate": 0.04378109452736319,
+          "upper_tail_rate": 0.022885572139303482
+        },
+        {
+          "mean": -0.03920595888083653,
+          "variance_ddof0": 1.3468702937344996,
+          "second_moment": 1.3484074009462657,
+          "lower_tail_count": 35,
+          "upper_tail_count": 13,
+          "lower_tail_rate": 0.03482587064676617,
+          "upper_tail_rate": 0.012935323383084577
+        }
+      ],
+      "squared_coordinate_correlation": 0.6922559438870859,
+      "mean_gain": 0.03056871595740374,
+      "central": {
+        "n": 287,
+        "fraction_of_days": 0.2855721393034826,
+        "gain_sum": 15.151081458778107,
+        "share_of_total_gain": 0.49317422966228597
+      },
+      "extreme": {
+        "n": 13,
+        "fraction_of_days": 0.012935323383084577,
+        "gain_sum": 4.226749592279852,
+        "share_of_total_gain": 0.13758252041739788
+      },
+      "gain_trimmed_one_percent_each_end": 0.028181560072940065,
+      "trimmed_count_each_end": 10,
+      "interpretation": "Post-result descriptions; no new significance test or mechanism identification."
+    },
+    "evaluation": {
+      "n": 1457,
+      "nominal_variance": 1.3333333333333333,
+      "assets": [
+        {
+          "mean": -0.008322920078797268,
+          "variance_ddof0": 1.4817190865639938,
+          "second_moment": 1.4817883575626318,
+          "lower_tail_count": 56,
+          "upper_tail_count": 24,
+          "lower_tail_rate": 0.038435140700068635,
+          "upper_tail_rate": 0.016472203157172273
+        },
+        {
+          "mean": -0.010188541361453394,
+          "variance_ddof0": 1.3587059027439727,
+          "second_moment": 1.358809709119047,
+          "lower_tail_count": 48,
+          "upper_tail_count": 12,
+          "lower_tail_rate": 0.032944406314344546,
+          "upper_tail_rate": 0.008236101578586136
+        }
+      ],
+      "squared_coordinate_correlation": 0.8332490347683076,
+      "mean_gain": 0.031017081500979274,
+      "central": {
+        "n": 338,
+        "fraction_of_days": 0.23198352779684284,
+        "gain_sum": 17.50082938664836,
+        "share_of_total_gain": 0.38725599347945966
+      },
+      "extreme": {
+        "n": 14,
+        "fraction_of_days": 0.009608785175017159,
+        "gain_sum": 3.5975087402541535,
+        "share_of_total_gain": 0.07960518844444146
+      },
+      "gain_trimmed_one_percent_each_end": 0.03090080326681156,
+      "trimmed_count_each_end": 14,
+      "interpretation": "Post-result descriptions; no new significance test or mechanism identification."
+    }
+  },
+  "critique_thresholds": {
+    "central_both_abs_less_than": 0.53,
+    "extreme_any_abs_greater_than": 4.0,
+    "tail_probability": 0.025
+  },
+  "simulation_reproduced": false,
+  "simulation_limitation": "The supplied critique contains no simulation program, seeds, sample sizes or replication definition for its reported sd.",
+  "source_array_or_fit_or_bootstrap_rerun": false
+}

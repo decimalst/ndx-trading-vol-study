@@ -1,0 +1,24 @@
+test_exact_shared_marginals_and_independence_placeholder_on_unscored_origins (tests.test_verify_joint_copula_forecasts.IssuedForecastVerificationTests.test_exact_shared_marginals_and_independence_placeholder_on_unscored_origins) ... 
+  test_exact_shared_marginals_and_independence_placeholder_on_unscored_origins (tests.test_verify_joint_copula_forecasts.IssuedForecastVerificationTests.test_exact_shared_marginals_and_independence_placeholder_on_unscored_origins) (name='h_qqq') ... FAIL
+  test_exact_shared_marginals_and_independence_placeholder_on_unscored_origins (tests.test_verify_joint_copula_forecasts.IssuedForecastVerificationTests.test_exact_shared_marginals_and_independence_placeholder_on_unscored_origins) (name='rho') ... FAIL
+
+======================================================================
+FAIL: test_exact_shared_marginals_and_independence_placeholder_on_unscored_origins (tests.test_verify_joint_copula_forecasts.IssuedForecastVerificationTests.test_exact_shared_marginals_and_independence_placeholder_on_unscored_origins) (name='h_qqq')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_joint_copula_forecasts.py", line 306, in test_exact_shared_marginals_and_independence_placeholder_on_unscored_origins
+    with self.subTest(name=name), self.assertRaises((ValueError, AssertionError)):
+AssertionError: (<class 'ValueError'>, <class 'AssertionError'>) not raised
+
+======================================================================
+FAIL: test_exact_shared_marginals_and_independence_placeholder_on_unscored_origins (tests.test_verify_joint_copula_forecasts.IssuedForecastVerificationTests.test_exact_shared_marginals_and_independence_placeholder_on_unscored_origins) (name='rho')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_joint_copula_forecasts.py", line 306, in test_exact_shared_marginals_and_independence_placeholder_on_unscored_origins
+    with self.subTest(name=name), self.assertRaises((ValueError, AssertionError)):
+AssertionError: (<class 'ValueError'>, <class 'AssertionError'>) not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.255s
+
+FAILED (failures=2)

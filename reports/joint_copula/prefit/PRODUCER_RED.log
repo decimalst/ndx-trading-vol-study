@@ -1,0 +1,49 @@
+test_joint_copula_models (unittest.loader._FailedTest.test_joint_copula_models) ... ERROR
+test_joint_copula_pipeline (unittest.loader._FailedTest.test_joint_copula_pipeline) ... ERROR
+test_joint_copula_inputs (unittest.loader._FailedTest.test_joint_copula_inputs) ... ERROR
+
+======================================================================
+ERROR: test_joint_copula_models (unittest.loader._FailedTest.test_joint_copula_models)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_joint_copula_models
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_joint_copula_models.py", line 9, in <module>
+    from src import joint_copula_models as model
+ImportError: cannot import name 'joint_copula_models' from 'src' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/__init__.py)
+
+
+======================================================================
+ERROR: test_joint_copula_pipeline (unittest.loader._FailedTest.test_joint_copula_pipeline)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_joint_copula_pipeline
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_joint_copula_pipeline.py", line 9, in <module>
+    from src import joint_copula_pipeline as pipeline
+ImportError: cannot import name 'joint_copula_pipeline' from 'src' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/__init__.py)
+
+
+======================================================================
+ERROR: test_joint_copula_inputs (unittest.loader._FailedTest.test_joint_copula_inputs)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_joint_copula_inputs
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_joint_copula_inputs.py", line 11, in <module>
+    from src import joint_copula_inputs as inputs
+ImportError: cannot import name 'joint_copula_inputs' from 'src' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/__init__.py)
+
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+FAILED (errors=3)
+
+exit_code=1

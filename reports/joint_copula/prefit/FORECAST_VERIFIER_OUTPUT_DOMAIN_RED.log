@@ -1,0 +1,33 @@
+test_saved_forecast_absolute_tolerance_is_tight_in_variance_units (tests.test_verify_joint_copula_forecasts.IndependentCopulaMathTests.test_saved_forecast_absolute_tolerance_is_tight_in_variance_units) ... FAIL
+test_saved_forecasts_retain_strict_domains_even_within_roundoff_tolerance (tests.test_verify_joint_copula_forecasts.IndependentCopulaMathTests.test_saved_forecasts_retain_strict_domains_even_within_roundoff_tolerance) ... 
+  test_saved_forecasts_retain_strict_domains_even_within_roundoff_tolerance (tests.test_verify_joint_copula_forecasts.IndependentCopulaMathTests.test_saved_forecasts_retain_strict_domains_even_within_roundoff_tolerance) (name='h_qqq') ... FAIL
+  test_saved_forecasts_retain_strict_domains_even_within_roundoff_tolerance (tests.test_verify_joint_copula_forecasts.IndependentCopulaMathTests.test_saved_forecasts_retain_strict_domains_even_within_roundoff_tolerance) (name='rho') ... FAIL
+
+======================================================================
+FAIL: test_saved_forecast_absolute_tolerance_is_tight_in_variance_units (tests.test_verify_joint_copula_forecasts.IndependentCopulaMathTests.test_saved_forecast_absolute_tolerance_is_tight_in_variance_units)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_joint_copula_forecasts.py", line 18, in test_saved_forecast_absolute_tolerance_is_tight_in_variance_units
+    with self.assertRaises(AssertionError):
+AssertionError: AssertionError not raised
+
+======================================================================
+FAIL: test_saved_forecasts_retain_strict_domains_even_within_roundoff_tolerance (tests.test_verify_joint_copula_forecasts.IndependentCopulaMathTests.test_saved_forecasts_retain_strict_domains_even_within_roundoff_tolerance) (name='h_qqq')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_joint_copula_forecasts.py", line 24, in test_saved_forecasts_retain_strict_domains_even_within_roundoff_tolerance
+    with self.subTest(name=name), self.assertRaises((ValueError, AssertionError)):
+AssertionError: (<class 'ValueError'>, <class 'AssertionError'>) not raised
+
+======================================================================
+FAIL: test_saved_forecasts_retain_strict_domains_even_within_roundoff_tolerance (tests.test_verify_joint_copula_forecasts.IndependentCopulaMathTests.test_saved_forecasts_retain_strict_domains_even_within_roundoff_tolerance) (name='rho')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_joint_copula_forecasts.py", line 24, in test_saved_forecasts_retain_strict_domains_even_within_roundoff_tolerance
+    with self.subTest(name=name), self.assertRaises((ValueError, AssertionError)):
+AssertionError: (<class 'ValueError'>, <class 'AssertionError'>) not raised
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.002s
+
+FAILED (failures=3)

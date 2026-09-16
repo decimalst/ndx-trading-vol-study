@@ -1,0 +1,24 @@
+{
+  "status": "COMPLETED_VERIFIED_MECHANISM_DIAGNOSTIC",
+  "completed_utc": "2026-09-09T16:27:09.369727+00:00",
+  "metrics_sha256": "d1c2e51baa5b53b2d869ac6a09c8412aaca1baa6d8eab273fc184e03c78e79b4",
+  "output_hashes": {
+    "data/model_memory_study/copula_calibration_wave28/code_and_input_snapshot.zip": "2ff948b1bc1d7883b2fa2218d22336d57cfa0fd683997306165206864c3dad05",
+    "data/model_memory_study/copula_calibration_wave28/applications.parquet": "5fbb6bb3e9c152b002bdaed381c0f734f46fa042d3e7e9a74a3528f2c91c362f",
+    "data/model_memory_study/copula_calibration_wave28/panel.parquet": "812572feb6cd4698cc9e8900b5df22e11c39791289b3f5789d4779e113b03275",
+    "data/model_memory_study/copula_calibration_wave28/coverage.parquet": "e941a3e9c457487f92ccdc083152c5442310f378ea24449f0f6dfb88eea4c2eb",
+    "data/model_memory_study/copula_calibration_wave28/archive.parquet": "f1173cc0cf9849689fac465694fd9b27cceb200d335df21fc47a1ccbf29f70ca",
+    "data/model_memory_study/copula_calibration_wave28/fits.json": "ac7365b320f8e2379d8142109afa675d336e1f9d894438e1ab72863fb5a0a130"
+  },
+  "report_artifact_hashes": {
+    "reports/copula_calibration/predictive/started.json": "2b4ecc883b68a88c8d13f4850d1f9d123051845e356b1c0d1afee12daacdfd1c",
+    "reports/copula_calibration/predictive/forecast_verification.json": "c8e2567bcc438567818b3f26a5790feaf3aaa0eec8e20e11947beeac6bdf001b",
+    "reports/copula_calibration/predictive/score_verification.json": "f2b9ee6617b6407d0f186435b917c4d5aebceb74eb9ef691bccfd48eb9dbcfd9",
+    "reports/copula_calibration/predictive/metrics.json": "d1c2e51baa5b53b2d869ac6a09c8412aaca1baa6d8eab273fc184e03c78e79b4"
+  },
+  "freeze_sha256": "d10dd138bd4db433256783f79ef5161a4cf5a05f3632a7dce757224aef3c47ff",
+  "registration_sha256": "e1c0af5de87b0d99c7c409f580d6af5a19c2487a34380dbbc8ff956a2e41c2dc",
+  "verification_scope": "Independent forecast and seven-contrast score reconstruction; descriptive_original_bridge is producer-computed context outside the score certificate.",
+  "leads": [],
+  "cumulative_hypotheses": 158
+}

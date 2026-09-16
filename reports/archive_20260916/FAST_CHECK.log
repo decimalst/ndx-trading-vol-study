@@ -1,0 +1,14 @@
+.venv/bin/python -m unittest tests.test_methodology
+......................................
+----------------------------------------------------------------------
+Ran 38 tests in 14.610s
+
+OK
+.venv/bin/python -m tests.test_smoke
+QLIKE  persistence=0.0664 ewma=0.4982 har=0.0665 har_x=0.0618
+CRPS   har=0.2096
+90% interval coverage (har) = 0.875  p_uc=0.057
+DM har vs persistence: dm=0.14 p=0.8854 n=560
+30c MZ beta=0.817 R2=0.525 | encompassing c_model=-0.216 p=0.6049
+chronos frame construction ok
+SMOKE TEST PASSED

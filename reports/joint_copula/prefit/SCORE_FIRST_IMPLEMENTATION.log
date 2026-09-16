@@ -1,0 +1,19 @@
+COMMAND: .venv/bin/python -m unittest tests.test_joint_copula_score -v
+test_all_support_checks_precede_sampling (tests.test_joint_copula_score.JointCopulaScoreTests.test_all_support_checks_precede_sampling) ... ok
+test_common_marginal_cancellation_and_unit_transport (tests.test_joint_copula_score.JointCopulaScoreTests.test_common_marginal_cancellation_and_unit_transport) ... ok
+test_finite_extreme_standardized_tails_and_invalid_values (tests.test_joint_copula_score.JointCopulaScoreTests.test_finite_extreme_standardized_tails_and_invalid_values) ... ok
+test_fixed_protocol_and_exact_probability_effect_boundaries (tests.test_joint_copula_score.JointCopulaScoreTests.test_fixed_protocol_and_exact_probability_effect_boundaries) ... ok
+test_full_joint_density_matches_distribution_oracles (tests.test_joint_copula_score.JointCopulaScoreTests.test_full_joint_density_matches_distribution_oracles) ... ok
+test_inherited_precision_rows_and_failure_preservation (tests.test_joint_copula_score.JointCopulaScoreTests.test_inherited_precision_rows_and_failure_preservation) ... ok
+test_last_control_worst_method_veto (tests.test_joint_copula_score.JointCopulaScoreTests.test_last_control_worst_method_veto) ... ok
+test_negative_full_density_loss_is_valid (tests.test_joint_copula_score.JointCopulaScoreTests.test_negative_full_density_loss_is_valid) ... ok
+test_pairing_identity_and_conservative_lag_guards (tests.test_joint_copula_score.JointCopulaScoreTests.test_pairing_identity_and_conservative_lag_guards) ... ok
+test_phase_calendar_gaps_final_origin_and_shared_rng (tests.test_joint_copula_score.JointCopulaScoreTests.test_phase_calendar_gaps_final_origin_and_shared_rng) ... ok
+test_three_models_two_comparisons_151_family_and_qualification (tests.test_joint_copula_score.JointCopulaScoreTests.test_three_models_two_comparisons_151_family_and_qualification) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.387s
+
+OK
+
+exit_code=0

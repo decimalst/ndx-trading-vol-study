@@ -1,0 +1,212 @@
+----------------------------------------------------------------------
+Ran 122 tests in 14.677s
+
+OK
+component h1: 2013-02-01, 521 training rows
+component h1: 2014-02-03, 772 training rows
+component h1: 2015-02-02, 1023 training rows
+component h1: 2016-02-01, 1274 training rows
+component h1: 2017-02-01, 1527 training rows
+component h1: 2018-02-01, 1779 training rows
+component h1: 2019-02-01, 2030 training rows
+component h1: 2020-02-03, 2282 training rows
+component h1: 2021-02-01, 2533 training rows
+component h1: 2022-02-01, 2786 training rows
+component h1: 2023-02-01, 3037 training rows
+component h1: 2024-02-01, 3288 training rows
+component h1: 2025-02-03, 3539 training rows
+component h5: 2013-02-01, 517 training rows
+component h5: 2014-02-03, 768 training rows
+component h5: 2015-02-02, 1019 training rows
+component h5: 2016-02-01, 1270 training rows
+component h5: 2017-02-01, 1523 training rows
+component h5: 2018-02-01, 1775 training rows
+component h5: 2019-02-01, 2026 training rows
+component h5: 2020-02-03, 2278 training rows
+component h5: 2021-02-01, 2529 training rows
+component h5: 2022-02-01, 2782 training rows
+component h5: 2023-02-01, 3033 training rows
+component h5: 2024-02-01, 3284 training rows
+component h5: 2025-02-03, 3535 training rows
+memory h1: 2016-01, pool=712
+memory h1: 2017-01, pool=964
+memory h1: 2018-01, pool=1215
+memory h1: 2019-01, pool=1238
+memory h1: 2020-01, pool=1238
+memory h1: 2021-01, pool=1238
+memory h1: 2022-01, pool=1238
+memory h1: 2023-01, pool=1238
+memory h1: 2024-01, pool=1238
+memory h1: 2025-01, pool=1238
+memory h5: 2016-01, pool=708
+memory h5: 2017-01, pool=960
+memory h5: 2018-01, pool=1211
+memory h5: 2019-01, pool=1234
+memory h5: 2020-01, pool=1234
+memory h5: 2021-01, pool=1234
+memory h5: 2022-01, pool=1234
+memory h5: 2023-01, pool=1234
+memory h5: 2024-01, pool=1234
+memory h5: 2025-01, pool=1234
+[
+  {
+    "candidate": "gamma",
+    "control": "baseline",
+    "horizon": 1,
+    "improvement_pct": -0.8772145207266407,
+    "p_holm": 1.0,
+    "verdict": "INCONCLUSIVE"
+  },
+  {
+    "candidate": "adaptive_ols",
+    "control": "baseline",
+    "horizon": 1,
+    "improvement_pct": -1.3909149326207653,
+    "p_holm": 1.0,
+    "verdict": "INCONCLUSIVE"
+  },
+  {
+    "candidate": "adaptive_gamma",
+    "control": "baseline",
+    "horizon": 1,
+    "improvement_pct": -1.520645712205015,
+    "p_holm": 1.0,
+    "verdict": "INCONCLUSIVE"
+  },
+  {
+    "candidate": "ridge_gamma",
+    "control": "baseline",
+    "horizon": 1,
+    "improvement_pct": -0.8665274864959448,
+    "p_holm": 1.0,
+    "verdict": "INCONCLUSIVE"
+  },
+  {
+    "candidate": "spline_gamma",
+    "control": "baseline",
+    "horizon": 1,
+    "improvement_pct": -3.357177777955571,
+    "p_holm": 0.7632000000000001,
+    "verdict": "INCONCLUSIVE"
+  },
+  {
+    "candidate": "global_calibration",
+    "control": "baseline",
+    "horizon": 1,
+    "improvement_pct": -0.08743514748039337,
+    "p_holm": 1.0,
+    "verdict": "INCONCLUSIVE"
+  },
+  {
+    "candidate": "observable_memory",
+    "control": "baseline",
+    "horizon": 1,
+    "improvement_pct": 0.036594295292307434,
+    "p_holm": 1.0,
+    "verdict": "INCONCLUSIVE"
+  },
+  {
+    "candidate": "latent_memory",
+    "control": "baseline",
+    "horizon": 1,
+    "improvement_pct": -0.09085008709910528,
+    "p_holm": 1.0,
+    "verdict": "INCONCLUSIVE"
+  },
+  {
+    "candidate": "equal_ensemble",
+    "control": "baseline",
+    "horizon": 1,
+    "improvement_pct": 0.028919696259374298,
+    "p_holm": 1.0,
+    "verdict": "INCONCLUSIVE"
+  },
+  {
+    "candidate": "dynamic_ensemble",
+    "control": "baseline",
+    "horizon": 1,
+    "improvement_pct": 0.02354289963853612,
+    "p_holm": 1.0,
+    "verdict": "INCONCLUSIVE"
+  },
+  {
+    "candidate": "gamma",
+    "control": "baseline",
+    "horizon": 5,
+    "improvement_pct": -13.458487516272402,
+    "p_holm": 0.032,
+    "verdict": "INCONCLUSIVE"
+  },
+  {
+    "candidate": "adaptive_ols",
+    "control": "baseline",
+    "horizon": 5,
+    "improvement_pct": -9.366984756941791,
+    "p_holm": 0.168,
+    "verdict": "INCONCLUSIVE"
+  },
+  {
+    "candidate": "adaptive_gamma",
+    "control": "baseline",
+    "horizon": 5,
+    "improvement_pct": -22.046560640367208,
+    "p_holm": 0.1998,
+    "verdict": "INCONCLUSIVE"
+  },
+  {
+    "candidate": "ridge_gamma",
+    "control": "baseline",
+    "horizon": 5,
+    "improvement_pct": -10.932248955103471,
+    "p_holm": 0.0434,
+    "verdict": "INCONCLUSIVE"
+  },
+  {
+    "candidate": "spline_gamma",
+    "control": "baseline",
+    "horizon": 5,
+    "improvement_pct": -23.88984876291391,
+    "p_holm": 0.3068,
+    "verdict": "INCONCLUSIVE"
+  },
+  {
+    "candidate": "global_calibration",
+    "control": "baseline",
+    "horizon": 5,
+    "improvement_pct": -1.6999491145406587,
+    "p_holm": 1.0,
+    "verdict": "INCONCLUSIVE"
+  },
+  {
+    "candidate": "observable_memory",
+    "control": "baseline",
+    "horizon": 5,
+    "improvement_pct": -2.6780929044608315,
+    "p_holm": 0.6649155466492738,
+    "verdict": "INCONCLUSIVE"
+  },
+  {
+    "candidate": "latent_memory",
+    "control": "baseline",
+    "horizon": 5,
+    "improvement_pct": -2.10466709614467,
+    "p_holm": 1.0,
+    "verdict": "INCONCLUSIVE"
+  },
+  {
+    "candidate": "equal_ensemble",
+    "control": "baseline",
+    "horizon": 5,
+    "improvement_pct": -9.240229357111305,
+    "p_holm": 0.06380000000000001,
+    "verdict": "INCONCLUSIVE"
+  },
+  {
+    "candidate": "dynamic_ensemble",
+    "control": "baseline",
+    "horizon": 5,
+    "improvement_pct": -8.493709517199314,
+    "p_holm": 0.06,
+    "verdict": "INCONCLUSIVE"
+  }
+]

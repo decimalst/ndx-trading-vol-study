@@ -1,0 +1,19 @@
+test_civil_quarter_models (unittest.loader._FailedTest.test_civil_quarter_models) ... ERROR
+
+======================================================================
+ERROR: test_civil_quarter_models (unittest.loader._FailedTest.test_civil_quarter_models)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_civil_quarter_models
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_civil_quarter_models.py", line 12, in <module>
+    from src import civil_quarter_models as model
+ImportError: cannot import name 'civil_quarter_models' from 'src' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/__init__.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

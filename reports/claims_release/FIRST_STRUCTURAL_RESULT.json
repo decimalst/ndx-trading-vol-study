@@ -1,0 +1,27 @@
+{
+  "status": "STRUCTURALLY_VERIFIED_NOT_RELEASE_RECONCILED",
+  "completed_utc": "2026-09-08T20:55:25.906488+00:00",
+  "attempt_sha256": "14c6e490e8fda59d3528b98c2089c37b5209cccd0a81201f1cf12daf786a8236",
+  "output_sha256": "90832acafb2bec11766d871c004b0979ec1de6ad4c5cf3d9c815c40b3bc7d9ec",
+  "record_count": 852,
+  "statuses": {
+    "observed": 852
+  },
+  "first_reference_week": "2009-05-30",
+  "last_reference_week": "2025-09-20",
+  "first_alfred_date": "2009-06-04",
+  "last_alfred_date": "2025-09-25",
+  "excluded_initial_snapshot_count": 0,
+  "missing_reference_weeks": [
+    "2025-09-27",
+    "2025-10-04",
+    "2025-10-11",
+    "2025-10-18"
+  ],
+  "new_predictive_hypotheses": 0,
+  "limitations": [
+    "Export structure and date fences are checked; original DOL releases have not been reconciled.",
+    "ALFRED real-time start may be source-dated and is not an independently certified ingestion timestamp.",
+    "No market cohort, numerical predictive feature, forecasting fit or source-ready decision is produced."
+  ]
+}

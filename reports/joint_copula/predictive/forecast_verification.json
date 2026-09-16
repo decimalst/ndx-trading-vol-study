@@ -1,0 +1,17 @@
+{
+  "status": "VERIFIED",
+  "calendar_rows": 4226,
+  "coverage_origins": 2463,
+  "application_forecasts_verified": 7389,
+  "forecasts_verified": 7386,
+  "monthly_fits": 118,
+  "marginal_models_verified": 472,
+  "dependence_fits_verified": 236,
+  "largest_independent_global_gap": 9.974728820694168e-09,
+  "limits": [
+    "Frozen independent joint-risk feature and marginal reconstruction is reused.",
+    "Current-fit training residuals are in-sample staged residuals, not issued historical errors.",
+    "Global certificate values and stationarity are reconstructed; local optimizer messages are not independently reproduced.",
+    "Source hash authentication, historical-vintage limitations and statistical inference are separate checks."
+  ]
+}

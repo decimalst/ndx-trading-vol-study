@@ -1,0 +1,79 @@
+{
+  "status": "VERIFIED",
+  "protocol_sha256": "0d7184c2d966f28d6ab1602ee6ff6bce4de54019ed0d601688ed7281011366ee",
+  "verifier_sha256": "18916219840f3a2b01cfaf9b1ada77e7f3bd83219912e70ae4bf5c5e10aadd48",
+  "raw_feature_rows_verified": 4226,
+  "raw_feature_columns_verified": 19,
+  "shared_moment_columns_verified": 22,
+  "event_support": {
+    "feature_complete_applications": 2459,
+    "common_scored_origins": 2458,
+    "phases": [
+      {
+        "name": "development",
+        "n": 1002,
+        "events": 82,
+        "nonevents": 920,
+        "event_rate": 0.08183632734530938,
+        "slices": []
+      },
+      {
+        "name": "evaluation",
+        "n": 1456,
+        "events": 146,
+        "nonevents": 1310,
+        "event_rate": 0.10027472527472528,
+        "slices": [
+          {
+            "start": "2020-01-02",
+            "end": "2022-12-31",
+            "n": 756,
+            "events": 83,
+            "nonevents": 673,
+            "event_rate": 0.10978835978835978
+          },
+          {
+            "start": "2023-01-01",
+            "end": "2025-10-17",
+            "n": 700,
+            "events": 63,
+            "nonevents": 637,
+            "event_rate": 0.09
+          }
+        ]
+      }
+    ]
+  },
+  "forecast_reconstruction": {
+    "forecasts_verified": 7374,
+    "common_scored_origins": 2458,
+    "feature_complete_applications": 2459,
+    "monthly_fits_verified": 118,
+    "shape_optimizations_verified": 236,
+    "models_verified": 3,
+    "shared_variance_kkt_max": 1.7273113678858802e-09,
+    "independent_variance_kkt_max": 7.933357503049632e-09,
+    "shape_numerical_projected_kkt_max": 1.3193458211308763e-08,
+    "minimum_training_events": 156,
+    "minimum_training_nonevents": 1097
+  },
+  "inference": {
+    "new_hypotheses_verified": 3,
+    "cumulative_hypotheses_verified": 106,
+    "phase_comparisons_verified": 6,
+    "bootstrap_runs_verified": 18,
+    "bootstrap_draws_per_run": 99999,
+    "calibration_bins_verified": 60,
+    "leads": []
+  },
+  "ledger_events_verified": {
+    "inherited": 103,
+    "registered": 3,
+    "evaluated": 3
+  },
+  "limitations": [
+    "Equal fitted moments isolate this parametric increment but do not eliminate location/scale or tail-thickness misspecification.",
+    "One-day physical return events differ from option-implied30day SKEW construction.",
+    "Historical reuse, archival revisions and back-calculated VIX9D remain exploratory limitations."
+  ]
+}

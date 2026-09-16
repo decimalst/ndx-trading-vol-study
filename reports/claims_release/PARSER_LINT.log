@@ -1,0 +1,28 @@
+I001 [*] Import block is un-sorted or un-formatted
+  --> src/claims_release_source.py:3:1
+   |
+ 1 |   """Parse a bounded ALFRED first-release export, without claiming DOL reconciliation."""
+ 2 |
+ 3 | / import csv
+ 4 | | from datetime import date, datetime, timedelta
+ 5 | | import hashlib
+ 6 | | import io
+ 7 | | import json
+ 8 | | import re
+ 9 | | import stat
+10 | | import zipfile
+   | |______________^
+help: Organize imports
+   |
+3  | import csv
+   - from datetime import date, datetime, timedelta
+4  | import hashlib
+--------------------------------------------------------------------------------
+9  | import zipfile
+   -
+10 + from datetime import date, datetime, timedelta
+11 |
+   |
+
+Found 1 error.
+[*] 1 fixable with the `--fix` option.

@@ -1,0 +1,53 @@
+test_age_inside_nuisance_span_can_retune_ridge (tests.test_peak_age_verification.IndependentPrimitives.test_age_inside_nuisance_span_can_retune_ridge) ... ok
+test_high_precision_log_ratio_extremes_equal_and_nearby (tests.test_peak_age_verification.IndependentPrimitives.test_high_precision_log_ratio_extremes_equal_and_nearby) ... ok
+test_log_ratio_rejects_invalid_observed_values (tests.test_peak_age_verification.IndependentPrimitives.test_log_ratio_rejects_invalid_observed_values) ... ok
+test_moving_peak_changes_age_with_same_current_controls (tests.test_peak_age_verification.IndependentPrimitives.test_moving_peak_changes_age_with_same_current_controls) ... ok
+test_peak_latest_exact_tie_and_endpoints (tests.test_peak_age_verification.IndependentPrimitives.test_peak_latest_exact_tie_and_endpoints) ... ok
+test_peak_rejects_missing_wrong_length_and_invalid (tests.test_peak_age_verification.IndependentPrimitives.test_peak_rejects_missing_wrong_length_and_invalid) ... ok
+test_ridge_augmented_solution_and_saved_mean_intercept (tests.test_peak_age_verification.IndependentPrimitives.test_ridge_augmented_solution_and_saved_mean_intercept) ... ok
+test_ridge_strict_scale_and_target_alignment (tests.test_peak_age_verification.IndependentPrimitives.test_ridge_strict_scale_and_target_alignment) ... ok
+test_scalar_augmented_solution_is_sequential_fixed_scale (tests.test_peak_age_verification.IndependentPrimitives.test_scalar_augmented_solution_is_sequential_fixed_scale) ... ok
+test_scalar_rejects_bad_domains_and_shapes (tests.test_peak_age_verification.IndependentPrimitives.test_scalar_rejects_bad_domains_and_shapes) ... ok
+test_scalar_zero_branches_copy_query_bits (tests.test_peak_age_verification.IndependentPrimitives.test_scalar_zero_branches_copy_query_bits) ... ok
+test_strict_calendar_window_target_and_feature_lag (tests.test_peak_age_verification.IndependentPrimitives.test_strict_calendar_window_target_and_feature_lag) ... ok
+test_feature_or_target_coherent_tamper_rejected (tests.test_peak_age_verification.ProducerChallengeContracts.test_feature_or_target_coherent_tamper_rejected) ... ERROR
+test_generated_producer_features_match_independent_oracle_all_units (tests.test_peak_age_verification.ProducerChallengeContracts.test_generated_producer_features_match_independent_oracle_all_units) ... ERROR
+test_model_saved_coefficients_match_augmented_independent_solves (tests.test_peak_age_verification.ProducerChallengeContracts.test_model_saved_coefficients_match_augmented_independent_solves) ... ERROR
+test_saved_model_audit_prediction_settings_or_schema_tamper_rejected (tests.test_peak_age_verification.ProducerChallengeContracts.test_saved_model_audit_prediction_settings_or_schema_tamper_rejected) ... ERROR
+
+======================================================================
+ERROR: test_feature_or_target_coherent_tamper_rejected (tests.test_peak_age_verification.ProducerChallengeContracts.test_feature_or_target_coherent_tamper_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_verification.py", line 188, in test_feature_or_target_coherent_tamper_rejected
+    from src import peak_age_features as producer
+ImportError: cannot import name 'peak_age_features' from 'src' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/__init__.py)
+
+======================================================================
+ERROR: test_generated_producer_features_match_independent_oracle_all_units (tests.test_peak_age_verification.ProducerChallengeContracts.test_generated_producer_features_match_independent_oracle_all_units)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_verification.py", line 177, in test_generated_producer_features_match_independent_oracle_all_units
+    from src import peak_age_features as producer
+ImportError: cannot import name 'peak_age_features' from 'src' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/__init__.py)
+
+======================================================================
+ERROR: test_model_saved_coefficients_match_augmented_independent_solves (tests.test_peak_age_verification.ProducerChallengeContracts.test_model_saved_coefficients_match_augmented_independent_solves)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_verification.py", line 205, in test_model_saved_coefficients_match_augmented_independent_solves
+    from src import peak_age_models as producer
+ImportError: cannot import name 'peak_age_models' from 'src' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/__init__.py)
+
+======================================================================
+ERROR: test_saved_model_audit_prediction_settings_or_schema_tamper_rejected (tests.test_peak_age_verification.ProducerChallengeContracts.test_saved_model_audit_prediction_settings_or_schema_tamper_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_verification.py", line 218, in test_saved_model_audit_prediction_settings_or_schema_tamper_rejected
+    from src import peak_age_models as producer
+ImportError: cannot import name 'peak_age_models' from 'src' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/__init__.py)
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.659s
+
+FAILED (errors=4)

@@ -1,0 +1,18 @@
+.....E
+======================================================================
+ERROR: test_new_failure_retains127family_and_preserves_failed_predecessors (tests.test_verify_profiled_quarter.PublicationContracts.test_new_failure_retains127family_and_preserves_failed_predecessors)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_profiled_quarter.py", line 154, in test_new_failure_retains127family_and_preserves_failed_predecessors
+    with patch.object(verify, "verify", side_effect=AssertionError("injected")), self.assertRaises(AssertionError):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1443, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1416, in get_original
+    raise AttributeError(
+AttributeError: <module 'src.verify_profiled_quarter' from '/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_profiled_quarter.py'> does not have the attribute 'verify'
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.068s
+
+FAILED (errors=1)

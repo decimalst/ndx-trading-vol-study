@@ -1,0 +1,7551 @@
+{
+  "status": "VERIFIED_QUALIFIED_SAVED_PUBLICATION",
+  "completed_utc": "2026-09-09T04:40:36.208343+00:00",
+  "auditor": "independent_new_study_tests",
+  "scope": "Saved terminal, verification, support, metrics, journal and selected-test evidence; byte preservation and deterministic interpretation only. Concurrent new summary and figure are excluded.",
+  "terminal_sha256": "5db462b7bef69003b0b08aab7b970a4293f6ca4db4233489e4d364956f1f3cda",
+  "freeze_sha256": "99cca9121cfd6a691d99243845518315871071ecd3c9566fcdb965a11597c195",
+  "audited_input_hashes": {
+    "reports/treasury_dealer/predictive/metrics.json": "05e363aeaa1fbe2d7a67099d8a12471590099f72aa99615bd35cc1222288daa4",
+    "reports/treasury_dealer/predictive/terminal.json": "5db462b7bef69003b0b08aab7b970a4293f6ca4db4233489e4d364956f1f3cda",
+    "reports/treasury_dealer/predictive/verification.json": "b34f323c4b88a7e2ad65e5b1977e405816705f770357678082d8d7ef698988f8",
+    "reports/treasury_dealer/predictive/support.json": "3cfdb5592397af6a3c632f15a089d2e3ace18653f411cf1ce00cfc2c7e137c01",
+    "reports/treasury_dealer/predictive/freeze_record.json": "99cca9121cfd6a691d99243845518315871071ecd3c9566fcdb965a11597c195",
+    "reports/treasury_dealer/predictive/TEST_GATE_RESULT.json": "b8022e5290dbee4c90c970f77488f73e6635473749787232c8caaffd3b27cda1",
+    "reports/treasury_dealer/predictive/TEST_SELECTION.json": "9bf2a1cb13c3fa8b03800b94c739f5b54d0d4ed069c96596016ac4ed53cad780",
+    "reports/treasury_dealer/predictive/trial_ledger.jsonl": "a3691e195943f484c6de48a2970e6f6fdf007ff9e7aaccf5de995546fab6e005",
+    "reports/treasury_dealer/predictive/FULL_PRECHECK.json": "cf12f8d4e1491f0e8304a9f3aa73d4ccaa86aab2d2168e1e92616e0c6e4b39fc",
+    "reports/treasury_dealer/predictive/FULL_PRECHECK.log": "968d6f6ea73a82af57dabdf7ebf19393a186d7725ed798f84f5e151e6a966e89",
+    "reports/treasury_dealer/predictive/manifest.json": "1844a6d6268ef86065c7b1e28ec96369218aeea134d0a4b8cbde1d5da834b6a6",
+    "reports/treasury_dealer/predictive/input_support_verification.json": "689f790808b09f6d6d470d6dbce728a18503e20bd69d5c2ddeaaac0d963c7de0",
+    "reports/treasury_dealer/predictive/forecast_verification.json": "3156e055090d0b9b4c66dd05b6edc26f927299b998cedf60acc56d3f94060847",
+    "reports/treasury_dealer/predictive/score_verification.json": "dc044fe1f96e0aaf73920533db16e13e3a03f1cf03fb9854aefec4f52828d549",
+    "reports/commodity_implied/predictive/metrics.json": "02762e0403d5f09e8601ac66c324ddb78e2bacb401958cef6f40531476a5543a",
+    "treasury_dealer.yaml": "194fd2ef49cfa8db5542f5e672383b5e2d4ec8f8c724b2af8559d51319aef6a8",
+    "reports/treasury_dealer/predictive_prefit/HISTORICAL_TEST_ACCESS_CORRECTION.md": "325915e178d0ebc58ac05ced3d281a8c8ec840ed86fd9fec348e5ae0969ab007"
+  },
+  "hash_maps": [
+    {
+      "name": "freeze_record.code",
+      "entries": 484,
+      "unique_paths": 484,
+      "map_sha256": "0bee1cd9923f40250fd7e5417cf72ee873e0b4eca3f7bd314127b4e23c9e65d3",
+      "mismatches": []
+    },
+    {
+      "name": "freeze_record.inputs",
+      "entries": 29875,
+      "unique_paths": 29875,
+      "map_sha256": "7dafcf7602f6e77c0003c8fdd94da4c92585546c6262bd1b4041373e4224c056",
+      "mismatches": []
+    },
+    {
+      "name": "freeze_record.preserved",
+      "entries": 1452,
+      "unique_paths": 1452,
+      "map_sha256": "4b3c762e71f4d4d4ead03e23678687e51dcfcca2482211dbd67add1c7e121890",
+      "mismatches": []
+    },
+    {
+      "name": "freeze_record.prefit",
+      "entries": 4,
+      "unique_paths": 4,
+      "map_sha256": "03361f1c98f4bf315bc81f736c30843ccafa1a4c3d2c5b57f7dceaf5f2e7dc57",
+      "mismatches": []
+    },
+    {
+      "name": "freeze_record.execution.market_pins",
+      "entries": 4,
+      "unique_paths": 4,
+      "map_sha256": "f01ec040fa82a1d09c19e79cbaeccf1984e93b71d230c64b760e32b45da8bd96",
+      "mismatches": []
+    },
+    {
+      "name": "terminal.output_hashes",
+      "entries": 8,
+      "unique_paths": 8,
+      "map_sha256": "db243752c9fd9fcf8afbfafca489cc5b19126c11415b0a4814e24b51a199917b",
+      "mismatches": []
+    },
+    {
+      "name": "terminal.report_artifact_hashes",
+      "entries": 13,
+      "unique_paths": 13,
+      "map_sha256": "29ffb8de1acd50abb58defffcc8ccac7a4f2a7056eada23843819a8245e5007e",
+      "mismatches": []
+    },
+    {
+      "name": "verification.outputs",
+      "entries": 8,
+      "unique_paths": 8,
+      "map_sha256": "db243752c9fd9fcf8afbfafca489cc5b19126c11415b0a4814e24b51a199917b",
+      "mismatches": []
+    }
+  ],
+  "total_map_entries": 31848,
+  "unique_pinned_paths": 29957,
+  "final_hash_mismatches": [],
+  "checks_passed": 1716,
+  "checks_total": 1716,
+  "discrepancies": [],
+  "journal": {
+    "rows": 148,
+    "registered": 2,
+    "inherited": 144,
+    "evaluated": 2,
+    "cumulative_comparisons": 146,
+    "exact_identities_and_order_preserved": true,
+    "sha256": "a3691e195943f484c6de48a2970e6f6fdf007ff9e7aaccf5de995546fab6e005"
+  },
+  "selected_test_evidence": {
+    "discovered": 3258,
+    "selected_and_executed": 3252,
+    "quarantined": 6,
+    "quarantined_ids": [
+      "tests.test_methodology.TestDiagnosticOnlyQuarantine.test_qlike_series_refuses_the_clean_window",
+      "tests.test_methodology.TestEstimatorReconstructionAccuracy.test_reconstruction_matches_exact_smearing_on_the_har_family",
+      "tests.test_methodology.TestEstimatorReconstructionAccuracy.test_reconstruction_table_matches_the_published_one",
+      "tests.test_methodology.TestEstimatorReconstructionAccuracy.test_the_near_common_factor_claim_is_scoped_to_its_own_model_set",
+      "tests.test_methodology.TestFrozenReportsUnchanged.test_corrected_run_writes_a_separate_file",
+      "tests.test_methodology.TestFrozenReportsUnchanged.test_default_evaluate_reproduces_the_frozen_reports"
+    ],
+    "failures": 0,
+    "errors": 0,
+    "ordinary_skips": 0,
+    "unqualified_full_suite_claim": false
+  },
+  "saved_counts": {
+    "calendar_sessions": 6696,
+    "coverage_origins": 2464,
+    "scored_origins": 2315,
+    "active_origins": 524,
+    "application_origins": 2325,
+    "scored_forecasts": 6945,
+    "all_application_forecasts": 6975,
+    "monthly_fits": 118,
+    "model_fits": 354,
+    "ledger_events": 1138
+  },
+  "parquet_footer_metadata": {
+    "data/treasury_dealer/forecasting/coverage.parquet": {
+      "rows": 2464,
+      "row_groups": 1
+    },
+    "data/treasury_dealer/forecasting/targets.parquet": {
+      "rows": 6696,
+      "row_groups": 1
+    },
+    "data/treasury_dealer/forecasting/panel.parquet": {
+      "rows": 6945,
+      "row_groups": 1
+    },
+    "data/treasury_dealer/forecasting/schedules.parquet": {
+      "rows": 118,
+      "row_groups": 1
+    },
+    "data/treasury_dealer/forecasting/applications.parquet": {
+      "rows": 2325,
+      "row_groups": 1
+    },
+    "data/treasury_dealer/forecasting/features.parquet": {
+      "rows": 6696,
+      "row_groups": 1
+    }
+  },
+  "support": {
+    "status": "SUPPORT_PASS",
+    "monthly_rows": 118,
+    "floor_checks": 996,
+    "all_saved_floors_passed": true,
+    "phase_counts": {
+      "development": {
+        "origin_start": "2016-01-01",
+        "origin_end": "2019-12-31",
+        "daily_n": 931,
+        "activation_dates": 201,
+        "event_n": 212,
+        "events_per_tenor": {
+          "2": 30,
+          "3": 35,
+          "5": 33,
+          "7": 42,
+          "10": 37,
+          "30": 35
+        },
+        "passed": true,
+        "failures": []
+      },
+      "evaluation": {
+        "origin_start": "2020-01-01",
+        "origin_end": "2025-10-20",
+        "daily_n": 1384,
+        "activation_dates": 323,
+        "event_n": 343,
+        "events_per_tenor": {
+          "2": 56,
+          "3": 58,
+          "5": 54,
+          "7": 59,
+          "10": 58,
+          "30": 58
+        },
+        "passed": true,
+        "failures": []
+      }
+    },
+    "slice_counts": [
+      {
+        "origin_start": "2020-01-01",
+        "origin_end": "2022-12-31",
+        "slice_index": 0,
+        "daily_n": 687,
+        "activation_dates": 131,
+        "event_n": 142,
+        "events_per_tenor": {
+          "2": 23,
+          "3": 24,
+          "5": 22,
+          "7": 25,
+          "10": 24,
+          "30": 24
+        },
+        "passed": true,
+        "failures": []
+      },
+      {
+        "origin_start": "2023-01-01",
+        "origin_end": "2025-10-20",
+        "slice_index": 1,
+        "daily_n": 697,
+        "activation_dates": 192,
+        "event_n": 201,
+        "events_per_tenor": {
+          "2": 33,
+          "3": 34,
+          "5": 32,
+          "7": 34,
+          "10": 34,
+          "30": 34
+        },
+        "passed": true,
+        "failures": []
+      }
+    ]
+  },
+  "comparisons": [
+    {
+      "control": "matched",
+      "verdict": "DOES_NOT_QUALIFY",
+      "endpoint_summary": [
+        {
+          "phase": "development",
+          "endpoint": "daily",
+          "mean": 0.00014748500623119727,
+          "n": 931,
+          "p_conservative": 0.4595344242888434,
+          "ci95_envelope": [
+            -0.0002433549834281029,
+            0.0005833567546099435
+          ]
+        },
+        {
+          "phase": "development",
+          "endpoint": "active",
+          "mean": 0.000658722694633804,
+          "n": 201,
+          "p_conservative": 0.4986625754170887,
+          "ci95_envelope": [
+            -0.0012495020899272176,
+            0.0027965833359705713
+          ]
+        },
+        {
+          "phase": "evaluation",
+          "endpoint": "daily",
+          "mean": -1.9086414198303832e-05,
+          "n": 1384,
+          "p_conservative": 0.8343625,
+          "ci95_envelope": [
+            -0.00019919416949910643,
+            0.00015661935234703207
+          ]
+        },
+        {
+          "phase": "evaluation",
+          "endpoint": "active",
+          "mean": -5.3540911818322614e-05,
+          "n": 323,
+          "p_conservative": 0.8807975,
+          "ci95_envelope": [
+            -0.0007811256054834024,
+            0.0006439910355769504
+          ]
+        }
+      ],
+      "gates": [
+        {
+          "gate": "development:daily_effect_at_most_minus_0.005",
+          "passed": false,
+          "observed": 0.00014748500623119727,
+          "threshold": -0.005
+        },
+        {
+          "gate": "development:negative_active_effect",
+          "passed": false,
+          "observed": 0.000658722694633804
+        },
+        {
+          "gate": "development:offset0:negative_daily",
+          "passed": false,
+          "observed": 0.0007640868225586385
+        },
+        {
+          "gate": "development:offset0:negative_active",
+          "passed": false,
+          "observed": 0.0032185367455827563
+        },
+        {
+          "gate": "development:offset1:negative_daily",
+          "passed": true,
+          "observed": -9.003151027268848e-05
+        },
+        {
+          "gate": "development:offset1:negative_active",
+          "passed": true,
+          "observed": -0.00032689185948581596
+        },
+        {
+          "gate": "development:offset2:negative_daily",
+          "passed": true,
+          "observed": -0.0002326592571099722
+        },
+        {
+          "gate": "development:offset2:negative_active",
+          "passed": true,
+          "observed": -0.0011000287696829808
+        },
+        {
+          "gate": "development:offset3:negative_daily",
+          "passed": true,
+          "observed": -1.1802181419720197e-05
+        },
+        {
+          "gate": "development:offset3:negative_active",
+          "passed": true,
+          "observed": -0.00029611534660854916
+        },
+        {
+          "gate": "development:offset4:negative_daily",
+          "passed": false,
+          "observed": 0.0003122497510272647
+        },
+        {
+          "gate": "development:offset4:negative_active",
+          "passed": false,
+          "observed": 0.0015356407708673647
+        },
+        {
+          "gate": "evaluation:daily_effect_at_most_minus_0.005",
+          "passed": false,
+          "observed": -1.9086414198303832e-05,
+          "threshold": -0.005
+        },
+        {
+          "gate": "evaluation:negative_active_effect",
+          "passed": true,
+          "observed": -5.3540911818322614e-05
+        },
+        {
+          "gate": "evaluation:offset0:negative_daily",
+          "passed": false,
+          "observed": 2.2213798062563983e-05
+        },
+        {
+          "gate": "evaluation:offset0:negative_active",
+          "passed": false,
+          "observed": 7.256429307475559e-05
+        },
+        {
+          "gate": "evaluation:offset1:negative_daily",
+          "passed": true,
+          "observed": -2.1415048873701633e-05
+        },
+        {
+          "gate": "evaluation:offset1:negative_active",
+          "passed": true,
+          "observed": -4.4023002624919984e-05
+        },
+        {
+          "gate": "evaluation:offset2:negative_daily",
+          "passed": true,
+          "observed": -7.503900817763555e-05
+        },
+        {
+          "gate": "evaluation:offset2:negative_active",
+          "passed": true,
+          "observed": -0.00013723844123816886
+        },
+        {
+          "gate": "evaluation:offset3:negative_daily",
+          "passed": true,
+          "observed": -0.00010027647612347515
+        },
+        {
+          "gate": "evaluation:offset3:negative_active",
+          "passed": true,
+          "observed": -0.0002680219257571015
+        },
+        {
+          "gate": "evaluation:offset4:negative_daily",
+          "passed": false,
+          "observed": 7.620146158358683e-05
+        },
+        {
+          "gate": "evaluation:offset4:negative_active",
+          "passed": false,
+          "observed": 0.00013425127295267354
+        },
+        {
+          "gate": "slice0:negative_daily",
+          "passed": true,
+          "observed": -0.0001231605257346459
+        },
+        {
+          "gate": "slice0:negative_active",
+          "passed": true,
+          "observed": -0.0006963816655857662
+        },
+        {
+          "gate": "slice1:negative_daily",
+          "passed": false,
+          "observed": 8.349452500609646e-05
+        },
+        {
+          "gate": "slice1:negative_active",
+          "passed": false,
+          "observed": 0.0003850639774709228
+        },
+        {
+          "gate": "all_support_floors",
+          "passed": true
+        },
+        {
+          "gate": "Holm2_below_wave_alpha",
+          "passed": false,
+          "observed": 1.0,
+          "threshold": 7.692307692307693e-05
+        },
+        {
+          "gate": "Holm146_below_0.05",
+          "passed": false,
+          "observed": 1.0,
+          "threshold": 0.05
+        }
+      ],
+      "failed_gate_count": 15
+    },
+    {
+      "control": "market",
+      "verdict": "DOES_NOT_QUALIFY",
+      "endpoint_summary": [
+        {
+          "phase": "development",
+          "endpoint": "daily",
+          "mean": 0.0054648537907271135,
+          "n": 931,
+          "p_conservative": 0.04981121869965902,
+          "ci95_envelope": [
+            4.406187377782762e-06,
+            0.010925301394076443
+          ]
+        },
+        {
+          "phase": "development",
+          "endpoint": "active",
+          "mean": 0.011561408575242781,
+          "n": 201,
+          "p_conservative": 0.25154670660821143,
+          "ci95_envelope": [
+            -0.008201671756474677,
+            0.03132448890696024
+          ]
+        },
+        {
+          "phase": "evaluation",
+          "endpoint": "daily",
+          "mean": 0.0008990676639973378,
+          "n": 1384,
+          "p_conservative": 0.4671525,
+          "ci95_envelope": [
+            -0.0015256156865381032,
+            0.0033266761567353645
+          ]
+        },
+        {
+          "phase": "evaluation",
+          "endpoint": "active",
+          "mean": -0.00039821972097339037,
+          "n": 323,
+          "p_conservative": 0.9275475,
+          "ci95_envelope": [
+            -0.009055622944612676,
+            0.00812524513865071
+          ]
+        }
+      ],
+      "gates": [
+        {
+          "gate": "development:daily_effect_at_most_minus_0.005",
+          "passed": false,
+          "observed": 0.0054648537907271135,
+          "threshold": -0.005
+        },
+        {
+          "gate": "development:negative_active_effect",
+          "passed": false,
+          "observed": 0.011561408575242781
+        },
+        {
+          "gate": "development:offset0:negative_daily",
+          "passed": false,
+          "observed": 0.005317886010715151
+        },
+        {
+          "gate": "development:offset0:negative_active",
+          "passed": false,
+          "observed": 0.019760287278639502
+        },
+        {
+          "gate": "development:offset1:negative_daily",
+          "passed": true,
+          "observed": -0.005682384816413474
+        },
+        {
+          "gate": "development:offset1:negative_active",
+          "passed": true,
+          "observed": -0.024945634400166537
+        },
+        {
+          "gate": "development:offset2:negative_daily",
+          "passed": false,
+          "observed": 0.005327818935248423
+        },
+        {
+          "gate": "development:offset2:negative_active",
+          "passed": true,
+          "observed": -0.010140314033477033
+        },
+        {
+          "gate": "development:offset3:negative_daily",
+          "passed": false,
+          "observed": 0.01153863811093116
+        },
+        {
+          "gate": "development:offset3:negative_active",
+          "passed": false,
+          "observed": 0.02986682191403952
+        },
+        {
+          "gate": "development:offset4:negative_daily",
+          "passed": false,
+          "observed": 0.010889830461578204
+        },
+        {
+          "gate": "development:offset4:negative_active",
+          "passed": false,
+          "observed": 0.04379702224639006
+        },
+        {
+          "gate": "evaluation:daily_effect_at_most_minus_0.005",
+          "passed": false,
+          "observed": 0.0008990676639973378,
+          "threshold": -0.005
+        },
+        {
+          "gate": "evaluation:negative_active_effect",
+          "passed": true,
+          "observed": -0.00039821972097339037
+        },
+        {
+          "gate": "evaluation:offset0:negative_daily",
+          "passed": true,
+          "observed": -0.0018192799875549185
+        },
+        {
+          "gate": "evaluation:offset0:negative_active",
+          "passed": false,
+          "observed": 0.0004265489856858091
+        },
+        {
+          "gate": "evaluation:offset1:negative_daily",
+          "passed": false,
+          "observed": 0.003451876335235386
+        },
+        {
+          "gate": "evaluation:offset1:negative_active",
+          "passed": true,
+          "observed": -0.004839776177554409
+        },
+        {
+          "gate": "evaluation:offset2:negative_daily",
+          "passed": false,
+          "observed": 0.0008868404455879658
+        },
+        {
+          "gate": "evaluation:offset2:negative_active",
+          "passed": false,
+          "observed": 0.004510812904073697
+        },
+        {
+          "gate": "evaluation:offset3:negative_daily",
+          "passed": true,
+          "observed": -0.0020203366668169174
+        },
+        {
+          "gate": "evaluation:offset3:negative_active",
+          "passed": true,
+          "observed": -0.006084210548149889
+        },
+        {
+          "gate": "evaluation:offset4:negative_daily",
+          "passed": false,
+          "observed": 0.00396875826545892
+        },
+        {
+          "gate": "evaluation:offset4:negative_active",
+          "passed": false,
+          "observed": 0.003502543261524944
+        },
+        {
+          "gate": "slice0:negative_daily",
+          "passed": false,
+          "observed": 0.0018959657654830729
+        },
+        {
+          "gate": "slice0:negative_active",
+          "passed": false,
+          "observed": 0.0041205524716958946
+        },
+        {
+          "gate": "slice1:negative_daily",
+          "passed": true,
+          "observed": -8.352773875832929e-05
+        },
+        {
+          "gate": "slice1:negative_active",
+          "passed": true,
+          "observed": -0.0034813403315967044
+        },
+        {
+          "gate": "all_support_floors",
+          "passed": true
+        },
+        {
+          "gate": "Holm2_below_wave_alpha",
+          "passed": false,
+          "observed": 1.0,
+          "threshold": 7.692307692307693e-05
+        },
+        {
+          "gate": "Holm146_below_0.05",
+          "passed": false,
+          "observed": 1.0,
+          "threshold": 0.05
+        }
+      ],
+      "failed_gate_count": 20
+    }
+  ],
+  "headline": "No qualifying Treasury dealer-allocation predictive lead; both prespecified comparisons DOES_NOT_QUALIFY.",
+  "qualifications": {
+    "source_clock_class": "QUALIFIED_REPORTED_CLOCK_ONLY_FOR_Z52",
+    "source_clock_limitation": "January27,2020 Z52 timing assumes faithful cached Treasury-attributed release text; original PDF and historical public-delivery timestamp remain unavailable and quantities unknown. Rejecting this assumption leaves unbounded strict-clock uncertainty after that date. Prior regression tests accessed the later historical period; it is not untouched confirmation.",
+    "historical_access_correction_path": "reports/treasury_dealer/predictive_prefit/HISTORICAL_TEST_ACCESS_CORRECTION.md",
+    "historical_access_correction_sha256": "325915e178d0ebc58ac05ced3d281a8c8ec840ed86fd9fec348e5ae0969ab007"
+  },
+  "limitations": [
+    "No source or forecast numerical arrays, fitted coefficients, raw financial quantities, model fits, HAC estimates or bootstrap samples were decoded/recomputed. Parquet reads were footer metadata only.",
+    "This saved-artifact audit checks bound independent verification certificates; it is not a third full raw-source, forecast or resampling reconstruction.",
+    "Saved registration order and byte-bound journal were checked; past operating-system durability cannot be proven from saved bytes alone.",
+    "Failing qualification does not establish zero predictive effect or equivalence. Nominal confidence intervals are not equivalence bounds, and reused historical windows do not provide untouched confirmation.",
+    "The root-created summary and figure are outside this audit scope and require their own artifact verification."
+  ],
+  "checks": [
+    {
+      "check": "All saved pin maps agree on overlapping identities",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "freeze_record.code hashes unchanged",
+      "passed": true
+    },
+    {
+      "check": "freeze_record.inputs hashes unchanged",
+      "passed": true
+    },
+    {
+      "check": "freeze_record.preserved hashes unchanged",
+      "passed": true
+    },
+    {
+      "check": "freeze_record.prefit hashes unchanged",
+      "passed": true
+    },
+    {
+      "check": "freeze_record.execution.market_pins hashes unchanged",
+      "passed": true
+    },
+    {
+      "check": "terminal.output_hashes hashes unchanged",
+      "passed": true
+    },
+    {
+      "check": "terminal.report_artifact_hashes hashes unchanged",
+      "passed": true
+    },
+    {
+      "check": "verification.outputs hashes unchanged",
+      "passed": true
+    },
+    {
+      "check": "Terminal metrics_sha256",
+      "passed": true
+    },
+    {
+      "check": "Terminal trial_ledger_sha256",
+      "passed": true
+    },
+    {
+      "check": "Terminal and independent verification bind exact same output inventory",
+      "passed": true
+    },
+    {
+      "check": "Protocol binding frozen/verified/manifest",
+      "passed": true
+    },
+    {
+      "check": "Actual protocol hash",
+      "passed": true
+    },
+    {
+      "check": "Manifest frozen identity",
+      "passed": true
+    },
+    {
+      "check": "Manifest protocol identity",
+      "passed": true
+    },
+    {
+      "check": "Separate input_support_verification equals consolidated verification",
+      "passed": true
+    },
+    {
+      "check": "Separate forecast_verification equals consolidated verification",
+      "passed": true
+    },
+    {
+      "check": "Separate score_verification equals consolidated verification",
+      "passed": true
+    },
+    {
+      "check": "terminal status",
+      "passed": true
+    },
+    {
+      "check": "metrics status",
+      "passed": true
+    },
+    {
+      "check": "verification status",
+      "passed": true
+    },
+    {
+      "check": "input/support proof status",
+      "passed": true
+    },
+    {
+      "check": "forecast proof status",
+      "passed": true
+    },
+    {
+      "check": "score proof status",
+      "passed": true
+    },
+    {
+      "check": "Prior exact bytes",
+      "passed": true
+    },
+    {
+      "check": "All 144 inherited rows unchanged with bound prior source identities",
+      "passed": true
+    },
+    {
+      "check": "Prior cumulative family",
+      "passed": true
+    },
+    {
+      "check": "Inherited family length",
+      "passed": true
+    },
+    {
+      "check": "Inherited statistical identities including declared measure are unique",
+      "passed": true,
+      "detail": "Measurement-memory qmle/rv5/rv15 are separate unchanged declared comparisons; source/hash/row-index identities also remain unique."
+    },
+    {
+      "check": "New identity order",
+      "passed": true
+    },
+    {
+      "check": "Two new plus144 cumulative",
+      "passed": true
+    },
+    {
+      "check": "Journal has terminal newline",
+      "passed": true
+    },
+    {
+      "check": "Exact persisted registration/inheritance/evaluation sequence",
+      "passed": true
+    },
+    {
+      "check": "148 journal rows, preserving both attempts",
+      "passed": true
+    },
+    {
+      "check": "Exact six predeclared quarantines",
+      "passed": true
+    },
+    {
+      "check": "Unique selected identities disjoint from quarantine",
+      "passed": true
+    },
+    {
+      "check": "Discovery-selection-execution counts",
+      "passed": true
+    },
+    {
+      "check": "Selected gate result",
+      "passed": true
+    },
+    {
+      "check": "Selection byte binding",
+      "passed": true
+    },
+    {
+      "check": "Precheck log binding",
+      "passed": true
+    },
+    {
+      "check": "Saved executed log records3252 tests and OK",
+      "passed": true
+    },
+    {
+      "check": "Test execution before freeze, manifest and terminal",
+      "passed": true
+    },
+    {
+      "check": "Saved features footer count",
+      "passed": true
+    },
+    {
+      "check": "Saved targets footer count",
+      "passed": true
+    },
+    {
+      "check": "Saved coverage footer count",
+      "passed": true
+    },
+    {
+      "check": "Saved panel footer count",
+      "passed": true
+    },
+    {
+      "check": "Saved applications footer count",
+      "passed": true
+    },
+    {
+      "check": "Saved schedules footer count",
+      "passed": true
+    },
+    {
+      "check": "Scored and activation origin identities across reports",
+      "passed": true
+    },
+    {
+      "check": "Forecast certificate counts",
+      "passed": true
+    },
+    {
+      "check": "All application forecasts include10 unscored origins",
+      "passed": true
+    },
+    {
+      "check": "Support report exact in metrics",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2016-01",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-01:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-01:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2016-01",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2016-01",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2016-01",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-01:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-01:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-01:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-01:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-01:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-01:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2016-02",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-02:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-02:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2016-02",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2016-02",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2016-02",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-02:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-02:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-02:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-02:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-02:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-02:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2016-03",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-03:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-03:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2016-03",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2016-03",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2016-03",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-03:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-03:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-03:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-03:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-03:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-03:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2016-04",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-04:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-04:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2016-04",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2016-04",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2016-04",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-04:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-04:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-04:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-04:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-04:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-04:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2016-05",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-05:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-05:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2016-05",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2016-05",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2016-05",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-05:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-05:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-05:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-05:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-05:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-05:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2016-06",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-06:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-06:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2016-06",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2016-06",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2016-06",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-06:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-06:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-06:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-06:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-06:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-06:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2016-07",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-07:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-07:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2016-07",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2016-07",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2016-07",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-07:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-07:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-07:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-07:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-07:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-07:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2016-08",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-08:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-08:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2016-08",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2016-08",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2016-08",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-08:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-08:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-08:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-08:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-08:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-08:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2016-09",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-09:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-09:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2016-09",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2016-09",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2016-09",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-09:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-09:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-09:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-09:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-09:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-09:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2016-10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-10:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-10:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2016-10",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2016-10",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2016-10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-10:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-10:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-10:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-10:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-10:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-10:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2016-11",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-11:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-11:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2016-11",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2016-11",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2016-11",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-11:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-11:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-11:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-11:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-11:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-11:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2016-12",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-12:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-12:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2016-12",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2016-12",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2016-12",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-12:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-12:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-12:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-12:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-12:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2016-12:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2017-01",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-01:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-01:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2017-01",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2017-01",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2017-01",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-01:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-01:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-01:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-01:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-01:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-01:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2017-02",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-02:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-02:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2017-02",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2017-02",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2017-02",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-02:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-02:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-02:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-02:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-02:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-02:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2017-03",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-03:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-03:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2017-03",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2017-03",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2017-03",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-03:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-03:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-03:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-03:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-03:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-03:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2017-04",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-04:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-04:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2017-04",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2017-04",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2017-04",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-04:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-04:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-04:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-04:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-04:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-04:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2017-05",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-05:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-05:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2017-05",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2017-05",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2017-05",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-05:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-05:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-05:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-05:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-05:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-05:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2017-06",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-06:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-06:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2017-06",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2017-06",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2017-06",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-06:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-06:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-06:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-06:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-06:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-06:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2017-07",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-07:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-07:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2017-07",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2017-07",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2017-07",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-07:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-07:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-07:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-07:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-07:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-07:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2017-08",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-08:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-08:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2017-08",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2017-08",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2017-08",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-08:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-08:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-08:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-08:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-08:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-08:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2017-09",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-09:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-09:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2017-09",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2017-09",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2017-09",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-09:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-09:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-09:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-09:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-09:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-09:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2017-10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-10:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-10:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2017-10",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2017-10",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2017-10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-10:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-10:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-10:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-10:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-10:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-10:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2017-11",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-11:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-11:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2017-11",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2017-11",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2017-11",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-11:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-11:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-11:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-11:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-11:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-11:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2017-12",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-12:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-12:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2017-12",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2017-12",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2017-12",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-12:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-12:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-12:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-12:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-12:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2017-12:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2018-01",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-01:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-01:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2018-01",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2018-01",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2018-01",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-01:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-01:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-01:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-01:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-01:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-01:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2018-02",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-02:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-02:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2018-02",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2018-02",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2018-02",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-02:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-02:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-02:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-02:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-02:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-02:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2018-03",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-03:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-03:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2018-03",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2018-03",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2018-03",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-03:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-03:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-03:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-03:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-03:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-03:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2018-04",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-04:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-04:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2018-04",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2018-04",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2018-04",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-04:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-04:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-04:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-04:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-04:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-04:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2018-05",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-05:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-05:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2018-05",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2018-05",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2018-05",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-05:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-05:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-05:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-05:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-05:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-05:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2018-06",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-06:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-06:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2018-06",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2018-06",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2018-06",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-06:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-06:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-06:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-06:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-06:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-06:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2018-07",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-07:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-07:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2018-07",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2018-07",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2018-07",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-07:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-07:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-07:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-07:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-07:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-07:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2018-08",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-08:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-08:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2018-08",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2018-08",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2018-08",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-08:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-08:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-08:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-08:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-08:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-08:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2018-09",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-09:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-09:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2018-09",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2018-09",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2018-09",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-09:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-09:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-09:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-09:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-09:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-09:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2018-10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-10:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-10:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2018-10",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2018-10",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2018-10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-10:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-10:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-10:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-10:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-10:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-10:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2018-11",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-11:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-11:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2018-11",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2018-11",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2018-11",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-11:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-11:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-11:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-11:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-11:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-11:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2018-12",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-12:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-12:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2018-12",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2018-12",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2018-12",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-12:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-12:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-12:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-12:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-12:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2018-12:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2019-01",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-01:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-01:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2019-01",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2019-01",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2019-01",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-01:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-01:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-01:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-01:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-01:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-01:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2019-02",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-02:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-02:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2019-02",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2019-02",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2019-02",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-02:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-02:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-02:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-02:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-02:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-02:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2019-03",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-03:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-03:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2019-03",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2019-03",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2019-03",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-03:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-03:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-03:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-03:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-03:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-03:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2019-04",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-04:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-04:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2019-04",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2019-04",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2019-04",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-04:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-04:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-04:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-04:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-04:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-04:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2019-05",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-05:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-05:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2019-05",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2019-05",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2019-05",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-05:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-05:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-05:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-05:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-05:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-05:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2019-06",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-06:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-06:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2019-06",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2019-06",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2019-06",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-06:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-06:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-06:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-06:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-06:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-06:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2019-07",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-07:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-07:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2019-07",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2019-07",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2019-07",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-07:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-07:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-07:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-07:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-07:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-07:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2019-08",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-08:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-08:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2019-08",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2019-08",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2019-08",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-08:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-08:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-08:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-08:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-08:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-08:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2019-09",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-09:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-09:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2019-09",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2019-09",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2019-09",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-09:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-09:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-09:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-09:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-09:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-09:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2019-10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-10:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-10:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2019-10",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2019-10",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2019-10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-10:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-10:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-10:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-10:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-10:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-10:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2019-11",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-11:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-11:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2019-11",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2019-11",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2019-11",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-11:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-11:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-11:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-11:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-11:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-11:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2019-12",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-12:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-12:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2019-12",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2019-12",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2019-12",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-12:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-12:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-12:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-12:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-12:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2019-12:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2020-01",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-01:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-01:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2020-01",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2020-01",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2020-01",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-01:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-01:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-01:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-01:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-01:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-01:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2020-02",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-02:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-02:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2020-02",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2020-02",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2020-02",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-02:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-02:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-02:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-02:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-02:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-02:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2020-03",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-03:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-03:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2020-03",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2020-03",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2020-03",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-03:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-03:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-03:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-03:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-03:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-03:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2020-04",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-04:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-04:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2020-04",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2020-04",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2020-04",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-04:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-04:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-04:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-04:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-04:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-04:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2020-05",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-05:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-05:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2020-05",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2020-05",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2020-05",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-05:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-05:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-05:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-05:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-05:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-05:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2020-06",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-06:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-06:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2020-06",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2020-06",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2020-06",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-06:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-06:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-06:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-06:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-06:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-06:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2020-07",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-07:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-07:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2020-07",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2020-07",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2020-07",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-07:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-07:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-07:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-07:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-07:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-07:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2020-08",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-08:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-08:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2020-08",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2020-08",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2020-08",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-08:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-08:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-08:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-08:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-08:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-08:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2020-09",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-09:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-09:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2020-09",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2020-09",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2020-09",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-09:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-09:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-09:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-09:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-09:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-09:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2020-10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-10:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-10:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2020-10",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2020-10",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2020-10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-10:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-10:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-10:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-10:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-10:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-10:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2020-11",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-11:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-11:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2020-11",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2020-11",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2020-11",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-11:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-11:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-11:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-11:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-11:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-11:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2020-12",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-12:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-12:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2020-12",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2020-12",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2020-12",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-12:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-12:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-12:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-12:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-12:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2020-12:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2021-01",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-01:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-01:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2021-01",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2021-01",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2021-01",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-01:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-01:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-01:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-01:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-01:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-01:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2021-02",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-02:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-02:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2021-02",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2021-02",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2021-02",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-02:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-02:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-02:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-02:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-02:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-02:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2021-03",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-03:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-03:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2021-03",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2021-03",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2021-03",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-03:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-03:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-03:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-03:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-03:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-03:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2021-04",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-04:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-04:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2021-04",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2021-04",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2021-04",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-04:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-04:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-04:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-04:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-04:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-04:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2021-05",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-05:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-05:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2021-05",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2021-05",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2021-05",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-05:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-05:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-05:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-05:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-05:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-05:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2021-06",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-06:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-06:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2021-06",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2021-06",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2021-06",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-06:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-06:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-06:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-06:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-06:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-06:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2021-07",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-07:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-07:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2021-07",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2021-07",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2021-07",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-07:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-07:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-07:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-07:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-07:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-07:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2021-08",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-08:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-08:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2021-08",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2021-08",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2021-08",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-08:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-08:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-08:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-08:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-08:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-08:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2021-09",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-09:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-09:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2021-09",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2021-09",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2021-09",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-09:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-09:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-09:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-09:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-09:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-09:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2021-10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-10:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-10:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2021-10",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2021-10",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2021-10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-10:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-10:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-10:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-10:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-10:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-10:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2021-11",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-11:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-11:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2021-11",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2021-11",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2021-11",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-11:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-11:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-11:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-11:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-11:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-11:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2021-12",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-12:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-12:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2021-12",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2021-12",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2021-12",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-12:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-12:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-12:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-12:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-12:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2021-12:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2022-01",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-01:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-01:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2022-01",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2022-01",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2022-01",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-01:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-01:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-01:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-01:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-01:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-01:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2022-02",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-02:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-02:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2022-02",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2022-02",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2022-02",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-02:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-02:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-02:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-02:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-02:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-02:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2022-03",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-03:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-03:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2022-03",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2022-03",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2022-03",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-03:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-03:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-03:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-03:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-03:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-03:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2022-04",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-04:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-04:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2022-04",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2022-04",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2022-04",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-04:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-04:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-04:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-04:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-04:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-04:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2022-05",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-05:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-05:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2022-05",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2022-05",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2022-05",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-05:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-05:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-05:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-05:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-05:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-05:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2022-06",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-06:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-06:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2022-06",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2022-06",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2022-06",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-06:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-06:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-06:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-06:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-06:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-06:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2022-07",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-07:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-07:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2022-07",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2022-07",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2022-07",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-07:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-07:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-07:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-07:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-07:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-07:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2022-08",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-08:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-08:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2022-08",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2022-08",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2022-08",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-08:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-08:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-08:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-08:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-08:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-08:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2022-09",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-09:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-09:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2022-09",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2022-09",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2022-09",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-09:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-09:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-09:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-09:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-09:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-09:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2022-10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-10:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-10:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2022-10",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2022-10",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2022-10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-10:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-10:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-10:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-10:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-10:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-10:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2022-11",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-11:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-11:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2022-11",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2022-11",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2022-11",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-11:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-11:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-11:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-11:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-11:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-11:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2022-12",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-12:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-12:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2022-12",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2022-12",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2022-12",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-12:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-12:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-12:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-12:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-12:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2022-12:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2023-01",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-01:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-01:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2023-01",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2023-01",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2023-01",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-01:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-01:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-01:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-01:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-01:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-01:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2023-02",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-02:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-02:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2023-02",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2023-02",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2023-02",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-02:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-02:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-02:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-02:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-02:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-02:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2023-03",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-03:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-03:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2023-03",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2023-03",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2023-03",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-03:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-03:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-03:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-03:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-03:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-03:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2023-04",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-04:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-04:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2023-04",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2023-04",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2023-04",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-04:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-04:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-04:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-04:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-04:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-04:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2023-05",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-05:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-05:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2023-05",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2023-05",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2023-05",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-05:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-05:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-05:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-05:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-05:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-05:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2023-06",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-06:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-06:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2023-06",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2023-06",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2023-06",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-06:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-06:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-06:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-06:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-06:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-06:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2023-07",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-07:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-07:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2023-07",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2023-07",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2023-07",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-07:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-07:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-07:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-07:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-07:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-07:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2023-08",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-08:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-08:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2023-08",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2023-08",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2023-08",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-08:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-08:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-08:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-08:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-08:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-08:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2023-09",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-09:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-09:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2023-09",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2023-09",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2023-09",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-09:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-09:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-09:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-09:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-09:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-09:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2023-10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-10:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-10:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2023-10",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2023-10",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2023-10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-10:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-10:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-10:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-10:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-10:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-10:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2023-11",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-11:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-11:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2023-11",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2023-11",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2023-11",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-11:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-11:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-11:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-11:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-11:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-11:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2023-12",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-12:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-12:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2023-12",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2023-12",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2023-12",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-12:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-12:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-12:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-12:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-12:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2023-12:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2024-01",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-01:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-01:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2024-01",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2024-01",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2024-01",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-01:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-01:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-01:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-01:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-01:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-01:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2024-02",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-02:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-02:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2024-02",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2024-02",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2024-02",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-02:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-02:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-02:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-02:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-02:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-02:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2024-03",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-03:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-03:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2024-03",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2024-03",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2024-03",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-03:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-03:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-03:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-03:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-03:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-03:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2024-04",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-04:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-04:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2024-04",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2024-04",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2024-04",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-04:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-04:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-04:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-04:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-04:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-04:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2024-05",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-05:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-05:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2024-05",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2024-05",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2024-05",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-05:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-05:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-05:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-05:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-05:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-05:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2024-06",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-06:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-06:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2024-06",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2024-06",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2024-06",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-06:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-06:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-06:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-06:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-06:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-06:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2024-07",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-07:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-07:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2024-07",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2024-07",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2024-07",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-07:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-07:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-07:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-07:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-07:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-07:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2024-08",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-08:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-08:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2024-08",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2024-08",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2024-08",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-08:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-08:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-08:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-08:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-08:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-08:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2024-09",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-09:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-09:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2024-09",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2024-09",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2024-09",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-09:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-09:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-09:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-09:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-09:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-09:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2024-10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-10:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-10:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2024-10",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2024-10",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2024-10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-10:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-10:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-10:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-10:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-10:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-10:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2024-11",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-11:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-11:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2024-11",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2024-11",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2024-11",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-11:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-11:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-11:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-11:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-11:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-11:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2024-12",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-12:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-12:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2024-12",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2024-12",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2024-12",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-12:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-12:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-12:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-12:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-12:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2024-12:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2025-01",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-01:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-01:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2025-01",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2025-01",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2025-01",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-01:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-01:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-01:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-01:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-01:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-01:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2025-02",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-02:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-02:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2025-02",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2025-02",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2025-02",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-02:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-02:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-02:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-02:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-02:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-02:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2025-03",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-03:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-03:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2025-03",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2025-03",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2025-03",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-03:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-03:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-03:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-03:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-03:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-03:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2025-04",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-04:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-04:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2025-04",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2025-04",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2025-04",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-04:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-04:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-04:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-04:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-04:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-04:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2025-05",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-05:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-05:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2025-05",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2025-05",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2025-05",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-05:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-05:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-05:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-05:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-05:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-05:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2025-06",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-06:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-06:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2025-06",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2025-06",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2025-06",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-06:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-06:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-06:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-06:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-06:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-06:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2025-07",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-07:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-07:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2025-07",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2025-07",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2025-07",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-07:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-07:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-07:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-07:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-07:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-07:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2025-08",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-08:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-08:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2025-08",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2025-08",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2025-08",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-08:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-08:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-08:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-08:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-08:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-08:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2025-09",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-09:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-09:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2025-09",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2025-09",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2025-09",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-09:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-09:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-09:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-09:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-09:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-09:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Monthly saved supported 2025-10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-10:train_n",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-10:activation_dates",
+      "passed": true
+    },
+    {
+      "check": "Monthly events sum 2025-10",
+      "passed": true
+    },
+    {
+      "check": "Monthly application/request count 2025-10",
+      "passed": true
+    },
+    {
+      "check": "Monthly prior-session date order 2025-10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-10:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-10:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-10:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-10:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-10:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support monthly:2025-10:tenor30",
+      "passed": true
+    },
+    {
+      "check": "phase support flags 0",
+      "passed": true
+    },
+    {
+      "check": "Support phase:0:daily",
+      "passed": true
+    },
+    {
+      "check": "Support phase:0:active",
+      "passed": true
+    },
+    {
+      "check": "phase:0:eventsum",
+      "passed": true
+    },
+    {
+      "check": "Support phase:0:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support phase:0:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support phase:0:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support phase:0:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support phase:0:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support phase:0:tenor30",
+      "passed": true
+    },
+    {
+      "check": "phase support flags 1",
+      "passed": true
+    },
+    {
+      "check": "Support phase:1:daily",
+      "passed": true
+    },
+    {
+      "check": "Support phase:1:active",
+      "passed": true
+    },
+    {
+      "check": "phase:1:eventsum",
+      "passed": true
+    },
+    {
+      "check": "Support phase:1:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support phase:1:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support phase:1:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support phase:1:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support phase:1:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support phase:1:tenor30",
+      "passed": true
+    },
+    {
+      "check": "slice support flags 0",
+      "passed": true
+    },
+    {
+      "check": "Support slice:0:daily",
+      "passed": true
+    },
+    {
+      "check": "Support slice:0:active",
+      "passed": true
+    },
+    {
+      "check": "slice:0:eventsum",
+      "passed": true
+    },
+    {
+      "check": "Support slice:0:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support slice:0:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support slice:0:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support slice:0:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support slice:0:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support slice:0:tenor30",
+      "passed": true
+    },
+    {
+      "check": "slice support flags 1",
+      "passed": true
+    },
+    {
+      "check": "Support slice:1:daily",
+      "passed": true
+    },
+    {
+      "check": "Support slice:1:active",
+      "passed": true
+    },
+    {
+      "check": "slice:1:eventsum",
+      "passed": true
+    },
+    {
+      "check": "Support slice:1:tenor2",
+      "passed": true
+    },
+    {
+      "check": "Support slice:1:tenor3",
+      "passed": true
+    },
+    {
+      "check": "Support slice:1:tenor5",
+      "passed": true
+    },
+    {
+      "check": "Support slice:1:tenor7",
+      "passed": true
+    },
+    {
+      "check": "Support slice:1:tenor10",
+      "passed": true
+    },
+    {
+      "check": "Support slice:1:tenor30",
+      "passed": true
+    },
+    {
+      "check": "Five support offsets development",
+      "passed": true
+    },
+    {
+      "check": "Support offset:development:0:daily",
+      "passed": true
+    },
+    {
+      "check": "Support offset:development:0:active",
+      "passed": true
+    },
+    {
+      "check": "Offset event sum development0",
+      "passed": true
+    },
+    {
+      "check": "Support offset:development:1:daily",
+      "passed": true
+    },
+    {
+      "check": "Support offset:development:1:active",
+      "passed": true
+    },
+    {
+      "check": "Offset event sum development1",
+      "passed": true
+    },
+    {
+      "check": "Support offset:development:2:daily",
+      "passed": true
+    },
+    {
+      "check": "Support offset:development:2:active",
+      "passed": true
+    },
+    {
+      "check": "Offset event sum development2",
+      "passed": true
+    },
+    {
+      "check": "Support offset:development:3:daily",
+      "passed": true
+    },
+    {
+      "check": "Support offset:development:3:active",
+      "passed": true
+    },
+    {
+      "check": "Offset event sum development3",
+      "passed": true
+    },
+    {
+      "check": "Support offset:development:4:daily",
+      "passed": true
+    },
+    {
+      "check": "Support offset:development:4:active",
+      "passed": true
+    },
+    {
+      "check": "Offset event sum development4",
+      "passed": true
+    },
+    {
+      "check": "Five support offsets evaluation",
+      "passed": true
+    },
+    {
+      "check": "Support offset:evaluation:0:daily",
+      "passed": true
+    },
+    {
+      "check": "Support offset:evaluation:0:active",
+      "passed": true
+    },
+    {
+      "check": "Offset event sum evaluation0",
+      "passed": true
+    },
+    {
+      "check": "Support offset:evaluation:1:daily",
+      "passed": true
+    },
+    {
+      "check": "Support offset:evaluation:1:active",
+      "passed": true
+    },
+    {
+      "check": "Offset event sum evaluation1",
+      "passed": true
+    },
+    {
+      "check": "Support offset:evaluation:2:daily",
+      "passed": true
+    },
+    {
+      "check": "Support offset:evaluation:2:active",
+      "passed": true
+    },
+    {
+      "check": "Offset event sum evaluation2",
+      "passed": true
+    },
+    {
+      "check": "Support offset:evaluation:3:daily",
+      "passed": true
+    },
+    {
+      "check": "Support offset:evaluation:3:active",
+      "passed": true
+    },
+    {
+      "check": "Offset event sum evaluation3",
+      "passed": true
+    },
+    {
+      "check": "Support offset:evaluation:4:daily",
+      "passed": true
+    },
+    {
+      "check": "Support offset:evaluation:4:active",
+      "passed": true
+    },
+    {
+      "check": "Offset event sum evaluation4",
+      "passed": true
+    },
+    {
+      "check": "Support terminal flags",
+      "passed": true
+    },
+    {
+      "check": "118 monthly saved support schedules",
+      "passed": true
+    },
+    {
+      "check": "Monthly applications sum",
+      "passed": true
+    },
+    {
+      "check": "Monthly requested sum",
+      "passed": true
+    },
+    {
+      "check": "Phase scored count sum",
+      "passed": true
+    },
+    {
+      "check": "Phase active count sum",
+      "passed": true
+    },
+    {
+      "check": "Comparison ordered phases matched",
+      "passed": true
+    },
+    {
+      "check": "Finite probabilities matcheddevelopmentdaily",
+      "passed": true
+    },
+    {
+      "check": "Conservative endpoint probability matcheddevelopmentdaily",
+      "passed": true
+    },
+    {
+      "check": "Saved interval envelope matcheddevelopmentdaily",
+      "passed": true
+    },
+    {
+      "check": "Saved loss difference matcheddevelopmentdaily",
+      "passed": true
+    },
+    {
+      "check": "Endpoint support count matcheddevelopmentdaily",
+      "passed": true
+    },
+    {
+      "check": "HAC lower arithmetic matcheddevelopmentdaily",
+      "passed": true
+    },
+    {
+      "check": "HAC upper arithmetic matcheddevelopmentdaily",
+      "passed": true
+    },
+    {
+      "check": "Finite probabilities matcheddevelopmentactive",
+      "passed": true
+    },
+    {
+      "check": "Conservative endpoint probability matcheddevelopmentactive",
+      "passed": true
+    },
+    {
+      "check": "Saved interval envelope matcheddevelopmentactive",
+      "passed": true
+    },
+    {
+      "check": "Saved loss difference matcheddevelopmentactive",
+      "passed": true
+    },
+    {
+      "check": "Endpoint support count matcheddevelopmentactive",
+      "passed": true
+    },
+    {
+      "check": "HAC lower arithmetic matcheddevelopmentactive",
+      "passed": true
+    },
+    {
+      "check": "HAC upper arithmetic matcheddevelopmentactive",
+      "passed": true
+    },
+    {
+      "check": "Conservative phase probability matcheddevelopment",
+      "passed": true
+    },
+    {
+      "check": "Saved offset identities matcheddevelopment",
+      "passed": true
+    },
+    {
+      "check": "Offset counts bound matcheddevelopment0",
+      "passed": true
+    },
+    {
+      "check": "Offset counts bound matcheddevelopment1",
+      "passed": true
+    },
+    {
+      "check": "Offset counts bound matcheddevelopment2",
+      "passed": true
+    },
+    {
+      "check": "Offset counts bound matcheddevelopment3",
+      "passed": true
+    },
+    {
+      "check": "Offset counts bound matcheddevelopment4",
+      "passed": true
+    },
+    {
+      "check": "Offsets count total matcheddevelopmentdaily",
+      "passed": true
+    },
+    {
+      "check": "Offsets weighted mean matcheddevelopmentdaily",
+      "passed": true
+    },
+    {
+      "check": "Annual count total matcheddevelopmentdaily",
+      "passed": true
+    },
+    {
+      "check": "Annual weighted mean matcheddevelopmentdaily",
+      "passed": true
+    },
+    {
+      "check": "Offsets count total matcheddevelopmentactive",
+      "passed": true
+    },
+    {
+      "check": "Offsets weighted mean matcheddevelopmentactive",
+      "passed": true
+    },
+    {
+      "check": "Annual count total matcheddevelopmentactive",
+      "passed": true
+    },
+    {
+      "check": "Annual weighted mean matcheddevelopmentactive",
+      "passed": true
+    },
+    {
+      "check": "Annual original calendar count matcheddevelopment",
+      "passed": true
+    },
+    {
+      "check": "Annual missing bookkeeping matched2016",
+      "passed": true
+    },
+    {
+      "check": "Annual missing bookkeeping matched2017",
+      "passed": true
+    },
+    {
+      "check": "Annual missing bookkeeping matched2018",
+      "passed": true
+    },
+    {
+      "check": "Annual missing bookkeeping matched2019",
+      "passed": true
+    },
+    {
+      "check": "No development posthoc stability slices matched",
+      "passed": true
+    },
+    {
+      "check": "Finite probabilities matchedevaluationdaily",
+      "passed": true
+    },
+    {
+      "check": "Conservative endpoint probability matchedevaluationdaily",
+      "passed": true
+    },
+    {
+      "check": "Saved interval envelope matchedevaluationdaily",
+      "passed": true
+    },
+    {
+      "check": "Saved loss difference matchedevaluationdaily",
+      "passed": true
+    },
+    {
+      "check": "Endpoint support count matchedevaluationdaily",
+      "passed": true
+    },
+    {
+      "check": "HAC lower arithmetic matchedevaluationdaily",
+      "passed": true
+    },
+    {
+      "check": "HAC upper arithmetic matchedevaluationdaily",
+      "passed": true
+    },
+    {
+      "check": "Finite probabilities matchedevaluationactive",
+      "passed": true
+    },
+    {
+      "check": "Conservative endpoint probability matchedevaluationactive",
+      "passed": true
+    },
+    {
+      "check": "Saved interval envelope matchedevaluationactive",
+      "passed": true
+    },
+    {
+      "check": "Saved loss difference matchedevaluationactive",
+      "passed": true
+    },
+    {
+      "check": "Endpoint support count matchedevaluationactive",
+      "passed": true
+    },
+    {
+      "check": "HAC lower arithmetic matchedevaluationactive",
+      "passed": true
+    },
+    {
+      "check": "HAC upper arithmetic matchedevaluationactive",
+      "passed": true
+    },
+    {
+      "check": "Conservative phase probability matchedevaluation",
+      "passed": true
+    },
+    {
+      "check": "Saved offset identities matchedevaluation",
+      "passed": true
+    },
+    {
+      "check": "Offset counts bound matchedevaluation0",
+      "passed": true
+    },
+    {
+      "check": "Offset counts bound matchedevaluation1",
+      "passed": true
+    },
+    {
+      "check": "Offset counts bound matchedevaluation2",
+      "passed": true
+    },
+    {
+      "check": "Offset counts bound matchedevaluation3",
+      "passed": true
+    },
+    {
+      "check": "Offset counts bound matchedevaluation4",
+      "passed": true
+    },
+    {
+      "check": "Offsets count total matchedevaluationdaily",
+      "passed": true
+    },
+    {
+      "check": "Offsets weighted mean matchedevaluationdaily",
+      "passed": true
+    },
+    {
+      "check": "Annual count total matchedevaluationdaily",
+      "passed": true
+    },
+    {
+      "check": "Annual weighted mean matchedevaluationdaily",
+      "passed": true
+    },
+    {
+      "check": "Offsets count total matchedevaluationactive",
+      "passed": true
+    },
+    {
+      "check": "Offsets weighted mean matchedevaluationactive",
+      "passed": true
+    },
+    {
+      "check": "Annual count total matchedevaluationactive",
+      "passed": true
+    },
+    {
+      "check": "Annual weighted mean matchedevaluationactive",
+      "passed": true
+    },
+    {
+      "check": "Annual original calendar count matchedevaluation",
+      "passed": true
+    },
+    {
+      "check": "Annual missing bookkeeping matched2020",
+      "passed": true
+    },
+    {
+      "check": "Annual missing bookkeeping matched2021",
+      "passed": true
+    },
+    {
+      "check": "Annual missing bookkeeping matched2022",
+      "passed": true
+    },
+    {
+      "check": "Annual missing bookkeeping matched2023",
+      "passed": true
+    },
+    {
+      "check": "Annual missing bookkeeping matched2024",
+      "passed": true
+    },
+    {
+      "check": "Annual missing bookkeeping matched2025",
+      "passed": true
+    },
+    {
+      "check": "Two fixed evaluation slices matched",
+      "passed": true
+    },
+    {
+      "check": "Slice count matched0",
+      "passed": true
+    },
+    {
+      "check": "Slice count matched1",
+      "passed": true
+    },
+    {
+      "check": "Conservative hypothesis probability matched",
+      "passed": true
+    },
+    {
+      "check": "Saved Holm2 matched",
+      "passed": true
+    },
+    {
+      "check": "Saved Holm146 matched",
+      "passed": true
+    },
+    {
+      "check": "Gate-derived verdict matched",
+      "passed": true
+    },
+    {
+      "check": "Comparison ordered phases market",
+      "passed": true
+    },
+    {
+      "check": "Finite probabilities marketdevelopmentdaily",
+      "passed": true
+    },
+    {
+      "check": "Conservative endpoint probability marketdevelopmentdaily",
+      "passed": true
+    },
+    {
+      "check": "Saved interval envelope marketdevelopmentdaily",
+      "passed": true
+    },
+    {
+      "check": "Saved loss difference marketdevelopmentdaily",
+      "passed": true
+    },
+    {
+      "check": "Endpoint support count marketdevelopmentdaily",
+      "passed": true
+    },
+    {
+      "check": "HAC lower arithmetic marketdevelopmentdaily",
+      "passed": true
+    },
+    {
+      "check": "HAC upper arithmetic marketdevelopmentdaily",
+      "passed": true
+    },
+    {
+      "check": "Finite probabilities marketdevelopmentactive",
+      "passed": true
+    },
+    {
+      "check": "Conservative endpoint probability marketdevelopmentactive",
+      "passed": true
+    },
+    {
+      "check": "Saved interval envelope marketdevelopmentactive",
+      "passed": true
+    },
+    {
+      "check": "Saved loss difference marketdevelopmentactive",
+      "passed": true
+    },
+    {
+      "check": "Endpoint support count marketdevelopmentactive",
+      "passed": true
+    },
+    {
+      "check": "HAC lower arithmetic marketdevelopmentactive",
+      "passed": true
+    },
+    {
+      "check": "HAC upper arithmetic marketdevelopmentactive",
+      "passed": true
+    },
+    {
+      "check": "Conservative phase probability marketdevelopment",
+      "passed": true
+    },
+    {
+      "check": "Saved offset identities marketdevelopment",
+      "passed": true
+    },
+    {
+      "check": "Offset counts bound marketdevelopment0",
+      "passed": true
+    },
+    {
+      "check": "Offset counts bound marketdevelopment1",
+      "passed": true
+    },
+    {
+      "check": "Offset counts bound marketdevelopment2",
+      "passed": true
+    },
+    {
+      "check": "Offset counts bound marketdevelopment3",
+      "passed": true
+    },
+    {
+      "check": "Offset counts bound marketdevelopment4",
+      "passed": true
+    },
+    {
+      "check": "Offsets count total marketdevelopmentdaily",
+      "passed": true
+    },
+    {
+      "check": "Offsets weighted mean marketdevelopmentdaily",
+      "passed": true
+    },
+    {
+      "check": "Annual count total marketdevelopmentdaily",
+      "passed": true
+    },
+    {
+      "check": "Annual weighted mean marketdevelopmentdaily",
+      "passed": true
+    },
+    {
+      "check": "Offsets count total marketdevelopmentactive",
+      "passed": true
+    },
+    {
+      "check": "Offsets weighted mean marketdevelopmentactive",
+      "passed": true
+    },
+    {
+      "check": "Annual count total marketdevelopmentactive",
+      "passed": true
+    },
+    {
+      "check": "Annual weighted mean marketdevelopmentactive",
+      "passed": true
+    },
+    {
+      "check": "Annual original calendar count marketdevelopment",
+      "passed": true
+    },
+    {
+      "check": "Annual missing bookkeeping market2016",
+      "passed": true
+    },
+    {
+      "check": "Annual missing bookkeeping market2017",
+      "passed": true
+    },
+    {
+      "check": "Annual missing bookkeeping market2018",
+      "passed": true
+    },
+    {
+      "check": "Annual missing bookkeeping market2019",
+      "passed": true
+    },
+    {
+      "check": "No development posthoc stability slices market",
+      "passed": true
+    },
+    {
+      "check": "Finite probabilities marketevaluationdaily",
+      "passed": true
+    },
+    {
+      "check": "Conservative endpoint probability marketevaluationdaily",
+      "passed": true
+    },
+    {
+      "check": "Saved interval envelope marketevaluationdaily",
+      "passed": true
+    },
+    {
+      "check": "Saved loss difference marketevaluationdaily",
+      "passed": true
+    },
+    {
+      "check": "Endpoint support count marketevaluationdaily",
+      "passed": true
+    },
+    {
+      "check": "HAC lower arithmetic marketevaluationdaily",
+      "passed": true
+    },
+    {
+      "check": "HAC upper arithmetic marketevaluationdaily",
+      "passed": true
+    },
+    {
+      "check": "Finite probabilities marketevaluationactive",
+      "passed": true
+    },
+    {
+      "check": "Conservative endpoint probability marketevaluationactive",
+      "passed": true
+    },
+    {
+      "check": "Saved interval envelope marketevaluationactive",
+      "passed": true
+    },
+    {
+      "check": "Saved loss difference marketevaluationactive",
+      "passed": true
+    },
+    {
+      "check": "Endpoint support count marketevaluationactive",
+      "passed": true
+    },
+    {
+      "check": "HAC lower arithmetic marketevaluationactive",
+      "passed": true
+    },
+    {
+      "check": "HAC upper arithmetic marketevaluationactive",
+      "passed": true
+    },
+    {
+      "check": "Conservative phase probability marketevaluation",
+      "passed": true
+    },
+    {
+      "check": "Saved offset identities marketevaluation",
+      "passed": true
+    },
+    {
+      "check": "Offset counts bound marketevaluation0",
+      "passed": true
+    },
+    {
+      "check": "Offset counts bound marketevaluation1",
+      "passed": true
+    },
+    {
+      "check": "Offset counts bound marketevaluation2",
+      "passed": true
+    },
+    {
+      "check": "Offset counts bound marketevaluation3",
+      "passed": true
+    },
+    {
+      "check": "Offset counts bound marketevaluation4",
+      "passed": true
+    },
+    {
+      "check": "Offsets count total marketevaluationdaily",
+      "passed": true
+    },
+    {
+      "check": "Offsets weighted mean marketevaluationdaily",
+      "passed": true
+    },
+    {
+      "check": "Annual count total marketevaluationdaily",
+      "passed": true
+    },
+    {
+      "check": "Annual weighted mean marketevaluationdaily",
+      "passed": true
+    },
+    {
+      "check": "Offsets count total marketevaluationactive",
+      "passed": true
+    },
+    {
+      "check": "Offsets weighted mean marketevaluationactive",
+      "passed": true
+    },
+    {
+      "check": "Annual count total marketevaluationactive",
+      "passed": true
+    },
+    {
+      "check": "Annual weighted mean marketevaluationactive",
+      "passed": true
+    },
+    {
+      "check": "Annual original calendar count marketevaluation",
+      "passed": true
+    },
+    {
+      "check": "Annual missing bookkeeping market2020",
+      "passed": true
+    },
+    {
+      "check": "Annual missing bookkeeping market2021",
+      "passed": true
+    },
+    {
+      "check": "Annual missing bookkeeping market2022",
+      "passed": true
+    },
+    {
+      "check": "Annual missing bookkeeping market2023",
+      "passed": true
+    },
+    {
+      "check": "Annual missing bookkeeping market2024",
+      "passed": true
+    },
+    {
+      "check": "Annual missing bookkeeping market2025",
+      "passed": true
+    },
+    {
+      "check": "Two fixed evaluation slices market",
+      "passed": true
+    },
+    {
+      "check": "Slice count market0",
+      "passed": true
+    },
+    {
+      "check": "Slice count market1",
+      "passed": true
+    },
+    {
+      "check": "Conservative hypothesis probability market",
+      "passed": true
+    },
+    {
+      "check": "Saved Holm2 market",
+      "passed": true
+    },
+    {
+      "check": "Saved Holm146 market",
+      "passed": true
+    },
+    {
+      "check": "Gate-derived verdict market",
+      "passed": true
+    },
+    {
+      "check": "No saved or derived lead",
+      "passed": true
+    },
+    {
+      "check": "Metric and terminal source qualifier",
+      "passed": true
+    },
+    {
+      "check": "Source clock class everywhere",
+      "passed": true
+    },
+    {
+      "check": "Qualifier retains Z52 missing original clock and unknown quantities",
+      "passed": true
+    },
+    {
+      "check": "Qualifier withdraws untouched historical confirmation",
+      "passed": true
+    },
+    {
+      "check": "Historical access correction frozen",
+      "passed": true
+    },
+    {
+      "check": "Current failure.json absent",
+      "passed": true
+    },
+    {
+      "check": "Current failure_marker.json absent",
+      "passed": true
+    },
+    {
+      "check": "All frozen/output maps unchanged at completion",
+      "passed": true
+    },
+    {
+      "check": "All decoded audit inputs unchanged at completion",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "All144 full inherited source/hash/row-index identities unique",
+      "passed": true
+    }
+  ],
+  "audit_method_corrections": [
+    {
+      "initial_audit_sha256": "04328537947578b25915037486d98f802823e977e20f72caa07d009a5e6abcc6",
+      "initial_audit_check": "Inherited statistical identities unique",
+      "issue": "The initial audit key omitted the frozen measure field and grouped15 measurement_memory comparisons into5 labels.",
+      "resolution": "Retain qmle/rv5/rv15 distinctions and check full bound source/hash/row-index identities. All144 inherited dictionaries already matched their frozen predecessors exactly; no study data, comparison count or source artifact was changed."
+    }
+  ],
+  "pin_verification_completed_utc": "2026-09-09T04:39:11.652134+00:00"
+}

@@ -1,0 +1,13 @@
+test_civil_next_weekday_edges_and_no_exchange_calendar (tests.test_civil_quarter_features.CivilQuarterFeatures.test_civil_next_weekday_edges_and_no_exchange_calendar) ... ok
+test_civil_rank_is_full_fifteen_and_duplicate_interaction_rejects (tests.test_civil_quarter_features.CivilQuarterFeatures.test_civil_rank_is_full_fifteen_and_duplicate_interaction_rejects) ... ok
+test_each_support_threshold_and_both_binary_classes_are_literal (tests.test_civil_quarter_features.CivilQuarterFeatures.test_each_support_threshold_and_both_binary_classes_are_literal) ... ok
+test_final_five_civil_dates_boundaries_leap_year_and_december_exclusion (tests.test_civil_quarter_features.CivilQuarterFeatures.test_final_five_civil_dates_boundaries_leap_year_and_december_exclusion) ... ok
+test_fixed_names_counts_order_and_old_information_preserved (tests.test_civil_quarter_features.CivilQuarterFeatures.test_fixed_names_counts_order_and_old_information_preserved) ... ok
+test_future_source_rows_and_prices_cannot_change_civil_predictors (tests.test_civil_quarter_features.CivilQuarterFeatures.test_future_source_rows_and_prices_cannot_change_civil_predictors) ... ok
+test_invalid_schema_dates_and_cutoffs_reject_without_repair (tests.test_civil_quarter_features.CivilQuarterFeatures.test_invalid_schema_dates_and_cutoffs_reject_without_repair) ... ok
+test_unknown_nonbinary_and_invalid_support_scope_cannot_be_dropped (tests.test_civil_quarter_features.CivilQuarterFeatures.test_unknown_nonbinary_and_invalid_support_scope_cannot_be_dropped) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.141s
+
+OK

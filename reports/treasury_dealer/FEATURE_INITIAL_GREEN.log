@@ -1,0 +1,16 @@
+test_cold_start_or_current_unknown_masks_all_columns_for_only_its_pulse (tests.test_treasury_dealer_features.TreasuryDealerFeatureTests.test_cold_start_or_current_unknown_masks_all_columns_for_only_its_pulse) ... ok
+test_cutoff_tie_is_unknown_and_same_auction_day_never_donates (tests.test_treasury_dealer_features.TreasuryDealerFeatureTests.test_cutoff_tie_is_unknown_and_same_auction_day_never_donates) ... ok
+test_delayed_current_and_donor_are_unavailable_until_strictly_after_release (tests.test_treasury_dealer_features.TreasuryDealerFeatureTests.test_delayed_current_and_donor_are_unavailable_until_strictly_after_release) ... ok
+test_entire_date_envelope_precedes_financial_conversion (tests.test_treasury_dealer_features.TreasuryDealerFeatureTests.test_entire_date_envelope_precedes_financial_conversion) ... ok
+test_fixed_columns_full_calendar_floor_and_no_event_zero (tests.test_treasury_dealer_features.TreasuryDealerFeatureTests.test_fixed_columns_full_calendar_floor_and_no_event_zero) ... ok
+test_permutation_causal_prefix_and_inputs_are_preserved (tests.test_treasury_dealer_features.TreasuryDealerFeatureTests.test_permutation_causal_prefix_and_inputs_are_preserved) ... ok
+test_same_origin_aggregates_events_and_sum_of_log_offerings (tests.test_treasury_dealer_features.TreasuryDealerFeatureTests.test_same_origin_aggregates_events_and_sum_of_log_offerings) ... ok
+test_schema_native_calendar_unknown_values_and_availability_fail_honestly (tests.test_treasury_dealer_features.TreasuryDealerFeatureTests.test_schema_native_calendar_unknown_values_and_availability_fail_honestly) ... ok
+test_strict_release_clock_exact_twelve_prior_mean_and_no_carry (tests.test_treasury_dealer_features.TreasuryDealerFeatureTests.test_strict_release_clock_exact_twelve_prior_mean_and_no_carry) ... ok
+test_unknown_same_or_unresolved_tenor_blocks_but_older_other_and_excluded_do_not (tests.test_treasury_dealer_features.TreasuryDealerFeatureTests.test_unknown_same_or_unresolved_tenor_blocks_but_older_other_and_excluded_do_not) ... ok
+test_zero_dealer_share_is_real_and_two_year_tenor_is_omitted_category (tests.test_treasury_dealer_features.TreasuryDealerFeatureTests.test_zero_dealer_share_is_real_and_two_year_tenor_is_omitted_category) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.074s
+
+OK

@@ -1,0 +1,14 @@
+{
+  "status": "VERIFIED_BEFORE_NUMERICAL_ACCESS",
+  "source_and_ancestral_pin_count": 30050,
+  "inherited_comparisons": 149,
+  "six_market_pins": {
+    "data/research_paths/spx_daily.parquet": "3958fbb1eb36689df1596c26b9f0e02e3f1d4fa3b0032381e5287a2a03697bf0",
+    "data/raw/daily_ohlc.parquet": "710290d8ad8569172559334b23e423b50ecf7cd10f0fd8ec24a9fc29608bca4d",
+    "data/free_sources/raw/cboe/VIX_History.csv": "a34aabce269632f30904cf482986dd50b6d4cf51f2203dc51a0a9f460f3c90b2",
+    "data/free_sources/raw/cboe/VIX9D_History.csv": "0d6f600ee71bf6ffb5069d0c583cbe0b1ec97df6da4e4e439d5f0f22f5616abe",
+    "data/free_sources/raw/cboe/VVIX_History.csv": "f6bc726455fa3859c662875a005e97ba656b9536ae58fa6977ad24c6228e4f6a",
+    "data/free_sources/raw/cboe/VXN_History.csv": "753b5a406a7a888a9e4ca1a3e37a71fbb415a3883bc4b02ff20dbf0c5bdc6c98"
+  },
+  "numerical_data_decoded": false
+}

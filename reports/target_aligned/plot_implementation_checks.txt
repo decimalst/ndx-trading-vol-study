@@ -1,0 +1,25 @@
+
+Fontconfig error: No writable cache directories
+	/opt/homebrew/var/cache/fontconfig
+	/Users/byrons/.cache/fontconfig
+	/Users/byrons/.fontconfig
+Matplotlib is building the font cache; this may take a moment.
+test_all_registered_family_and_new_fit_counts_required (tests.test_plot_target_aligned.PlotContracts.test_all_registered_family_and_new_fit_counts_required) ... ok
+test_complete_family_is_ordered_without_mutating_literal_values (tests.test_plot_target_aligned.PlotContracts.test_complete_family_is_ordered_without_mutating_literal_values) ... ok
+test_exact_current_verified_hash_identity_and_success_required (tests.test_plot_target_aligned.PlotContracts.test_exact_current_verified_hash_identity_and_success_required) ... ok
+test_exact_zero_loss_and_effect_are_valid (tests.test_plot_target_aligned.PlotContracts.test_exact_zero_loss_and_effect_are_valid) ... ok
+test_finite_native_losses_intervals_probabilities_and_n_required (tests.test_plot_target_aligned.PlotContracts.test_finite_native_losses_intervals_probabilities_and_n_required) ... ok
+test_invalid_input_produces_no_plot_artifacts (tests.test_plot_target_aligned.PlotContracts.test_invalid_input_produces_no_plot_artifacts) ... ok
+test_main_binds_current_protocol_and_blocks_canonical_failure (tests.test_plot_target_aligned.PlotContracts.test_main_binds_current_protocol_and_blocks_canonical_failure) ... ok
+test_missing_duplicate_or_wrong_comparison_and_phase_rejected (tests.test_plot_target_aligned.PlotContracts.test_missing_duplicate_or_wrong_comparison_and_phase_rejected) ... ok
+test_three_panels_preserve_literal_intervals_and_render_without_label_overlap (tests.test_plot_target_aligned.PlotContracts.test_three_panels_preserve_literal_intervals_and_render_without_label_overlap) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.452s
+
+OK
+
+Scoped Ruff: all checks passed.
+Visual review: synthetic PNG inspected; three panels, native quartic units, literal intervals, threshold line, labels and footer readable without overlap.
+Synthetic figure: /private/tmp/codex-target-aligned-synthetic-plot/comparison_intervals.png
+No empirical source, forecast, loss, or score values read.

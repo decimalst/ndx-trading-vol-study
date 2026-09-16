@@ -1,0 +1,92 @@
+{
+  "status": "VERIFIED_REPORT_AUDITED",
+  "audited_utc": "2026-09-07T10:35:20.231903+00:00",
+  "protocol_sha256": "a825704da953cd84302ee37430e446f8558d700859ccc7d2b44fbf5e2268f3d0",
+  "verifier_sha256": "44c0dc5ab288dfd95cc483b98ea7f198bd587830a24141baa210d259b13b5c27",
+  "verification_sha256": "6a9e1348e93b44e6d0e88aba9b977f85b29489d1913834bbec58e267bafe4039",
+  "manifest_sha256": "47c6bc32556a30ae444a80380a2cd3a0076aa2df511d6814c5cec359cf1dcb0c",
+  "summary_sha256": "5da9af72cd67770a7e9c9b6101ba8c99795c97a3e688858ff03eda7cbf4ca85b",
+  "figure_visually_reviewed": true,
+  "frozen_manifest_entries_checked": {
+    "code": 223,
+    "inputs": 135,
+    "preserved": 326
+  },
+  "prefit_code_and_design_pins_unchanged": true,
+  "prior_wave_manifests_checked": 12,
+  "prior_unique_file_pins_checked": 1454,
+  "report_local_links_checked": {
+    "SUMMARY.md": 17,
+    "NEXT_CAUSAL_CALIBRATION_DESIGN.md": 1,
+    "NEXT_CALENDAR_AUDIT.md": 14
+  },
+  "ledger_events": 121,
+  "ledger_event_counts": {
+    "inherited": 117,
+    "registered": 2,
+    "evaluated": 2
+  },
+  "generated_forecasts_by_recent_wave": {
+    "iterative_signal_search": 30040,
+    "international_volatility": 17703,
+    "overnight_index": 12310,
+    "macro_overnight": 10495,
+    "measurement_memory": 8008,
+    "index_hinge": 14280,
+    "tail_shape": 7374,
+    "calendar_variance": 6297,
+    "relative_risk": 7386,
+    "joint_risk": 7386,
+    "cross_moment": 0,
+    "target_aligned": 4924,
+    "sign_memory": 7386
+  },
+  "generated_forecasts_total": 133589,
+  "new_hypotheses_by_recent_wave": {
+    "iterative_signal_search": 12,
+    "international_volatility": 6,
+    "overnight_index": 6,
+    "macro_overnight": 6,
+    "measurement_memory": 15,
+    "index_hinge": 4,
+    "tail_shape": 3,
+    "calendar_variance": 2,
+    "relative_risk": 2,
+    "joint_risk": 2,
+    "cross_moment": 2,
+    "target_aligned": 3,
+    "sign_memory": 2
+  },
+  "recent_wave_new_hypotheses": 65,
+  "enumerated_initial_hypotheses": 54,
+  "current_wave_new_forecasts": 7386,
+  "current_wave_new_hypotheses": 2,
+  "cumulative_hypotheses": 119,
+  "leads": [],
+  "count_source_verification_hashes": {
+    "reports/iterative_signal_search/verification.json": "0261a6368960d8b6e679cb64940f8dcc78bac1e2da8603ee043d18aa60e4879f",
+    "reports/international_volatility/verification.json": "2d8d3406892974ab1725dc339442d80f1728f840710f0c761b05834482098c92",
+    "reports/overnight_index/verification.json": "7db97e905982a0a5bdf0c0abad970f51d55440a96fb92a6703e29270f5bdbc5a",
+    "reports/macro_overnight/verification.json": "8e539f04e8014f6823bc9da15f705bbc645e24ea1b1ac631ee843900c0b5c8b8",
+    "reports/measurement_memory/verification.json": "5c5676f8e25271851f6010d5fc6abf0f0543f55f35e3609c1f6e627888833018",
+    "reports/index_hinge/verification.json": "609a877047936bc32be1f36be5c0d0333f9a49be50c933064be1d6a7c10ef41e",
+    "reports/tail_shape/verification.json": "d4f63b1848a4d33170101c8717c50c5bf0ad07b254d262ffda83517735fa89ff",
+    "reports/calendar_variance/verification.json": "47f2a0a333df19d258ca95dfef9fbf403ee0ae6f6a675ec85903755b84943cb7",
+    "reports/relative_risk/verification.json": "521e72b127df0267097b380160e563ca64e3a7825c3df11395d8e79a03e02f60",
+    "reports/joint_risk/verification.json": "d62544e15e9575371a95fd7f1d5fdcb5e034cc49f7e78268a50ae5ffc5d3c3e3",
+    "reports/cross_moment/verification.json": "b3745d90db160e1102f2c3b987627add1d890958e38b52bb30499b77f5c13fa0",
+    "reports/target_aligned/verification.json": "dfdc8224a8b7455622e6a16e2671bc70fe01a9a2600e78f39814ad824510fbd0",
+    "reports/sign_memory/verification.json": "6a9e1348e93b44e6d0e88aba9b977f85b29489d1913834bbec58e267bafe4039"
+  },
+  "report_artifact_hashes": {
+    "SUMMARY.md": "5da9af72cd67770a7e9c9b6101ba8c99795c97a3e688858ff03eda7cbf4ca85b",
+    "NEXT_CAUSAL_CALIBRATION_DESIGN.md": "e74e8a8182a8af5e6da6551e4d0d1df3ada7c13e37b2553819a77d23f58a9f7f",
+    "NEXT_CALENDAR_AUDIT.md": "60ec370defe9abff307be2d2caead0de0c619779265d8ed49bec051ff105b549",
+    "comparison_intervals.png": "82fe52d73e44303ff6426e3608bace6fdbbce885cbbd900d9f9a0253ebbb2b5e",
+    "comparison_intervals.pdf": "295ee1afee6c93128643ed5af0371b211858a5c4268c5cdceb146e788e9993ca",
+    "metrics.json": "dc9d9827ba0f480296045993a1ff176242119fbbb6c20343fc94c1e4ce7c5290",
+    "verification.json": "6a9e1348e93b44e6d0e88aba9b977f85b29489d1913834bbec58e267bafe4039",
+    "trial_ledger.jsonl": "3a78d65366158c53ccdf7e486f0399cfe3829f37e7a4940eff6deb6fb41870d3"
+  },
+  "interpretation_review": "Independent read-only review found no actionable corrections to the numerical findings, counts or interpretation. All four phase rows, two adjusted-p rows, stability/MDE rows and six calibration summaries were additionally checked against verified metrics at printed precision. Figure visually reviewed. Both next-question notes remain prospective and unregistered, with no new empirical calculations. The causal-pooling review found no conceptual blocker; its seed-label provenance and separate state/last-included-label dates were clarified before this publication audit."
+}

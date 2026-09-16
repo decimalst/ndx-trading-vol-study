@@ -1,0 +1,325 @@
+{
+  "checkpoint_sha256": "d63de42754c25a1999f83b31b43f776d4d0eff1658f36b9831a67e3616d2e8a2",
+  "counts": {
+    "archive_associations": 7,
+    "available_full_page_reviews": 4,
+    "documents": 5,
+    "manual_release_date_resolutions": 2,
+    "unavailable_notices": 1
+  },
+  "documents": [
+    {
+      "affected_fields": [
+        "SOMATendered",
+        "SOMAAccepted",
+        "TotalTendered",
+        "TotalAccepted"
+      ],
+      "archive_memberships": [
+        {
+          "announcement_date": "2010-06-17",
+          "auction_date": "2010-06-22",
+          "cusip": "912828NS5",
+          "security_term": "2-Year",
+          "security_type": "Note",
+          "term_bucket": "2-Year"
+        },
+        {
+          "announcement_date": "2010-06-17",
+          "auction_date": "2010-06-23",
+          "cusip": "912828NL0",
+          "security_term": "5-Year",
+          "security_type": "Note",
+          "term_bucket": "5-Year"
+        },
+        {
+          "announcement_date": "2010-06-17",
+          "auction_date": "2010-06-24",
+          "cusip": "912828NK2",
+          "security_term": "7-Year",
+          "security_type": "Note",
+          "term_bucket": "7-Year"
+        }
+      ],
+      "body_applicability": [
+        {
+          "auction_date": "2010-06-22",
+          "basis": "Auction-date and CUSIP rows explicitly printed in the amendment table",
+          "cusip": "912828NS5",
+          "term": "2-Year"
+        },
+        {
+          "auction_date": "2010-06-23",
+          "basis": "Auction-date and CUSIP rows explicitly printed in the amendment table",
+          "cusip": "912828NL0",
+          "term": "5-Year"
+        },
+        {
+          "auction_date": "2010-06-24",
+          "basis": "Auction-date and CUSIP rows explicitly printed in the amendment table",
+          "cusip": "912828NK2",
+          "term": "7-Year"
+        }
+      ],
+      "body_sha256": "c00fa6a50da70ee9dae1abca28d95f0a71de4f57ffc3412b78b3741be246ce27",
+      "disposition": "FIELD_SPECIFIC_CORRECTION_RETAIN_ORIGINAL_AND_AMENDMENT",
+      "evidence_sections": [
+        "Immediate-release header June25,2010; amended-results heading; three-row original/corrected SOMA table; closing paragraph identifies four changed fields and leaves other results unchanged.",
+        "Prior pinned pilot accounting recovers the original SOMA award in both June22 result formats; no later correction was subtracted to reconstruct it."
+      ],
+      "explicit_unchanged_fields": [
+        "All other auction-result details are expressly unchanged, including the competitive bidder categories."
+      ],
+      "header_parser_status": "DATED_NOTICE_TEXT_READY_FOR_REVIEW",
+      "prior_evidence": [
+        {
+          "path": "reports/next_signal_review/TREASURY_PILOT_NOTICE_FINDINGS.md",
+          "sha256": "fcb45111aa1b92e67dfb98787677e911381f116f24add9a39ef2518a20d6f8d5"
+        },
+        {
+          "path": "reports/next_signal_review/TREASURY_PILOT_ACCOUNTING_SUMMARY.md",
+          "sha256": "52eeb32275265362adeb905d458f8118fafc33935ac8c5e0fd4dddafa8fd33a0"
+        }
+      ],
+      "purposes": [
+        "RESULT_CORRECTION_LIMITED_TO_SOMA_AND_OVERALL_TOTALS"
+      ],
+      "release_date": "2010-06-25",
+      "source_admitted": false,
+      "text_sha256": "e1ea72427b882dfe5576d8b73a5fee4f1cff2683514172c8eda4884ce7ac52e1",
+      "unresolved": [
+        "Authenticate initial result formats, clocks and affected originals separately for the June23 and June24 events; they were not part of the result-amount pilot."
+      ],
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/BPD_SPL_20100625_1.pdf",
+      "visual_evidence": [
+        {
+          "basis": "complete page viewed in prior pilot; preserved original and prior documentary review reused",
+          "path": "data/source_discovery/treasury_auction/pilot_visual_v1/p06-1.png",
+          "sha256": "3258b799453116f93718b0f4e25284d0cd33c98420f40545ce965508b882c3f4"
+        }
+      ]
+    },
+    {
+      "affected_fields": [
+        "accrued_interest_per_1000",
+        "auction_price",
+        "net_settlement_amount"
+      ],
+      "archive_memberships": [
+        {
+          "announcement_date": "2015-09-03",
+          "auction_date": "2015-09-10",
+          "cusip": "912810RN0",
+          "security_term": "29-Year 11-Month",
+          "security_type": "Bond",
+          "term_bucket": "30-Year"
+        }
+      ],
+      "body_applicability": [
+        {
+          "auction_date": "2015-09-10",
+          "basis": "Title and all substantive paragraphs identify the security and auction date",
+          "cusip": "912810RN0",
+          "term": "29-Year 11-Month Bond"
+        },
+        {
+          "announcement_date": "2015-09-03",
+          "basis": "First paragraph references the earlier announcement for the correctly rounded accrued interest.",
+          "cusip": "912810RN0",
+          "document_role": "offering_announcement"
+        }
+      ],
+      "body_sha256": "200a943dcb0435a932f08b5159e847099be17ac2da437ff46253aec213783f17",
+      "disposition": "ERROR_DISCLOSED_WITHOUT_REPLACING_ORIGINAL_RESULTS",
+      "evidence_sections": [
+        "Whole-page immediate-release header September11,2015; title identifies September10 result; first two paragraphs disclose accrued-interest and price rounding and settlement consequences; final paragraph says original results are final."
+      ],
+      "explicit_unchanged_fields": [
+        "Treasury expressly declares the originally released September10 auction results final."
+      ],
+      "header_parser_status": "DATED_NOTICE_TEXT_READY_FOR_REVIEW",
+      "purposes": [
+        "SETTLEMENT_ROUNDING_ERROR_DISCLOSURE",
+        "ORIGINAL_RESULTS_DECLARED_FINAL"
+      ],
+      "release_date": "2015-09-11",
+      "source_admitted": false,
+      "text_sha256": "6a095629047bb7854c8114243b72d6ed0c471d8dbb849a589af2dbe82292cae8",
+      "unresolved": [
+        "Authenticate the original announcement/result pair during full result-history admission. This notice states no dealer-allocation amendment and supplies no first allocation addendum."
+      ],
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2015/BPD_SPL_20150911_1.pdf",
+      "visual_evidence": [
+        {
+          "path": "data/source_discovery/treasury_auction/full_notice_review_root_v1/BPD_SPL_20150911_1-1.png",
+          "sha256": "933999ad6e8d316bda363bec2d195998b355ed667ea75c24c542f18542246bde"
+        }
+      ]
+    },
+    {
+      "affected_fields": [
+        "event_class",
+        "permitted_bidder_participation",
+        "submission_method"
+      ],
+      "archive_memberships": [
+        {
+          "announcement_date": "2019-06-21",
+          "auction_date": "2019-06-21",
+          "cusip": "9128286T2",
+          "security_term": "9-Year 11-Month",
+          "security_type": "Note",
+          "term_bucket": "10-Year"
+        }
+      ],
+      "body_applicability": [
+        {
+          "auction_date": "2019-06-21",
+          "basis": "Body explicitly identifies the live contingency operation and security",
+          "cusip": "9128286T2",
+          "term": "9-Year 11-Month Note"
+        },
+        {
+          "basis": "Opening paragraph cross-references the earlier announcement of intent; no URL was supplied or fetched.",
+          "document_role": "prior_contingency_intent_notice",
+          "notice_date": "2019-05-01"
+        }
+      ],
+      "body_sha256": "f55544bfc9f0e03b59f8108de0b139614476afa2d8c383bc0e3d186fd4e12630",
+      "disposition": "EXCLUDE_JUNE21_TEST_FROM_REGULAR_AUCTION_UNIVERSE",
+      "evidence_sections": [
+        "Complete previously viewed page: June20 release header; title/body identify June21 live infrastructure test; terms restrict participation to primary dealers and prohibit customer/noncompetitive/FIMA tenders while separately permitting SOMA."
+      ],
+      "explicit_unchanged_fields": [],
+      "header_parser_status": "HEADER_REQUIRES_REVIEW",
+      "manual_release_date_basis": "Complete original page visibly dates the immediate-release header June20,2019; concatenated text caused the frozen parser failure, which is preserved.",
+      "prior_evidence": [
+        {
+          "path": "reports/next_signal_review/TREASURY_PILOT_NOTICE_FINDINGS.md",
+          "sha256": "fcb45111aa1b92e67dfb98787677e911381f116f24add9a39ef2518a20d6f8d5"
+        }
+      ],
+      "purposes": [
+        "LIVE_CONTINGENCY_TEST_WITH_RESTRICTED_PARTICIPATION"
+      ],
+      "release_date": "2019-06-20",
+      "source_admitted": false,
+      "text_sha256": "0198c551c4c117681045a2999a112a718a8608b11cb13cf75b1718f4c8c09b03",
+      "unresolved": [
+        "The referenced May1 intent notice is not fetched in this fixed batch; it is not needed to reinterpret this explicit test as a regular auction."
+      ],
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190620_4.pdf",
+      "visual_evidence": [
+        {
+          "basis": "complete page viewed in prior pilot; preserved original and prior documentary review reused",
+          "path": "data/source_discovery/treasury_auction/pilot_visual_v1/p03-1.png",
+          "sha256": "df3296efdda031af621c4addefe212a56f93cf97c175111b10a24ee758fc6312"
+        }
+      ]
+    },
+    {
+      "affected_fields": [],
+      "archive_memberships": [
+        {
+          "announcement_date": "2019-12-19",
+          "auction_date": "2019-12-24",
+          "cusip": "912828YY0",
+          "security_term": "5-Year",
+          "security_type": "Note",
+          "term_bucket": "5-Year"
+        }
+      ],
+      "body_applicability": [],
+      "body_sha256": "f798aedf92adfc4bae426a3fd50581a70a66a8aa5eb4d472aba6ab9f9f7ada89",
+      "disposition": "UNKNOWN_NOTICE_CONTENT_AND_RELEASE_CLOCK",
+      "evidence_sections": [
+        "Certificate-verified request to exact selected URL returned HTTP404; the received body is retained as failed transport evidence and was not parsed as a PDF."
+      ],
+      "explicit_unchanged_fields": [],
+      "header_parser_status": "TRANSPORT_REQUIRES_REVIEW",
+      "purposes": [
+        "UNAVAILABLE_LINKED_NOTICE"
+      ],
+      "release_date": null,
+      "source_admitted": false,
+      "text_sha256": null,
+      "unresolved": [
+        "Recover the exact notice through an authenticated primary-source reference or keep the December24,2019/912828YY0 association explicitly unknown. Filename and archive link do not establish content, date or conditionality."
+      ],
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20191219_3.pdf"
+    },
+    {
+      "affected_fields": [
+        "noncompetitive_bid_closing_time",
+        "competitive_bid_closing_time"
+      ],
+      "archive_memberships": [
+        {
+          "announcement_date": "2025-06-18",
+          "auction_date": "2025-06-26",
+          "cusip": "91282CNJ6",
+          "security_term": "7-Year",
+          "security_type": "Note",
+          "term_bucket": "7-Year"
+        }
+      ],
+      "body_applicability": [
+        {
+          "auction_date": "2025-06-26",
+          "basis": "Date and term explicitly supplied by body; note CUSIP mapped from the preserved same-date/term inventory, not printed in notice.",
+          "cusip": null,
+          "term": "4-Week Bill"
+        },
+        {
+          "auction_date": "2025-06-26",
+          "basis": "Date and term explicitly supplied by body; note CUSIP mapped from the preserved same-date/term inventory, not printed in notice.",
+          "cusip": null,
+          "term": "8-Week Bill"
+        },
+        {
+          "auction_date": "2025-06-26",
+          "basis": "Date and term explicitly supplied by body; note CUSIP mapped from the preserved same-date/term inventory, not printed in notice.",
+          "cusip": null,
+          "term": "77-Day Bill"
+        },
+        {
+          "auction_date": "2025-06-26",
+          "basis": "Date and term explicitly supplied by body; note CUSIP mapped from the preserved same-date/term inventory, not printed in notice.",
+          "cusip": "91282CNJ6",
+          "term": "7-Year Note"
+        }
+      ],
+      "body_sha256": "63258e1b180b12e322430d45688fe4b2f565e5754fb784e3be8093e251f1eed5",
+      "disposition": "DATED_PRE_AUCTION_CLOSING_TIMES_NOTICE",
+      "evidence_sections": [
+        "Whole-page header June24,2025 and title June26,2025; two body paragraphs separate four-/eight-week bills from the 77-day bill and seven-year note, each with distinct Eastern bid closing times."
+      ],
+      "explicit_unchanged_fields": [],
+      "header_parser_status": "HEADER_REQUIRES_REVIEW",
+      "manual_release_date_basis": "Complete original page visibly shows June24,2025 in the header; contact/release text overlaps in the original and concatenates in extraction. Frozen header failure remains preserved.",
+      "purposes": [
+        "AUCTION_CLOSING_TIMES"
+      ],
+      "release_date": "2025-06-24",
+      "source_admitted": false,
+      "text_sha256": "b505c7433b5a6a2cc4e909e3c3cae554250c1c8f44e2a2e2e364f76db692b956",
+      "unresolved": [
+        "Bid closing times do not authenticate when final allocations were released; result dates and identities still require their own source checks."
+      ],
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250624_2.pdf",
+      "visual_evidence": [
+        {
+          "path": "data/source_discovery/treasury_auction/full_notice_review_root_v1/SPL_20250624_2-1.png",
+          "sha256": "aa048d35e7dfabf28e813d4e895ba6290060d02ab8ddf6c160989baa93bc1ebc"
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Documentary findings only; full source history is not admitted.",
+    "Root viewed complete new2015/2025 pages and reused pinned complete pilot-page reviews for2010/2019.",
+    "No new financial scalar conversion, model features, targets, or scores.",
+    "Actual applicability and primary cross-references remain separate from archive memberships."
+  ],
+  "reviewer": "root"
+}

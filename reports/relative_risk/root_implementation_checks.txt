@@ -1,0 +1,78 @@
+test_apply_rows_do_not_change_training_scaling (tests.test_relative_risk_models.RelativeRiskModels.test_apply_rows_do_not_change_training_scaling) ... ERROR
+test_component_ridge_subtraction_is_same_forecast_not_new_arm (tests.test_relative_risk_models.RelativeRiskModels.test_component_ridge_subtraction_is_same_forecast_not_new_arm) ... ok
+test_constant_signed_target_keeps_unpenalized_intercept (tests.test_relative_risk_models.RelativeRiskModels.test_constant_signed_target_keeps_unpenalized_intercept) ... ok
+test_exact_next_session_maturity_is_required (tests.test_relative_risk_models.RelativeRiskModels.test_exact_next_session_maturity_is_required) ... ok
+test_exact_previous_session_cutoff_is_required (tests.test_relative_risk_models.RelativeRiskModels.test_exact_previous_session_cutoff_is_required) ... ok
+test_future_labels_cannot_change_earlier_fit (tests.test_relative_risk_models.RelativeRiskModels.test_future_labels_cannot_change_earlier_fit) ... ok
+test_infinite_target_is_rejected (tests.test_relative_risk_models.RelativeRiskModels.test_infinite_target_is_rejected) ... ok
+test_label_order_is_checked (tests.test_relative_risk_models.RelativeRiskModels.test_label_order_is_checked) ... ok
+test_maturity_uses_previous_observed_session_and_all_features (tests.test_relative_risk_models.RelativeRiskModels.test_maturity_uses_previous_observed_session_and_all_features) ... ok
+test_minimum_cannot_be_silently_skipped (tests.test_relative_risk_models.RelativeRiskModels.test_minimum_cannot_be_silently_skipped) ... ok
+test_negative_and_zero_log_risk_ratios_are_valid (tests.test_relative_risk_models.RelativeRiskModels.test_negative_and_zero_log_risk_ratios_are_valid) ... ok
+test_refit_origin_is_independent_of_query_label (tests.test_relative_risk_models.RelativeRiskModels.test_refit_origin_is_independent_of_query_label) ... ok
+test_same_common_rows_and_one_joint_correlation (tests.test_relative_risk_models.RelativeRiskModels.test_same_common_rows_and_one_joint_correlation) ... ok
+test_saved_coefficients_satisfy_full_normalized_mse_gradient (tests.test_relative_risk_models.RelativeRiskModels.test_saved_coefficients_satisfy_full_normalized_mse_gradient) ... ok
+test_target_scale_equivariance (tests.test_relative_risk_models.RelativeRiskModels.test_target_scale_equivariance) ... ok
+test_zero_scale_candidate_aborts_even_baseline (tests.test_relative_risk_models.RelativeRiskModels.test_zero_scale_candidate_aborts_even_baseline) ... ok
+test_all_four_phase_scores_and_110_adjustment_preserved (tests.test_relative_risk_search.RelativeRiskSearch.test_all_four_phase_scores_and_110_adjustment_preserved) ... ok
+test_all_gates_and_both_controls_required (tests.test_relative_risk_search.RelativeRiskSearch.test_all_gates_and_both_controls_required) ... ok
+test_common_paired_metadata_and_finite_signed_forecasts_required (tests.test_relative_risk_search.RelativeRiskSearch.test_common_paired_metadata_and_finite_signed_forecasts_required) ... ok
+test_core_contract_amendments_rejected (tests.test_relative_risk_search.RelativeRiskSearch.test_core_contract_amendments_rejected) ... ok
+test_failed_wave_retains_both_as_p_one (tests.test_relative_risk_search.RelativeRiskSearch.test_failed_wave_retains_both_as_p_one) ... ok
+test_inference_does_not_shrink_blocks_or_remove_nonfinite (tests.test_relative_risk_search.RelativeRiskSearch.test_inference_does_not_shrink_blocks_or_remove_nonfinite) ... ok
+test_inherited_count_is_full_enumerated_family (tests.test_relative_risk_search.RelativeRiskSearch.test_inherited_count_is_full_enumerated_family) ... FAIL
+test_literal_protocol (tests.test_relative_risk_search.RelativeRiskSearch.test_literal_protocol) ... ERROR
+test_negative_losses_are_invalid_even_with_signed_target (tests.test_relative_risk_search.RelativeRiskSearch.test_negative_losses_are_invalid_even_with_signed_target) ... ok
+test_nominal_small_or_one_phase_gain_cannot_pass (tests.test_relative_risk_search.RelativeRiskSearch.test_nominal_small_or_one_phase_gain_cannot_pass) ... ok
+test_paired_inference_uses_worst_dependence_method (tests.test_relative_risk_search.RelativeRiskSearch.test_paired_inference_uses_worst_dependence_method) ... ok
+test_zero_control_mse_cannot_define_relative_gain (tests.test_relative_risk_search.RelativeRiskSearch.test_zero_control_mse_cannot_define_relative_gain) ... ok
+
+======================================================================
+ERROR: test_apply_rows_do_not_change_training_scaling (tests.test_relative_risk_models.RelativeRiskModels.test_apply_rows_do_not_change_training_scaling)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3641, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/index.pyx", line 168, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 197, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7668, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7676, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'lrv_d'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_relative_risk_models.py", line 118, in test_apply_rows_do_not_change_training_scaling
+    altered["lrv_d"] += 2
+    ~~~~~~~^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 4378, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3648, in get_loc
+    raise KeyError(key) from err
+KeyError: 'lrv_d'
+
+======================================================================
+ERROR: test_literal_protocol (tests.test_relative_risk_search.RelativeRiskSearch.test_literal_protocol)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_relative_risk_search.py", line 72, in test_literal_protocol
+    study.validate(protocol())
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/relative_risk_search.py", line 70, in validate
+    or p["correlation"]["source_publication_start"] != "2010-01-01"
+       ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'source_publication_start'
+
+======================================================================
+FAIL: test_inherited_count_is_full_enumerated_family (tests.test_relative_risk_search.RelativeRiskSearch.test_inherited_count_is_full_enumerated_family)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_relative_risk_search.py", line 157, in test_inherited_count_is_full_enumerated_family
+    self.assertEqual(
+AssertionError: 2 != 3
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.280s
+
+FAILED (failures=1, errors=2)

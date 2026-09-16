@@ -1,0 +1,2081 @@
+{
+  "checkpoint_sha256": "ad9e653d799ca6799c12fb9d4e676e6cae2db6efb1e412da11eb4b6ffc533dea",
+  "completed_utc": "2026-09-09T00:04:22.671019+00:00",
+  "documents": [
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/26942f092b1143bff727c4ccd5c5bf51b1fafb7aff182fdae79c6bba4729e83a/body.pdf",
+      "body_sha256": "7d9bf9703eb19cab6103ab9ff3991cfd6663225adcb05b89f2004ce9c00577fc",
+      "format": "pdf",
+      "headers_sha256": "8018cbf581634fd2cd9de4a1b58c3a8004ec6bf6031637b9dddac2c873f1361f",
+      "memberships": [
+        {
+          "auction_date": "2010-01-14",
+          "cusip": "912810QD3",
+          "kind": "announcement_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/26942f092b1143bff727c4ccd5c5bf51b1fafb7aff182fdae79c6bba4729e83a/receipt.json",
+      "receipt_sha256": "9b2dbc5bdb19d861dc32b85252aeeaf797ced5da00a6f5eb26bba29a1f6e218e",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/A_20100107_1.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/8ee5392c1f706be923493e9f0933d919c3f0cba1b097b9da5d3568cd52b8051d/body.pdf",
+      "body_sha256": "6400ffc58cf7a1611bf7f838856a0572fe2fed33271ced638ab238dfeba2688e",
+      "format": "pdf",
+      "headers_sha256": "cfd6b5c2a4df3db6a1d5d252a78a73ece736201ebaf866f3a8d7589928e58b1e",
+      "memberships": [
+        {
+          "auction_date": "2010-01-13",
+          "cusip": "912828LY4",
+          "kind": "announcement_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/8ee5392c1f706be923493e9f0933d919c3f0cba1b097b9da5d3568cd52b8051d/receipt.json",
+      "receipt_sha256": "5702e9eda8ecac180315a4e00fd6d00e05eaf5728a83680dccf86af05ffda67b",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/A_20100107_3.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/4564f88fc7b8ad5a2b4c25e2a3c781292ddd58cb6bf8824f3ccf91149a481fb4/body.pdf",
+      "body_sha256": "2c13ec5f84ca0979e02e673b61b67068a21771aaf616c334c31c78f273a9b010",
+      "format": "pdf",
+      "headers_sha256": "75a483ae9d046419ea733e2bb9891f946c52ce5b8bb57b4a035cab73c543255c",
+      "memberships": [
+        {
+          "auction_date": "2010-01-12",
+          "cusip": "912828MG2",
+          "kind": "announcement_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/4564f88fc7b8ad5a2b4c25e2a3c781292ddd58cb6bf8824f3ccf91149a481fb4/receipt.json",
+      "receipt_sha256": "30aa7c28e3038a1eec5cf55d020c84ee70a007e7732ec039fc552c310cd65c9b",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/A_20100107_4.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/ca4e1ff3d8684f7fb75300f77bfa7a9f845c5d113742313a82cd4304ead7317d/body.pdf",
+      "body_sha256": "30f72932ca0dcbc16847a7f922657dc59dcf96fff73bbdf3c03ecb000fb00172",
+      "format": "pdf",
+      "headers_sha256": "216f4b0a6c035f1822c9a9424b54f78b68c39b83516a931582d67bd0c3658c25",
+      "memberships": [
+        {
+          "auction_date": "2010-01-26",
+          "cusip": "912828MJ6",
+          "kind": "announcement_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/ca4e1ff3d8684f7fb75300f77bfa7a9f845c5d113742313a82cd4304ead7317d/receipt.json",
+      "receipt_sha256": "871dc39796309ffa1cceefb834ea6d929bebee5652527ec17a630add7ecfb438",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/A_20100121_3.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/23a0b60a522e5e51d8b6c4dfb896cdc3c3436ffe18cfbf9a972630fcf9bc5989/body.pdf",
+      "body_sha256": "aa7c6417cce1820232744ae49be7bc2e9d82dd89652f3f40a46751635344dd01",
+      "format": "pdf",
+      "headers_sha256": "33943408ab8b0609aacf2751ebeeabbceb8cce7f8683d7fd4e259cb3f0dfe59a",
+      "memberships": [
+        {
+          "auction_date": "2010-01-28",
+          "cusip": "912828MK3",
+          "kind": "announcement_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/23a0b60a522e5e51d8b6c4dfb896cdc3c3436ffe18cfbf9a972630fcf9bc5989/receipt.json",
+      "receipt_sha256": "a9e0009a2b5e6d7ba406647f69c84bbaeafc85f7d8480819f495d1c3023e3476",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/A_20100121_4.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/7c3efa8e6949d85f8ed0fa6f55891db0047d40d5994efae2ad0e42de83923591/body.pdf",
+      "body_sha256": "9d0e3a15244d774741b729a5b88645db2acd351a81bd3a24104de93461ddfc03",
+      "format": "pdf",
+      "headers_sha256": "f4e331932346e8569a137f75f141feff611e07dff8b186d63f651ede058cdfc0",
+      "memberships": [
+        {
+          "auction_date": "2010-01-27",
+          "cusip": "912828MH0",
+          "kind": "announcement_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/7c3efa8e6949d85f8ed0fa6f55891db0047d40d5994efae2ad0e42de83923591/receipt.json",
+      "receipt_sha256": "3f9012ba9eb221cc360918c49e5ae469223a5b621df364385335dfc08ff8eb3f",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/A_20100121_5.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/8adba6253a4849fb607ba804f0c7145205e353816d42a5f965563bbab5089e0b/body.pdf",
+      "body_sha256": "cf1f4df3ec306d312bafc524cd08db195689f9d6f59deaf46aa2036efe94d786",
+      "format": "pdf",
+      "headers_sha256": "a3b6fddae6852e9d8ebb64984995ac4485ee3e6ba59b399882b10327ba033936",
+      "memberships": [
+        {
+          "auction_date": "2010-06-22",
+          "cusip": "912828NS5",
+          "kind": "announcement_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/8adba6253a4849fb607ba804f0c7145205e353816d42a5f965563bbab5089e0b/receipt.json",
+      "receipt_sha256": "ae189408505a6511cc80fd972df54d8d8a43a7e3d072c96489bb095926dee54a",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/A_20100617_2.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/396a23ebee70f3b533a092fad2d262d15f899689eae133c0b9c24d80434304f4/body.pdf",
+      "body_sha256": "c00fa6a50da70ee9dae1abca28d95f0a71de4f57ffc3412b78b3741be246ce27",
+      "format": "pdf",
+      "headers_sha256": "225429684da5f43d91192606b7702861ad40f14832dc2258d74f211b5dda0ed9",
+      "memberships": [
+        {
+          "auction_date": "2010-06-22",
+          "cusip": "912828NS5",
+          "kind": "special_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/396a23ebee70f3b533a092fad2d262d15f899689eae133c0b9c24d80434304f4/receipt.json",
+      "receipt_sha256": "ecb084b07c10d862306797743e3e3499d0d66e4c73815aaca50978f58c34e621",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/BPD_SPL_20100625_1.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/1012af00185bc9c14b0b6c1c724105eab5b4f537e076f5b23f7bd168857dd16b/body.pdf",
+      "body_sha256": "e4b261f7d8a26df87f2f9e02c943e6e19bfe7081d76176591a893f0273330700",
+      "format": "pdf",
+      "headers_sha256": "5893f71f35e8720d1763c569fe08b3aec0d12ba7b736c3403f15960790bd8d3d",
+      "memberships": [
+        {
+          "auction_date": "2010-01-12",
+          "cusip": "912828MG2",
+          "kind": "noncompetitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/1012af00185bc9c14b0b6c1c724105eab5b4f537e076f5b23f7bd168857dd16b/receipt.json",
+      "receipt_sha256": "92ac3443445bfa35160b6d1fb386122551df362e667f939b3b05157aea11965a",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/NCR_20100112_3.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/e311486c7051717486098bc7d807adc6a23b3cffa8732e264aac4d4b4b6c7a35/body.pdf",
+      "body_sha256": "5c995452402db639a114f26099a306369778a27a9ac63879b0c8284efc645223",
+      "format": "pdf",
+      "headers_sha256": "a0f67eae5b46f19034825915e8d7c4dc14da6af1457b838773de67e4847ea57e",
+      "memberships": [
+        {
+          "auction_date": "2010-01-13",
+          "cusip": "912828LY4",
+          "kind": "noncompetitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/e311486c7051717486098bc7d807adc6a23b3cffa8732e264aac4d4b4b6c7a35/receipt.json",
+      "receipt_sha256": "3c12c81fa6be3fd45aeccd19cfa75cca68a79c0c5f77e29fd24677b1188dc9c8",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/NCR_20100113_1.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/943f47907dcd948efd8c9b4187b7ce87e62509544765f47edc0c4cd7dbf4c8de/body.pdf",
+      "body_sha256": "77f48d2daac28b318b242c44a5dda074ea1abe5c8b9696cce643e7379b54f43e",
+      "format": "pdf",
+      "headers_sha256": "ff5e071771d7bc14b92c8fb0ed5ea78b81eacadf3a9e87932350c2572ee03161",
+      "memberships": [
+        {
+          "auction_date": "2010-01-14",
+          "cusip": "912810QD3",
+          "kind": "noncompetitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/943f47907dcd948efd8c9b4187b7ce87e62509544765f47edc0c4cd7dbf4c8de/receipt.json",
+      "receipt_sha256": "fad0a9420a023d63681f19fd91b197a9463a79a2d59bcd887a777f4f5f763d2d",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/NCR_20100114_1.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/9302a2dc8e16b81697ced60756d3fb7e61dcacf37bbd7bfa74a88e7843db9939/body.pdf",
+      "body_sha256": "8452f1669db129f4f5dcb796cca03735f2abddbff409e3d08452189c28008947",
+      "format": "pdf",
+      "headers_sha256": "3c78e640f196ba02133f28af8075d79ebed813162e92d7787b107d2378260dd8",
+      "memberships": [
+        {
+          "auction_date": "2010-01-26",
+          "cusip": "912828MJ6",
+          "kind": "noncompetitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/9302a2dc8e16b81697ced60756d3fb7e61dcacf37bbd7bfa74a88e7843db9939/receipt.json",
+      "receipt_sha256": "2aa9bd5bd2b36da4e2e965e08a40e36516ddfd1011de5382ceff44d73408b0cd",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/NCR_20100126_2.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/3b18ecc2185abbf5e4b9099b21f10dbb0b9fb4abf05d5b48b6e6fce6eed7cd85/body.pdf",
+      "body_sha256": "3683a604857e81031f9fe95bc307ec1f8c58621e448dcb665de5482889b0563b",
+      "format": "pdf",
+      "headers_sha256": "442c0e3b42df84018d153aa68ca44e6850ea200962ca8d1d16e64a133736ebac",
+      "memberships": [
+        {
+          "auction_date": "2010-01-27",
+          "cusip": "912828MH0",
+          "kind": "noncompetitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/3b18ecc2185abbf5e4b9099b21f10dbb0b9fb4abf05d5b48b6e6fce6eed7cd85/receipt.json",
+      "receipt_sha256": "2c85434936899b2ce77a6f13f43103a77c4d5ffcb94da11e400e315c16ea55f4",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/NCR_20100127_1.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/e64fe2a7329d63bef999948f8f6608b7b80c0cfc7c8a9c9847b9e83f7b34c8cb/body.pdf",
+      "body_sha256": "02f7648c80295190d5900a8c423d7426ebeae75dcb644cffdc96924391f2c2bf",
+      "format": "pdf",
+      "headers_sha256": "98542c2de8b6164661a1e92ea103b14df80efbfbeb496198ea7959bd7362863d",
+      "memberships": [
+        {
+          "auction_date": "2010-01-28",
+          "cusip": "912828MK3",
+          "kind": "noncompetitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/e64fe2a7329d63bef999948f8f6608b7b80c0cfc7c8a9c9847b9e83f7b34c8cb/receipt.json",
+      "receipt_sha256": "70c6f1d15bde30fab2c878d1b37b077caf4d3e897ee6f18092171b0a030dd85c",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/NCR_20100128_1.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/fc5d6f41d09510933ebb80c43109ea20933a7f0f51625607bcdc1693529b83ff/body.pdf",
+      "body_sha256": "89cf0854759bb006a5d7db86db59733eb256ab23183057c507f0762b0e5aa193",
+      "format": "pdf",
+      "headers_sha256": "41bc02fc8c226fa21fbdf1dc3eca3cf2fe8503b6d6119e5e3d0333c568d0bcce",
+      "memberships": [
+        {
+          "auction_date": "2010-06-22",
+          "cusip": "912828NS5",
+          "kind": "noncompetitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/fc5d6f41d09510933ebb80c43109ea20933a7f0f51625607bcdc1693529b83ff/receipt.json",
+      "receipt_sha256": "796439a80501e246ab8b4fa07c071a3a9358a96b017fb3f3dfea5387d2619c3c",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/NCR_20100622_2.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/78b4bb4a9f7b0b9d59ffdec600a1ef642d489de243ebc90822024dd6349068be/body.pdf",
+      "body_sha256": "2b7f9224aa7a75db1130b093bf9e5d88f446e91d5d7c4e0c6fc883efe275e29a",
+      "format": "pdf",
+      "headers_sha256": "f208ce4ede526d987db6f9ef7287d4792195aa6326dfae44bc43ab48513d55ae",
+      "memberships": [
+        {
+          "auction_date": "2010-01-12",
+          "cusip": "912828MG2",
+          "kind": "competitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/78b4bb4a9f7b0b9d59ffdec600a1ef642d489de243ebc90822024dd6349068be/receipt.json",
+      "receipt_sha256": "4522dbb672ee5b8d79f9cb2029ebc741132d6298408ac6096ac947c997f7a7d5",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/R_20100112_3.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/586b2cd1548adfaebba209971092f8f082ff9463466fa7058e7cc3b1e22cb679/body.pdf",
+      "body_sha256": "808659f930e62e0be3fbe8a77024c09ecd1bb2c6f4f1ea9ce7803dc2128b7ba4",
+      "format": "pdf",
+      "headers_sha256": "66805cbc828d7363d6451cb7e43c6e93b8e8eebbefead3a0d31105fe80a3ed46",
+      "memberships": [
+        {
+          "auction_date": "2010-01-13",
+          "cusip": "912828LY4",
+          "kind": "competitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/586b2cd1548adfaebba209971092f8f082ff9463466fa7058e7cc3b1e22cb679/receipt.json",
+      "receipt_sha256": "6b9e22a9ed6e87c48678278f71705ab99f0a6e9be76873d5b5a14e9d0fd386f9",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/R_20100113_1.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/276b1a48f2d7688669cdf1ac66163042c39c089d0447df4a50c3cbbf8ac407da/body.pdf",
+      "body_sha256": "0fd1eb8d194df4c2e7e45573130d866f33ddb115c896b9e435cd9767e02f82a1",
+      "format": "pdf",
+      "headers_sha256": "510c2cdc85c0ec9ec8f7069d5018f53ddf835547c8988d4cfa411121ce3d929b",
+      "memberships": [
+        {
+          "auction_date": "2010-01-14",
+          "cusip": "912810QD3",
+          "kind": "competitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/276b1a48f2d7688669cdf1ac66163042c39c089d0447df4a50c3cbbf8ac407da/receipt.json",
+      "receipt_sha256": "65a5537c5a8c6be8c03fb2adce505b0c65f45a100caada1feeb332988772539a",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/R_20100114_1.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/e8b1e4d1794ed9ab5c265c892e003e208aa19e4f536ba15b479362acf210be49/body.pdf",
+      "body_sha256": "8515e62e6ab2324e7f030048c0eeb8e1dd94955fe3814b671561da7f767729ba",
+      "format": "pdf",
+      "headers_sha256": "643cdaaedbdee2f912c6d01d0bf893c51010b1d73e3eaaf6092728acbe87eb92",
+      "memberships": [
+        {
+          "auction_date": "2010-01-26",
+          "cusip": "912828MJ6",
+          "kind": "competitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/e8b1e4d1794ed9ab5c265c892e003e208aa19e4f536ba15b479362acf210be49/receipt.json",
+      "receipt_sha256": "bfe697640b18b417f3e81ad9f9ba59aa161b5ddc71d47c0adf33f2ab0b3eca91",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/R_20100126_2.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/c28f718b7874a92d468a29c907bc8496d2f333c5f7ad19efe59927a329e11188/body.pdf",
+      "body_sha256": "82a3bb070934bbc4529e9e32f500a76ad7a9bc68af7d1704114f4ede9337895c",
+      "format": "pdf",
+      "headers_sha256": "19c37e7fe458f38e4eef9e7635c245692c45ba9001ba9ca51af3e2cc15b0049f",
+      "memberships": [
+        {
+          "auction_date": "2010-01-27",
+          "cusip": "912828MH0",
+          "kind": "competitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/c28f718b7874a92d468a29c907bc8496d2f333c5f7ad19efe59927a329e11188/receipt.json",
+      "receipt_sha256": "f180847443eb73f08ff5d92ea4f0af1045bbfad4ab4204e8377b5cf8de14c893",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/R_20100127_1.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/3c2e24265bcd2ff8579da4b948a5b8ce2ffa6f58f38b0d4698cb7504368525fb/body.pdf",
+      "body_sha256": "5b7f0a2fd81aed50e975d8e2a0ddf8c380b3279f34566fb5fcef1eb19a3a24a1",
+      "format": "pdf",
+      "headers_sha256": "ff185f91c8c0291c750212399a21148cf4d7762e91e45eac651b92ca2a5a610d",
+      "memberships": [
+        {
+          "auction_date": "2010-01-28",
+          "cusip": "912828MK3",
+          "kind": "competitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/3c2e24265bcd2ff8579da4b948a5b8ce2ffa6f58f38b0d4698cb7504368525fb/receipt.json",
+      "receipt_sha256": "2578e605a4c143b2c304ab7e29067b63370f613a673d6eb4edea5c9b85402b7c",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/R_20100128_1.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/df30ea5628f7ee938eda8844c677610c54a2a1b9f90c55a7650bc9bb0c6c9f4f/body.pdf",
+      "body_sha256": "e4d22940686c50e5f1eec170479276d4bcb54abef7a083f26fcf1370fbd8bdd2",
+      "format": "pdf",
+      "headers_sha256": "4f80f2de93ceb4a31a57983f85e5c787edd0abc8ac5212ffb91874924ef0065f",
+      "memberships": [
+        {
+          "auction_date": "2010-06-22",
+          "cusip": "912828NS5",
+          "kind": "competitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/df30ea5628f7ee938eda8844c677610c54a2a1b9f90c55a7650bc9bb0c6c9f4f/receipt.json",
+      "receipt_sha256": "c010357aad3c3696b78dfb88d1dbdb87708d8bb622a62250c98f97666cbd6e54",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/R_20100622_2.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/911da77af85e1d9dadb91af5e0330a63433efaec8de717774eab21525340cd54/body.pdf",
+      "body_sha256": "660db4fecfb0bd410069ecccc3ff692ba41446bd27de5ec8a23eb02a7ca3b3d0",
+      "format": "pdf",
+      "headers_sha256": "37c36c4f0646d9f40261038c17ef3d4d6d50f2cb8cae64ee4146652c316a60b9",
+      "memberships": [
+        {
+          "auction_date": "2016-01-12",
+          "cusip": "912828N63",
+          "kind": "announcement_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/911da77af85e1d9dadb91af5e0330a63433efaec8de717774eab21525340cd54/receipt.json",
+      "receipt_sha256": "a0ad1a02726955dc610b39cf1118a2d3e35e11e14b8b5161cd4ca1ac90db69e1",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/A_20160107_2.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/90a747501e7f4ded5f6af346f23ec0438291f318fe2148c88284892abcc29803/body.pdf",
+      "body_sha256": "17bf88638ebfdc8b4ec111b461ee04e954acc90bdea96ce9520e5b2f658e63f2",
+      "format": "pdf",
+      "headers_sha256": "04c5e74a8c8fd459b4594796ebb19e0b164571dc065444a57b92cbaaba426b51",
+      "memberships": [
+        {
+          "auction_date": "2016-01-14",
+          "cusip": "912810RP5",
+          "kind": "announcement_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/90a747501e7f4ded5f6af346f23ec0438291f318fe2148c88284892abcc29803/receipt.json",
+      "receipt_sha256": "7acfaea61fb15a2eacab6514b7a8aeb97cae72685ca01b2863b006a43c9ea3fa",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/A_20160107_3.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/5dd00cf83680cc8cb31b175bccc71f99e37d68f903965d625117cbffb237bbda/body.pdf",
+      "body_sha256": "98eb25fe51b700ea15a2bee2bc143a3aa59204ba1c85bd256da7fb3620130b43",
+      "format": "pdf",
+      "headers_sha256": "9d6ca40c7849aa15ad5f674f6cdf2b373dee185aba9d38dd378c1b30bb390a4e",
+      "memberships": [
+        {
+          "auction_date": "2016-01-13",
+          "cusip": "912828M56",
+          "kind": "announcement_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/5dd00cf83680cc8cb31b175bccc71f99e37d68f903965d625117cbffb237bbda/receipt.json",
+      "receipt_sha256": "9389f13204b7e29c2e81d53209921568b69da89b4c060a636b23ed2a331611c2",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/A_20160107_5.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/3a132a51c54851dc384b1bdec9c5f6058f942d2fe244561ddca70235d6f26776/body.pdf",
+      "body_sha256": "93d89360d5934c06c239ba77cda0b37078d3edacb056d57f0169fba4400328ac",
+      "format": "pdf",
+      "headers_sha256": "e8bf61cabbfcb826bf331859cf2b99afdcfe681c315df0a702e822d253003ad8",
+      "memberships": [
+        {
+          "auction_date": "2016-01-27",
+          "cusip": "912828N89",
+          "kind": "announcement_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/3a132a51c54851dc384b1bdec9c5f6058f942d2fe244561ddca70235d6f26776/receipt.json",
+      "receipt_sha256": "f42cf3682dbfc80d10dc924ba446bec9d40e91b799d36992c2c0c078c0b2527a",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/A_20160121_1.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/931a6a0d31c7bc1dbaf831762423d65768b4d1016d627fd3930f08499b6a7307/body.pdf",
+      "body_sha256": "c35cffdfca722024fb131c47097143fc9c3f7c581f7adb5c86c765bb73ddce82",
+      "format": "pdf",
+      "headers_sha256": "538b03c4e7e8f87c065f16f5406e556c0581ca6bea3f27bcc9f9e53d3672014e",
+      "memberships": [
+        {
+          "auction_date": "2016-01-28",
+          "cusip": "912828P38",
+          "kind": "announcement_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/931a6a0d31c7bc1dbaf831762423d65768b4d1016d627fd3930f08499b6a7307/receipt.json",
+      "receipt_sha256": "cc400191a592917a18dadb1e8a43e2f8e7eecae3dd002569d667f4ea7b5aae75",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/A_20160121_5.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/8ceec54e6d2410feb0f4bd9b16b5e813b295d400e96581af5de001b3899b374d/body.pdf",
+      "body_sha256": "901370d0895fbdfa6ea59e0f32d48bc407640db204c4c587ea2125422913e6e0",
+      "format": "pdf",
+      "headers_sha256": "bf8c12c64517f1a21381b1737f2405ed0ddfc9144034450448e1bb86c2abc540",
+      "memberships": [
+        {
+          "auction_date": "2016-01-26",
+          "cusip": "912828P20",
+          "kind": "announcement_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/8ceec54e6d2410feb0f4bd9b16b5e813b295d400e96581af5de001b3899b374d/receipt.json",
+      "receipt_sha256": "d6b5a4c6effd27086409aafb6cc9b1518a6d624d96f2d5ba042335528cebb4e5",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/A_20160121_6.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/1e98da454b775ab9ddc9cb9da8bf6e671c53518913782416e072be5a298f4791/body.pdf",
+      "body_sha256": "5d00d0da915c447215214e794190e9752a37b79e5822159b4bdb42fe44540666",
+      "format": "pdf",
+      "headers_sha256": "9884ace7ab3592aa410f8f9f6aa562762ccbe9c169eaf007d9468e8b92de5497",
+      "memberships": [
+        {
+          "auction_date": "2016-01-26",
+          "cusip": "912828P20",
+          "kind": "special_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/1e98da454b775ab9ddc9cb9da8bf6e671c53518913782416e072be5a298f4791/receipt.json",
+      "receipt_sha256": "d02d0c060b066d79dd6f92fe391b06c5e3dfa49fe52e91096efd31aa64846df9",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/BPD_SPL_20160121_1.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/5f2576077dcd3c38afa65e79b75dd24c5f208afb936ad6489f0285b0b21b838b/body.pdf",
+      "body_sha256": "bbfbd332e3950fef5707135e27b97bdcefea443eee3aa7842b6316b664dac0a1",
+      "format": "pdf",
+      "headers_sha256": "81b39a5dd3a02620cee48aac6adfe174cca539c040ab8f9d863ca2e650ce35d1",
+      "memberships": [
+        {
+          "auction_date": "2016-01-12",
+          "cusip": "912828N63",
+          "kind": "noncompetitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/5f2576077dcd3c38afa65e79b75dd24c5f208afb936ad6489f0285b0b21b838b/receipt.json",
+      "receipt_sha256": "965976dab38109fc5ae00a8b6af02946cb2b05cb5c64a660c1e5908b724d4c81",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/NCR_20160112_2.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/ff9a50bf07f02070e43df7c06f531ab2039854954d16425c4330588f21caa812/body.pdf",
+      "body_sha256": "b101f586ee980003976a83f8ab0f52d626401a195c678d45342357587d2bf57f",
+      "format": "pdf",
+      "headers_sha256": "9bdca974372e42054cfeabf66551bf718ea06f9a18764e3c341cfb551c89ac00",
+      "memberships": [
+        {
+          "auction_date": "2016-01-13",
+          "cusip": "912828M56",
+          "kind": "noncompetitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/ff9a50bf07f02070e43df7c06f531ab2039854954d16425c4330588f21caa812/receipt.json",
+      "receipt_sha256": "4c98b68f12022e506437154ce9595c45d361eb46d768a5d60e51ffd1b7b46a0f",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/NCR_20160113_1.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/cb260e6c1a5225243000b1d6f8f1234f4a3fb0fb472584e3dccc2f7278b94a4e/body.pdf",
+      "body_sha256": "e91c2e2d1b7c36a4c5ea69dfb09edc969753313bf79a8b4c407fd5ae25bda306",
+      "format": "pdf",
+      "headers_sha256": "7d92ef9ba0b16dfcee5b5a7f4849dd5ff989026bbaf50752aed0298feb6c7b40",
+      "memberships": [
+        {
+          "auction_date": "2016-01-14",
+          "cusip": "912810RP5",
+          "kind": "noncompetitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/cb260e6c1a5225243000b1d6f8f1234f4a3fb0fb472584e3dccc2f7278b94a4e/receipt.json",
+      "receipt_sha256": "3032a761128e63b16587e610e71f7ba787e84d9b3dca58f4b816c174199a87db",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/NCR_20160114_1.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/ec65ee41b95872fffdb618a0e7dc89b24dd18e0a9272dd571dad28a2ede6c5b6/body.pdf",
+      "body_sha256": "7583fd25039212b6d696746ac56b4cbb72ea189c0a09a08133973c5918e7d88e",
+      "format": "pdf",
+      "headers_sha256": "1ebd498af907c4fdf4efca018f8ba3df5a25e8890827fab5cc68e328d793004d",
+      "memberships": [
+        {
+          "auction_date": "2016-01-26",
+          "cusip": "912828P20",
+          "kind": "noncompetitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/ec65ee41b95872fffdb618a0e7dc89b24dd18e0a9272dd571dad28a2ede6c5b6/receipt.json",
+      "receipt_sha256": "b08b867df98cd37f827190f42168c78518c8a5a558e9748333c8b766809b26ef",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/NCR_20160126_2.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/44099fa5024b12b1b1eb4b334b5cb687eeebea66ade1b7bf29e1749e55e6c47b/body.pdf",
+      "body_sha256": "91ae46e245a886e2a79c0cddb3f83cc0ee66ebeddded5d59605023b1798d6684",
+      "format": "pdf",
+      "headers_sha256": "0c2f08449968c000289f255e5c865b3dd77f497199b78b1bb584ce5e575e75d3",
+      "memberships": [
+        {
+          "auction_date": "2016-01-27",
+          "cusip": "912828N89",
+          "kind": "noncompetitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/44099fa5024b12b1b1eb4b334b5cb687eeebea66ade1b7bf29e1749e55e6c47b/receipt.json",
+      "receipt_sha256": "38f28314e3bea3f6910def8602b30e9c8f5663d05c90d4ebd822d5c53b84232d",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/NCR_20160127_2.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/5f1bd8f1aa5e3fe6bc6dc53b1abba0d020f1a90ef884efec1cb66c3cf8c59487/body.pdf",
+      "body_sha256": "3f2b39e58e2768b1f146550be7caec91d25e3da5f54ec078157a203f107f4fb4",
+      "format": "pdf",
+      "headers_sha256": "08e327623f3f42882ce0ffed5984a54a9b71cf1dd6df3fa19ea84dcf4faef4d3",
+      "memberships": [
+        {
+          "auction_date": "2016-01-28",
+          "cusip": "912828P38",
+          "kind": "noncompetitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/5f1bd8f1aa5e3fe6bc6dc53b1abba0d020f1a90ef884efec1cb66c3cf8c59487/receipt.json",
+      "receipt_sha256": "a2eb84368ce4a95b1b05d910e61f91b828a30ebb13efa639ad45e0d3c39b4e79",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/NCR_20160128_1.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/5f45a3b6fff13dcd163146b97c3383210ca55834ceac03c851c8b756ed8b94ae/body.pdf",
+      "body_sha256": "62912e35b59102526df129af0f462ab59ddfd4c8060782e21de81b8f063ae17d",
+      "format": "pdf",
+      "headers_sha256": "a61d66ae50263b4861b832cb0562ed89d820d68e026c5c4524f71949dc085b05",
+      "memberships": [
+        {
+          "auction_date": "2016-01-12",
+          "cusip": "912828N63",
+          "kind": "competitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/5f45a3b6fff13dcd163146b97c3383210ca55834ceac03c851c8b756ed8b94ae/receipt.json",
+      "receipt_sha256": "0efe946a01df767463e9a73bacbc2f3800326e1e44d9067bbe11b9b8de99f9f0",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/R_20160112_2.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/012d702f5769ceafa6d99e8fda52e85eb95be7ca9e159b1a10d1b966c93fc23d/body.pdf",
+      "body_sha256": "388e14f0a1b4edce0ad222503710bd99d445b8c29b262a5eccf4360bb9027b07",
+      "format": "pdf",
+      "headers_sha256": "5f139d680d2457f73114e97aebe28839f761ac2de50031f1c806d3a2bcd9816a",
+      "memberships": [
+        {
+          "auction_date": "2016-01-13",
+          "cusip": "912828M56",
+          "kind": "competitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/012d702f5769ceafa6d99e8fda52e85eb95be7ca9e159b1a10d1b966c93fc23d/receipt.json",
+      "receipt_sha256": "158f3cf9f5c6ac4f47ed8dcd0725dc18d1a2a55f4542b46a34baa67488a14621",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/R_20160113_1.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/c8fd462eb513c3474b10a7d7ab6d90d12071685b7942532028114d2eb0596447/body.pdf",
+      "body_sha256": "9281e514be35fa74915038c7bff425570e548f53a5b40f8462492b133ba63532",
+      "format": "pdf",
+      "headers_sha256": "331a5b2638f85e423529b23677c6723e982f511a1a0c5c7e1904e388437014d2",
+      "memberships": [
+        {
+          "auction_date": "2016-01-14",
+          "cusip": "912810RP5",
+          "kind": "competitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/c8fd462eb513c3474b10a7d7ab6d90d12071685b7942532028114d2eb0596447/receipt.json",
+      "receipt_sha256": "6637164ad517f054bcb4d36310c1acf0c5846ddd2e8b1fd38aaa45c7534b9a3d",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/R_20160114_1.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/cc63ffc0ba9e5679f6b8523ad67c985950c3fdc0bd1301a472e740bcc716086e/body.pdf",
+      "body_sha256": "bfe5fc8069e4941566dbb227f2fc271fe8875948700d0eb1e20f4b80624d6e27",
+      "format": "pdf",
+      "headers_sha256": "d16ccc37c01d1635167e04e60ff3581ab23e83faee200e5e66f57d199a696426",
+      "memberships": [
+        {
+          "auction_date": "2016-01-26",
+          "cusip": "912828P20",
+          "kind": "competitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/cc63ffc0ba9e5679f6b8523ad67c985950c3fdc0bd1301a472e740bcc716086e/receipt.json",
+      "receipt_sha256": "9589141a42020608f38c3fb5d4bdefe8d8f6b42ad97f9c897525670754eda472",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/R_20160126_2.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/babbe8cbdfab6e384a15ea06834fb182322d0e4caf0de281f05d8cc527af309d/body.pdf",
+      "body_sha256": "809a9c1707936e824a9da22922f19bf581201f30e8af9396860b01b8772fbe01",
+      "format": "pdf",
+      "headers_sha256": "d03c5a2165f0bad8380713c7037d720b681ef81ef67bd122192471ba176f30a5",
+      "memberships": [
+        {
+          "auction_date": "2016-01-27",
+          "cusip": "912828N89",
+          "kind": "competitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/babbe8cbdfab6e384a15ea06834fb182322d0e4caf0de281f05d8cc527af309d/receipt.json",
+      "receipt_sha256": "cbcad99b50ebf0c568dd7792026ff4f0afcb59ed2663e49a4b6f0f8c21143a6c",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/R_20160127_2.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/c9d8cbc1c4e869a1acc4c82dcf28773f577922aaec45dc064fbfd497c5ef84b3/body.pdf",
+      "body_sha256": "445380cfe8ef770ea75f6095b7c289c728ee1c54a3ac3f7ef6e544ca3cb98f6f",
+      "format": "pdf",
+      "headers_sha256": "4ebaa2abf1ee5e0bcb8e81180c0a4645cba6db598acb088083875ba837217d15",
+      "memberships": [
+        {
+          "auction_date": "2016-01-28",
+          "cusip": "912828P38",
+          "kind": "competitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/c9d8cbc1c4e869a1acc4c82dcf28773f577922aaec45dc064fbfd497c5ef84b3/receipt.json",
+      "receipt_sha256": "dd45e7df899f9207169864ade9b064c73813da75fe1d3cd4a56b13d0a337e9e7",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/R_20160128_1.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/de50bf23499e0883333ae82f07650d86a48ebf380ff888842bbf0ff2234af00d/body.pdf",
+      "body_sha256": "10143d6d28c10758fa0327ebc890a28d12466c22f2adb30668a097cbf345d9a5",
+      "format": "pdf",
+      "headers_sha256": "96b5dc7ab312157fdbe9a7c1fb7a23ed6496cfe05689a1c8af1ec4bc782b0deb",
+      "memberships": [
+        {
+          "auction_date": "2019-06-12",
+          "cusip": "9128286T2",
+          "kind": "announcement_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/de50bf23499e0883333ae82f07650d86a48ebf380ff888842bbf0ff2234af00d/receipt.json",
+      "receipt_sha256": "6f740f5d92ab12fd4043f7eeeb6a9c69e095eafbf2807819be00eee01719d8c8",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/A_20190606_4.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/f1cd5892d6e773998f6e171413eb7f4b1d29088b4c8166d51ea07ca8c2568c24/body.pdf",
+      "body_sha256": "97e0331a0a683de8704e276efeb53906654516fbda30d7729be4b83408b0d395",
+      "format": "pdf",
+      "headers_sha256": "031bedc388084efee8cc7582577548d30618a0be7bbe274c610e6fb324c56b89",
+      "memberships": [
+        {
+          "auction_date": "2019-06-21",
+          "cusip": "9128286T2",
+          "kind": "announcement_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/f1cd5892d6e773998f6e171413eb7f4b1d29088b4c8166d51ea07ca8c2568c24/receipt.json",
+      "receipt_sha256": "9f0f7c87e7e3616892c51080ce388a905d986f59ec0ee19d1998cdd3e3830b91",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/A_20190621_1.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/ed530a75a370732905493b5541e00ece66bbb40289799f3be1d9ca2a5addf175/body.pdf",
+      "body_sha256": "f55544bfc9f0e03b59f8108de0b139614476afa2d8c383bc0e3d186fd4e12630",
+      "format": "pdf",
+      "headers_sha256": "b80bb8d53f5bde1932f247d36bf1ed19696220cd53623c85c7765e576fd0eb13",
+      "memberships": [
+        {
+          "auction_date": "2019-06-21",
+          "cusip": "9128286T2",
+          "kind": "special_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/ed530a75a370732905493b5541e00ece66bbb40289799f3be1d9ca2a5addf175/receipt.json",
+      "receipt_sha256": "deca583643bca859d30929d4841b988837903484bca78093c9b0e7cfa718a984",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190620_4.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/ccf983da8e92a496e734f301a3b2ec28b3e43a0b4414616c8e125591ef61086a/body.pdf",
+      "body_sha256": "3682b851ba3c86f7ef674c544a9c6a83f56dd66eca73841ca00150cfad640fa9",
+      "format": "pdf",
+      "headers_sha256": "5a16d27bd937d8778dba25ab60eb44e24a9836e575fa5cf3a9bd74a83cad039d",
+      "memberships": [
+        {
+          "auction_date": "2019-06-12",
+          "cusip": "9128286T2",
+          "kind": "noncompetitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/ccf983da8e92a496e734f301a3b2ec28b3e43a0b4414616c8e125591ef61086a/receipt.json",
+      "receipt_sha256": "bb0172d80ff6be452e024a0234fd8ae2e52ec081b1b079e43de67614d65cd5c2",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/NCR_20190612_1.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/f56cbbef0bf0300a6bd05ad46543cc9dbc211a7b6766fee17f5c15356f449230/body.pdf",
+      "body_sha256": "b6191fbfd65d983802d0dbd33393d4e1b82d91df0483a9143e4092362f7bc5b5",
+      "format": "pdf",
+      "headers_sha256": "9f572500b5281b14b902c4c63d8f1ff1bc73d9493ad2edd8a139c1b90287d7a4",
+      "memberships": [
+        {
+          "auction_date": "2019-06-12",
+          "cusip": "9128286T2",
+          "kind": "competitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/f56cbbef0bf0300a6bd05ad46543cc9dbc211a7b6766fee17f5c15356f449230/receipt.json",
+      "receipt_sha256": "9fe53b949461e95c29e5d6eaec25a7aba412cd0829ace3a9bc8cda9ffaa42857",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/R_20190612_1.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/ca45452703b9668c1ab843c273edebdddf04a591feab9423afa82b994314b520/body.pdf",
+      "body_sha256": "62c09957c71aaee45a805f7ba523bee04894de28c871e1dd6a9bc6b03b1bef62",
+      "format": "pdf",
+      "headers_sha256": "e36d62d3fac70fac07f2aac4645ed8dbe47eee8c7e782728f26e534c2e80c219",
+      "memberships": [
+        {
+          "auction_date": "2019-06-21",
+          "cusip": "9128286T2",
+          "kind": "competitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/ca45452703b9668c1ab843c273edebdddf04a591feab9423afa82b994314b520/receipt.json",
+      "receipt_sha256": "742ec9693fb424f13f3d9c9e6c7ef691fff6593d09346b80ef8bac92fe23d5b9",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/R_20190621_1.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/7e57e232eaed6f90a6091e93968332443c3cd5d6a1ff4c2230d344428d46db01/body.pdf",
+      "body_sha256": "30da967a9c1416d93bcd283d3681fa66c6c19775ecf7266f8af40bddc4fe86f4",
+      "format": "pdf",
+      "headers_sha256": "ef89fda42456d172334b6bd5a31ad143c3220e88fb81c8e45fa8cb681df2b441",
+      "memberships": [
+        {
+          "auction_date": "2025-01-08",
+          "cusip": "912810UE6",
+          "kind": "announcement_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/7e57e232eaed6f90a6091e93968332443c3cd5d6a1ff4c2230d344428d46db01/receipt.json",
+      "receipt_sha256": "131b5fd7b25b650b20d60e42a62af2a0a85c138c17ce541bf0cb63369e6e8ea6",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/A_20250102_2.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/6cc07825ee19706ca8bd925f709d7f70d846195110edaf188361a9cf2daabb7e/body.pdf",
+      "body_sha256": "f2ced31b79f5d20df44ce0d86e00d5d1088181509dbad3c910b7fbe3e5f68de5",
+      "format": "pdf",
+      "headers_sha256": "58af1373754f09c1890428737ed82091cb292f7f292302ea5c3570c98aa1a6d8",
+      "memberships": [
+        {
+          "auction_date": "2025-01-07",
+          "cusip": "91282CLW9",
+          "kind": "announcement_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/6cc07825ee19706ca8bd925f709d7f70d846195110edaf188361a9cf2daabb7e/receipt.json",
+      "receipt_sha256": "51c5142b4e68c4b69f1714f9936b585bc2905f5bfd2b8fa560717775c6405526",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/A_20250102_3.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/bf58d02d6254e6cf7719e090216d4eaf172d5241a2d40f8f212eb31b9798aaf4/body.pdf",
+      "body_sha256": "e33b9ef63d3d38a0e58c90ee47ac8b0c19a80ef642da1cabed3d5cb9ff01ce45",
+      "format": "pdf",
+      "headers_sha256": "b52b4011b6eb8fbb57bdf64834a522e15d9d109f37db5f1ebf8e90b7283b9fe6",
+      "memberships": [
+        {
+          "auction_date": "2025-01-06",
+          "cusip": "91282CMF5",
+          "kind": "announcement_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/bf58d02d6254e6cf7719e090216d4eaf172d5241a2d40f8f212eb31b9798aaf4/receipt.json",
+      "receipt_sha256": "144fb738475002afb3543befe2185559ba82eb29aadb628a356402a3f15f3aea",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/A_20250102_4.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/fad4899c582bb5c003519f3379f5c36214ec531725c192caf506be328b28deaa/body.pdf",
+      "body_sha256": "e674ddbbfc78165d5b8c2a31b284269539d8dc5266eec99443b93aebf5f1ef8e",
+      "format": "pdf",
+      "headers_sha256": "845493fd17d3721359dc4438c6fbe66d67e572e91e7670e3082a16b64e4e3093",
+      "memberships": [
+        {
+          "auction_date": "2025-01-28",
+          "cusip": "91282CMK4",
+          "kind": "announcement_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/fad4899c582bb5c003519f3379f5c36214ec531725c192caf506be328b28deaa/receipt.json",
+      "receipt_sha256": "f9ee2fe5d3e730278d3967d679b8c0b6bc3078007964e922b3f9c8a593e0c29e",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/A_20250123_4.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/4875f80a59270c5e16afcc4e28cea21a5a8f1c8784b434b937f21caaac6e0d18/body.pdf",
+      "body_sha256": "91c70077b3a60ac01c67ce521ec4a73b6f1cc18542096434d607ff01c1fb2324",
+      "format": "pdf",
+      "headers_sha256": "eaaff7e8f6f9310ea30d3f7e2b00cefff3b681e449523e2cab1c6d694ef1a04c",
+      "memberships": [
+        {
+          "auction_date": "2025-01-27",
+          "cusip": "91282CMG3",
+          "kind": "announcement_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/4875f80a59270c5e16afcc4e28cea21a5a8f1c8784b434b937f21caaac6e0d18/receipt.json",
+      "receipt_sha256": "a678ebb991fa9fd0f26a9abd662f7b2d5e69e232493c91af5fd8f292e521ec8e",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/A_20250123_5.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/8fd08e120c01f078ac65e970dd4199595e53fd837363de6a3eb8511dd69cd004/body.pdf",
+      "body_sha256": "88a0c10cb3d8f0f60b5ddb9452ab9512c5ed8fca0f8889ddc1cdf284cd7c83ed",
+      "format": "pdf",
+      "headers_sha256": "560e898360659e09f62660b46f3041b302332ee9d115b402784241293d860e56",
+      "memberships": [
+        {
+          "auction_date": "2025-01-27",
+          "cusip": "91282CMH1",
+          "kind": "announcement_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/8fd08e120c01f078ac65e970dd4199595e53fd837363de6a3eb8511dd69cd004/receipt.json",
+      "receipt_sha256": "3a81549bc7aad375df4e1cac6b57d3c5e0895c4df7da044a64e3403ba74456ec",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/A_20250123_7.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/862d664f8f74886618c8fcf6a18333507d55f0da97d9853701bdc5e2f6431a2e/body.pdf",
+      "body_sha256": "ab35aa9f5e23b6eed662571f291429b031296123866adb1584b0327fd688275b",
+      "format": "pdf",
+      "headers_sha256": "6b74beb2727a5cd2fc08f5faffc0542704ddd9b28250725c14b968be813828b3",
+      "memberships": [
+        {
+          "auction_date": "2025-08-27",
+          "cusip": "91282CNX5",
+          "kind": "announcement_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/862d664f8f74886618c8fcf6a18333507d55f0da97d9853701bdc5e2f6431a2e/receipt.json",
+      "receipt_sha256": "416768b04b329b4cddc71d2f567637104cb54304828d58e9c79855f0c10fb676",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/A_20250821_1.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/003df4e512f954f25b6e0f339073b9919c45354b343145a4dd3708a998eb9244/body.pdf",
+      "body_sha256": "e6c5064b48b7bfdf5cc530db660ee0417e7f31caa4d119bc987621e499f7d4a3",
+      "format": "pdf",
+      "headers_sha256": "54b466483f40b527539150be3596dc7dfb52b1abc87534e87274d64fb7c867ad",
+      "memberships": [
+        {
+          "auction_date": "2025-01-06",
+          "cusip": "91282CMF5",
+          "kind": "noncompetitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/003df4e512f954f25b6e0f339073b9919c45354b343145a4dd3708a998eb9244/receipt.json",
+      "receipt_sha256": "581151c5496ff831bff48c72a7596b0f80fc7bd016d100608a57ba4d7860172d",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/NCR_20250106_3.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/9ff7f84e910e10bccfd0a882343acb4bcba100168694e0db8a168cd8222f21b2/body.pdf",
+      "body_sha256": "845e8edf142cf8600a859a9ede65d2437113fe0ab52378fd305b080d94197415",
+      "format": "pdf",
+      "headers_sha256": "3cb18c6a20c630f16e0f533acec7121b2b4eb72485e90a52eb405ca1fe1f58dd",
+      "memberships": [
+        {
+          "auction_date": "2025-01-07",
+          "cusip": "91282CLW9",
+          "kind": "noncompetitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/9ff7f84e910e10bccfd0a882343acb4bcba100168694e0db8a168cd8222f21b2/receipt.json",
+      "receipt_sha256": "2d4eee50631024e89229746329cea58cfad866557ecc279b8eb4b2f084811be1",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/NCR_20250107_2.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/2cf035b45f54d32f1abe3cc7d45aba725640eb1fdfda1bc0bea7d4a772d6436e/body.pdf",
+      "body_sha256": "2de7b7c7fd78d8cc1d9e1c9697abc75b6a6107133f3aeacf502109f4c711390f",
+      "format": "pdf",
+      "headers_sha256": "13e1552607ef48006a89a7103ab9b18237428f5473ec7c4771be3af590870348",
+      "memberships": [
+        {
+          "auction_date": "2025-01-08",
+          "cusip": "912810UE6",
+          "kind": "noncompetitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/2cf035b45f54d32f1abe3cc7d45aba725640eb1fdfda1bc0bea7d4a772d6436e/receipt.json",
+      "receipt_sha256": "5067c7b70ecb6e50220789e99d3797a4e43981c41c7056e14dc41fc581742bc2",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/NCR_20250108_2.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/3500011aac19091ad59934a6e221710e7f35a8bc38d37d0e94cc9af4cedfe401/body.pdf",
+      "body_sha256": "051e631a2cb79c454d4966425cdff88ff2177ee6be7566e118226e880c7178b3",
+      "format": "pdf",
+      "headers_sha256": "7d0200c2f59aa289c18b1409d1ec02f2a0738347ed075b8a1d2133fbe8021a5f",
+      "memberships": [
+        {
+          "auction_date": "2025-01-27",
+          "cusip": "91282CMH1",
+          "kind": "noncompetitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/3500011aac19091ad59934a6e221710e7f35a8bc38d37d0e94cc9af4cedfe401/receipt.json",
+      "receipt_sha256": "dbc10b5dfbef667425894e28dbde7707abf79bd8392a2492ebe056620acf7330",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/NCR_20250127_1.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/b86c75c65b4a6a9243e09c95b03d294dfafdd3d1cf6e457ae89105e7ea518531/body.pdf",
+      "body_sha256": "7f8f1e2bab60fd2d1666170d922105f7c64ab280816c2aa7bb781b0ec904cbff",
+      "format": "pdf",
+      "headers_sha256": "755c071cbcf17d18ab44f8b7cacea3231146c6323db472934ce62a99d77882d2",
+      "memberships": [
+        {
+          "auction_date": "2025-01-27",
+          "cusip": "91282CMG3",
+          "kind": "noncompetitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/b86c75c65b4a6a9243e09c95b03d294dfafdd3d1cf6e457ae89105e7ea518531/receipt.json",
+      "receipt_sha256": "71cdd6149c638a580a178a7dd4987890032cb30c80ba3c0a9875b59b5337d9af",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/NCR_20250127_3.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/8fd25de365500089dfbae7384e1eae715b3e86768f22093b1907256eaec4a29f/body.pdf",
+      "body_sha256": "b25eb872a4c5495fa67b955ca562be2171c0f61f0b600680990d15fab387920d",
+      "format": "pdf",
+      "headers_sha256": "e96fac17dc40af257f3acbe5f40b05b2f55db4c91a8928e39d184bba129c27a1",
+      "memberships": [
+        {
+          "auction_date": "2025-01-28",
+          "cusip": "91282CMK4",
+          "kind": "noncompetitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/8fd25de365500089dfbae7384e1eae715b3e86768f22093b1907256eaec4a29f/receipt.json",
+      "receipt_sha256": "9bbd002d06ec0b4a5c46995aa292aea624ff9e3bcf8688c6681dc7cba06d7b7f",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/NCR_20250128_3.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/8e0f80e3116800282b99532c2fec60b78750d5079e2b603fada58ee8ca613a42/body.pdf",
+      "body_sha256": "084b19be9bec5bfec62b52a00af10a971b300991bcc8baca1870fc44908b5cb0",
+      "format": "pdf",
+      "headers_sha256": "f96c73871b774cba41321565bf6520c49cfbf2ad13bd5db2789ef1ab5ad4bdfc",
+      "memberships": [
+        {
+          "auction_date": "2025-08-27",
+          "cusip": "91282CNX5",
+          "kind": "noncompetitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/8e0f80e3116800282b99532c2fec60b78750d5079e2b603fada58ee8ca613a42/receipt.json",
+      "receipt_sha256": "a86bd62a823cc695b75b3cf00561eda91966a002ab14512ae438eec0ce9dcdd3",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/NCR_20250827_3.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/a47197b398e31e508276d1ef79924e1623eecec80a6c0d46d8dabdf62c31c861/body.pdf",
+      "body_sha256": "f6346c3d3a59cc42a4cef3ae8c563f248db42d0605e1ab613bf6421292acb921",
+      "format": "pdf",
+      "headers_sha256": "ace44e7fee61e6f28d98be05cde9d20b1501e8a106f7b176ea985313c3d1534c",
+      "memberships": [
+        {
+          "auction_date": "2025-01-06",
+          "cusip": "91282CMF5",
+          "kind": "competitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/a47197b398e31e508276d1ef79924e1623eecec80a6c0d46d8dabdf62c31c861/receipt.json",
+      "receipt_sha256": "baa9ce34f76a8401c184c4e4469ea5402ce741cf8e840e92288e3f4101d27a3e",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/R_20250106_3.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/bf9c77a868382329a48cb2180f5208549ff73599eb76f4de5f3837f7a494f256/body.pdf",
+      "body_sha256": "d8564988a612031a2f9c4191ea4eb8efcd9717ae16b73877919c8893ab6ed322",
+      "format": "pdf",
+      "headers_sha256": "b33ced59dc9ddcb43c435968c7da0bc9b6ad6b61e8e09b3d4d6e47a2a8937a69",
+      "memberships": [
+        {
+          "auction_date": "2025-01-07",
+          "cusip": "91282CLW9",
+          "kind": "competitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/bf9c77a868382329a48cb2180f5208549ff73599eb76f4de5f3837f7a494f256/receipt.json",
+      "receipt_sha256": "7ea7933d17f119eb467ff605103dded5f34f60293e0b3df812604262c24f8a78",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/R_20250107_2.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/c77a386e69c3c1b24c890ff8ad90d41402b4eeb7c780fcc195acec14025601de/body.pdf",
+      "body_sha256": "53a2ef57acb50d12013d1f2b5f24e9bfd2c614fdc6c0c7392abb79d9763ca481",
+      "format": "pdf",
+      "headers_sha256": "177592459483aa0cc31f40502db1d1103a2093f6115daff520f993855a019d15",
+      "memberships": [
+        {
+          "auction_date": "2025-01-08",
+          "cusip": "912810UE6",
+          "kind": "competitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/c77a386e69c3c1b24c890ff8ad90d41402b4eeb7c780fcc195acec14025601de/receipt.json",
+      "receipt_sha256": "9dbfc5f97c3cd0c7b85f4b98e34e2dc33eb90d9bf98dbd4e4c0a5a1488f7b4ed",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/R_20250108_2.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/57d3988451f7eac5ca6614f17c7f5494e6982dd3e634e1ea965f3ac74a008797/body.pdf",
+      "body_sha256": "eed239c1df6389827f10fc19cd08b0eea4a30cb6e4e7513c8f07055aa73debe6",
+      "format": "pdf",
+      "headers_sha256": "0b975c7f42f43a7902e515c0256ae50485a4f19b25b73979f053ae518bafd268",
+      "memberships": [
+        {
+          "auction_date": "2025-01-27",
+          "cusip": "91282CMH1",
+          "kind": "competitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/57d3988451f7eac5ca6614f17c7f5494e6982dd3e634e1ea965f3ac74a008797/receipt.json",
+      "receipt_sha256": "1f0a14168ddea3b0b39f0c71751e89b409b10f50aaf0c431c1ebe15530cb9c30",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/R_20250127_1.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/48eec9b2e65ef510dcfff77d5fbb9e70fa7af95c3fbaf539d43a78b6ba9b565b/body.pdf",
+      "body_sha256": "10243117dbab8e0b4ef6641b0e7babb04fd6aade0d5abbd016def882a7486db4",
+      "format": "pdf",
+      "headers_sha256": "2215e60ec93278db0414ebb81bd62800ee2a198bd45a0562b79f37b2a9907626",
+      "memberships": [
+        {
+          "auction_date": "2025-01-27",
+          "cusip": "91282CMG3",
+          "kind": "competitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/48eec9b2e65ef510dcfff77d5fbb9e70fa7af95c3fbaf539d43a78b6ba9b565b/receipt.json",
+      "receipt_sha256": "30a1defa6228f3c8580a87effe5aafb7773db3748b81e5e1d3bb140417c34069",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/R_20250127_4.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/cae809c94cec4f548df70f75be50923a8b282e0b2de48d8e0e0c51c0a8c4af64/body.pdf",
+      "body_sha256": "fc307d572cfd38764e4f3ace154866e21f4c8e05614e12830e146abda08172ab",
+      "format": "pdf",
+      "headers_sha256": "07578b211a88d7b97d9984eeeb092ad2ce8051bcd16e4bd7602b5ca9c95dc4a2",
+      "memberships": [
+        {
+          "auction_date": "2025-01-28",
+          "cusip": "91282CMK4",
+          "kind": "competitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/cae809c94cec4f548df70f75be50923a8b282e0b2de48d8e0e0c51c0a8c4af64/receipt.json",
+      "receipt_sha256": "8e791c144d237ce3709289ec2cf43a70f11e7dd903edf8dffcafdec22b76418e",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/R_20250128_3.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/7246e00304aa68ff5006b929917c4ccf59c6dbd013b8f8b1a3297c9568eaf551/body.pdf",
+      "body_sha256": "deb7406ad5203b860caccf3823b59cc2262ede30fdccc99fafc006386606b730",
+      "format": "pdf",
+      "headers_sha256": "0622380415c6d99298fb27595993c4afb3854dff6a5581f6ed76e8bba10e7a64",
+      "memberships": [
+        {
+          "auction_date": "2025-08-27",
+          "cusip": "91282CNX5",
+          "kind": "competitive_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/7246e00304aa68ff5006b929917c4ccf59c6dbd013b8f8b1a3297c9568eaf551/receipt.json",
+      "receipt_sha256": "d49ef931038fab0048f2079451443e672476dc13898d8d063f9fb1c460511665",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/R_20250827_3.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/68efde0f5067ce8c420cb73eac28b3b4eacd57cfc384572573325822955e2333/body.pdf",
+      "body_sha256": "9a4568e10d061b80e60d5f8b13e002fe30c2c8c346fa8328aa411d70956ecb75",
+      "format": "pdf",
+      "headers_sha256": "90f60c942e42349de50a12975f47d194fd5cc2d89ec9721e16a2d0f9f37ea74b",
+      "memberships": [
+        {
+          "auction_date": "2025-01-06",
+          "cusip": "91282CMF5",
+          "kind": "special_pdf"
+        },
+        {
+          "auction_date": "2025-01-07",
+          "cusip": "91282CLW9",
+          "kind": "special_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/68efde0f5067ce8c420cb73eac28b3b4eacd57cfc384572573325822955e2333/receipt.json",
+      "receipt_sha256": "b012ee72e87e69ec61b1dc049995bf9fe4c091025d1edc8dde773f9bd7baba67",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250102_1.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/071d71e2df24ef10350744aaf58bc674830e2c1bd0f83eda54714d3dfb8dd579/body.pdf",
+      "body_sha256": "eda36643457ec1b8a73f5b13df099fe15c68d913a24ee4164026108f02d8acd8",
+      "format": "pdf",
+      "headers_sha256": "89780f025ba4338febc55a1c932f8c1488c55bbfb7871dc1adb438a8b4403124",
+      "memberships": [
+        {
+          "auction_date": "2025-01-08",
+          "cusip": "912810UE6",
+          "kind": "special_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/071d71e2df24ef10350744aaf58bc674830e2c1bd0f83eda54714d3dfb8dd579/receipt.json",
+      "receipt_sha256": "de88190155d3ae90c45024b48901b0b0004e65da947034f74814dea0cc0f1424",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250102_2.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/f88ce5ff13a9b0df67f91b5124ba8a33abbf70527b95a02fbe916fd5e093cd43/body.pdf",
+      "body_sha256": "c816f66faa5add5cd89550622c11696d8f0e4a5ca41855f1d49e0f0efc39a50e",
+      "format": "pdf",
+      "headers_sha256": "cbabb9019254389a60ba25d67671b55c1b2d2980aca168e37274cc3c0bc8af72",
+      "memberships": [
+        {
+          "auction_date": "2025-01-27",
+          "cusip": "91282CMG3",
+          "kind": "special_pdf"
+        },
+        {
+          "auction_date": "2025-01-27",
+          "cusip": "91282CMH1",
+          "kind": "special_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/f88ce5ff13a9b0df67f91b5124ba8a33abbf70527b95a02fbe916fd5e093cd43/receipt.json",
+      "receipt_sha256": "eaa0f7eea921139977115552a06a5a82328533866818c3ad35b0ac5da1c8fe59",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250123_1.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/83c1dc29dcade9f1231f1d052d5fe28d6ad6f1a34d5589cfbea79a7645073726/body.pdf",
+      "body_sha256": "f140a3e098c8fc292b0a79b4ceb6dccc36b2737344bbd59701c320062b8891a1",
+      "format": "pdf",
+      "headers_sha256": "c12fd46c34c348da1ccdb3f4cd5928884509a0948c3f0f0881e6992680a4c8fb",
+      "memberships": [
+        {
+          "auction_date": "2025-08-27",
+          "cusip": "91282CNX5",
+          "kind": "special_pdf"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/83c1dc29dcade9f1231f1d052d5fe28d6ad6f1a34d5589cfbea79a7645073726/receipt.json",
+      "receipt_sha256": "e9429f99306941af1f3629ecbf35a9f8d5748e4f2ad0dcdf5a55cdbdb6a75d07",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250821_2.pdf"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/c0d794f364fce45b095cea04c36b45079f2bd0a2c18be29841ce4cecbbb31b61/body.xml",
+      "body_sha256": "0d86a85423d35f6d410cdaba62377cae747535f589a4ad2e9216fb211aefd2eb",
+      "format": "xml",
+      "headers_sha256": "926662907cc6bfcc710971dae5def563a4a44217d7e3ff195e24f770ef36b48c",
+      "memberships": [
+        {
+          "auction_date": "2010-01-14",
+          "cusip": "912810QD3",
+          "kind": "announcement_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/c0d794f364fce45b095cea04c36b45079f2bd0a2c18be29841ce4cecbbb31b61/receipt.json",
+      "receipt_sha256": "f6ccbe60c553d3592286dbe0203258fb63a84c952f9ea1bcd63d8e9567b3a9bb",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/c0d794f364fce45b095cea04c36b45079f2bd0a2c18be29841ce4cecbbb31b61/schema.json",
+      "schema_sha256": "bf6e69d90f388efb909f0c3e9f50448aff03bbf7745bec6cf7374d45de640daa",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/A_20100107_1.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/90bb23d0cb9bdab9803ffa8c63bb7176a7740e32fb2f8641462671039f1a4efd/body.xml",
+      "body_sha256": "eb5675c72cf30e0f1ab9666e23d048c6b170da8d316c4d78abeb3275cd895fc0",
+      "format": "xml",
+      "headers_sha256": "3df44d008e9a550d77b0467779415622dbeb1fbe2b559c3f4daf40502a5d3e7a",
+      "memberships": [
+        {
+          "auction_date": "2010-01-13",
+          "cusip": "912828LY4",
+          "kind": "announcement_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/90bb23d0cb9bdab9803ffa8c63bb7176a7740e32fb2f8641462671039f1a4efd/receipt.json",
+      "receipt_sha256": "06cf5bd66b9adfd7de791205043155e730b25b355af646b95856388ccd3e3042",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/90bb23d0cb9bdab9803ffa8c63bb7176a7740e32fb2f8641462671039f1a4efd/schema.json",
+      "schema_sha256": "bf6e69d90f388efb909f0c3e9f50448aff03bbf7745bec6cf7374d45de640daa",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/A_20100107_3.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/c1a94120408ee615bb4a07609edde4c6341670ddddda0ba26937d50a0bd80a74/body.xml",
+      "body_sha256": "15b59713f39948676a985a1159a9fe75886bab4077affb3cca763adceef76a23",
+      "format": "xml",
+      "headers_sha256": "f03953c93873d281b364ac9575486e2bd80dd1c0fa5b641256ac46f5755d246d",
+      "memberships": [
+        {
+          "auction_date": "2010-01-12",
+          "cusip": "912828MG2",
+          "kind": "announcement_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/c1a94120408ee615bb4a07609edde4c6341670ddddda0ba26937d50a0bd80a74/receipt.json",
+      "receipt_sha256": "3b778ccb84d6485848e7a39c57bf59c02a8d0d039999ee16a1c675dbcf14e9cb",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/c1a94120408ee615bb4a07609edde4c6341670ddddda0ba26937d50a0bd80a74/schema.json",
+      "schema_sha256": "bf6e69d90f388efb909f0c3e9f50448aff03bbf7745bec6cf7374d45de640daa",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/A_20100107_4.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/ad5069327c6a6423ce43267b49dc840fcd12eef2428ea537782fa5ab6596c5d7/body.xml",
+      "body_sha256": "0f48a0e408d2e72c092d6056e79d9c947454142c0910c67684d78dc9113c234a",
+      "format": "xml",
+      "headers_sha256": "9d38605fbddfff22f2d18ca2a1a599f8fea48ca79a9a086f27213c55f7450ef1",
+      "memberships": [
+        {
+          "auction_date": "2010-01-26",
+          "cusip": "912828MJ6",
+          "kind": "announcement_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/ad5069327c6a6423ce43267b49dc840fcd12eef2428ea537782fa5ab6596c5d7/receipt.json",
+      "receipt_sha256": "cb8af398cd94d25aeefbdd8cf527ea7c9e8b7944b4ee39f09d9b15583769fec1",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/ad5069327c6a6423ce43267b49dc840fcd12eef2428ea537782fa5ab6596c5d7/schema.json",
+      "schema_sha256": "bf6e69d90f388efb909f0c3e9f50448aff03bbf7745bec6cf7374d45de640daa",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/A_20100121_3.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/5125ae3287bcf98117386a91b5fc4224a625e1b99b47b2b96e0775ebfc802dc3/body.xml",
+      "body_sha256": "a79b27a2d23b310ff21a0a53f69888ba9e5061d6c6f70b27030c9e842e4b6afb",
+      "format": "xml",
+      "headers_sha256": "da11c8c5db5d2a4c11bb26f2f00845194a0c40cc546e5b93eaf75721c7c3231c",
+      "memberships": [
+        {
+          "auction_date": "2010-01-28",
+          "cusip": "912828MK3",
+          "kind": "announcement_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/5125ae3287bcf98117386a91b5fc4224a625e1b99b47b2b96e0775ebfc802dc3/receipt.json",
+      "receipt_sha256": "2e8415d7586c5c28c02af09e633bc24384fdc3be4498db7ed1edf30c4bd82ba6",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/5125ae3287bcf98117386a91b5fc4224a625e1b99b47b2b96e0775ebfc802dc3/schema.json",
+      "schema_sha256": "bf6e69d90f388efb909f0c3e9f50448aff03bbf7745bec6cf7374d45de640daa",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/A_20100121_4.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/22e98ac467b9dac74c15ec721e49a14edc06b3b19c0549617ccad2561f7c4175/body.xml",
+      "body_sha256": "bde59923e9336064c789af17b3de2c78f99cbb680e6e5499f4c9a892646356ed",
+      "format": "xml",
+      "headers_sha256": "e57ad4bca08510fae0e81b402afb615015b5c1d2a0cc89e3da633dd794cb3584",
+      "memberships": [
+        {
+          "auction_date": "2010-01-27",
+          "cusip": "912828MH0",
+          "kind": "announcement_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/22e98ac467b9dac74c15ec721e49a14edc06b3b19c0549617ccad2561f7c4175/receipt.json",
+      "receipt_sha256": "b36a8f60242f3b574ad128502268f37771a4b5779d480f7e86aacb219c83623b",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/22e98ac467b9dac74c15ec721e49a14edc06b3b19c0549617ccad2561f7c4175/schema.json",
+      "schema_sha256": "bf6e69d90f388efb909f0c3e9f50448aff03bbf7745bec6cf7374d45de640daa",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/A_20100121_5.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/663a42d2e20a0164d4f18d6e7f2328840950ed657756ed8b7c5461f15f6056f6/body.xml",
+      "body_sha256": "9b16f43831216c12f98f421affa2acf03c127b1ad85e31c51c60c459c817d3fa",
+      "format": "xml",
+      "headers_sha256": "dd7ce844b6b5a16dfae697f5d410a85e3499fd4a039e2b180fe2e33422dd91aa",
+      "memberships": [
+        {
+          "auction_date": "2010-06-22",
+          "cusip": "912828NS5",
+          "kind": "announcement_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/663a42d2e20a0164d4f18d6e7f2328840950ed657756ed8b7c5461f15f6056f6/receipt.json",
+      "receipt_sha256": "2ccc7fc29f00fabfc31ff381567af8165b079fb05c1e568c18ae6379622df1f2",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/663a42d2e20a0164d4f18d6e7f2328840950ed657756ed8b7c5461f15f6056f6/schema.json",
+      "schema_sha256": "bf6e69d90f388efb909f0c3e9f50448aff03bbf7745bec6cf7374d45de640daa",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/A_20100617_2.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/7bbb038fdf580b25a592167a17c5f979ad0b75644168fd798d23a5fdc8291710/body.xml",
+      "body_sha256": "b3c5a2035ff74ee892eab2b4c257210cd4c454b3377a99236924297a27d540e4",
+      "format": "xml",
+      "headers_sha256": "89f27eda3649be0175857de8e9d2c86f097bcad0f2784bc90522e7946db354dd",
+      "memberships": [
+        {
+          "auction_date": "2016-01-12",
+          "cusip": "912828N63",
+          "kind": "announcement_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/7bbb038fdf580b25a592167a17c5f979ad0b75644168fd798d23a5fdc8291710/receipt.json",
+      "receipt_sha256": "51d16b7fc6b9f4c1f76daffaf7341683f98f48214d9ecc4cbf4a00a1fc989e43",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/7bbb038fdf580b25a592167a17c5f979ad0b75644168fd798d23a5fdc8291710/schema.json",
+      "schema_sha256": "dd3c33c4344abf254373891fe03b23a026d64c18c48229faf8f5e0be7f91c2a6",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/A_20160107_2.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/b5e943d2d758d9494f6ea6441532ceca8cc406c59d60b90c277dc9ede715e6f4/body.xml",
+      "body_sha256": "174b41a8e7f4ccf18a9d85e118c1fc3e329672eaf7c5cfb4a270edf93820411c",
+      "format": "xml",
+      "headers_sha256": "eed44ce96748aa37709a59339efe200fc144dea1288a72c77470793d61e627b5",
+      "memberships": [
+        {
+          "auction_date": "2016-01-14",
+          "cusip": "912810RP5",
+          "kind": "announcement_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/b5e943d2d758d9494f6ea6441532ceca8cc406c59d60b90c277dc9ede715e6f4/receipt.json",
+      "receipt_sha256": "96b722ce0c75dc9bcb1898d93a793d7a9c547835e89107aba337dae9196b99c3",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/b5e943d2d758d9494f6ea6441532ceca8cc406c59d60b90c277dc9ede715e6f4/schema.json",
+      "schema_sha256": "dd3c33c4344abf254373891fe03b23a026d64c18c48229faf8f5e0be7f91c2a6",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/A_20160107_3.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/c0d884989618c717c8c65e3a7a070644c0b57d1d5cf66fa53d45c484943191e8/body.xml",
+      "body_sha256": "d0abc8d647a793c80ecab9a8541c2faf8f66bfa5b2e87ce105b8f50fd11d5301",
+      "format": "xml",
+      "headers_sha256": "61b5f163eb5f00d29cc4e678d6b33a947baac1aa696608c2acc6a45f4a21aea5",
+      "memberships": [
+        {
+          "auction_date": "2016-01-13",
+          "cusip": "912828M56",
+          "kind": "announcement_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/c0d884989618c717c8c65e3a7a070644c0b57d1d5cf66fa53d45c484943191e8/receipt.json",
+      "receipt_sha256": "afd43d57cd0726832c1f9a283847eadff11354106c69a0f8f56d436029aeda84",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/c0d884989618c717c8c65e3a7a070644c0b57d1d5cf66fa53d45c484943191e8/schema.json",
+      "schema_sha256": "dd3c33c4344abf254373891fe03b23a026d64c18c48229faf8f5e0be7f91c2a6",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/A_20160107_5.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/b52f6442eaf891e12594978d87d8482ab42357e3ac3560c078b57fc8ba8be086/body.xml",
+      "body_sha256": "38d5ac793c731263b9231047dd0521cd02e671b9b62e7174e5289d9f25bc4afb",
+      "format": "xml",
+      "headers_sha256": "7919e59fdd4d7c888f06027dc4d7f01bc4dafe203b82fbbab61748dc082076dc",
+      "memberships": [
+        {
+          "auction_date": "2016-01-27",
+          "cusip": "912828N89",
+          "kind": "announcement_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/b52f6442eaf891e12594978d87d8482ab42357e3ac3560c078b57fc8ba8be086/receipt.json",
+      "receipt_sha256": "16cfc75d187556551043285370f45b784b13f6f0a6a7053dbcf6c6c0e5187c44",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/b52f6442eaf891e12594978d87d8482ab42357e3ac3560c078b57fc8ba8be086/schema.json",
+      "schema_sha256": "dd3c33c4344abf254373891fe03b23a026d64c18c48229faf8f5e0be7f91c2a6",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/A_20160121_1.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/34be984dffb7a29b66f37bdd410a15cea8668c5b4d7d6aa958b3fff2dcf3491c/body.xml",
+      "body_sha256": "12084d351b78e660192a3bef3ef96a1205ed454ca89725bb199febef78806e53",
+      "format": "xml",
+      "headers_sha256": "bb148b598683c0e06e8b51b211b7705bc3065eadf7b756e4db3083e05802e1f9",
+      "memberships": [
+        {
+          "auction_date": "2016-01-28",
+          "cusip": "912828P38",
+          "kind": "announcement_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/34be984dffb7a29b66f37bdd410a15cea8668c5b4d7d6aa958b3fff2dcf3491c/receipt.json",
+      "receipt_sha256": "b724d9e15f876e746467871de25705c6499d7ba9d590e82c12d36fdb09c69102",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/34be984dffb7a29b66f37bdd410a15cea8668c5b4d7d6aa958b3fff2dcf3491c/schema.json",
+      "schema_sha256": "dd3c33c4344abf254373891fe03b23a026d64c18c48229faf8f5e0be7f91c2a6",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/A_20160121_5.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/8bbbbbe625e755c3a5c10e1bc05f3badaf7dfb09f784fe87b95ffcf8d4cd1479/body.xml",
+      "body_sha256": "f5297cb31cab77cb4639df7accb2500769b109d3f6ca335ee1dfe85e41264e87",
+      "format": "xml",
+      "headers_sha256": "ea613bfb56d56c22b87a92bce2b05b7d656ee287a6c1c867c11bf62808001af5",
+      "memberships": [
+        {
+          "auction_date": "2016-01-26",
+          "cusip": "912828P20",
+          "kind": "announcement_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/8bbbbbe625e755c3a5c10e1bc05f3badaf7dfb09f784fe87b95ffcf8d4cd1479/receipt.json",
+      "receipt_sha256": "0fecc005aef37fe4cfd9af9d7064ac2bf02c20999fd4bdb4a330909fce3feb91",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/8bbbbbe625e755c3a5c10e1bc05f3badaf7dfb09f784fe87b95ffcf8d4cd1479/schema.json",
+      "schema_sha256": "dd3c33c4344abf254373891fe03b23a026d64c18c48229faf8f5e0be7f91c2a6",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/A_20160121_6.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/71bd35b3c76a2b210d5155dcab6c1b8caa3240af0dc2fd38591e0ca8777c8398/body.xml",
+      "body_sha256": "2488024cb6849d423f90d53a8bd924b5182a9c3157d19dc214e742a9a0a7fd88",
+      "format": "xml",
+      "headers_sha256": "ab4a5953a82e47af7422dfcfab7157787a124d51766e849b52cbecf5e7cc6d80",
+      "memberships": [
+        {
+          "auction_date": "2019-06-12",
+          "cusip": "9128286T2",
+          "kind": "announcement_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/71bd35b3c76a2b210d5155dcab6c1b8caa3240af0dc2fd38591e0ca8777c8398/receipt.json",
+      "receipt_sha256": "e73e26ee69ec9db87306b4c4974d205cb7829ea68aff2fae4440e649f6b2cab1",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/71bd35b3c76a2b210d5155dcab6c1b8caa3240af0dc2fd38591e0ca8777c8398/schema.json",
+      "schema_sha256": "dd3c33c4344abf254373891fe03b23a026d64c18c48229faf8f5e0be7f91c2a6",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/A_20190606_4.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/cc98f915e2a84a8fa469654fb6a002cbde75623f98f26febb73171ebd9e8f978/body.xml",
+      "body_sha256": "9d780d7e50bcdff415436dad1afedcdc548ffddbf0987d93902b4e12ce8c0132",
+      "format": "xml",
+      "headers_sha256": "3d6aeebc29e200625f205354286bad06bef663a2696504cc48463023173205ab",
+      "memberships": [
+        {
+          "auction_date": "2019-06-21",
+          "cusip": "9128286T2",
+          "kind": "announcement_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/cc98f915e2a84a8fa469654fb6a002cbde75623f98f26febb73171ebd9e8f978/receipt.json",
+      "receipt_sha256": "939f9ed4747eaf53a7e66b0022079959de6ee7486fe1d52c62e139b65f3d3b93",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/cc98f915e2a84a8fa469654fb6a002cbde75623f98f26febb73171ebd9e8f978/schema.json",
+      "schema_sha256": "dd3c33c4344abf254373891fe03b23a026d64c18c48229faf8f5e0be7f91c2a6",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/A_20190621_1.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/44e7d045d0a9454e40f5c4c392d78a4903098e7b5c3862dd0f1cf9419e98f8d3/body.xml",
+      "body_sha256": "dbbb8527350aa9ceea636748899a78e15fdeecf77cc8414318e703ff91c4c012",
+      "format": "xml",
+      "headers_sha256": "7d3206eb4f26baa937b07449546a3c19530d0f49fbd1762baa249a252993b4f2",
+      "memberships": [
+        {
+          "auction_date": "2025-01-08",
+          "cusip": "912810UE6",
+          "kind": "announcement_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/44e7d045d0a9454e40f5c4c392d78a4903098e7b5c3862dd0f1cf9419e98f8d3/receipt.json",
+      "receipt_sha256": "20e83e13b2928b6c34d9ffc596bf06b5f4ed396c9758023737147a86bca9163c",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/44e7d045d0a9454e40f5c4c392d78a4903098e7b5c3862dd0f1cf9419e98f8d3/schema.json",
+      "schema_sha256": "ae3b52cc0802b7af5bcdb1fceeb49f7aa0977456631d272cc2ef5d7be730870f",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/A_20250102_2.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/f26c374177c54ca2c6c3d1cbce47ae3cca243e6aec2fe354dfc3719e44ad533d/body.xml",
+      "body_sha256": "9d22cb2bdc3bdf749775bfeeb02d90385af85cebdf5ee7a399be7dbba2729c93",
+      "format": "xml",
+      "headers_sha256": "1e73391d3acb2d08069918a58b03aeaf7e11dac7b06b918d0a9d082b33c1cfa5",
+      "memberships": [
+        {
+          "auction_date": "2025-01-07",
+          "cusip": "91282CLW9",
+          "kind": "announcement_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/f26c374177c54ca2c6c3d1cbce47ae3cca243e6aec2fe354dfc3719e44ad533d/receipt.json",
+      "receipt_sha256": "a0182d5e90c55c4f19017c14e55dd733c620a3b049f77595680145c2f9e26be0",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/f26c374177c54ca2c6c3d1cbce47ae3cca243e6aec2fe354dfc3719e44ad533d/schema.json",
+      "schema_sha256": "ae3b52cc0802b7af5bcdb1fceeb49f7aa0977456631d272cc2ef5d7be730870f",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/A_20250102_3.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/f70e35b175bbb04658a6e5ec17c7b9099f66c09b6a6962772398cdb34aa3b5af/body.xml",
+      "body_sha256": "74ffd54b5ce78b15ca7d6e2f9146a6e9c51d1717c8a3d56c5b0f23399edb83c2",
+      "format": "xml",
+      "headers_sha256": "60e06de2c46ac88429e3211443986ecd1715d811e75876bc747fd0cdee47c464",
+      "memberships": [
+        {
+          "auction_date": "2025-01-06",
+          "cusip": "91282CMF5",
+          "kind": "announcement_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/f70e35b175bbb04658a6e5ec17c7b9099f66c09b6a6962772398cdb34aa3b5af/receipt.json",
+      "receipt_sha256": "91ad31fa5b0c2e5ba4047f77d5e251c554406e4aeae0de881d56f76f36a7def7",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/f70e35b175bbb04658a6e5ec17c7b9099f66c09b6a6962772398cdb34aa3b5af/schema.json",
+      "schema_sha256": "ae3b52cc0802b7af5bcdb1fceeb49f7aa0977456631d272cc2ef5d7be730870f",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/A_20250102_4.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/2baeb8605de9637eace8ea02b1399b9d3f69923285d8200831b7ae1fd65c604b/body.xml",
+      "body_sha256": "c31e8af6867ba61980e121de6bb2d04f56742eff799b89e557b0ff63aa17971d",
+      "format": "xml",
+      "headers_sha256": "7682437fa14741c0e4eac4e97bdc36594f43b8e4156c9d930135295b7f0add1a",
+      "memberships": [
+        {
+          "auction_date": "2025-01-28",
+          "cusip": "91282CMK4",
+          "kind": "announcement_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/2baeb8605de9637eace8ea02b1399b9d3f69923285d8200831b7ae1fd65c604b/receipt.json",
+      "receipt_sha256": "b7aa119cbddc684aa25aad978191db2c3c0e3c940ebddb3976ca5ac2ce5a0a5e",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/2baeb8605de9637eace8ea02b1399b9d3f69923285d8200831b7ae1fd65c604b/schema.json",
+      "schema_sha256": "ae3b52cc0802b7af5bcdb1fceeb49f7aa0977456631d272cc2ef5d7be730870f",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/A_20250123_4.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/fac4a393a47a6390671de5b9a037e314e55daf20f8b3dd420b83b8f088b2987a/body.xml",
+      "body_sha256": "feca019c942eb02de856e5008da9e29f5a96bf083e6c13d8881b77991c94d28f",
+      "format": "xml",
+      "headers_sha256": "61ba96d37a139277fc0a4e711cd736c03b61af8a23b369f9ca224a1f7f6e2a9b",
+      "memberships": [
+        {
+          "auction_date": "2025-01-27",
+          "cusip": "91282CMG3",
+          "kind": "announcement_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/fac4a393a47a6390671de5b9a037e314e55daf20f8b3dd420b83b8f088b2987a/receipt.json",
+      "receipt_sha256": "8a8d8deee3450b8e239294c0d7c79d29971241fcb331de1a89f9c18b22c96faf",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/fac4a393a47a6390671de5b9a037e314e55daf20f8b3dd420b83b8f088b2987a/schema.json",
+      "schema_sha256": "ae3b52cc0802b7af5bcdb1fceeb49f7aa0977456631d272cc2ef5d7be730870f",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/A_20250123_5.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/d6b3002ee2053e3f582f63c3eea1e3f7773a1cd3c820247329eddf1038bb3674/body.xml",
+      "body_sha256": "b33e87f0e92b5a17b42faeec54343066fb390697fa1fba46a6afbce5af283e2a",
+      "format": "xml",
+      "headers_sha256": "dfb99728838f7ce434bfe599b4eae4e692f0df74a5a9c936ad35c0b1f2ebc957",
+      "memberships": [
+        {
+          "auction_date": "2025-01-27",
+          "cusip": "91282CMH1",
+          "kind": "announcement_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/d6b3002ee2053e3f582f63c3eea1e3f7773a1cd3c820247329eddf1038bb3674/receipt.json",
+      "receipt_sha256": "865ccd045608d025b287c3ad2b253727a379af9f58e678cad5138c75748d3415",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/d6b3002ee2053e3f582f63c3eea1e3f7773a1cd3c820247329eddf1038bb3674/schema.json",
+      "schema_sha256": "ae3b52cc0802b7af5bcdb1fceeb49f7aa0977456631d272cc2ef5d7be730870f",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/A_20250123_7.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/e3750d365b8973b142e5cdd6997a99b9db686793d3b6cb2180c563a7ae031313/body.xml",
+      "body_sha256": "34043fa8209c58967cfa90db951633e88212ce8c040645336ca6b356960f97bf",
+      "format": "xml",
+      "headers_sha256": "aac3c39bc41de2a60c68083ed4e79ad578ed73b258bd89efd5e9732e4de01e22",
+      "memberships": [
+        {
+          "auction_date": "2025-08-27",
+          "cusip": "91282CNX5",
+          "kind": "announcement_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/e3750d365b8973b142e5cdd6997a99b9db686793d3b6cb2180c563a7ae031313/receipt.json",
+      "receipt_sha256": "d07f6f6d69e0ae79818f46c698e7a413d6b4ef6d5fc25680c5c146837d85530e",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/e3750d365b8973b142e5cdd6997a99b9db686793d3b6cb2180c563a7ae031313/schema.json",
+      "schema_sha256": "ae3b52cc0802b7af5bcdb1fceeb49f7aa0977456631d272cc2ef5d7be730870f",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/A_20250821_1.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/27e65121c21e2df9a7e4c99a5775565484ae3da178b8b311e1d40b322c097954/body.xml",
+      "body_sha256": "4a7ab4e5a05d4640763ccd0ae3460b49bcea39fcd462f09e39263bb4cfb11a37",
+      "format": "xml",
+      "headers_sha256": "8c64cd4c12ec4c2a36282b2ed9aac7b034732ca040340e265c3a4fd070109a43",
+      "memberships": [
+        {
+          "auction_date": "2010-01-12",
+          "cusip": "912828MG2",
+          "kind": "competitive_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/27e65121c21e2df9a7e4c99a5775565484ae3da178b8b311e1d40b322c097954/receipt.json",
+      "receipt_sha256": "427fc2e1084a1a7097b94f9051cb891529414f14e1ed082ed430eb564aa02559",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/27e65121c21e2df9a7e4c99a5775565484ae3da178b8b311e1d40b322c097954/schema.json",
+      "schema_sha256": "ec4734ae9e1aa549011c9f0e0976499eb025cf5c7a8cd45460e0bd775a3db64d",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/R_20100112_3.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/13f9ca80660614c09a36ec97c04c79283940778b420e5ee981109d6db8ea92f1/body.xml",
+      "body_sha256": "9cb3361a9621954a12d033417db9f1ae11dc061597c81780cd9d66fe8154ce53",
+      "format": "xml",
+      "headers_sha256": "923f01af39e7bcc267ebcbbd8462e30f16ebcd2222556e204b9b8306ba9450fe",
+      "memberships": [
+        {
+          "auction_date": "2010-01-13",
+          "cusip": "912828LY4",
+          "kind": "competitive_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/13f9ca80660614c09a36ec97c04c79283940778b420e5ee981109d6db8ea92f1/receipt.json",
+      "receipt_sha256": "6951f811ebb6b7d2319c5455328334bd6a8cdd968c113f70205c174b35fa6496",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/13f9ca80660614c09a36ec97c04c79283940778b420e5ee981109d6db8ea92f1/schema.json",
+      "schema_sha256": "ec4734ae9e1aa549011c9f0e0976499eb025cf5c7a8cd45460e0bd775a3db64d",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/R_20100113_1.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/8182df95e96f90496cabbb477d09acb4eb596f7712ac80a7bdcc2f7b9f520702/body.xml",
+      "body_sha256": "e207d95a20604af2a54996567761349d9901e9c5014a78cc01f7bfa9786a8a46",
+      "format": "xml",
+      "headers_sha256": "ab232c435473a93e6b7f4496fe89da6a54fd602f28943c91fb867b533c5799a0",
+      "memberships": [
+        {
+          "auction_date": "2010-01-14",
+          "cusip": "912810QD3",
+          "kind": "competitive_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/8182df95e96f90496cabbb477d09acb4eb596f7712ac80a7bdcc2f7b9f520702/receipt.json",
+      "receipt_sha256": "4e2a00406d0ec606833314853fea1201d2f4ef69c9d149b89c5adbe329e047e7",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/8182df95e96f90496cabbb477d09acb4eb596f7712ac80a7bdcc2f7b9f520702/schema.json",
+      "schema_sha256": "ec4734ae9e1aa549011c9f0e0976499eb025cf5c7a8cd45460e0bd775a3db64d",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/R_20100114_1.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/60f718656a237bb02fdc77eaa516978c090007bd3c90e7ae3774c22c2d437e2e/body.xml",
+      "body_sha256": "0e226d38fff8acd695beffefe3d1dfcbe9c3cb8ab986858ec37bf759f31678a5",
+      "format": "xml",
+      "headers_sha256": "0ad8c517d420d6f5bea26315b7b7e3deac68dad86c70be3a96e9f59501d4c0a2",
+      "memberships": [
+        {
+          "auction_date": "2010-01-26",
+          "cusip": "912828MJ6",
+          "kind": "competitive_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/60f718656a237bb02fdc77eaa516978c090007bd3c90e7ae3774c22c2d437e2e/receipt.json",
+      "receipt_sha256": "d41caa8c951f9ea3a9a45414992d3c2b33c6df2bbcc474a34d2a09eaee1a5728",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/60f718656a237bb02fdc77eaa516978c090007bd3c90e7ae3774c22c2d437e2e/schema.json",
+      "schema_sha256": "ec4734ae9e1aa549011c9f0e0976499eb025cf5c7a8cd45460e0bd775a3db64d",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/R_20100126_2.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/8bb0dae61b85d35a1db6d0c136220c06f40f531b392f3f4a7982735b38062ac0/body.xml",
+      "body_sha256": "02bbb5fd30630d6e0abf6e2d9e13ea48b8f63951786a06ac84c328fb48fb0b5d",
+      "format": "xml",
+      "headers_sha256": "7d1023b906e2ce99c55fe0e91b64ec37bca6ec0506c107bf8057a7aeff461c8b",
+      "memberships": [
+        {
+          "auction_date": "2010-01-27",
+          "cusip": "912828MH0",
+          "kind": "competitive_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/8bb0dae61b85d35a1db6d0c136220c06f40f531b392f3f4a7982735b38062ac0/receipt.json",
+      "receipt_sha256": "5399d6a8ddaf9b048ea0c6b098836d1f8b2c47ab191f9cbfb463460da16e6006",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/8bb0dae61b85d35a1db6d0c136220c06f40f531b392f3f4a7982735b38062ac0/schema.json",
+      "schema_sha256": "ec4734ae9e1aa549011c9f0e0976499eb025cf5c7a8cd45460e0bd775a3db64d",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/R_20100127_1.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/dd91f096e06159d9670faffac98e790842abc5c6a363e6e978608d5e584be2f4/body.xml",
+      "body_sha256": "4e895197783750cbc6220ca403aff18698d5fd7844133d1f484db8ae2bd4fdf5",
+      "format": "xml",
+      "headers_sha256": "8dffa2bd7569e6f107bbce75eff216b28430f31dc81c111e002fef6f26374e2d",
+      "memberships": [
+        {
+          "auction_date": "2010-01-28",
+          "cusip": "912828MK3",
+          "kind": "competitive_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/dd91f096e06159d9670faffac98e790842abc5c6a363e6e978608d5e584be2f4/receipt.json",
+      "receipt_sha256": "5ac4f9be4dcbb3b37072039195e2ccba3f42323ee614ae4f5a253b2a03428c15",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/dd91f096e06159d9670faffac98e790842abc5c6a363e6e978608d5e584be2f4/schema.json",
+      "schema_sha256": "ec4734ae9e1aa549011c9f0e0976499eb025cf5c7a8cd45460e0bd775a3db64d",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/R_20100128_1.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/3dbba7b24277b1e9a942481d538fbc3fab4d22523825704c172366c0e47c5551/body.xml",
+      "body_sha256": "a971c424f128bc18e3526f1a85accb2f9606ce8ffa08bd9c9506e392e2723fe1",
+      "format": "xml",
+      "headers_sha256": "1c2c0bba91fcc848510252fbefa1754759a7c2d64021a17554b34c8de3f73ae7",
+      "memberships": [
+        {
+          "auction_date": "2010-06-22",
+          "cusip": "912828NS5",
+          "kind": "competitive_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/3dbba7b24277b1e9a942481d538fbc3fab4d22523825704c172366c0e47c5551/receipt.json",
+      "receipt_sha256": "6589664714c34e5f3e684a35528e9d69851c98b194fa7a513ab595448f2ced17",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/3dbba7b24277b1e9a942481d538fbc3fab4d22523825704c172366c0e47c5551/schema.json",
+      "schema_sha256": "ec4734ae9e1aa549011c9f0e0976499eb025cf5c7a8cd45460e0bd775a3db64d",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/R_20100622_2.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/73c3084988ee5ba1b3c90d17ea0626b8a5fb46307e86f68b6531cae9198918f1/body.xml",
+      "body_sha256": "846348ab86dca67eb142f2eeb232ca5cd2587e431b01cfe07d0fead068e03a49",
+      "format": "xml",
+      "headers_sha256": "916bba1df7ded113a534d68dc43fa50492e21ec6d8867e8fc4bf5b89e5b11aa4",
+      "memberships": [
+        {
+          "auction_date": "2016-01-12",
+          "cusip": "912828N63",
+          "kind": "competitive_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/73c3084988ee5ba1b3c90d17ea0626b8a5fb46307e86f68b6531cae9198918f1/receipt.json",
+      "receipt_sha256": "fb72f362319fbff999048127d5e099b5fc684936734c99c93a092710b9e3791e",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/73c3084988ee5ba1b3c90d17ea0626b8a5fb46307e86f68b6531cae9198918f1/schema.json",
+      "schema_sha256": "754814c7d04ecd0a7f3d91312dab62b155d2f31a9151c3a4723c25e58f305ff3",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/R_20160112_2.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/2969923eed8a0fa7b0b5ffd4907489c907e9b4d1e4b5507937a286e8558f8230/body.xml",
+      "body_sha256": "6839cfa21ec6a26ac1c1dc639a6ad6c71b2ded9265ce009560898356218a1807",
+      "format": "xml",
+      "headers_sha256": "300147c508180cf03d2c0698652ddae4fba42504012c3f2ad4957011825c2a42",
+      "memberships": [
+        {
+          "auction_date": "2016-01-13",
+          "cusip": "912828M56",
+          "kind": "competitive_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/2969923eed8a0fa7b0b5ffd4907489c907e9b4d1e4b5507937a286e8558f8230/receipt.json",
+      "receipt_sha256": "318d8808d3ba121a2a3547fec280dd1d77a7fa1b5d7c6e3ea3c15fbf04619821",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/2969923eed8a0fa7b0b5ffd4907489c907e9b4d1e4b5507937a286e8558f8230/schema.json",
+      "schema_sha256": "754814c7d04ecd0a7f3d91312dab62b155d2f31a9151c3a4723c25e58f305ff3",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/R_20160113_1.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/81cd3220b8ad97c059866cbf2df49c0ee26c1527ba1cfcc1f3047471284c60f4/body.xml",
+      "body_sha256": "7c297ef0410632eafb096625064b3dd6d8507d99ad61c8a3ab6eda308a44710e",
+      "format": "xml",
+      "headers_sha256": "319ba32bcafe225ccc32b5fe0a92ea8a880961a1be0e23da4745500559413f25",
+      "memberships": [
+        {
+          "auction_date": "2016-01-14",
+          "cusip": "912810RP5",
+          "kind": "competitive_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/81cd3220b8ad97c059866cbf2df49c0ee26c1527ba1cfcc1f3047471284c60f4/receipt.json",
+      "receipt_sha256": "fe241b31c01a66e8612be11cc784b5bb8b23fb3c04fbaec509a0f1dd4865210d",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/81cd3220b8ad97c059866cbf2df49c0ee26c1527ba1cfcc1f3047471284c60f4/schema.json",
+      "schema_sha256": "754814c7d04ecd0a7f3d91312dab62b155d2f31a9151c3a4723c25e58f305ff3",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/R_20160114_1.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/e080ef65ec7f450cdc5e6500dbed2697b6950991749117ee01f869b8b84fed98/body.xml",
+      "body_sha256": "5350c516c392e821a10ca262c1ab63f5390e0d25d08252fbef729d909614a50e",
+      "format": "xml",
+      "headers_sha256": "77684834e5f77d5e84fbe3324dcbd0288616ed5994c772aa452980570427a77d",
+      "memberships": [
+        {
+          "auction_date": "2016-01-26",
+          "cusip": "912828P20",
+          "kind": "competitive_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/e080ef65ec7f450cdc5e6500dbed2697b6950991749117ee01f869b8b84fed98/receipt.json",
+      "receipt_sha256": "f83b9d07822adb71a6589ae2f2397585c2d48924e9219c0048f93f1b6ac14059",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/e080ef65ec7f450cdc5e6500dbed2697b6950991749117ee01f869b8b84fed98/schema.json",
+      "schema_sha256": "754814c7d04ecd0a7f3d91312dab62b155d2f31a9151c3a4723c25e58f305ff3",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/R_20160126_2.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/3d01c864132b1af0e3c3ddfcd441e7a9ca617e7ea3e186a69058fde7a3d669e3/body.xml",
+      "body_sha256": "1779d43a4c98273ef66a13c96bba4a19f2025a429ede9774da90ab2e6105a7d9",
+      "format": "xml",
+      "headers_sha256": "73dd3dc6563d8a20add5d6558caa2656cdaeea000ff653233c3a800ebdfa978e",
+      "memberships": [
+        {
+          "auction_date": "2016-01-27",
+          "cusip": "912828N89",
+          "kind": "competitive_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/3d01c864132b1af0e3c3ddfcd441e7a9ca617e7ea3e186a69058fde7a3d669e3/receipt.json",
+      "receipt_sha256": "9eb65977df0861f471a2fcd38d59ad649e147cbc00065f295bb18c17acee66d4",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/3d01c864132b1af0e3c3ddfcd441e7a9ca617e7ea3e186a69058fde7a3d669e3/schema.json",
+      "schema_sha256": "754814c7d04ecd0a7f3d91312dab62b155d2f31a9151c3a4723c25e58f305ff3",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/R_20160127_2.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/62e91d7e7918012275c941926dd316c5e804598a87f0a6316ffd5bf9d635c8fd/body.xml",
+      "body_sha256": "3ca31cf37fda3a01d7008b7cfef4e580ab4fa33575cef01aec5cf0139153bc33",
+      "format": "xml",
+      "headers_sha256": "a641e528355fc0ab320424ca35f33bc8774a532392fb5d94abbe967a8c4504e5",
+      "memberships": [
+        {
+          "auction_date": "2016-01-28",
+          "cusip": "912828P38",
+          "kind": "competitive_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/62e91d7e7918012275c941926dd316c5e804598a87f0a6316ffd5bf9d635c8fd/receipt.json",
+      "receipt_sha256": "7471d01ccd3de73b90e944e10c792537f6b85018a7b702208e796d70d0b4878e",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/62e91d7e7918012275c941926dd316c5e804598a87f0a6316ffd5bf9d635c8fd/schema.json",
+      "schema_sha256": "754814c7d04ecd0a7f3d91312dab62b155d2f31a9151c3a4723c25e58f305ff3",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/R_20160128_1.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/e20faf58e14fd298eb37f9077b34b30d3f04f6fa1793cffa57cabd2af6be7690/body.xml",
+      "body_sha256": "f6fa28fecc3230732301aa3f68d3ad78f9eb51e5c83488ef133786e04729e460",
+      "format": "xml",
+      "headers_sha256": "f72b389baeb198e04d95bec3b52c1eddc8b5c8c40f1cc9ea2de2a3d301e95fb9",
+      "memberships": [
+        {
+          "auction_date": "2019-06-12",
+          "cusip": "9128286T2",
+          "kind": "competitive_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/e20faf58e14fd298eb37f9077b34b30d3f04f6fa1793cffa57cabd2af6be7690/receipt.json",
+      "receipt_sha256": "462c36724c47553ca4984e38b9e937d76ef3938a309714531077a0515e633086",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/e20faf58e14fd298eb37f9077b34b30d3f04f6fa1793cffa57cabd2af6be7690/schema.json",
+      "schema_sha256": "754814c7d04ecd0a7f3d91312dab62b155d2f31a9151c3a4723c25e58f305ff3",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/R_20190612_1.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/8d7c46edf1d9be32ca4515e0798d2d340de9fdea7509a3dd3653b0d1b13c4fe1/body.xml",
+      "body_sha256": "da15c6a9c3e3c2c192817afa378ab44ddf05218c93228c758ec78cda2205a4c8",
+      "format": "xml",
+      "headers_sha256": "9592794dda89dc3a8bb7c8b120235d03449c7e532e3e6c5aa12b2e6eeb9ce490",
+      "memberships": [
+        {
+          "auction_date": "2019-06-21",
+          "cusip": "9128286T2",
+          "kind": "competitive_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/8d7c46edf1d9be32ca4515e0798d2d340de9fdea7509a3dd3653b0d1b13c4fe1/receipt.json",
+      "receipt_sha256": "55d6afc8439c53ab4e7bfc2d69e668b0adc2ebe9b4b7258a3033035441a59f38",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/8d7c46edf1d9be32ca4515e0798d2d340de9fdea7509a3dd3653b0d1b13c4fe1/schema.json",
+      "schema_sha256": "754814c7d04ecd0a7f3d91312dab62b155d2f31a9151c3a4723c25e58f305ff3",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/R_20190621_1.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/63a4c94a6b899e54aea9e4f0a1d72e249a54a27584d6fc0339771481d54e5b51/body.xml",
+      "body_sha256": "974cc1a351071f9ceca27adb869aea3f857fefbf68b36a5195ccf33ec3e941b7",
+      "format": "xml",
+      "headers_sha256": "924a4f516f8d563fb3e0105d48d5a8f7e325f678298729ed008ce66d1d8f7557",
+      "memberships": [
+        {
+          "auction_date": "2025-01-06",
+          "cusip": "91282CMF5",
+          "kind": "competitive_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/63a4c94a6b899e54aea9e4f0a1d72e249a54a27584d6fc0339771481d54e5b51/receipt.json",
+      "receipt_sha256": "1f2b94761e5b6fb989401d525ef1539248cbcba1cbc346f841491d11a4335f7b",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/63a4c94a6b899e54aea9e4f0a1d72e249a54a27584d6fc0339771481d54e5b51/schema.json",
+      "schema_sha256": "8918da9abeea24fe01da3748af240feb787993e9aab3612bb268187e1abfbc81",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/R_20250106_3.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/28d65d08ae2547fb7cf891a6a0874567dab12fb42a28a3ac7f41bc558455a670/body.xml",
+      "body_sha256": "107f89f057d455733dffca7e3521e3f616259d883c15a092a382f08667b154b6",
+      "format": "xml",
+      "headers_sha256": "a86be11ea83c00b9b4ef8052e0316f2ae15331c8d54b30f78e6253294d7d6d2e",
+      "memberships": [
+        {
+          "auction_date": "2025-01-07",
+          "cusip": "91282CLW9",
+          "kind": "competitive_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/28d65d08ae2547fb7cf891a6a0874567dab12fb42a28a3ac7f41bc558455a670/receipt.json",
+      "receipt_sha256": "2b1f55ac70a818a272fd849d3ced09c4111af174e83fc1a6be869c0e38c9a5ad",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/28d65d08ae2547fb7cf891a6a0874567dab12fb42a28a3ac7f41bc558455a670/schema.json",
+      "schema_sha256": "8918da9abeea24fe01da3748af240feb787993e9aab3612bb268187e1abfbc81",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/R_20250107_2.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/dcf163d9327107b4623704095dd57477e4aff0ec6fcb734ee957165fdbf8e4f9/body.xml",
+      "body_sha256": "a3c734e032788baa6590a6fd0b95d552b58b8275b7160ac100ca49d35e98bda4",
+      "format": "xml",
+      "headers_sha256": "3e6adbd179a34cf3e1ec48c693666fc3af6abae21f481b55d384072248980d89",
+      "memberships": [
+        {
+          "auction_date": "2025-01-08",
+          "cusip": "912810UE6",
+          "kind": "competitive_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/dcf163d9327107b4623704095dd57477e4aff0ec6fcb734ee957165fdbf8e4f9/receipt.json",
+      "receipt_sha256": "c2fc960343d60532b6698521ddbd77f32968ebe9bae818c0d1fd46e040e09710",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/dcf163d9327107b4623704095dd57477e4aff0ec6fcb734ee957165fdbf8e4f9/schema.json",
+      "schema_sha256": "8918da9abeea24fe01da3748af240feb787993e9aab3612bb268187e1abfbc81",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/R_20250108_2.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/dd41089c9380b826a2ece9c71c550a85083730c2222d25d415cdab1e98abccf7/body.xml",
+      "body_sha256": "c9d99ed04ff50428ba405db6a65325f7678e71391f65677a4d810b32ee73ed52",
+      "format": "xml",
+      "headers_sha256": "57aaa609a92fd412f4130b23a0c22126649917b9b2da39741e61ee0f5b5d021e",
+      "memberships": [
+        {
+          "auction_date": "2025-01-27",
+          "cusip": "91282CMH1",
+          "kind": "competitive_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/dd41089c9380b826a2ece9c71c550a85083730c2222d25d415cdab1e98abccf7/receipt.json",
+      "receipt_sha256": "3a0cceefcc092727cee687d6cdf0a942e102bb8f1c1caec65e971a4d00d11f18",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/dd41089c9380b826a2ece9c71c550a85083730c2222d25d415cdab1e98abccf7/schema.json",
+      "schema_sha256": "8918da9abeea24fe01da3748af240feb787993e9aab3612bb268187e1abfbc81",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/R_20250127_1.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/b755eb990f79ece8ce5165f5c56931d1c099cc754b6c8f2e1176847de52a8262/body.xml",
+      "body_sha256": "704c761c28ea8b96371a5f1e9b1ac6a787da0384eb337719aef525819788990e",
+      "format": "xml",
+      "headers_sha256": "0ad409c48698bf5215dc00015fe55d7b9883ac1e6e12d25fd8e006db4afcba48",
+      "memberships": [
+        {
+          "auction_date": "2025-01-27",
+          "cusip": "91282CMG3",
+          "kind": "competitive_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/b755eb990f79ece8ce5165f5c56931d1c099cc754b6c8f2e1176847de52a8262/receipt.json",
+      "receipt_sha256": "b6724e5aec2aa85145fa95f5bc6e205910ac87d6969b7b099530002e7e41aff6",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/b755eb990f79ece8ce5165f5c56931d1c099cc754b6c8f2e1176847de52a8262/schema.json",
+      "schema_sha256": "8918da9abeea24fe01da3748af240feb787993e9aab3612bb268187e1abfbc81",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/R_20250127_4.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/114a3552efa64ec3302cc6ebbbc8e7d29d98a1b7835272142bd0e58fc9c1d7a3/body.xml",
+      "body_sha256": "038e1903a2e02a56916a42e7ae1f84dc0ce3db5452719810dc7049161eda2ba0",
+      "format": "xml",
+      "headers_sha256": "3e31884d991e700adce67eac8851a4c47c2dc8f39cf6a0dff5750d82d6c71563",
+      "memberships": [
+        {
+          "auction_date": "2025-01-28",
+          "cusip": "91282CMK4",
+          "kind": "competitive_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/114a3552efa64ec3302cc6ebbbc8e7d29d98a1b7835272142bd0e58fc9c1d7a3/receipt.json",
+      "receipt_sha256": "6bf41512945fade6c25aff80b0be825b4f206c9ce0d404f0b228b8b82936a5e4",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/114a3552efa64ec3302cc6ebbbc8e7d29d98a1b7835272142bd0e58fc9c1d7a3/schema.json",
+      "schema_sha256": "8918da9abeea24fe01da3748af240feb787993e9aab3612bb268187e1abfbc81",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/R_20250128_3.xml"
+    },
+    {
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/f2a37c71b1b1bee49d273d231825ac3f9b61479a70c513d8fb037d68f9fe44cb/body.xml",
+      "body_sha256": "222ff1df5175ffa91a0564125b9899f0b0b72b171a258b7bfc07c7e8ca17077e",
+      "format": "xml",
+      "headers_sha256": "920d48dab49bd3d7716d2b853c8be88965045cb61756f0ee3c996464a48af332",
+      "memberships": [
+        {
+          "auction_date": "2025-08-27",
+          "cusip": "91282CNX5",
+          "kind": "competitive_xml"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/f2a37c71b1b1bee49d273d231825ac3f9b61479a70c513d8fb037d68f9fe44cb/receipt.json",
+      "receipt_sha256": "eea4b60e4551a0e84d5a48879af58ea8126d1f2e31a2c9b0a848872681cf75d4",
+      "schema_path": "data/source_discovery/treasury_auction/document_pilot_v1/f2a37c71b1b1bee49d273d231825ac3f9b61479a70c513d8fb037d68f9fe44cb/schema.json",
+      "schema_sha256": "8918da9abeea24fe01da3748af240feb787993e9aab3612bb268187e1abfbc81",
+      "status": "VERIFIED_TRANSPORT_SCHEMA_ONLY",
+      "url": "https://www.treasurydirect.gov/xml/R_20250827_3.xml"
+    }
+  ],
+  "inspection_scope": "XML tag paths and attribute names only; PDF byte signature only; no scalar source content exported.",
+  "numerical_source_admitted": false,
+  "predictive_comparisons_added": 0,
+  "selection_sha256": "25d2ff3b2a619fe84e4354b9269826be8f007a55065123fc7bc41c134b45f417",
+  "status": "CAPTURED_SCHEMA_ONLY"
+}

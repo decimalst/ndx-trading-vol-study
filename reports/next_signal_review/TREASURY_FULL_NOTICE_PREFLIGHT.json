@@ -1,0 +1,4160 @@
+{
+  "checks": {
+    "all_projected_dates_and_document_urls_validated": true,
+    "all_source_pin_bytes_verified": true,
+    "annual_metadata_bound_to_inventory_capture": true,
+    "captured_body_receipt_headers_and_url_bindings_verified": true,
+    "exact_ordered_full_membership_tuples_match": true,
+    "exact_url_inventory_reconstructed": true,
+    "source_and_selection_pins_rechecked_before_output": true,
+    "special_filename_calendar_tokens_within_ceiling": true
+  },
+  "counts": {
+    "all_projected_document_associations": 27537,
+    "captured_pilot_originals": 7,
+    "cross_auction_year_urls": 0,
+    "distinct_notice_urls": 253,
+    "events_with_multiple_notice_urls": 56,
+    "filename_dates_after_member_auction_associations": 4,
+    "filename_year_mismatches": 0,
+    "not_in_pilot_capture": 246,
+    "projected_annual_files": 16,
+    "projected_records": 5347,
+    "same_day_shared_url_groups": 35,
+    "six_term_note_bond_records": 1138,
+    "six_term_rows_with_notices": 235,
+    "special_notice_associations": 298,
+    "urls_also_linked_to_nonselected_rows": 77,
+    "urls_shared_by_multiple_events": 41,
+    "urls_without_filename_date": 0
+  },
+  "cumulative_comparisons": 144,
+  "limits": [
+    "Only projected metadata and pinned capture artifacts were read; no raw annual response fields or new PDFs were accessed.",
+    "A filename date is a metadata token, not authenticated release or correction evidence.",
+    "Pilot capture memberships are a subset of the full archive memberships; reused bytes retain all independently reconstructed full memberships.",
+    "The captured-and-reviewed label is inherited from the fixed selection; this preflight verifies capture bindings and does not reperform documentary classification.",
+    "The six-term Note/Bond rule is provisional metadata scope, not final nominal-security or original-tenor admission.",
+    "Actual notice applicability may extend beyond or differ from archive links; full-history completeness is not established by this inventory."
+  ],
+  "mapping_observations": {
+    "also_linked_to_nonselected_rows": [
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2014-05-22",
+            "auction_date": "2014-05-28",
+            "cusip": "912796EC9",
+            "security_term": "52-Week",
+            "security_type": "Bill",
+            "term_bucket": "52-Week"
+          },
+          {
+            "announcement_date": "2014-05-22",
+            "auction_date": "2014-05-28",
+            "cusip": "912828D31",
+            "security_term": "1-Year 11-Month",
+            "security_type": "FRN",
+            "term_bucket": "2-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2014/BPD_SPL_20140522_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2015-01-26",
+            "auction_date": "2015-01-26",
+            "cusip": "912796EW5",
+            "security_term": "4-Week",
+            "security_type": "Bill",
+            "term_bucket": "4-Week"
+          },
+          {
+            "announcement_date": "2015-01-22",
+            "auction_date": "2015-01-28",
+            "cusip": "912828H60",
+            "security_term": "2-Year",
+            "security_type": "FRN",
+            "term_bucket": "2-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2015/BPD_SPL_20150126_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2016-12-08",
+            "auction_date": "2016-12-12",
+            "cusip": "912796KN8",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2016-12-08",
+            "auction_date": "2016-12-12",
+            "cusip": "912796LE7",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/BPD_SPL_20161208_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2017-06-08",
+            "auction_date": "2017-06-12",
+            "cusip": "912796KL2",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2017-06-08",
+            "auction_date": "2017-06-12",
+            "cusip": "912796MG1",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170608_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2017-08-24",
+            "auction_date": "2017-08-28",
+            "cusip": "912796LN7",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          },
+          {
+            "announcement_date": "2017-08-24",
+            "auction_date": "2017-08-28",
+            "cusip": "912796ME6",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170824_4.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2017-11-22",
+            "auction_date": "2017-11-27",
+            "cusip": "912796LN7",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2017-11-22",
+            "auction_date": "2017-11-27",
+            "cusip": "912796PH6",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20171122_3.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2017-12-07",
+            "auction_date": "2017-12-11",
+            "cusip": "912796NW5",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2017-12-07",
+            "auction_date": "2017-12-11",
+            "cusip": "912796PL7",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20171207_2.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2017-12-21",
+            "auction_date": "2017-12-26",
+            "cusip": "912796LS6",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2017-12-21",
+            "auction_date": "2017-12-26",
+            "cusip": "912796NP0",
+            "security_term": "4-Week",
+            "security_type": "Bill",
+            "term_bucket": "4-Week"
+          },
+          {
+            "announcement_date": "2017-12-21",
+            "auction_date": "2017-12-26",
+            "cusip": "912796PM5",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20171221_3.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2018-06-07",
+            "auction_date": "2018-06-11",
+            "cusip": "912796NV7",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2018-06-07",
+            "auction_date": "2018-06-11",
+            "cusip": "912796QN2",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2018/BPD_SPL_20180607_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2018-11-05",
+            "auction_date": "2018-11-06",
+            "cusip": "912796PE3",
+            "security_term": "4-Week",
+            "security_type": "Bill",
+            "term_bucket": "4-Week"
+          },
+          {
+            "announcement_date": "2018-11-01",
+            "auction_date": "2018-11-06",
+            "cusip": "912796RM3",
+            "security_term": "52-Week",
+            "security_type": "Bill",
+            "term_bucket": "52-Week"
+          },
+          {
+            "announcement_date": "2018-11-05",
+            "auction_date": "2018-11-06",
+            "cusip": "912796UG2",
+            "security_term": "8-Week",
+            "security_type": "Bill",
+            "term_bucket": "8-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2018/BPD_SPL_20181105_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2018-12-20",
+            "auction_date": "2018-12-24",
+            "cusip": "912796PX1",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2018-12-20",
+            "auction_date": "2018-12-24",
+            "cusip": "912796RV3",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          },
+          {
+            "announcement_date": "2018-12-20",
+            "auction_date": "2018-12-26",
+            "cusip": "9128285H9",
+            "security_term": "1-Year 10-Month",
+            "security_type": "FRN",
+            "term_bucket": "2-Year"
+          },
+          {
+            "announcement_date": "2018-12-24",
+            "auction_date": "2018-12-27",
+            "cusip": "912796UL1",
+            "security_term": "4-Week",
+            "security_type": "Bill",
+            "term_bucket": "4-Week"
+          },
+          {
+            "announcement_date": "2018-12-24",
+            "auction_date": "2018-12-27",
+            "cusip": "912796UQ0",
+            "security_term": "8-Week",
+            "security_type": "Bill",
+            "term_bucket": "8-Week"
+          },
+          {
+            "announcement_date": "2018-12-27",
+            "auction_date": "2018-12-31",
+            "cusip": "912796RD3",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2018-12-27",
+            "auction_date": "2018-12-31",
+            "cusip": "912796RT8",
+            "security_term": "52-Week",
+            "security_type": "Bill",
+            "term_bucket": "52-Week"
+          },
+          {
+            "announcement_date": "2018-12-27",
+            "auction_date": "2018-12-31",
+            "cusip": "912796RW1",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2018/BPD_SPL_20181218_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2018-12-20",
+            "auction_date": "2018-12-24",
+            "cusip": "912796PX1",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2018-12-20",
+            "auction_date": "2018-12-24",
+            "cusip": "912796RV3",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2018/BPD_SPL_20181220_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2019-01-24",
+            "auction_date": "2019-01-28",
+            "cusip": "912796RJ0",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2019-01-24",
+            "auction_date": "2019-01-28",
+            "cusip": "912796SB6",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190124_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2019-02-21",
+            "auction_date": "2019-02-25",
+            "cusip": "912796RR2",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2019-02-21",
+            "auction_date": "2019-02-25",
+            "cusip": "912796SF7",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190221_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2019-05-23",
+            "auction_date": "2019-05-28",
+            "cusip": "912796SF7",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2019-05-23",
+            "auction_date": "2019-05-28",
+            "cusip": "912796SU4",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190523_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2019-11-26",
+            "auction_date": "2019-11-27",
+            "cusip": "912796WL9",
+            "security_term": "4-Week",
+            "security_type": "Bill",
+            "term_bucket": "4-Week"
+          },
+          {
+            "announcement_date": "2019-11-26",
+            "auction_date": "2019-11-27",
+            "cusip": "912796WQ8",
+            "security_term": "8-Week",
+            "security_type": "Bill",
+            "term_bucket": "8-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20191121_3.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2020-01-23",
+            "auction_date": "2020-01-27",
+            "cusip": "912796TS8",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2020-01-23",
+            "auction_date": "2020-01-27",
+            "cusip": "912796WY1",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/BPD_SPL_20200123_3.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2020-04-23",
+            "auction_date": "2020-04-27",
+            "cusip": "9127962T5",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          },
+          {
+            "announcement_date": "2020-04-23",
+            "auction_date": "2020-04-27",
+            "cusip": "912796WY1",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/BPD_SPL_20200423_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2020-07-23",
+            "auction_date": "2020-07-27",
+            "cusip": "9127962T5",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2020-07-23",
+            "auction_date": "2020-07-27",
+            "cusip": "912796UC1",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/BPD_SPL_20200723_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2020-07-23",
+            "auction_date": "2020-07-28",
+            "cusip": "9127963B3",
+            "security_term": "120-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2020-07-23",
+            "auction_date": "2020-07-28",
+            "cusip": "912796TJ8",
+            "security_term": "42-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2020-07-23",
+            "auction_date": "2020-07-28",
+            "cusip": "91282CAA9",
+            "security_term": "2-Year",
+            "security_type": "FRN",
+            "term_bucket": "2-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/BPD_SPL_20200723_2.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2020-08-06",
+            "auction_date": "2020-08-11",
+            "cusip": "9127962H1",
+            "security_term": "42-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2020-08-06",
+            "auction_date": "2020-08-11",
+            "cusip": "9127963J6",
+            "security_term": "119-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2020-08-06",
+            "auction_date": "2020-08-11",
+            "cusip": "9127964B2",
+            "security_term": "52-Week",
+            "security_type": "Bill",
+            "term_bucket": "52-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/BPD_SPL_20200806_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2020-08-25",
+            "auction_date": "2020-08-26",
+            "cusip": "9127965C9",
+            "security_term": "105-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2020-08-25",
+            "auction_date": "2020-08-26",
+            "cusip": "912796B65",
+            "security_term": "154-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2020-08-20",
+            "auction_date": "2020-08-26",
+            "cusip": "91282CAA9",
+            "security_term": "1-Year 11-Month",
+            "security_type": "FRN",
+            "term_bucket": "2-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/BPD_SPL_20200825_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2020-09-03",
+            "auction_date": "2020-09-08",
+            "cusip": "9127962S7",
+            "security_term": "42-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2020-09-03",
+            "auction_date": "2020-09-08",
+            "cusip": "9127963J6",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2020-09-03",
+            "auction_date": "2020-09-08",
+            "cusip": "9127963T4",
+            "security_term": "119-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2020-09-03",
+            "auction_date": "2020-09-08",
+            "cusip": "9127964L0",
+            "security_term": "52-Week",
+            "security_type": "Bill",
+            "term_bucket": "52-Week"
+          },
+          {
+            "announcement_date": "2020-09-03",
+            "auction_date": "2020-09-08",
+            "cusip": "9127964M8",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/BPD_SPL_20200903_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2020-09-22",
+            "auction_date": "2020-09-23",
+            "cusip": "912796A66",
+            "security_term": "105-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2020-09-22",
+            "auction_date": "2020-09-23",
+            "cusip": "912796C23",
+            "security_term": "154-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2020-09-17",
+            "auction_date": "2020-09-23",
+            "cusip": "91282CAA9",
+            "security_term": "1-Year 10-Month",
+            "security_type": "FRN",
+            "term_bucket": "2-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/BPD_SPL_20200922_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2020-10-01",
+            "auction_date": "2020-10-06",
+            "cusip": "9127963A5",
+            "security_term": "42-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2020-10-01",
+            "auction_date": "2020-10-06",
+            "cusip": "9127963W7",
+            "security_term": "119-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2020-10-01",
+            "auction_date": "2020-10-06",
+            "cusip": "9127964V8",
+            "security_term": "52-Week",
+            "security_type": "Bill",
+            "term_bucket": "52-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/BPD_SPL_20201001_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2020-10-27",
+            "auction_date": "2020-10-28",
+            "cusip": "912796B81",
+            "security_term": "105-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2020-10-27",
+            "auction_date": "2020-10-28",
+            "cusip": "912796D71",
+            "security_term": "154-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2020-10-22",
+            "auction_date": "2020-10-28",
+            "cusip": "91282CAS0",
+            "security_term": "2-Year",
+            "security_type": "FRN",
+            "term_bucket": "2-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/SPL_20201027_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2020-11-05",
+            "auction_date": "2020-11-09",
+            "cusip": "9127963L1",
+            "security_term": "42-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2020-11-05",
+            "auction_date": "2020-11-09",
+            "cusip": "9127964C0",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2020-11-05",
+            "auction_date": "2020-11-09",
+            "cusip": "9127964M8",
+            "security_term": "119-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2020-11-05",
+            "auction_date": "2020-11-09",
+            "cusip": "912796A25",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          },
+          {
+            "announcement_date": "2020-11-10",
+            "auction_date": "2020-11-12",
+            "cusip": "9127965C9",
+            "security_term": "4-Week",
+            "security_type": "Bill",
+            "term_bucket": "4-Week"
+          },
+          {
+            "announcement_date": "2020-11-10",
+            "auction_date": "2020-11-12",
+            "cusip": "912796A66",
+            "security_term": "8-Week",
+            "security_type": "Bill",
+            "term_bucket": "8-Week"
+          },
+          {
+            "announcement_date": "2020-11-10",
+            "auction_date": "2020-11-12",
+            "cusip": "912796C23",
+            "security_term": "105-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2020-11-10",
+            "auction_date": "2020-11-12",
+            "cusip": "912796D97",
+            "security_term": "154-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/SPL_20201105_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2020-11-19",
+            "auction_date": "2020-11-24",
+            "cusip": "9127962F5",
+            "security_term": "118-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2020-11-19",
+            "auction_date": "2020-11-24",
+            "cusip": "9127963T4",
+            "security_term": "41-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2020-11-19",
+            "auction_date": "2020-11-24",
+            "cusip": "91282CAS0",
+            "security_term": "1-Year 11-Month",
+            "security_type": "FRN",
+            "term_bucket": "2-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/SPL_20201119_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2020-11-19",
+            "auction_date": "2020-11-23",
+            "cusip": "912796A33",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          },
+          {
+            "announcement_date": "2020-11-19",
+            "auction_date": "2020-11-23",
+            "cusip": "912796XE4",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/SPL_20201119_2.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2020-12-24",
+            "auction_date": "2020-12-28",
+            "cusip": "9127964P1",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2020-12-24",
+            "auction_date": "2020-12-28",
+            "cusip": "912796B40",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/SPL_20201224_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2020-12-24",
+            "auction_date": "2020-12-29",
+            "cusip": "9127964C0",
+            "security_term": "42-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2020-12-24",
+            "auction_date": "2020-12-29",
+            "cusip": "9127964Z9",
+            "security_term": "119-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2020-12-24",
+            "auction_date": "2020-12-29",
+            "cusip": "912796A90",
+            "security_term": "52-Week",
+            "security_type": "Bill",
+            "term_bucket": "52-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/SPL_20201224_2.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2021-01-21",
+            "auction_date": "2021-01-26",
+            "cusip": "9127964M8",
+            "security_term": "42-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2021-01-21",
+            "auction_date": "2021-01-26",
+            "cusip": "912796A33",
+            "security_term": "119-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2021-01-21",
+            "auction_date": "2021-01-26",
+            "cusip": "912796C31",
+            "security_term": "52-Week",
+            "security_type": "Bill",
+            "term_bucket": "52-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2021/SPL_20210121_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2021-04-08",
+            "auction_date": "2021-04-12",
+            "cusip": "9127963S6",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2021-04-08",
+            "auction_date": "2021-04-12",
+            "cusip": "912796G52",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2021/SPL_20210408_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2021-04-22",
+            "auction_date": "2021-04-26",
+            "cusip": "912796C56",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2021-04-22",
+            "auction_date": "2021-04-26",
+            "cusip": "912796G78",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2021/SPL_20210422_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2021-07-08",
+            "auction_date": "2021-07-12",
+            "cusip": "912796G52",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2021-07-08",
+            "auction_date": "2021-07-12",
+            "cusip": "912796K73",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2021/SPL_20210708_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2021-09-02",
+            "auction_date": "2021-09-07",
+            "cusip": "912796F61",
+            "security_term": "21-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2021-09-02",
+            "auction_date": "2021-09-07",
+            "cusip": "912796J59",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2021-09-02",
+            "auction_date": "2021-09-07",
+            "cusip": "912796M71",
+            "security_term": "52-Week",
+            "security_type": "Bill",
+            "term_bucket": "52-Week"
+          },
+          {
+            "announcement_date": "2021-09-02",
+            "auction_date": "2021-09-07",
+            "cusip": "912796M97",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2021/SPL_20210902_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2021-09-23",
+            "auction_date": "2021-09-27",
+            "cusip": "912796A90",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2021-09-23",
+            "auction_date": "2021-09-27",
+            "cusip": "912796N39",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2021/SPL_20210923_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2021-10-07",
+            "auction_date": "2021-10-12",
+            "cusip": "912796K73",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2021-10-07",
+            "auction_date": "2021-10-12",
+            "cusip": "912796P29",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2021/SPL_20211007_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2021-11-09",
+            "auction_date": "2021-11-10",
+            "cusip": "912796P60",
+            "security_term": "4-Week",
+            "security_type": "Bill",
+            "term_bucket": "4-Week"
+          },
+          {
+            "announcement_date": "2021-11-09",
+            "auction_date": "2021-11-10",
+            "cusip": "912796Q69",
+            "security_term": "8-Week",
+            "security_type": "Bill",
+            "term_bucket": "8-Week"
+          },
+          {
+            "announcement_date": "2021-11-09",
+            "auction_date": "2021-11-10",
+            "cusip": "912796S83",
+            "security_term": "119-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2021/SPL_20211109_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2021-11-18",
+            "auction_date": "2021-11-22",
+            "cusip": "912796D30",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2021-11-18",
+            "auction_date": "2021-11-22",
+            "cusip": "912796Q36",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2021/SPL_20211118_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2022-02-17",
+            "auction_date": "2022-02-22",
+            "cusip": "912796Q36",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2022-02-17",
+            "auction_date": "2022-02-22",
+            "cusip": "912796T33",
+            "security_term": "52-Week",
+            "security_type": "Bill",
+            "term_bucket": "52-Week"
+          },
+          {
+            "announcement_date": "2022-02-17",
+            "auction_date": "2022-02-22",
+            "cusip": "912796T58",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2022/SPL_20220217_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2022-03-24",
+            "auction_date": "2022-03-28",
+            "cusip": "912796R50",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2022-03-24",
+            "auction_date": "2022-03-28",
+            "cusip": "912796U64",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2022/SPL_20220324_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2022-06-23",
+            "auction_date": "2022-06-27",
+            "cusip": "912796R27",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          },
+          {
+            "announcement_date": "2022-06-23",
+            "auction_date": "2022-06-27",
+            "cusip": "912796U64",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2022/SPL_20220623_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2022-09-08",
+            "auction_date": "2022-09-12",
+            "cusip": "912796X79",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2022-09-08",
+            "auction_date": "2022-09-12",
+            "cusip": "912796YL7",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2022/SPL_20220908_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2022-11-17",
+            "auction_date": "2022-11-21",
+            "cusip": "912796T33",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2022-11-17",
+            "auction_date": "2022-11-21",
+            "cusip": "912796ZF9",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2022/SPL_20221117_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2022-12-08",
+            "auction_date": "2022-12-12",
+            "cusip": "912796X53",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          },
+          {
+            "announcement_date": "2022-12-08",
+            "auction_date": "2022-12-12",
+            "cusip": "912796YL7",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2022/SPL_20221208_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2022-12-22",
+            "auction_date": "2022-12-27",
+            "cusip": "912796YM5",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2022-12-22",
+            "auction_date": "2022-12-27",
+            "cusip": "912796ZN2",
+            "security_term": "52-Week",
+            "security_type": "Bill",
+            "term_bucket": "52-Week"
+          },
+          {
+            "announcement_date": "2022-12-22",
+            "auction_date": "2022-12-27",
+            "cusip": "912796ZR3",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2022/SPL_20221222_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2023-01-10",
+            "auction_date": "2023-01-12",
+            "cusip": "912796T33",
+            "security_term": "35-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2023-01-10",
+            "auction_date": "2023-01-12",
+            "cusip": "912796Z69",
+            "security_term": "8-Week",
+            "security_type": "Bill",
+            "term_bucket": "8-Week"
+          },
+          {
+            "announcement_date": "2023-01-10",
+            "auction_date": "2023-01-12",
+            "cusip": "912796ZU6",
+            "security_term": "4-Week",
+            "security_type": "Bill",
+            "term_bucket": "4-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2023/SPL_20230110_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2023-02-16",
+            "auction_date": "2023-02-21",
+            "cusip": "912796Z28",
+            "security_term": "52-Week",
+            "security_type": "Bill",
+            "term_bucket": "52-Week"
+          },
+          {
+            "announcement_date": "2023-02-16",
+            "auction_date": "2023-02-21",
+            "cusip": "912796Z44",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          },
+          {
+            "announcement_date": "2023-02-16",
+            "auction_date": "2023-02-21",
+            "cusip": "912796ZF9",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2023/SPL_20230216_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2023-02-21",
+            "auction_date": "2023-02-23",
+            "cusip": "912796CV9",
+            "security_term": "8-Week",
+            "security_type": "Bill",
+            "term_bucket": "8-Week"
+          },
+          {
+            "announcement_date": "2023-02-21",
+            "auction_date": "2023-02-23",
+            "cusip": "912796YL7",
+            "security_term": "16-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2023-02-21",
+            "auction_date": "2023-02-23",
+            "cusip": "912796Z85",
+            "security_term": "4-Week",
+            "security_type": "Bill",
+            "term_bucket": "4-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2023/SPL_20230221_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2023-03-23",
+            "auction_date": "2023-03-28",
+            "cusip": "912796YN3",
+            "security_term": "7-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2023-03-23",
+            "auction_date": "2023-03-28",
+            "cusip": "912797LM7",
+            "security_term": "17-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2023/SPL_20230323_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2023-04-25",
+            "auction_date": "2023-04-27",
+            "cusip": "912796W47",
+            "security_term": "17-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2023-04-25",
+            "auction_date": "2023-04-27",
+            "cusip": "912797FG7",
+            "security_term": "4-Week",
+            "security_type": "Bill",
+            "term_bucket": "4-Week"
+          },
+          {
+            "announcement_date": "2023-04-25",
+            "auction_date": "2023-04-27",
+            "cusip": "912797FQ5",
+            "security_term": "8-Week",
+            "security_type": "Bill",
+            "term_bucket": "8-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2023/SPL_20230425_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2023-05-09",
+            "auction_date": "2023-05-11",
+            "cusip": "912797FA0",
+            "security_term": "149-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2023-05-09",
+            "auction_date": "2023-05-11",
+            "cusip": "912797FN2",
+            "security_term": "4-Week",
+            "security_type": "Bill",
+            "term_bucket": "4-Week"
+          },
+          {
+            "announcement_date": "2023-05-09",
+            "auction_date": "2023-05-11",
+            "cusip": "912797FX0",
+            "security_term": "8-Week",
+            "security_type": "Bill",
+            "term_bucket": "8-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2023/SPL_20230509_2.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2023-06-08",
+            "auction_date": "2023-06-12",
+            "cusip": "912796CQ0",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2023-06-08",
+            "auction_date": "2023-06-12",
+            "cusip": "912797FU6",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2023/SPL_20230608_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2023-08-24",
+            "auction_date": "2023-08-28",
+            "cusip": "912796ZD4",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2023-08-24",
+            "auction_date": "2023-08-28",
+            "cusip": "912797GP6",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2023/SPL_20230824_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2023-10-05",
+            "auction_date": "2023-10-10",
+            "cusip": "912797FL6",
+            "security_term": "43-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2023-10-05",
+            "auction_date": "2023-10-10",
+            "cusip": "912797GC5",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2023-10-05",
+            "auction_date": "2023-10-10",
+            "cusip": "912797HF7",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2023/SPL_20231005_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2023-11-22",
+            "auction_date": "2023-11-27",
+            "cusip": "912797GP6",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2023-11-22",
+            "auction_date": "2023-11-27",
+            "cusip": "912797HS9",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2023/SPL_20231122_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2023-12-07",
+            "auction_date": "2023-12-11",
+            "cusip": "912797FS1",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          },
+          {
+            "announcement_date": "2023-12-07",
+            "auction_date": "2023-12-11",
+            "cusip": "912797GX9",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2023/SPL_20231207_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2023-12-21",
+            "auction_date": "2023-12-26",
+            "cusip": "912796Y45",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          },
+          {
+            "announcement_date": "2023-12-21",
+            "auction_date": "2023-12-26",
+            "cusip": "912796ZV4",
+            "security_term": "52-Week",
+            "security_type": "Bill",
+            "term_bucket": "52-Week"
+          },
+          {
+            "announcement_date": "2023-12-21",
+            "auction_date": "2023-12-26",
+            "cusip": "912797GY7",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2023/SPL_20231221_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2023-12-21",
+            "auction_date": "2023-12-27",
+            "cusip": "912797GM3",
+            "security_term": "42-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2023-12-26",
+            "auction_date": "2023-12-27",
+            "cusip": "912797JQ1",
+            "security_term": "17-Week",
+            "security_type": "Bill",
+            "term_bucket": "17-Week"
+          },
+          {
+            "announcement_date": "2023-12-21",
+            "auction_date": "2023-12-27",
+            "cusip": "91282CJD4",
+            "security_term": "1-Year 10-Month",
+            "security_type": "FRN",
+            "term_bucket": "2-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2023/SPL_20231221_2.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2024-02-22",
+            "auction_date": "2024-02-26",
+            "cusip": "912797HS9",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2024-02-22",
+            "auction_date": "2024-02-26",
+            "cusip": "912797KD8",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2024/SPL_20240222_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2024-05-23",
+            "auction_date": "2024-05-28",
+            "cusip": "912797GB7",
+            "security_term": "42-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2024-05-23",
+            "auction_date": "2024-05-28",
+            "cusip": "912797HP5",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          },
+          {
+            "announcement_date": "2024-05-23",
+            "auction_date": "2024-05-28",
+            "cusip": "912797KD8",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2024/SPL_20240523_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2024-10-24",
+            "auction_date": "2024-10-28",
+            "cusip": "912797LZ8",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2024-10-24",
+            "auction_date": "2024-10-28",
+            "cusip": "912797ND5",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2024/SPL_20241024_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2024-10-24",
+            "auction_date": "2024-10-29",
+            "cusip": "912797LP0",
+            "security_term": "42-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2024-10-24",
+            "auction_date": "2024-10-29",
+            "cusip": "912797NA1",
+            "security_term": "52-Week",
+            "security_type": "Bill",
+            "term_bucket": "52-Week"
+          },
+          {
+            "announcement_date": "2024-10-24",
+            "auction_date": "2024-10-29",
+            "cusip": "91282CLT6",
+            "security_term": "2-Year",
+            "security_type": "FRN",
+            "term_bucket": "2-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2024/SPL_20241024_2.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2024-11-21",
+            "auction_date": "2024-11-25",
+            "cusip": "912796ZV4",
+            "security_term": "30-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2024-11-21",
+            "auction_date": "2024-11-25",
+            "cusip": "912797ML8",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2024-11-21",
+            "auction_date": "2024-11-25",
+            "cusip": "912797NN3",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2024/SPL_20241121_2.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2024-11-21",
+            "auction_date": "2024-11-26",
+            "cusip": "912797LX3",
+            "security_term": "41-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2024-11-21",
+            "auction_date": "2024-11-26",
+            "cusip": "912797NL7",
+            "security_term": "52-Week",
+            "security_type": "Bill",
+            "term_bucket": "52-Week"
+          },
+          {
+            "announcement_date": "2024-11-21",
+            "auction_date": "2024-11-26",
+            "cusip": "91282CLT6",
+            "security_term": "1-Year 11-Month",
+            "security_type": "FRN",
+            "term_bucket": "2-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2024/SPL_20241121_3.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2024-11-26",
+            "auction_date": "2024-11-27",
+            "cusip": "912797MR5",
+            "security_term": "4-Week",
+            "security_type": "Bill",
+            "term_bucket": "4-Week"
+          },
+          {
+            "announcement_date": "2024-11-26",
+            "auction_date": "2024-11-27",
+            "cusip": "912797MZ7",
+            "security_term": "8-Week",
+            "security_type": "Bill",
+            "term_bucket": "8-Week"
+          },
+          {
+            "announcement_date": "2024-11-26",
+            "auction_date": "2024-11-27",
+            "cusip": "912797NT0",
+            "security_term": "17-Week",
+            "security_type": "Bill",
+            "term_bucket": "17-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2024/SPL_20241121_4.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2024-12-19",
+            "auction_date": "2024-12-23",
+            "cusip": "912797MJ3",
+            "security_term": "42-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2024-12-19",
+            "auction_date": "2024-12-23",
+            "cusip": "912797MU8",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2024-12-19",
+            "auction_date": "2024-12-23",
+            "cusip": "912797NU7",
+            "security_term": "52-Week",
+            "security_type": "Bill",
+            "term_bucket": "52-Week"
+          },
+          {
+            "announcement_date": "2024-12-19",
+            "auction_date": "2024-12-23",
+            "cusip": "912797NW3",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2024/SPL_20241219_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2024-12-19",
+            "auction_date": "2024-12-24",
+            "cusip": "91282CLT6",
+            "security_term": "1-Year 10-Month",
+            "security_type": "FRN",
+            "term_bucket": "2-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2024/SPL_20241219_2.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2024-12-19",
+            "auction_date": "2024-12-24",
+            "cusip": "91282CLT6",
+            "security_term": "1-Year 10-Month",
+            "security_type": "FRN",
+            "term_bucket": "2-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2024/SPL_20241219_4.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2024-12-24",
+            "auction_date": "2024-12-26",
+            "cusip": "912797MZ7",
+            "security_term": "4-Week",
+            "security_type": "Bill",
+            "term_bucket": "4-Week"
+          },
+          {
+            "announcement_date": "2024-12-24",
+            "auction_date": "2024-12-26",
+            "cusip": "912797NJ2",
+            "security_term": "8-Week",
+            "security_type": "Bill",
+            "term_bucket": "8-Week"
+          },
+          {
+            "announcement_date": "2024-12-24",
+            "auction_date": "2024-12-26",
+            "cusip": "912797PB7",
+            "security_term": "17-Week",
+            "security_type": "Bill",
+            "term_bucket": "17-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2024/SPL_20241224_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2025-01-02",
+            "auction_date": "2025-01-06",
+            "cusip": "912797LW5",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          },
+          {
+            "announcement_date": "2025-01-02",
+            "auction_date": "2025-01-06",
+            "cusip": "912797NB9",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2025-01-02",
+            "auction_date": "2025-01-07",
+            "cusip": "912797KA4",
+            "security_term": "42-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250102_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2025-01-23",
+            "auction_date": "2025-01-27",
+            "cusip": "912797ND5",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2025-01-23",
+            "auction_date": "2025-01-27",
+            "cusip": "912797PG6",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250123_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2025-05-06",
+            "auction_date": "2025-05-08",
+            "cusip": "912797NN3",
+            "security_term": "16-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          },
+          {
+            "announcement_date": "2025-05-06",
+            "auction_date": "2025-05-08",
+            "cusip": "912797PR2",
+            "security_term": "4-Week",
+            "security_type": "Bill",
+            "term_bucket": "4-Week"
+          },
+          {
+            "announcement_date": "2025-05-06",
+            "auction_date": "2025-05-08",
+            "cusip": "912797PZ4",
+            "security_term": "8-Week",
+            "security_type": "Bill",
+            "term_bucket": "8-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250506_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2025-05-22",
+            "auction_date": "2025-05-27",
+            "cusip": "912797LW5",
+            "security_term": "6-Week",
+            "security_type": "Bill",
+            "term_bucket": "6-Week"
+          },
+          {
+            "announcement_date": "2025-05-22",
+            "auction_date": "2025-05-27",
+            "cusip": "912797NL7",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          },
+          {
+            "announcement_date": "2025-05-22",
+            "auction_date": "2025-05-27",
+            "cusip": "912797PQ4",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250522_1.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2025-06-24",
+            "auction_date": "2025-06-26",
+            "cusip": "912797QC4",
+            "security_term": "4-Week",
+            "security_type": "Bill",
+            "term_bucket": "4-Week"
+          },
+          {
+            "announcement_date": "2025-06-24",
+            "auction_date": "2025-06-26",
+            "cusip": "912797QL4",
+            "security_term": "8-Week",
+            "security_type": "Bill",
+            "term_bucket": "8-Week"
+          },
+          {
+            "announcement_date": "2025-06-24",
+            "auction_date": "2025-06-26",
+            "cusip": "912797QU4",
+            "security_term": "77-Day",
+            "security_type": "CMB",
+            "term_bucket": ""
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250624_2.pdf"
+      },
+      {
+        "nonselected_archive_memberships": [
+          {
+            "announcement_date": "2025-07-24",
+            "auction_date": "2025-07-28",
+            "cusip": "912797NA1",
+            "security_term": "13-Week",
+            "security_type": "Bill",
+            "term_bucket": "13-Week"
+          },
+          {
+            "announcement_date": "2025-07-24",
+            "auction_date": "2025-07-28",
+            "cusip": "912797RK5",
+            "security_term": "26-Week",
+            "security_type": "Bill",
+            "term_bucket": "26-Week"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250724_1.pdf"
+      }
+    ],
+    "cross_auction_year_urls": [],
+    "events_with_multiple_notices": [
+      {
+        "auction_date": "2013-08-28",
+        "cusip": "912828RE2",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2013/BPD_SPL_20130822_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2013/BPD_SPL_20130828_1.pdf"
+        ]
+      },
+      {
+        "auction_date": "2013-09-25",
+        "cusip": "912828RH5",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2013/BPD_SPL_20130919_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2013/BPD_SPL_20130925_1.pdf"
+        ]
+      },
+      {
+        "auction_date": "2013-12-18",
+        "cusip": "912828A75",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2013/BPD_SPL_20131212_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2013/BPD_SPL_20131212_2.pdf"
+        ]
+      },
+      {
+        "auction_date": "2014-01-30",
+        "cusip": "912828B33",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2014/BPD_SPL_20140123_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2014/BPD_SPL_20140123_2.pdf"
+        ]
+      },
+      {
+        "auction_date": "2014-05-28",
+        "cusip": "912828WL0",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2014/BPD_SPL_20140522_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2014/BPD_SPL_20140522_2.pdf"
+        ]
+      },
+      {
+        "auction_date": "2015-01-28",
+        "cusip": "912828H78",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2015/BPD_SPL_20150122_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2015/BPD_SPL_20150126_1.pdf"
+        ]
+      },
+      {
+        "auction_date": "2015-01-29",
+        "cusip": "912828H52",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2015/BPD_SPL_20150122_2.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2015/BPD_SPL_20150126_1.pdf"
+        ]
+      },
+      {
+        "auction_date": "2015-05-26",
+        "cusip": "912828SY7",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2015/BPD_SPL_20150526_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2015/BPD_SPL_20150521_1.pdf"
+        ]
+      },
+      {
+        "auction_date": "2015-08-25",
+        "cusip": "912828TM2",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2015/BPD_SPL_20150820_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2015/BPD_SPL_20150825_1.pdf"
+        ]
+      },
+      {
+        "auction_date": "2015-09-22",
+        "cusip": "912828TS9",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2015/BPD_SPL_20150917_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2015/BPD_SPL_20150922_1.pdf"
+        ]
+      },
+      {
+        "auction_date": "2015-11-04",
+        "cusip": "912828TW0",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2015/BPD_SPL_20151030_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2015/BPD_SPL_20151104_1.pdf"
+        ]
+      },
+      {
+        "auction_date": "2016-02-23",
+        "cusip": "912828UR9",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/BPD_SPL_20160223_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/BPD_SPL_20160218_1.pdf"
+        ]
+      },
+      {
+        "auction_date": "2016-12-27",
+        "cusip": "912828U99",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/BPD_SPL_20161222_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/BPD_SPL_20161222_3.pdf"
+        ]
+      },
+      {
+        "auction_date": "2017-01-24",
+        "cusip": "912828V56",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170119_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170119_2.pdf"
+        ]
+      },
+      {
+        "auction_date": "2017-02-21",
+        "cusip": "912828W30",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170216_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170216_2.pdf"
+        ]
+      },
+      {
+        "auction_date": "2017-03-27",
+        "cusip": "912828W97",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170323_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170323_2.pdf"
+        ]
+      },
+      {
+        "auction_date": "2017-04-25",
+        "cusip": "912828ST8",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170420_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170420_2.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170425_1.pdf"
+        ]
+      },
+      {
+        "auction_date": "2017-05-23",
+        "cusip": "912828XS4",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170518_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170518_2.pdf"
+        ]
+      },
+      {
+        "auction_date": "2017-06-26",
+        "cusip": "912828XV7",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170622_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170622_2.pdf"
+        ]
+      },
+      {
+        "auction_date": "2017-07-25",
+        "cusip": "9128282K5",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170720_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170720_2.pdf"
+        ]
+      },
+      {
+        "auction_date": "2017-08-28",
+        "cusip": "9128282S8",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170824_3.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170824_4.pdf"
+        ]
+      },
+      {
+        "auction_date": "2017-08-28",
+        "cusip": "9128282T6",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170824_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170824_2.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170824_4.pdf"
+        ]
+      },
+      {
+        "auction_date": "2017-09-26",
+        "cusip": "9128282X7",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170921_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170921_2.pdf"
+        ]
+      },
+      {
+        "auction_date": "2017-10-24",
+        "cusip": "912828F62",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20171019_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20171019_2.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20171024_1.pdf"
+        ]
+      },
+      {
+        "auction_date": "2017-11-27",
+        "cusip": "9128283H1",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20171122_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20171122_3.pdf"
+        ]
+      },
+      {
+        "auction_date": "2017-11-27",
+        "cusip": "912828M80",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20171122_2.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20171127_1.pdf"
+        ]
+      },
+      {
+        "auction_date": "2017-12-26",
+        "cusip": "9128283N8",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20171221_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20171221_3.pdf"
+        ]
+      },
+      {
+        "auction_date": "2017-12-27",
+        "cusip": "912828N30",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20171221_2.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20171227_1.pdf"
+        ]
+      },
+      {
+        "auction_date": "2018-12-24",
+        "cusip": "9128285S5",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2018/BPD_SPL_20181218_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2018/BPD_SPL_20181220_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2018/BPD_SPL_20181220_2.pdf"
+        ]
+      },
+      {
+        "auction_date": "2018-12-26",
+        "cusip": "9128285U0",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2018/BPD_SPL_20181218_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2018/BPD_SPL_20181220_3.pdf"
+        ]
+      },
+      {
+        "auction_date": "2019-01-28",
+        "cusip": "9128285X4",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190124_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190124_2.pdf"
+        ]
+      },
+      {
+        "auction_date": "2019-01-28",
+        "cusip": "9128285Z9",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190124_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190124_3.pdf"
+        ]
+      },
+      {
+        "auction_date": "2019-02-25",
+        "cusip": "9128286D7",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190221_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190221_2.pdf"
+        ]
+      },
+      {
+        "auction_date": "2019-02-25",
+        "cusip": "9128286G0",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190221_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190221_3.pdf"
+        ]
+      },
+      {
+        "auction_date": "2019-03-26",
+        "cusip": "912828C57",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190321_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190326_1.pdf"
+        ]
+      },
+      {
+        "auction_date": "2019-03-27",
+        "cusip": "912828W71",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190321_2.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190327_1.pdf"
+        ]
+      },
+      {
+        "auction_date": "2019-04-23",
+        "cusip": "912828WG1",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190418_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190423_1.pdf"
+        ]
+      },
+      {
+        "auction_date": "2019-05-28",
+        "cusip": "9128286V7",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190523_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190523_2.pdf"
+        ]
+      },
+      {
+        "auction_date": "2019-05-28",
+        "cusip": "912828XT2",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190523_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190523_3.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190528_1.pdf"
+        ]
+      },
+      {
+        "auction_date": "2019-06-25",
+        "cusip": "9128287A2",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190620_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190620_2.pdf"
+        ]
+      },
+      {
+        "auction_date": "2019-08-27",
+        "cusip": "912828YC8",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190822_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190822_2.pdf"
+        ]
+      },
+      {
+        "auction_date": "2019-10-22",
+        "cusip": "912828YP9",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20191017_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20191017_2.pdf"
+        ]
+      },
+      {
+        "auction_date": "2019-11-05",
+        "cusip": "912828TY6",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20191030_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20191105_1.pdf"
+        ]
+      },
+      {
+        "auction_date": "2019-11-25",
+        "cusip": "912828YT1",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20191121_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20191121_2.pdf"
+        ]
+      },
+      {
+        "auction_date": "2019-12-23",
+        "cusip": "912828YZ7",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20191219_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20191219_2.pdf"
+        ]
+      },
+      {
+        "auction_date": "2019-12-24",
+        "cusip": "912828YY0",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20191219_3.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20191219_4.pdf"
+        ]
+      },
+      {
+        "auction_date": "2020-01-27",
+        "cusip": "912828Z60",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/BPD_SPL_20200123_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/BPD_SPL_20200123_2.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/BPD_SPL_20200123_3.pdf"
+        ]
+      },
+      {
+        "auction_date": "2020-02-25",
+        "cusip": "912828ZA1",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/BPD_SPL_20200220_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/BPD_SPL_20200220_2.pdf"
+        ]
+      },
+      {
+        "auction_date": "2021-11-22",
+        "cusip": "91282CDK4",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2021/SPL_20211118_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2021/SPL_20211118_2.pdf"
+        ]
+      },
+      {
+        "auction_date": "2022-01-25",
+        "cusip": "912828Z78",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2022/SPL_20220120_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2022/SPL_20220125_1.pdf"
+        ]
+      },
+      {
+        "auction_date": "2022-03-28",
+        "cusip": "91282CEG2",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2022/SPL_20220324_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2022/SPL_20220324_2.pdf"
+        ]
+      },
+      {
+        "auction_date": "2024-10-28",
+        "cusip": "91282CLR0",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2024/SPL_20241024_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2024/SPL_20241024_3.pdf"
+        ]
+      },
+      {
+        "auction_date": "2024-11-26",
+        "cusip": "91282CMA6",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2024/SPL_20241121_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2024/SPL_20241121_3.pdf"
+        ]
+      },
+      {
+        "auction_date": "2024-12-24",
+        "cusip": "91282CMD0",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2024/SPL_20241219_2.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2024/SPL_20241219_3.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2024/SPL_20241219_4.pdf"
+        ]
+      },
+      {
+        "auction_date": "2025-02-25",
+        "cusip": "91282CGQ8",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250220_1.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250225_1.pdf"
+        ]
+      },
+      {
+        "auction_date": "2025-07-28",
+        "cusip": "91282CNN7",
+        "notice_urls": [
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250724_2.pdf",
+          "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250724_1.pdf"
+        ]
+      }
+    ],
+    "filename_year_mismatches": [],
+    "post_auction_filename_associations": [
+      {
+        "auction_date": "2010-06-22",
+        "cusip": "912828NS5",
+        "filename_date": "2010-06-25",
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/BPD_SPL_20100625_1.pdf"
+      },
+      {
+        "auction_date": "2010-06-23",
+        "cusip": "912828NL0",
+        "filename_date": "2010-06-25",
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/BPD_SPL_20100625_1.pdf"
+      },
+      {
+        "auction_date": "2010-06-24",
+        "cusip": "912828NK2",
+        "filename_date": "2010-06-25",
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/BPD_SPL_20100625_1.pdf"
+      },
+      {
+        "auction_date": "2015-09-10",
+        "cusip": "912810RN0",
+        "filename_date": "2015-09-11",
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2015/BPD_SPL_20150911_1.pdf"
+      }
+    ],
+    "same_day_shared_url_groups": [
+      {
+        "auction_date": "2016-12-12",
+        "cusips": [
+          "912828U24",
+          "912828U73"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/BPD_SPL_20161208_1.pdf"
+      },
+      {
+        "auction_date": "2017-06-12",
+        "cusips": [
+          "912828X88",
+          "912828XU9"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170608_1.pdf"
+      },
+      {
+        "auction_date": "2017-08-28",
+        "cusips": [
+          "9128282S8",
+          "9128282T6"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170824_4.pdf"
+      },
+      {
+        "auction_date": "2017-10-11",
+        "cusips": [
+          "9128282R0",
+          "9128282Z2"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20171005_1.pdf"
+      },
+      {
+        "auction_date": "2017-12-11",
+        "cusips": [
+          "9128283F5",
+          "9128283L2"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20171207_2.pdf"
+      },
+      {
+        "auction_date": "2018-06-11",
+        "cusips": [
+          "9128284N7",
+          "9128284T4"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2018/BPD_SPL_20180607_1.pdf"
+      },
+      {
+        "auction_date": "2018-10-10",
+        "cusips": [
+          "9128284V9",
+          "9128285F3"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2018/BPD_SPL_20181004_2.pdf"
+      },
+      {
+        "auction_date": "2019-01-28",
+        "cusips": [
+          "9128285X4",
+          "9128285Z9"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190124_1.pdf"
+      },
+      {
+        "auction_date": "2019-02-25",
+        "cusips": [
+          "9128286D7",
+          "9128286G0"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190221_1.pdf"
+      },
+      {
+        "auction_date": "2019-05-28",
+        "cusips": [
+          "9128286V7",
+          "912828XT2"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190523_1.pdf"
+      },
+      {
+        "auction_date": "2020-01-27",
+        "cusips": [
+          "912828Z52",
+          "912828Z60"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/BPD_SPL_20200123_3.pdf"
+      },
+      {
+        "auction_date": "2020-04-27",
+        "cusips": [
+          "912828ZL7",
+          "912828ZM5"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/BPD_SPL_20200423_1.pdf"
+      },
+      {
+        "auction_date": "2020-07-27",
+        "cusips": [
+          "91282CAB7",
+          "91282CAC5"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/BPD_SPL_20200723_1.pdf"
+      },
+      {
+        "auction_date": "2020-11-23",
+        "cusips": [
+          "91282CAX9",
+          "91282CAZ4"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/SPL_20201119_2.pdf"
+      },
+      {
+        "auction_date": "2020-12-28",
+        "cusips": [
+          "91282CBC4",
+          "91282CBD2"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/SPL_20201224_1.pdf"
+      },
+      {
+        "auction_date": "2021-04-12",
+        "cusips": [
+          "91282CBL4",
+          "91282CBV2"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2021/SPL_20210408_1.pdf"
+      },
+      {
+        "auction_date": "2021-04-26",
+        "cusips": [
+          "91282CBW0",
+          "91282CBX8"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2021/SPL_20210422_1.pdf"
+      },
+      {
+        "auction_date": "2021-07-12",
+        "cusips": [
+          "91282CCB5",
+          "91282CCL3"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2021/SPL_20210708_1.pdf"
+      },
+      {
+        "auction_date": "2021-09-27",
+        "cusips": [
+          "91282CCZ2",
+          "91282CDA6"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2021/SPL_20210923_1.pdf"
+      },
+      {
+        "auction_date": "2021-10-12",
+        "cusips": [
+          "91282CCS8",
+          "91282CDB4"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2021/SPL_20211007_1.pdf"
+      },
+      {
+        "auction_date": "2021-11-22",
+        "cusips": [
+          "91282CDK4",
+          "91282CDM0"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2021/SPL_20211118_1.pdf"
+      },
+      {
+        "auction_date": "2022-03-28",
+        "cusips": [
+          "91282CEF4",
+          "91282CEG2"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2022/SPL_20220324_1.pdf"
+      },
+      {
+        "auction_date": "2022-06-27",
+        "cusips": [
+          "91282CEW7",
+          "91282CEX5"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2022/SPL_20220623_1.pdf"
+      },
+      {
+        "auction_date": "2022-09-12",
+        "cusips": [
+          "91282CFF3",
+          "91282CFK2"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2022/SPL_20220908_1.pdf"
+      },
+      {
+        "auction_date": "2022-11-21",
+        "cusips": [
+          "91282CFX4",
+          "91282CFZ9"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2022/SPL_20221117_1.pdf"
+      },
+      {
+        "auction_date": "2022-12-12",
+        "cusips": [
+          "91282CFV8",
+          "91282CGA3"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2022/SPL_20221208_1.pdf"
+      },
+      {
+        "auction_date": "2023-06-12",
+        "cusips": [
+          "91282CHC8",
+          "91282CHH7"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2023/SPL_20230608_1.pdf"
+      },
+      {
+        "auction_date": "2023-08-28",
+        "cusips": [
+          "91282CHV6",
+          "91282CHX2"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2023/SPL_20230824_1.pdf"
+      },
+      {
+        "auction_date": "2023-11-27",
+        "cusips": [
+          "91282CJL6",
+          "91282CJN2"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2023/SPL_20231122_1.pdf"
+      },
+      {
+        "auction_date": "2023-12-11",
+        "cusips": [
+          "91282CJJ1",
+          "91282CJP7"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2023/SPL_20231207_1.pdf"
+      },
+      {
+        "auction_date": "2024-02-26",
+        "cusips": [
+          "91282CKB6",
+          "91282CKD2"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2024/SPL_20240222_1.pdf"
+      },
+      {
+        "auction_date": "2024-05-28",
+        "cusips": [
+          "91282CKS9",
+          "91282CKT7"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2024/SPL_20240523_1.pdf"
+      },
+      {
+        "auction_date": "2024-10-28",
+        "cusips": [
+          "91282CLR0",
+          "91282CLS8"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2024/SPL_20241024_1.pdf"
+      },
+      {
+        "auction_date": "2025-01-27",
+        "cusips": [
+          "91282CMG3",
+          "91282CMH1"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250123_1.pdf"
+      },
+      {
+        "auction_date": "2025-07-28",
+        "cusips": [
+          "91282CNN7",
+          "91282CNP2"
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250724_1.pdf"
+      }
+    ],
+    "shared_urls": [
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2010-06-17",
+            "auction_date": "2010-06-22",
+            "cusip": "912828NS5",
+            "security_term": "2-Year",
+            "security_type": "Note",
+            "term_bucket": "2-Year"
+          },
+          {
+            "announcement_date": "2010-06-17",
+            "auction_date": "2010-06-23",
+            "cusip": "912828NL0",
+            "security_term": "5-Year",
+            "security_type": "Note",
+            "term_bucket": "5-Year"
+          },
+          {
+            "announcement_date": "2010-06-17",
+            "auction_date": "2010-06-24",
+            "cusip": "912828NK2",
+            "security_term": "7-Year",
+            "security_type": "Note",
+            "term_bucket": "7-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/BPD_SPL_20100625_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2015-01-22",
+            "auction_date": "2015-01-28",
+            "cusip": "912828H78",
+            "security_term": "2-Year",
+            "security_type": "Note",
+            "term_bucket": "2-Year"
+          },
+          {
+            "announcement_date": "2015-01-22",
+            "auction_date": "2015-01-29",
+            "cusip": "912828H52",
+            "security_term": "5-Year",
+            "security_type": "Note",
+            "term_bucket": "5-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2015/BPD_SPL_20150126_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2016-12-08",
+            "auction_date": "2016-12-12",
+            "cusip": "912828U24",
+            "security_term": "9-Year 11-Month",
+            "security_type": "Note",
+            "term_bucket": "10-Year"
+          },
+          {
+            "announcement_date": "2016-12-08",
+            "auction_date": "2016-12-12",
+            "cusip": "912828U73",
+            "security_term": "3-Year",
+            "security_type": "Note",
+            "term_bucket": "3-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/BPD_SPL_20161208_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2017-06-08",
+            "auction_date": "2017-06-12",
+            "cusip": "912828X88",
+            "security_term": "9-Year 11-Month",
+            "security_type": "Note",
+            "term_bucket": "10-Year"
+          },
+          {
+            "announcement_date": "2017-06-08",
+            "auction_date": "2017-06-12",
+            "cusip": "912828XU9",
+            "security_term": "3-Year",
+            "security_type": "Note",
+            "term_bucket": "3-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170608_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2017-08-24",
+            "auction_date": "2017-08-28",
+            "cusip": "9128282S8",
+            "security_term": "5-Year",
+            "security_type": "Note",
+            "term_bucket": "5-Year"
+          },
+          {
+            "announcement_date": "2017-08-24",
+            "auction_date": "2017-08-28",
+            "cusip": "9128282T6",
+            "security_term": "2-Year",
+            "security_type": "Note",
+            "term_bucket": "2-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20170824_4.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2017-10-05",
+            "auction_date": "2017-10-11",
+            "cusip": "9128282R0",
+            "security_term": "9-Year 10-Month",
+            "security_type": "Note",
+            "term_bucket": "10-Year"
+          },
+          {
+            "announcement_date": "2017-10-05",
+            "auction_date": "2017-10-11",
+            "cusip": "9128282Z2",
+            "security_term": "3-Year",
+            "security_type": "Note",
+            "term_bucket": "3-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20171005_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2017-12-07",
+            "auction_date": "2017-12-11",
+            "cusip": "9128283F5",
+            "security_term": "9-Year 11-Month",
+            "security_type": "Note",
+            "term_bucket": "10-Year"
+          },
+          {
+            "announcement_date": "2017-12-07",
+            "auction_date": "2017-12-11",
+            "cusip": "9128283L2",
+            "security_term": "3-Year",
+            "security_type": "Note",
+            "term_bucket": "3-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2017/BPD_SPL_20171207_2.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2018-06-07",
+            "auction_date": "2018-06-11",
+            "cusip": "9128284N7",
+            "security_term": "9-Year 11-Month",
+            "security_type": "Note",
+            "term_bucket": "10-Year"
+          },
+          {
+            "announcement_date": "2018-06-07",
+            "auction_date": "2018-06-11",
+            "cusip": "9128284T4",
+            "security_term": "3-Year",
+            "security_type": "Note",
+            "term_bucket": "3-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2018/BPD_SPL_20180607_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2018-10-04",
+            "auction_date": "2018-10-10",
+            "cusip": "9128284V9",
+            "security_term": "9-Year 10-Month",
+            "security_type": "Note",
+            "term_bucket": "10-Year"
+          },
+          {
+            "announcement_date": "2018-10-04",
+            "auction_date": "2018-10-10",
+            "cusip": "9128285F3",
+            "security_term": "3-Year",
+            "security_type": "Note",
+            "term_bucket": "3-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2018/BPD_SPL_20181004_2.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2018-12-20",
+            "auction_date": "2018-12-24",
+            "cusip": "9128285S5",
+            "security_term": "2-Year",
+            "security_type": "Note",
+            "term_bucket": "2-Year"
+          },
+          {
+            "announcement_date": "2018-12-20",
+            "auction_date": "2018-12-26",
+            "cusip": "9128285U0",
+            "security_term": "5-Year",
+            "security_type": "Note",
+            "term_bucket": "5-Year"
+          },
+          {
+            "announcement_date": "2018-12-20",
+            "auction_date": "2018-12-27",
+            "cusip": "9128285T3",
+            "security_term": "7-Year",
+            "security_type": "Note",
+            "term_bucket": "7-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2018/BPD_SPL_20181218_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2019-01-24",
+            "auction_date": "2019-01-28",
+            "cusip": "9128285X4",
+            "security_term": "2-Year",
+            "security_type": "Note",
+            "term_bucket": "2-Year"
+          },
+          {
+            "announcement_date": "2019-01-24",
+            "auction_date": "2019-01-28",
+            "cusip": "9128285Z9",
+            "security_term": "5-Year",
+            "security_type": "Note",
+            "term_bucket": "5-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190124_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2019-02-21",
+            "auction_date": "2019-02-25",
+            "cusip": "9128286D7",
+            "security_term": "2-Year",
+            "security_type": "Note",
+            "term_bucket": "2-Year"
+          },
+          {
+            "announcement_date": "2019-02-21",
+            "auction_date": "2019-02-25",
+            "cusip": "9128286G0",
+            "security_term": "5-Year",
+            "security_type": "Note",
+            "term_bucket": "5-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190221_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2019-05-23",
+            "auction_date": "2019-05-28",
+            "cusip": "9128286V7",
+            "security_term": "2-Year",
+            "security_type": "Note",
+            "term_bucket": "2-Year"
+          },
+          {
+            "announcement_date": "2019-05-23",
+            "auction_date": "2019-05-28",
+            "cusip": "912828XT2",
+            "security_term": "5-Year",
+            "security_type": "Note",
+            "term_bucket": "5-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190523_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2020-01-23",
+            "auction_date": "2020-01-27",
+            "cusip": "912828Z52",
+            "security_term": "5-Year",
+            "security_type": "Note",
+            "term_bucket": "5-Year"
+          },
+          {
+            "announcement_date": "2020-01-23",
+            "auction_date": "2020-01-27",
+            "cusip": "912828Z60",
+            "security_term": "2-Year",
+            "security_type": "Note",
+            "term_bucket": "2-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/BPD_SPL_20200123_3.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2020-04-23",
+            "auction_date": "2020-04-27",
+            "cusip": "912828ZL7",
+            "security_term": "5-Year",
+            "security_type": "Note",
+            "term_bucket": "5-Year"
+          },
+          {
+            "announcement_date": "2020-04-23",
+            "auction_date": "2020-04-27",
+            "cusip": "912828ZM5",
+            "security_term": "2-Year",
+            "security_type": "Note",
+            "term_bucket": "2-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/BPD_SPL_20200423_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2020-07-23",
+            "auction_date": "2020-07-27",
+            "cusip": "91282CAB7",
+            "security_term": "5-Year",
+            "security_type": "Note",
+            "term_bucket": "5-Year"
+          },
+          {
+            "announcement_date": "2020-07-23",
+            "auction_date": "2020-07-27",
+            "cusip": "91282CAC5",
+            "security_term": "2-Year",
+            "security_type": "Note",
+            "term_bucket": "2-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/BPD_SPL_20200723_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2020-11-04",
+            "auction_date": "2020-11-09",
+            "cusip": "91282CAW1",
+            "security_term": "3-Year",
+            "security_type": "Note",
+            "term_bucket": "3-Year"
+          },
+          {
+            "announcement_date": "2020-11-04",
+            "auction_date": "2020-11-10",
+            "cusip": "91282CAV3",
+            "security_term": "10-Year",
+            "security_type": "Note",
+            "term_bucket": "10-Year"
+          },
+          {
+            "announcement_date": "2020-11-04",
+            "auction_date": "2020-11-12",
+            "cusip": "912810SS8",
+            "security_term": "30-Year",
+            "security_type": "Bond",
+            "term_bucket": "30-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/SPL_20201105_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2020-11-19",
+            "auction_date": "2020-11-23",
+            "cusip": "91282CAX9",
+            "security_term": "2-Year",
+            "security_type": "Note",
+            "term_bucket": "2-Year"
+          },
+          {
+            "announcement_date": "2020-11-19",
+            "auction_date": "2020-11-23",
+            "cusip": "91282CAZ4",
+            "security_term": "5-Year",
+            "security_type": "Note",
+            "term_bucket": "5-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/SPL_20201119_2.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2020-12-24",
+            "auction_date": "2020-12-28",
+            "cusip": "91282CBC4",
+            "security_term": "5-Year",
+            "security_type": "Note",
+            "term_bucket": "5-Year"
+          },
+          {
+            "announcement_date": "2020-12-24",
+            "auction_date": "2020-12-28",
+            "cusip": "91282CBD2",
+            "security_term": "2-Year",
+            "security_type": "Note",
+            "term_bucket": "2-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/SPL_20201224_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2021-04-08",
+            "auction_date": "2021-04-12",
+            "cusip": "91282CBL4",
+            "security_term": "9-Year 10-Month",
+            "security_type": "Note",
+            "term_bucket": "10-Year"
+          },
+          {
+            "announcement_date": "2021-04-08",
+            "auction_date": "2021-04-12",
+            "cusip": "91282CBV2",
+            "security_term": "3-Year",
+            "security_type": "Note",
+            "term_bucket": "3-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2021/SPL_20210408_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2021-04-22",
+            "auction_date": "2021-04-26",
+            "cusip": "91282CBW0",
+            "security_term": "5-Year",
+            "security_type": "Note",
+            "term_bucket": "5-Year"
+          },
+          {
+            "announcement_date": "2021-04-22",
+            "auction_date": "2021-04-26",
+            "cusip": "91282CBX8",
+            "security_term": "2-Year",
+            "security_type": "Note",
+            "term_bucket": "2-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2021/SPL_20210422_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2021-07-08",
+            "auction_date": "2021-07-12",
+            "cusip": "91282CCB5",
+            "security_term": "9-Year 10-Month",
+            "security_type": "Note",
+            "term_bucket": "10-Year"
+          },
+          {
+            "announcement_date": "2021-07-08",
+            "auction_date": "2021-07-12",
+            "cusip": "91282CCL3",
+            "security_term": "3-Year",
+            "security_type": "Note",
+            "term_bucket": "3-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2021/SPL_20210708_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2021-09-23",
+            "auction_date": "2021-09-27",
+            "cusip": "91282CCZ2",
+            "security_term": "5-Year",
+            "security_type": "Note",
+            "term_bucket": "5-Year"
+          },
+          {
+            "announcement_date": "2021-09-23",
+            "auction_date": "2021-09-27",
+            "cusip": "91282CDA6",
+            "security_term": "2-Year",
+            "security_type": "Note",
+            "term_bucket": "2-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2021/SPL_20210923_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2021-10-07",
+            "auction_date": "2021-10-12",
+            "cusip": "91282CCS8",
+            "security_term": "9-Year 10-Month",
+            "security_type": "Note",
+            "term_bucket": "10-Year"
+          },
+          {
+            "announcement_date": "2021-10-07",
+            "auction_date": "2021-10-12",
+            "cusip": "91282CDB4",
+            "security_term": "3-Year",
+            "security_type": "Note",
+            "term_bucket": "3-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2021/SPL_20211007_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2021-11-18",
+            "auction_date": "2021-11-22",
+            "cusip": "91282CDK4",
+            "security_term": "5-Year",
+            "security_type": "Note",
+            "term_bucket": "5-Year"
+          },
+          {
+            "announcement_date": "2021-11-18",
+            "auction_date": "2021-11-22",
+            "cusip": "91282CDM0",
+            "security_term": "2-Year",
+            "security_type": "Note",
+            "term_bucket": "2-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2021/SPL_20211118_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2022-03-24",
+            "auction_date": "2022-03-28",
+            "cusip": "91282CEF4",
+            "security_term": "5-Year",
+            "security_type": "Note",
+            "term_bucket": "5-Year"
+          },
+          {
+            "announcement_date": "2022-03-24",
+            "auction_date": "2022-03-28",
+            "cusip": "91282CEG2",
+            "security_term": "2-Year",
+            "security_type": "Note",
+            "term_bucket": "2-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2022/SPL_20220324_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2022-04-07",
+            "auction_date": "2022-04-11",
+            "cusip": "91282CEH0",
+            "security_term": "3-Year",
+            "security_type": "Note",
+            "term_bucket": "3-Year"
+          },
+          {
+            "announcement_date": "2022-04-07",
+            "auction_date": "2022-04-12",
+            "cusip": "91282CDY4",
+            "security_term": "9-Year 10-Month",
+            "security_type": "Note",
+            "term_bucket": "10-Year"
+          },
+          {
+            "announcement_date": "2022-04-07",
+            "auction_date": "2022-04-13",
+            "cusip": "912810TD0",
+            "security_term": "29-Year 10-Month",
+            "security_type": "Bond",
+            "term_bucket": "30-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2022/SPL_20220329_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2022-06-23",
+            "auction_date": "2022-06-27",
+            "cusip": "91282CEW7",
+            "security_term": "5-Year",
+            "security_type": "Note",
+            "term_bucket": "5-Year"
+          },
+          {
+            "announcement_date": "2022-06-23",
+            "auction_date": "2022-06-27",
+            "cusip": "91282CEX5",
+            "security_term": "2-Year",
+            "security_type": "Note",
+            "term_bucket": "2-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2022/SPL_20220623_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2022-09-08",
+            "auction_date": "2022-09-12",
+            "cusip": "91282CFF3",
+            "security_term": "9-Year 11-Month",
+            "security_type": "Note",
+            "term_bucket": "10-Year"
+          },
+          {
+            "announcement_date": "2022-09-08",
+            "auction_date": "2022-09-12",
+            "cusip": "91282CFK2",
+            "security_term": "3-Year",
+            "security_type": "Note",
+            "term_bucket": "3-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2022/SPL_20220908_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2022-11-17",
+            "auction_date": "2022-11-21",
+            "cusip": "91282CFX4",
+            "security_term": "2-Year",
+            "security_type": "Note",
+            "term_bucket": "2-Year"
+          },
+          {
+            "announcement_date": "2022-11-17",
+            "auction_date": "2022-11-21",
+            "cusip": "91282CFZ9",
+            "security_term": "5-Year",
+            "security_type": "Note",
+            "term_bucket": "5-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2022/SPL_20221117_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2022-12-08",
+            "auction_date": "2022-12-12",
+            "cusip": "91282CFV8",
+            "security_term": "9-Year 11-Month",
+            "security_type": "Note",
+            "term_bucket": "10-Year"
+          },
+          {
+            "announcement_date": "2022-12-08",
+            "auction_date": "2022-12-12",
+            "cusip": "91282CGA3",
+            "security_term": "3-Year",
+            "security_type": "Note",
+            "term_bucket": "3-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2022/SPL_20221208_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2023-06-08",
+            "auction_date": "2023-06-12",
+            "cusip": "91282CHC8",
+            "security_term": "9-Year 11-Month",
+            "security_type": "Note",
+            "term_bucket": "10-Year"
+          },
+          {
+            "announcement_date": "2023-06-08",
+            "auction_date": "2023-06-12",
+            "cusip": "91282CHH7",
+            "security_term": "3-Year",
+            "security_type": "Note",
+            "term_bucket": "3-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2023/SPL_20230608_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2023-08-24",
+            "auction_date": "2023-08-28",
+            "cusip": "91282CHV6",
+            "security_term": "2-Year",
+            "security_type": "Note",
+            "term_bucket": "2-Year"
+          },
+          {
+            "announcement_date": "2023-08-24",
+            "auction_date": "2023-08-28",
+            "cusip": "91282CHX2",
+            "security_term": "5-Year",
+            "security_type": "Note",
+            "term_bucket": "5-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2023/SPL_20230824_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2023-11-22",
+            "auction_date": "2023-11-27",
+            "cusip": "91282CJL6",
+            "security_term": "2-Year",
+            "security_type": "Note",
+            "term_bucket": "2-Year"
+          },
+          {
+            "announcement_date": "2023-11-22",
+            "auction_date": "2023-11-27",
+            "cusip": "91282CJN2",
+            "security_term": "5-Year",
+            "security_type": "Note",
+            "term_bucket": "5-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2023/SPL_20231122_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2023-12-07",
+            "auction_date": "2023-12-11",
+            "cusip": "91282CJJ1",
+            "security_term": "9-Year 11-Month",
+            "security_type": "Note",
+            "term_bucket": "10-Year"
+          },
+          {
+            "announcement_date": "2023-12-07",
+            "auction_date": "2023-12-11",
+            "cusip": "91282CJP7",
+            "security_term": "3-Year",
+            "security_type": "Note",
+            "term_bucket": "3-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2023/SPL_20231207_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2024-02-22",
+            "auction_date": "2024-02-26",
+            "cusip": "91282CKB6",
+            "security_term": "2-Year",
+            "security_type": "Note",
+            "term_bucket": "2-Year"
+          },
+          {
+            "announcement_date": "2024-02-22",
+            "auction_date": "2024-02-26",
+            "cusip": "91282CKD2",
+            "security_term": "5-Year",
+            "security_type": "Note",
+            "term_bucket": "5-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2024/SPL_20240222_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2024-05-23",
+            "auction_date": "2024-05-28",
+            "cusip": "91282CKS9",
+            "security_term": "2-Year",
+            "security_type": "Note",
+            "term_bucket": "2-Year"
+          },
+          {
+            "announcement_date": "2024-05-23",
+            "auction_date": "2024-05-28",
+            "cusip": "91282CKT7",
+            "security_term": "5-Year",
+            "security_type": "Note",
+            "term_bucket": "5-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2024/SPL_20240523_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2024-10-24",
+            "auction_date": "2024-10-28",
+            "cusip": "91282CLR0",
+            "security_term": "5-Year",
+            "security_type": "Note",
+            "term_bucket": "5-Year"
+          },
+          {
+            "announcement_date": "2024-10-24",
+            "auction_date": "2024-10-28",
+            "cusip": "91282CLS8",
+            "security_term": "2-Year",
+            "security_type": "Note",
+            "term_bucket": "2-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2024/SPL_20241024_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2025-01-02",
+            "auction_date": "2025-01-06",
+            "cusip": "91282CMF5",
+            "security_term": "3-Year",
+            "security_type": "Note",
+            "term_bucket": "3-Year"
+          },
+          {
+            "announcement_date": "2025-01-02",
+            "auction_date": "2025-01-07",
+            "cusip": "91282CLW9",
+            "security_term": "9-Year 10-Month",
+            "security_type": "Note",
+            "term_bucket": "10-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250102_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2025-01-23",
+            "auction_date": "2025-01-27",
+            "cusip": "91282CMG3",
+            "security_term": "5-Year",
+            "security_type": "Note",
+            "term_bucket": "5-Year"
+          },
+          {
+            "announcement_date": "2025-01-23",
+            "auction_date": "2025-01-27",
+            "cusip": "91282CMH1",
+            "security_term": "2-Year",
+            "security_type": "Note",
+            "term_bucket": "2-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250123_1.pdf"
+      },
+      {
+        "archive_memberships": [
+          {
+            "announcement_date": "2025-07-24",
+            "auction_date": "2025-07-28",
+            "cusip": "91282CNN7",
+            "security_term": "5-Year",
+            "security_type": "Note",
+            "term_bucket": "5-Year"
+          },
+          {
+            "announcement_date": "2025-07-24",
+            "auction_date": "2025-07-28",
+            "cusip": "91282CNP2",
+            "security_term": "2-Year",
+            "security_type": "Note",
+            "term_bucket": "2-Year"
+          }
+        ],
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250724_1.pdf"
+      }
+    ],
+    "urls_without_filename_date": []
+  },
+  "network_requests": 0,
+  "new_document_bodies_read": 0,
+  "normalized_url_membership_sha256": "297e030dbcf2099ee375395148bc91ac7326b5ff3729f90be6dcd07d0fac7751",
+  "numerical_source_admitted": false,
+  "per_year": [
+    {
+      "projected_records": 301,
+      "six_term_note_bond_records": 72,
+      "six_term_rows_with_notices": 3,
+      "special_notice_associations": 3,
+      "year": 2010
+    },
+    {
+      "projected_records": 269,
+      "six_term_note_bond_records": 72,
+      "six_term_rows_with_notices": 1,
+      "special_notice_associations": 1,
+      "year": 2011
+    },
+    {
+      "projected_records": 264,
+      "six_term_note_bond_records": 72,
+      "six_term_rows_with_notices": 4,
+      "special_notice_associations": 4,
+      "year": 2012
+    },
+    {
+      "projected_records": 267,
+      "six_term_note_bond_records": 72,
+      "six_term_rows_with_notices": 6,
+      "special_notice_associations": 9,
+      "year": 2013
+    },
+    {
+      "projected_records": 270,
+      "six_term_note_bond_records": 72,
+      "six_term_rows_with_notices": 9,
+      "special_notice_associations": 11,
+      "year": 2014
+    },
+    {
+      "projected_records": 272,
+      "six_term_note_bond_records": 72,
+      "six_term_rows_with_notices": 24,
+      "special_notice_associations": 30,
+      "year": 2015
+    },
+    {
+      "projected_records": 266,
+      "six_term_note_bond_records": 72,
+      "six_term_rows_with_notices": 14,
+      "special_notice_associations": 16,
+      "year": 2016
+    },
+    {
+      "projected_records": 277,
+      "six_term_note_bond_records": 72,
+      "six_term_rows_with_notices": 30,
+      "special_notice_associations": 48,
+      "year": 2017
+    },
+    {
+      "projected_records": 284,
+      "six_term_note_bond_records": 72,
+      "six_term_rows_with_notices": 10,
+      "special_notice_associations": 13,
+      "year": 2018
+    },
+    {
+      "projected_records": 325,
+      "six_term_note_bond_records": 73,
+      "six_term_rows_with_notices": 28,
+      "special_notice_associations": 45,
+      "year": 2019
+    },
+    {
+      "projected_records": 503,
+      "six_term_note_bond_records": 72,
+      "six_term_rows_with_notices": 23,
+      "special_notice_associations": 26,
+      "year": 2020
+    },
+    {
+      "projected_records": 445,
+      "six_term_note_bond_records": 72,
+      "six_term_rows_with_notices": 16,
+      "special_notice_associations": 17,
+      "year": 2021
+    },
+    {
+      "projected_records": 384,
+      "six_term_note_bond_records": 72,
+      "six_term_rows_with_notices": 18,
+      "special_notice_associations": 20,
+      "year": 2022
+    },
+    {
+      "projected_records": 428,
+      "six_term_note_bond_records": 72,
+      "six_term_rows_with_notices": 17,
+      "special_notice_associations": 17,
+      "year": 2023
+    },
+    {
+      "projected_records": 440,
+      "six_term_note_bond_records": 72,
+      "six_term_rows_with_notices": 15,
+      "special_notice_associations": 19,
+      "year": 2024
+    },
+    {
+      "projected_records": 352,
+      "six_term_note_bond_records": 57,
+      "six_term_rows_with_notices": 17,
+      "special_notice_associations": 19,
+      "year": 2025
+    }
+  ],
+  "predictive_comparisons_added": 0,
+  "reused_pilot_bindings": [
+    {
+      "additional_full_archive_memberships": [
+        {
+          "announcement_date": "2010-06-17",
+          "auction_date": "2010-06-23",
+          "cusip": "912828NL0",
+          "security_term": "5-Year",
+          "security_type": "Note",
+          "term_bucket": "5-Year"
+        },
+        {
+          "announcement_date": "2010-06-17",
+          "auction_date": "2010-06-24",
+          "cusip": "912828NK2",
+          "security_term": "7-Year",
+          "security_type": "Note",
+          "term_bucket": "7-Year"
+        }
+      ],
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/396a23ebee70f3b533a092fad2d262d15f899689eae133c0b9c24d80434304f4/body.pdf",
+      "body_sha256": "c00fa6a50da70ee9dae1abca28d95f0a71de4f57ffc3412b78b3741be246ce27",
+      "full_archive_memberships": [
+        {
+          "announcement_date": "2010-06-17",
+          "auction_date": "2010-06-22",
+          "cusip": "912828NS5",
+          "security_term": "2-Year",
+          "security_type": "Note",
+          "term_bucket": "2-Year"
+        },
+        {
+          "announcement_date": "2010-06-17",
+          "auction_date": "2010-06-23",
+          "cusip": "912828NL0",
+          "security_term": "5-Year",
+          "security_type": "Note",
+          "term_bucket": "5-Year"
+        },
+        {
+          "announcement_date": "2010-06-17",
+          "auction_date": "2010-06-24",
+          "cusip": "912828NK2",
+          "security_term": "7-Year",
+          "security_type": "Note",
+          "term_bucket": "7-Year"
+        }
+      ],
+      "headers_path": "data/source_discovery/treasury_auction/document_pilot_v1/396a23ebee70f3b533a092fad2d262d15f899689eae133c0b9c24d80434304f4/headers.txt",
+      "headers_sha256": "225429684da5f43d91192606b7702861ad40f14832dc2258d74f211b5dda0ed9",
+      "pilot_memberships": [
+        {
+          "announcement_date": "2010-06-17",
+          "auction_date": "2010-06-22",
+          "cusip": "912828NS5",
+          "security_term": "2-Year",
+          "security_type": "Note",
+          "term_bucket": "2-Year"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/396a23ebee70f3b533a092fad2d262d15f899689eae133c0b9c24d80434304f4/receipt.json",
+      "receipt_sha256": "ecb084b07c10d862306797743e3e3499d0d66e4c73815aaca50978f58c34e621",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2010/BPD_SPL_20100625_1.pdf"
+    },
+    {
+      "additional_full_archive_memberships": [],
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/1e98da454b775ab9ddc9cb9da8bf6e671c53518913782416e072be5a298f4791/body.pdf",
+      "body_sha256": "5d00d0da915c447215214e794190e9752a37b79e5822159b4bdb42fe44540666",
+      "full_archive_memberships": [
+        {
+          "announcement_date": "2016-01-21",
+          "auction_date": "2016-01-26",
+          "cusip": "912828P20",
+          "security_term": "2-Year",
+          "security_type": "Note",
+          "term_bucket": "2-Year"
+        }
+      ],
+      "headers_path": "data/source_discovery/treasury_auction/document_pilot_v1/1e98da454b775ab9ddc9cb9da8bf6e671c53518913782416e072be5a298f4791/headers.txt",
+      "headers_sha256": "9884ace7ab3592aa410f8f9f6aa562762ccbe9c169eaf007d9468e8b92de5497",
+      "pilot_memberships": [
+        {
+          "announcement_date": "2016-01-21",
+          "auction_date": "2016-01-26",
+          "cusip": "912828P20",
+          "security_term": "2-Year",
+          "security_type": "Note",
+          "term_bucket": "2-Year"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/1e98da454b775ab9ddc9cb9da8bf6e671c53518913782416e072be5a298f4791/receipt.json",
+      "receipt_sha256": "d02d0c060b066d79dd6f92fe391b06c5e3dfa49fe52e91096efd31aa64846df9",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/BPD_SPL_20160121_1.pdf"
+    },
+    {
+      "additional_full_archive_memberships": [],
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/ed530a75a370732905493b5541e00ece66bbb40289799f3be1d9ca2a5addf175/body.pdf",
+      "body_sha256": "f55544bfc9f0e03b59f8108de0b139614476afa2d8c383bc0e3d186fd4e12630",
+      "full_archive_memberships": [
+        {
+          "announcement_date": "2019-06-21",
+          "auction_date": "2019-06-21",
+          "cusip": "9128286T2",
+          "security_term": "9-Year 11-Month",
+          "security_type": "Note",
+          "term_bucket": "10-Year"
+        }
+      ],
+      "headers_path": "data/source_discovery/treasury_auction/document_pilot_v1/ed530a75a370732905493b5541e00ece66bbb40289799f3be1d9ca2a5addf175/headers.txt",
+      "headers_sha256": "b80bb8d53f5bde1932f247d36bf1ed19696220cd53623c85c7765e576fd0eb13",
+      "pilot_memberships": [
+        {
+          "announcement_date": "2019-06-21",
+          "auction_date": "2019-06-21",
+          "cusip": "9128286T2",
+          "security_term": "9-Year 11-Month",
+          "security_type": "Note",
+          "term_bucket": "10-Year"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/ed530a75a370732905493b5541e00ece66bbb40289799f3be1d9ca2a5addf175/receipt.json",
+      "receipt_sha256": "deca583643bca859d30929d4841b988837903484bca78093c9b0e7cfa718a984",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2019/BPD_SPL_20190620_4.pdf"
+    },
+    {
+      "additional_full_archive_memberships": [],
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/68efde0f5067ce8c420cb73eac28b3b4eacd57cfc384572573325822955e2333/body.pdf",
+      "body_sha256": "9a4568e10d061b80e60d5f8b13e002fe30c2c8c346fa8328aa411d70956ecb75",
+      "full_archive_memberships": [
+        {
+          "announcement_date": "2025-01-02",
+          "auction_date": "2025-01-06",
+          "cusip": "91282CMF5",
+          "security_term": "3-Year",
+          "security_type": "Note",
+          "term_bucket": "3-Year"
+        },
+        {
+          "announcement_date": "2025-01-02",
+          "auction_date": "2025-01-07",
+          "cusip": "91282CLW9",
+          "security_term": "9-Year 10-Month",
+          "security_type": "Note",
+          "term_bucket": "10-Year"
+        }
+      ],
+      "headers_path": "data/source_discovery/treasury_auction/document_pilot_v1/68efde0f5067ce8c420cb73eac28b3b4eacd57cfc384572573325822955e2333/headers.txt",
+      "headers_sha256": "90f60c942e42349de50a12975f47d194fd5cc2d89ec9721e16a2d0f9f37ea74b",
+      "pilot_memberships": [
+        {
+          "announcement_date": "2025-01-02",
+          "auction_date": "2025-01-06",
+          "cusip": "91282CMF5",
+          "security_term": "3-Year",
+          "security_type": "Note",
+          "term_bucket": "3-Year"
+        },
+        {
+          "announcement_date": "2025-01-02",
+          "auction_date": "2025-01-07",
+          "cusip": "91282CLW9",
+          "security_term": "9-Year 10-Month",
+          "security_type": "Note",
+          "term_bucket": "10-Year"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/68efde0f5067ce8c420cb73eac28b3b4eacd57cfc384572573325822955e2333/receipt.json",
+      "receipt_sha256": "b012ee72e87e69ec61b1dc049995bf9fe4c091025d1edc8dde773f9bd7baba67",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250102_1.pdf"
+    },
+    {
+      "additional_full_archive_memberships": [],
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/071d71e2df24ef10350744aaf58bc674830e2c1bd0f83eda54714d3dfb8dd579/body.pdf",
+      "body_sha256": "eda36643457ec1b8a73f5b13df099fe15c68d913a24ee4164026108f02d8acd8",
+      "full_archive_memberships": [
+        {
+          "announcement_date": "2025-01-02",
+          "auction_date": "2025-01-08",
+          "cusip": "912810UE6",
+          "security_term": "29-Year 10-Month",
+          "security_type": "Bond",
+          "term_bucket": "30-Year"
+        }
+      ],
+      "headers_path": "data/source_discovery/treasury_auction/document_pilot_v1/071d71e2df24ef10350744aaf58bc674830e2c1bd0f83eda54714d3dfb8dd579/headers.txt",
+      "headers_sha256": "89780f025ba4338febc55a1c932f8c1488c55bbfb7871dc1adb438a8b4403124",
+      "pilot_memberships": [
+        {
+          "announcement_date": "2025-01-02",
+          "auction_date": "2025-01-08",
+          "cusip": "912810UE6",
+          "security_term": "29-Year 10-Month",
+          "security_type": "Bond",
+          "term_bucket": "30-Year"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/071d71e2df24ef10350744aaf58bc674830e2c1bd0f83eda54714d3dfb8dd579/receipt.json",
+      "receipt_sha256": "de88190155d3ae90c45024b48901b0b0004e65da947034f74814dea0cc0f1424",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250102_2.pdf"
+    },
+    {
+      "additional_full_archive_memberships": [],
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/f88ce5ff13a9b0df67f91b5124ba8a33abbf70527b95a02fbe916fd5e093cd43/body.pdf",
+      "body_sha256": "c816f66faa5add5cd89550622c11696d8f0e4a5ca41855f1d49e0f0efc39a50e",
+      "full_archive_memberships": [
+        {
+          "announcement_date": "2025-01-23",
+          "auction_date": "2025-01-27",
+          "cusip": "91282CMG3",
+          "security_term": "5-Year",
+          "security_type": "Note",
+          "term_bucket": "5-Year"
+        },
+        {
+          "announcement_date": "2025-01-23",
+          "auction_date": "2025-01-27",
+          "cusip": "91282CMH1",
+          "security_term": "2-Year",
+          "security_type": "Note",
+          "term_bucket": "2-Year"
+        }
+      ],
+      "headers_path": "data/source_discovery/treasury_auction/document_pilot_v1/f88ce5ff13a9b0df67f91b5124ba8a33abbf70527b95a02fbe916fd5e093cd43/headers.txt",
+      "headers_sha256": "cbabb9019254389a60ba25d67671b55c1b2d2980aca168e37274cc3c0bc8af72",
+      "pilot_memberships": [
+        {
+          "announcement_date": "2025-01-23",
+          "auction_date": "2025-01-27",
+          "cusip": "91282CMG3",
+          "security_term": "5-Year",
+          "security_type": "Note",
+          "term_bucket": "5-Year"
+        },
+        {
+          "announcement_date": "2025-01-23",
+          "auction_date": "2025-01-27",
+          "cusip": "91282CMH1",
+          "security_term": "2-Year",
+          "security_type": "Note",
+          "term_bucket": "2-Year"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/f88ce5ff13a9b0df67f91b5124ba8a33abbf70527b95a02fbe916fd5e093cd43/receipt.json",
+      "receipt_sha256": "eaa0f7eea921139977115552a06a5a82328533866818c3ad35b0ac5da1c8fe59",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250123_1.pdf"
+    },
+    {
+      "additional_full_archive_memberships": [],
+      "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/83c1dc29dcade9f1231f1d052d5fe28d6ad6f1a34d5589cfbea79a7645073726/body.pdf",
+      "body_sha256": "f140a3e098c8fc292b0a79b4ceb6dccc36b2737344bbd59701c320062b8891a1",
+      "full_archive_memberships": [
+        {
+          "announcement_date": "2025-08-21",
+          "auction_date": "2025-08-27",
+          "cusip": "91282CNX5",
+          "security_term": "5-Year",
+          "security_type": "Note",
+          "term_bucket": "5-Year"
+        }
+      ],
+      "headers_path": "data/source_discovery/treasury_auction/document_pilot_v1/83c1dc29dcade9f1231f1d052d5fe28d6ad6f1a34d5589cfbea79a7645073726/headers.txt",
+      "headers_sha256": "c12fd46c34c348da1ccdb3f4cd5928884509a0948c3f0f0881e6992680a4c8fb",
+      "pilot_memberships": [
+        {
+          "announcement_date": "2025-08-21",
+          "auction_date": "2025-08-27",
+          "cusip": "91282CNX5",
+          "security_term": "5-Year",
+          "security_type": "Note",
+          "term_bucket": "5-Year"
+        }
+      ],
+      "receipt_path": "data/source_discovery/treasury_auction/document_pilot_v1/83c1dc29dcade9f1231f1d052d5fe28d6ad6f1a34d5589cfbea79a7645073726/receipt.json",
+      "receipt_sha256": "e9429f99306941af1f3629ecbf35a9f8d5748e4f2ad0dcdf5a55cdbdb6a75d07",
+      "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2025/SPL_20250821_2.pdf"
+    }
+  ],
+  "reviewed_utc": "2026-09-09T00:54:47.512157+00:00",
+  "rule": {
+    "membership_fields": [
+      "announcement_date",
+      "auction_date",
+      "cusip",
+      "security_term",
+      "security_type",
+      "term_bucket"
+    ],
+    "security_type": [
+      "Note",
+      "Bond"
+    ],
+    "term_bucket": [
+      "2-Year",
+      "3-Year",
+      "5-Year",
+      "7-Year",
+      "10-Year",
+      "30-Year"
+    ]
+  },
+  "selection_path": "reports/next_signal_review/TREASURY_FULL_NOTICE_METADATA_SELECTION.json",
+  "selection_sha256": "7f1fb67ffb6b8543d40ec15fd51d54cea76bf89575dfa32cac14ecae17599971",
+  "source_ceiling": "2025-10-20",
+  "source_floor": "2010-01-01",
+  "source_pins": {
+    "data/source_discovery/treasury_auction/inventory_capture_v2/2010/metadata.json": "af359368466b303a8671a002fbb9dcc3e5b87643bc74168afb4ecd637437e639",
+    "data/source_discovery/treasury_auction/inventory_capture_v2/2011/metadata.json": "58e79468bbdcf420f7019c802638cba142dab2b9e63f15b0eb8eaae0514540f7",
+    "data/source_discovery/treasury_auction/inventory_capture_v2/2012/metadata.json": "4490a9572d57e7eb1d1c07fbcc96a28382db1aaaf167d0eec2b8e56e0e904ccb",
+    "data/source_discovery/treasury_auction/inventory_capture_v2/2013/metadata.json": "32174cfe91492f614ab1c737323cd6e516ef1cc414d8907edba56c7814fd54c1",
+    "data/source_discovery/treasury_auction/inventory_capture_v2/2014/metadata.json": "bc082735a7add65fcc09da039dd467f558512a143d8bdab7d6809f7e9043f772",
+    "data/source_discovery/treasury_auction/inventory_capture_v2/2015/metadata.json": "c30f34b715cf672826c389af9ab3fed8bc1518994a4460cde1f8eb916694f13b",
+    "data/source_discovery/treasury_auction/inventory_capture_v2/2016/metadata.json": "5e0f4561be69786e56544626a5cfdb286b548fb3ec425b9d1716a0322be49fb8",
+    "data/source_discovery/treasury_auction/inventory_capture_v2/2017/metadata.json": "f1ff8d7cfdf44382888abb426216f961794bd55f4840a1ce4d680f8c9b905a35",
+    "data/source_discovery/treasury_auction/inventory_capture_v2/2018/metadata.json": "3bb48dc84073b4d023c6bfab076b332b561d21fa2e0e043df4b302e954d49e16",
+    "data/source_discovery/treasury_auction/inventory_capture_v2/2019/metadata.json": "b9ce9a15b58719f7580279a3b6c1727733041d9f3c3e47062ae83a12ef26b722",
+    "data/source_discovery/treasury_auction/inventory_capture_v2/2020/metadata.json": "61f23c4be7eb4fe5d8f850e00b950d02b1a5d36b7698a014020981ac9f7e168b",
+    "data/source_discovery/treasury_auction/inventory_capture_v2/2021/metadata.json": "bb18d1580c282048fada7c4ed4ac3f2411aaf7ad07e50ad212803db81ad752eb",
+    "data/source_discovery/treasury_auction/inventory_capture_v2/2022/metadata.json": "53bd91c9cb498a4328468f7cea3a2d0014c8726dfd08d68ae895d4a795fc7f90",
+    "data/source_discovery/treasury_auction/inventory_capture_v2/2023/metadata.json": "2729362fc8e297ca04cf82af2b08707b3d52af88e7f3ed51198bb9ca80f6ebd5",
+    "data/source_discovery/treasury_auction/inventory_capture_v2/2024/metadata.json": "fe6126e1d080de50bef23e3a71daff3ba2fed984cc9526a1fd54be536d245e82",
+    "data/source_discovery/treasury_auction/inventory_capture_v2/2025/metadata.json": "679be10ed000a3c6062a2eeca1fa3256427ed1bfafdd0b6061acba70071d2e4e",
+    "reports/next_signal_review/TREASURY_DOCUMENT_CAPTURE.json": "a1d954d4b8ffa9b840cef478e9a409db547abc94de2dbb3a76d37ac7c9c4f6b3",
+    "reports/next_signal_review/TREASURY_INVENTORY_CAPTURE.json": "da234a12d5c3912d06c5b8ac470e4be5657378e061ff9c59b08955203861931c"
+  },
+  "status": "VERIFIED_METADATA_PREFLIGHT"
+}

@@ -1,0 +1,11 @@
+{
+  "status": "VERIFIED",
+  "monthly_fits_verified": 105,
+  "dependence_fits_verified": 420,
+  "calibration_parameters_verified": 420,
+  "applications_verified": 2191,
+  "scored_origins": 2190,
+  "contrasts_verified": 7,
+  "largest_independent_global_gap": 9.82217918110706e-09,
+  "clock_verification": "full_reference_calendar"
+}

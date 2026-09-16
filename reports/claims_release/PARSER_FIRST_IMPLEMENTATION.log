@@ -1,0 +1,96 @@
+test_archive_byte_and_expanded_limits_precede_member_reads (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_archive_byte_and_expanded_limits_precede_member_reads) ... ok
+test_ceiling_release_is_allowed_without_thursday_assumption (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_ceiling_release_is_allowed_without_thursday_assumption) ... ok
+test_corrupt_truncated_or_encrypted_archive_is_rejected (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_corrupt_truncated_or_encrypted_archive_is_rejected) ... ok
+test_duplicate_observation_or_conflicting_first_release_is_rejected (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_duplicate_observation_or_conflicting_first_release_is_rejected) ... ok
+test_duplicate_unexpected_and_unsafe_zip_members_are_rejected (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_duplicate_unexpected_and_unsafe_zip_members_are_rejected) ... ok
+test_initial_snapshot_excluded_before_value_conversion (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_initial_snapshot_excluded_before_value_conversion) ... ok
+test_initial_snapshot_old_backfill_never_becomes_first_report (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_initial_snapshot_old_backfill_never_becomes_first_report) ... ok
+test_invalid_numeric_row_fails_without_partial_panel (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_invalid_numeric_row_fails_without_partial_panel) ... ok
+test_invalid_request_clocks_fail_before_numeric_conversion (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_invalid_request_clocks_fail_before_numeric_conversion) ... 
+  test_invalid_request_clocks_fail_before_numeric_conversion (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_invalid_request_clocks_fail_before_numeric_conversion) (change={'created_utc': '2010-01-01T00:00:00+00:00'}) ... FAIL
+  test_invalid_request_clocks_fail_before_numeric_conversion (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_invalid_request_clocks_fail_before_numeric_conversion) (change={'created_utc': '2026-09-08T20:28:13'}) ... FAIL
+  test_invalid_request_clocks_fail_before_numeric_conversion (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_invalid_request_clocks_fail_before_numeric_conversion) (change={'created_utc': 'not-a-timestamp'}) ... FAIL
+test_late_post_ceiling_row_prevents_conversion_of_earlier_rows (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_late_post_ceiling_row_prevents_conversion_of_earlier_rows) ... ok
+test_late_row_structural_clock_errors_prevent_all_numeric_conversion (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_late_row_structural_clock_errors_prevent_all_numeric_conversion) ... ok
+test_missing_reference_weeks_include_edges_but_not_explicit_missing_rows (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_missing_reference_weeks_include_edges_but_not_explicit_missing_rows) ... ok
+test_missing_vintage_section_or_extra_unparseable_vintage_fails (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_missing_vintage_section_or_extra_unparseable_vintage_fails) ... ok
+test_numeric_tokens_are_positive_integral_or_explicitly_missing (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_numeric_tokens_are_positive_integral_or_explicitly_missing) ... ok
+test_plain_stored_archive_is_valid_and_nothing_is_extracted (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_plain_stored_archive_is_valid_and_nothing_is_extracted) ... ok
+test_provenance_request_hash_is_canonical_and_covers_extra_fields (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_provenance_request_hash_is_canonical_and_covers_extra_fields) ... ok
+test_readme_duplicate_identity_or_attribute_is_ambiguous (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_readme_duplicate_identity_or_attribute_is_ambiguous) ... ok
+test_readme_series_mode_and_all_six_attributes_are_binding (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_readme_series_mode_and_all_six_attributes_are_binding) ... ok
+test_readme_vintage_list_must_equal_sorted_unique_request (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_readme_vintage_list_must_equal_sorted_unique_request) ... ok
+test_request_semantics_cannot_be_relaxed_by_matching_readme (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_request_semantics_cannot_be_relaxed_by_matching_readme) ... ok
+test_unused_requested_revision_vintage_does_not_invent_a_release (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_unused_requested_revision_vintage_does_not_invent_a_release) ... ok
+test_valid_export_preserves_missing_and_independent_clocks_with_hashes (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_valid_export_preserves_missing_and_independent_clocks_with_hashes) ... ok
+test_wrong_hash_rejects_before_zip_or_numeric_processing (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_wrong_hash_rejects_before_zip_or_numeric_processing) ... ok
+test_wrong_header_and_late_malformed_csv_row_prevent_conversion (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_wrong_header_and_late_malformed_csv_row_prevent_conversion) ... ok
+test_zip_symlink_member_or_unsupported_compression_is_rejected (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_zip_symlink_member_or_unsupported_compression_is_rejected) ... ok
+
+======================================================================
+FAIL: test_invalid_request_clocks_fail_before_numeric_conversion (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_invalid_request_clocks_fail_before_numeric_conversion) (change={'created_utc': '2010-01-01T00:00:00+00:00'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_source.py", line 306, in test_invalid_request_clocks_fail_before_numeric_conversion
+    self.assert_preflight_rejects(request=request_fixture(**change))
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_source.py", line 117, in assert_preflight_rejects
+    source.parse_export(payload, request, digest(payload))
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/claims_release_source.py", line 201, in parse_export
+    value = _parse_value(token)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1183, in _execute_mock_call
+    raise effect
+AssertionError: numeric conversion before preflight
+
+======================================================================
+FAIL: test_invalid_request_clocks_fail_before_numeric_conversion (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_invalid_request_clocks_fail_before_numeric_conversion) (change={'created_utc': '2026-09-08T20:28:13'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_source.py", line 306, in test_invalid_request_clocks_fail_before_numeric_conversion
+    self.assert_preflight_rejects(request=request_fixture(**change))
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_source.py", line 117, in assert_preflight_rejects
+    source.parse_export(payload, request, digest(payload))
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/claims_release_source.py", line 201, in parse_export
+    value = _parse_value(token)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1183, in _execute_mock_call
+    raise effect
+AssertionError: numeric conversion before preflight
+
+======================================================================
+FAIL: test_invalid_request_clocks_fail_before_numeric_conversion (tests.test_claims_release_source.ClaimsReleaseSourceTests.test_invalid_request_clocks_fail_before_numeric_conversion) (change={'created_utc': 'not-a-timestamp'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_source.py", line 306, in test_invalid_request_clocks_fail_before_numeric_conversion
+    self.assert_preflight_rejects(request=request_fixture(**change))
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_source.py", line 117, in assert_preflight_rejects
+    source.parse_export(payload, request, digest(payload))
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/claims_release_source.py", line 201, in parse_export
+    value = _parse_value(token)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1183, in _execute_mock_call
+    raise effect
+AssertionError: numeric conversion before preflight
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.082s
+
+FAILED (failures=3)

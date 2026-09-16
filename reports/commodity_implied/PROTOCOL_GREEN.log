@@ -1,0 +1,8 @@
+test_no_extra_variants_missing_fields_or_type_coercion (tests.test_commodity_implied_protocol.CommodityImpliedProtocolTests.test_no_extra_variants_missing_fields_or_type_coercion) ... ok
+test_no_relaxed_effect_support_or_future_boundary (tests.test_commodity_implied_protocol.CommodityImpliedProtocolTests.test_no_relaxed_effect_support_or_future_boundary) ... ok
+test_serialized_contract_and_fixed_family (tests.test_commodity_implied_protocol.CommodityImpliedProtocolTests.test_serialized_contract_and_fixed_family) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.007s
+
+OK

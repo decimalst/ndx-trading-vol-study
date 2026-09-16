@@ -33,3 +33,67 @@ data/free_sources/raw/
 data/representation_study/latent_embedding_chunks/
 data/representation_study/latent_probe_work/
 data/representation_study/latent_pre_repair_*/
+# Round-two source-derived feature/forecast caches remain local; compact audits are in reports/.
+data/orthogonal_round2/
+data/model_memory_study/
+data/model_memory_reference/
+data/iterative_signal_search/
+data/international_volatility/
+data/overnight_index/
+data/source_discovery/
+data/macro_overnight/
+data/measurement_memory/
+
+# Private derived rows for the registered medium-horizon index experiment.
+data/index_hinge/
+
+# Private signed-return density experiment rows.
+data/tail_shape/
+
+# Private documentary calendar replication artifacts
+data/calendar_variance/
+
+# Private relative intraday-risk artifacts
+data/relative_risk/
+
+# Private joint-risk experiment outputs
+data/joint_risk/
+
+# Private issued-forecast cross-moment scores
+data/cross_moment/
+
+# Private target-aligned fit and forecast outputs
+data/target_aligned/
+
+# Private directional-agreement memory outputs
+data/sign_memory/
+
+data/causal_pool/
+
+# Private civil quarter-end risk experiment outputs
+data/civil_quarter/
+
+# Private source-complete civil risk replay outputs
+data/civil_quarter_replay/
+
+# Private civil risk replay with profiled independent verification
+data/profiled_quarter/
+
+# Private range-location risk-alert outputs
+data/range_alert/
+
+# Private issued-error calibration outputs
+data/issued_calibration/
+
+# Private event-clustering research outputs
+data/event_cluster/
+
+# Private event-clustering verification-replay artifacts
+data/event_cluster_replay/
+data/peak_age/
+
+# Private first-release claims source audit artifacts
+data/claims_release/
+
+# Private commodity option-index source and research artifacts
+data/commodity_implied/

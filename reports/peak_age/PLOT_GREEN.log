@@ -1,0 +1,24 @@
+/Users/byrons/.matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /var/folders/jn/2wqppgv57cx3k54l_dqt9sl00000gn/T/matplotlib-f0vav1jw because there was an issue with the default path ({configdir}); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+
+Fontconfig error: No writable cache directories
+	/opt/homebrew/var/cache/fontconfig
+	/Users/byrons/.cache/fontconfig
+	/Users/byrons/.fontconfig
+Matplotlib is building the font cache; this may take a moment.
+test_all_current_and_successful_ancestor_failure_markers_block_rendering (tests.test_plot_peak_age.PlotPeakAgeContracts.test_all_current_and_successful_ancestor_failure_markers_block_rendering) ... ok
+test_complete_three_control_two_phase_family_cannot_be_reduced_or_renamed (tests.test_plot_peak_age.PlotPeakAgeContracts.test_complete_three_control_two_phase_family_cannot_be_reduced_or_renamed) ... ok
+test_failed_metrics_cannot_be_rendered_even_if_hashes_match (tests.test_plot_peak_age.PlotPeakAgeContracts.test_failed_metrics_cannot_be_rendered_even_if_hashes_match) ... ok
+test_late_failure_marker_during_bound_record_reads_is_rechecked (tests.test_plot_peak_age.PlotPeakAgeContracts.test_late_failure_marker_during_bound_record_reads_is_rechecked) ... ok
+test_load_requires_exact_verified_metrics_and_manifest_byte_identities (tests.test_plot_peak_age.PlotPeakAgeContracts.test_load_requires_exact_verified_metrics_and_manifest_byte_identities) ... ok
+test_loss_units_effects_and_intervals_are_finite_consistent_and_ordered (tests.test_plot_peak_age.PlotPeakAgeContracts.test_loss_units_effects_and_intervals_are_finite_consistent_and_ordered) ... ok
+test_main_writes_usable_png_pdf_and_preserves_all_verified_inputs (tests.test_plot_peak_age.PlotPeakAgeContracts.test_main_writes_usable_png_pdf_and_preserves_all_verified_inputs) ... ok
+test_old_failed_trio_must_remain_present_bound_regular_and_byte_exact (tests.test_plot_peak_age.PlotPeakAgeContracts.test_old_failed_trio_must_remain_present_bound_regular_and_byte_exact) ... ok
+test_row_and_phase_order_do_not_select_or_hide_comparisons (tests.test_plot_peak_age.PlotPeakAgeContracts.test_row_and_phase_order_do_not_select_or_hide_comparisons) ... ok
+test_six_effects_use_relative_mse_percent_and_positive_quarter_percent_gate (tests.test_plot_peak_age.PlotPeakAgeContracts.test_six_effects_use_relative_mse_percent_and_positive_quarter_percent_gate) ... ok
+test_unverified_proof_and_missing_manifest_binding_are_rejected (tests.test_plot_peak_age.PlotPeakAgeContracts.test_unverified_proof_and_missing_manifest_binding_are_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.315s
+
+OK

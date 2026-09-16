@@ -1,0 +1,23 @@
+Generated rank identity check only. Fixed seed20260911, n80, average ranks/(n+1), exact ties. Two total generated dependence fits, one per family. No market reads or new trial.
+COMMAND: .venv/bin/python -m unittest tests.test_copula_calibration_rank_invariance -v
+test_both_pseudo_objectives_are_identical_for_each_fixed_parameter (tests.test_copula_calibration_rank_invariance.CopulaCalibrationRankInvarianceTests.test_both_pseudo_objectives_are_identical_for_each_fixed_parameter) ... ok
+test_constant_scale_and_fixed_calibration_preserve_average_ranks (tests.test_copula_calibration_rank_invariance.CopulaCalibrationRankInvarianceTests.test_constant_scale_and_fixed_calibration_preserve_average_ranks) ... ok
+test_one_certified_fit_per_family_has_identical_inputs_and_selected_objective (tests.test_copula_calibration_rank_invariance.CopulaCalibrationRankInvarianceTests.test_one_certified_fit_per_family_has_identical_inputs_and_selected_objective) ... ok
+test_time_varying_positive_scale_can_reorder_ranks (tests.test_copula_calibration_rank_invariance.CopulaCalibrationRankInvarianceTests.test_time_varying_positive_scale_can_reorder_ranks) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.014s
+
+OK
+
+exit_code=0
+
+COMMAND: .venv/bin/ruff check tests/test_copula_calibration_rank_invariance.py
+All checks passed!
+
+exit_code=0
+
+COMMAND: .venv/bin/ruff format --check tests/test_copula_calibration_rank_invariance.py
+1 file already formatted
+
+exit_code=0

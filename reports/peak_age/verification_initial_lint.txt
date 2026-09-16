@@ -1,0 +1,372 @@
+RUF021 [*] Parenthesize `a and b` expressions when chaining `and` and `or` together, to make the precedence clear
+   --> src/peak_age_verification.py:273:16
+    |
+271 | def date_view(values):
+272 |     if not (isinstance(values,pd.DatetimeIndex)
+273 |             or isinstance(values,pd.Series) and pd.api.types.is_datetime64_any_dtype(values.dtype)):
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+274 |         raise ValueError("Native date containers required; no parsing/coercion")
+275 |     original=pd.DatetimeIndex(values)
+    |
+help: Parenthesize the `and` subexpression
+    |
+272 |     if not (isinstance(values,pd.DatetimeIndex)
+    -             or isinstance(values,pd.Series) and pd.api.types.is_datetime64_any_dtype(values.dtype)):
+273 +             or (isinstance(values,pd.Series) and pd.api.types.is_datetime64_any_dtype(values.dtype))):
+274 |         raise ValueError("Native date containers required; no parsing/coercion")
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/peak_age_verification.py:357:38
+    |
+355 |             frame["I_square"]=(frame.I-centers["I_mean"])**2
+356 |             frame["R_square"]=(frame.R-centers["R_mean"])**2
+357 |         for name in DEPTH[len(BASE):]: frame[name]=data[name]
+    |                                      ^
+358 |         out.append(frame.loc[:,DEPTH])
+359 |     return *out,centers
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/peak_age_verification.py:419:25
+    |
+417 |         predictions[name]=actual_query
+418 |         rebuilt[name]=independent
+419 |         if name=="depth": depth_offsets=actual_train
+    |                         ^
+420 |     prediction,scalar=scalar_fit(train.peak_age,target,depth_offsets,apply.peak_age,predictions["depth"])
+421 |     audit=saved["scalar_audit"]
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_verification.py:145:32
+    |
+143 |         offset=np.array([.1,.2,-.1,.4])
+144 |         y=np.array([.4,-.3,.8,1.])
+145 |         query=np.array([.9,.1]); base=np.array([.2,-.2])
+    |                                ^
+146 |         pred,audit=v.scalar_fit(ages,y,offset,query,base)
+147 |         centered=ages-math.fsum(ages)/len(ages)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_verification.py:198:31
+    |
+196 |             features,targets,states=[x.copy(deep=True) for x in original]
+197 |             row=features.index[280]
+198 |             if mutation=="age": features.loc[row,"peak_age"]+=1/251
+    |                               ^
+199 |             elif mutation=="depth": features.loc[row,"drawdown"]+=1e-4
+200 |             elif mutation=="target": targets.loc[row,"y"]+=1e-4
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_verification.py:199:35
+    |
+197 |             row=features.index[280]
+198 |             if mutation=="age": features.loc[row,"peak_age"]+=1/251
+199 |             elif mutation=="depth": features.loc[row,"drawdown"]+=1e-4
+    |                                   ^
+200 |             elif mutation=="target": targets.loc[row,"y"]+=1e-4
+201 |             elif mutation=="peak": states.loc[row,"peak_position"]-=1
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_verification.py:200:36
+    |
+198 |             if mutation=="age": features.loc[row,"peak_age"]+=1/251
+199 |             elif mutation=="depth": features.loc[row,"drawdown"]+=1e-4
+200 |             elif mutation=="target": targets.loc[row,"y"]+=1e-4
+    |                                    ^
+201 |             elif mutation=="peak": states.loc[row,"peak_position"]-=1
+202 |             elif mutation=="unknown": features.loc[row,"peak_age"]=np.nan
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_verification.py:201:34
+    |
+199 |             elif mutation=="depth": features.loc[row,"drawdown"]+=1e-4
+200 |             elif mutation=="target": targets.loc[row,"y"]+=1e-4
+201 |             elif mutation=="peak": states.loc[row,"peak_position"]-=1
+    |                                  ^
+202 |             elif mutation=="unknown": features.loc[row,"peak_age"]=np.nan
+203 |             else: features.loc[row,"feature_cutoff_date"]+=pd.Timedelta(days=1)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_verification.py:202:37
+    |
+200 |             elif mutation=="target": targets.loc[row,"y"]+=1e-4
+201 |             elif mutation=="peak": states.loc[row,"peak_position"]-=1
+202 |             elif mutation=="unknown": features.loc[row,"peak_age"]=np.nan
+    |                                     ^
+203 |             else: features.loc[row,"feature_cutoff_date"]+=pd.Timedelta(days=1)
+204 |             with self.subTest(mutation=mutation),self.assertRaises((ValueError,AssertionError)):
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_verification.py:203:17
+    |
+201 |             elif mutation=="peak": states.loc[row,"peak_position"]-=1
+202 |             elif mutation=="unknown": features.loc[row,"peak_age"]=np.nan
+203 |             else: features.loc[row,"feature_cutoff_date"]+=pd.Timedelta(days=1)
+    |                 ^
+204 |             with self.subTest(mutation=mutation),self.assertRaises((ValueError,AssertionError)):
+205 |                 v.verify_features(daily,iv,features,targets,states)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_verification.py:214:33
+    |
+212 |         for mutation in ("index","age_dtype","subday"):
+213 |             f,t,s=[x.copy(deep=True) for x in original]
+214 |             if mutation=="index": f.index=f.index.strftime("%Y-%m-%d")
+    |                                 ^
+215 |             elif mutation=="age_dtype": f["peak_age"]=f.peak_age.astype("float32")
+216 |             else: f["feature_cutoff_date"]+=pd.Timedelta(seconds=1)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_verification.py:215:39
+    |
+213 |             f,t,s=[x.copy(deep=True) for x in original]
+214 |             if mutation=="index": f.index=f.index.strftime("%Y-%m-%d")
+215 |             elif mutation=="age_dtype": f["peak_age"]=f.peak_age.astype("float32")
+    |                                       ^
+216 |             else: f["feature_cutoff_date"]+=pd.Timedelta(seconds=1)
+217 |             with self.subTest(mutation=mutation),self.assertRaises((ValueError,AssertionError)):
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_verification.py:216:17
+    |
+214 |             if mutation=="index": f.index=f.index.strftime("%Y-%m-%d")
+215 |             elif mutation=="age_dtype": f["peak_age"]=f.peak_age.astype("float32")
+216 |             else: f["feature_cutoff_date"]+=pd.Timedelta(seconds=1)
+    |                 ^
+217 |             with self.subTest(mutation=mutation),self.assertRaises((ValueError,AssertionError)):
+218 |                 v.verify_features(daily,iv,f,t,s)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_verification.py:240:39
+    |
+238 |         for mutation in ("coefficient","prediction","scale","alpha","scalar","center","schema","count"):
+239 |             saved=copy.deepcopy(original)
+240 |             if mutation=="coefficient": saved["model_audit"]["depth"]["beta"][2]+=.01
+    |                                       ^
+241 |             elif mutation=="prediction": saved["predictions"]["peak_age"][0]+=.01
+242 |             elif mutation=="scale": saved["model_audit"]["baseline"]["scales"][1]*=2
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_verification.py:241:40
+    |
+239 |             saved=copy.deepcopy(original)
+240 |             if mutation=="coefficient": saved["model_audit"]["depth"]["beta"][2]+=.01
+241 |             elif mutation=="prediction": saved["predictions"]["peak_age"][0]+=.01
+    |                                        ^
+242 |             elif mutation=="scale": saved["model_audit"]["baseline"]["scales"][1]*=2
+243 |             elif mutation=="alpha": saved["scalar_audit"]["alpha"]+=1e-13
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_verification.py:242:35
+    |
+240 |             if mutation=="coefficient": saved["model_audit"]["depth"]["beta"][2]+=.01
+241 |             elif mutation=="prediction": saved["predictions"]["peak_age"][0]+=.01
+242 |             elif mutation=="scale": saved["model_audit"]["baseline"]["scales"][1]*=2
+    |                                   ^
+243 |             elif mutation=="alpha": saved["scalar_audit"]["alpha"]+=1e-13
+244 |             elif mutation=="scalar": saved["scalar_audit"]["coefficient"]+=.01
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_verification.py:243:35
+    |
+241 |             elif mutation=="prediction": saved["predictions"]["peak_age"][0]+=.01
+242 |             elif mutation=="scale": saved["model_audit"]["baseline"]["scales"][1]*=2
+243 |             elif mutation=="alpha": saved["scalar_audit"]["alpha"]+=1e-13
+    |                                   ^
+244 |             elif mutation=="scalar": saved["scalar_audit"]["coefficient"]+=.01
+245 |             elif mutation=="center": saved["transform_audit"]["I_mean"]+=.01
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_verification.py:244:36
+    |
+242 |             elif mutation=="scale": saved["model_audit"]["baseline"]["scales"][1]*=2
+243 |             elif mutation=="alpha": saved["scalar_audit"]["alpha"]+=1e-13
+244 |             elif mutation=="scalar": saved["scalar_audit"]["coefficient"]+=.01
+    |                                    ^
+245 |             elif mutation=="center": saved["transform_audit"]["I_mean"]+=.01
+246 |             elif mutation=="schema": saved["scalar_audit"]["extra"]=0
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_verification.py:245:36
+    |
+243 |             elif mutation=="alpha": saved["scalar_audit"]["alpha"]+=1e-13
+244 |             elif mutation=="scalar": saved["scalar_audit"]["coefficient"]+=.01
+245 |             elif mutation=="center": saved["transform_audit"]["I_mean"]+=.01
+    |                                    ^
+246 |             elif mutation=="schema": saved["scalar_audit"]["extra"]=0
+247 |             else: saved["scalar_audit"]["train_n"]=True
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_verification.py:246:36
+    |
+244 |             elif mutation=="scalar": saved["scalar_audit"]["coefficient"]+=.01
+245 |             elif mutation=="center": saved["transform_audit"]["I_mean"]+=.01
+246 |             elif mutation=="schema": saved["scalar_audit"]["extra"]=0
+    |                                    ^
+247 |             else: saved["scalar_audit"]["train_n"]=True
+248 |             with self.subTest(mutation=mutation),self.assertRaises((ValueError,AssertionError)):
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_verification.py:247:17
+    |
+245 |             elif mutation=="center": saved["transform_audit"]["I_mean"]+=.01
+246 |             elif mutation=="schema": saved["scalar_audit"]["extra"]=0
+247 |             else: saved["scalar_audit"]["train_n"]=True
+    |                 ^
+248 |             with self.subTest(mutation=mutation),self.assertRaises((ValueError,AssertionError)):
+249 |                 v.verify_models(train,y,apply,saved)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_verification.py:289:33
+    |
+287 |                     args[i]=pd.read_parquet(path)
+288 |                 import json
+289 |                 for i in (2,7,9): args[i]=json.loads(json.dumps(args[i],allow_nan=False))
+    |                                 ^
+290 |                 with (patch.object(feature,"build_features",side_effect=AssertionError("no producer")),
+291 |                       patch.object(model,"fit_predict",side_effect=AssertionError("no producer fit")),
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_verification.py:319:39
+    |
+317 |         for mutation in ("train_order","fit_origin","app_cohort","support","target","state_date","extra"):
+318 |             args=copy.deepcopy(list(self.fixture))
+319 |             if mutation=="train_order": args[7][0]["train_origins"].reverse()
+    |                                       ^
+320 |             elif mutation=="fit_origin": args[7][0]["fit_origin"]="1999-01-01"
+321 |             elif mutation=="app_cohort": args[7][0]["application_origins"].pop()
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_verification.py:320:40
+    |
+318 |             args=copy.deepcopy(list(self.fixture))
+319 |             if mutation=="train_order": args[7][0]["train_origins"].reverse()
+320 |             elif mutation=="fit_origin": args[7][0]["fit_origin"]="1999-01-01"
+    |                                        ^
+321 |             elif mutation=="app_cohort": args[7][0]["application_origins"].pop()
+322 |             elif mutation=="support": args[9]["scored_origins"]+=1
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_verification.py:321:40
+    |
+319 |             if mutation=="train_order": args[7][0]["train_origins"].reverse()
+320 |             elif mutation=="fit_origin": args[7][0]["fit_origin"]="1999-01-01"
+321 |             elif mutation=="app_cohort": args[7][0]["application_origins"].pop()
+    |                                        ^
+322 |             elif mutation=="support": args[9]["scored_origins"]+=1
+323 |             elif mutation=="target": args[4].iloc[500,0]+=.01
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_verification.py:322:37
+    |
+320 |             elif mutation=="fit_origin": args[7][0]["fit_origin"]="1999-01-01"
+321 |             elif mutation=="app_cohort": args[7][0]["application_origins"].pop()
+322 |             elif mutation=="support": args[9]["scored_origins"]+=1
+    |                                     ^
+323 |             elif mutation=="target": args[4].iloc[500,0]+=.01
+324 |             elif mutation=="state_date": args[8].loc[0,"feature_cutoff_date"]+=pd.Timedelta(days=1)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_verification.py:323:36
+    |
+321 |             elif mutation=="app_cohort": args[7][0]["application_origins"].pop()
+322 |             elif mutation=="support": args[9]["scored_origins"]+=1
+323 |             elif mutation=="target": args[4].iloc[500,0]+=.01
+    |                                    ^
+324 |             elif mutation=="state_date": args[8].loc[0,"feature_cutoff_date"]+=pd.Timedelta(days=1)
+325 |             else: args[7][0]["unused_hinge"]={}
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_verification.py:324:40
+    |
+322 |             elif mutation=="support": args[9]["scored_origins"]+=1
+323 |             elif mutation=="target": args[4].iloc[500,0]+=.01
+324 |             elif mutation=="state_date": args[8].loc[0,"feature_cutoff_date"]+=pd.Timedelta(days=1)
+    |                                        ^
+325 |             else: args[7][0]["unused_hinge"]={}
+326 |             with self.subTest(mutation=mutation),self.assertRaises((ValueError,AssertionError)):
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_verification.py:325:17
+    |
+323 |             elif mutation=="target": args[4].iloc[500,0]+=.01
+324 |             elif mutation=="state_date": args[8].loc[0,"feature_cutoff_date"]+=pd.Timedelta(days=1)
+325 |             else: args[7][0]["unused_hinge"]={}
+    |                 ^
+326 |             with self.subTest(mutation=mutation),self.assertRaises((ValueError,AssertionError)):
+327 |                 v.verify_pipeline(*args)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_verification.py:333:32
+    |
+331 |             args=copy.deepcopy(list(self.fixture))
+332 |             fit=args[7][0]
+333 |             if mutation=="beta": fit["model_audit"]["depth"]["beta"][2]+=.01
+    |                                ^
+334 |             elif mutation=="scalar": fit["scalar_audit"]["coefficient"]+=.01
+335 |             elif mutation=="gradient": fit["scalar_audit"]["gradient_max_abs"]=-1e-16
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_verification.py:334:36
+    |
+332 |             fit=args[7][0]
+333 |             if mutation=="beta": fit["model_audit"]["depth"]["beta"][2]+=.01
+334 |             elif mutation=="scalar": fit["scalar_audit"]["coefficient"]+=.01
+    |                                    ^
+335 |             elif mutation=="gradient": fit["scalar_audit"]["gradient_max_abs"]=-1e-16
+336 |             else: fit["model_audit"]["baseline"]["alpha"]+=1e-13
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_verification.py:335:38
+    |
+333 |             if mutation=="beta": fit["model_audit"]["depth"]["beta"][2]+=.01
+334 |             elif mutation=="scalar": fit["scalar_audit"]["coefficient"]+=.01
+335 |             elif mutation=="gradient": fit["scalar_audit"]["gradient_max_abs"]=-1e-16
+    |                                      ^
+336 |             else: fit["model_audit"]["baseline"]["alpha"]+=1e-13
+337 |             with self.subTest(mutation=mutation),self.assertRaises((ValueError,AssertionError)):
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_verification.py:336:17
+    |
+334 |             elif mutation=="scalar": fit["scalar_audit"]["coefficient"]+=.01
+335 |             elif mutation=="gradient": fit["scalar_audit"]["gradient_max_abs"]=-1e-16
+336 |             else: fit["model_audit"]["baseline"]["alpha"]+=1e-13
+    |                 ^
+337 |             with self.subTest(mutation=mutation),self.assertRaises((ValueError,AssertionError)):
+338 |                 v.verify_pipeline(*args)
+    |
+
+Found 33 errors.
+[*] 1 fixable with the `--fix` option.

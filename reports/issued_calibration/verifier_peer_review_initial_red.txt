@@ -1,0 +1,35 @@
+FEF
+======================================================================
+ERROR: test_representable_likelihood_gradient_not_rejected_by_unused_curvature (tests.test_verify_issued_calibration.PrefitPeerReviewContracts.test_representable_likelihood_gradient_not_rejected_by_unused_curvature)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_issued_calibration.py", line 196, in test_representable_likelihood_gradient_not_rejected_by_unused_curvature
+    value,gradient,bound=v.weighted_objective(0.,[700.],[0.],[1e-40])
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_issued_calibration.py", line 81, in weighted_objective
+    curvature=_finite(summation(multiply(w,multiply(expit(values),expit(-values))))+.02)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_issued_calibration.py", line 52, in multiply
+    raise ValueError('Nonfinite product or nonzero multiplication underflow')
+ValueError: Nonfinite product or nonzero multiplication underflow
+
+======================================================================
+FAIL: test_postdecode_upstream_failure_marker_is_not_admissible (tests.test_verify_issued_calibration.PrefitPeerReviewContracts.test_postdecode_upstream_failure_marker_is_not_admissible)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_issued_calibration.py", line 218, in test_postdecode_upstream_failure_marker_is_not_admissible
+    with patch.object(pd,'read_parquet',side_effect=decoder),self.assertRaises(AssertionError):
+AssertionError: AssertionError not raised
+
+======================================================================
+FAIL: test_saved_coordinate_nonzero_division_underflow_rejected (tests.test_verify_issued_calibration.PrefitPeerReviewContracts.test_saved_coordinate_nonzero_division_underflow_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_issued_calibration.py", line 208, in test_saved_coordinate_nonzero_division_underflow_rejected
+    with self.assertRaises(ValueError):v.replay_saved_logit(app,audit)
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.112s
+
+FAILED (failures=2, errors=1)

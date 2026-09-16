@@ -1,0 +1,68 @@
+{
+  "status": "SOURCE_RECONCILIATION_INCOMPLETE",
+  "completed_utc": "2026-09-08T21:19:52.761330+00:00",
+  "attempt_sha256": "5c760281ffd64d52bfa8e67a183745833791948a523826e134206b6863172a35",
+  "alfred_record_count": 852,
+  "document_count": 853,
+  "parsed_report_count": 852,
+  "body_date_verified_count": 852,
+  "expected_reference_weeks_count": 856,
+  "alfred_repeated_release_dates": {
+    "2018-03-29": 2
+  },
+  "complete_pair_match_count": 850,
+  "pair_issues": [
+    {
+      "kind": "value_mismatch",
+      "observation_date": "2017-03-18",
+      "alfred_value": 258000,
+      "dol_value": 261000
+    },
+    {
+      "kind": "release_date_mismatch",
+      "observation_date": "2018-03-17",
+      "alfred_realtime_start_date": "2018-03-29",
+      "actual_release_date": "2018-03-22"
+    },
+    {
+      "kind": "value_mismatch",
+      "observation_date": "2018-03-17",
+      "alfred_value": 227000,
+      "dol_value": 229000
+    },
+    {
+      "kind": "missing_both_sources_reference_week",
+      "observation_date": "2025-09-27"
+    },
+    {
+      "kind": "missing_both_sources_reference_week",
+      "observation_date": "2025-10-04"
+    },
+    {
+      "kind": "missing_both_sources_reference_week",
+      "observation_date": "2025-10-11"
+    },
+    {
+      "kind": "missing_both_sources_reference_week",
+      "observation_date": "2025-10-18"
+    }
+  ],
+  "document_failures": [
+    {
+      "release_date": "2014-03-15",
+      "release_url": "https://oui.doleta.gov/press/2014/031514.pdf",
+      "kind": "release_parse_failure",
+      "error_type": "ValueError",
+      "error": "Exactly one advance seasonally adjusted initial-claims headline required"
+    }
+  ],
+  "new_predictive_hypotheses": 0,
+  "limitations": [
+    "Source agreement is not an immutable historical ingestion clock.",
+    "No market cohort, feature, model or empirical predictive score has been computed."
+  ],
+  "full_scope_status": "COMPLETE_SCOPE_REJECTED",
+  "full_scope_error": "Duplicate reference weeks or release dates are ambiguous",
+  "private_result_path": "data/claims_release/full_source_reconciliation_formats.json",
+  "private_result_sha256": "47b9de55d89783996c32969a68814c955919068a6d7ab614f5c4f80d748f0195"
+}

@@ -1,0 +1,8 @@
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.935s
+
+OK
+{"status": "REPLAY_SCORED_AWAITING_INDEPENDENT_PUBLICATION_VERIFICATION", "retained_forecasts": 4, "retained_monthly_schedules": 1, "new_producer_fits": 0, "newly_generated_forecasts": 0}
+{"status": "REPLAY_SCORED_AWAITING_INDEPENDENT_PUBLICATION_VERIFICATION", "retained_forecasts": 4, "retained_monthly_schedules": 1, "new_producer_fits": 0, "newly_generated_forecasts": 0}
+{"status": "REPLAY_SCORED_AWAITING_INDEPENDENT_PUBLICATION_VERIFICATION", "retained_forecasts": 4, "retained_monthly_schedules": 1, "new_producer_fits": 0, "newly_generated_forecasts": 0}

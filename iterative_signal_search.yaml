@@ -1,0 +1,109 @@
+study_id: iterative_signal_search_wave01
+specified_on: '2026-09-06'
+status: fixed_before_new_empirical_scores
+objective: Find a useful incremental volatility or index-return predictor
+evidence_class: exploratory_reused_history_with_separate_algorithm_evaluation
+wave: 1
+wave_alpha: 0.025
+all_previous_outputs_immutable: true
+hf:
+  asset: SPX
+  decision: idealized after daily price close; Oxford and Cboe feature observations delayed one full SPX session
+  source_archive: data/raw/oxford_man_realized.zip
+  archive_sha256: e0dd80edc0c2cedac5ed3f72250ee4460e963b4efd458d68525a61bcc5c27ea2
+  source_price_existing: data/research_paths/spx_daily.parquet
+  source_cboe: data/research_paths/cboe_indices.parquet
+  early_price_extension: separately recorded public Yahoo SPX OHLC before2009, checked against existing2009overlap, never overwriting prior inputs
+  source_end: '2018-01-03'
+  symbols: ['.SPX']
+  calendar: full SPX daily OHLC calendar; reindex Oxford data before lagging or rolling
+  archived_dates: preserve first10 characters of the stated local trading date, never convert midnight to UTC
+  baseline: [const, gk_d, gk_w, gk_m, lev_d, lev_w, lev_m, liv, hf_d, hf_w, hf_m]
+  models: [baseline, semivariance, kernel]
+  candidates:
+    semivariance: shifted1 ratios of sums archived rsv / rv5 over1,5,22 sessions; free coefficient sign
+    kernel: shifted1 log ratios of sums rk_parzen / rv5 over1,5,22 sessions
+  semivariance_interpretation: archival partition share; directional sign not established, no downside mechanism claim
+  target: arithmetic mean of next h complete rv5 observations, not daily OHLC variance
+  horizons: [1, 5, 21]
+  target_publication: one full SPX session after target_end
+  minimum_train: 750
+  estimator: expanding monthly OLS of log target with exact Duan smearing
+  scaling: training-only population mean/std; reject zero scale or rank deficiency
+  refit: first eligible origin each calendar month
+  training_rule: origin strictly before fit_origin and target_available_date at or before fit_origin
+  development: ['2010-01-04', '2013-12-31']
+  development_target_available_by: '2013-12-31'
+  evaluation: ['2014-01-02', '2017-12-29']
+  latest_target: '2017-12-29'
+  common_sample: identical scored origins across all three models and all three horizons; all horizon labels obey each phase fence
+  evaluation_stability: [['2014-01-02', '2015-12-31'], ['2016-01-01', '2017-12-29']]
+  effect_threshold_pct: 1.0
+index:
+  asset: QQQ
+  decision: price features fixed at origin close; calendar features and orders finalized before next actual opening auction, without its price
+  source_price: data/raw/daily_ohlc.parquet
+  source_cross: data/raw/cross_asset_daily.parquet
+  source_cboe:
+    vxn: data/free_sources/raw/cboe/VXN_History.csv
+    vix: data/free_sources/raw/cboe/VIX_History.csv
+  source_end: '2025-10-20'
+  origin_start: '2016-01-04'
+  origin_end: '2025-10-17'
+  latest_target: '2025-10-20'
+  sealed_start: '2025-11-03'
+  baseline: intercept; adjusted close-return means1/5/22, log mean total GK-plus-raw-overnight variance1/5/22, one-session-delayed logVXN/logVIX
+  models: [mean, baseline, session_split, cross_signed, calendar]
+  candidates:
+    session_split: mean1/5/22 of adjusted overnight log return minus raw intraday log return; overnight=adjusted close return minus intraday
+    cross_signed: current adjusted-close log returns of HYG,TLT,GLD,USO,UUP separately
+    calendar: target weekday indicatorsTuesday-Friday and first3 known trading sessions of targetmonth
+  calendar_rule: use prior observed dates and current known targetdate only; no future prices or future closure schedule
+  target: next-session close/open minus1; zero and negative returns are valid
+  horizons: [1]
+  minimum_train: 1000
+  estimator: expanding monthly ridge, mean squared error plus alpha times slope norm squared, unpenalized intercept
+  ridge_alpha: 0.01
+  scaling: training-only population mean/std; reject zero-scale features
+  mean_control: mean target on exactly the same eligible training rows
+  training_rule: origin strictly before fit_origin and target_end at or before fit_origin
+  development: ['2016-01-04', '2019-12-31']
+  development_target_available_by: '2019-12-31'
+  evaluation: ['2020-01-02', '2025-10-17']
+  evaluation_stability: [['2020-01-02', '2022-12-31'], ['2023-01-01', '2025-10-17']]
+  effect_threshold_pct: 0.25
+  effect_rationale: return-mean prediction uses a separately declared practical threshold; fixed before any return scores, not a relaxation of the frozen variance gate
+  descriptive_execution:
+    rule: long if prediction >0.0004, otherwise flat; always flat overnight
+    primary_cost_per_side: 0.0002
+    sensitivity_costs_per_side: [0, 0.0002, 0.0005]
+    cost_rule: charge both entry and exit on every held session, even on consecutive held days; both costs expressed on entry notional
+    controls: [always_daylong, mean, baseline]
+    claims: auction-price and cost scenarios only; no measured spread, financing, or established net-alpha claim
+comparisons:
+  hf: each of two candidates versus baseline at all three horizons
+  index: each of three candidates versus baseline and historical mean
+  new_hypotheses: 12
+  inherited_audited_hypotheses: 54
+  cumulative_hypotheses: 66
+  inherited_sources: [reports/orthogonal_round2/metrics.json, reports/model_memory_study/combined_metrics.json]
+  ledger_scope: all fully enumerated comparisons in this conversation; earlier repository research is separately inventoried and remains a source of adaptive-history exposure
+inference:
+  losses: QLIKE for HF and squared error for index returns
+  phases: compute both development and evaluation for every declared arm; no discovery-based selection
+  blocks: [21, 63, 126]
+  bootstrap_draws: 19999
+  seed: 20260907
+  bootstrap_seed_rule: seed + study_code*100000 + horizon*1000 + phase_code*10000 + block; hf=1,index=2,development=0,evaluation=1
+  p_phase: maximum of two-sided centered-null circular bootstrap p across allblocks and Bartlett HAC126 p
+  p_hypothesis: maximum phase p; improvement must hold in both phases
+  multiplicity: Holm across12 new hypotheses and separately across all66 tracked conversation hypotheses
+  gate: waveHolm<0.025, cumulativeHolm<0.05, bothphase effects>=study threshold, negative pairedlossgap in both evaluation stability slices
+  index_signal_gate: both baseline and mean comparisons must pass
+  missing_data: retain unevaluable registered hypotheses with p1 and an explicit status; never impute predictions
+  failure_rule: any fit or scoring failure aborts the whole wave; all12 hypotheses remain as unevaluable p1 bookkeeping entries, with INSUFFICIENT_DATA distinct from INVALID_RUN and no null-result claim
+  reporting: all estimates, nominal interval envelopes, annual slices, nonoverlapping phases, MDE and stability; no equivalence claim
+  caveat: historical partitioning and multiplicity accounting do not restore untouched data or prove conditional validity after adaptive reuse
+outputs:
+  data: data/iterative_signal_search
+  reports: reports/iterative_signal_search

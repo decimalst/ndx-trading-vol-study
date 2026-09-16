@@ -1,0 +1,7 @@
+{
+  "created_utc": "2026-09-09T06:20:33.419756+00:00",
+  "freeze_sha256": "f98fddc72c6180a92445a36e4c41cac07c4b1ff2d29aab5aa3ef5ac929a1c265",
+  "protocol_sha256": "cf43700c6c37ba860e9ef8ae4adb4c70158030efeedd3bca9b073f0691cd5d50",
+  "evidence_class": "EXPLORATORY_REUSED_MARKET_HISTORY_CURRENT_VINTAGES",
+  "evidence_limitation": "Historical development and evaluation windows have been reused. Prior regression tests accessed the period beginning 2025-11-03; it is not untouched confirmation. Current vendor snapshots do not certify complete point-in-time price or implied-volatility vintages. Numerical inputs in this experiment end 2025-10-20. QQQ ETF and SPX price index are distinct instruments; exact synchronized auctions and historical publication latency are not certified."
+}

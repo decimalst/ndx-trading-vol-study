@@ -1,0 +1,50 @@
+{
+  "entries": [
+    {
+      "cell_headers": [
+        "January_Tuesday"
+      ],
+      "exact_anchor_text": "3",
+      "exact_context": "lass=\"calendarHeader\">S</th>\n</tr>\n<tr>\n<td headers=\"January_Sunday\" class=\"calendar\" align=\"right\" valign=\"top\">1</td>\n<td headers=\"January_Monday\" class=\"calendar\" align=\"right\" valign=\"top\">2</td>\n<td headers=\"January_Tuesday\" class=\"calendar\" align=\"right\" valign=\"top\"><a href=\"/press/2012/010313.asp\">3</a></td>\n<td headers=\"January_Wednesday\" class=\"calendar\" align=\"right\" valign=\"top\">4</td>\n<td headers=\"January_Thursday\" class=\"calendar\" align=\"right\" valign=\"top\"><a href=\"/press/2012/010512.asp\">5</a></td>\n<td headers=\"January_Friday\" class=\"c",
+      "exact_source_td": "<td headers=\"January_Tuesday\" class=\"calendar\" align=\"right\" valign=\"top\"><a href=\"/press/2012/010313.asp\">3</a></td>",
+      "month_calendar_text": "January S M T W T F S 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31",
+      "original_href": "/press/2012/010313.asp",
+      "requested_year": 2012,
+      "source_byte_end_exclusive": 7741,
+      "source_byte_start": 7624,
+      "source_path": "data/claims_release/dol_indexes/quarantine/2012.html",
+      "source_sha256": "c5237140750477893d346b6ce56f2fbfc536f0e25d715aa8362a185775ff1a0e"
+    },
+    {
+      "cell_headers": [
+        "August_Wednesday"
+      ],
+      "exact_anchor_text": "1",
+      "exact_context": "ight\" valign=\"top\">&nbsp;</td>\n<td headers=\"August_Monday\" class=\"calendar\" align=\"right\" valign=\"top\">&nbsp;</td>\n<td headers=\"August_Tuesday\" class=\"calendar\" align=\"right\" valign=\"top\">&nbsp;</td>\n<td headers=\"August_Wednesday\" class=\"calendar\" align=\"right\" valign=\"top\"><a href=\"/press/2012/080113.asp\">1</a></td>\n<td headers=\"August_Thursday\" class=\"calendar\" align=\"right\" valign=\"top\"><a href=\"/press/2012/080212.asp\">2</a></td>\n<td headers=\"August_Friday\" class=\"calendar\" align=\"right\" valign=\"top\">3</td>\n<td headers=\"August_Saturday\" class=\"calen",
+      "exact_source_td": "<td headers=\"August_Wednesday\" class=\"calendar\" align=\"right\" valign=\"top\"><a href=\"/press/2012/080113.asp\">1</a></td>",
+      "month_calendar_text": "August S M T W T F S 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31",
+      "original_href": "/press/2012/080113.asp",
+      "requested_year": 2012,
+      "source_byte_end_exclusive": 34997,
+      "source_byte_start": 34879,
+      "source_path": "data/claims_release/dol_indexes/quarantine/2012.html",
+      "source_sha256": "c5237140750477893d346b6ce56f2fbfc536f0e25d715aa8362a185775ff1a0e"
+    },
+    {
+      "cell_headers": [
+        "January_Thursday"
+      ],
+      "exact_anchor_text": "3",
+      "exact_context": "gn=\"right\" valign=\"top\">&nbsp;</td>\n<td headers=\"January_Tuesday\" class=\"calendar\" align=\"right\" valign=\"top\">1</td>\n<td headers=\"January_Wednesday\" class=\"calendar\" align=\"right\" valign=\"top\">2</td>\n<td headers=\"January_Thursday\" class=\"calendar\" align=\"right\" valign=\"top\"><a href=\"/press/2019/010318.pdf\">3</a></td>\n<td headers=\"January_Friday\" class=\"calendar\" align=\"right\" valign=\"top\">4</td>\n<td headers=\"January_Saturday\" class=\"calendar\" align=\"right\" valign=\"top\">5</td>\n</tr>\n<tr>\n<td headers=\"January_Sunday\" class=\"calendar\" align=\"right\" valign",
+      "exact_source_td": "<td headers=\"January_Thursday\" class=\"calendar\" align=\"right\" valign=\"top\"><a href=\"/press/2019/010318.pdf\">3</a></td>",
+      "month_calendar_text": "January S M T W T F S 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31",
+      "original_href": "/press/2019/010318.pdf",
+      "requested_year": 2019,
+      "source_byte_end_exclusive": 7916,
+      "source_byte_start": 7798,
+      "source_path": "data/claims_release/dol_indexes/quarantine/2019.html",
+      "source_sha256": "93c961ee27dc846c53ec91133cd960913b1b68f906141bb9306fd33b925b4219"
+    }
+  ],
+  "scope": "Exact raw archive anchor/cell metadata only; no guessed corrections or release-body fetches"
+}

@@ -1,0 +1,8 @@
+/Users/byrons/.matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /var/folders/jn/2wqppgv57cx3k54l_dqt9sl00000gn/T/matplotlib-zq0an5an because there was an issue with the default path ({configdir}); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+
+Fontconfig error: No writable cache directories
+	/opt/homebrew/var/cache/fontconfig
+	/Users/byrons/.cache/fontconfig
+	/Users/byrons/.fontconfig
+Matplotlib is building the font cache; this may take a moment.

@@ -1,0 +1,12 @@
+GREEN: first implementation passed all 25 prewritten generated tests in 0.425s. No test or source corrections were needed.
+First implementation evidence SHA256 2086013511c43b84aa4035d0561d5bb92c56d1e67e33f21f098140f520addf9a
+No historical feature, cohort, fit or forecast access. No empirical run.
+Scoped lint command: .venv/bin/ruff check src/treasury_dealer_models.py src/treasury_dealer_pipeline.py tests/test_treasury_dealer_models.py tests/test_treasury_dealer_pipeline.py
+Scoped lint exit status: 0
+All checks passed!
+
+Final source/test pins:
+src/treasury_dealer_models.py SHA256 f45f000436e66f5134077af4a236e46b47959828222ee943d3ff56ec2788f54c
+src/treasury_dealer_pipeline.py SHA256 c8eece77b9f242b1cfef36427de0718e0e47ab72944e884c949bcf8f4b43ff7f
+tests/test_treasury_dealer_models.py SHA256 bce7707c46dc9c86077f112efc883efd28823592ffd680bb64845b993901be8c
+tests/test_treasury_dealer_pipeline.py SHA256 36a0b6f4d7369631899e7af173f8812308474b58b9d5d40b78a45bb765afae50

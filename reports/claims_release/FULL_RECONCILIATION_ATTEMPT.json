@@ -1,0 +1,24 @@
+{
+  "created_utc": "2026-09-08T21:10:16.060208+00:00",
+  "purpose": "Complete original-release source reconciliation only; no market data or predictive computations",
+  "source_ceiling": "2025-10-20",
+  "text_ledger_path": "data/claims_release/dol_text/text_ledger.json",
+  "text_ledger_sha256": "1fca7e8b7da12e388a8a4e982c6ffe18cf48c11bdbd13e4442223d110d8b5ceb",
+  "alfred_path": "data/claims_release/alfred_structural.json",
+  "alfred_sha256": "90832acafb2bec11766d871c004b0979ec1de6ad4c5cf3d9c815c40b3bc7d9ec",
+  "checks_path": "reports/claims_release/SOURCE_IDENTITY_COMPONENTS_GREEN.json",
+  "checks_sha256": "b2fa27f2cdb7fa4942a6816e54bab594b0fdd9e32b7505ab0644273ead089a52",
+  "code_test_sha256": {
+    "src/claims_release_archive.py": "a2ab878ea7d0599a39146e4b21f0e5d0e93e936d6759f316fea896181519dc39",
+    "src/claims_release_reconcile.py": "de1a7236a5e28ed2175783e8c209d656239bf13b68e63a42708935113dc0aa38",
+    "src/claims_release_source.py": "9c0a0cc409bfac6989bb5a3c9207e02ea03d448d7ef7ed6c56c23484b8ad285f",
+    "tests/test_claims_release_archive.py": "44e9e40e41d9be15698bff648937d9bd146113561fcb093b1b4e81d74981ef2d",
+    "tests/test_claims_release_reconcile.py": "3db2ad43f2cc7e3a077dca7284af92e91e87728f40f71e71af0e45e12588f0fd",
+    "tests/test_claims_release_reconcile_identity.py": "bcae4c31f325ba52bf495799947218aead7f6602a8e5045882ebd58569a67e9a",
+    "tests/test_claims_release_source.py": "0ba7f577f09acc26a3f7ca8379579f49e97cb28b141e29983b90e144e8e1ca42",
+    "tests/test_claims_release_source_attributes.py": "b6d512a9a098675a732715561731e56cb064fe2ac5d69e3ae92a20c65f0be8b7"
+  },
+  "adapter_sha256": "29d4d2a9e56772d67f86f526a051db47bb09dab76931d833ce1173b12230f5a1",
+  "release_document_count": 853,
+  "new_predictive_hypotheses": 0
+}

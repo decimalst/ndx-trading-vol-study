@@ -1,0 +1,24 @@
+PREIMPLEMENTATION RED: scorer absent
+Command: .venv/bin/python -m unittest tests.test_treasury_dealer_score -v
+tests/test_treasury_dealer_score.py SHA256 6212124f15d652b3cd7f1a750164038279871820f05d5fcde7d77ee0f99d9e81
+reports/treasury_dealer/predictive_prefit/SCORE_CONTRACT.md SHA256 10f5931b41e7bebeadca7d35a8dd36315d44b656383a51b893619c9a5b22254f
+Exit status: 1
+test_treasury_dealer_score (unittest.loader._FailedTest.test_treasury_dealer_score) ... ERROR
+
+======================================================================
+ERROR: test_treasury_dealer_score (unittest.loader._FailedTest.test_treasury_dealer_score)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_treasury_dealer_score
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_dealer_score.py", line 12, in <module>
+    from src.treasury_dealer_score import evaluate, failure_metrics, inherit_family
+ModuleNotFoundError: No module named 'src.treasury_dealer_score'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

@@ -1,0 +1,72 @@
+{
+  "status": "VERIFIED_QUALIFIED_REPORT_CHECKPOINT",
+  "completed_utc": "2026-09-09T04:45:28.373233+00:00",
+  "scope": "Additive local report checkpoint; authenticates saved independent publication audit, its 17 named inputs, rendered report, figures and renderer scripts. No empirical arrays, fits or inference rerun.",
+  "artifact_hashes": {
+    "reports/treasury_dealer/predictive/metrics.json": "05e363aeaa1fbe2d7a67099d8a12471590099f72aa99615bd35cc1222288daa4",
+    "reports/treasury_dealer/predictive/terminal.json": "5db462b7bef69003b0b08aab7b970a4293f6ca4db4233489e4d364956f1f3cda",
+    "reports/treasury_dealer/predictive/verification.json": "b34f323c4b88a7e2ad65e5b1977e405816705f770357678082d8d7ef698988f8",
+    "reports/treasury_dealer/predictive/support.json": "3cfdb5592397af6a3c632f15a089d2e3ace18653f411cf1ce00cfc2c7e137c01",
+    "reports/treasury_dealer/predictive/freeze_record.json": "99cca9121cfd6a691d99243845518315871071ecd3c9566fcdb965a11597c195",
+    "reports/treasury_dealer/predictive/TEST_GATE_RESULT.json": "b8022e5290dbee4c90c970f77488f73e6635473749787232c8caaffd3b27cda1",
+    "reports/treasury_dealer/predictive/TEST_SELECTION.json": "9bf2a1cb13c3fa8b03800b94c739f5b54d0d4ed069c96596016ac4ed53cad780",
+    "reports/treasury_dealer/predictive/trial_ledger.jsonl": "a3691e195943f484c6de48a2970e6f6fdf007ff9e7aaccf5de995546fab6e005",
+    "reports/treasury_dealer/predictive/FULL_PRECHECK.json": "cf12f8d4e1491f0e8304a9f3aa73d4ccaa86aab2d2168e1e92616e0c6e4b39fc",
+    "reports/treasury_dealer/predictive/FULL_PRECHECK.log": "968d6f6ea73a82af57dabdf7ebf19393a186d7725ed798f84f5e151e6a966e89",
+    "reports/treasury_dealer/predictive/manifest.json": "1844a6d6268ef86065c7b1e28ec96369218aeea134d0a4b8cbde1d5da834b6a6",
+    "reports/treasury_dealer/predictive/input_support_verification.json": "689f790808b09f6d6d470d6dbce728a18503e20bd69d5c2ddeaaac0d963c7de0",
+    "reports/treasury_dealer/predictive/forecast_verification.json": "3156e055090d0b9b4c66dd05b6edc26f927299b998cedf60acc56d3f94060847",
+    "reports/treasury_dealer/predictive/score_verification.json": "dc044fe1f96e0aaf73920533db16e13e3a03f1cf03fb9854aefec4f52828d549",
+    "reports/commodity_implied/predictive/metrics.json": "02762e0403d5f09e8601ac66c324ddb78e2bacb401958cef6f40531476a5543a",
+    "treasury_dealer.yaml": "194fd2ef49cfa8db5542f5e672383b5e2d4ec8f8c724b2af8559d51319aef6a8",
+    "reports/treasury_dealer/predictive_prefit/HISTORICAL_TEST_ACCESS_CORRECTION.md": "325915e178d0ebc58ac05ced3d281a8c8ec840ed86fd9fec348e5ae0969ab007",
+    "reports/treasury_dealer/predictive/PUBLICATION_INDEPENDENT_AUDIT.json": "d7857ace5f3d5b73c32cb9678223cfe87b390f12fde883bf9d6d80427c114f32",
+    "reports/treasury_dealer/predictive/RENDER_MANIFEST_V2.json": "51884b4444a6fa7d06324a4b53f7801388b602ce13accec48e94284362a57572",
+    "reports/treasury_dealer/predictive/SUMMARY_V2.md": "05743d0459fe6ffd8c5f6751c769b94cbac99bb9bd1420b9d85c0dfe719ba8af",
+    "reports/treasury_dealer/predictive/comparison_intervals_v2.png": "fe2f9dff5cdb1afca5937929e1c7cc6154ad7e09ee858d9ebc8fa31c3b9b18ab",
+    "reports/treasury_dealer/predictive/comparison_intervals_v2.pdf": "8913eb2980c8ea49020cd20ae2e5f7f6d71ba7f864329a052eb984f29433e46d",
+    "scripts/render_treasury_dealer_results.py": "7c9c29bfb278787ab148f27af01b108dc5425f693310fa2c16f18e2b0918d793",
+    "scripts/render_treasury_dealer_results_v2.py": "8ef8564698685aace46e23a111d393aba193b7f8a2090b211a06610b72e7ea9c"
+  },
+  "result": {
+    "new_comparisons": 2,
+    "cumulative_comparisons": 146,
+    "qualifying_signals": 0,
+    "verdicts": [
+      "DOES_NOT_QUALIFY",
+      "DOES_NOT_QUALIFY"
+    ],
+    "scored_origins": 2315,
+    "auction_activation_dates": 524,
+    "scored_forecasts": 6945,
+    "issued_forecasts": 6975,
+    "monthly_refits": 118,
+    "individual_model_fits": 354
+  },
+  "tests": {
+    "executed": 3252,
+    "passed": 3252,
+    "explicitly_quarantined_historical_replay_tests": 6
+  },
+  "qualifications": [
+    "January 27, 2020 Z52 timing remains conditional on faithful cached Treasury-attributed release text; original PDF and historical public-delivery timestamp are unavailable and quantities remain unknown.",
+    "Previous full-suite regression runs accessed the historical period beginning November 3, 2025. It is not untouched confirmation. Exact six tests were quarantined for this run; original evidence is preserved.",
+    "Historical windows have been reused; nonqualification is not equivalence or a universal Treasury-null result."
+  ],
+  "visual_review": {
+    "reviewed_in_current_goal_turn": true,
+    "version": 2,
+    "eight_saved_means_and_interval_envelopes_checked": true,
+    "axis_labels_readable": true,
+    "qualifications_visible": true,
+    "version_1_preserved": true,
+    "version_2_change": "Reduced tick density; no numerical changes."
+  },
+  "next_experiment": {
+    "name": "Contextual precision gate",
+    "state": "Pure core tested; historical pipeline and prospective registration not yet completed.",
+    "inherits_comparisons": 146
+  },
+  "frozen_artifacts_modified": false,
+  "external_publication_performed": false
+}

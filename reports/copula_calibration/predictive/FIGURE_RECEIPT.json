@@ -1,0 +1,63 @@
+{
+  "metrics_sha256": "d1c2e51baa5b53b2d869ac6a09c8412aaca1baa6d8eab273fc184e03c78e79b4",
+  "plotted_points": [
+    {
+      "contrast": "original_gap",
+      "phase": "development",
+      "mean": -0.029212631444339773,
+      "interval": [
+        -0.04632685000258908,
+        -0.014891214904207193
+      ]
+    },
+    {
+      "contrast": "original_gap",
+      "phase": "evaluation",
+      "mean": -0.016615805728885547,
+      "interval": [
+        -0.023488942842053554,
+        -0.009742668615717539
+      ]
+    },
+    {
+      "contrast": "calibrated_gap",
+      "phase": "development",
+      "mean": -0.026422289486164846,
+      "interval": [
+        -0.0428566918721196,
+        -0.012748621685664903
+      ]
+    },
+    {
+      "contrast": "calibrated_gap",
+      "phase": "evaluation",
+      "mean": -0.014692408505358422,
+      "interval": [
+        -0.021027138321969188,
+        -0.008357678688747655
+      ]
+    },
+    {
+      "contrast": "interaction",
+      "phase": "development",
+      "mean": 0.0027903419581749235,
+      "interval": [
+        -0.0008890324102199964,
+        0.006286364679742133
+      ]
+    },
+    {
+      "contrast": "interaction",
+      "phase": "evaluation",
+      "mean": 0.001923397223527126,
+      "interval": [
+        0.00014680332915468965,
+        0.0036999119075358253
+      ]
+    }
+  ],
+  "figure_sha256": {
+    "calibration_comparison.png": "879fb02465fac4ac2c2f7c6ab70ff74d271ff0f2b33fa8ff7621f55e23e18ec0",
+    "calibration_comparison.pdf": "6573bd7b922151936779bf00d2558460ec2dfe8f9dd7ac5e979d56cbdcac8c81"
+  }
+}

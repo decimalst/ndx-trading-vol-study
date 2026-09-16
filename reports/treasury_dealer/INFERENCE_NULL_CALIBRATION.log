@@ -1,0 +1,29 @@
+Generated-null repetitions completed: 50/200
+Generated-null repetitions completed: 100/200
+Generated-null repetitions completed: 150/200
+Generated-null repetitions completed: 200/200
+{
+  "status": "SYNTHETIC_CALIBRATION_PASS",
+  "summaries": {
+    "daily": {
+      "envelope_coverage": 0.93,
+      "failures": 0,
+      "individual_method_coverage": {
+        "hac": 0.895,
+        "21": 0.895,
+        "63": 0.89,
+        "126": 0.885
+      }
+    },
+    "active": {
+      "envelope_coverage": 0.94,
+      "failures": 0,
+      "individual_method_coverage": {
+        "hac": 0.92,
+        "21": 0.92,
+        "63": 0.915,
+        "126": 0.905
+      }
+    }
+  }
+}

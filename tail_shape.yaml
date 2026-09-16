@@ -1,0 +1,113 @@
+study_id: tail_shape_wave07
+specified_on: '2026-09-07'
+status: specified_before_empirical_scores
+wave: 7
+wave_alpha: 0.0008928571428571429
+objective: Test whether lagged option-implied SKEW improves signed downside-tail shape forecasts at identical predicted mean and variance
+evidence_class: exploratory_reused_history_archival_SPX_standardized_return_density
+sources:
+  daily: data/research_paths/spx_daily.parquet
+  vix: data/free_sources/raw/cboe/VIX_History.csv
+  vix9d: data/free_sources/raw/cboe/VIX9D_History.csv
+  vvix: data/free_sources/raw/cboe/VVIX_History.csv
+  skew: data/raw/SKEW_History.csv
+  skew_source: data/raw/skew_daily_source.json
+  skew_derived: data/raw/skew_daily.parquet
+source_contract:
+  skew_sha256: becbf3f7510de66a736495df29a84ba1911d362402f05f6c46dedd5e9b971492
+  skew_anchor: {date: '2018-08-13', close: 159.03, tolerance: 0.01}
+  skew_derived: bounded raw and existing derived values must agree; raw CSV is the predictor source; no fetch or vintage substitution
+  historical_availability: archival current-vintage Yahoo and Cboe extracts; revisions and exact release latency unverified
+  vix9d: January2011-October2013 values back-calculated; no original-date historical availability claim
+  missing: preserve observed SPX reference calendar and strict windows; no filling; numerical CSV values parsed only after date cutoff
+  interpretation: SKEW is an option-implied30day construction; it is not a physical one-day crash probability
+index:
+  asset: SPX
+  source_end: '2025-10-20'
+  sealed_start: '2025-11-03'
+  origin_start: '2016-01-04'
+  origin_end: '2025-10-17'
+  latest_target: '2025-10-20'
+  development: ['2016-01-04', '2019-12-31']
+  development_target_available_by: '2019-12-31'
+  evaluation: ['2020-01-02', '2025-10-17']
+  evaluation_stability: [['2020-01-02', '2022-12-31'], ['2023-01-01', '2025-10-17']]
+  horizons: [1]
+  models: [frequency, constant_shape, skew_shape]
+  raw: [const, I, R, ret_d, ret_w, ret_m, ret_q, lr_d, lr_w, term, lvvix, entry_dow_1, entry_dow_2, entry_dow_3, entry_dow_4, neg_d, neg_w, neg_m, skew]
+  baseline: [const, I, R, ret_d, ret_w, ret_m, ret_q, lr_d, lr_w, term, lvvix, entry_dow_1, entry_dow_2, entry_dow_3, entry_dow_4, neg_d, neg_w, neg_m, skew, I_square, R_square, skew_square]
+  market_lag: 1
+  own_features: wave6 raw baseline plus means of negative raw SPX close logreturn parts over1/5/22sessions; rawSKEWlevel; all shifted one observed session
+  curvature: I_square,R_square,skew_square separately centered on exact admitted training means
+  normalization_mean: strict trailing22 mean raw SPX close logreturn through preceding session
+  normalization_scale: sqrt(strict trailing22 mean(max(GK,1e-10)+raw overnight logreturn squared)) through preceding session
+  target: u=(log(C[t+1]/C[t])-normalization_mean)/normalization_scale; raw price index without dividends or interest
+  event_threshold: -1.5
+  event: u strictly below -1.5; missing if u nonfinite; threshold is not a fitted quantile or universal5percentVaR
+  label_availability: target_end and available_date next observed SPX session close
+  minimum_train: 1000
+  minimum_train_events: 50
+  minimum_train_nonevents: 50
+  minimum_phase_events: 30
+  minimum_phase_nonevents: 30
+  minimum_slice_events: 15
+  minimum_slice_nonevents: 15
+  common_sample: all three models same complete19rawfeatures plus normalization and finite matured u/event rows; no target trimming or winsorization
+  fit_schedule: monthly first complete feature origin before selecting future label readiness
+  training_availability: origin before fit; target_end no later than preceding observed SPX session of fit
+  mean_penalty: 0.01
+  mean_objective: mean squared u error plus0.01 standardized slope squared norm; unpenalized intercept
+  variance_penalty: 0.01
+  variance_objective: frozen macro_second_moment positive log-link mean(log(h)+q/h) plus0.01 standardized slope squared norm
+  variance_target: q=(u-shared fitted training mean)^2; training residuals from current fit, not out-of-sample errors
+  variance_optimizer: frozen Newton Armijo200iterations,60backtracks,gradient1e-8,Armijo1e-4; no fallback
+  feature_scaling: exact training population means and standard deviations aftercurvature; any21noninterceptscale<=1e-12 aborts whole wave
+  effect_brier_absolute: 0.0005
+  effect_nll_absolute: 0.005
+shape:
+  distribution: Hansen1994 moment-standardized skewed Student; recompute internal centering/scaling constants at every shape value
+  degrees_of_freedom: 8.0
+  tail_heaviness_policy: fixed before fitting; no degrees-of-freedom search or estimation
+  shared_moments: staged mean and variance models include rawSKEW and curvature; freeze their fitted functions for both density forecasts
+  standardized_skew: raw lagged SKEW centered/scaled on exact admitted training rows
+  constant: lambda=0.95*tanh(a)
+  candidate: lambda=0.95*tanh(a+b*standardized_skew)
+  coefficient_bounds: [-3.0, 3.0]
+  slope_penalty: 0.01
+  objective: mean negative standardized innovation logdensity plus0.01*b^2; intercept unpenalized; common external logscale term omitted during shape optimization
+  starts: constant a=0; candidate a=fittedconstant_a,b=0
+  optimizer: scipy L-BFGS-B with analytic lambda chain-rule gradient
+  maximum_iterations: 1000
+  maximum_line_search: 50
+  ftol: 0.00000000000001
+  gtol: 0.000000001
+  projected_gradient_tolerance: 0.0000001
+  acceptance: optimizer success plus finite in-bound parameters/objective and projectedgradient<=1e-7; no retry fallback multistart or clipping
+  probability: CDF((-1.5-shared_mu)/sqrt(shared_variance),nu8,lambda)
+  log_density: logpdf((u-shared_mu)/sqrt(shared_variance),nu8,lambda)-0.5log(shared_variance)
+comparisons:
+  new_hypotheses: 3
+  inherited_hypotheses: 103
+  cumulative_hypotheses: 106
+  contrasts: [[skew_shape, constant_shape, brier], [skew_shape, frequency, brier], [skew_shape, constant_shape, nll]]
+  inherited_sources: [reports/orthogonal_round2/metrics.json, reports/model_memory_study/combined_metrics.json, reports/iterative_signal_search/metrics.json, reports/international_volatility/metrics.json, reports/overnight_index/metrics.json, reports/macro_overnight/metrics.json, reports/measurement_memory/metrics.json, reports/index_hinge/metrics.json]
+  gate: all three comparisons must reduce appropriate absolute score by fixed threshold in both periods, improve both evaluation slices, waveHolm3<1/1120 and cumulativeHolm106<0.05
+  frequency_control: exact common training event mean; no density or conditional moment claim
+  no_tail_selection: one threshold,one horizon,oneSKEWshape slope; no AUC or selected subperiod promotion
+inference:
+  losses: Brier squared binary probability error; full standardized-return negative logdensity for density comparison
+  blocks: [21, 63, 126]
+  hac_lags: 126
+  minimum_phase_observations: 127
+  bootstrap_draws: 99999
+  seed: 20260913
+  seed_rule: seed+phase_code*10000+block;development0,evaluation1;common retained rows and common draws across all three comparisons
+  p_phase: maximum two-sided centered-null circular bootstrap p across allblocks and Bartlett HAC126 p
+  p_hypothesis: maximum development and evaluation p
+  resolution: minp1/100000 is below one tenth of strictest waveHolm cutoff1/3360 namely1/33600
+  failure_rule: registered source support optimizer forecast inference validation or output failure aborts whole wave and retains all3 hypotheses as unevaluablep1
+  reporting: all comparisons, both periods and fixed slices, event support, Brier calibration, density moments, nominal uncertainty and MDE, complete trial accounting
+  interpretation: equal modeled moments isolate the specification increment; remaining location scale or tail-heaviness misspecification can still resemble shape predictability
+outputs:
+  data: data/tail_shape
+  reports: reports/tail_shape

@@ -1,0 +1,72 @@
+study_id: model_memory_reference_20260906
+specified_before_core_and_reference_scores: true
+evidence_class: exploratory_previously_inspected_history
+core_protocol: model_memory_study.yaml
+models: [nlinear, xlstm, moirai_univariate_gamma, moirai_augmented_gamma]
+sample:
+  score_start: '2016-01-04'
+  score_end: '2025-10-10'
+  latest_target: '2025-10-20'
+  horizons: [1, 5]
+  origins: exact same complete origins and targets as core comparison
+moirai:
+  repository: SalesforceAIResearch/uni2ts
+  code_revision: cfd46d4510ed8896f263116f32928eede05b0a75
+  checkpoint: Salesforce/moirai-2.0-R-small
+  checkpoint_revision: 30f43ff08c8494f4943ae1521e9d4e94a0fbb389
+  extraction_start: '2010-01-04'
+  context_sessions: 512
+  input: log of positive daily GK-plus-overnight variance, through origin inclusive
+  summary_h1: median forecast of next log variance
+  summary_h5: log of arithmetic mean of exponentiated five future log-variance medians
+  interpretation: summary features, never assumed to be calibrated conditional mean variance
+  calibration: expanding monthly Gamma/log-link alpha0, same training rows and convergence rules as core Gamma
+  univariate_inputs: only the horizon-specific Moirai summary plus intercept
+  augmented_inputs: all baseline columns plus horizon-specific Moirai summary
+  target_scaling: training median, restoring intercept into variance units
+  pretraining_exposure: unknown; model released after entire scoring period
+neural:
+  identity: small xLSTM-Mixer-inspired adaptation, not paper reproduction
+  matched_control: NLinear with identical temporal and output projections
+  inputs: 22 consecutive sessions of the 11 nonconstant baseline features
+  outputs: joint one- and five-session mean variance via positive exponential output
+  width: 16
+  heads: 4
+  slstm_layers: 1
+  memory_tokens: 2
+  views: forward and reverse feature-token order, both using only trailing inputs
+  backend: vanilla float32 CPU, installed xlstm2.0.5
+  dropout: 0
+  historical_forecast_start: '2013-02-01'
+  refit: first eligible origin each year, including initial partial2013
+  training: last1500 eligible windows with BOTH labels completed by refit
+  normalization: per-feature mean and population std of flattened training windows only
+  target_scaling: per-horizon training median
+  epochs: 12
+  batch_size: 128
+  optimizer: Adam
+  learning_rate: 0.001
+  seed: 20260906
+  loss: mean QLIKE across both horizons
+  selection: none; final fixed-epoch parameters, no checkpoint or seed search
+comparisons:
+  primary: each of four reference models versus core baseline at both horizons
+  mechanisms:
+    - [xlstm, nlinear]
+    - [moirai_augmented_gamma, gamma]
+    - [moirai_augmented_gamma, moirai_univariate_gamma]
+  total_reference_hypotheses: 14
+  total_with_core: 46
+  multiplicity: final claims use Holm across all32 core plus14 reference contrasts; failed or unevaluable registered arms retain p1
+inference:
+  settings: same QLIKE, blocks21/63/126,4999draws,seed20260907, HAC126, three stability periods and1percent minimum effect as core
+  status: all results exploratory, even if corrected gate clears
+restrictions:
+  - frozen core outputs remain unchanged; complete-family adjustment is an additive report
+  - no tuning on inspected historical scores
+  - no future-fitted scaling, projection, calibration, memory, validation or early stopping
+  - no data from the protected phase
+  - model integration must pass prewritten contracts before any market run
+outputs:
+  data: data/model_memory_reference
+  reports: reports/model_memory_study

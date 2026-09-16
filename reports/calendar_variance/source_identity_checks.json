@@ -1,0 +1,60 @@
+{
+  "checked_utc": "2026-09-07T07:00:55.124575+00:00",
+  "method": "read source bytes only and SHA256; no numeric values, predictor associations, labels or fit outputs parsed",
+  "status": "PASS",
+  "wave_manifests": 7,
+  "input_hash_checks": 867,
+  "unique_source_paths": 831,
+  "waves": [
+    {
+      "wave": "iterative_signal_search",
+      "manifest_path": "reports/iterative_signal_search/manifest.json",
+      "manifest_sha256": "5515fc5aea433d9e743bcd31d9bfdb284ebca23005ac3c0fdd6184ab5a15b61f",
+      "input_hash_checks": 9,
+      "matched": true
+    },
+    {
+      "wave": "international_volatility",
+      "manifest_path": "reports/international_volatility/manifest.json",
+      "manifest_sha256": "530b8439d7b8dcd209d967a90d3affe1ec002a7dc0e4b824deb44c37285ea757",
+      "input_hash_checks": 5,
+      "matched": true
+    },
+    {
+      "wave": "overnight_index",
+      "manifest_path": "reports/overnight_index/manifest.json",
+      "manifest_sha256": "49c84753c1589ac7c01e4e3d90e250eca1df6341a30420a8e9d9a766c6e241fd",
+      "input_hash_checks": 10,
+      "matched": true
+    },
+    {
+      "wave": "macro_overnight",
+      "manifest_path": "reports/macro_overnight/manifest.json",
+      "manifest_sha256": "d50b2523a84c139e87861e2468c829606e6c1a41f8fb17be68e5f4d8da5ab614",
+      "input_hash_checks": 805,
+      "matched": true
+    },
+    {
+      "wave": "measurement_memory",
+      "manifest_path": "reports/measurement_memory/manifest.json",
+      "manifest_sha256": "c53329dbbc94dc0d8e83aca30284c41e3e0b9e35a3156817837bcadc647625b7",
+      "input_hash_checks": 19,
+      "matched": true
+    },
+    {
+      "wave": "index_hinge",
+      "manifest_path": "reports/index_hinge/manifest.json",
+      "manifest_sha256": "7d3c458c255b0d4ee9278a4844269b68249426aeacbeeb436e6350c7b1c4204b",
+      "input_hash_checks": 8,
+      "matched": true
+    },
+    {
+      "wave": "tail_shape",
+      "manifest_path": "reports/tail_shape/manifest.json",
+      "manifest_sha256": "136cfa954874231d305af552d3f89d7e77bee76d3638a9152f764b425509644d",
+      "input_hash_checks": 11,
+      "matched": true
+    }
+  ],
+  "mismatches": []
+}

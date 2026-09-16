@@ -1,0 +1,14 @@
+E
+======================================================================
+ERROR: test_literal_iteration_and_function_call_status_contract (tests.test_verify_issued_calibration.ScalarAccountingContracts.test_literal_iteration_and_function_call_status_contract)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_issued_calibration.py", line 161, in test_literal_iteration_and_function_call_status_contract
+    v.validate_scalar_accounting(fitted);v.validate_scalar_accounting(empty)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_issued_calibration' has no attribute 'validate_scalar_accounting'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

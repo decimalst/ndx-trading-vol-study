@@ -1,0 +1,20 @@
+E
+======================================================================
+ERROR: test_profiled_quarter_integration (unittest.loader._FailedTest.test_profiled_quarter_integration)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_profiled_quarter_integration
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_profiled_quarter_integration.py", line 25, in <module>
+    from src import profiled_quarter_search as search
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/profiled_quarter_search.py", line 26, in <module>
+    from .verify_profiled_quarter import validate_upstream
+ImportError: cannot import name 'validate_upstream' from 'src.verify_profiled_quarter' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_profiled_quarter.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

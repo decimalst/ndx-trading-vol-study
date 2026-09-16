@@ -1,0 +1,77 @@
+B023 Function definition does not bind loop variable `original_report`
+   --> tests/test_event_cluster_replay_publication.py:581:25
+    |
+579 |                     def staging(metrics):
+580 |                         nonlocal armed
+581 |                         original_report(metrics)
+    |                         ^^^^^^^^^^^^^^^
+582 |                         armed = True
+    |
+
+B023 Function definition does not bind loop variable `original_digest`
+   --> tests/test_event_cluster_replay_publication.py:586:33
+    |
+584 |                     def late_digest(path):
+585 |                         nonlocal mutated
+586 |                         value = original_digest(path)
+    |                                 ^^^^^^^^^^^^^^^
+587 |                         if (
+588 |                             armed
+    |
+
+B023 Function definition does not bind loop variable `armed`
+   --> tests/test_event_cluster_replay_publication.py:588:29
+    |
+586 |                         value = original_digest(path)
+587 |                         if (
+588 |                             armed
+    |                             ^^^^^
+589 |                             and not mutated
+590 |                             and Path(path) == root / "reports/previous/results.md"
+    |
+
+B023 Function definition does not bind loop variable `root`
+   --> tests/test_event_cluster_replay_publication.py:590:47
+    |
+588 |                             armed
+589 |                             and not mutated
+590 |                             and Path(path) == root / "reports/previous/results.md"
+    |                                               ^^^^
+591 |                         ):
+592 |                             target = root / "reports/event_cluster" / name
+    |
+
+B023 Function definition does not bind loop variable `root`
+   --> tests/test_event_cluster_replay_publication.py:592:38
+    |
+590 |                             and Path(path) == root / "reports/previous/results.md"
+591 |                         ):
+592 |                             target = root / "reports/event_cluster" / name
+    |                                      ^^^^
+593 |                             if action == "remove":
+594 |                                 target.unlink()
+    |
+
+B023 Function definition does not bind loop variable `name`
+   --> tests/test_event_cluster_replay_publication.py:592:71
+    |
+590 |                             and Path(path) == root / "reports/previous/results.md"
+591 |                         ):
+592 |                             target = root / "reports/event_cluster" / name
+    |                                                                       ^^^^
+593 |                             if action == "remove":
+594 |                                 target.unlink()
+    |
+
+B023 Function definition does not bind loop variable `action`
+   --> tests/test_event_cluster_replay_publication.py:593:32
+    |
+591 |                         ):
+592 |                             target = root / "reports/event_cluster" / name
+593 |                             if action == "remove":
+    |                                ^^^^^^
+594 |                                 target.unlink()
+595 |                             else:
+    |
+
+Found 7 errors.

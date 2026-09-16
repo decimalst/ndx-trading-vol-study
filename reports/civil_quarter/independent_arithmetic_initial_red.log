@@ -1,0 +1,21 @@
+FF
+======================================================================
+FAIL: test_nonzero_design_penalty_and_mean_underflow_are_not_silently_zero (tests.test_verify_civil_quarter.PositiveMomentContracts.test_nonzero_design_penalty_and_mean_underflow_are_not_silently_zero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_civil_quarter.py", line 160, in test_nonzero_design_penalty_and_mean_underflow_are_not_silently_zero
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_score_arrays_require_exact_nonempty_alignment (tests.test_verify_civil_quarter.PositiveMomentContracts.test_score_arrays_require_exact_nonempty_alignment)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_civil_quarter.py", line 167, in test_score_arrays_require_exact_nonempty_alignment
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+FAILED (failures=2)

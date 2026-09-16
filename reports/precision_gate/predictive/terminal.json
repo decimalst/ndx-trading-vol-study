@@ -1,0 +1,34 @@
+{
+  "status": "COMPLETED",
+  "completed_utc": "2026-09-09T05:21:44.527500+00:00",
+  "metrics_sha256": "3ad635e31bf81f224ccf690bb0efd109b8f0b23dea6fc7bfb30d6073b7ffde58",
+  "trial_ledger_sha256": "b9af3ce5fa61780080f8c599133ebdc44b3c5782a5d98b95aa0f93efbdf874f1",
+  "leads": [],
+  "cumulative_hypotheses": 149,
+  "freeze_record_sha256": "3ff970b3e4fa0ed77e862cd1f1fe2f8e872378f643bd1366f4fa81e7e4c95b43",
+  "observed_freeze_record_sha256": "3ff970b3e4fa0ed77e862cd1f1fe2f8e872378f643bd1366f4fa81e7e4c95b43",
+  "output_hashes": {
+    "data/model_memory_study/precision_gate_wave26/coverage.parquet": "b13ea685556aea6fa0a83c19e4a0828f3dc73359cb19cfcf5f022b35700e1b02",
+    "data/model_memory_study/precision_gate_wave26/targets.parquet": "ef47b14b888a564897ca8d72b5cfd193d89a6407dc9820a5fb3ffe6cd12ed0d5",
+    "data/model_memory_study/precision_gate_wave26/panel.parquet": "e2c171e91c96db7951b87fa596ebc8242265b12384aa4ac53653a99cc41504e0",
+    "data/model_memory_study/precision_gate_wave26/schedules.parquet": "3bf856bbda9373ab00401255dd5c274b0370971cf869aac0becbb2794c1b190a",
+    "data/model_memory_study/precision_gate_wave26/applications.parquet": "e94c62a1bb947af96a838535ddb49e2fa58f4767c0195a5a35a5c035c96db55d",
+    "data/model_memory_study/precision_gate_wave26/features.parquet": "78140d5b46cfefcaf9843630ed44f046389bd10b2d12c75b0e6e40179ac242f3",
+    "data/model_memory_study/precision_gate_wave26/fits.json": "5eece57f5a8567219f7fb0d5c7b0e600e926f09a6b8ee7f16dfd8d1de48bbb96"
+  },
+  "report_artifact_hashes": {
+    "metrics.json": "3ad635e31bf81f224ccf690bb0efd109b8f0b23dea6fc7bfb30d6073b7ffde58",
+    "FULL_PRECHECK.log": "5be4435c043a9011affbf4fd7b891413a7deb8b2242ff864ca89031879a8ee6e",
+    "TEST_GATE_RESULT.json": "1433cd160bb68b775aed22697e23ef8c480f99017c1486bde37156664f210efd",
+    "FULL_PRECHECK.json": "f6ec4b617c6e3da95868d61a3d81c677a9aa0e65d3a0f941fc17813e45cbc0c4",
+    "score_verification.json": "1f3938eb02f0ceb7493505a1bac8790f2d5c42c9654e31d5fe722a0b62cb09f6",
+    "manifest.json": "a7acefd1a8724eef86aeafce589d771418221669135cc2540dbb4630c9a33a83",
+    "freeze_record.json": "3ff970b3e4fa0ed77e862cd1f1fe2f8e872378f643bd1366f4fa81e7e4c95b43",
+    "verification.json": "c78af4d31336dceb585c60f02823c964c5503f56745b489dfd0695ee4433a92f",
+    "forecast_verification.json": "e4f168e2679a61ca4075f7221d431e76144a50a178f31ab3fe591147e44463c3",
+    "trial_ledger.jsonl": "b9af3ce5fa61780080f8c599133ebdc44b3c5782a5d98b95aa0f93efbdf874f1",
+    "TEST_SELECTION.json": "06793e70074b402aa1ac83bfef80f89f5694143f2a0154a05a9f3ba346ffe589"
+  },
+  "evidence_class": "EXPLORATORY_REUSED_MARKET_HISTORY_CURRENT_VINTAGES",
+  "evidence_limitation": "Historical development and evaluation windows have been reused. Prior regression tests accessed the period beginning 2025-11-03; it is not untouched confirmation. Current vendor snapshots do not certify complete point-in-time price or implied-volatility vintages. Numerical inputs in this experiment end 2025-10-20."
+}

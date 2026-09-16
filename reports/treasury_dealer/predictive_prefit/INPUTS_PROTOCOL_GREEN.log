@@ -1,0 +1,18 @@
+test_all_byte_hashes_precede_any_market_decode (tests.test_treasury_dealer_inputs.TreasuryDealerInputTests.test_all_byte_hashes_precede_any_market_decode) ... ok
+test_extra_source_key_is_rejected (tests.test_treasury_dealer_inputs.TreasuryDealerInputTests.test_extra_source_key_is_rejected) ... ok
+test_future_source_and_event_changes_do_not_change_earlier_features (tests.test_treasury_dealer_inputs.TreasuryDealerInputTests.test_future_source_and_event_changes_do_not_change_earlier_features) ... ok
+test_join_matches_hand_computed_dealer_pulse (tests.test_treasury_dealer_inputs.TreasuryDealerInputTests.test_join_matches_hand_computed_dealer_pulse) ... ok
+test_join_retains_full_calendar_metadata_and_unscored_targets (tests.test_treasury_dealer_inputs.TreasuryDealerInputTests.test_join_retains_full_calendar_metadata_and_unscored_targets) ... ok
+test_malformed_ledger_fails_before_market_decode (tests.test_treasury_dealer_inputs.TreasuryDealerInputTests.test_malformed_ledger_fails_before_market_decode) ... ok
+test_missing_cross_session_is_never_filled_or_compressed (tests.test_treasury_dealer_inputs.TreasuryDealerInputTests.test_missing_cross_session_is_never_filled_or_compressed) ... ok
+test_sources_and_events_are_not_mutated (tests.test_treasury_dealer_inputs.TreasuryDealerInputTests.test_sources_and_events_are_not_mutated) ... ok
+test_every_numerical_and_identity_change_is_rejected (tests.test_treasury_dealer_protocol.TreasuryDealerProtocolTests.test_every_numerical_and_identity_change_is_rejected) ... ok
+test_exact_original_protocol_and_pipeline_projection (tests.test_treasury_dealer_protocol.TreasuryDealerProtocolTests.test_exact_original_protocol_and_pipeline_projection) ... ok
+test_extra_or_missing_configuration_is_rejected (tests.test_treasury_dealer_protocol.TreasuryDealerProtocolTests.test_extra_or_missing_configuration_is_rejected) ... ok
+test_loaded_protocol_is_detached_and_outputs_are_new (tests.test_treasury_dealer_protocol.TreasuryDealerProtocolTests.test_loaded_protocol_is_detached_and_outputs_are_new) ... ok
+test_pipeline_projection_cannot_relax_protocol (tests.test_treasury_dealer_protocol.TreasuryDealerProtocolTests.test_pipeline_projection_cannot_relax_protocol) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.196s
+
+OK

@@ -1,0 +1,74 @@
+study_id: precision_gate_wave26
+status: prospective_specification_before_market_access
+specified_on: '2026-09-09'
+question: Can risk-state-dependent reliability improve a bounded precision blend beyond both experts and a fitted constant blend?
+evidence_class: EXPLORATORY_REUSED_MARKET_HISTORY_CURRENT_VINTAGES
+evidence_limitation: Historical development and evaluation windows have been reused. Prior regression tests accessed the period beginning 2025-11-03; it is not untouched confirmation. Current vendor snapshots do not certify complete point-in-time price or implied-volatility vintages. Numerical inputs in this experiment end 2025-10-20.
+source:
+  ceiling: '2025-10-20'
+  numerical_exclusion_start: '2025-11-03'
+  inputs: [data/raw/daily_ohlc.parquet, data/raw/cross_asset_daily.parquet, data/raw/vxn_daily.parquet, data/raw/short_dated_iv.parquet]
+  admission: Authenticate all four frozen files and full date metadata before decoding only numerical rows through the ceiling; reuse established market feature and five-session target definitions.
+  timing: Forecast after the QQQ origin close; implied-volatility inputs delayed by one full QQQ session. Feature rolling windows use the original calendar; no forward fill or missing-row calendar compression.
+forecast:
+  issuance_start: '2010-01-04'
+  origin_start: '2016-01-01'
+  origin_end: '2025-10-20'
+  source_end: '2025-10-20'
+  development: ['2016-01-01', '2019-12-31']
+  evaluation: ['2020-01-01', '2025-10-20']
+  stability: [['2020-01-01', '2022-12-31'], ['2023-01-01', '2025-10-20']]
+  horizon: 5
+  target: Arithmetic mean of next five complete QQQ full-session GK-plus-raw-overnight variance proxies in squared-return units; all five constituents required.
+  market_columns: [const, lrv_d, lrv_w, lrv_m, lev_d, lev_w, lev_m, liv, lvix, term, xasset_stress, market_stress]
+  arms: [base, adaptive, constant, contextual]
+  minimum_train: 1000
+  adaptive_half_life: 252
+  gate_window: 1260
+  gate_minimum_train: 252
+  schedule: First common12-feature-complete requested origin of every calendar month, selected without query target. All complete origins receive applications including unscored and immature origins.
+  maturity: Every training label must end at or before the previous full-calendar session. Expert training origins precede the fit; scoring targets end within their respective literal phase.
+  expert_warmup: Before origin_start, fewer than1000 mature expert rows yields a recorded expert_warmup month and no issued forecasts. At or after origin_start the same deficiency fails the whole attempt. The issuance start and warmup rule are fixed before support inspection.
+  expert_base: Unweighted standardized log-target OLS and exact Duan smearing over all common12 mature training rows.
+  expert_adaptive: Same training rows; weights exp2(-(cutoff_calendar_position-train_origin_calendar_position)/252). Weighted population means and scales; weighted least squares and identically weighted exact Duan smearing.
+  expert_numerics: Float64; non-intercept scales strictly greater than1e-12; full weighted-design rank at relative SVD threshold1e-12. Nonfinite values or numerical failure abort; no alternative estimator or column deletion.
+gate:
+  state: lrv_d minus lrv_m at each actual issuance origin; preserve the issued state with the expert pair.
+  formula: z=tanh(state); x_low=(1-z)/2; x_high=(1+z)/2; w=x_low*c_low+x_high*c_high; p=(1-w)+w*(base/adaptive); prediction=base/p.
+  coefficients: Both c_low and c_high constrained to [0,1]. Constant control imposes c_low=c_high.
+  objective: Mean[(y/base)*p-log(p)]+.005*(c_low^2+c_high^2); constant control has exactly .01*c^2 penalty.
+  solver: Existing frozen pure precision_gate core; analytic-gradient L-BFGS-B starting at zero, ftol1e-13,gtol1e-9,maxiter1000. Require success and projected optimization-gradient infinity norm<=1e-8. No solver fallback or clipping of predictions.
+  memory: At each monthly fit use positions>=fit_position-1260 and<fit_position from the original full calendar. Include only actually issued base/adaptive/state triples with positive complete targets mature by the prior-session cutoff. Both gates use exactly the same records; never reconstruct old expert predictions using a newer model.
+  cold_start: Fewer than252 eligible issued pairs sets both gates to coefficients[0,0] and status cold_start; issue baseline-valued gate forecasts and retain them in the common scoring sample. Otherwise status fitted. No selected startup-period deletion.
+support:
+  phase_daily: 505
+  slice_daily: 252
+  offset_daily: 63
+  phase_fitted_gate: 252
+  slice_fitted_gate: 126
+  rule: Same scored origins for all four arms. Every phase, fixed later slice and phase modulo-five offset must meet its floor. Fitted-gate support ensures the contextual mechanism was exercised; all cold-start dates remain scored.
+inference:
+  loss: Paired QLIKE contextual minus each control; negative is improvement.
+  blocks: [21, 63, 126]
+  hac_lags: 126
+  bootstrap_draws: 399999
+  seed: 20261003
+  domain: Every original calendar position within each literal phase, retaining missing-feature, missing-target and immature-endpoint positions. Global modulo-five offsets are never renumbered.
+  bootstrap: Frozen circular full-calendar masked ratio-of-sums core; seed+phase_code*10000 with development0/evaluation1 and core adds block length. Shared draws across the three controls. Zero-support replicate is a fatal endpoint failure, never redrawn or dropped.
+  hac: Bartlett HAC126 on mask*(difference-observed_mean)/mean(mask); invalid variance fatal.
+  conservative_p: Maximum two-sided p over both phases and all three block lengths plus HAC126.
+  calibration: Reuse the already passed fixed synthetic daily-mask calibration of the identical inference core, reports/treasury_dealer/INFERENCE_NULL_CALIBRATION.json. Its200 AR1 replications passed the predeclared90percent envelope-coverage diagnostic. This is not a claim of exact market coverage or multiplicity-adjusted tail calibration.
+  effect: Daily mean difference<=-.005 against every control in both phases.
+  stability: Strictly negative paired means against every control in both fixed later slices and at every global modulo-five offset in each phase. Annual means descriptive only.
+comparisons:
+  wave: 26
+  inherited: 146
+  new: 3
+  cumulative: 149
+  contrasts: [[contextual, base], [contextual, adaptive], [contextual, constant]]
+  wave_alpha: 0.00007122507122507123
+  cumulative_alpha: 0.05
+  rule: All three comparisons meet effect, support and stability gates; Holm3<=.05/(26*27) and Holm149<=.05. Retain every inherited failure and unevaluable comparison with its original identity.
+  registration: Freeze the exact protocol, code, raw inputs, previous results and selected prewritten test receipts before issuing a durable three-comparison journal; only then decode numerical market data or inspect support.
+  failures: Any source, support, fit, independent reconstruction or final preservation failure retains all three registered comparisons as unevaluable with p1. No fallback, reweighting, dropped control or unrecorded retry.
+  interpretation: A passing historical study is an exploratory lead requiring future confirmation, not trading validation or an independent untouched test. No alternate state, half-life, memory window, penalty, horizon or architecture grid belongs to this attempt.

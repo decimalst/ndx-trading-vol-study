@@ -1,0 +1,10 @@
+test_every_numerical_and_identity_change_is_rejected (tests.test_treasury_dealer_protocol.TreasuryDealerProtocolTests.test_every_numerical_and_identity_change_is_rejected) ... ok
+test_exact_original_protocol_and_pipeline_projection (tests.test_treasury_dealer_protocol.TreasuryDealerProtocolTests.test_exact_original_protocol_and_pipeline_projection) ... ok
+test_extra_or_missing_configuration_is_rejected (tests.test_treasury_dealer_protocol.TreasuryDealerProtocolTests.test_extra_or_missing_configuration_is_rejected) ... ok
+test_loaded_protocol_is_detached_and_outputs_are_new (tests.test_treasury_dealer_protocol.TreasuryDealerProtocolTests.test_loaded_protocol_is_detached_and_outputs_are_new) ... ok
+test_pipeline_projection_cannot_relax_protocol (tests.test_treasury_dealer_protocol.TreasuryDealerProtocolTests.test_pipeline_projection_cannot_relax_protocol) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.105s
+
+OK

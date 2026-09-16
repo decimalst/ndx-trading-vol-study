@@ -1,0 +1,32 @@
+PREFREEZE GENERATED SERIALIZATION REGRESSION RED
+The frozen source integral grammar accepts 0.0000000; str(Decimal(token)) emits 0E-7. No historical financial values were read.
+Command: .venv/bin/python -m unittest tests.test_treasury_dealer_ledger.TreasuryDealerLedgerTests.test_exact_known_mapping_and_schema_without_fraction -v
+Exit status: 1
+test_exact_known_mapping_and_schema_without_fraction (tests.test_treasury_dealer_ledger.TreasuryDealerLedgerTests.test_exact_known_mapping_and_schema_without_fraction) ... ERROR
+
+======================================================================
+ERROR: test_exact_known_mapping_and_schema_without_fraction (tests.test_treasury_dealer_ledger.TreasuryDealerLedgerTests.test_exact_known_mapping_and_schema_without_fraction)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_dealer_ledger.py", line 195, in test_exact_known_mapping_and_schema_without_fraction
+    zero = build_ledger(*args)["events"][0]
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/treasury_dealer_ledger.py", line 389, in build_ledger
+    _old_values(row, account, accounting_payloads[name], key), status="KNOWN"
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/treasury_dealer_ledger.py", line 241, in _old_values
+    return fields | _financial(
+                    ^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/treasury_dealer_ledger.py", line 140, in _financial
+    {
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/treasury_dealer_ledger.py", line 141, in <dictcomp>
+    key: _decimal(
+         ^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/treasury_dealer_ledger.py", line 116, in _decimal
+    raise ValueError("Exact nonnegative plain decimal result string required")
+ValueError: Exact nonnegative plain decimal result string required
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (errors=1)

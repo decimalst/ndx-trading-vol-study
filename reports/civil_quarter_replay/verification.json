@@ -1,0 +1,5 @@
+{
+  "status": "FAILED",
+  "error": "Independent verification failed: AssertionError: Independent baseline stationarity failed",
+  "protocol_sha256": "99ff8102daf12a451f4bf2c50ddd4326dcf6b79873ad31a399c319b708ebac22"
+}

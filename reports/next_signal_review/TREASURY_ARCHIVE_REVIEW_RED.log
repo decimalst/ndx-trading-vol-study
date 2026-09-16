@@ -1,0 +1,52 @@
+test_whitespace_only_identity_metadata_is_not_present (tests.test_treasury_auction_archive.TreasuryAuctionArchiveTests.test_whitespace_only_identity_metadata_is_not_present) ... 
+  test_whitespace_only_identity_metadata_is_not_present (tests.test_treasury_auction_archive.TreasuryAuctionArchiveTests.test_whitespace_only_identity_metadata_is_not_present) (key='d') ... FAIL
+  test_whitespace_only_identity_metadata_is_not_present (tests.test_treasury_auction_archive.TreasuryAuctionArchiveTests.test_whitespace_only_identity_metadata_is_not_present) (key='z3a') ... FAIL
+  test_whitespace_only_identity_metadata_is_not_present (tests.test_treasury_auction_archive.TreasuryAuctionArchiveTests.test_whitespace_only_identity_metadata_is_not_present) (key='t3a') ... FAIL
+test_unicode_casefold_filename_does_not_pass_ascii_grammar (tests.test_treasury_auction_archive.TreasuryAuctionArchiveTests.test_unicode_casefold_filename_does_not_pass_ascii_grammar) ... 
+  test_unicode_casefold_filename_does_not_pass_ascii_grammar (tests.test_treasury_auction_archive.TreasuryAuctionArchiveTests.test_unicode_casefold_filename_does_not_pass_ascii_grammar) (filename='K.pdf') ... FAIL
+  test_unicode_casefold_filename_does_not_pass_ascii_grammar (tests.test_treasury_auction_archive.TreasuryAuctionArchiveTests.test_unicode_casefold_filename_does_not_pass_ascii_grammar) (filename='İ.xml') ... FAIL
+
+======================================================================
+FAIL: test_whitespace_only_identity_metadata_is_not_present (tests.test_treasury_auction_archive.TreasuryAuctionArchiveTests.test_whitespace_only_identity_metadata_is_not_present) (key='d')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_auction_archive.py", line 64, in test_whitespace_only_identity_metadata_is_not_present
+    with self.subTest(key=key), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_whitespace_only_identity_metadata_is_not_present (tests.test_treasury_auction_archive.TreasuryAuctionArchiveTests.test_whitespace_only_identity_metadata_is_not_present) (key='z3a')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_auction_archive.py", line 64, in test_whitespace_only_identity_metadata_is_not_present
+    with self.subTest(key=key), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_whitespace_only_identity_metadata_is_not_present (tests.test_treasury_auction_archive.TreasuryAuctionArchiveTests.test_whitespace_only_identity_metadata_is_not_present) (key='t3a')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_auction_archive.py", line 64, in test_whitespace_only_identity_metadata_is_not_present
+    with self.subTest(key=key), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_unicode_casefold_filename_does_not_pass_ascii_grammar (tests.test_treasury_auction_archive.TreasuryAuctionArchiveTests.test_unicode_casefold_filename_does_not_pass_ascii_grammar) (filename='K.pdf')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_auction_archive.py", line 70, in test_unicode_casefold_filename_does_not_pass_ascii_grammar
+    with self.subTest(filename=filename), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_unicode_casefold_filename_does_not_pass_ascii_grammar (tests.test_treasury_auction_archive.TreasuryAuctionArchiveTests.test_unicode_casefold_filename_does_not_pass_ascii_grammar) (filename='İ.xml')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_auction_archive.py", line 70, in test_unicode_casefold_filename_does_not_pass_ascii_grammar
+    with self.subTest(filename=filename), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+FAILED (failures=5)

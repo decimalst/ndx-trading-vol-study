@@ -1,0 +1,83 @@
+study_id: treasury_dealer_wave25
+status: prospective_unregistered_pending_source_ledger_and_independent_checks
+specified_on: '2026-09-08'
+evidence_class: exploratory_reused_market_history_qualified_archival_release_dates
+question: Does newly released primary-dealer auction allocation improve five-session QQQ variance forecasts beyond matched auction and market controls?
+source:
+  floor: '2010-01-01'
+  ceiling: '2025-10-20'
+  sealed_start: '2025-11-03'
+  universe: All 1138 original selected nominal coupon auction records; preserve the documented test exclusion and every unresolved source event.
+  original_tenors: [2, 3, 5, 7, 10, 30]
+  known: Paired source identity and all16 bidder/accounting fields; exact three-source offering agreement; close every required known notice.
+  release_rule: First full QQQ calendar origin strictly after the latest required supported agency-reported release date.
+  clock_exception: January27,2020 Z52 has qualified Treasury-attributed cached reported-date evidence only; no original PDF or archive timestamp and no admitted quantities.
+  archival_limits: Current source captures do not establish complete historical revisions or exact public intraday delivery. Z52 timing additionally assumes faithful indexed Treasury text.
+  unknown_values: All amount fields remain unknown. Known clock masks its possible activation and donor history; unbounded clock uncertainty persists indefinitely.
+  no_source_substitution: Never substitute current revised values, auction filenames, scheduled dates or a different security for missing original quantities.
+feature:
+  accepted_share: PrimaryDealerAccepted / CompetitiveAccepted; exact true zero accepted, denominator positive, exclude noncompetitive and SOMA additions.
+  history: Mean of12 preceding strictly earlier auction-date records of the same confirmed original tenor. Select membership before release/unknown filtering; no older replacement donors.
+  surprise: Sum of accepted_share minus prior_mean across every report newly eligible at the origin.
+  missing: Preserve the full QQQ calendar; missing required value or donor makes all auction controls and candidate unknown at that activation. Unknown-tenor donor conservatively affects every possible tenor.
+  timing: Freeze each event mean at its first eligible origin; known delayed reports keep pending days unknown. Never carry the shock beyond activation.
+  certified_absence: Zero auction features only when no required pending/unknown activation and no newly eligible reports exist.
+  auction_controls: [auction_count, tenor_3, tenor_5, tenor_7, tenor_10, tenor_30, reopening_count, log_offering_sum, high_yield_sum, bid_to_cover_sum, prior_share_mean_sum]
+  aggregation: Counts and every named event statistic summed over the same activation group; log_offering_sum means sum(log(USD offering)), not log(sum(offering)).
+  market_context: [tlt_ret, tlt_r2, tlt_lrv5, tlt_lrv22, weekday_1, weekday_2, weekday_3, weekday_4]
+  market_context_rule: One full QQQ session delayed TLT log return, squared return and logs of strict5/22 squared-return means, source history from2010. Entry weekdays Tuesday-Friday, Monday reference.
+forecast:
+  origin_start: '2016-01-01'
+  origin_end: '2025-10-20'
+  source_end: '2025-10-20'
+  development: ['2016-01-01', '2019-12-31']
+  evaluation: ['2020-01-01', '2025-10-20']
+  stability: [['2020-01-01', '2022-12-31'], ['2023-01-01', '2025-10-20']]
+  horizon: 5
+  target: Arithmetic mean of the next five full-session QQQ GK-plus-raw-overnight variances; all five constituents required.
+  minimum_train: 1000
+  schedule: First common-feature-complete requested origin of each month, chosen without consulting the query outcome. Save all applications including unscored ones.
+  maturity: Training origins strictly earlier than refit; complete labels must end at or before the previous full QQQ session. Development targets end by2019-12-31; evaluation targets by2025-10-20.
+  arms: [market, matched, candidate]
+  dimensions: [12, 31, 32]
+  market_columns: [const, lrv_d, lrv_w, lrv_m, lev_d, lev_w, lev_m, liv, lvix, term, xasset_stress, market_stress]
+  estimator: Unpenalized standardized log-target OLS; common32 training rows, exact arm-specific Duan smearing, training-only population scaling, relative SVD rank threshold1e-12, scales strictly above1e-12.
+  failures: Any source, support, scale, rank, arithmetic or fit failure preserves all registered comparisons as unevaluable; no tenor/column deletion, alternative solver or model fallback.
+support:
+  phase_daily: 505
+  slice_daily: 252
+  offset_daily: 63
+  training_activation_dates: 200
+  phase_activation_dates: 104
+  slice_activation_dates: 52
+  phase_active_dates_per_offset: 20
+  training_events_per_tenor: 24
+  phase_events_per_tenor: 12
+  slice_events_per_tenor: 6
+  counting: Feature-complete newly eligible auction events, not nonzero surprises. Count simultaneous auctions separately as identities and once as an activation-date information cluster. Retain true-zero and cancelling pulses.
+inference:
+  loss: Paired QLIKE, candidate minus control.
+  masks: Compute daily and equal-activation-date endpoints on the full original reference calendar, including missing and nonauction positions. No compressed-time lags or block sampling.
+  blocks: [21, 63, 126]
+  hac_lags: 126
+  bootstrap_draws: 399999
+  seed: 20261001
+  bootstrap: Circular full-calendar blocks of paired(mask,mask*difference), ratio of sums. Zero-support replicate makes the endpoint unevaluable; no resampling or deletion.
+  hac: Bartlett HAC of full-calendar influence mask*(difference-observed_mean)/mean(mask).
+  conservative_p: Maximum two-sided p across both endpoints, both phases, all three block lengths and HAC126.
+  calibration: Before market access, fixed synthetic null with1500 full sessions, Gaussian AR1rho.8 after200 burn-in,6 pulses per21 sessions at residues0/1/7/8/14/15 and fixed missing interval600..725;200 repetitions,499 draws. For both daily and activation-date masks, the HAC/block95percent interval envelope must cover zero in at least.90 of repetitions. Report every individual method coverage and zero-support failures too. No calibration claim of exact market coverage.
+  calibration_seed: 20261002
+  effect: Daily mean QLIKE difference at most-.005 against both controls in each phase; negative equal-activation means in both phases.
+  stability: Negative daily and active-date differences in both fixed later slices; negative daily and active differences at every nonempty full-calendar offset0..4 in both phases. No selected offset or tenor claim.
+  limits: Overlapping targets and sparse releases reduce information. All historical windows are reused; source reconciliation, nominal intervals and low unadjusted p alone cannot establish a lead.
+comparisons:
+  wave: 25
+  inherited: 144
+  new: 2
+  cumulative: 146
+  contrasts: [[candidate, matched], [candidate, market]]
+  wave_alpha: 0.00007692307692307693
+  cumulative_alpha: 0.05
+  rule: Both contrasts pass all effect/support/stability gates, Holm2 below .05/(25*26), and Holm146 below .05. Previous failed and unevaluable comparisons remain counted.
+  registration: Only after source-ledger admission, synthetic contracts/calibration and independent prefit review; before market-feature construction, support counts, fits or scores.
+  no_promotion_yet: A passing historical experiment would be a qualified exploratory lead requiring future confirmation; no predictive run or registration is represented by this file.

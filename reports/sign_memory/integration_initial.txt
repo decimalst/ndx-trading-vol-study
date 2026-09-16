@@ -1,0 +1,11 @@
+test_baseline_memory_support_and_center_audit_tampering_rejects (tests.test_sign_memory_integration.SignMemoryIntegration.test_baseline_memory_support_and_center_audit_tampering_rejects) ... ok
+test_coherently_changed_probability_and_brier_cannot_replace_issued_fit (tests.test_sign_memory_integration.SignMemoryIntegration.test_coherently_changed_probability_and_brier_cannot_replace_issued_fit) ... ok
+test_entire_unscored_month_is_independently_refitted_and_cannot_be_removed (tests.test_sign_memory_integration.SignMemoryIntegration.test_entire_unscored_month_is_independently_refitted_and_cannot_be_removed) ... ok
+test_exact_calendar_labels_cohorts_and_monthly_metadata_required (tests.test_sign_memory_integration.SignMemoryIntegration.test_exact_calendar_labels_cohorts_and_monthly_metadata_required) ... ok
+test_exact_constant_memory_remains_all_months_and_all_forecasts (tests.test_sign_memory_integration.SignMemoryIntegration.test_exact_constant_memory_remains_all_months_and_all_forecasts) ... ok
+test_full_1500_session_calendar_reconstructs_all_mature_monthly_fits (tests.test_sign_memory_integration.SignMemoryIntegration.test_full_1500_session_calendar_reconstructs_all_mature_monthly_fits) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.719s
+
+OK

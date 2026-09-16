@@ -1,0 +1,34 @@
+[
+  {
+    "wave": "iterative_signal_search",
+    "hashes_verified": 148
+  },
+  {
+    "wave": "international_volatility",
+    "hashes_verified": 166
+  },
+  {
+    "wave": "overnight_index",
+    "hashes_verified": 187
+  },
+  {
+    "wave": "macro_overnight",
+    "hashes_verified": 1011
+  },
+  {
+    "wave": "measurement_memory",
+    "hashes_verified": 369
+  },
+  {
+    "wave": "index_hinge",
+    "hashes_verified": 385
+  },
+  {
+    "wave": "tail_shape",
+    "hashes_verified": 420
+  },
+  {
+    "wave": "calendar_variance",
+    "hashes_verified": 1249
+  }
+]

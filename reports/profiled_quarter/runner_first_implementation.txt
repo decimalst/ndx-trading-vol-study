@@ -1,0 +1,52 @@
+test_all_unevaluable_hypotheses_retained (tests.test_profiled_quarter_search.ProfiledQuarterSearch.test_all_unevaluable_hypotheses_retained) ... ok
+test_both_controls_both_effects_and_strict_p_and_stability (tests.test_profiled_quarter_search.ProfiledQuarterSearch.test_both_controls_both_effects_and_strict_p_and_stability) ... ok
+test_civil_support_precedes_every_inference_call (tests.test_profiled_quarter_search.ProfiledQuarterSearch.test_civil_support_precedes_every_inference_call) ... ok
+test_declared_training_and_phase_fences_precede_inference (tests.test_profiled_quarter_search.ProfiledQuarterSearch.test_declared_training_and_phase_fences_precede_inference) ... ok
+test_fixed_contract_and_family (tests.test_profiled_quarter_search.ProfiledQuarterSearch.test_fixed_contract_and_family) ... ERROR
+test_four_phases_complete_accounting_and_support (tests.test_profiled_quarter_search.ProfiledQuarterSearch.test_four_phases_complete_accounting_and_support) ... ok
+test_inference_rejects_nonfinite_complex_and_misaligned_inputs (tests.test_profiled_quarter_search.ProfiledQuarterSearch.test_inference_rejects_nonfinite_complex_and_misaligned_inputs) ... ok
+test_model_and_evidence_geometry_are_exact_failed_attempt (tests.test_profiled_quarter_search.ProfiledQuarterSearch.test_model_and_evidence_geometry_are_exact_failed_attempt) ... FAIL
+test_native_negative_scores_and_fixed_variance_inference_units (tests.test_profiled_quarter_search.ProfiledQuarterSearch.test_native_negative_scores_and_fixed_variance_inference_units) ... ok
+test_no_relaxed_timing_support_models_numerics_or_family (tests.test_profiled_quarter_search.ProfiledQuarterSearch.test_no_relaxed_timing_support_models_numerics_or_family) ... ok
+test_scientific_model_and_acceptance_gates_are_unchanged (tests.test_profiled_quarter_search.ProfiledQuarterSearch.test_scientific_model_and_acceptance_gates_are_unchanged) ... ok
+test_target_measurement_and_source_contract_are_literal (tests.test_profiled_quarter_search.ProfiledQuarterSearch.test_target_measurement_and_source_contract_are_literal) ... ok
+test_true_next_session_label_cannot_cross_development_boundary (tests.test_profiled_quarter_search.ProfiledQuarterSearch.test_true_next_session_label_cannot_cross_development_boundary) ... ok
+test_unfinished_numerical_specification_cannot_be_registered (tests.test_profiled_quarter_search.ProfiledQuarterSearch.test_unfinished_numerical_specification_cannot_be_registered) ... ok
+test_unknown_or_missing_protocol_section_rejected (tests.test_profiled_quarter_search.ProfiledQuarterSearch.test_unknown_or_missing_protocol_section_rejected) ... ok
+test_closure_protocol_and_extra_pins_checked_before_metadata_collection (tests.test_profiled_quarter_publication.ProfiledQuarterPublication.test_closure_protocol_and_extra_pins_checked_before_metadata_collection) ... ok
+test_failed_admission (tests.test_profiled_quarter_publication.ProfiledQuarterPublication.test_failed_admission) ... ok
+test_failed_report (tests.test_profiled_quarter_publication.ProfiledQuarterPublication.test_failed_report) ... ok
+test_failed_source_closure_prevents_all_optimization (tests.test_profiled_quarter_publication.ProfiledQuarterPublication.test_failed_source_closure_prevents_all_optimization) ... ok
+test_inherited_json_pin_is_checked_before_decode (tests.test_profiled_quarter_publication.ProfiledQuarterPublication.test_inherited_json_pin_is_checked_before_decode) ... ok
+test_input_bytes_checked_before_decode_and_one_snapshot (tests.test_profiled_quarter_publication.ProfiledQuarterPublication.test_input_bytes_checked_before_decode_and_one_snapshot) ... ok
+test_nonfinite_metrics_keep_terminal_ledger (tests.test_profiled_quarter_publication.ProfiledQuarterPublication.test_nonfinite_metrics_keep_terminal_ledger) ... ok
+test_partial_evaluation (tests.test_profiled_quarter_publication.ProfiledQuarterPublication.test_partial_evaluation) ... ok
+test_partial_registration (tests.test_profiled_quarter_publication.ProfiledQuarterPublication.test_partial_registration) ... ok
+test_protocol_changed_during_pretests_prevents_registration (tests.test_profiled_quarter_publication.ProfiledQuarterPublication.test_protocol_changed_during_pretests_prevents_registration) ... ok
+test_protocol_mutation (tests.test_profiled_quarter_publication.ProfiledQuarterPublication.test_protocol_mutation) ... ok
+test_registration_includes_failed_inventory_and_omitted_sources_without_collection (tests.test_profiled_quarter_publication.ProfiledQuarterPublication.test_registration_includes_failed_inventory_and_omitted_sources_without_collection) ... ok
+test_source_changed_after_admission (tests.test_profiled_quarter_publication.ProfiledQuarterPublication.test_source_changed_after_admission) ... ok
+test_support_failure_before_any_optimization (tests.test_profiled_quarter_publication.ProfiledQuarterPublication.test_support_failure_before_any_optimization) ... ok
+
+======================================================================
+ERROR: test_fixed_contract_and_family (tests.test_profiled_quarter_search.ProfiledQuarterSearch.test_fixed_contract_and_family)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_profiled_quarter_search.py", line 105, in test_fixed_contract_and_family
+    study.validate(protocol())
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/profiled_quarter_search.py", line 541, in validate
+    raise ValueError("Unfinished numerical specification prevents registration")
+ValueError: Unfinished numerical specification prevents registration
+
+======================================================================
+FAIL: test_model_and_evidence_geometry_are_exact_failed_attempt (tests.test_profiled_quarter_search.ProfiledQuarterSearch.test_model_and_evidence_geometry_are_exact_failed_attempt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_profiled_quarter_search.py", line 171, in test_model_and_evidence_geometry_are_exact_failed_attempt
+    self.assertEqual(new["inference"]["seed"], 20260922)
+AssertionError: 20260923 != 20260922
+
+----------------------------------------------------------------------
+Ran 29 tests in 1.432s
+
+FAILED (failures=1, errors=1)

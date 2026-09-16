@@ -1,0 +1,19 @@
+test_spread_geometry_hindsight_run (unittest.loader._FailedTest.test_spread_geometry_hindsight_run) ... ERROR
+
+======================================================================
+ERROR: test_spread_geometry_hindsight_run (unittest.loader._FailedTest.test_spread_geometry_hindsight_run)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_spread_geometry_hindsight_run
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_spread_geometry_hindsight_run.py", line 12, in <module>
+    from src.spread_geometry_hindsight_run import authenticate, extract_inputs
+ModuleNotFoundError: No module named 'src.spread_geometry_hindsight_run'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

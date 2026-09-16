@@ -1,0 +1,32 @@
+E
+======================================================================
+ERROR: test_complete_temporary_tree_reconstructs_forecasts_and_publishes_only_new_verification (tests.test_verify_sign_memory.PublicationAndSnapshotContracts.test_complete_temporary_tree_reconstructs_forecasts_and_publishes_only_new_verification)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_sign_memory.py", line 650, in test_complete_temporary_tree_reconstructs_forecasts_and_publishes_only_new_verification
+    result = verify.verify_with_failure_guard(root)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_sign_memory.py", line 1517, in verify_with_failure_guard
+    return verify(root)
+           ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_sign_memory.py", line 926, in verify
+    snapshot = {str(path.relative_to(root)): digest(path) for path in output_paths}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_sign_memory.py", line 926, in <dictcomp>
+    snapshot = {str(path.relative_to(root)): digest(path) for path in output_paths}
+                                             ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_iterative_signal_search.py", line 186, in digest
+    return hashlib.sha256(pathlib.Path(path).read_bytes()).hexdigest()
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py", line 1050, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/folders/jn/2wqppgv57cx3k54l_dqt9sl00000gn/T/tmpfq5kajma/data/sign_memory/source_audit.json'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.222s
+
+FAILED (errors=1)

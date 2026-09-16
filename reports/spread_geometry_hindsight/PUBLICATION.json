@@ -1,0 +1,35 @@
+{
+  "status": "PUBLISHED_LOCAL_HINDSIGHT_FINDINGS",
+  "created_utc": "2026-09-13T22:57:02.920968+00:00",
+  "scope": "Authenticated fixed-day-mask geometry search; all selections explicitly retrospective and premium assumptions hypothetical. No new statistical inference or trading lead.",
+  "artifacts": {
+    "reports/spread_geometry_hindsight/terminal.json": "bf2bd68782cbbd660cc9a9c5fc14ec819a44b7fb8612c9b07d0925f54ed44297",
+    "reports/spread_geometry_hindsight/freeze.json": "53c052ec37836f9c13ffa509f6464dae77e2f93b701391c6198db15eefe5e548",
+    "reports/spread_geometry_hindsight/registration.json": "e7733abe4459f6179f01d96321a1145070419158d3732b9bac37ebfe855a4be3",
+    "reports/spread_geometry_hindsight/PREFIT.json": "330ec42fe2958e719fd95e6069d5330a305ddf588396ab17f957dbf0c4b722db",
+    "reports/spread_geometry_hindsight/PREFIT.log": "7cb6ea766c1d12c3d22f390119bb6c08a26651dcc6f093938ca322c67da00688",
+    "reports/spread_geometry_hindsight/verification.json": "21f55124994d6a4c200e7fd3cd29c3c374ccf5b29b24413820b9b98160408725",
+    "reports/spread_geometry_hindsight/INDEPENDENT_REVIEW.json": "a5f5eae021dda7fbaa55554ca229c32b423d53e04dbb3ef47fc7129faa9646ad",
+    "reports/spread_geometry_hindsight/NARRATIVE_REVIEW.json": "870977caca4d2d471725719c91073df89de43e46037b99d14d645cf6a5e8b2c0",
+    "reports/spread_geometry_hindsight/FINDINGS.md": "7399f7037c4c3e7d89d24bf3dfcf6b843e108ad6f824da1c775c0be305840905",
+    "reports/spread_geometry_hindsight/ALL_WINNERS.md": "3df3460a6d8521717bb3728652441b072d4aef549496f6ca376f729682605378",
+    "reports/spread_geometry_hindsight/FIGURE_DATA.json": "e02219a57eddf2cd560db17e25c27a85d0e77a36b42fb0bf8c66a89b480fe0b1",
+    "reports/spread_geometry_hindsight/credit_surface.png": "baadee654a1c62aeef1b8a44171e74c0962b1de099e78fbc7ae3197e337e1032",
+    "reports/spread_geometry_hindsight/credit_surface.pdf": "38c540b5ebb1cea34d09f31fea7af61aef38138b3b8248b7a5bd444cbf717e99",
+    "reports/spread_geometry_hindsight/render_findings.py": "f55130813ab068918a6bf66ccb311797f8d074fcb9663e78b215e3f5ec14614d"
+  },
+  "empirical_outputs": {
+    "data/model_memory_study/spread_geometry_hindsight/returns.parquet": "fbe2fb5424af2822127679b44646f5fbfa3d637de5025b03ab76c0b2b6f5cedd",
+    "data/model_memory_study/spread_geometry_hindsight/selections.parquet": "d8bc7d9d4d9438c36f981c5f6b847f9f11d09c3020ccdb1d34573160d90167bf",
+    "data/model_memory_study/spread_geometry_hindsight/geometry.parquet": "7a099c00530ad63516db15b55faad04a034b98a5d72015a76fb63e0592b64c4d",
+    "data/model_memory_study/spread_geometry_hindsight/accounts.parquet": "805c8b5dc2833eb618ede23629d913f67986dbbdc349c1f7b19af741d1f90a9c",
+    "data/model_memory_study/spread_geometry_hindsight/winners.parquet": "6ead95fd239cfa70dcc4f1568e82d440fd64ffb6f63466279bbd76b71684e810",
+    "reports/spread_geometry_hindsight/verification.json": "21f55124994d6a4c200e7fd3cd29c3c374ccf5b29b24413820b9b98160408725"
+  },
+  "visual_qa": {
+    "result": "Readable plain-number colorbars, labeled units, observed-liability/fee qualifications, original-geometry marker; no clipping or overlap.",
+    "figure_source_json": "160 geometry rows, decimal-rounded presentation; primary parquets remain exact."
+  },
+  "local_links_checked": 6,
+  "preservation": "Frozen parent and this study source/result pins unchanged; no git commit/push, external publication, option purchase or trade."
+}

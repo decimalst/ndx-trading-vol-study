@@ -1,0 +1,27 @@
+/Users/byrons/.matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /var/folders/jn/2wqppgv57cx3k54l_dqt9sl00000gn/T/matplotlib-kl6k2ity because there was an issue with the default path ({configdir}); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+
+Fontconfig error: No writable cache directories
+	/opt/homebrew/var/cache/fontconfig
+	/Users/byrons/.cache/fontconfig
+	/Users/byrons/.fontconfig
+Matplotlib is building the font cache; this may take a moment.
+test_plot_target_aligned (unittest.loader._FailedTest.test_plot_target_aligned) ... ERROR
+
+======================================================================
+ERROR: test_plot_target_aligned (unittest.loader._FailedTest.test_plot_target_aligned)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_plot_target_aligned
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_plot_target_aligned.py", line 16, in <module>
+    from src import plot_target_aligned as plot
+ImportError: cannot import name 'plot_target_aligned' from 'src' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/__init__.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

@@ -1,0 +1,25 @@
+setUpClass (tests.test_verify_joint_copula_forecasts.DependenceCertificateTests) ... ERROR
+setUpClass (tests.test_verify_joint_copula_forecasts.IssuedForecastVerificationTests) ... ERROR
+
+======================================================================
+ERROR: setUpClass (tests.test_verify_joint_copula_forecasts.DependenceCertificateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_joint_copula_forecasts.py", line 112, in setUpClass
+    cls.check = staticmethod(verifier.verify_dependence)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_joint_copula_forecasts' has no attribute 'verify_dependence'
+
+======================================================================
+ERROR: setUpClass (tests.test_verify_joint_copula_forecasts.IssuedForecastVerificationTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_joint_copula_forecasts.py", line 186, in setUpClass
+    cls.verify = staticmethod(verifier.verify_forecasts)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_joint_copula_forecasts' has no attribute 'verify_forecasts'
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+FAILED (errors=2)

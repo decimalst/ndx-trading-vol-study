@@ -1,0 +1,25 @@
+Captured UTC: 2026-09-09T00:56:03.560355+00:00
+Source module absent before execution: true
+Command: .venv/bin/python -m unittest tests.test_treasury_notice_review_queue -v
+
+test_treasury_notice_review_queue (unittest.loader._FailedTest.test_treasury_notice_review_queue) ... ERROR
+
+======================================================================
+ERROR: test_treasury_notice_review_queue (unittest.loader._FailedTest.test_treasury_notice_review_queue)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_treasury_notice_review_queue
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_notice_review_queue.py", line 8, in <module>
+    from src.treasury_notice_review_queue import template_fingerprint
+ModuleNotFoundError: No module named 'src.treasury_notice_review_queue'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+
+Exit code: 1

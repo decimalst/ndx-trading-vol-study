@@ -1,0 +1,19 @@
+test_verify_treasury_auction_archive (unittest.loader._FailedTest.test_verify_treasury_auction_archive) ... ERROR
+
+======================================================================
+ERROR: test_verify_treasury_auction_archive (unittest.loader._FailedTest.test_verify_treasury_auction_archive)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_verify_treasury_auction_archive
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_treasury_auction_archive.py", line 7, in <module>
+    from src.verify_treasury_auction_archive import verify_archive
+ModuleNotFoundError: No module named 'src.verify_treasury_auction_archive'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

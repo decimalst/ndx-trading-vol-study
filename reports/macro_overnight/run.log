@@ -1,0 +1,3 @@
+/Users/byrons/code/trading-vol/ndx-vol-experiment/src/macro_search.py:184: Pandas4Warning: Sorting by default when concatenating all DatetimeIndex is deprecated.  In the future, pandas will respect the default of `sort=False`. Specify `sort=True` or `sort=False` to silence this message. If you see this warnings when not directly calling concat, report a bug to pandas.
+  return daily, pd.concat(iv.values(), axis=1).sort_index(), plans, audit
+{"status": "SCORED_AWAITING_INDEPENDENT_VERIFICATION", "forecasts": 10495, "fits": 101, "leads": []}

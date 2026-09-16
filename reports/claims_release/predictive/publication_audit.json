@@ -1,0 +1,43 @@
+{
+  "status": "VERIFIED_COMPLETED_NO_QUALIFYING_SIGNAL",
+  "created_utc": "2026-09-08T22:18:02.037045+00:00",
+  "freeze_sha256": "e9571e94246a2c8714c19d936034b49cbf4a7f88c4a551425cc7103c544a772a",
+  "protocol_sha256": "b106efd00e6edbb96b644bce5c81442470f3954413117e10d446f6e5cf1983f2",
+  "code_files_unchanged": 370,
+  "input_artifacts_unchanged": 56,
+  "preserved_artifacts_unchanged": 1119,
+  "prefit_artifacts_unchanged": 5,
+  "full_repository_tests": 2644,
+  "ledger_events": 144,
+  "registered_comparisons": 2,
+  "inherited_comparisons": 140,
+  "cumulative_comparisons": 142,
+  "leads": [],
+  "independently_verified_output_artifacts": {
+    "data/claims_release/forecasting/coverage.parquet": "8c2730eaafb53179d638db7c28fd65e2371b47a35cf4444ac9aaaf020dcfb8fa",
+    "data/claims_release/forecasting/targets.parquet": "ef47b14b888a564897ca8d72b5cfd193d89a6407dc9820a5fb3ffe6cd12ed0d5",
+    "data/claims_release/forecasting/panel.parquet": "5d5181c498f73de9130ee4fc2bceeabf3c67d74dc93685e97e4775ffd36e147a",
+    "data/claims_release/forecasting/schedules.parquet": "5ae226b80fe2c882c04637f3bf0c44bd80e391bf96adf63253846b1d47af70e2",
+    "data/claims_release/forecasting/applications.parquet": "c52df246032e89fbc665eb51bac79696feacf481546909236aed3921670d58f0",
+    "data/claims_release/forecasting/features.parquet": "834e6aa042ca35a25e84319e7d88c0291b06624c13e69efbf2e761324d6b8c89",
+    "data/claims_release/forecasting/fits.json": "10d9062a5add3666f5ad00d83a3bcb63a40123eea5477aa0611016016215d467"
+  },
+  "report_artifact_hashes": {
+    "DESIGN.md": "838bd633ed3a5dcf293cd8d66ede00ba08c1b5edf61387cb62dbeb7df6d8aa78",
+    "FULL_PRECHECK.json": "5ffb18ab87d4906fb1b860a6c3d0a5eb25af3303afc48cee726332433379c3cd",
+    "FULL_PRECHECK.log": "17b8b12d3d0914717b19e519521fae6bbe4b63c45ab4554e5a453b3d524464b7",
+    "SUMMARY.md": "1c94e6e7984bb3fd95d7dc7f55e5ad75dcae3766a5c1116ae3e6fa18bf0009cc",
+    "calibration.json": "70d634a992bbf8a7efc42e415670873321e921269f04844975774ab64bc72d09",
+    "calibration_verification.json": "abf9cd925bb49a8c2c1d220922b19b945b1d00e2e10e8271f35b4352216c5369",
+    "comparison_intervals.pdf": "f04410f8539802b6024772c1d4c333ed39cc816e859a5a691eba74a42993ce56",
+    "comparison_intervals.png": "3dc424c734dd3fd877e892a4a3dd63358a919c9b5b0025e8c403efdc1aeea5ed",
+    "freeze_record.json": "e9571e94246a2c8714c19d936034b49cbf4a7f88c4a551425cc7103c544a772a",
+    "manifest.json": "2594ff367ef435f2432a7e7d3e1fdbb5183cfedc197852f4b62bd0b34d273d77",
+    "metrics.json": "3d0325eb0ba493a436abd539dde41a9b9dcbc90b57c380e3494e6b7f99f76f24",
+    "terminal.json": "73a3a980d60d5c86ae6bbd7d150aa0d98c9b2b1f1035a5b6688438332e940a14",
+    "trial_ledger.jsonl": "cba4c90d04cd42224c8f1ad42bbe9276c6d93fac22afa80078898f58d724fc3f",
+    "verification.json": "432bc8a14f1cf0a35f5c69830be99086f9815b56193453332e1f24f8c892c51e"
+  },
+  "figure_visual_review": "Readable labels, exact literal phase interval envelopes and prospective effect line; no fitted or rescored values added",
+  "interpretation": "Completed exploratory negative result on reused history; no thresholds or frozen implementation changed after registration."
+}

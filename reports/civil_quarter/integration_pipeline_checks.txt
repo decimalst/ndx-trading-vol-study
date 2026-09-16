@@ -1,0 +1,6 @@
+test_generated_pipeline_keeps_source_unknowns_unscored_fits_and_all_three_controls (tests.test_civil_quarter_integration.CivilQuarterPipeline.test_generated_pipeline_keeps_source_unknowns_unscored_fits_and_all_three_controls) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 6.807s
+
+OK

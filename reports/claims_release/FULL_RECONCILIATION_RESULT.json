@@ -1,0 +1,121 @@
+{
+  "status": "SOURCE_RECONCILIATION_INCOMPLETE",
+  "completed_utc": "2026-09-08T21:10:16.745546+00:00",
+  "attempt_sha256": "1adc10c4fb1c25d4fbe97008d6dd306ab50495da04d1c1285b53aa3c9cad27a0",
+  "alfred_record_count": 852,
+  "document_count": 853,
+  "parsed_report_count": 849,
+  "body_date_verified_count": 845,
+  "expected_reference_weeks_count": 856,
+  "alfred_repeated_release_dates": {
+    "2018-03-29": 2
+  },
+  "complete_pair_match_count": 847,
+  "pair_issues": [
+    {
+      "kind": "missing_dol_report",
+      "observation_date": "2012-07-28"
+    },
+    {
+      "kind": "value_mismatch",
+      "observation_date": "2017-03-18",
+      "alfred_value": 258000,
+      "dol_value": 261000
+    },
+    {
+      "kind": "release_date_mismatch",
+      "observation_date": "2018-03-17",
+      "alfred_realtime_start_date": "2018-03-29",
+      "actual_release_date": "2018-03-22"
+    },
+    {
+      "kind": "value_mismatch",
+      "observation_date": "2018-03-17",
+      "alfred_value": 227000,
+      "dol_value": 229000
+    },
+    {
+      "kind": "missing_dol_report",
+      "observation_date": "2022-04-09"
+    },
+    {
+      "kind": "missing_dol_report",
+      "observation_date": "2022-10-01"
+    },
+    {
+      "kind": "missing_both_sources_reference_week",
+      "observation_date": "2025-09-27"
+    },
+    {
+      "kind": "missing_both_sources_reference_week",
+      "observation_date": "2025-10-04"
+    },
+    {
+      "kind": "missing_both_sources_reference_week",
+      "observation_date": "2025-10-11"
+    },
+    {
+      "kind": "missing_both_sources_reference_week",
+      "observation_date": "2025-10-18"
+    }
+  ],
+  "document_failures": [
+    {
+      "release_date": "2011-08-04",
+      "release_url": "https://oui.doleta.gov/press/2011/080411.asp",
+      "kind": "unverified_body_release_date"
+    },
+    {
+      "release_date": "2012-08-02",
+      "release_url": "https://oui.doleta.gov/press/2012/080212.asp",
+      "kind": "release_parse_failure",
+      "error_type": "ValueError",
+      "error": "Exactly one advance seasonally adjusted initial-claims headline required"
+    },
+    {
+      "release_date": "2012-09-06",
+      "release_url": "https://oui.doleta.gov/press/2012/090612.asp",
+      "kind": "unverified_body_release_date"
+    },
+    {
+      "release_date": "2012-09-13",
+      "release_url": "https://oui.doleta.gov/press/2012/091312.asp",
+      "kind": "unverified_body_release_date"
+    },
+    {
+      "release_date": "2012-12-06",
+      "release_url": "https://oui.doleta.gov/press/2012/120612.asp",
+      "kind": "unverified_body_release_date"
+    },
+    {
+      "release_date": "2014-03-15",
+      "release_url": "https://oui.doleta.gov/press/2014/031514.pdf",
+      "kind": "release_parse_failure",
+      "error_type": "ValueError",
+      "error": "Exactly one advance seasonally adjusted initial-claims headline required"
+    },
+    {
+      "release_date": "2022-04-14",
+      "release_url": "https://oui.doleta.gov/press/2022/041422.pdf",
+      "kind": "release_parse_failure",
+      "error_type": "ValueError",
+      "error": "Exactly one advance seasonally adjusted initial-claims headline required"
+    },
+    {
+      "release_date": "2022-10-06",
+      "release_url": "https://oui.doleta.gov/press/2022/100622.pdf",
+      "kind": "release_parse_failure",
+      "error_type": "ValueError",
+      "error": "Exactly one advance seasonally adjusted initial-claims headline required"
+    }
+  ],
+  "new_predictive_hypotheses": 0,
+  "limitations": [
+    "Source agreement is not an immutable historical ingestion clock.",
+    "No market cohort, feature, model or empirical predictive score has been computed."
+  ],
+  "full_scope_status": "COMPLETE_SCOPE_REJECTED",
+  "full_scope_error": "Duplicate reference weeks or release dates are ambiguous",
+  "private_result_path": "data/claims_release/full_source_reconciliation.json",
+  "private_result_sha256": "68e0bdad195f5e02d907ad678447716be7208cb8059b219c17ac20d7237ff02f"
+}

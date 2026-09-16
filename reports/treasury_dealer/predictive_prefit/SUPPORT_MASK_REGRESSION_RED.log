@@ -1,0 +1,14 @@
+test_masked_current_event_cannot_be_relabelled_certified_zero (tests.test_treasury_dealer_support.TreasuryDealerSupportTests.test_masked_current_event_cannot_be_relabelled_certified_zero) ... FAIL
+
+======================================================================
+FAIL: test_masked_current_event_cannot_be_relabelled_certified_zero (tests.test_treasury_dealer_support.TreasuryDealerSupportTests.test_masked_current_event_cannot_be_relabelled_certified_zero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_dealer_support.py", line 136, in test_masked_current_event_cannot_be_relabelled_certified_zero
+    with self.assertRaisesRegex(ValueError, "[Mm]asked|[Uu]nsupported"):
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.078s
+
+FAILED (failures=1)

@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "rho": 0.8,
+  "n": 1500,
+  "replications": 200,
+  "draws_per_replication": 499,
+  "envelope_coverage": 0.935,
+  "individual_block_coverage": {
+    "21": 0.92,
+    "63": 0.93,
+    "126": 0.92
+  },
+  "limitation": "One stationary synthetic null; not market-data coverage certification",
+  "protocol_sha256": "2c081c8e9dcc9a407cd19d2d49c5e8b76462befeabcebc9a3539dbf69d516c93",
+  "producer_sha256": "9e8b9f47c2c7f9ef1c8fceb9cda6f910e5f95cfb9dbf1e110161e65440800779"
+}

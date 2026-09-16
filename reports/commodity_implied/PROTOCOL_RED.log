@@ -1,0 +1,19 @@
+test_commodity_implied_protocol (unittest.loader._FailedTest.test_commodity_implied_protocol) ... ERROR
+
+======================================================================
+ERROR: test_commodity_implied_protocol (unittest.loader._FailedTest.test_commodity_implied_protocol)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_commodity_implied_protocol
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_commodity_implied_protocol.py", line 9, in <module>
+    from src.commodity_implied_protocol import CONTRACT, validate
+ModuleNotFoundError: No module named 'src.commodity_implied_protocol'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

@@ -1,0 +1,16 @@
+{
+  "artifact_hashes_verified": 66,
+  "design_sha256": "10619640927a82f904f01972b66455473a47652b06effb8ca9113bb4e9374b1d",
+  "exact_anchor_contexts_verified": 3,
+  "ledger_sha256": "6ca298807623aac53da3c273c358ec341e0972158132cf17ec1b58901a67e423",
+  "private_permissions_verified": true,
+  "quarantined_years": [
+    2012,
+    2019
+  ],
+  "requested_years": 17,
+  "source_sha256": "a2ab878ea7d0599a39146e4b21f0e5d0e93e936d6759f316fea896181519dc39",
+  "status": "METADATA_COMPONENT_COMPLETE_WITH_EXPLICIT_SOURCE_DEFECTS",
+  "tests_sha256": "44e9e40e41d9be15698bff648937d9bd146113561fcb093b1b4e81d74981ef2d",
+  "valid_years": 15
+}

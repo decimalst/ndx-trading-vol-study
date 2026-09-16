@@ -1,0 +1,144 @@
+study_id: cross_moment_wave11
+specified_on: '2026-09-07'
+status: specified_before_new_product_scores
+wave: 11
+wave_alpha: 0.0003787878787878788
+objective: Test incremental direct signed residual cross-moment accuracy of the frozen issued QQQ-SPX joint-risk forecasts
+evidence_class: exploratory_reused_history_frozen_issued_forecast_new_functional_no_refit
+upstream:
+  protocol: joint_risk.yaml
+  reports: reports/joint_risk
+  data: data/joint_risk
+  forecasts: data/joint_risk/forecasts.parquet
+  features: data/joint_risk/features.parquet
+  protocol_sha256: 358d863853d79c876476e67bcf91e4c7fc855f2f107c8df58ede074f19a809ef
+  verifier_sha256: ea4ac89c0d345506bb45ea1dd5add092497edeabdcfa83995e2e596f8596b4a4
+  manifest_sha256: c80e77d076cefd98c0e6d7df6c9dd213638ec486e718a9713055552575dc7848
+  verification_sha256: d62544e15e9575371a95fd7f1d5fdcb5e034cc49f7e78268a50ae5ffc5d3c3e3
+  required_status: VERIFIED
+  forecasts_expected: 7386
+  scored_origins_expected: 2462
+  monthly_fits_expected: 118
+  admission: New manifest pins original protocol, every upstream report/private output and raw input before read-only independent
+    replay. No earlier file may change; no old verifier writing entrypoint called. Score only exact issued forecast rows,
+    not reconstructed replacements.
+index:
+  asset: QQQ_ETF_and_SPX_price_index
+  source_end: '2025-10-20'
+  sealed_start: '2025-11-03'
+  origin_start: '2016-01-04'
+  origin_end: '2025-10-17'
+  latest_target: '2025-10-20'
+  development:
+  - '2016-01-04'
+  - '2019-12-31'
+  development_target_available_by: '2019-12-31'
+  evaluation:
+  - '2020-01-02'
+  - '2025-10-17'
+  evaluation_stability:
+  - - '2020-01-02'
+    - '2022-12-31'
+  - - '2023-01-01'
+    - '2025-10-17'
+  horizons:
+  - 1
+  models:
+  - constant_matrix
+  - constant_correlation
+  - dynamic_correlation
+  market_lag: 1
+scoring:
+  target: Y=(y_qqq-issued_mu_qqq)*(y_spx-issued_mu_spx)
+  forecast: q=issued_rho*(sqrt(issued_h_qqq)*sqrt(issued_h_spx)); geometric mean first
+  loss: (Y-q)^2, finite nonnegative, with signed and zero Y/q valid
+  paired_difference: (q_candidate-q_control)*((q_candidate-Y)+(q_control-Y)) after separately validating both individual squared
+    losses
+  units: Decimal raw intraday log returns; product has squared-return units and MSE has fourth-power-return units
+  effect_threshold_absolute: 1.0e-10
+  effect_reference: '(0.01*0.001)^2: squared cross-moment error of a1percent by10basispoint reference return pair; fixed exante
+    reference scale, not measured profitability or forecast-RMSE reduction'
+  new_model_fits: 0
+  common_sample: Exact entire frozen three-model issued cohort; same labels, means, fit/timing metadata, conditional diagonals;
+    no loss/target-based filtering, refits, clipping, normalization by volatility, or new predictions
+  conditional_rho_max: 0.995
+  constant_matrix_rho_max: 0.999999
+  arithmetic: Reject all nonfinite intermediates/results and nonzero-input products/squares underflowing to zero. Exact zeros
+    are valid. Individual MSE must remain finite even when paired predictions are equal. Separate roots before geometric mean
+    avoid variance-product overflow.
+  coherence_eps_multiplier: 64
+  coherence_rule: abs(factored_difference-(candidate_mse-control_mse)) <=sum64*max(eps*abs(term),abs(term)-nextafter(abs(term),0))
+    over candidate_mse/control_mse/factored_difference; finite bound, no unit-dependent absolute floor
+comparisons:
+  new_hypotheses: 2
+  inherited_hypotheses: 112
+  cumulative_hypotheses: 114
+  inherited_sources:
+  - reports/orthogonal_round2/metrics.json
+  - reports/model_memory_study/combined_metrics.json
+  - reports/iterative_signal_search/metrics.json
+  - reports/international_volatility/metrics.json
+  - reports/overnight_index/metrics.json
+  - reports/macro_overnight/metrics.json
+  - reports/measurement_memory/metrics.json
+  - reports/index_hinge/metrics.json
+  - reports/tail_shape/metrics.json
+  - reports/calendar_variance/metrics.json
+  - reports/relative_risk/metrics.json
+  - reports/joint_risk/metrics.json
+  controls:
+  - constant_correlation
+  - constant_matrix
+  contrasts:
+  - - dynamic_correlation
+    - constant_correlation
+    - product_mse
+  - - dynamic_correlation
+    - constant_matrix
+    - product_mse
+  candidate_gate: Both new comparisons must pass. A new score does not alter the old joint-score verdict or add new predictive
+    information by itself.
+inference:
+  blocks:
+  - 21
+  - 63
+  - 126
+  hac_lags: 126
+  minimum_phase_observations: 127
+  bootstrap_draws: 99999
+  seed: 20260917
+  seed_rule: seed+phase_code*10000+block;development0,evaluation1
+  inference_scale: 1.0e-10
+  normalization: One fixed positive units conversion d/inference_scale for mean/HAC/bootstrap and annual/fixed-slice means;
+    restore all dimensional mean/CI/SE/MDE by same scale. No model-dependent weighting.
+  arithmetic: Normalized differences, means, centered sum of squares and all bootstrap/HAC/restored results finite; a nonconstant
+    normalized series with zero centered sum of squares fails as numerical underflow. Exact constant difference allowed.
+  p_phase: Maximum two-sided centered-null circular bootstrap p across allblocks and Bartlett HAC126 p
+  p_hypothesis: Maximum development and evaluation p
+  multiplicity: Holm2 at0.05/(11*12), separately Holm114 at0.05
+  gate: Absolute paired product-MSE decrease>=1e-10 bothphases vsBOTHcontrols; negativepaired differences in bothfixed evaluation
+    slices; waveHolm<.05/132 andcumulativeHolm<.05
+  power: 'Report nominal HAC80percent MDE in original units and divided by fixed effect threshold. Diagnostic only: no retrospective
+    effect/sample/power gate, and failure to reject is not equivalence.'
+  resolution: 1/100000 below one tenth strictest two-comparison waveHolm cutoff1/5280
+  failure_rule: Admission, arithmetic, scoring, verification or publication failure retains both new hypotheses UNEVALUABLEp1,
+    saves available diagnostics and never edits upstream files.
+  limitations: Reused history; noisy daily products and cross fourth moments; shared-mean error; fixed issued diagonals enter
+    q. Product-score success does not certify true correlation dynamics, HF covariance or trading profit.
+verification:
+  product_comparison_eps_multiplier: 256
+  coherence_eps_multiplier: 64
+  dimensionless_relative_tolerance: 1.0e-09
+  probability_absolute_tolerance: 1.0e-14
+  dimensional_comparison: Adaptive256*max(eps*abs(expected),abs(expected)-nextafter(abs(expected),0)); exact zero/sign masks
+    for primitive product/individual-MSE columns; no fixed unit absolute tolerance. Dimensional inference comparison uses
+    rtol1e-9,atol0 with declared ULP allowance.
+  upstream_replay: Read-only original frozen independent verifier functions reconstruct all inputs/features/targets/fits/certificates/forecasts/inference/ledger
+    and compare exact original VERIFIED identity; new forecasts remain original bytes.
+  new_reconstruction: Independently compute every product/forecast/loss and factored paired difference, all four phase analyses,12bootstrap
+    runs, both Holm families and116ledger events.
+outputs:
+  data: data/cross_moment
+  reports: reports/cross_moment
+  scores: data/cross_moment/scored_forecasts.parquet
+  admission: data/cross_moment/upstream_admission.json

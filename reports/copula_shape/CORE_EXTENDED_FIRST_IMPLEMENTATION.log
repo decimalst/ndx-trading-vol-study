@@ -1,0 +1,90 @@
+Extended prewritten generated shape contracts; first implementation results.
+test_fit_audit_reconstructs_convex_box_certificate_and_affine_archive (tests.test_copula_shape.ShapeCoreTests.test_fit_audit_reconstructs_convex_box_certificate_and_affine_archive) ... ok
+test_fit_rejects_missing_and_degenerate_training_pairs (tests.test_copula_shape.ShapeCoreTests.test_fit_rejects_missing_and_degenerate_training_pairs) ... ok
+test_generated_skew_is_detected_with_better_marginal_training_score (tests.test_copula_shape.ShapeCoreTests.test_generated_skew_is_detected_with_better_marginal_training_score) ... ok
+test_identity_recovers_original_t8_coordinates_and_density (tests.test_copula_shape.ShapeCoreTests.test_identity_recovers_original_t8_coordinates_and_density) ... FAIL
+test_inputs_and_parameter_audits_are_not_mutated (tests.test_copula_shape.ShapeCoreTests.test_inputs_and_parameter_audits_are_not_mutated) ... ok
+test_invalid_forecast_parameters_and_unrepresentable_inverse_fail (tests.test_copula_shape.ShapeCoreTests.test_invalid_forecast_parameters_and_unrepresentable_inverse_fail) ... 
+  test_invalid_forecast_parameters_and_unrepresentable_inverse_fail (tests.test_copula_shape.ShapeCoreTests.test_invalid_forecast_parameters_and_unrepresentable_inverse_fail) (parameters={'location': [0.0, 0.0], 'scale': [1.0, 1.0], 'epsilon': [0.0, 0.0], 'delta': [0.7, 1.0], 'train_n': 0, 'optimizer_audits': []}) ... FAIL
+  test_invalid_forecast_parameters_and_unrepresentable_inverse_fail (tests.test_copula_shape.ShapeCoreTests.test_invalid_forecast_parameters_and_unrepresentable_inverse_fail) (parameters={'location': [0.0, 0.0], 'scale': [1.0, 1.0], 'epsilon': [0.8, 0.0], 'delta': [1.0, 1.0], 'train_n': 0, 'optimizer_audits': []}) ... FAIL
+test_inverse_roundtrip_at_bounded_risk_simulation_extremes (tests.test_copula_shape.ShapeCoreTests.test_inverse_roundtrip_at_bounded_risk_simulation_extremes) ... ok
+test_jacobian_matches_cdf_derivative_for_skew_and_tail_adjustments (tests.test_copula_shape.ShapeCoreTests.test_jacobian_matches_cdf_derivative_for_skew_and_tail_adjustments) ... ok
+test_normalization_under_skew_and_heavier_and_lighter_tails (tests.test_copula_shape.ShapeCoreTests.test_normalization_under_skew_and_heavier_and_lighter_tails) ... ok
+test_objective_derivatives_and_positive_semidefinite_hessian (tests.test_copula_shape.ShapeCoreTests.test_objective_derivatives_and_positive_semidefinite_hessian) ... ok
+test_zero_shape_adjustment_exactly_nests_affine_calibration (tests.test_copula_shape.ShapeCoreTests.test_zero_shape_adjustment_exactly_nests_affine_calibration) ... ok
+test_future_labels_cannot_change_issued_monthly_parameters (tests.test_copula_shape.ShapeTimelineTests.test_future_labels_cannot_change_issued_monthly_parameters) ... ERROR
+test_supported_wholly_unscored_month_preserves_issued_fits_and_other_scores (tests.test_copula_shape.ShapeTimelineTests.test_supported_wholly_unscored_month_preserves_issued_fits_and_other_scores) ... ERROR
+
+======================================================================
+ERROR: test_future_labels_cannot_change_issued_monthly_parameters (tests.test_copula_shape.ShapeTimelineTests.test_future_labels_cannot_change_issued_monthly_parameters)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_shape.py", line 177, in test_future_labels_cannot_change_issued_monthly_parameters
+    original=subject.run_shape(self.archive,self.baseline["applications"],self.baseline["panel"],minimum_train=12)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/copula_shape.py", line 185, in run_shape
+    for fit, (_, part) in zip(fits, panel.groupby("fit_origin", sort=True), strict=True):
+ValueError: zip() argument 2 is shorter than argument 1
+
+======================================================================
+ERROR: test_supported_wholly_unscored_month_preserves_issued_fits_and_other_scores (tests.test_copula_shape.ShapeTimelineTests.test_supported_wholly_unscored_month_preserves_issued_fits_and_other_scores)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_shape.py", line 193, in test_supported_wholly_unscored_month_preserves_issued_fits_and_other_scores
+    result=subject.run_shape(self.archive,apps,panel,minimum_train=12)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/copula_shape.py", line 185, in run_shape
+    for fit, (_, part) in zip(fits, panel.groupby("fit_origin", sort=True), strict=True):
+ValueError: zip() argument 2 is shorter than argument 1
+
+======================================================================
+FAIL: test_identity_recovers_original_t8_coordinates_and_density (tests.test_copula_shape.ShapeCoreTests.test_identity_recovers_original_t8_coordinates_and_density)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_shape.py", line 27, in test_identity_recovers_original_t8_coordinates_and_density
+    assert_array_equal(got["z"], z)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/numpy/testing/_private/utils.py", line 1121, in assert_array_equal
+    assert_array_compare(operator.__eq__, actual, desired, err_msg=err_msg,
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/numpy/testing/_private/utils.py", line 983, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Arrays are not equal
+
+Mismatched elements: 5 / 6 (83.3%)
+Mismatch at indices:
+ [0, 0]: -2.0000000000000004 (ACTUAL), -2.0 (DESIRED)
+ [1, 0]: 0.30000000000000004 (ACTUAL), 0.3 (DESIRED)
+ [1, 1]: 1.2000000000000004 (ACTUAL), 1.2 (DESIRED)
+ [2, 0]: 3.999999999999999 (ACTUAL), 4.0 (DESIRED)
+ [2, 1]: -0.7000000000000001 (ACTUAL), -0.7 (DESIRED)
+Max absolute difference among violations: 8.8817842e-16
+Max relative difference among violations: 3.70074342e-16
+ ACTUAL: array([[-2. ,  0. ],
+       [ 0.3,  1.2],
+       [ 4. , -0.7]])
+ DESIRED: array([[-2. ,  0. ],
+       [ 0.3,  1.2],
+       [ 4. , -0.7]])
+
+======================================================================
+FAIL: test_invalid_forecast_parameters_and_unrepresentable_inverse_fail (tests.test_copula_shape.ShapeCoreTests.test_invalid_forecast_parameters_and_unrepresentable_inverse_fail) (parameters={'location': [0.0, 0.0], 'scale': [1.0, 1.0], 'epsilon': [0.0, 0.0], 'delta': [0.7, 1.0], 'train_n': 0, 'optimizer_audits': []})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_shape.py", line 146, in test_invalid_forecast_parameters_and_unrepresentable_inverse_fail
+    with self.subTest(parameters=spec),self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_forecast_parameters_and_unrepresentable_inverse_fail (tests.test_copula_shape.ShapeCoreTests.test_invalid_forecast_parameters_and_unrepresentable_inverse_fail) (parameters={'location': [0.0, 0.0], 'scale': [1.0, 1.0], 'epsilon': [0.8, 0.0], 'delta': [1.0, 1.0], 'train_n': 0, 'optimizer_audits': []})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_shape.py", line 146, in test_invalid_forecast_parameters_and_unrepresentable_inverse_fail
+    with self.subTest(parameters=spec),self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.158s
+
+FAILED (failures=3, errors=2)
+
+exit_code=1

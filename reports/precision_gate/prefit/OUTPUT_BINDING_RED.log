@@ -1,0 +1,15 @@
+test_changed_output_during_verification_invalidates_saved_result (tests.test_precision_gate_search.PrecisionGateSearchTests.test_changed_output_during_verification_invalidates_saved_result) ... ERROR
+
+======================================================================
+ERROR: test_changed_output_during_verification_invalidates_saved_result (tests.test_precision_gate_search.PrecisionGateSearchTests.test_changed_output_during_verification_invalidates_saved_result)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_precision_gate_search.py", line 204, in test_changed_output_during_verification_invalidates_saved_result
+    check_outputs = self.search._check_output_snapshot
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.precision_gate_search' has no attribute '_check_output_snapshot'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.811s
+
+FAILED (errors=1)

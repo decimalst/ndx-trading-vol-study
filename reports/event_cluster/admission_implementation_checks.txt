@@ -1,0 +1,26 @@
+test_all_outer_outputs_and_original_inputs_tamper_before_decode (tests.test_event_cluster_admission.AdmissionTests.test_all_outer_outputs_and_original_inputs_tamper_before_decode) ... ok
+test_bad_output_set_and_typed_zero_fit_counts (tests.test_event_cluster_admission.AdmissionTests.test_bad_output_set_and_typed_zero_fit_counts) ... ok
+test_both_successful_upstream_failure_markers_block (tests.test_event_cluster_admission.AdmissionTests.test_both_successful_upstream_failure_markers_block) ... ok
+test_checked_buffer_decoding_and_outer_final_hash_guard (tests.test_event_cluster_admission.AdmissionTests.test_checked_buffer_decoding_and_outer_final_hash_guard) ... ok
+test_conflicting_preservation_binding_is_not_superseded (tests.test_event_cluster_admission.AdmissionTests.test_conflicting_preservation_binding_is_not_superseded) ... ok
+test_deterministic_read_only_operation (tests.test_event_cluster_admission.AdmissionTests.test_deterministic_read_only_operation) ... ok
+test_duplicate_and_nonfinite_json_reject (tests.test_event_cluster_admission.AdmissionTests.test_duplicate_and_nonfinite_json_reject) ... ok
+test_failure_during_outer_last_rehash_cannot_escape (tests.test_event_cluster_admission.AdmissionTests.test_failure_during_outer_last_rehash_cannot_escape) ... ok
+test_fixed_seven_anchor_six_output_contract (tests.test_event_cluster_admission.AdmissionTests.test_fixed_seven_anchor_six_output_contract) ... ok
+test_metadata_collection_never_decodes_output_tables (tests.test_event_cluster_admission.AdmissionTests.test_metadata_collection_never_decodes_output_tables) ... ok
+test_missing_conflicting_or_malformed_pins_reject (tests.test_event_cluster_admission.AdmissionTests.test_missing_conflicting_or_malformed_pins_reject) ... ok
+test_missing_registered_outer_or_inner_pin_before_decode (tests.test_event_cluster_admission.AdmissionTests.test_missing_registered_outer_or_inner_pin_before_decode) ... ok
+test_old_failed_study_markers_are_preserved_not_new_failures (tests.test_event_cluster_admission.AdmissionTests.test_old_failed_study_markers_are_preserved_not_new_failures) ... ok
+test_old_fit_and_verification_writers_are_never_called (tests.test_event_cluster_admission.AdmissionTests.test_old_fit_and_verification_writers_are_never_called) ... ok
+test_outer_anchor_hash_precedes_json_decoding (tests.test_event_cluster_admission.AdmissionTests.test_outer_anchor_hash_precedes_json_decoding) ... ok
+test_outer_terminal_failure_cannot_be_repromoted (tests.test_event_cluster_admission.AdmissionTests.test_outer_terminal_failure_cannot_be_repromoted) ... ok
+test_path_hash_json_and_symlink_guards (tests.test_event_cluster_admission.AdmissionTests.test_path_hash_json_and_symlink_guards) ... ok
+test_preserved_and_documentary_refs_are_active_hashes (tests.test_event_cluster_admission.AdmissionTests.test_preserved_and_documentary_refs_are_active_hashes) ... ok
+test_saved_inner_audit_must_match_before_any_table_load (tests.test_event_cluster_admission.AdmissionTests.test_saved_inner_audit_must_match_before_any_table_load) ... ok
+test_semantic_outer_proof_and_documentary_identity_checks (tests.test_event_cluster_admission.AdmissionTests.test_semantic_outer_proof_and_documentary_identity_checks) ... ok
+test_two_layers_preserve_exact_original_tables_without_fitting (tests.test_event_cluster_admission.AdmissionTests.test_two_layers_preserve_exact_original_tables_without_fitting) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 2.071s
+
+OK

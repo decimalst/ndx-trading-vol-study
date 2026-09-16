@@ -1,0 +1,10 @@
+{
+  "status": "IDENTITY_WRAPPER_RUNTIME_FAILURE_BEFORE_FIRST_RECONCILIATION",
+  "observed_exit_code": 1,
+  "error": "TypeError: 'str' object is not callable",
+  "cause": "A local required-status string shadowed the required-input reader in the root wrapper.",
+  "financial_values_converted": false,
+  "completed_identity_output_written": false,
+  "correction": "Separate new wrapper renames that local status variable; original wrapper, checkpoint, source helper and scientific contracts remain unchanged.",
+  "original_wrapper_sha256": "7aa3b51af15b6da181f28318355b34a09a5c001a98d4b8fd63d8df3056ff51dc"
+}

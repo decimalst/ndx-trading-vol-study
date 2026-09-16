@@ -1,0 +1,19 @@
+test_civil_quarter_score (unittest.loader._FailedTest.test_civil_quarter_score) ... ERROR
+
+======================================================================
+ERROR: test_civil_quarter_score (unittest.loader._FailedTest.test_civil_quarter_score)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_civil_quarter_score
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_civil_quarter_score.py", line 8, in <module>
+    from src import civil_quarter_score as score
+ImportError: cannot import name 'civil_quarter_score' from 'src' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/__init__.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

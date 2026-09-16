@@ -1,0 +1,17 @@
+# Wave16 verification failure and preservation audit
+
+**Wave16 is unevaluable.** The canonical failure is `AssertionError: Independent baseline stationarity failed`. Both quarter-versus-baseline and quarter-versus-mean comparisons now have conservative, wave-adjusted and cumulative-adjusted p-values of **1**, empty phase results and no leads. `metrics.json` and `failure.json` are byte-identical; `verification.json` records `FAILED`.
+
+The producer generated **6,297 forecast rows** and **101 monthly fit records**. Those counts describe stored outputs, not independently verified predictions or evidence for the quarter-end hypothesis. Forecast rows were counted from Parquet metadata; fit records were counted from the outer JSON array while discarding numeric values and object contents. No diagnostic scores were read. This audit did not rerun the verifier or fit any model.
+
+The trial ledger contains **129 events** in order: **123 inherited**, **2 registered**, **2 evaluated**, and **2 verification_failed**. The last two records exactly match the canonical failure rows. The earlier evaluated records remain diagnostics; they do not supply the current inherited p-values or a qualifying signal. For inherited and evaluated records, only event fields were inspected, not their score payloads. The cumulative family remains **125 hypotheses**.
+
+The source-package correction is present in the saved admission record: **399 bound files**, comprising **4 metadata roots, 394 runtime extraction files and 1 documentary capture manifest**. All are directly registered and their existing bytes match the closure hashes, including the five previously omitted files. The saved admission is `UPSTREAM_VERIFIED_READ_ONLY`, contains the same closure and input inventory, and identifies the original successful wave14/wave8 proof records plus the preserved failed wave15 attempt. This is a check of the saved admission and its byte bindings; no source reconstruction was rerun here.
+
+All **1,684 current manifest pins** match: **257 code**, **1,137 inputs**, and **290 preserved artifacts**. The original freeze code map and all 2 prefit-design hashes also match. Independently rechecking the **15 preceding wave manifests** found **1,631 unique prior pins unchanged**.
+
+Wave15 remains `UNEVALUABLE` with its two p=1 comparisons, **125 ledger events** (121 inherited, 2 registered, 2 unevaluable), and an empty private output directory. All 25 artifact hashes referenced by its publication audit still match. No earlier study is reclassified by the new verification failure.
+
+Only this report and the [machine-readable failure audit](/Users/byrons/code/trading-vol/ndx-vol-experiment/reports/civil_quarter_replay/verification_failure_audit.json) were written. Canonical terminal files, new generated outputs and prior publication artifacts had identical hashes at the beginning and end of the audit. No protocol, frozen implementation, source, prior report or failure record was changed. The separate numerical diagnosis, if undertaken, must remain training-only and must not turn this failed attempt into a repaired successful run.
+
+Protocol SHA256: `99ff8102daf12a451f4bf2c50ddd4326dcf6b79873ad31a399c319b708ebac22`. Manifest SHA256: `f4a680cb8036d1dc71b624eddff6bf0937f230f839e507a8deb8e89fe5da9dc9`. Freeze-record SHA256: `d71d23623e7eee5bc97f7b2b480aa2d63853c74876f48791f311a01e6692fe9b`. The JSON includes exact terminal, output, prior-manifest and publication-artifact hashes.

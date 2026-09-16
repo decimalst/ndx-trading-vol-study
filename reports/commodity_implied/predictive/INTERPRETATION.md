@@ -1,0 +1,7 @@
+# Interpretation of the completed commodity comparison
+
+The fixed joint OVX/GVZ block did not qualify. Against matched commodity histories, development loss increased by 0.003111 and evaluation loss decreased by only 0.000616, versus the required decrease of 0.005 in each phase. The evaluation difference also reversed to +0.0000928 in the 2023–2025 slice and was positive in one of the five calendar offsets. Against the original market model, development loss increased by 0.009375 and evaluation loss decreased by 0.000153. Both adjusted whole-comparison probabilities are 1.0.
+
+The adjusted probabilities repeated across phase rows in the summary table apply to each complete comparison, taking its maximum probability across both phases before Holm adjustment. They are not separate phase-specific significance tests. Development deterioration is visibly positive in the nominal interval estimates, but the experiment's declared decision is whether the candidate improves consistently, not a newly registered test of deterioration.
+
+This completed and independently verified negative result is distinct from insufficient data or a failed implementation. It provides no basis for promoting this fixed information block or retuning it after inspection. It does not prove that every possible commodity feature is useless. All 144 comparisons, the original source limitations, missingness and unscored applications remain retained.

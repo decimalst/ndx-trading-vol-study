@@ -1,0 +1,12 @@
+test_all_source_calendars_preflight_before_any_numeric_decode (tests.test_claims_release_inputs.ClaimsReleaseInputsTests.test_all_source_calendars_preflight_before_any_numeric_decode) ... ok
+test_date_only_preflight_rejects_bad_calendar_before_numeric_decode (tests.test_claims_release_inputs.ClaimsReleaseInputsTests.test_date_only_preflight_rejects_bad_calendar_before_numeric_decode) ... ok
+test_every_hash_verified_before_any_parquet_decoding (tests.test_claims_release_inputs.ClaimsReleaseInputsTests.test_every_hash_verified_before_any_parquet_decoding) ... ok
+test_exact_source_inventory_and_literal_hashes_required (tests.test_claims_release_inputs.ClaimsReleaseInputsTests.test_exact_source_inventory_and_literal_hashes_required) ... ok
+test_missing_dates_and_values_are_preserved_without_fill (tests.test_claims_release_inputs.ClaimsReleaseInputsTests.test_missing_dates_and_values_are_preserved_without_fill) ... ok
+test_only_declared_columns_and_bounded_dates_are_decoded (tests.test_claims_release_inputs.ClaimsReleaseInputsTests.test_only_declared_columns_and_bounded_dates_are_decoded) ... ok
+test_verified_bytes_are_the_bytes_decoded (tests.test_claims_release_inputs.ClaimsReleaseInputsTests.test_verified_bytes_are_the_bytes_decoded) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.121s
+
+OK

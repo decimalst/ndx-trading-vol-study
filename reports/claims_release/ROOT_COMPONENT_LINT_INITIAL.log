@@ -1,0 +1,14 @@
+C402 Unnecessary generator (rewrite as a dict comprehension)
+  --> tests/test_claims_release_search.py:23:31
+   |
+21 |             self.assertEqual([x["event"] for x in events[:2]], ["registered"] * 2)
+22 |             self.assertEqual([x["control"] for x in events[:2]], ["matched", "market"])
+23 |             self.assertEqual([dict((k, v) for k, v in x.items() if k != "event") for x in events[2:]], self.prior)
+   |                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+24 |             return {"status": "COMPLETED", "rows": [
+25 |                 {"study": "claims_release", "candidate": "candidate", "control": c,
+   |
+help: Rewrite as a dict comprehension
+
+Found 10 errors (9 fixed, 1 remaining).
+No fixes available (1 hidden fix can be enabled with the `--unsafe-fixes` option).

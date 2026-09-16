@@ -1,0 +1,27 @@
+{
+  "status": "NEXT_HYPOTHESIS_REVIEWED_NOT_REGISTERED",
+  "created_utc": "2026-09-09T05:37:09.288369+00:00",
+  "prior_completed_checkpoint": "reports/precision_gate/predictive/PUBLICATION_AUDIT.json",
+  "prior_checkpoint_sha256": "f950acc71bf77fe995fa08bef9ef2d0066a92ad79cac22ff7bbc370038d329d5",
+  "cumulative_comparisons": 149,
+  "proposal": "reports/next_signal_review/AFTER_PRECISION_GATE.md",
+  "proposal_sha256": "acdd2023b0846a68d12afbfd8a09ebf23b1b19829c39ed60af4e5b7ec741e2ab",
+  "candidate": "Fixed t8 copula joint next-session QQQ/SPX intraday return density",
+  "controls": [
+    "Separately fitted Gaussian copula with identical conditional marginals",
+    "Independence with identical conditional marginals"
+  ],
+  "proposed_new_comparisons": 2,
+  "proposed_wave_if_next": 27,
+  "proposed_cumulative_if_registered_next": 151,
+  "registered": false,
+  "historical_arrays_decoded_for_proposal": false,
+  "implementation_questions_before_freeze": [
+    "Bind all six original source hashes and reference-calendar/measurement closure before bounded numerical decoding.",
+    "Candidate t8 inverse-CDF transform of the same t8 marginal CDF is algebraically the standardized return; use that identity and test it rather than introduce avoidable tail inversion.",
+    "Use stable log-tail arithmetic for the Gaussian transform and joint densities; never clip saturated CDF endpoints into artificial observations.",
+    "Declare and independently verify the bounded one-dimensional dependence optimum, including endpoint and possible multiple-stationary-point cases; optimizer success alone is not an optimum certificate.",
+    "Complete prewritten generated math/timing tests, independent verifier and exact executable protocol before registration."
+  ],
+  "goal_complete": false
+}

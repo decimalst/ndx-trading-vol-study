@@ -1,0 +1,26 @@
+{
+  "checkpoint_sha256": "c93763fbf263ce91ff72e892b811e8dfe820d01fb0e25803329ec6d274a3d5ce",
+  "clock_assumption": "Without accepting the explicit Z52 reported-date assumption, the strict original-byte route retains an unbounded clock after Jan27,2020 and cannot claim full evaluation support. This difference must accompany any future result.",
+  "completed_utc": "2026-09-09T03:42:19.878789+00:00",
+  "counts": {
+    "EXCLUDED": 1,
+    "KNOWN": 1135,
+    "UNKNOWN": 2
+  },
+  "event_count": 1138,
+  "evidence_class": "QUALIFIED_EXPLORATORY_WITH_Z52_REPORTED_CLOCK_ASSUMPTION",
+  "features_built": false,
+  "independent_ledger_reconstruction_pending": true,
+  "market_arrays_read": false,
+  "models_fitted": false,
+  "new_predictive_comparisons": 0,
+  "preserved_pins": 28230,
+  "private_output": "data/source_discovery/treasury_auction/dealer_ledger_v1.json",
+  "private_output_sha256": "a22e04995429115780d2a33cd5ec7c18b7d56a1f41f9570b9160dc375156b423",
+  "registered_comparisons": 144,
+  "status": "ASSEMBLED_QUALIFIED_SOURCE_LEDGER",
+  "unknown_events": [
+    "2016-01-14_912810RP5",
+    "2020-01-27_912828Z52"
+  ]
+}

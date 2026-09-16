@@ -1,0 +1,25 @@
+
+Fontconfig error: No writable cache directories
+	/opt/homebrew/var/cache/fontconfig
+	/Users/byrons/.cache/fontconfig
+	/Users/byrons/.fontconfig
+Matplotlib is building the font cache; this may take a moment.
+test_plot_sign_memory (unittest.loader._FailedTest.test_plot_sign_memory) ... ERROR
+
+======================================================================
+ERROR: test_plot_sign_memory (unittest.loader._FailedTest.test_plot_sign_memory)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_plot_sign_memory
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_plot_sign_memory.py", line 14, in <module>
+    from src import plot_sign_memory as plot
+ImportError: cannot import name 'plot_sign_memory' from 'src' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/__init__.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

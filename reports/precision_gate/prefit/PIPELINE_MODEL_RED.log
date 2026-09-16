@@ -1,0 +1,35 @@
+test_precision_gate_models (unittest.loader._FailedTest.test_precision_gate_models) ... ERROR
+test_precision_gate_pipeline (unittest.loader._FailedTest.test_precision_gate_pipeline) ... ERROR
+
+======================================================================
+ERROR: test_precision_gate_models (unittest.loader._FailedTest.test_precision_gate_models)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_precision_gate_models
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_precision_gate_models.py", line 8, in <module>
+    from src.precision_gate_models import MARKET, fit_experts
+ModuleNotFoundError: No module named 'src.precision_gate_models'
+
+
+======================================================================
+ERROR: test_precision_gate_pipeline (unittest.loader._FailedTest.test_precision_gate_pipeline)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_precision_gate_pipeline
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_precision_gate_pipeline.py", line 10, in <module>
+    from src.precision_gate_pipeline import build_panel, InsufficientDataError
+ModuleNotFoundError: No module named 'src.precision_gate_pipeline'
+
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+FAILED (errors=2)
+
+exit_code=1

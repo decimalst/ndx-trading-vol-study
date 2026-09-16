@@ -1,0 +1,296 @@
+{
+  "actual_evaluation_coverage": {
+    "early_pandemic_shock_in_scored_evaluation": false,
+    "first_scored_origin": "2020-11-02",
+    "last_scored_origin": "2025-10-17",
+    "scored_2020_dates": 42
+  },
+  "current_verified_counts": {
+    "common_application_origins": 2099,
+    "common_scored_origins": 2099,
+    "cumulative_hypothesis_count": 127,
+    "hypothesis_count": 2,
+    "new_forecasts": 6297,
+    "new_monthly_fits": 101
+  },
+  "displayed_phase_rows_checked": [
+    {
+      "candidate_loss": -9.21848359012597,
+      "ci95_envelope": [
+        8.991819257564303e-06,
+        0.0003793469263816955
+      ],
+      "control": "baseline",
+      "control_loss": -9.218674749734358,
+      "delta": 0.00019115960838758477,
+      "n": 983,
+      "nominal_mde_effect_ratio": 0.051629692019967824,
+      "p_conservative": 0.04095,
+      "phase": "development"
+    },
+    {
+      "candidate_loss": -8.621063838765041,
+      "ci95_envelope": [
+        -8.171108014628619e-05,
+        0.00020978974655924505
+      ],
+      "control": "baseline",
+      "control_loss": -8.621125967229938,
+      "delta": 6.212846489692545e-05,
+      "n": 1116,
+      "nominal_mde_effect_ratio": 0.03643695547878263,
+      "p_conservative": 0.39746,
+      "phase": "evaluation"
+    },
+    {
+      "candidate_loss": -9.21848359012597,
+      "ci95_envelope": [
+        -0.5217928274526354,
+        -0.23015699417501914
+      ],
+      "control": "mean",
+      "control_loss": -8.85542231316012,
+      "delta": -0.363061276965848,
+      "n": 983,
+      "nominal_mde_effect_ratio": 37.99415041741754,
+      "p_conservative": 7e-05,
+      "phase": "development"
+    },
+    {
+      "candidate_loss": -8.621063838765041,
+      "ci95_envelope": [
+        -0.811524979901977,
+        -0.12450318212723738
+      ],
+      "control": "mean",
+      "control_loss": -8.176919357089119,
+      "delta": -0.444144481675925,
+      "n": 1116,
+      "nominal_mde_effect_ratio": 91.37778978714518,
+      "p_conservative": 0.01054,
+      "phase": "evaluation"
+    }
+  ],
+  "document_hashes": {
+    "profiled_quarter.yaml": "6e7821d33c13524ffbfafa666e8c85c1fab7aa48cdd94563989dcd735d73af0c",
+    "reports/profiled_quarter/DESIGN.md": "45ff4991152afe0c3e1b950a8b797d51decc136294e67929653a0e3d9ab3f2ec",
+    "reports/profiled_quarter/DESIGN_REVIEW.md": "77bab5293c9074d190476190883c4a756c846232a3347e75be6f1bd325e38f53",
+    "reports/profiled_quarter/NEXT_RESEARCH_DIRECTION.md": "c59a79477858e9d58862b26761c98d8c9c8dbead1ed8f9a9b7d74394e5e18560",
+    "reports/profiled_quarter/SOLVER_DESIGN.md": "a66eba8e65b0e01f3e6309d7c407ef4e52c7e98ee88e2ee95911c4074cefe299",
+    "reports/profiled_quarter/SUMMARY.md": "1f4c99d8f0fe7f9551b0a259f3c195e68db70c7c7de3240b334289ee48f1be4a",
+    "reports/profiled_quarter/freeze_record.json": "4015cf4d14b3d7c6e054e1c09063b810249cd9fb6a7f87c229b1d68b518824b3",
+    "reports/profiled_quarter/full_repository_tests.txt": "ff7b33608d84e4e9b97bf57ae2022d73f0a867eed881e9bb354e30b32de2f5b3",
+    "reports/profiled_quarter/manifest.json": "051c96e0f04bb4f42553ba735a750ffe27d589730d15d734f038debf0a361d8d",
+    "reports/profiled_quarter/metrics.json": "ff6aabb52c2dec83f559c97243126ccefcb0415cb4df1432dc1512843a93ec67",
+    "reports/profiled_quarter/trial_ledger.jsonl": "8e8d81bea09baede853d8b197d73b9ebb7dd76af82e88e75ad9cbbaee11b5a45",
+    "reports/profiled_quarter/verification.json": "d76047352010750e117c928a9fbd41c3f361be6bc345db50fcddeaeb878d3b7f"
+  },
+  "figure_findings": [
+    "Both controls and both phases are readable; annotation/point signs and interval endpoints agree with displayed metrics.",
+    "Separate x-scales, zero line and literal -.005 threshold are disclosed; nominal envelopes are not described as simultaneous adjusted intervals.",
+    "Wave/cumulative family gates and absence of a promoted lead agree with verified interpretation."
+  ],
+  "figure_hashes": {
+    "reports/profiled_quarter/comparison_intervals.pdf": "45d14c5fb0b706bbc0a51ec424209f933c343d3c9b9eb768910037f87a45202a",
+    "reports/profiled_quarter/comparison_intervals.png": "09c97beb893860edcab0c6da7b1a3fa30573da35ef0af54c9c07ebeeb65a0e27"
+  },
+  "figure_review_method": "Actual inspection of the saved PNG through view_image; PDF byte hash recorded, no separate PDF page rendering.",
+  "figure_visually_reviewed": true,
+  "frozen_files_written": false,
+  "historical_models_or_verifiers_rerun": false,
+  "inference_counts": {
+    "bootstrap_draws_per_run": 99999,
+    "bootstrap_runs_verified": 12,
+    "cumulative_hypotheses_verified": 127,
+    "new_hypotheses_verified": 2,
+    "phase_comparisons_verified": 4
+  },
+  "interpretation": "No candidate qualifies. Observed worse loss versus the full baseline is distinct from the candidate improvement versus the mean; both controls are required. Prior failures remain unevaluable, not statistical nulls. No equivalence, untouched-confirmation, causal-mechanism, immutable-vintage or trading-profit claim is approved.",
+  "ledger_events": {
+    "evaluated": 2,
+    "inherited": 125,
+    "registered": 2
+  },
+  "manifest_counts": {
+    "code": 267,
+    "inputs": 1195,
+    "preserved": 290
+  },
+  "manifest_pins_rehashed": 1752,
+  "new_predictive_statistics_or_prospective_event_counts_computed": false,
+  "prior_failures_preserved": [
+    {
+      "canonical_and_inherited_pvalues": 1.0,
+      "hypotheses_retained": 2,
+      "status": "UNEVALUABLE",
+      "study": "civil_quarter"
+    },
+    {
+      "canonical_and_inherited_pvalues": 1.0,
+      "hypotheses_retained": 2,
+      "status": "UNEVALUABLE",
+      "study": "civil_quarter_replay"
+    }
+  ],
+  "prior_unpublished_diagnostic_scores_read": false,
+  "protocol_sha256": "6e7821d33c13524ffbfafa666e8c85c1fab7aa48cdd94563989dcd735d73af0c",
+  "quarter_support_rows_checked": [
+    {
+      "absent": 940,
+      "n": 983,
+      "period": "development",
+      "present": 43
+    },
+    {
+      "absent": 1067,
+      "n": 1116,
+      "period": "evaluation",
+      "present": 49
+    },
+    {
+      "absent": 461,
+      "n": 481,
+      "period": "2020-01-02..2022-12-31",
+      "present": 20
+    },
+    {
+      "absent": 606,
+      "n": 635,
+      "period": "2023-01-01..2025-10-17",
+      "present": 29
+    }
+  ],
+  "repository_tests_passed": 1775,
+  "resolved_editorial_findings": [
+    "Final summary now states actual November2 evaluation entry and42 scored2020dates, excluding early-pandemic coverage.",
+    "Final summary explicitly treats unscored-application and unscored-fit retention as protocol rules; this run has no additional unscored applications.",
+    "Next-direction language now identifies exceeding twice the prior22-session mean, rather than suggesting doubling versus the immediately preceding session."
+  ],
+  "reviewed_utc": "2026-09-07T13:33:40.347100+00:00",
+  "scope": [
+    "Final summary numerical tables, source-complete date coverage and scientific interpretation compared with current VERIFIED metrics and verification record.",
+    "Four phase rows, two Holm rows, four late-slice differences, four nominal MDE/effect ratios and four support rows checked at displayed precision.",
+    "Current counts, family ledger, full prefreeze test count and protocol/freeze identity checked; all current manifest code/input/preserved pins rehashed without decoding raw numerical source data.",
+    "Sequence forecast and registration totals independently recomputed from published per-wave count metadata, excluding reused forecasts and preserving failed wave16 generated rows as unverified.",
+    "Brief mathematical and claim-boundary review of unregistered NEXT_RESEARCH_DIRECTION.md; no proposed-feature/event calculations or novelty search beyond its cited contract scope."
+  ],
+  "sequence_count_audit": {
+    "completed_verified_waves_new_rows": 144810,
+    "cumulative_hypotheses": 127,
+    "initial_enumerated_hypotheses": 54,
+    "new_registrations": 73,
+    "retained_unverified_wave16_rows": 6297,
+    "scope": "Enumerated seventeen-wave sequence, not repository-lifetime totals or unique prediction instances.",
+    "total_generated_new_rows": 151107,
+    "waves": [
+      {
+        "new_hypotheses": 12,
+        "newly_generated_rows": 30040,
+        "study": "iterative_signal_search",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "new_hypotheses": 6,
+        "newly_generated_rows": 17703,
+        "study": "international_volatility",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "new_hypotheses": 6,
+        "newly_generated_rows": 12310,
+        "study": "overnight_index",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "new_hypotheses": 6,
+        "newly_generated_rows": 10495,
+        "study": "macro_overnight",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "new_hypotheses": 15,
+        "newly_generated_rows": 8008,
+        "study": "measurement_memory",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "new_hypotheses": 4,
+        "newly_generated_rows": 14280,
+        "study": "index_hinge",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "new_hypotheses": 3,
+        "newly_generated_rows": 7374,
+        "study": "tail_shape",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "new_hypotheses": 2,
+        "newly_generated_rows": 6297,
+        "study": "calendar_variance",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "new_hypotheses": 2,
+        "newly_generated_rows": 7386,
+        "study": "relative_risk",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "new_hypotheses": 2,
+        "newly_generated_rows": 7386,
+        "study": "joint_risk",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "new_hypotheses": 2,
+        "newly_generated_rows": 0,
+        "study": "cross_moment",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "new_hypotheses": 3,
+        "newly_generated_rows": 4924,
+        "study": "target_aligned",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "new_hypotheses": 2,
+        "newly_generated_rows": 7386,
+        "study": "sign_memory",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "new_hypotheses": 2,
+        "newly_generated_rows": 4924,
+        "study": "causal_pool",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "new_hypotheses": 2,
+        "newly_generated_rows": 0,
+        "study": "civil_quarter",
+        "verification_status": "NO_VERIFICATION_RECORD"
+      },
+      {
+        "new_hypotheses": 2,
+        "newly_generated_rows": 6297,
+        "study": "civil_quarter_replay",
+        "verification_status": "FAILED"
+      },
+      {
+        "new_hypotheses": 2,
+        "newly_generated_rows": 6297,
+        "study": "profiled_quarter",
+        "verification_status": "VERIFIED"
+      }
+    ]
+  },
+  "status": "APPROVED_VERIFIED_INTERPRETATION",
+  "summary_sha256": "1f4c99d8f0fe7f9551b0a259f3c195e68db70c7c7de3240b334289ee48f1be4a",
+  "unresolved_material_findings": [],
+  "writes": [
+    "reports/profiled_quarter/publication_review.json"
+  ]
+}

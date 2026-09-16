@@ -1,0 +1,25 @@
+Captured UTC: 2026-09-07T08:00:58.742334+00:00
+Producer absent before run: True
+Command: .venv/bin/python -m unittest tests.test_joint_risk_features -v
+
+test_joint_risk_features (unittest.loader._FailedTest.test_joint_risk_features) ... ERROR
+
+======================================================================
+ERROR: test_joint_risk_features (unittest.loader._FailedTest.test_joint_risk_features)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_joint_risk_features
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_joint_risk_features.py", line 12, in <module>
+    from src import joint_risk_features as jf
+ImportError: cannot import name 'joint_risk_features' from 'src' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/__init__.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+
+Exit code: 1

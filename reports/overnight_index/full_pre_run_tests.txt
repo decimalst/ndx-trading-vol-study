@@ -1,0 +1,7 @@
+----------------------------------------------------------------------
+Ran 665 tests in 29.398s
+
+OK
+GBM POST-RESULT VERIFICATION PASS
+GBM POST-RESULT VERIFICATION PASS
+wrote /var/folders/jn/2wqppgv57cx3k54l_dqt9sl00000gn/T/tmpft0wq8ly/report.md

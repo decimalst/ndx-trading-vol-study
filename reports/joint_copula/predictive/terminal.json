@@ -1,0 +1,38 @@
+{
+  "status": "COMPLETED",
+  "completed_utc": "2026-09-09T06:20:54.141313+00:00",
+  "metrics_sha256": "d1de728c8fb6909a4ce8ecd6edb055d8b3652693550de140dfca3ff688593442",
+  "trial_ledger_sha256": "1789cf5b82a0c22a851716831bc445804dce346e4339bc1fe130c49d61311e50",
+  "leads": [
+    "joint_copula"
+  ],
+  "cumulative_hypotheses": 151,
+  "freeze_record_sha256": "f98fddc72c6180a92445a36e4c41cac07c4b1ff2d29aab5aa3ef5ac929a1c265",
+  "observed_freeze_record_sha256": "f98fddc72c6180a92445a36e4c41cac07c4b1ff2d29aab5aa3ef5ac929a1c265",
+  "output_hashes": {
+    "data/model_memory_study/joint_copula_wave27/coverage.parquet": "bcc430b0235744f7b65dcab905bb16c2f59d98d2bc0222d643545c516b084c14",
+    "data/model_memory_study/joint_copula_wave27/targets.parquet": "21cfdd9a10e50c073865747dfb5cd809033e5005629ef9a2cf595a993afaef19",
+    "data/model_memory_study/joint_copula_wave27/panel.parquet": "c4caed2560d36180511efd28436fa344224031e44f039e55161af536d0de6347",
+    "data/model_memory_study/joint_copula_wave27/schedules.parquet": "37d4d6c7cdc613501cc63d52c7ba2a828e936a1974daa995aac67cdffebf1232",
+    "data/model_memory_study/joint_copula_wave27/applications.parquet": "0ce97f4708e8c3f3a24b2223f04eb34d7a06802fe905acb4d06d633e3d883222",
+    "data/model_memory_study/joint_copula_wave27/features.parquet": "c064880974725ef1647d4e300f1b87a85ee8aaf306c8d702f0267e57bc16a683",
+    "data/model_memory_study/joint_copula_wave27/fits.json": "be070e131e96faa7939be052838beb16594825a1afe451c5deb01448fe1bae91"
+  },
+  "report_artifact_hashes": {
+    "metrics.json": "d1de728c8fb6909a4ce8ecd6edb055d8b3652693550de140dfca3ff688593442",
+    "FULL_PRECHECK.log": "d7ba7cad5d54f9f7eb18d411022b0b4bbb54d1bf43b370f782d9a32d840cc4c2",
+    "TEST_GATE_RESULT.json": "a5e9c02dd1958351adf9bbbcd30ccb62bb8ad69da5f98caac37ffbc9cbce9d11",
+    "FULL_PRECHECK.json": "ae06519b67ed7bc8dba81143a4a54266c9f6f1059dbc6f670ac6ab955a889554",
+    "score_verification.json": "e37fa59942dae4249a0ea41a31eff022916b14f929b41dfe5cb44bf4c1239639",
+    "source_admission.json": "9dae4d3547303628d08320f21c20faa4bdd2a80d595342050b4fc35f6ced0699",
+    "manifest.json": "13dbaa9e3ed0830981f6e1b6bc24a1c871f123bffb2d035d4073e3aab3715f5b",
+    "freeze_record.json": "f98fddc72c6180a92445a36e4c41cac07c4b1ff2d29aab5aa3ef5ac929a1c265",
+    "verification.json": "6abe3595a307ba61860093b12d891696d95ca41451f68397ad470f8840d907d4",
+    "forecast_verification.json": "a712dc8016689c0df0b3a2c8a4eedc9e3f995563baa80d408839851a65052dc2",
+    "trial_ledger.jsonl": "1789cf5b82a0c22a851716831bc445804dce346e4339bc1fe130c49d61311e50",
+    "measurement_audit.json": "b5d9c1272239cd5b1a3c85c1619068ae491252444249c61c2b7caa34d4c2f5f0",
+    "TEST_SELECTION.json": "25a1607f19e1f5f27add5e754cbb1ced6be728c853f89df6ab4df5c49a43b343"
+  },
+  "evidence_class": "EXPLORATORY_REUSED_MARKET_HISTORY_CURRENT_VINTAGES",
+  "evidence_limitation": "Historical development and evaluation windows have been reused. Prior regression tests accessed the period beginning 2025-11-03; it is not untouched confirmation. Current vendor snapshots do not certify complete point-in-time price or implied-volatility vintages. Numerical inputs in this experiment end 2025-10-20. QQQ ETF and SPX price index are distinct instruments; exact synchronized auctions and historical publication latency are not certified."
+}

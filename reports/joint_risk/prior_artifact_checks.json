@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "after_full_pre_run_tests": 1218,
+  "checks": [
+    {
+      "wave": "iterative_signal_search",
+      "hashes_checked": 148,
+      "protocol_matches": true
+    },
+    {
+      "wave": "international_volatility",
+      "hashes_checked": 166,
+      "protocol_matches": true
+    },
+    {
+      "wave": "overnight_index",
+      "hashes_checked": 187,
+      "protocol_matches": true
+    },
+    {
+      "wave": "macro_overnight",
+      "hashes_checked": 1011,
+      "protocol_matches": true
+    },
+    {
+      "wave": "measurement_memory",
+      "hashes_checked": 369,
+      "protocol_matches": true
+    },
+    {
+      "wave": "index_hinge",
+      "hashes_checked": 385,
+      "protocol_matches": true
+    },
+    {
+      "wave": "tail_shape",
+      "hashes_checked": 420,
+      "protocol_matches": true
+    },
+    {
+      "wave": "calendar_variance",
+      "hashes_checked": 1249,
+      "protocol_matches": true
+    },
+    {
+      "wave": "relative_risk",
+      "hashes_checked": 489,
+      "protocol_matches": true
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+test_any_historical_training_gap_blocks_all_new_fits_without_mask (tests.test_event_cluster_pipeline.PipelineTests.test_any_historical_training_gap_blocks_all_new_fits_without_mask) ... ok
+test_any_late_application_history_gap_blocks_all_new_fits (tests.test_event_cluster_pipeline.PipelineTests.test_any_late_application_history_gap_blocks_all_new_fits) ... ok
+test_both_new_arms_get_original_panel_validation (tests.test_event_cluster_pipeline.PipelineTests.test_both_new_arms_get_original_panel_validation) ... ok
+test_current_month_baseline_offset_and_exact_training_cohort (tests.test_event_cluster_pipeline.PipelineTests.test_current_month_baseline_offset_and_exact_training_cohort) ... ok
+test_exact_four_models_original_controls_and_full_schema (tests.test_event_cluster_pipeline.PipelineTests.test_exact_four_models_original_controls_and_full_schema) ... ok
+test_final_unscored_and_phase_boundary_application_retained (tests.test_event_cluster_pipeline.PipelineTests.test_final_unscored_and_phase_boundary_application_retained) ... ok
+test_future_label_change_cannot_change_prior_application_state (tests.test_event_cluster_pipeline.PipelineTests.test_future_label_change_cannot_change_prior_application_state) ... ok
+test_invalid_probability_in_final_unscored_application_rejects (tests.test_event_cluster_pipeline.PipelineTests.test_invalid_probability_in_final_unscored_application_rejects) ... ok
+test_no_old_optimizer_and_no_input_mutation (tests.test_event_cluster_pipeline.PipelineTests.test_no_old_optimizer_and_no_input_mutation) ... ok
+test_old_warmup_is_not_silently_removed_by_new_history (tests.test_event_cluster_pipeline.PipelineTests.test_old_warmup_is_not_silently_removed_by_new_history) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 35.149s
+
+OK

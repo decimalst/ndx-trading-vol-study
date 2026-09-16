@@ -1,0 +1,16 @@
+{
+  "status": "VERIFIED",
+  "origins": 2190,
+  "policies": 7,
+  "geometries_per_structure": 160,
+  "geometry_rows": 10080,
+  "account_rows": 40320,
+  "winner_rows": 252,
+  "scope": "Independent intrinsic, event counts, all hypothetical capital accounts, and hindsight selections; no forecast calibration or actual fills.",
+  "original_anchor": {
+    "status": "VERIFIED",
+    "account_rows": 126,
+    "geometry_rows": 42,
+    "scope": "Unchanged200bps/100bps cases reproduce parent accounts, liability and event counts."
+  }
+}

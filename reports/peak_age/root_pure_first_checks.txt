@@ -1,0 +1,18 @@
+...............E....
+======================================================================
+ERROR: test_generated_inference_has_all_controls_phases_offsets_and_counts (tests.test_peak_age_search.SearchContracts.test_generated_inference_has_all_controls_phases_offsets_and_counts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_search.py", line 92, in test_generated_inference_has_all_controls_phases_offsets_and_counts
+    m=run.evaluate(panel,calendar,p,10,1205,prior=prior)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_search.py", line 332, in evaluate
+    pipeline.validate_panel(panel)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/peak_age_pipeline.py", line 83, in validate_panel
+    raise ValueError('Exact finite squared prediction error required')
+ValueError: Exact finite squared prediction error required
+
+----------------------------------------------------------------------
+Ran 20 tests in 1.729s
+
+FAILED (errors=1)

@@ -1,0 +1,110 @@
+study_id: model_memory_20260906
+specified_on: '2026-09-06'
+status: fixed_before_first_empirical_score
+evidence_class: exploratory_previously_inspected_history
+question: Can changed objectives, adaptation, smooth nonlinear effects, residual retrieval or online ensembles improve the same-data variance forecast?
+sample:
+  historical_forecast_start: '2013-02-01'
+  score_start: '2016-01-04'
+  score_end: '2025-10-10'
+  latest_target: '2025-10-20'
+  sealed_start: '2025-11-03'
+  horizons: [1, 5]
+  minimum_train: 500
+  refit: first eligible QQQ origin each calendar month
+  train_rule: origin strictly before refit AND target_end at or before refit
+  common_rows: all 12 baseline columns, four round2 candidate columns, and all 512 latent coordinates finite
+  target: arithmetic mean of next h complete GK-plus-raw-overnight variances
+  decision_time: idealized QQQ close at 16:00 ET; Cboe daily observations delayed one session
+inputs:
+  features: data/orthogonal_round2/features.parquet
+  latents: data/representation_study/latent_embeddings.parquet
+  parent_code: src/orthogonal_round2.py
+baseline_columns: [const, lrv_d, lrv_w, lrv_m, lev_d, lev_w, lev_m, liv, lvix, term, xasset_stress, market_stress]
+component_models: [baseline, gamma, adaptive_ols, adaptive_gamma, ridge_gamma, spline_gamma]
+models: [baseline, gamma, adaptive_ols, adaptive_gamma, ridge_gamma, spline_gamma, global_calibration, observable_memory, latent_memory, equal_ensemble, dynamic_ensemble]
+estimators:
+  ols: log-target OLS, model-specific exact Duan smearing; adaptive variant weights both regression and smearing
+  gamma: positive mean variance via Gamma/log-link; unpenalized alpha=0, no smearing
+  adaptive_half_life_sessions: 252
+  ages: actual QQQ session distance from fit origin to training row
+  gamma_solver: newton-cholesky
+  gamma_max_iter: 2000
+  gamma_tol: 0.00000001
+  gamma_numerical_conditioning: divide training target by its training median, fit unchanged Gamma objective, then restore the variance-unit intercept
+  convergence: warnings or nonconvergence are errors, no silent model substitution
+  scaling: training-only population mean/std; reject zero-scale predictors
+  ridge_alpha: 0.01
+  spline:
+    variables: [lrv_d, lrv_w, lrv_m, liv, lvix, term]
+    degree: 3
+    knots: 4 training quantiles
+    include_bias: false
+    extrapolation: linear
+    remaining_columns: unchanged standardized predictors
+    final_scaling: standardize complete resulting basis using training rows only
+    alpha: 0.01
+    control: ridge_gamma
+memory:
+  values: actual variance / baseline prediction made at that historical origin; never today's in-sample residuals
+  lookback_sessions: 1260
+  additional_gap_after_target_sessions: 22
+  min_records: 252
+  neighbors: 64
+  neighbor_ties: stable chronological record order
+  distance: squared Euclidean, equal weights across selected neighbors
+  correction: baseline * (0.75 + 0.25 * mean eligible actual/forecast ratios)
+  correction_caps: none; positive ratios and convex shrinkage preserve positivity
+  shrinkage: 0.25
+  transform_refit: first scoring origin of each month, fit eligible memory rows at that origin only
+  observable_keys: 11 nonconstant baseline features standardized with train-only mean/std
+  latent_keys: 512 cached TiRex coordinates centered using eligible memory rows, exact PCA top8, no whitening
+  pca_components: 8
+  pca_scale: divide all retained scores by sqrt(sum of retained sample-covariance eigenvalues)
+  pca_map: apply the same monthly transform to every historical key and current query; no mixed versions
+  global_control: same eligible pool and shrinkage, all records equally weighted
+  insufficient_records: fail closed, never change neighbor count
+ensemble:
+  experts: all six component models
+  equal_control: arithmetic mean variance forecast
+  memory: only completed historical component forecasts, no future targets
+  lookback_sessions: 252
+  min_records: 126
+  half_life_sessions: 63
+  loss: QLIKE
+  weights: 0.1/6 + 0.9 * softmax(-5 * exponentially_weighted_mean_losses)
+  temperature: 5
+  equal_weight_floor: 0.1
+  update: each origin, using targets completed by that origin
+comparisons:
+  primary: each of 10 nonbaseline models versus baseline
+  mechanisms:
+    - [adaptive_gamma, gamma]
+    - [spline_gamma, ridge_gamma]
+    - [observable_memory, global_calibration]
+    - [latent_memory, global_calibration]
+    - [latent_memory, observable_memory]
+    - [dynamic_ensemble, equal_ensemble]
+  total_hypotheses: 32
+inference:
+  loss: paired QLIKE
+  blocks: [21, 63, 126]
+  bootstrap_draws: 4999
+  seed: 20260907
+  p: maximum centered-null two-sided bootstrap p across three block lengths and Bartlett HAC126
+  multiplicity: Holm across all32 prespecified contrasts, retaining p=1 for non-evaluable contrasts
+  stability_periods: [['2016-01-04', '2019-12-31'], ['2020-01-01', '2022-12-31'], ['2023-01-01', '2025-10-10']]
+  primary_shortlist: Holm p<0.05, improvement>=1%, negative loss difference in all three periods
+  mechanism_claim: corresponding mechanism contrast independently clears same Holm family; report estimate and uncertainty regardless
+  ensemble_claim: must also beat best component full-sample point estimate; no claim that static best was selected prospectively
+  labels: EXPLORATORY_SHORTLIST or INCONCLUSIVE or INSUFFICIENT_DATA
+  report: all arms, all contrasts, years, periods, five nonoverlapping sampling phases, 95% interval envelope, nominal HAC MDE
+  calibration: reuse independently tested parent paired-loss primitives and parent AR1 calibration; no claim of exact market-data coverage
+outputs:
+  data: data/model_memory_study
+  reports: reports/model_memory_study
+restrictions:
+  - no tuning after first scores, no new model permutations based on results
+  - old protocols and existing outputs immutable, new study isolated
+  - cache causality does not establish checkpoint pretraining cleanliness
+  - all statements exploratory on reused market history; no equivalence or trading-profit claim

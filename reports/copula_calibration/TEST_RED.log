@@ -1,0 +1,22 @@
+Prewritten generated contracts; producer module absent at first execution.
+test_copula_calibration (unittest.loader._FailedTest.test_copula_calibration) ... ERROR
+
+======================================================================
+ERROR: test_copula_calibration (unittest.loader._FailedTest.test_copula_calibration)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_copula_calibration
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_calibration.py", line 17, in <module>
+    from src.copula_calibration import (
+ModuleNotFoundError: No module named 'src.copula_calibration'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+
+exit_code=1

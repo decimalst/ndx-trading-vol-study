@@ -1,0 +1,21 @@
+FIRST IMPLEMENTATION: generated data only
+Command: .venv/bin/python -m unittest tests.test_precision_gate -v
+src/precision_gate.py SHA256 da099a4b12f7df1abff687e507b11d72edda3985bf22230622c2344627804e59
+tests/test_precision_gate.py SHA256 0c60c0e292b8e5f5d1b56c1f1eec42f507ccec14d8aafa4de948142b5ca0ffba
+Exit status: 0
+test_analytic_gradient_hessian_and_exact_qlike_offset (tests.test_precision_gate.PrecisionGateTests.test_analytic_gradient_hessian_and_exact_qlike_offset) ... ok
+test_audit_reconstruction_input_preservation_and_application_independence (tests.test_precision_gate.PrecisionGateTests.test_audit_reconstruction_input_preservation_and_application_independence) ... ok
+test_bad_coefficients_and_prediction_shapes_rejected (tests.test_precision_gate.PrecisionGateTests.test_bad_coefficients_and_prediction_shapes_rejected) ... ok
+test_bad_inputs_flags_and_unrepresentable_ratios_rejected (tests.test_precision_gate.PrecisionGateTests.test_bad_inputs_flags_and_unrepresentable_ratios_rejected) ... ok
+test_boundary_and_identical_expert_optima (tests.test_precision_gate.PrecisionGateTests.test_boundary_and_identical_expert_optima) ... ok
+test_common_units_and_row_permutation (tests.test_precision_gate.PrecisionGateTests.test_common_units_and_row_permutation) ... ok
+test_constant_is_exactly_nested_with_correct_penalty_and_gradient (tests.test_precision_gate.PrecisionGateTests.test_constant_is_exactly_nested_with_correct_penalty_and_gradient) ... ok
+test_exact_optimizer_contract_no_failure_or_stationarity_fallback (tests.test_precision_gate.PrecisionGateTests.test_exact_optimizer_contract_no_failure_or_stationarity_fallback) ... ok
+test_harmonic_endpoints_bounds_and_tiny_ratio_cancellation (tests.test_precision_gate.PrecisionGateTests.test_harmonic_endpoints_bounds_and_tiny_ratio_cancellation) ... ok
+test_independently_constructed_interior_optimum (tests.test_precision_gate.PrecisionGateTests.test_independently_constructed_interior_optimum) ... ok
+test_scalar_brent_and_separate_constrained_solver_oracles (tests.test_precision_gate.PrecisionGateTests.test_scalar_brent_and_separate_constrained_solver_oracles) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.015s
+
+OK

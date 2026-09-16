@@ -1,0 +1,65 @@
+test_all_unevaluable_hypotheses_retained (tests.test_causal_pool_search.CausalPoolSearch.test_all_unevaluable_hypotheses_retained) ... ok
+test_application_origins_ignore_query_labels_and_keep_feature_gaps_explicit (tests.test_causal_pool_search.CausalPoolSearch.test_application_origins_ignore_query_labels_and_keep_feature_gaps_explicit) ... ok
+test_both_controls_both_effects_and_strict_p_and_stability (tests.test_causal_pool_search.CausalPoolSearch.test_both_controls_both_effects_and_strict_p_and_stability) ... ok
+test_brier_factored_difference_and_endpoint_truth (tests.test_causal_pool_search.CausalPoolSearch.test_brier_factored_difference_and_endpoint_truth) ... ok
+test_declared_training_and_phase_fences_precede_inference (tests.test_causal_pool_search.CausalPoolSearch.test_declared_training_and_phase_fences_precede_inference) ... ok
+test_fixed_contract_and_family (tests.test_causal_pool_search.CausalPoolSearch.test_fixed_contract_and_family) ... ok
+test_four_phases_complete_accounting_and_support (tests.test_causal_pool_search.CausalPoolSearch.test_four_phases_complete_accounting_and_support) ... ERROR
+test_mde_uses_probability_effect_not_prior_product_effect (tests.test_causal_pool_search.CausalPoolSearch.test_mde_uses_probability_effect_not_prior_product_effect) ... ok
+test_no_relaxed_timing_support_models_numerics_or_family (tests.test_causal_pool_search.CausalPoolSearch.test_no_relaxed_timing_support_models_numerics_or_family) ... ok
+test_support_checks_precede_every_inference_call (tests.test_causal_pool_search.CausalPoolSearch.test_support_checks_precede_every_inference_call) ... FAIL
+test_target_measurement_and_source_contract_are_literal (tests.test_causal_pool_search.CausalPoolSearch.test_target_measurement_and_source_contract_are_literal) ... ok
+test_true_next_session_label_cannot_cross_development_boundary (tests.test_causal_pool_search.CausalPoolSearch.test_true_next_session_label_cannot_cross_development_boundary) ... FAIL
+test_unknown_or_missing_protocol_section_rejected (tests.test_causal_pool_search.CausalPoolSearch.test_unknown_or_missing_protocol_section_rejected) ... ok
+test_failed_admission (tests.test_causal_pool_publication.CausalPoolPublication.test_failed_admission) ... ok
+test_failed_report (tests.test_causal_pool_publication.CausalPoolPublication.test_failed_report) ... ok
+test_inherited_json_pin_is_checked_before_decode (tests.test_causal_pool_publication.CausalPoolPublication.test_inherited_json_pin_is_checked_before_decode) ... ok
+test_input_bytes_checked_before_decode_and_one_snapshot (tests.test_causal_pool_publication.CausalPoolPublication.test_input_bytes_checked_before_decode_and_one_snapshot) ... ok
+test_nonfinite_metrics_keep_terminal_ledger (tests.test_causal_pool_publication.CausalPoolPublication.test_nonfinite_metrics_keep_terminal_ledger) ... ok
+test_partial_evaluation (tests.test_causal_pool_publication.CausalPoolPublication.test_partial_evaluation) ... ok
+test_partial_registration (tests.test_causal_pool_publication.CausalPoolPublication.test_partial_registration) ... ok
+test_protocol_changed_during_pretests_prevents_registration (tests.test_causal_pool_publication.CausalPoolPublication.test_protocol_changed_during_pretests_prevents_registration) ... ok
+test_protocol_mutation (tests.test_causal_pool_publication.CausalPoolPublication.test_protocol_mutation) ... ok
+test_source_changed_after_admission (tests.test_causal_pool_publication.CausalPoolPublication.test_source_changed_after_admission) ... ok
+
+======================================================================
+ERROR: test_four_phases_complete_accounting_and_support (tests.test_causal_pool_search.CausalPoolSearch.test_four_phases_complete_accounting_and_support)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_search.py", line 259, in test_four_phases_complete_accounting_and_support
+    m = study.evaluate(rows, calendar, protocol())
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/causal_pool_search.py", line 362, in evaluate
+    cm.validate_panel(panel)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/causal_pool_models.py", line 76, in validate_panel
+    raise ValueError("Issued pool differs from exact separate half-weight sum")
+ValueError: Issued pool differs from exact separate half-weight sum
+
+======================================================================
+FAIL: test_support_checks_precede_every_inference_call (tests.test_causal_pool_search.CausalPoolSearch.test_support_checks_precede_every_inference_call)
+----------------------------------------------------------------------
+ValueError: Issued pool differs from exact separate half-weight sum
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_search.py", line 203, in test_support_checks_precede_every_inference_call
+    with (
+AssertionError: "INSUFFICIENT_DATA" does not match "Issued pool differs from exact separate half-weight sum"
+
+======================================================================
+FAIL: test_true_next_session_label_cannot_cross_development_boundary (tests.test_causal_pool_search.CausalPoolSearch.test_true_next_session_label_cannot_cross_development_boundary)
+----------------------------------------------------------------------
+ValueError: Issued pool differs from exact separate half-weight sum
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_search.py", line 235, in test_true_next_session_label_cannot_cross_development_boundary
+    with (
+AssertionError: "development/evaluation fences" does not match "Issued pool differs from exact separate half-weight sum"
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.783s
+
+FAILED (failures=2, errors=1)

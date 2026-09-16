@@ -1,0 +1,41 @@
+EEEE
+======================================================================
+ERROR: test_duplicate_json_keys_and_symlink_are_rejected (tests.test_verify_issued_calibration.IndependentAdmissionContracts.test_duplicate_json_keys_and_symlink_are_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_issued_calibration.py", line 150, in test_duplicate_json_keys_and_symlink_are_rejected
+    with self.assertRaises(ValueError):v.strict_json(b'{"a":1,"a":2}')
+                                       ^^^^^^^^^^^^^
+AttributeError: module 'src.verify_issued_calibration' has no attribute 'strict_json'
+
+======================================================================
+ERROR: test_full_metadata_closure_and_same_byte_loaded_outputs (tests.test_verify_issued_calibration.IndependentAdmissionContracts.test_full_metadata_closure_and_same_byte_loaded_outputs)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_issued_calibration.py", line 126, in test_full_metadata_closure_and_same_byte_loaded_outputs
+    audit,snapshots=v.collect_closure(r,fixture.expected)
+                    ^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_issued_calibration' has no attribute 'collect_closure'
+
+======================================================================
+ERROR: test_missing_registered_pin_stops_before_parquet_decoding (tests.test_verify_issued_calibration.IndependentAdmissionContracts.test_missing_registered_pin_stops_before_parquet_decoding)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_issued_calibration.py", line 140, in test_missing_registered_pin_stops_before_parquet_decoding
+    v.admit_upstream(r,fixture.expected,{})
+    ^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_issued_calibration' has no attribute 'admit_upstream'
+
+======================================================================
+ERROR: test_old_transitive_hash_or_success_identity_tamper_rejects (tests.test_verify_issued_calibration.IndependentAdmissionContracts.test_old_transitive_hash_or_success_identity_tamper_rejects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_issued_calibration.py", line 147, in test_old_transitive_hash_or_success_identity_tamper_rejects
+    with self.assertRaises(AssertionError):v.collect_closure(r,fixture.expected)
+                                           ^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_issued_calibration' has no attribute 'collect_closure'
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.059s
+
+FAILED (errors=4)

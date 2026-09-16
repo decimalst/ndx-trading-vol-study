@@ -1,0 +1,44 @@
+{
+  "status": "SOURCE_AND_FEATURE_COMPATIBILITY_ONLY_NO_FITS",
+  "feature_rows": 4226,
+  "raw_numeric_columns": 15,
+  "feature_cells": 63390,
+  "target_horizons": [
+    21,
+    63
+  ],
+  "target_cells": 8452,
+  "max_feature_absolute_difference": 1.8145207558717402e-15,
+  "market_sources": {
+    "daily": {
+      "source_path": "/Users/byrons/code/trading-vol/ndx-vol-experiment/data/research_paths/spx_daily.parquet",
+      "source_sha256": "3958fbb1eb36689df1596c26b9f0e02e3f1d4fa3b0032381e5287a2a03697bf0",
+      "bounded_rows": 4226,
+      "first_date": "2009-01-02",
+      "last_date": "2025-10-20"
+    },
+    "vix": {
+      "source_path": "/Users/byrons/code/trading-vol/ndx-vol-experiment/data/free_sources/raw/cboe/VIX_History.csv",
+      "source_sha256": "a34aabce269632f30904cf482986dd50b6d4cf51f2203dc51a0a9f460f3c90b2",
+      "bounded_rows": 9040,
+      "first_date": "1990-01-02",
+      "last_date": "2025-10-20"
+    },
+    "vix9d": {
+      "source_path": "/Users/byrons/code/trading-vol/ndx-vol-experiment/data/free_sources/raw/cboe/VIX9D_History.csv",
+      "source_sha256": "0d6f600ee71bf6ffb5069d0c583cbe0b1ec97df6da4e4e439d5f0f22f5616abe",
+      "bounded_rows": 3721,
+      "first_date": "2011-01-04",
+      "last_date": "2025-10-20"
+    },
+    "vvix": {
+      "source_path": "/Users/byrons/code/trading-vol/ndx-vol-experiment/data/free_sources/raw/cboe/VVIX_History.csv",
+      "source_sha256": "f6bc726455fa3859c662875a005e97ba656b9536ae58fa6977ad24c6228e4f6a",
+      "bounded_rows": 4878,
+      "first_date": "2006-03-06",
+      "last_date": "2025-10-20"
+    }
+  },
+  "target_and_cutoff_dates_equal": true,
+  "protocol_sha256": "8268ef87b62afa3296ee97817146356070ea672e3cab914e3eb61f344e779ed0"
+}

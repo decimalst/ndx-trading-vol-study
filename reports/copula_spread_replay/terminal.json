@@ -1,0 +1,23 @@
+{
+  "status": "COMPLETED_VERIFIED_DESCRIPTIVE_PROBABILITY_REPLAY",
+  "completed_utc": "2026-09-13T22:10:00.617273+00:00",
+  "new_hypotheses": 0,
+  "cumulative_hypotheses": 164,
+  "leads": [],
+  "original_failed_terminal_sha256": "9f7a1ef5d19c16305f708aaa9bf8ce832c6de8d8e13ca73b9c4899a66e385a0c",
+  "output_hashes": {
+    "reports/copula_spread_replay/started.json": "e0aa3b225c9f450ae12d601ac73bebc14a00acabac9201fb59421c4378475594",
+    "data/model_memory_study/copula_spread_replay/positions.parquet": "562ad6fa0346808506e2d2b0859d839ea025dfeeb1e449f51195ab1c65d9a704",
+    "data/model_memory_study/copula_spread_replay/path.parquet": "28803e5739398b18858b09ddc21936d899cdf8cfac91161af16a8756a730733b",
+    "data/model_memory_study/copula_spread_replay/summary.parquet": "4232bba71551ba96bc7ae1893c65af28cc7cf11b6d4f04d2cc263fe53e2ff00e",
+    "data/model_memory_study/copula_spread_replay/outcomes.parquet": "266c8bcd0424618713354b280356b246e040e1c68447da6b49846ba8d0184df7",
+    "reports/copula_spread_replay/accounting_verification.json": "6af44a802906b20c3b407d29e81024c07820b0c053d12d2501cfa3c937feeecf",
+    "data/model_memory_study/copula_spread_replay/safety_summary.parquet": "0574957139b8d004e1271128d1e81722290f27160cb953a28c8b9acac3984bef",
+    "reports/copula_spread_replay/density_descriptions.json": "6a8bb53c7f340f4e53ea4436a3ce9f0a37121b199ce22d780c6dd00b59b968b4"
+  },
+  "anchors": {
+    "reports/copula_spread_replay/freeze.json": "7d96b280283fa2ea88c7778d52bb57f6a13d15a4bfc10daa3a5f5277286ef31f",
+    "reports/copula_spread_replay/registration.json": "f9ffbd3d870fe06c3ea2c9dec45337889fdbe2861e2ff80c65fd4ef5f1ef9427"
+  },
+  "scope": "Expiration-liability safety and hypothetical-credit accounting only; no ES/VaR estimates, new model fits, sampling or inference."
+}

@@ -1,0 +1,32 @@
+E.EE
+======================================================================
+ERROR: test_anchor_closure_identity_and_no_prior_writes (tests.test_verify_range_alert.SourceClosureContracts.test_anchor_closure_identity_and_no_prior_writes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_range_alert.py", line 186, in test_anchor_closure_identity_and_no_prior_writes
+    proof=v.admit_anchor(rootdir,info)
+          ^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_range_alert' has no attribute 'admit_anchor'
+
+======================================================================
+ERROR: test_inherited_json_snapshot_rejects_tamper_and_nan (tests.test_verify_range_alert.SourceClosureContracts.test_inherited_json_snapshot_rejects_tamper_and_nan)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_range_alert.py", line 204, in test_inherited_json_snapshot_rejects_tamper_and_nan
+    with self.assertRaises(AssertionError):v.inherited_rows(rootdir,p,pins={'metrics.json':'0'*64})
+                                           ^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_range_alert' has no attribute 'inherited_rows'
+
+======================================================================
+ERROR: test_source_same_bytes_before_decode_and_no_decoder_on_tamper (tests.test_verify_range_alert.SourceClosureContracts.test_source_same_bytes_before_decode_and_no_decoder_on_tamper)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_range_alert.py", line 197, in test_source_same_bytes_before_decode_and_no_decoder_on_tamper
+    v.load_source_tables(rootdir,p,{'inputs':{'raw':'0'*64}})
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_range_alert' has no attribute 'load_source_tables'
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.009s
+
+FAILED (errors=3)

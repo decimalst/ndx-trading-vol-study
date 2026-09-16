@@ -1,0 +1,680 @@
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_admission.py:193:51
+    |
+191 |         for expected in variants:
+192 |             with self.subTest(expected=expected), patch.object(pd,'read_parquet') as decode:
+193 |                 with self.assertRaises(ValueError): source.admit_upstream(self.root,expected)
+    |                                                   ^
+194 |                 decode.assert_not_called()
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:198:34
+    |
+196 |     def test_tampered_raw_or_nested_preserved_file_fails_before_decode(self):
+197 |         for name in [SOURCES['daily'],SOURCES['vvix'],'private/wave20/outside.bin']:
+198 |             path = self.root/name; before=path.read_bytes(); path.write_bytes(before+b'tampered')
+    |                                  ^
+199 |             with self.subTest(name=name), patch.object(pd,'read_parquet') as decode:
+200 |                 with self.assertRaises(ValueError): source.admit_upstream(self.root,self.f.expected)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:198:60
+    |
+196 |     def test_tampered_raw_or_nested_preserved_file_fails_before_decode(self):
+197 |         for name in [SOURCES['daily'],SOURCES['vvix'],'private/wave20/outside.bin']:
+198 |             path = self.root/name; before=path.read_bytes(); path.write_bytes(before+b'tampered')
+    |                                                            ^
+199 |             with self.subTest(name=name), patch.object(pd,'read_parquet') as decode:
+200 |                 with self.assertRaises(ValueError): source.admit_upstream(self.root,self.f.expected)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_admission.py:200:51
+    |
+198 |             path = self.root/name; before=path.read_bytes(); path.write_bytes(before+b'tampered')
+199 |             with self.subTest(name=name), patch.object(pd,'read_parquet') as decode:
+200 |                 with self.assertRaises(ValueError): source.admit_upstream(self.root,self.f.expected)
+    |                                                   ^
+201 |                 decode.assert_not_called()
+202 |             path.write_bytes(before)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:207:25
+    |
+205 |         pins=source.collect_input_pins(self.root,self.f.expected)
+206 |         for name in [SOURCES['daily'],REPORT+'verification.json','private/older/artifact.bin']:
+207 |             p=dict(pins); p.pop(name)
+    |                         ^
+208 |             with self.subTest(name=name),patch.object(pd,'read_parquet') as decode:
+209 |                 with self.assertRaises(ValueError): source.admit_upstream(self.root,self.f.expected,p)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_admission.py:209:51
+    |
+207 |             p=dict(pins); p.pop(name)
+208 |             with self.subTest(name=name),patch.object(pd,'read_parquet') as decode:
+209 |                 with self.assertRaises(ValueError): source.admit_upstream(self.root,self.f.expected,p)
+    |                                                   ^
+210 |                 decode.assert_not_called()
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_admission.py:216:30
+    |
+214 |         for kind in ['status','family','verifier','output']:
+215 |             v=copy.deepcopy(original)
+216 |             if kind=='status': v['status']='FAILED'
+    |                              ^
+217 |             elif kind=='family': v['inference']['cumulative_hypotheses_verified']=True
+218 |             elif kind=='verifier': v['verifier_sha256']='a'*64
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_admission.py:217:32
+    |
+215 |             v=copy.deepcopy(original)
+216 |             if kind=='status': v['status']='FAILED'
+217 |             elif kind=='family': v['inference']['cumulative_hypotheses_verified']=True
+    |                                ^
+218 |             elif kind=='verifier': v['verifier_sha256']='a'*64
+219 |             else: v['verified_output_hashes'].pop(OUTPUTS[0])
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_admission.py:218:34
+    |
+216 |             if kind=='status': v['status']='FAILED'
+217 |             elif kind=='family': v['inference']['cumulative_hypotheses_verified']=True
+218 |             elif kind=='verifier': v['verifier_sha256']='a'*64
+    |                                  ^
+219 |             else: v['verified_output_hashes'].pop(OUTPUTS[0])
+220 |             self.f.put(REPORT+'verification.json',v)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_admission.py:219:17
+    |
+217 |             elif kind=='family': v['inference']['cumulative_hypotheses_verified']=True
+218 |             elif kind=='verifier': v['verifier_sha256']='a'*64
+219 |             else: v['verified_output_hashes'].pop(OUTPUTS[0])
+    |                 ^
+220 |             self.f.put(REPORT+'verification.json',v)
+221 |             self.f.seal_replay()
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:224:78
+    |
+222 | …     # seal repairs output map, so remove it once more and rebind only publication.
+223 | …     if kind=='output':
+224 | …         v=copy.deepcopy(self.f.documents[REPORT+'verification.json']);v['verified_output_hashes'].pop(OUTPUTS[0]);self.f.put(REPORT…
+    |                                                                        ^
+225 | …         p=copy.deepcopy(self.f.documents[REPORT+'publication_audit.json']);p['verification_sha256']=self.f.hash(REPORT+'verificatio…
+226 | …     with self.subTest(kind=kind),self.assertRaises(ValueError): source.collect_input_pins(self.root,self.f.expected)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:224:122
+    |
+222 | …     # seal repairs output map, so remove it once more and rebind only publication.
+223 | …     if kind=='output':
+224 | …         v=copy.deepcopy(self.f.documents[REPORT+'verification.json']);v['verified_output_hashes'].pop(OUTPUTS[0]);self.f.put(REPORT…
+    |                                                                                                                    ^
+225 | …         p=copy.deepcopy(self.f.documents[REPORT+'publication_audit.json']);p['verification_sha256']=self.f.hash(REPORT+'verificatio…
+226 | …     with self.subTest(kind=kind),self.assertRaises(ValueError): source.collect_input_pins(self.root,self.f.expected)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:225:83
+    |
+223 | …     if kind=='output':
+224 | …         v=copy.deepcopy(self.f.documents[REPORT+'verification.json']);v['verified_output_hashes'].pop(OUTPUTS[0]);self.f.put(REPORT…
+225 | …         p=copy.deepcopy(self.f.documents[REPORT+'publication_audit.json']);p['verification_sha256']=self.f.hash(REPORT+'verificatio…
+    |                                                                             ^
+226 | …     with self.subTest(kind=kind),self.assertRaises(ValueError): source.collect_input_pins(self.root,self.f.expected)
+227 | …     self.f.put(REPORT+'verification.json',original);self.f.seal_replay()
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:225:148
+    |
+223 | …
+224 | …erified_output_hashes'].pop(OUTPUTS[0]);self.f.put(REPORT+'verification.json',v)
+225 | …;p['verification_sha256']=self.f.hash(REPORT+'verification.json');p['report_artifact_hashes']['verification.json']=p['verification_s…
+    |                                                                   ^
+226 | …lect_input_pins(self.root,self.f.expected)
+227 | …
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:225:222
+    |
+223 | …
+224 | …on',v)
+225 | …t_artifact_hashes']['verification.json']=p['verification_sha256'];p['verified_output_hashes']=v['verified_output_hashes'];self.f.put…
+    |                                                                   ^
+226 | …
+227 | …
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:225:278
+    |
+223 | …
+224 | …
+225 | …_sha256'];p['verified_output_hashes']=v['verified_output_hashes'];self.f.put(REPORT+'publication_audit.json',p);self.f.expected=self…
+    |                                                                   ^
+226 | …
+227 | …
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:225:324
+    |
+223 | …
+224 | …
+225 | …ied_output_hashes'];self.f.put(REPORT+'publication_audit.json',p);self.f.expected=self.f.pins(*source.ANCHOR_PATHS)
+    |                                                                   ^
+226 | …
+227 | …
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_admission.py:226:71
+    |
+224 | …         v=copy.deepcopy(self.f.documents[REPORT+'verification.json']);v['verified_output_hashes'].pop(OUTPUTS[0]);self.f.put(REPORT…
+225 | …         p=copy.deepcopy(self.f.documents[REPORT+'publication_audit.json']);p['verification_sha256']=self.f.hash(REPORT+'verificatio…
+226 | …     with self.subTest(kind=kind),self.assertRaises(ValueError): source.collect_input_pins(self.root,self.f.expected)
+    |                                                                 ^
+227 | …     self.f.put(REPORT+'verification.json',original);self.f.seal_replay()
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:227:60
+    |
+225 |                 p=copy.deepcopy(self.f.documents[REPORT+'publication_audit.json']);p['verification_sha256']=self.f.hash(REPORT+'verif…
+226 |             with self.subTest(kind=kind),self.assertRaises(ValueError): source.collect_input_pins(self.root,self.f.expected)
+227 |             self.f.put(REPORT+'verification.json',original);self.f.seal_replay()
+    |                                                            ^
+228 |
+229 |     def test_wave21_canonical_ledger_roles_and_counts(self):
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:230:41
+    |
+229 |     def test_wave21_canonical_ledger_roles_and_counts(self):
+230 |         name=REPORT+'trial_ledger.jsonl';before=(self.root/name).read_bytes()
+    |                                         ^
+231 |         lines=before.splitlines(); row=json.loads(lines[3]);row['event']='evaluated';lines[3]=json.dumps(row).encode()
+232 |         self.f.put(name,b'\n'.join(lines)+b'\n');self.f.seal_replay()
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:231:34
+    |
+229 |     def test_wave21_canonical_ledger_roles_and_counts(self):
+230 |         name=REPORT+'trial_ledger.jsonl';before=(self.root/name).read_bytes()
+231 |         lines=before.splitlines(); row=json.loads(lines[3]);row['event']='evaluated';lines[3]=json.dumps(row).encode()
+    |                                  ^
+232 |         self.f.put(name,b'\n'.join(lines)+b'\n');self.f.seal_replay()
+233 |         with self.assertRaises(ValueError):source.collect_input_pins(self.root,self.f.expected)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:231:60
+    |
+229 |     def test_wave21_canonical_ledger_roles_and_counts(self):
+230 |         name=REPORT+'trial_ledger.jsonl';before=(self.root/name).read_bytes()
+231 |         lines=before.splitlines(); row=json.loads(lines[3]);row['event']='evaluated';lines[3]=json.dumps(row).encode()
+    |                                                            ^
+232 |         self.f.put(name,b'\n'.join(lines)+b'\n');self.f.seal_replay()
+233 |         with self.assertRaises(ValueError):source.collect_input_pins(self.root,self.f.expected)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:231:85
+    |
+229 |     def test_wave21_canonical_ledger_roles_and_counts(self):
+230 |         name=REPORT+'trial_ledger.jsonl';before=(self.root/name).read_bytes()
+231 |         lines=before.splitlines(); row=json.loads(lines[3]);row['event']='evaluated';lines[3]=json.dumps(row).encode()
+    |                                                                                     ^
+232 |         self.f.put(name,b'\n'.join(lines)+b'\n');self.f.seal_replay()
+233 |         with self.assertRaises(ValueError):source.collect_input_pins(self.root,self.f.expected)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:232:49
+    |
+230 |         name=REPORT+'trial_ledger.jsonl';before=(self.root/name).read_bytes()
+231 |         lines=before.splitlines(); row=json.loads(lines[3]);row['event']='evaluated';lines[3]=json.dumps(row).encode()
+232 |         self.f.put(name,b'\n'.join(lines)+b'\n');self.f.seal_replay()
+    |                                                 ^
+233 |         with self.assertRaises(ValueError):source.collect_input_pins(self.root,self.f.expected)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_admission.py:233:43
+    |
+231 |         lines=before.splitlines(); row=json.loads(lines[3]);row['event']='evaluated';lines[3]=json.dumps(row).encode()
+232 |         self.f.put(name,b'\n'.join(lines)+b'\n');self.f.seal_replay()
+233 |         with self.assertRaises(ValueError):source.collect_input_pins(self.root,self.f.expected)
+    |                                           ^
+234 |
+235 |     def test_required_old_failure_and_success_failure_absence(self):
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:237:56
+    |
+235 |     def test_required_old_failure_and_success_failure_absence(self):
+236 |         for report in ['range_alert','issued_calibration','event_cluster_replay','index_hinge']:
+237 |             p=self.root/'reports'/report/'failure.json';p.write_bytes(b'{}')
+    |                                                        ^
+238 |             with self.subTest(report=report),self.assertRaises(ValueError):source.collect_input_pins(self.root,self.f.expected)
+239 |             p.unlink()
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_admission.py:238:75
+    |
+236 |         for report in ['range_alert','issued_calibration','event_cluster_replay','index_hinge']:
+237 |             p=self.root/'reports'/report/'failure.json';p.write_bytes(b'{}')
+238 |             with self.subTest(report=report),self.assertRaises(ValueError):source.collect_input_pins(self.root,self.f.expected)
+    |                                                                           ^
+239 |             p.unlink()
+240 |         p=self.root/'reports/event_cluster/failure.json';p.unlink()
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:240:57
+    |
+238 |             with self.subTest(report=report),self.assertRaises(ValueError):source.collect_input_pins(self.root,self.f.expected)
+239 |             p.unlink()
+240 |         p=self.root/'reports/event_cluster/failure.json';p.unlink()
+    |                                                         ^
+241 |         with self.assertRaises((ValueError,FileNotFoundError)):source.collect_input_pins(self.root,self.f.expected)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_admission.py:241:63
+    |
+239 |             p.unlink()
+240 |         p=self.root/'reports/event_cluster/failure.json';p.unlink()
+241 |         with self.assertRaises((ValueError,FileNotFoundError)):source.collect_input_pins(self.root,self.f.expected)
+    |                                                               ^
+242 |
+243 |     def test_symlink_sources_and_dangling_failure_markers_rejected(self):
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:244:30
+    |
+243 |     def test_symlink_sources_and_dangling_failure_markers_rejected(self):
+244 |         name=SOURCES['daily'];p=self.root/name;target=self.root/'duplicate.parquet';p.rename(target);p.symlink_to(target)
+    |                              ^
+245 |         with self.assertRaises(ValueError):source.collect_input_pins(self.root,self.f.expected)
+246 |         p.unlink();target.rename(p)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:244:47
+    |
+243 |     def test_symlink_sources_and_dangling_failure_markers_rejected(self):
+244 |         name=SOURCES['daily'];p=self.root/name;target=self.root/'duplicate.parquet';p.rename(target);p.symlink_to(target)
+    |                                               ^
+245 |         with self.assertRaises(ValueError):source.collect_input_pins(self.root,self.f.expected)
+246 |         p.unlink();target.rename(p)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:244:84
+    |
+243 |     def test_symlink_sources_and_dangling_failure_markers_rejected(self):
+244 |         name=SOURCES['daily'];p=self.root/name;target=self.root/'duplicate.parquet';p.rename(target);p.symlink_to(target)
+    |                                                                                    ^
+245 |         with self.assertRaises(ValueError):source.collect_input_pins(self.root,self.f.expected)
+246 |         p.unlink();target.rename(p)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:244:101
+    |
+243 |     def test_symlink_sources_and_dangling_failure_markers_rejected(self):
+244 |         name=SOURCES['daily'];p=self.root/name;target=self.root/'duplicate.parquet';p.rename(target);p.symlink_to(target)
+    |                                                                                                     ^
+245 |         with self.assertRaises(ValueError):source.collect_input_pins(self.root,self.f.expected)
+246 |         p.unlink();target.rename(p)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_admission.py:245:43
+    |
+243 |     def test_symlink_sources_and_dangling_failure_markers_rejected(self):
+244 |         name=SOURCES['daily'];p=self.root/name;target=self.root/'duplicate.parquet';p.rename(target);p.symlink_to(target)
+245 |         with self.assertRaises(ValueError):source.collect_input_pins(self.root,self.f.expected)
+    |                                           ^
+246 |         p.unlink();target.rename(p)
+247 |         marker=self.root/(REPORT+'failure.json');marker.symlink_to(self.root/'absent')
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:246:19
+    |
+244 |         name=SOURCES['daily'];p=self.root/name;target=self.root/'duplicate.parquet';p.rename(target);p.symlink_to(target)
+245 |         with self.assertRaises(ValueError):source.collect_input_pins(self.root,self.f.expected)
+246 |         p.unlink();target.rename(p)
+    |                   ^
+247 |         marker=self.root/(REPORT+'failure.json');marker.symlink_to(self.root/'absent')
+248 |         with self.assertRaises(ValueError):source.collect_input_pins(self.root,self.f.expected)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:247:49
+    |
+245 |         with self.assertRaises(ValueError):source.collect_input_pins(self.root,self.f.expected)
+246 |         p.unlink();target.rename(p)
+247 |         marker=self.root/(REPORT+'failure.json');marker.symlink_to(self.root/'absent')
+    |                                                 ^
+248 |         with self.assertRaises(ValueError):source.collect_input_pins(self.root,self.f.expected)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_admission.py:248:43
+    |
+246 |         p.unlink();target.rename(p)
+247 |         marker=self.root/(REPORT+'failure.json');marker.symlink_to(self.root/'absent')
+248 |         with self.assertRaises(ValueError):source.collect_input_pins(self.root,self.f.expected)
+    |                                           ^
+249 |
+250 |     def test_in_cutoff_invalid_numbers_reject_while_post_cutoff_text_opaque(self):
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:251:28
+    |
+250 |     def test_in_cutoff_invalid_numbers_reject_while_post_cutoff_text_opaque(self):
+251 |         name=SOURCES['vix'];self.f.put(name,b'DATE,CLOSE\n10/17/2025,bad\n11/03/2025,protected\n');self.f.seal_replay()
+    |                            ^
+252 |         with self.assertRaises(ValueError):source.admit_upstream(self.root,self.f.expected)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:251:99
+    |
+250 |     def test_in_cutoff_invalid_numbers_reject_while_post_cutoff_text_opaque(self):
+251 |         name=SOURCES['vix'];self.f.put(name,b'DATE,CLOSE\n10/17/2025,bad\n11/03/2025,protected\n');self.f.seal_replay()
+    |                                                                                                   ^
+252 |         with self.assertRaises(ValueError):source.admit_upstream(self.root,self.f.expected)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_admission.py:252:43
+    |
+250 |     def test_in_cutoff_invalid_numbers_reject_while_post_cutoff_text_opaque(self):
+251 |         name=SOURCES['vix'];self.f.put(name,b'DATE,CLOSE\n10/17/2025,bad\n11/03/2025,protected\n');self.f.seal_replay()
+252 |         with self.assertRaises(ValueError):source.admit_upstream(self.root,self.f.expected)
+    |                                           ^
+253 |
+254 |     def test_nonpositive_observed_ohlc_rejected_missing_is_not_dropped(self):
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:255:34
+    |
+254 |     def test_nonpositive_observed_ohlc_rejected_missing_is_not_dropped(self):
+255 |         daily=self.f.daily.copy();daily.loc[daily.index[0],'close']=0.0
+    |                                  ^
+256 |         self.f.frame(SOURCES['daily'],daily);self.f.seal_replay()
+257 |         with self.assertRaises(ValueError):source.admit_upstream(self.root,self.f.expected)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:256:45
+    |
+254 |     def test_nonpositive_observed_ohlc_rejected_missing_is_not_dropped(self):
+255 |         daily=self.f.daily.copy();daily.loc[daily.index[0],'close']=0.0
+256 |         self.f.frame(SOURCES['daily'],daily);self.f.seal_replay()
+    |                                             ^
+257 |         with self.assertRaises(ValueError):source.admit_upstream(self.root,self.f.expected)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_admission.py:257:43
+    |
+255 |         daily=self.f.daily.copy();daily.loc[daily.index[0],'close']=0.0
+256 |         self.f.frame(SOURCES['daily'],daily);self.f.seal_replay()
+257 |         with self.assertRaises(ValueError):source.admit_upstream(self.root,self.f.expected)
+    |                                           ^
+258 |
+259 |     def test_unsorted_duplicate_subday_or_timezone_reference_rejected(self):
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:263:38
+    |
+261 |         for variant in [dates[[1,0,2,3]],pd.DatetimeIndex([dates[0],dates[0],dates[2],dates[3]],name='date'),
+262 |                         dates+pd.Timedelta(hours=1),dates.tz_localize('UTC')]:
+263 |             daily=self.f.daily.copy();daily.index=variant;self.f.frame(SOURCES['daily'],daily);self.f.seal_replay()
+    |                                      ^
+264 |             with self.subTest(variant=str(variant)),self.assertRaises((ValueError,TypeError)):
+265 |                 source.admit_upstream(self.root,self.f.expected)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:263:58
+    |
+261 |         for variant in [dates[[1,0,2,3]],pd.DatetimeIndex([dates[0],dates[0],dates[2],dates[3]],name='date'),
+262 |                         dates+pd.Timedelta(hours=1),dates.tz_localize('UTC')]:
+263 |             daily=self.f.daily.copy();daily.index=variant;self.f.frame(SOURCES['daily'],daily);self.f.seal_replay()
+    |                                                          ^
+264 |             with self.subTest(variant=str(variant)),self.assertRaises((ValueError,TypeError)):
+265 |                 source.admit_upstream(self.root,self.f.expected)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:263:95
+    |
+261 |         for variant in [dates[[1,0,2,3]],pd.DatetimeIndex([dates[0],dates[0],dates[2],dates[3]],name='date'),
+262 |                         dates+pd.Timedelta(hours=1),dates.tz_localize('UTC')]:
+263 |             daily=self.f.daily.copy();daily.index=variant;self.f.frame(SOURCES['daily'],daily);self.f.seal_replay()
+    |                                                                                               ^
+264 |             with self.subTest(variant=str(variant)),self.assertRaises((ValueError,TypeError)):
+265 |                 source.admit_upstream(self.root,self.f.expected)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:269:38
+    |
+267 |     def test_float64_contract_and_ms_us_ns_transport(self):
+268 |         for unit in ['ms','us','ns']:
+269 |             daily=self.f.daily.copy();daily.index=daily.index.as_unit(unit)
+    |                                      ^
+270 |             self.f.frame(SOURCES['daily'],daily);self.f.seal_replay()
+271 |             _,got,_=source.admit_upstream(self.root,self.f.expected)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:270:49
+    |
+268 |         for unit in ['ms','us','ns']:
+269 |             daily=self.f.daily.copy();daily.index=daily.index.as_unit(unit)
+270 |             self.f.frame(SOURCES['daily'],daily);self.f.seal_replay()
+    |                                                 ^
+271 |             _,got,_=source.admit_upstream(self.root,self.f.expected)
+272 |             self.assertEqual(got.index.dtype,daily.index.dtype)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:273:45
+    |
+271 |             _,got,_=source.admit_upstream(self.root,self.f.expected)
+272 |             self.assertEqual(got.index.dtype,daily.index.dtype)
+273 |         daily=self.f.daily.astype('float32');self.f.frame(SOURCES['daily'],daily);self.f.seal_replay()
+    |                                             ^
+274 |         with self.assertRaises(ValueError):source.admit_upstream(self.root,self.f.expected)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:273:82
+    |
+271 |             _,got,_=source.admit_upstream(self.root,self.f.expected)
+272 |             self.assertEqual(got.index.dtype,daily.index.dtype)
+273 |         daily=self.f.daily.astype('float32');self.f.frame(SOURCES['daily'],daily);self.f.seal_replay()
+    |                                                                                  ^
+274 |         with self.assertRaises(ValueError):source.admit_upstream(self.root,self.f.expected)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_admission.py:274:43
+    |
+272 |             self.assertEqual(got.index.dtype,daily.index.dtype)
+273 |         daily=self.f.daily.astype('float32');self.f.frame(SOURCES['daily'],daily);self.f.seal_replay()
+274 |         with self.assertRaises(ValueError):source.admit_upstream(self.root,self.f.expected)
+    |                                           ^
+275 |
+276 |     def test_reference_calendar_identity_changes_for_omitted_source_date(self):
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:278:80
+    |
+276 |     def test_reference_calendar_identity_changes_for_omitted_source_date(self):
+277 |         first,_,_=source.admit_upstream(self.root,self.f.expected)
+278 |         self.f.frame(SOURCES['daily'],self.f.daily.drop(self.f.daily.index[1]));self.f.seal_replay()
+    |                                                                                ^
+279 |         second,_,_=source.admit_upstream(self.root,self.f.expected)
+280 |         self.assertNotEqual(first['reference_calendar']['date_sequence_sha256'],second['reference_calendar']['date_sequence_sha256'])
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:286:48
+    |
+284 |     def test_source_manifest_hash_and_identity_checked_before_decode(self):
+285 |         name=SOURCES['vix']+'.manifest.json'
+286 |         m=copy.deepcopy(self.f.documents[name]);m['sha256']='a'*64;self.f.put(name,m)
+    |                                                ^
+287 |         manifest=copy.deepcopy(self.f.documents[REPORT+'manifest.json']);manifest['inputs'][name]=self.f.hash(name);self.f.put(REPORT…
+288 |         pub=copy.deepcopy(self.f.documents[REPORT+'publication_audit.json']);pub['manifest_sha256']=self.f.hash(REPORT+'manifest.json…
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:286:67
+    |
+284 |     def test_source_manifest_hash_and_identity_checked_before_decode(self):
+285 |         name=SOURCES['vix']+'.manifest.json'
+286 |         m=copy.deepcopy(self.f.documents[name]);m['sha256']='a'*64;self.f.put(name,m)
+    |                                                                   ^
+287 |         manifest=copy.deepcopy(self.f.documents[REPORT+'manifest.json']);manifest['inputs'][name]=self.f.hash(name);self.f.put(REPORT…
+288 |         pub=copy.deepcopy(self.f.documents[REPORT+'publication_audit.json']);pub['manifest_sha256']=self.f.hash(REPORT+'manifest.json…
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:287:73
+    |
+285 | …     name=SOURCES['vix']+'.manifest.json'
+286 | …     m=copy.deepcopy(self.f.documents[name]);m['sha256']='a'*64;self.f.put(name,m)
+287 | …     manifest=copy.deepcopy(self.f.documents[REPORT+'manifest.json']);manifest['inputs'][name]=self.f.hash(name);self.f.put(REPORT+'…
+    |                                                                       ^
+288 | …     pub=copy.deepcopy(self.f.documents[REPORT+'publication_audit.json']);pub['manifest_sha256']=self.f.hash(REPORT+'manifest.json')…
+289 | …     with patch.object(pd,'read_parquet') as decode:
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:287:116
+    |
+285 | …     name=SOURCES['vix']+'.manifest.json'
+286 | …     m=copy.deepcopy(self.f.documents[name]);m['sha256']='a'*64;self.f.put(name,m)
+287 | …     manifest=copy.deepcopy(self.f.documents[REPORT+'manifest.json']);manifest['inputs'][name]=self.f.hash(name);self.f.put(REPORT+'…
+    |                                                                                                                  ^
+288 | …     pub=copy.deepcopy(self.f.documents[REPORT+'publication_audit.json']);pub['manifest_sha256']=self.f.hash(REPORT+'manifest.json')…
+289 | …     with patch.object(pd,'read_parquet') as decode:
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:288:77
+    |
+286 | …     m=copy.deepcopy(self.f.documents[name]);m['sha256']='a'*64;self.f.put(name,m)
+287 | …     manifest=copy.deepcopy(self.f.documents[REPORT+'manifest.json']);manifest['inputs'][name]=self.f.hash(name);self.f.put(REPORT+'…
+288 | …     pub=copy.deepcopy(self.f.documents[REPORT+'publication_audit.json']);pub['manifest_sha256']=self.f.hash(REPORT+'manifest.json')…
+    |                                                                           ^
+289 | …     with patch.object(pd,'read_parquet') as decode:
+290 | …         with self.assertRaises(ValueError):source.admit_upstream(self.root,self.f.expected)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:288:136
+    |
+286 | …f.f.put(name,m)
+287 | …]);manifest['inputs'][name]=self.f.hash(name);self.f.put(REPORT+'manifest.json',manifest)
+288 | …son']);pub['manifest_sha256']=self.f.hash(REPORT+'manifest.json');pub['report_artifact_hashes']['manifest.json']=pub['manifest_sha25…
+    |                                                                   ^
+289 | …
+290 | …elf.root,self.f.expected)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:288:206
+    |
+286 | …
+287 | …est.json',manifest)
+288 | …'report_artifact_hashes']['manifest.json']=pub['manifest_sha256'];self.f.put(REPORT+'publication_audit.json',pub);self.f.expected=se…
+    |                                                                   ^
+289 | …
+290 | …
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:288:254
+    |
+286 | …
+287 | …
+288 | …manifest_sha256'];self.f.put(REPORT+'publication_audit.json',pub);self.f.expected=self.f.pins(*source.ANCHOR_PATHS)
+    |                                                                   ^
+289 | …
+290 | …
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_admission.py:290:47
+    |
+288 | …     pub=copy.deepcopy(self.f.documents[REPORT+'publication_audit.json']);pub['manifest_sha256']=self.f.hash(REPORT+'manifest.json')…
+289 | …     with patch.object(pd,'read_parquet') as decode:
+290 | …         with self.assertRaises(ValueError):source.admit_upstream(self.root,self.f.expected)
+    |                                             ^
+291 | …         decode.assert_not_called()
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_admission.py:297:41
+    |
+295 |         def changing(buffer,**kwargs):
+296 |             result=original(buffer,**kwargs)
+297 |             p=self.root/SOURCES['daily'];p.write_bytes(p.read_bytes()+b'late mutation')
+    |                                         ^
+298 |             return result
+299 |         with patch.object(pd,'read_csv',side_effect=changing),self.assertRaises(ValueError):
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_admission.py:307:92
+    |
+305 |         def changing(instance,name,**kwargs):
+306 |             result=original(instance,name,**kwargs)
+307 |             if kwargs.get('fresh') and name==sorted(instance.files)[-1] and marker.exists():marker.unlink()
+    |                                                                                            ^
+308 |             return result
+309 |         with patch.object(source._Closure,'read',changing),self.assertRaises((ValueError,FileNotFoundError)):
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_admission.py:313:24
+    |
+313 | if __name__=='__main__':unittest.main()
+    |                        ^
+
+Found 64 errors.

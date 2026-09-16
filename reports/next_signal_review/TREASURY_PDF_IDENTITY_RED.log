@@ -1,0 +1,19 @@
+test_treasury_pdf_identity (unittest.loader._FailedTest.test_treasury_pdf_identity) ... ERROR
+
+======================================================================
+ERROR: test_treasury_pdf_identity (unittest.loader._FailedTest.test_treasury_pdf_identity)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_treasury_pdf_identity
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_pdf_identity.py", line 3, in <module>
+    from src.treasury_pdf_identity import probe_pdf_header,check_pdf_identity
+ModuleNotFoundError: No module named 'src.treasury_pdf_identity'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

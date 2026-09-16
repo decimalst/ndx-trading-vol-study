@@ -1,0 +1,58 @@
+test_both_identity_classes_reject_conflicting_or_wrong_body_dates (tests.test_claims_release_reconcile_identity.ClaimsReleaseIdentityTests.test_both_identity_classes_reject_conflicting_or_wrong_body_dates) ... ok
+test_both_noncalendar_identity_classes_reject_absent_body_dates (tests.test_claims_release_reconcile_identity.ClaimsReleaseIdentityTests.test_both_noncalendar_identity_classes_reject_absent_body_dates) ... ok
+test_exact_observed_2019_filename_exception_is_retained_without_rewriting (tests.test_claims_release_reconcile_identity.ClaimsReleaseIdentityTests.test_exact_observed_2019_filename_exception_is_retained_without_rewriting) ... ERROR
+test_no_other_mistyped_filename_or_exception_release_date_is_allowed (tests.test_claims_release_reconcile_identity.ClaimsReleaseIdentityTests.test_no_other_mistyped_filename_or_exception_release_date_is_allowed) ... ok
+test_opa_host_path_numeric_year_and_ceiling_remain_strict (tests.test_claims_release_reconcile_identity.ClaimsReleaseIdentityTests.test_opa_host_path_numeric_year_and_ceiling_remain_strict) ... ok
+test_opa_numeric_identity_requires_body_date_and_uses_release_year (tests.test_claims_release_reconcile_identity.ClaimsReleaseIdentityTests.test_opa_numeric_identity_requires_body_date_and_uses_release_year) ... ERROR
+test_ordinary_calendar_url_keeps_existing_optional_body_date_contract (tests.test_claims_release_reconcile_identity.ClaimsReleaseIdentityTests.test_ordinary_calendar_url_keeps_existing_optional_body_date_contract) ... ok
+test_serialized_noncalendar_reports_cannot_drop_body_date_evidence (tests.test_claims_release_reconcile_identity.ClaimsReleaseIdentityTests.test_serialized_noncalendar_reports_cannot_drop_body_date_evidence) ... ERROR
+
+======================================================================
+ERROR: test_exact_observed_2019_filename_exception_is_retained_without_rewriting (tests.test_claims_release_reconcile_identity.ClaimsReleaseIdentityTests.test_exact_observed_2019_filename_exception_is_retained_without_rewriting)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_identity.py", line 62, in test_exact_observed_2019_filename_exception_is_retained_without_rewriting
+    parsed = reconcile.parse_release_text(text(), "2019-01-03", EXCEPTION)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/claims_release_reconcile.py", line 129, in parse_release_text
+    _dated_url(source_url, released)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/claims_release_reconcile.py", line 88, in _dated_url
+    raise ValueError("Dated URL and actual release date disagree")
+ValueError: Dated URL and actual release date disagree
+
+======================================================================
+ERROR: test_opa_numeric_identity_requires_body_date_and_uses_release_year (tests.test_claims_release_reconcile_identity.ClaimsReleaseIdentityTests.test_opa_numeric_identity_requires_body_date_and_uses_release_year)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_identity.py", line 48, in test_opa_numeric_identity_requires_body_date_and_uses_release_year
+    parsed = reconcile.parse_release_text(text(), "2019-01-03", OPA)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/claims_release_reconcile.py", line 129, in parse_release_text
+    _dated_url(source_url, released)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/claims_release_reconcile.py", line 81, in _dated_url
+    raise ValueError("Official dated source URL required")
+ValueError: Official dated source URL required
+
+======================================================================
+ERROR: test_serialized_noncalendar_reports_cannot_drop_body_date_evidence (tests.test_claims_release_reconcile_identity.ClaimsReleaseIdentityTests.test_serialized_noncalendar_reports_cannot_drop_body_date_evidence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_reconcile_identity.py", line 89, in test_serialized_noncalendar_reports_cannot_drop_body_date_evidence
+    reconcile.reconcile_reports([source_record()], [valid])["status"],
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/claims_release_reconcile.py", line 223, in reconcile_reports
+    reports = [_report(row) for row in reports]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/claims_release_reconcile.py", line 223, in <listcomp>
+    reports = [_report(row) for row in reports]
+               ^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/claims_release_reconcile.py", line 193, in _report
+    _dated_url(row["source_url"], released)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/claims_release_reconcile.py", line 81, in _dated_url
+    raise ValueError("Official dated source URL required")
+ValueError: Official dated source URL required
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.002s
+
+FAILED (errors=3)

@@ -1,0 +1,23 @@
+test_admission_deterministic_and_read_only (tests.test_issued_calibration_admission.AdmissionTests.test_admission_deterministic_and_read_only) ... ok
+test_anchor_hash_checked_before_json_decode (tests.test_issued_calibration_admission.AdmissionTests.test_anchor_hash_checked_before_json_decode) ... ok
+test_any_verified_output_tamper_precedes_all_parquet_decoding (tests.test_issued_calibration_admission.AdmissionTests.test_any_verified_output_tamper_precedes_all_parquet_decoding) ... ok
+test_collect_metadata_never_decodes_parquet (tests.test_issued_calibration_admission.AdmissionTests.test_collect_metadata_never_decodes_parquet) ... ok
+test_complete_exact_ten_output_map_required (tests.test_issued_calibration_admission.AdmissionTests.test_complete_exact_ten_output_map_required) ... ok
+test_complete_transitive_closure_and_no_model_refitting (tests.test_issued_calibration_admission.AdmissionTests.test_complete_transitive_closure_and_no_model_refitting) ... ok
+test_decoding_uses_checked_bytes_and_final_mutation_rejects (tests.test_issued_calibration_admission.AdmissionTests.test_decoding_uses_checked_bytes_and_final_mutation_rejects) ... ok
+test_default_anchor_paths_and_output_set_fixed (tests.test_issued_calibration_admission.AdmissionTests.test_default_anchor_paths_and_output_set_fixed) ... ok
+test_duplicate_json_and_nonfinite_json_rejected (tests.test_issued_calibration_admission.AdmissionTests.test_duplicate_json_and_nonfinite_json_rejected) ... ok
+test_failure_record_always_blocks_previously_verified_inputs (tests.test_issued_calibration_admission.AdmissionTests.test_failure_record_always_blocks_previously_verified_inputs) ... ok
+test_missing_and_conflicting_declared_files_reject (tests.test_issued_calibration_admission.AdmissionTests.test_missing_and_conflicting_declared_files_reject) ... ok
+test_missing_extra_or_malformed_anchor_map_rejected (tests.test_issued_calibration_admission.AdmissionTests.test_missing_extra_or_malformed_anchor_map_rejected) ... ok
+test_noncanonical_and_escaping_metadata_paths_reject (tests.test_issued_calibration_admission.AdmissionTests.test_noncanonical_and_escaping_metadata_paths_reject) ... ok
+test_pin_conflict_rejected_even_if_reference_is_not_decoded (tests.test_issued_calibration_admission.AdmissionTests.test_pin_conflict_rejected_even_if_reference_is_not_decoded) ... ok
+test_recursive_old_preservation_hash_and_documentary_hash_enforced (tests.test_issued_calibration_admission.AdmissionTests.test_recursive_old_preservation_hash_and_documentary_hash_enforced) ... ok
+test_registered_hash_coverage_before_output_decoding (tests.test_issued_calibration_admission.AdmissionTests.test_registered_hash_coverage_before_output_decoding) ... ok
+test_success_and_identity_crosschecks_cannot_be_bypassed_by_repinning (tests.test_issued_calibration_admission.AdmissionTests.test_success_and_identity_crosschecks_cannot_be_bypassed_by_repinning) ... ok
+test_symlink_reference_rejected_even_inside_root (tests.test_issued_calibration_admission.AdmissionTests.test_symlink_reference_rejected_even_inside_root) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.303s
+
+OK

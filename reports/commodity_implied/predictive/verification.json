@@ -1,0 +1,30 @@
+{
+  "status": "VERIFIED",
+  "forecasts": {
+    "status": "VERIFIED",
+    "application_origins": 2460,
+    "application_forecasts_verified": 7380,
+    "scored_origins": 2450,
+    "forecasts_verified": 7350,
+    "monthly_fits": 118,
+    "model_fits": 354,
+    "coverage_origins": 2464,
+    "calendar_rows": 6696
+  },
+  "scores": {
+    "status": "VERIFIED",
+    "hypothesis_count": 2,
+    "cumulative_hypothesis_count": 144,
+    "common_scored_origins": 2450
+  },
+  "outputs": {
+    "data/commodity_implied/forecasting/coverage.parquet": "ea798ead35691cdec2e532efb8c8c7dabfb5ab6ec52a8f1903fbcb0b6442fb7b",
+    "data/commodity_implied/forecasting/targets.parquet": "ef47b14b888a564897ca8d72b5cfd193d89a6407dc9820a5fb3ffe6cd12ed0d5",
+    "data/commodity_implied/forecasting/panel.parquet": "a3e3d36cc6d10bd8630c9bbf8166b35f7dd6a83250bef0d6322d4c8be68d28aa",
+    "data/commodity_implied/forecasting/schedules.parquet": "814d4cab67089d5a996c3ec62ece000ea5f623b15ab6bb3952b21bf5825822f0",
+    "data/commodity_implied/forecasting/applications.parquet": "303bb09f622fe2524df4bf42bd60406d4cd4152cac1f2a768809c4bc16966e21",
+    "data/commodity_implied/forecasting/features.parquet": "dc527ee11c32ba9426a8c7a91e29f36e7dcc30b0e984dea438e65f96fbce31c8",
+    "data/commodity_implied/forecasting/fits.json": "b961a3e194a6263ffef12bee7bd5706ee91bb318dfd7ebbcf4f9380c791293ac"
+  },
+  "protocol_sha256": "1f939707fb1e1ad96af2cc11084f3337e3ea4c49053e093feecfae9cde2ad497"
+}

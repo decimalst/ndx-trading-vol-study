@@ -1,0 +1,13 @@
+F
+======================================================================
+FAIL: test_success_failure_appearing_during_final_required_trio_rejected (tests.test_peak_age_admission.AdmissionTests.test_success_failure_appearing_during_final_required_trio_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_admission.py", line 538, in test_success_failure_appearing_during_final_required_trio_rejected
+    with patch.object(source._Closure, "read", changing), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.139s
+
+FAILED (failures=1)

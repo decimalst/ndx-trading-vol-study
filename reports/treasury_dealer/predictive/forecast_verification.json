@@ -1,0 +1,11 @@
+{
+  "status": "VERIFIED",
+  "application_origins": 2325,
+  "application_forecasts_verified": 6975,
+  "scored_origins": 2315,
+  "forecasts_verified": 6945,
+  "monthly_fits": 118,
+  "model_fits": 354,
+  "coverage_origins": 2464,
+  "calendar_rows": 6696
+}

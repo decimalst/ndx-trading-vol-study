@@ -1,0 +1,25 @@
+{
+  "scope": "Presentation only; authenticated saved outputs; no fits, sampling or hypothesis tests.",
+  "input_terminal_sha256": "7152a1c68cda9ed1174fbaa6a9675b1f4417c79db75ba9bf191495c4ecd79ffe",
+  "artifacts": {
+    "FINDINGS.md": "0ef75ce83aca4ba5e439fa50f04ed6b39469cf0eb9aad36b8aad87c546544cfa",
+    "ALL_CASES.md": "50aba1cc918456351c8106b217b85e058e3655acdcc7a7a9f15c32de6c47d2f9",
+    "FIGURE_DATA.json": "df48c0d1c799ba0648d6ff9ffba2652b96ea8b6b0c3a1204110c432d79f34825",
+    "spread_safety.png": "2b8cfc3c590701155a6f844f1addfc6c3612de7477cda7520dd00b0e6a41c865",
+    "spread_safety.pdf": "58a2dac41e35f14e7123f9b6859014e8e6b9115a8889e92960e4a7f8ad01b06c",
+    "render_findings.py": "38a9d10de3b3addad6434cb15d07a067c297ce9efe0e3797f33c86affd82e3c3"
+  },
+  "post_review_presentation_revision": {
+    "reason": "Qualify primary-distance findings and distinguish monthly fits from issued applications; no numerical results or figures changed.",
+    "files": {
+      "FINDINGS.md": {
+        "before_sha256": "c781766e3fb5cd99d94fa063e8bf72732a952c94ffd7f2b262b0deaa021ec393",
+        "after_sha256": "0ef75ce83aca4ba5e439fa50f04ed6b39469cf0eb9aad36b8aad87c546544cfa"
+      },
+      "render_findings.py": {
+        "before_sha256": "83530e0f28da48d86eb67d9022b2430d1f983fe495e5917f61365737b1484467",
+        "after_sha256": "38a9d10de3b3addad6434cb15d07a067c297ce9efe0e3797f33c86affd82e3c3"
+      }
+    }
+  }
+}

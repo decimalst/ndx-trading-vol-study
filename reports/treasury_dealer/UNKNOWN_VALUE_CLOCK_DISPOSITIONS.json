@@ -1,0 +1,46 @@
+{
+  "application_rule": "First QQQ origin strictly after reported date remains unknown; prior12 donor contamination remains. No numerical Z52 source admission. Never silently switch to filename or auction schedule dates.",
+  "assumption_sensitivity": "Without accepting the explicit Z52 reported-date assumption, the strict original-byte route retains an unbounded clock after Jan27,2020 and cannot claim full evaluation support. This difference must accompany any future result.",
+  "clock_reviews": {
+    "2016-01-14_912810RP5": {
+      "availability_after_date": "2016-01-14",
+      "clock_upper_bound_date": null,
+      "evidence_class": "DATED_ORIGINAL_RESULT_CLOCK_UNKNOWN_AMOUNT_IDENTITY_CONFLICT",
+      "source_evidence": {
+        "body_path": "data/source_discovery/treasury_auction/document_pilot_v1/c8fd462eb513c3474b10a7d7ab6d90d12071685b7942532028114d2eb0596447/body.pdf",
+        "body_sha256": "9281e514be35fa74915038c7bff425570e548f53a5b40f8462492b133ba63532",
+        "metadata_path": "reports/next_signal_review/TREASURY_HISTORY_METADATA.json",
+        "metadata_sha256": "82a619ac849802fe45b30447b0c4c12d94f3786f88e118536b1850ee8cda846e",
+        "text_path": "data/source_discovery/treasury_auction/pdf_metadata_v1/9281e514be35fa74915038c7bff425570e548f53a5b40f8462492b133ba63532.txt",
+        "text_sha256": "9bce3bd5f65b71b17e9794da2c8c8829d8dc0cd325ef005932dd44efaa28ac1a",
+        "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2016/R_20160114_1.pdf"
+      }
+    },
+    "2020-01-27_912828Z52": {
+      "availability_after_date": "2020-01-27",
+      "clock_upper_bound_date": null,
+      "evidence_class": "QUALIFIED_REPORTED_CLOCK_ONLY",
+      "source_evidence": {
+        "assumption": "The search-provider representation faithfully preserves this Treasury release header and own auction identity. Its reported date is a qualified daily clock, not proof of first public delivery.",
+        "historical_archive_timestamp_verified": false,
+        "identity_literal": "912828Z52",
+        "numeric_values_admitted": false,
+        "original_pdf_recovered": false,
+        "original_url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2020/R_20200127_4.pdf",
+        "receipt_path": "data/source_discovery/treasury_auction/clock_recovery_v1/result_search_v1/02_official_cusip_date_search.receipt.json",
+        "receipt_sha256": "1af4ff99ba58bebbd8c9bef4b8c444c1b7e37e5e38c1069e3a4bd4440b3299ea",
+        "reported_date": "2020-01-27",
+        "title_literal": "TREASURY AUCTION RESULTS"
+      }
+    }
+  },
+  "created_utc": "2026-09-09T03:33:01.254516+00:00",
+  "market_arrays_read": false,
+  "new_comparisons": 0,
+  "registered_comparisons": 144,
+  "status": "PROSPECTIVE_UNKNOWN_VALUE_CLOCK_DISPOSITIONS",
+  "supporting_review_pins": {
+    "reports/treasury_dealer/CLOCK_RESULT_ARCHIVE_RECOVERY_REVIEW.md": "5388f26129a44f7febb599600565646552a4cea3d4ab130f0d7f36ef66a777d8",
+    "reports/treasury_dealer/CLOCK_RESULT_RECOVERY_REVIEW.md": "89018dc17b9e299974da701bae45dc348c6684783a8a8013d51a7ee8b5615e0b"
+  }
+}

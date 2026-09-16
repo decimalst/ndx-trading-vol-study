@@ -1,0 +1,13 @@
+{
+  "status": "INDEPENDENT_METADATA_CLOSURE_READY_BEFORE_FREEZE",
+  "counts": {
+    "files": 2123,
+    "manifests": 23,
+    "raw_sources": 4,
+    "preceding_cumulative_hypotheses": 137,
+    "preceding_ledger_events": 140
+  },
+  "actual_numeric_tables_decoded": 0,
+  "actual_model_fits": 0,
+  "new_empirical_scores": 0
+}

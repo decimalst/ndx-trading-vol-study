@@ -1,0 +1,23 @@
+test_both_saved_certificates_independently_reconstruct (tests.test_verify_joint_copula_forecasts.DependenceCertificateTests.test_both_saved_certificates_independently_reconstruct) ... ERROR
+test_gaussian_omitted_stationary_candidate_and_root_corruption_rejected (tests.test_verify_joint_copula_forecasts.DependenceCertificateTests.test_gaussian_omitted_stationary_candidate_and_root_corruption_rejected) ... ok
+test_interval_missing_overlap_inflated_bound_and_global_gap_rejected (tests.test_verify_joint_copula_forecasts.DependenceCertificateTests.test_interval_missing_overlap_inflated_bound_and_global_gap_rejected) ... ok
+test_wrong_objective_kkt_rho_training_and_unknown_schema_rejected (tests.test_verify_joint_copula_forecasts.DependenceCertificateTests.test_wrong_objective_kkt_rho_training_and_unknown_schema_rejected) ... ok
+
+======================================================================
+ERROR: test_both_saved_certificates_independently_reconstruct (tests.test_verify_joint_copula_forecasts.DependenceCertificateTests.test_both_saved_certificates_independently_reconstruct)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_joint_copula_forecasts.py", line 122, in test_both_saved_certificates_independently_reconstruct
+    got = self.check(self.z, family, rho, audit)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_joint_copula_forecasts.py", line 313, in verify_dependence
+    if cert["gap_tolerance"] != GAP or _integer(cert["roundoff_multiplier"]) != ROUNDING:
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_joint_copula_forecasts.py", line 178, in _integer
+    raise ValueError("Literal bounded integer required")
+ValueError: Literal bounded integer required
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.017s
+
+FAILED (errors=1)

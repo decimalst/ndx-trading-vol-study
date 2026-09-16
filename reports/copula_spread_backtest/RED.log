@@ -1,0 +1,23 @@
+PREWRITTEN SYNTHETIC TESTS; IMPLEMENTATION ABSENT
+['.venv/bin/python', '-m', 'unittest', 'tests.test_copula_spread_backtest', '-v']
+test_copula_spread_backtest (unittest.loader._FailedTest.test_copula_spread_backtest) ... ERROR
+
+======================================================================
+ERROR: test_copula_spread_backtest (unittest.loader._FailedTest.test_copula_spread_backtest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_copula_spread_backtest
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_spread_backtest.py", line 10, in <module>
+    from src.copula_spread_backtest import run_backtest, terminal_debit
+ModuleNotFoundError: No module named 'src.copula_spread_backtest'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+
+exit_code=1

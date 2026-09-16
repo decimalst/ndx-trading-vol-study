@@ -1,0 +1,33 @@
+test_panel_rejects_monthly_fit_or_cutoff_drift (tests.test_sign_memory_models.SignMemoryModels.test_panel_rejects_monthly_fit_or_cutoff_drift) ... 
+  test_panel_rejects_monthly_fit_or_cutoff_drift (tests.test_sign_memory_models.SignMemoryModels.test_panel_rejects_monthly_fit_or_cutoff_drift) (fault='train_n') ... FAIL
+  test_panel_rejects_monthly_fit_or_cutoff_drift (tests.test_sign_memory_models.SignMemoryModels.test_panel_rejects_monthly_fit_or_cutoff_drift) (fault='fit_month') ... FAIL
+  test_panel_rejects_monthly_fit_or_cutoff_drift (tests.test_sign_memory_models.SignMemoryModels.test_panel_rejects_monthly_fit_or_cutoff_drift) (fault='feature_cutoff') ... FAIL
+
+======================================================================
+FAIL: test_panel_rejects_monthly_fit_or_cutoff_drift (tests.test_sign_memory_models.SignMemoryModels.test_panel_rejects_monthly_fit_or_cutoff_drift) (fault='train_n')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_sign_memory_models.py", line 405, in test_panel_rejects_monthly_fit_or_cutoff_drift
+    with self.subTest(fault=fault), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_panel_rejects_monthly_fit_or_cutoff_drift (tests.test_sign_memory_models.SignMemoryModels.test_panel_rejects_monthly_fit_or_cutoff_drift) (fault='fit_month')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_sign_memory_models.py", line 405, in test_panel_rejects_monthly_fit_or_cutoff_drift
+    with self.subTest(fault=fault), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_panel_rejects_monthly_fit_or_cutoff_drift (tests.test_sign_memory_models.SignMemoryModels.test_panel_rejects_monthly_fit_or_cutoff_drift) (fault='feature_cutoff')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_sign_memory_models.py", line 405, in test_panel_rejects_monthly_fit_or_cutoff_drift
+    with self.subTest(fault=fault), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.081s
+
+FAILED (failures=3)

@@ -1,0 +1,44 @@
+..........EEE
+======================================================================
+ERROR: test_explicit_full_clock_reproduces_every_saved_state_and_three_forecast_cohorts (tests.test_verify_causal_pool.FullPoolContracts.test_explicit_full_clock_reproduces_every_saved_state_and_three_forecast_cohorts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_causal_pool.py", line 178, in test_explicit_full_clock_reproduces_every_saved_state_and_three_forecast_cohorts
+    args=self.fixture(missing_labels=(1380,1400),omit_applications=(1382,1383))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_causal_pool.py", line 166, in fixture
+    from tests.test_causal_pool_models import fixture,run
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 9, in <module>
+    from src import causal_pool_models as model
+ImportError: cannot import name 'causal_pool_models' from 'src' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/__init__.py)
+
+======================================================================
+ERROR: test_seed_gap_unscored_first_and_whole_unscored_month_are_retained (tests.test_verify_causal_pool.FullPoolContracts.test_seed_gap_unscored_first_and_whole_unscored_month_are_retained)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_causal_pool.py", line 187, in test_seed_gap_unscored_first_and_whole_unscored_month_are_retained
+    args=self.fixture(seed_gap=2,unscored_first=True,unscored_month=True)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_causal_pool.py", line 166, in fixture
+    from tests.test_causal_pool_models import fixture,run
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 9, in <module>
+    from src import causal_pool_models as model
+ImportError: cannot import name 'causal_pool_models' from 'src' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/__init__.py)
+
+======================================================================
+ERROR: test_state_clock_seed_mass_probability_pool_and_original_row_tampering_reject (tests.test_verify_causal_pool.FullPoolContracts.test_state_clock_seed_mass_probability_pool_and_original_row_tampering_reject)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_causal_pool.py", line 195, in test_state_clock_seed_mass_probability_pool_and_original_row_tampering_reject
+    fixture=self.fixture(omit_applications=(1382,))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_causal_pool.py", line 166, in fixture
+    from tests.test_causal_pool_models import fixture,run
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_causal_pool_models.py", line 9, in <module>
+    from src import causal_pool_models as model
+ImportError: cannot import name 'causal_pool_models' from 'src' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/__init__.py)
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.080s
+
+FAILED (errors=3)

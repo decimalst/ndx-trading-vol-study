@@ -1,0 +1,25 @@
+EE
+======================================================================
+ERROR: test_target_binary_comparison_is_exact (tests.test_verify_range_alert.WholeEntryContracts.test_target_binary_comparison_is_exact)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_range_alert.py", line 248, in test_target_binary_comparison_is_exact
+    with self.assertRaises(AssertionError):v.compare_targets(changed,t)
+                                           ^^^^^^^^^^^^^^^^^
+AttributeError: module 'src.verify_range_alert' has no attribute 'compare_targets'
+
+======================================================================
+ERROR: test_whole_entry_exact_output_paths_and_snapshots (tests.test_verify_range_alert.WholeEntryContracts.test_whole_entry_exact_output_paths_and_snapshots)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_range_alert.py", line 238, in test_whole_entry_exact_output_paths_and_snapshots
+    result=v.verify(r)
+           ^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_range_alert.py", line 318, in verify
+    raise NotImplementedError("Full entry point pending prewritten contracts")
+NotImplementedError: Full entry point pending prewritten contracts
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.065s
+
+FAILED (errors=2)

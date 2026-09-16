@@ -1,0 +1,107 @@
+{
+  "status": "ALL_PRIOR_FROZEN_ARTIFACTS_PRESERVED",
+  "prior_waves": [
+    {
+      "study": "iterative_signal_search",
+      "manifest_sha256": "5515fc5aea433d9e743bcd31d9bfdb284ebca23005ac3c0fdd6184ab5a15b61f",
+      "counts": {
+        "code": 10,
+        "inputs": 9,
+        "preserved": 129
+      },
+      "all_hashes_match": true
+    },
+    {
+      "study": "international_volatility",
+      "manifest_sha256": "530b8439d7b8dcd209d967a90d3affe1ec002a7dc0e4b824deb44c37285ea757",
+      "counts": {
+        "code": 11,
+        "inputs": 5,
+        "preserved": 150
+      },
+      "all_hashes_match": true
+    },
+    {
+      "study": "overnight_index",
+      "manifest_sha256": "49c84753c1589ac7c01e4e3d90e250eca1df6341a30420a8e9d9a766c6e241fd",
+      "counts": {
+        "code": 13,
+        "inputs": 10,
+        "preserved": 164
+      },
+      "all_hashes_match": true
+    },
+    {
+      "study": "macro_overnight",
+      "manifest_sha256": "d50b2523a84c139e87861e2468c829606e6c1a41f8fb17be68e5f4d8da5ab614",
+      "counts": {
+        "code": 18,
+        "inputs": 805,
+        "preserved": 188
+      },
+      "all_hashes_match": true
+    },
+    {
+      "study": "measurement_memory",
+      "manifest_sha256": "c53329dbbc94dc0d8e83aca30284c41e3e0b9e35a3156817837bcadc647625b7",
+      "counts": {
+        "code": 139,
+        "inputs": 19,
+        "preserved": 211
+      },
+      "all_hashes_match": true
+    },
+    {
+      "study": "index_hinge",
+      "manifest_sha256": "7d3c458c255b0d4ee9278a4844269b68249426aeacbeeb436e6350c7b1c4204b",
+      "counts": {
+        "code": 147,
+        "inputs": 8,
+        "preserved": 230
+      },
+      "all_hashes_match": true
+    },
+    {
+      "study": "tail_shape",
+      "manifest_sha256": "136cfa954874231d305af552d3f89d7e77bee76d3638a9152f764b425509644d",
+      "counts": {
+        "code": 159,
+        "inputs": 11,
+        "preserved": 250
+      },
+      "all_hashes_match": true
+    },
+    {
+      "study": "calendar_variance",
+      "manifest_sha256": "521deb0c053c3eb724f2cd84c4644688863ec263ecce62d00c8ea129580bb4c8",
+      "counts": {
+        "code": 169,
+        "inputs": 808,
+        "preserved": 272
+      },
+      "all_hashes_match": true
+    },
+    {
+      "study": "relative_risk",
+      "manifest_sha256": "15e5319a2c66e64dfc3692f71d7da279b9d901ec8ed4a43869024a90d27c8e0f",
+      "counts": {
+        "code": 179,
+        "inputs": 12,
+        "preserved": 298
+      },
+      "all_hashes_match": true
+    },
+    {
+      "study": "joint_risk",
+      "manifest_sha256": "c80e77d076cefd98c0e6d7df6c9dd213638ec486e718a9713055552575dc7848",
+      "counts": {
+        "code": 191,
+        "inputs": 12,
+        "preserved": 326
+      },
+      "all_hashes_match": true
+    }
+  ],
+  "unique_files_checked": 1351,
+  "scope": "Byte hashes only; no new empirical products or scores computed"
+}

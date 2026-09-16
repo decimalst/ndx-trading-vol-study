@@ -1,0 +1,130 @@
+{
+  "status": "PUBLICATION_REVIEWED",
+  "reviewed_utc": "2026-09-08T19:10:50.224969+00:00",
+  "summary_sha256": "6a6e6c4478bc1b280a820998b3819cb7956b12957d286a44b857766e1a840919",
+  "verification_sha256": "4bfd4f79f349fee2e7f4bb5bd30eca250e1800ab8eb5f69970c0328aaadb6b61",
+  "publication_review_sha256": "14c696cfc32dd2954933f8eab6ebdb3675af46e3e18a6819915a7fa0efe27288",
+  "protocol_sha256": "b3eeea877c536a25cde0edca69cd7cc1474a425a2458ac36978adfeacee7e76f",
+  "research_status": "VERIFIED_NO_QUALIFYING_SIGNAL",
+  "leads": [],
+  "material_issues": [],
+  "review_scope": "Read saved verified metrics, proof, freeze, logs, ledger and summary; visually inspect PNG; independently rehash complete manifest and preservation evidence; no historical fit or inference rerun.",
+  "manifest_entries_checked": {
+    "code": 319,
+    "inputs": 2093,
+    "preserved": 0
+  },
+  "prefit_artifacts_checked": 39,
+  "prior_code_unchanged": 308,
+  "verified_outputs_rehashed": 4,
+  "retained_inputs_rehashed": 6,
+  "old_wave20_report_artifacts_rehashed": 72,
+  "full_repository_tests": {
+    "passed": 2224,
+    "seconds": 312.62,
+    "log_sha256": "c45103c389526da179aeebcebb01c6b3ccd5cee35ff57680a2e7dba1ea542f01"
+  },
+  "focused_pre_run_tests": {
+    "passed": 87,
+    "seconds": 53.042,
+    "log_sha256": "36753275cf29d73433a9105856c72e4c771e1c18a50aeae6045d97cbb8cf7230"
+  },
+  "ledger_event_counts": {
+    "registered": 3,
+    "inherited": 134,
+    "evaluated": 3
+  },
+  "ledger_events": 140,
+  "new_hypotheses": 3,
+  "cumulative_hypotheses": 137,
+  "phase_observations": {
+    "development": 1002,
+    "evaluation": 1456
+  },
+  "reconstruction_counts": {
+    "forecasts_verified": 9832,
+    "retained_candidate_scored_forecasts": 4916,
+    "original_control_forecasts": 4916,
+    "newly_generated_forecasts": 0,
+    "new_producer_fits": 0,
+    "retained_monthly_schedules": 118,
+    "original_monthly_fits_replayed": 118,
+    "independent_stage_fits_verified": 236,
+    "common_scored_origins": 2458,
+    "common_application_origins": 2459,
+    "application_states_verified": 2459,
+    "memory_rows_verified": 4226
+  },
+  "comparison_checks": [
+    {
+      "candidate": "cluster",
+      "control": "baseline",
+      "development_delta": 4.440631422857142e-05,
+      "evaluation_delta": -0.00013997259656991273,
+      "p_holm_wave": 0.593535,
+      "p_holm_cumulative": 1.0,
+      "verdict": "DOES_NOT_QUALIFY"
+    },
+    {
+      "candidate": "cluster",
+      "control": "nuisance",
+      "development_delta": 8.875959544077247e-07,
+      "evaluation_delta": 2.4867148754078655e-06,
+      "p_holm_wave": 0.66476,
+      "p_holm_cumulative": 1.0,
+      "verdict": "DOES_NOT_QUALIFY"
+    },
+    {
+      "candidate": "cluster",
+      "control": "recent_frequency",
+      "development_delta": -0.013980876462542792,
+      "evaluation_delta": -0.017371550894515038,
+      "p_holm_wave": 0.00027749999999999997,
+      "p_holm_cumulative": 0.0126725,
+      "verdict": "DOES_NOT_QUALIFY"
+    }
+  ],
+  "interpretation": "Adjacency slightly worsens the matched nuisance control in both phases. The weak recent-frequency comparison does not identify an adjacency benefit and fails wave-level significance. All three controls remain required; no lead and no equivalence/null claim.",
+  "old_wave20": {
+    "status": "FAILED_UNEVALUABLE_PRESERVED",
+    "canonical_all_three_p_one": true,
+    "publication_audit_sha256": "0d901a938c6a88ff4dbf1bb68d114640a50279e38826be29c97ea167ca56be15",
+    "failure_sha256": "e4cd6a4fc84c7d0049999a2ca2f958605bbda5be843e2901244a0f81b2c0dbc8",
+    "metrics_sha256": "e4cd6a4fc84c7d0049999a2ca2f958605bbda5be843e2901244a0f81b2c0dbc8",
+    "verification_sha256": "31ccde37d0d43f1135ff4cb0918e268bff3512f365433f9c949ef44fdab255f4",
+    "retained_hashes_equal_new_verified_input_pins": true
+  },
+  "old_unpublished_scored_payload_decoded": false,
+  "figure_review": {
+    "png_visually_inspected": true,
+    "pdf_visually_inspected": false,
+    "both_files_hashed": true,
+    "all_three_controls_and_both_phases_present": true,
+    "brier_display_multiplier": 10000,
+    "required_improvement_line": -5,
+    "intervals": "Nominal envelopes; small baseline and nuisance intervals compressed by shared wide recent-frequency scale; exact numerical table provided."
+  },
+  "reviewed_artifact_hashes": {
+    "reports/event_cluster_replay/SUMMARY.md": "6a6e6c4478bc1b280a820998b3819cb7956b12957d286a44b857766e1a840919",
+    "reports/event_cluster_replay/verification.json": "4bfd4f79f349fee2e7f4bb5bd30eca250e1800ab8eb5f69970c0328aaadb6b61",
+    "reports/event_cluster_replay/metrics.json": "e2a6d81c8c4412771b887f83ca68d7dd9c20b62628b9444343a8f325170b0329",
+    "reports/event_cluster_replay/trial_ledger.jsonl": "9c7e2db821f2b23b1c8f9814130349f834d7e43af196d9f35f14b2aaf657b9c0",
+    "reports/event_cluster_replay/manifest.json": "d027e22bc7d207edb1607181483e495382def99d2a3179af52b29f181fa1ead4",
+    "reports/event_cluster_replay/freeze_record.json": "e4cc57bc68a80d4e09f1383a772eb42022d1aa4d9050bf91c5de037737bff84a",
+    "reports/event_cluster_replay/full_repository_tests.txt": "c45103c389526da179aeebcebb01c6b3ccd5cee35ff57680a2e7dba1ea542f01",
+    "reports/event_cluster_replay/pre_run_checks.txt": "36753275cf29d73433a9105856c72e4c771e1c18a50aeae6045d97cbb8cf7230",
+    "reports/event_cluster_replay/run.log": "c3fc8537ac07a20744cf0ab7e9037a15a093f368aeb6271a73ca7edb5c36e4d1",
+    "reports/event_cluster_replay/verification_run.log": "4bfd4f79f349fee2e7f4bb5bd30eca250e1800ab8eb5f69970c0328aaadb6b61",
+    "reports/event_cluster_replay/comparison_intervals.png": "efdb8a7cb7326942ad43de6cfba7fa522b1263b8be5b68b31dfe160af71b614c",
+    "reports/event_cluster_replay/comparison_intervals.pdf": "c49f0f3bd09226076566fe7ae852265dcf7c5831c9c762c85f0adde0655a0dc2",
+    "reports/event_cluster_replay/PUBLICATION_REVIEW.md": "14c696cfc32dd2954933f8eab6ebdb3675af46e3e18a6819915a7fa0efe27288"
+  },
+  "limits": [
+    "Publication review relies on the separately completed numerical verification and does not rerun it.",
+    "Same adaptively reused archival risk proxy; no fresh holdout, independent new sample or proven orthogonal information source.",
+    "Wave20 remains failed; the replay does not rewrite or promote its canonical record.",
+    "Shared source metadata traversal and repeated independent mathematical helper are disclosed.",
+    "Source-vintage and threshold-persistence limitations remain; no trading-profit or causal claim.",
+    "The companion PDF is hash-checked but only the PNG received visual inspection."
+  ]
+}

@@ -1,0 +1,18 @@
+E
+======================================================================
+ERROR: test_commodity_implied_pipeline (unittest.loader._FailedTest.test_commodity_implied_pipeline)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_commodity_implied_pipeline
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_commodity_implied_pipeline.py", line 13, in <module>
+    from src.commodity_implied_pipeline import InsufficientDataError, build_panel
+ModuleNotFoundError: No module named 'src.commodity_implied_pipeline'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

@@ -1,0 +1,30 @@
+{
+  "status": "VERIFIED",
+  "forecasts": {
+    "status": "VERIFIED",
+    "application_origins": 2413,
+    "application_forecasts_verified": 7239,
+    "scored_origins": 2408,
+    "forecasts_verified": 7224,
+    "monthly_fits": 118,
+    "model_fits": 354,
+    "coverage_origins": 2463,
+    "calendar_rows": 6696
+  },
+  "scores": {
+    "status": "VERIFIED",
+    "hypothesis_count": 2,
+    "cumulative_hypothesis_count": 142,
+    "common_scored_origins": 2408
+  },
+  "outputs": {
+    "data/claims_release/forecasting/coverage.parquet": "8c2730eaafb53179d638db7c28fd65e2371b47a35cf4444ac9aaaf020dcfb8fa",
+    "data/claims_release/forecasting/targets.parquet": "ef47b14b888a564897ca8d72b5cfd193d89a6407dc9820a5fb3ffe6cd12ed0d5",
+    "data/claims_release/forecasting/panel.parquet": "5d5181c498f73de9130ee4fc2bceeabf3c67d74dc93685e97e4775ffd36e147a",
+    "data/claims_release/forecasting/schedules.parquet": "5ae226b80fe2c882c04637f3bf0c44bd80e391bf96adf63253846b1d47af70e2",
+    "data/claims_release/forecasting/applications.parquet": "c52df246032e89fbc665eb51bac79696feacf481546909236aed3921670d58f0",
+    "data/claims_release/forecasting/features.parquet": "834e6aa042ca35a25e84319e7d88c0291b06624c13e69efbf2e761324d6b8c89",
+    "data/claims_release/forecasting/fits.json": "10d9062a5add3666f5ad00d83a3bcb63a40123eea5477aa0611016016215d467"
+  },
+  "protocol_sha256": "b106efd00e6edbb96b644bce5c81442470f3954413117e10d446f6e5cf1983f2"
+}

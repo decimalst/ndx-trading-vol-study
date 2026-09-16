@@ -1,0 +1,30 @@
+
+Fontconfig error: No writable cache directories
+	/opt/homebrew/var/cache/fontconfig
+	/Users/byrons/.cache/fontconfig
+	/Users/byrons/.fontconfig
+Matplotlib is building the font cache; this may take a moment.
+test_application_cohort_cannot_shrink_and_negative_raw_scores_are_valid (tests.test_plot_profiled_quarter.PlotContracts.test_application_cohort_cannot_shrink_and_negative_raw_scores_are_valid) ... ok
+test_complete_two_contrast_four_phase_same_row_family_required (tests.test_plot_profiled_quarter.PlotContracts.test_complete_two_contrast_four_phase_same_row_family_required) ... ok
+test_counts_are_validated_without_fixed_empirical_expectations (tests.test_plot_profiled_quarter.PlotContracts.test_counts_are_validated_without_fixed_empirical_expectations) ... ok
+test_every_independent_cohort_count_matches_metrics (tests.test_plot_profiled_quarter.PlotContracts.test_every_independent_cohort_count_matches_metrics) ... ok
+test_exact_order_literal_values_and_no_input_mutation (tests.test_plot_profiled_quarter.PlotContracts.test_exact_order_literal_values_and_no_input_mutation) ... ok
+test_finite_proper_losses_ordered_intervals_and_probabilities (tests.test_plot_profiled_quarter.PlotContracts.test_finite_proper_losses_ordered_intervals_and_probabilities) ... ok
+test_invalid_input_creates_no_artifacts_and_main_failure_blocks_rendering (tests.test_plot_profiled_quarter.PlotContracts.test_invalid_input_creates_no_artifacts_and_main_failure_blocks_rendering) ... ok
+test_literal_intervals_zero_threshold_and_readable_render (tests.test_plot_profiled_quarter.PlotContracts.test_literal_intervals_zero_threshold_and_readable_render) ... ok
+test_replay_threshold_and_cumulative_family_are_not_previous_wave (tests.test_plot_profiled_quarter.PlotContracts.test_replay_threshold_and_cumulative_family_are_not_previous_wave) ... FAIL
+test_separate_scales_preserve_small_comparison_and_no_single_control_lead (tests.test_plot_profiled_quarter.PlotContracts.test_separate_scales_preserve_small_comparison_and_no_single_control_lead) ... ok
+test_verified_current_identity_success_family_and_reconstruction_counts_required (tests.test_plot_profiled_quarter.PlotContracts.test_verified_current_identity_success_family_and_reconstruction_counts_required) ... ok
+
+======================================================================
+FAIL: test_replay_threshold_and_cumulative_family_are_not_previous_wave (tests.test_plot_profiled_quarter.PlotContracts.test_replay_threshold_and_cumulative_family_are_not_previous_wave)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_plot_profiled_quarter.py", line 94, in test_replay_threshold_and_cumulative_family_are_not_previous_wave
+    self.assertIn("Replay", text)
+AssertionError: 'Replay' not found in 'Does a civil quarter-end increment improve SPX risk forecasts? Lines: nominal 95% block-bootstrap/HAC interval envelopes. Negative is better; dotted reference: −0.005.\nScales differ. Both controls require effect/stability gates, wave Holm2 p < 0.000163398693 and cumulative Holm127 p < 0.05.\nArchival daily OHLC risk proxy; no exchange-expiry, rebalance or trading-profit claim.'
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.890s
+
+FAILED (failures=1)

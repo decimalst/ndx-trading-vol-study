@@ -1,0 +1,24 @@
+PREIMPLEMENTATION RED: new source module absent
+Command: .venv/bin/python -m unittest tests.test_treasury_dealer_ledger -v
+tests/test_treasury_dealer_ledger.py SHA256 952c5f6fdfad89261ceebe8c39a007581963742db6ebbc51465cb25655ea67b7
+reports/treasury_dealer/LEDGER_CONTRACT.md SHA256 6f10677feef8f8a5ba17d0a112dd7723c9cb85cc35edd1afca407e1b8a009afd
+Exit status: 1
+test_treasury_dealer_ledger (unittest.loader._FailedTest.test_treasury_dealer_ledger) ... ERROR
+
+======================================================================
+ERROR: test_treasury_dealer_ledger (unittest.loader._FailedTest.test_treasury_dealer_ledger)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_treasury_dealer_ledger
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_dealer_ledger.py", line 7, in <module>
+    from src.treasury_dealer_ledger import build_ledger
+ModuleNotFoundError: No module named 'src.treasury_dealer_ledger'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

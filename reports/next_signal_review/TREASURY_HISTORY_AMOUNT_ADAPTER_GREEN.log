@@ -1,0 +1,27 @@
+Generated-only final history result adapter checks; no historical financial decoding.
+
+Command: .venv/bin/python -m unittest tests.test_treasury_history_amounts -v
+test_bounded_raw_xml_decoder_and_identity_leaf_rules_are_retained (tests.test_treasury_history_amounts.TreasuryHistoryAmountsTests.test_bounded_raw_xml_decoder_and_identity_leaf_rules_are_retained) ... ok
+test_competitive_category_accounting_and_each_acceptance_ceiling (tests.test_treasury_history_amounts.TreasuryHistoryAmountsTests.test_competitive_category_accounting_and_each_acceptance_ceiling) ... ok
+test_contradictory_or_missing_identity_fails_before_any_decimal (tests.test_treasury_history_amounts.TreasuryHistoryAmountsTests.test_contradictory_or_missing_identity_fails_before_any_decimal) ... ok
+test_dates_bounds_chronology_and_nominal_class_precede_decoding (tests.test_treasury_history_amounts.TreasuryHistoryAmountsTests.test_dates_bounds_chronology_and_nominal_class_precede_decoding) ... ok
+test_large_par_values_ignore_decimal_precision_context (tests.test_treasury_history_amounts.TreasuryHistoryAmountsTests.test_large_par_values_ignore_decimal_precision_context) ... ok
+test_original_cusip_is_validated_without_dropping_or_rewriting_raw_xml (tests.test_treasury_history_amounts.TreasuryHistoryAmountsTests.test_original_cusip_is_validated_without_dropping_or_rewriting_raw_xml) ... ok
+test_public_ratio_and_exact_inclusive_half_cent_boundaries (tests.test_treasury_history_amounts.TreasuryHistoryAmountsTests.test_public_ratio_and_exact_inclusive_half_cent_boundaries) ... ok
+test_regular_identity_absent_empty_and_explicit_announced_fields (tests.test_treasury_history_amounts.TreasuryHistoryAmountsTests.test_regular_identity_absent_empty_and_explicit_announced_fields) ... ok
+test_required_amounts_are_direct_unique_unaliased_unattributed_leaves (tests.test_treasury_history_amounts.TreasuryHistoryAmountsTests.test_required_amounts_are_direct_unique_unaliased_unattributed_leaves) ... ok
+test_source_precision_nonfinite_and_malformed_numeric_tokens_fail (tests.test_treasury_history_amounts.TreasuryHistoryAmountsTests.test_source_precision_nonfinite_and_malformed_numeric_tokens_fail) ... ok
+test_substitution_keeps_exact_sixteen_decimal_units_and_frozen_rejection (tests.test_treasury_history_amounts.TreasuryHistoryAmountsTests.test_substitution_keeps_exact_sixteen_decimal_units_and_frozen_rejection) ... ok
+test_totals_keep_noncompetitive_fima_and_soma_accounting (tests.test_treasury_history_amounts.TreasuryHistoryAmountsTests.test_totals_keep_noncompetitive_fima_and_soma_accounting) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.031s
+
+OK
+
+Exit code: 0
+
+Command: .venv/bin/ruff check src/treasury_history_amounts.py tests/test_treasury_history_amounts.py
+All checks passed!
+
+Exit code: 0

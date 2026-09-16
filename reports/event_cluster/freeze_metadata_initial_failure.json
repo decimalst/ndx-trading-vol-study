@@ -1,0 +1,19 @@
+{
+  "status": "PRE_FREEZE_METADATA_SCHEMA_CHECK_FAILED",
+  "registered_new_hypotheses": 0,
+  "new_historical_tables_decoded": false,
+  "new_history_support_fits_scores": false,
+  "freeze_written": false,
+  "command": "python /tmp/freeze_event_cluster.py",
+  "error": "ValueError: Typed identity differs: verified terminal ledger",
+  "call_site": "src/event_cluster_admission.py:240",
+  "actual_ledger_events_verified": {
+    "inherited": 129,
+    "registered": 2,
+    "evaluated": 2
+  },
+  "incorrect_draft_expected_value": 133,
+  "prior_verification_sha256": "5de5f8ed0f4a7757c475e0557b9798fe04d8fea33714a5c68437fbb181d48d14",
+  "previous_full_test_log_sha256": "1da0f7b9063a3f99e8cc4387b05f307f53c3313258958175d9680f6243dc977a",
+  "previous_full_tests": 2136
+}

@@ -1,0 +1,60 @@
+{
+  "status": "VERIFIED",
+  "protocol_sha256": "b3357641d874d22eb6bf0903049e8dcfd93df4e38b0748f717923447ff367ca3",
+  "verifier_sha256": "c213b47e91c25c7293a557064dbf8c62c583fc32bf58701cbf2f5afa61f78677",
+  "raw_feature_rows_verified": 4226,
+  "raw_feature_columns_verified": 18,
+  "source_availability_rows_verified": 4226,
+  "sources": {
+    "cpi": {
+      "records": 190,
+      "admitted": 168,
+      "states": {
+        "VERIFIED_EXPLICIT_PLAN": 168,
+        "ORIGINAL_VINTAGE_UNCERTAIN": 17,
+        "AMBIGUOUS_PRINTED_TIMESTAMP_OR_ID": 4,
+        "OUTSIDE_PUBLICATION_FENCE": 1
+      }
+    },
+    "nfp": {
+      "records": 190,
+      "admitted": 176,
+      "states": {
+        "ORIGINAL_VINTAGE_UNCERTAIN": 13,
+        "EXPLICIT_ORIGINAL_PLAN": 176,
+        "OUTSIDE_PUBLICATION_FENCE": 1
+      }
+    },
+    "fomc": {
+      "annual_documents": 16,
+      "planned_meetings": 128
+    }
+  },
+  "forecast_reconstruction": {
+    "forecasts_verified": 6297,
+    "common_scored_origins": 2099,
+    "feature_complete_applications": 2099,
+    "monthly_fits_verified": 101,
+    "models_verified": 3,
+    "producer_kkt_max": 3.5332971878160313e-10,
+    "independent_bfgs_kkt_max": 7.89177338755831e-09
+  },
+  "inference": {
+    "new_hypotheses_verified": 2,
+    "cumulative_hypotheses_verified": 108,
+    "phase_comparisons_verified": 4,
+    "bootstrap_runs_verified": 12,
+    "bootstrap_draws_per_run": 99999,
+    "leads": []
+  },
+  "ledger_events_verified": {
+    "inherited": 106,
+    "registered": 2,
+    "evaluated": 2
+  },
+  "limitations": [
+    "Original-plan source and timing replication of a previously tested broad calendar mechanism.",
+    "Nominal civil windows ignore holidays and early closes; target maturity alone uses future observed sessions.",
+    "Historical reuse, archival revisions, incomplete original-plan coverage and back-calculated VIX9D remain exploratory limitations."
+  ]
+}

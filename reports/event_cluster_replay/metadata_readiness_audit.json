@@ -1,0 +1,9 @@
+{
+  "status": "METADATA_CLOSURE_READY_BEFORE_FREEZE",
+  "checked_utc": "2026-09-07T16:55:43.129786+00:00",
+  "pinned_paths": 2053,
+  "new_registrations": 0,
+  "retained_numerical_tables_decoded": false,
+  "independent_historical_stage_solves": 0,
+  "replay_inference_computed": false
+}

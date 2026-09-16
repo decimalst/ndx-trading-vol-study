@@ -1,0 +1,69 @@
+{
+  "status": "VERIFIED",
+  "raw_feature_rows_verified": 4226,
+  "raw_feature_columns_verified": 34,
+  "measurement_audit": {
+    "status": "PASS",
+    "reference_rows": 4226,
+    "gk_floor": 1e-10,
+    "per_asset": {
+      "qqq": {
+        "observed_complete_rows": 4226,
+        "missing_ohlc_rows": 0,
+        "finite_gk_rows": 4226,
+        "floor_hit_rows": 0,
+        "nonpositive_gk_rows": 0,
+        "small_positive_gk_rows": 0,
+        "minimum_raw_gk": 2.331834843103479e-06,
+        "finite_intraday_return_rows": 4226,
+        "zero_intraday_return_rows": 23
+      },
+      "spx": {
+        "observed_complete_rows": 4226,
+        "missing_ohlc_rows": 0,
+        "finite_gk_rows": 4226,
+        "floor_hit_rows": 0,
+        "nonpositive_gk_rows": 0,
+        "small_positive_gk_rows": 0,
+        "minimum_raw_gk": 8.322391815939778e-07,
+        "finite_intraday_return_rows": 4226,
+        "zero_intraday_return_rows": 2
+      }
+    }
+  },
+  "forecast_reconstruction": {
+    "forecasts_verified": 7386,
+    "common_scored_origins": 2462,
+    "feature_complete_applications": 2463,
+    "monthly_fits_verified": 118,
+    "models_verified": 3,
+    "scalar_fits_verified": 236,
+    "certificate_leaves_verified": 14946,
+    "global_gap_max": 9.947269230536904e-09,
+    "dependence_kkt_max": 2.7022860682197197e-08,
+    "mean_kkt_max": 1.0093922225840046e-16,
+    "variance_kkt_max": 9.978067639715774e-09,
+    "independent_variance_kkt_max": 9.378947132712527e-09
+  },
+  "inference": {
+    "new_hypotheses_verified": 2,
+    "cumulative_hypotheses_verified": 112,
+    "phase_comparisons_verified": 4,
+    "bootstrap_runs_verified": 12,
+    "bootstrap_draws_per_run": 99999,
+    "leads": []
+  },
+  "ledger_events_verified": {
+    "inherited": 110,
+    "registered": 2,
+    "evaluated": 2
+  },
+  "protocol_sha256": "358d863853d79c876476e67bcf91e4c7fc855f2f107c8df58ede074f19a809ef",
+  "verifier_sha256": "ea4ac89c0d345506bb45ea1dd5add092497edeabdcfa83995e2e596f8596b4a4",
+  "limitations": [
+    "QQQ ETF and SPX price-index archival daily return residual second moments; no measured high-frequency covariance or exact Nasdaq100-index claim.",
+    "Shared diagonal or mean misspecification can reward dynamic dependence without true correlation predictability; current-fit training residual staging.",
+    "The GK measurement gate protects risk-history predictors; zero and signed return targets remain valid. No execution or profit claim.",
+    "Reused history and back-calculated early VIX9D inputs remain exploratory limitations."
+  ]
+}

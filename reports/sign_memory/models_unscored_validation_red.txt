@@ -1,0 +1,14 @@
+test_invalid_unscored_month_forecasts_cannot_bypass_validation (tests.test_sign_memory_models.SignMemoryModels.test_invalid_unscored_month_forecasts_cannot_bypass_validation) ... FAIL
+
+======================================================================
+FAIL: test_invalid_unscored_month_forecasts_cannot_bypass_validation (tests.test_sign_memory_models.SignMemoryModels.test_invalid_unscored_month_forecasts_cannot_bypass_validation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_sign_memory_models.py", line 306, in test_invalid_unscored_month_forecasts_cannot_bypass_validation
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.068s
+
+FAILED (failures=1)

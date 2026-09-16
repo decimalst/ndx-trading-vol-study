@@ -1,0 +1,28 @@
+{
+  "status": "VERIFIED",
+  "protocol_sha256": "961cda3cd9ee138f82615a684de904ff45301a1c2af755ca1f2c25855098be2b",
+  "verifier_sha256": "5055ebeb0f1a0ba7b9adc97b054e5acc913cf181f07a46ebc3335836cc53918c",
+  "feature_rows_verified": 6696,
+  "feature_columns_verified": 25,
+  "forecast_reconstruction": {
+    "forecasts_verified": 12310,
+    "monthly_fits_verified": 118,
+    "common_origins": 2462,
+    "models_verified": 5,
+    "adjustment_flagged_origins": 39
+  },
+  "inference": {
+    "phase_comparisons_verified": 12,
+    "bootstrap_runs_verified": 36,
+    "measurement_sensitivities_verified": 12,
+    "new_hypotheses_verified": 6,
+    "cumulative_hypotheses_verified": 78,
+    "leads": []
+  },
+  "ledger_events_verified": {
+    "inherited": 72,
+    "registered": 6,
+    "evaluated": 6
+  },
+  "limitation": "Historical reuse and unknown vintages remain exploratory. The adjusted overnight proxy is not verified cash profit or execution PnL."
+}

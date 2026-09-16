@@ -1,0 +1,27 @@
+test_nonzero_scalar_uses_declared_addition_even_at_zero_query_age (tests.test_peak_age_verification.IndependentPrimitives.test_nonzero_scalar_uses_declared_addition_even_at_zero_query_age) ... FAIL
+
+======================================================================
+FAIL: test_nonzero_scalar_uses_declared_addition_even_at_zero_query_age (tests.test_peak_age_verification.IndependentPrimitives.test_nonzero_scalar_uses_declared_addition_even_at_zero_query_age)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_verification.py", line 212, in test_nonzero_scalar_uses_declared_addition_even_at_zero_query_age
+    np.testing.assert_array_equal(pred.view(np.uint64), expected.view(np.uint64))
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/numpy/testing/_private/utils.py", line 1121, in assert_array_equal
+    assert_array_compare(operator.__eq__, actual, desired, err_msg=err_msg,
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/numpy/testing/_private/utils.py", line 983, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Arrays are not equal
+
+Mismatched elements: 1 / 1 (100%)
+Mismatch at index:
+ [0]: 9223372036854775808 (ACTUAL), 0 (DESIRED)
+Max absolute difference among violations: 9223372036854775808
+Max relative difference among violations: inf
+ ACTUAL: array([9223372036854775808], dtype=uint64)
+ DESIRED: array([0], dtype=uint64)
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+FAILED (failures=1)

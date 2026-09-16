@@ -1,0 +1,85 @@
+study_id: copula_shape_wave29
+specified_on: '2026-09-13'
+evidence_class: EXPLORATORY_REUSED_HISTORY_DENSITY_AND_SPREAD_SAFETY_DIAGNOSTIC
+source:
+  predecessor: reports/copula_calibration/predictive/terminal.json
+  predecessor_sha256: 483c26aac77924a64cc9d87fc017dd60c50dab9d7bdd8004c69343501b685587
+  ceiling: '2025-10-20'
+  admission: Authenticate predecessor terminal, freeze, saved inputs and inherited pins before numerical access. Preserve all old protocols and outputs. No later market arrays, new vintage or external market acquisition in this historical diagnostic.
+forecast:
+  development: ['2016-01-04', '2019-12-31']
+  evaluation: ['2020-01-01', '2025-10-20']
+  stability: [['2020-01-01', '2022-12-31'], ['2023-01-01', '2025-10-20']]
+  minimum_train: 252
+  target: Next actual SPX-session QQQ/SPX log(close/open), with inherited availability and phase exclusions.
+  controls: Preserve all four saved wave28 forecasts exactly; same 105 monthly fits and mature issued-error archives. Fit only shape_gaussian and shape_t8 on those archives.
+  timing: Training origin strictly before fit origin, target_end and available_date no later than preceding full-calendar session. Apply monthly shape and dependence parameters without query outcomes.
+shape:
+  family: Sinh-arcsinh correction of Gaussianized PITs after the inherited train-only affine correction.
+  formula: w=Phi^-1(T8(z)); x=(w-a)/b; v=sinh(delta*asinh(x)-epsilon); Fnew=Phi(v).
+  density: log fnew=log f0+log phi(v)-log phi(w)+log(delta)-log(b)+log cosh(delta*asinh(x)-epsilon)-0.5log(1+x*x).
+  fitting: Preserve train-only a,b; minimize convex mean normal-score negative log likelihood in epsilon,delta. Fixed L-BFGS-B plus projected Newton polishing, no multistart or validation selection.
+  epsilon_bounds: [-0.75, 0.75]
+  delta_bounds: [0.75, 2.0]
+  convex_box_gap: 0.0000001
+  dependence: Same fixed t8 and Gaussian families, rho bounds ±.995, old independent numerical global certificates.
+  tail_limit: A proper normalized log-return density need not have finite moments. Do not infer arithmetic-return means, variances, Kelly fractions or unbounded-loss ES. Bounded vertical-spread expiration payoffs remain integrable.
+support:
+  phase_daily: 505
+  slice_daily: 252
+  offset_daily: 63
+inference:
+  blocks: [21, 63, 126]
+  hac_lags: 126
+  bootstrap_draws: 399999
+  seed: 20260914
+  phase_codes: {development: 1, evaluation: 2}
+  calendar: Literal inherited phase calendars, retaining warm-up and masked rows.
+comparisons:
+  wave: 29
+  inherited: 158
+  new: 6
+  cumulative: 164
+  ordered_contrasts: [qqq_shape, spx_shape, gaussian_shape, t8_shape, shape_gap, shape_interaction]
+  definitions:
+    qqq_shape: QQQ marginal loss(shape)-loss(affine)
+    spx_shape: SPX marginal loss(shape)-loss(affine)
+    gaussian_shape: Full joint loss(shape_gaussian)-loss(cal_gaussian)
+    t8_shape: Full joint loss(shape_t8)-loss(cal_t8)
+    shape_gap: Full joint loss(shape_t8)-loss(shape_gaussian)
+    shape_interaction: shape_gap-(loss(cal_t8)-loss(cal_gaussian))
+  wave_alpha: 0.000057471264367816095
+  cumulative_alpha: 0.05
+  decision: Same strict mean sign in both phases, Holm6 below wave alpha and Holm164 below cumulative alpha. No automatic promotion. Failed fits or verification retain all six comparisons with p1; no post-result replacement.
+spreads:
+  purpose: Test expiration-liability prediction and joint-loss warnings for hypothetical normalized spreads. Actual option profits, fills, margin calls and tradability cannot be established without historical option contracts and quotes.
+  structures: [put, call, condor]
+  distance_primary: 0.02
+  distances: [0.01, 0.02, 0.03]
+  width: 0.01
+  strike_rule: Underlying opening level normalized to1; short puts1-distance, long puts1-distance-width; short calls1+distance,long calls1+distance+width. Condor has both wings. Fixed distance set independently of labels.
+  horizon: Hypothetical same-session expiration at the observed close. No assertion that these contracts or expiries existed each historical day, no entry-price or settlement-price substitution.
+  portfolio: Equal gross maximum-liability allocation to QQQ and SPX; individual payoff divided by width lies in[0,1], portfolio payoff is their average.
+  models: [orig_gaussian, orig_t8, cal_gaussian, cal_t8, shape_gaussian, shape_t8]
+  integration:
+    method: Two fixed scrambled Sobol draws of2^14 three-dimensional points; shared underlying normal and chi-square draws across all cells and dates; second scramble quantifies numerical sensitivity, never chooses a model.
+    powers: 14
+    seeds: [20260913, 20260914]
+    quantile: 0.975
+    marginal_mean: Nested48/96-point Gauss-Legendre integration of marginal CDF across each width. If disagreement exceeds1e-8, adaptive quadrature with epsabs1e-11/epsrel1e-10 and error at most1e-8. Shared identically within a marginal system. This prefit numerical repair was required by a synthetic narrow-density example, before market evaluation.
+    maximum_probability_difference: 0.005
+    maximum_mean_or_es_difference: 0.03
+    threshold: Use average probability across both scrambles; report decisions that straddle the0.10 gate across scrambles as numerical ambiguity. No adaptive sample selection or rerun.
+  rule: Sell only when predicted probability of either short strike being breached is at most0.10. Other risks are reported, not secondary selection gates.
+  maximum_liability_fraction: 0.02
+  risk_allocation: Each asset reserves1% equity for its entire spread width before credit, so at most2% gross expiration liability. No Kelly or loss-recovery sizing.
+  controls: Always sell the identical portfolio; all six fixed probability filters. No best-performing model or strike-distance selection.
+  scenario_credits: [0.05, 0.10, 0.20]
+  scenario_roundtrip_cost: 0.02
+  scenario_units: Credits and costs as fractions of spread width. Hypothetical constant credits are not historical option prices and do not prove implementable profits.
+  metrics: Coverage, realized short-strike breaches and full-width losses, predicted versus observed loss, Brier scores, portfolio ES exceptions, break-even credit, avoided liability and forgone assumed credit, scenario net returns and drawdowns; report every specified cell.
+  inference: Descriptive safety and scenario economics only, no extra significance tests or promotion; disclose all cases and no winner chosen.
+  path_limits: Expiration loss only. No stops, intraday mark-to-market, assignment, early exercise, fees actually paid, option bid/ask, discrete strike availability, funding, broker margin, roll or executable-contract assumptions.
+execution:
+  prefit: Pass prewritten synthetic shape, independent verifier, spread payoff/accounting, risk-integration, chronology and artifact-binding tests before freezing source, inputs and protocol and opening new numerical results.
+  persistence: Exclusive private output writes; hash intended bytes before save and reload those bytes for independent verification. Recheck frozen and output hashes before final terminal. Preserve failed attempt receipts and probabilities.

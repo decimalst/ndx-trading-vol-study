@@ -1,0 +1,20 @@
+test_native_negative_scores_and_fixed_variance_inference_units (tests.test_civil_quarter_search.CivilQuarterSearch.test_native_negative_scores_and_fixed_variance_inference_units) ... ERROR
+
+======================================================================
+ERROR: test_native_negative_scores_and_fixed_variance_inference_units (tests.test_civil_quarter_search.CivilQuarterSearch.test_native_negative_scores_and_fixed_variance_inference_units)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_civil_quarter_search.py", line 251, in test_native_negative_scores_and_fixed_variance_inference_units
+    result = study.paired_inference(a, b, d, protocol(), 0)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/civil_quarter_search.py", line 455, in paired_inference
+    result = old_inference.paired_inference(candidate, control, difference, p, seed)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/cross_moment_search.py", line 123, in paired_inference
+    raise ValueError(
+ValueError: Aligned finite nonnegative product losses and finite paired gaps required
+
+----------------------------------------------------------------------
+Ran 1 test in 0.011s
+
+FAILED (errors=1)

@@ -1,0 +1,14 @@
+test_freeze_with_empty_current_code_or_test_evidence_is_rejected (tests.test_treasury_dealer_search.TreasuryDealerSearchTests.test_freeze_with_empty_current_code_or_test_evidence_is_rejected) ... FAIL
+
+======================================================================
+FAIL: test_freeze_with_empty_current_code_or_test_evidence_is_rejected (tests.test_treasury_dealer_search.TreasuryDealerSearchTests.test_freeze_with_empty_current_code_or_test_evidence_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_dealer_search.py", line 168, in test_freeze_with_empty_current_code_or_test_evidence_is_rejected
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.011s
+
+FAILED (failures=1)

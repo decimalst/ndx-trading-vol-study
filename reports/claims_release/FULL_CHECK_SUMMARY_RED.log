@@ -1,0 +1,14 @@
+test_full_suite_summary_allows_buffered_stdout_after_success (tests.test_claims_release_search.ClaimsReleaseSearchTests.test_full_suite_summary_allows_buffered_stdout_after_success) ... ERROR
+
+======================================================================
+ERROR: test_full_suite_summary_allows_buffered_stdout_after_success (tests.test_claims_release_search.ClaimsReleaseSearchTests.test_full_suite_summary_allows_buffered_stdout_after_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_claims_release_search.py", line 13, in test_full_suite_summary_allows_buffered_stdout_after_success
+    from src.claims_release_search import _full_test_count
+ImportError: cannot import name '_full_test_count' from 'src.claims_release_search' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/claims_release_search.py)
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (errors=1)

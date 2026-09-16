@@ -1,0 +1,101 @@
+{
+  "status": "VERIFIED",
+  "upstream_admission": {
+    "status": "UPSTREAM_VERIFIED_READ_ONLY",
+    "prior_files_written": false
+  },
+  "raw_feature_rows_verified": 4226,
+  "raw_feature_columns_verified": 40,
+  "measurement_audit": {
+    "status": "PASS",
+    "reference_rows": 4226,
+    "gk_floor": 1e-10,
+    "per_asset": {
+      "qqq": {
+        "observed_complete_rows": 4226,
+        "missing_ohlc_rows": 0,
+        "finite_gk_rows": 4226,
+        "floor_hit_rows": 0,
+        "nonpositive_gk_rows": 0,
+        "small_positive_gk_rows": 0,
+        "minimum_raw_gk": 2.331834843103479e-06,
+        "finite_intraday_return_rows": 4226,
+        "zero_intraday_return_rows": 23
+      },
+      "spx": {
+        "observed_complete_rows": 4226,
+        "missing_ohlc_rows": 0,
+        "finite_gk_rows": 4226,
+        "floor_hit_rows": 0,
+        "nonpositive_gk_rows": 0,
+        "small_positive_gk_rows": 0,
+        "minimum_raw_gk": 8.322391815939778e-07,
+        "finite_intraday_return_rows": 4226,
+        "zero_intraday_return_rows": 2
+      }
+    }
+  },
+  "forecast_reconstruction": {
+    "monthly_fits_verified": 118,
+    "independent_convex_fits_verified": 236,
+    "forecasts_verified": 7386,
+    "common_scored_origins": 2462,
+    "common_application_origins": 2463,
+    "constant_memory_fits_retained": 0,
+    "training_rows_reconstructed": 292596,
+    "maximum_independent_baseline_gradient": 2.5617902944374132e-09,
+    "maximum_independent_memory_gradient": 2.200334098950707e-15
+  },
+  "primitive_brier_scores_verified": 7386,
+  "paired_brier_differences_verified": 4924,
+  "inference": {
+    "new_hypotheses_verified": 2,
+    "cumulative_hypotheses_verified": 119,
+    "phase_comparisons_verified": 4,
+    "bootstrap_runs_verified": 12,
+    "bootstrap_draws_per_run": 99999,
+    "calibration_rows_verified": 6,
+    "class_support": {
+      "development": {
+        "n": 1005,
+        "events": 815,
+        "nonevents": 190
+      },
+      "evaluation": {
+        "n": 1457,
+        "events": 1257,
+        "nonevents": 200
+      },
+      "evaluation_slices": [
+        {
+          "start": "2020-01-02",
+          "end": "2022-12-31",
+          "n": 756,
+          "events": 646,
+          "nonevents": 110
+        },
+        {
+          "start": "2023-01-01",
+          "end": "2025-10-17",
+          "n": 701,
+          "events": 611,
+          "nonevents": 90
+        }
+      ]
+    },
+    "leads": []
+  },
+  "ledger_events_verified": {
+    "inherited": 117,
+    "registered": 2,
+    "evaluated": 2
+  },
+  "protocol_sha256": "a825704da953cd84302ee37430e446f8558d700859ccc7d2b44fbf5e2268f3d0",
+  "verifier_sha256": "44c0dc5ab288dfd95cc483b98ea7f198bd587830a24141baa210d259b13b5c27",
+  "limitations": [
+    "Strict same-sign probability includes exact-zero returns in the complement and retains missing paired returns as unknown; no volatility-magnitude or covariance target.",
+    "The excess-agreement increment is a staged logistic model with frozen baseline logits; regularized training NLL and evaluation Brier share a probability target but need not improve together under misspecification.",
+    "Reused archival QQQ ETF/SPX index history, unverified historical source vintages and synchronized auction definitions, and early back-calculated VIX9D remain exploratory limitations.",
+    "Calibration in the large and nominal minimum-detectable effect are descriptive diagnostics; nonqualification is not equivalence and no execution or profit claim is made."
+  ]
+}

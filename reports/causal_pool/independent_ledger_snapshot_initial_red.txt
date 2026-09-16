@@ -1,0 +1,23 @@
+...............EE
+======================================================================
+ERROR: test_four_phase_inference_calibration_and_123_events_preserve_121_hypotheses (tests.test_verify_causal_pool.InferenceAndPublicationContracts.test_four_phase_inference_calibration_and_123_events_preserve_121_hypotheses)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_causal_pool.py", line 457, in test_four_phase_inference_calibration_and_123_events_preserve_121_hypotheses
+    verify.verify_ledger(root, m, prior, "evaluated",signature=signature),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: verify_ledger() got an unexpected keyword argument 'signature'
+
+======================================================================
+ERROR: test_inherited_metric_snapshot_identity_cannot_change_between_decode_and_digest (tests.test_verify_causal_pool.InferenceAndPublicationContracts.test_inherited_metric_snapshot_identity_cannot_change_between_decode_and_digest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_causal_pool.py", line 505, in test_inherited_metric_snapshot_identity_cannot_change_between_decode_and_digest
+    self.assertEqual(checked,verify.inherited_rows(root,p,pins={'old.json':pin}))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: inherited_rows() got an unexpected keyword argument 'pins'
+
+----------------------------------------------------------------------
+Ran 17 tests in 1.442s
+
+FAILED (errors=2)

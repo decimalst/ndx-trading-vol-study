@@ -1,0 +1,13 @@
+# Finalized-result renderer
+
+`scripts/render_commodity_implied_results.py` prepares SUMMARY.md and comparison_intervals.png/.pdf in reports/commodity_implied/predictive by default. It is prepared and checked only with generated temporary report fixtures; it has not been invoked on actual results. It contributes no forecasts or inference and is pinned in the terminal publication audit, separately from the computational freeze.
+
+The renderer reads terminal.json and its fixed report-artifact bindings: metrics.json, freeze_record.json, FULL_PRECHECK.json/.log, calibration.json, calibration_verification.json, and verification.json when present. It follows no source, forecast, fit, ledger or data paths from these documents. Exact available bindings and hashes must agree, the precheck's own log hash/count must agree, and prefit calibration/freeze proof statuses must be valid. Completed outcomes require independent forecast/score VERIFIED status and consistent stored counts; unevaluable outcomes require both canonical p1 rows and no invented estimates. Both branches retain the complete144 family.
+
+The four completed phase/control deltas and ci95_envelope endpoints are copied exactly into the figure, alongside zero and required-0.005 reference lines. There is no resampling, fitting or other new inference. An unevaluable attempt gets a clearly labeled no-estimates figure. Summaries distinguish a joint exploratory pass from a completed nonqualifier and from insufficient/invalid attempts, and state source-vintage, inherited ETF-field/adjustment, horizon/underlying mismatch and untouched-confirmation limitations.
+
+All figure buffers and text are prepared before writing. Existing output names, including symlinks, are refused; inputs are rechecked unchanged immediately before exclusive output creation. Root will perform the authorized actual rendering only after final terminal verification.
+
+Generated fixture QA covered a completed nonqualifier, a joint pass, insufficient support, and an invalid attempt. Each produced all three outputs, retained the 144-comparison accounting, rejected a second invocation, and preserved the original output bytes. A separate fixture changed finalized metrics bytes after terminal hashing and was rejected before any output. The completed and unevaluable PNGs were visually checked for legible labels, interval placement, reference lines, and absence of clipping. PDF counterparts were generated from the same figures. Ruff formatting and lint passed. No actual source, market, forecast, fit, or empirical result was read for this QA.
+
+Temporary QA directory: `/var/folders/jn/2wqppgv57cx3k54l_dqt9sl00000gn/T/commodity-render-qa-rdipi7nv`. Matplotlib used the separate cache `/tmp/commodity-render-mpl`.

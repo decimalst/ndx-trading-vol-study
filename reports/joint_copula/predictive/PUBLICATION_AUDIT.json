@@ -1,0 +1,89 @@
+{
+  "status": "VERIFIED_QUALIFIED_REPORT_CHECKPOINT",
+  "completed_utc": "2026-09-09T06:29:16.212109+00:00",
+  "study": "joint_copula_wave27",
+  "artifact_hashes": {
+    "reports/joint_copula/predictive/metrics.json": "d1de728c8fb6909a4ce8ecd6edb055d8b3652693550de140dfca3ff688593442",
+    "reports/joint_copula/predictive/comparison_intervals.pdf": "e8357a300a0c5c65bfdaf10a4b19c98c0825176a43888366459e63e44c7af8fe",
+    "reports/joint_copula/predictive/FULL_PRECHECK.log": "d7ba7cad5d54f9f7eb18d411022b0b4bbb54d1bf43b370f782d9a32d840cc4c2",
+    "reports/joint_copula/predictive/RENDER_MANIFEST.json": "303393e4b406dc529f6dc2beb9bdf32f0e6f86eb61378ccc73459a7fa9fc9842",
+    "reports/joint_copula/predictive/comparison_intervals.png": "f61696ac97677fac941c81b06043fb9cef466274b80aeaa0e7b1d449e2355002",
+    "reports/joint_copula/predictive/SUMMARY.md": "4cbd64736ca956d835caac2d9e1ce0f1049aa9cd68e0eea0eebfdfa31dbca275",
+    "reports/joint_copula/predictive/TEST_GATE_RESULT.json": "a5e9c02dd1958351adf9bbbcd30ccb62bb8ad69da5f98caac37ffbc9cbce9d11",
+    "reports/joint_copula/predictive/FULL_PRECHECK.json": "ae06519b67ed7bc8dba81143a4a54266c9f6f1059dbc6f670ac6ab955a889554",
+    "reports/joint_copula/predictive/score_verification.json": "e37fa59942dae4249a0ea41a31eff022916b14f929b41dfe5cb44bf4c1239639",
+    "reports/joint_copula/predictive/source_admission.json": "9dae4d3547303628d08320f21c20faa4bdd2a80d595342050b4fc35f6ced0699",
+    "reports/joint_copula/predictive/manifest.json": "13dbaa9e3ed0830981f6e1b6bc24a1c871f123bffb2d035d4073e3aab3715f5b",
+    "reports/joint_copula/predictive/freeze_record.json": "f98fddc72c6180a92445a36e4c41cac07c4b1ff2d29aab5aa3ef5ac929a1c265",
+    "reports/joint_copula/predictive/PUBLICATION_INDEPENDENT_AUDIT.json": "91639a7a2d1c7ed17410be9a0371e07f3c7f6c14ad69e8cff3d83f816110621b",
+    "reports/joint_copula/predictive/FINDINGS.md": "abfba9c58071ba244946da7871f7cce3bb55284397311027d4c44165f1a32e6d",
+    "reports/joint_copula/predictive/verification.json": "6abe3595a307ba61860093b12d891696d95ca41451f68397ad470f8840d907d4",
+    "reports/joint_copula/predictive/terminal.json": "9dfbe34029b5b8095fd68ff0c3e1e624bd854de287449a1045b6700906742b2f",
+    "reports/joint_copula/predictive/SCIENTIFIC_RESULT_REVIEW.md": "64281d03d8ebe0a7fac38a704def3edd88b446099ccfbb31f16b715d22f1016f",
+    "reports/joint_copula/predictive/forecast_verification.json": "a712dc8016689c0df0b3a2c8a4eedc9e3f995563baa80d408839851a65052dc2",
+    "reports/joint_copula/predictive/GOAL_COMPLETION_REVIEW.md": "0ad5f97939f6dbec78bf9c10a77d18d8c597743ff9e1950b46276290c2ef9b27",
+    "reports/joint_copula/predictive/trial_ledger.jsonl": "1789cf5b82a0c22a851716831bc445804dce346e4339bc1fe130c49d61311e50",
+    "reports/joint_copula/predictive/measurement_audit.json": "b5d9c1272239cd5b1a3c85c1619068ae491252444249c61c2b7caa34d4c2f5f0",
+    "reports/joint_copula/predictive/TEST_SELECTION.json": "25a1607f19e1f5f27add5e754cbb1ced6be728c853f89df6ab4df5c49a43b343",
+    "joint_copula.yaml": "cf43700c6c37ba860e9ef8ae4adb4c70158030efeedd3bca9b073f0691cd5d50",
+    "scripts/render_joint_copula_results.py": "471ef02c0ac520199c2e8fa414122f4d43ea7e10161912f84b4c3400a4da300b"
+  },
+  "output_hashes": {
+    "data/model_memory_study/joint_copula_wave27/coverage.parquet": "bcc430b0235744f7b65dcab905bb16c2f59d98d2bc0222d643545c516b084c14",
+    "data/model_memory_study/joint_copula_wave27/targets.parquet": "21cfdd9a10e50c073865747dfb5cd809033e5005629ef9a2cf595a993afaef19",
+    "data/model_memory_study/joint_copula_wave27/panel.parquet": "c4caed2560d36180511efd28436fa344224031e44f039e55161af536d0de6347",
+    "data/model_memory_study/joint_copula_wave27/schedules.parquet": "37d4d6c7cdc613501cc63d52c7ba2a828e936a1974daa995aac67cdffebf1232",
+    "data/model_memory_study/joint_copula_wave27/applications.parquet": "0ce97f4708e8c3f3a24b2223f04eb34d7a06802fe905acb4d06d633e3d883222",
+    "data/model_memory_study/joint_copula_wave27/features.parquet": "c064880974725ef1647d4e300f1b87a85ee8aaf306c8d702f0267e57bc16a683",
+    "data/model_memory_study/joint_copula_wave27/fits.json": "be070e131e96faa7939be052838beb16594825a1afe451c5deb01448fe1bae91"
+  },
+  "result": {
+    "status": "COMPLETED",
+    "leads": [
+      "joint_copula"
+    ],
+    "comparison_verdicts": [
+      "COMPARISON_GATE_PASS",
+      "COMPARISON_GATE_PASS"
+    ],
+    "cumulative_comparisons": 151,
+    "paired_origins": 2462,
+    "claim": "Exploratory improvement in joint QQQ/SPX intraday return density conditional on fixed shared t8 marginals"
+  },
+  "selected_tests": {
+    "passed": 3400,
+    "new_generated_methods": 87,
+    "quarantined": 6
+  },
+  "visual_review": {
+    "status": "VISUALLY_VERIFIED",
+    "four_estimates_and_envelopes_match_saved_metrics": true,
+    "text_and_labels_readable": true,
+    "separate_axis_scales_visible": true,
+    "nominal_intervals_and_historical_limitations_displayed": true
+  },
+  "independent_text_review": {
+    "reviewer": "replay_entry_finish",
+    "status": "NO_DISCREPANCY",
+    "reviewed_document_hashes": {
+      "FINDINGS.md": "abfba9c58071ba244946da7871f7cce3bb55284397311027d4c44165f1a32e6d",
+      "SUMMARY.md": "4cbd64736ca956d835caac2d9e1ce0f1049aa9cd68e0eea0eebfdfa31dbca275",
+      "RENDER_MANIFEST.json": "303393e4b406dc529f6dc2beb9bdf32f0e6f86eb61378ccc73459a7fa9fc9842"
+    },
+    "scope": "Four effects, probabilities, counts, subgroup directions, interpretation and render pins; visual inspection separately by root"
+  },
+  "evidence_class": "EXPLORATORY_REUSED_MARKET_HISTORY_CURRENT_VINTAGES",
+  "evidence_limitation": "Historical development and evaluation windows have been reused. Prior regression tests accessed the period beginning 2025-11-03; it is not untouched confirmation. Current vendor snapshots do not certify complete point-in-time price or implied-volatility vintages. Numerical inputs in this experiment end 2025-10-20. QQQ ETF and SPX price index are distinct instruments; exact synchronized auctions and historical publication latency are not certified.",
+  "goal_turn_classification": "PROGRESS_NEW_REGISTERED_EXPERIMENT_COMPLETED_VERIFIED_LEAD_AND_REVIEWED_REPORT",
+  "research_objective_achieved": true,
+  "completion_scope": "The broadened research search found a qualifying index joint-density lead; operational validation is not claimed. See GOAL_COMPLETION_REVIEW.md.",
+  "unproven": [
+    "untouched_future_confirmation",
+    "marginal_volatility_improvement",
+    "external_orthogonal_input",
+    "index_expected_return_alpha",
+    "portfolio_tail_calibration",
+    "trading_profit"
+  ],
+  "external_publication_performed": false
+}

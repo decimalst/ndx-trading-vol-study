@@ -1,0 +1,64 @@
+test_application_changes_do_not_refit_either_stage (tests.test_civil_quarter_models.CivilQuarterModels.test_application_changes_do_not_refit_either_stage) ... ok
+test_baseline_and_scalar_match_independent_convex_optimizers (tests.test_civil_quarter_models.CivilQuarterModels.test_baseline_and_scalar_match_independent_convex_optimizers) ... ok
+test_candidate_identification_is_conditional_on_all_baseline_controls (tests.test_civil_quarter_models.CivilQuarterModels.test_candidate_identification_is_conditional_on_all_baseline_controls) ... ok
+test_constant_target_and_zero_scalar_exactly_nest (tests.test_civil_quarter_models.CivilQuarterModels.test_constant_target_and_zero_scalar_exactly_nest) ... ok
+test_fixed_optimizer_and_nonfinite_bracket_fail_without_fallback (tests.test_civil_quarter_models.CivilQuarterModels.test_fixed_optimizer_and_nonfinite_bracket_fail_without_fallback) ... ok
+test_invalid_forecast_in_wholly_unscored_month_is_not_hidden (tests.test_civil_quarter_models.CivilQuarterModels.test_invalid_forecast_in_wholly_unscored_month_is_not_hidden) ... ok
+test_log_ratio_arithmetic_avoids_avoidable_intermediate_overflow (tests.test_civil_quarter_models.CivilQuarterModels.test_log_ratio_arithmetic_avoids_avoidable_intermediate_overflow) ... ok
+test_market_collinearity_alone_is_not_an_extra_rank_gate (tests.test_civil_quarter_models.CivilQuarterModels.test_market_collinearity_alone_is_not_an_extra_rank_gate) ... ok
+test_monthly_mask_is_common_mature_and_zero_targets_invalid (tests.test_civil_quarter_models.CivilQuarterModels.test_monthly_mask_is_common_mature_and_zero_targets_invalid) ... ok
+test_monthly_walkforward_preserves_unscored_queries_and_fits (tests.test_civil_quarter_models.CivilQuarterModels.test_monthly_walkforward_preserves_unscored_queries_and_fits) ... ok
+test_nonpositive_nonfinite_unaligned_and_unrepresentable_targets_reject (tests.test_civil_quarter_models.CivilQuarterModels.test_nonpositive_nonfinite_unaligned_and_unrepresentable_targets_reject) ... ok
+test_positive_objective_gradient_hessian_against_independent_differences (tests.test_civil_quarter_models.CivilQuarterModels.test_positive_objective_gradient_hessian_against_independent_differences) ... ok
+test_preflight_uses_all_months_support_before_any_optimizer (tests.test_civil_quarter_models.CivilQuarterModels.test_preflight_uses_all_months_support_before_any_optimizer) ... ok
+test_scalar_derivatives_strict_curvature_and_zero_nesting (tests.test_civil_quarter_models.CivilQuarterModels.test_scalar_derivatives_strict_curvature_and_zero_nesting) ... ok
+test_scientific_support_and_civil_rank_fail_without_dropping_columns (tests.test_civil_quarter_models.CivilQuarterModels.test_scientific_support_and_civil_rank_fail_without_dropping_columns) ... ok
+test_target_units_and_old_feature_units_do_not_change_normalized_forecasts (tests.test_civil_quarter_models.CivilQuarterModels.test_target_units_and_old_feature_units_do_not_change_normalized_forecasts) ... ok
+test_train_only_mixed_geometry_and_exact_quarter_center (tests.test_civil_quarter_models.CivilQuarterModels.test_train_only_mixed_geometry_and_exact_quarter_center) ... ok
+test_validation_rejects_panel_metadata_or_positive_domain_tampering (tests.test_civil_quarter_models.CivilQuarterModels.test_validation_rejects_panel_metadata_or_positive_domain_tampering) ... ERROR
+
+======================================================================
+ERROR: test_validation_rejects_panel_metadata_or_positive_domain_tampering (tests.test_civil_quarter_models.CivilQuarterModels.test_validation_rejects_panel_metadata_or_positive_domain_tampering)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/internals/blocks.py", line 1115, in setitem
+    casted = np_can_hold_element(values.dtype, value)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/dtypes/cast.py", line 1750, in np_can_hold_element
+    raise LossySetitemError
+pandas.errors.LossySetitemError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_civil_quarter_models.py", line 357, in test_validation_rejects_panel_metadata_or_positive_domain_tampering
+    bad.loc[0, "train_n"] = 1000.5
+    ~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexing.py", line 938, in __setitem__
+    iloc._setitem_with_indexer(indexer, value, self.name)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexing.py", line 1953, in _setitem_with_indexer
+    self._setitem_with_indexer_split_path(indexer, value, name)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexing.py", line 2044, in _setitem_with_indexer_split_path
+    self._setitem_single_column(loc, value, pi)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/indexing.py", line 2181, in _setitem_single_column
+    self.obj._mgr.column_setitem(loc, plane_indexer, value)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/internals/managers.py", line 1541, in column_setitem
+    new_mgr = col_mgr.setitem((idx,), value)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/internals/managers.py", line 620, in setitem
+    return self.apply("setitem", indexer=indexer, value=value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/internals/managers.py", line 445, in apply
+    applied = getattr(b, f)(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/internals/blocks.py", line 1118, in setitem
+    nb = self.coerce_to_target_dtype(value, raise_on_upcast=True)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/lib/python3.11/site-packages/pandas/core/internals/blocks.py", line 468, in coerce_to_target_dtype
+    raise TypeError(f"Invalid value '{other}' for dtype '{self.values.dtype}'")
+TypeError: Invalid value '1000.5' for dtype 'int64'
+
+----------------------------------------------------------------------
+Ran 18 tests in 2.191s
+
+FAILED (errors=1)

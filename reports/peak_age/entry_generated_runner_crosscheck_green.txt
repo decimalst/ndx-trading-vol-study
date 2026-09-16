@@ -1,0 +1,1 @@
+GENERATED_RUNNER_INFERENCE_INDEPENDENTLY_VERIFIED {'new_hypotheses_verified': 3, 'cumulative_hypotheses_verified': 140, 'phase_comparisons_verified': 6, 'bootstrap_runs_verified': 18, 'bootstrap_draws_per_run': 19, 'hac_maxlags': 504, 'nonoverlap_offsets_verified': 126, 'leads': []}

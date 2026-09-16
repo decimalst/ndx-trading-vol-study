@@ -1,0 +1,24 @@
+test_scored_target_and_application_copy_are_exact_inside_solver_tolerances (tests.test_peak_age_verification.FullPipelineContracts.test_scored_target_and_application_copy_are_exact_inside_solver_tolerances) ... 
+  test_scored_target_and_application_copy_are_exact_inside_solver_tolerances (tests.test_peak_age_verification.FullPipelineContracts.test_scored_target_and_application_copy_are_exact_inside_solver_tolerances) (name='y') ... FAIL
+  test_scored_target_and_application_copy_are_exact_inside_solver_tolerances (tests.test_peak_age_verification.FullPipelineContracts.test_scored_target_and_application_copy_are_exact_inside_solver_tolerances) (name='prediction') ... FAIL
+
+======================================================================
+FAIL: test_scored_target_and_application_copy_are_exact_inside_solver_tolerances (tests.test_peak_age_verification.FullPipelineContracts.test_scored_target_and_application_copy_are_exact_inside_solver_tolerances) (name='y')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_verification.py", line 455, in test_scored_target_and_application_copy_are_exact_inside_solver_tolerances
+    with self.subTest(name=name), self.assertRaises((ValueError, AssertionError)):
+AssertionError: (<class 'ValueError'>, <class 'AssertionError'>) not raised
+
+======================================================================
+FAIL: test_scored_target_and_application_copy_are_exact_inside_solver_tolerances (tests.test_peak_age_verification.FullPipelineContracts.test_scored_target_and_application_copy_are_exact_inside_solver_tolerances) (name='prediction')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_peak_age_verification.py", line 455, in test_scored_target_and_application_copy_are_exact_inside_solver_tolerances
+    with self.subTest(name=name), self.assertRaises((ValueError, AssertionError)):
+AssertionError: (<class 'ValueError'>, <class 'AssertionError'>) not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 5.489s
+
+FAILED (failures=2)

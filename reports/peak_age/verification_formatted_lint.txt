@@ -1,0 +1,24 @@
+RUF021 [*] Parenthesize `a and b` expressions when chaining `and` and `or` together, to make the precedence clear
+   --> src/peak_age_verification.py:352:12
+    |
+350 |       if not (
+351 |           isinstance(values, pd.DatetimeIndex)
+352 |           or isinstance(values, pd.Series)
+    |  ____________^
+353 | |         and pd.api.types.is_datetime64_any_dtype(values.dtype)
+    | |______________________________________________________________^
+354 |       ):
+355 |           raise ValueError("Native date containers required; no parsing/coercion")
+    |
+help: Parenthesize the `and` subexpression
+    |
+351 |         isinstance(values, pd.DatetimeIndex)
+    -         or isinstance(values, pd.Series)
+    -         and pd.api.types.is_datetime64_any_dtype(values.dtype)
+352 +         or (isinstance(values, pd.Series)
+353 +         and pd.api.types.is_datetime64_any_dtype(values.dtype))
+354 |     ):
+    |
+
+Found 1 error.
+[*] 1 fixable with the `--fix` option.

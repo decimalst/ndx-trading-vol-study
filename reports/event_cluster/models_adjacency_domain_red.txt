@@ -1,0 +1,13 @@
+F
+======================================================================
+FAIL: test_negative_raw_adjacency_is_invalid (tests.test_event_cluster_models.StagedCluster.test_negative_raw_adjacency_is_invalid)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_event_cluster_models.py", line 176, in test_negative_raw_adjacency_is_invalid
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.009s
+
+FAILED (failures=1)

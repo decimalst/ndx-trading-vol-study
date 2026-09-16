@@ -1,0 +1,202 @@
+{
+  "accounting_scope_clarification": "The 1,774 prior-pins figure is the union of all nineteen older manifests; it is not the narrower two-anchor union. Existing SUMMARY wording was accurate.",
+  "actual_coverage": {
+    "development": {
+      "first_origin": "2016-01-04",
+      "last_origin": "2019-12-30",
+      "n": 1002
+    },
+    "evaluation": {
+      "first_origin": "2020-01-02",
+      "last_origin": "2025-10-17",
+      "n": 1456
+    },
+    "unscored_applications": [
+      {
+        "available_date": "2020-01-02",
+        "origin": "2019-12-31",
+        "reason": "Target maturity crosses the fixed development boundary; issued probabilities and state are retained.",
+        "target_end": "2020-01-02"
+      }
+    ]
+  },
+  "current_verified_counts": {
+    "common_application_origins": 2459,
+    "common_scored_origins": 2458,
+    "forecasts": 7374,
+    "independent_convex_fits": 236,
+    "monthly_fits": 118,
+    "paired_brier_differences": 4916,
+    "primitive_brier_scores": 7374
+  },
+  "decision_check": {
+    "baseline_late_deltas": [
+      0.0001589370851916066,
+      -7.841896429272719e-05
+    ],
+    "baseline_phase_deltas": [
+      2.6158258554646652e-06,
+      4.482359986259996e-05
+    ],
+    "both_controls_and_both_multiplicity_gates_required": true,
+    "leads": [],
+    "recent_frequency_cumulative_holm": 0.013545,
+    "recent_frequency_wave_holm": 0.00021,
+    "required_cumulative_alpha": 0.05,
+    "required_wave_alpha": 0.00014619883040935673
+  },
+  "displayed_rows_checked": {
+    "calibration": 6,
+    "holm": 2,
+    "phase": 4,
+    "stability_and_mde": 2,
+    "support": 4
+  },
+  "document_hashes": {
+    "range_alert.yaml": "ff7b2a7fee497da11f1f88613a17314d3b92d683f506bc4cc51d5089d2bc16a3",
+    "reports/civil_quarter/metrics.json": "67eb0c458001b726f1456453388283a99f22a2508424da4fdf56d535e9b0d159",
+    "reports/civil_quarter_replay/metrics.json": "ac6ab77e85fd037535f4031c0124539b3b7c088ec8f42a810ca7eea668787e08",
+    "reports/profiled_quarter/publication_review.json": "acee9758065d96e83bbf960e8bc0f94ab912b71a6471a64739b7e0876aff8e6f",
+    "reports/range_alert/DESIGN.md": "c1720f933480135dc8084fe4a5ce012dea3ee317e85f83bcdfa49873a7d2d7ec",
+    "reports/range_alert/DESIGN_REVIEW.md": "3ac2583b476a17c4607d8a018ff62919f90a5f9645a4c42e9f966f180f951b54",
+    "reports/range_alert/MODEL_DESIGN.md": "1d3b6756a21d4abb301835d92749874f2e9b89f2668e7e9ac7ea3b716a5af7b3",
+    "reports/range_alert/NEXT_RESEARCH_DIRECTION.md": "8dc17f9701ebcdd05dfdaca219bb371d4c85fb432353c16d6fc777975e3d4106",
+    "reports/range_alert/SOURCE_FEATURE_DESIGN.md": "50c03f3efa33335ebd7c85c830e8b32b2b72e0a36e388d96494743d1e4edc6fa",
+    "reports/range_alert/SUMMARY.md": "51a5408bf13c4e10bebb8e8d67c237fb4a4c069f282bba4d4abceb436e266e35",
+    "reports/range_alert/VERIFIER_DESIGN.md": "90ee7e182398bab13eb7381e253f81f64b2bac804689cb1e1a307e33b9baf610",
+    "reports/range_alert/freeze_record.json": "a0a00285aab3e3cb233ee34f62c944f693444ea0a830ca0812a65a25b295cb7f",
+    "reports/range_alert/full_repository_tests.txt": "5cafb110520b654d2a008206f714668eda5537d2a6577525863e2e974f17a130",
+    "reports/range_alert/manifest.json": "3390dfe5a8cae1d18951625fafb7cdbd5ba6693a32a3158d6df182c2856af895",
+    "reports/range_alert/metrics.json": "4773632cba167423650b0c688e177856d346f17cae8c758019f2d8bf9d15026e",
+    "reports/range_alert/verification.json": "de5391c863c1008248b8ddfbc0b2c945126a5a8b36154cc6bfcdc980848bf873"
+  },
+  "figure_findings": [
+    "Both comparison panels are legible, with clear phase labels and no material clipping or overlap.",
+    "Location-minus-baseline intervals straddle zero and do not reach the required -0.0005 improvement; location-minus-frequency intervals are negative on their separately labeled scale.",
+    "Zero, the -0.0005 reference, Brier units, lower-is-better direction and both multiplicity thresholds are correctly identified.",
+    "Positive descriptive frequency-control improvement is not labeled as a qualifying signal."
+  ],
+  "figure_hashes": {
+    "reports/range_alert/comparison_intervals.pdf": "8afa2dac28a40c45cd635110b31f2fbb1c9373e6a45a55a6cbc0691e8869a3db",
+    "reports/range_alert/comparison_intervals.png": "9500ebe96d4d9a036fab5050b8de195f42a4a90dd52a506edf1d28724bd6ac8a"
+  },
+  "figure_review_method": "Actual comparison_intervals.png opened with view_image; reviewed native image content rather than inferred rendering from code or file existence.",
+  "figure_visually_reviewed": true,
+  "frozen_files_written": false,
+  "historical_models_or_verifiers_rerun": false,
+  "inference_counts": {
+    "bootstrap_draws_per_run": 199999,
+    "bootstrap_runs_verified": 12,
+    "calibration_rows_verified": 6,
+    "class_support": {
+      "development": {
+        "events": 127,
+        "n": 1002,
+        "nonevents": 875
+      },
+      "evaluation": {
+        "events": 210,
+        "n": 1456,
+        "nonevents": 1246
+      },
+      "evaluation_slices": [
+        {
+          "end": "2022-12-31",
+          "events": 117,
+          "n": 756,
+          "nonevents": 639,
+          "start": "2020-01-02"
+        },
+        {
+          "end": "2025-10-17",
+          "events": 93,
+          "n": 700,
+          "nonevents": 607,
+          "start": "2023-01-01"
+        }
+      ]
+    },
+    "cumulative_hypotheses_verified": 129,
+    "leads": [],
+    "new_hypotheses_verified": 2,
+    "phase_comparisons_verified": 4
+  },
+  "interpretation": [
+    "No candidate passes all registered gates; the added location feature has slightly worse average Brier loss than the baseline in both phases and mixed later-slice signs.",
+    "Candidate-versus-frequency gains remain descriptive for this question: that contrast fails the wave Holm gate, and the incremental baseline contrast also fails. The existing baseline is not promoted through a newly invented comparison.",
+    "Calibration-in-the-large differences do not establish conditional calibration; the report does not fit or claim an after-result recalibration.",
+    "Nominal MDE/effect ratios are diagnostic, not equivalence or multiplicity-adjusted power.",
+    "The daily OHLC threshold event, archival vintage limits and repeated history reuse are stated; there is no measured high-frequency variance, profit or untouched-confirmation claim."
+  ],
+  "ledger_events": {
+    "evaluated": 2,
+    "inherited": 127,
+    "registered": 2,
+    "total": 131
+  },
+  "manifest_counts": {
+    "code": 279,
+    "inputs": 1277,
+    "preserved": 269
+  },
+  "manifest_pins_rehashed": 1825,
+  "new_predictive_statistics_or_prospective_event_counts_computed": false,
+  "prior_failures_preserved": {
+    "civil_quarter": {
+      "canonical_status": "UNEVALUABLE",
+      "inherited_p1_rows": 2
+    },
+    "civil_quarter_replay": {
+      "canonical_status": "UNEVALUABLE",
+      "inherited_p1_rows": 2,
+      "retained_unverified_forecasts": 6297
+    }
+  },
+  "prior_union_check": {
+    "hash_conflicts": 0,
+    "manifests": 19,
+    "mismatches": 0,
+    "scope": "Optional code/inputs/preserved maps from all nineteen prior report manifests, including orthogonal_round2 and model_memory_study.",
+    "unique_pins_rehashed": 1774
+  },
+  "prior_unpublished_diagnostic_scores_read": false,
+  "prospective_note_review": {
+    "findings": [
+      "Uses only original issued finite logits and later mature labels with the prior-session cutoff.",
+      "Empty initialization, fixed unnormalized decayed weights, no invented missing issuance and unchanged controls are explicit.",
+      "The signed logistic objective, stable binary residuals, strictly positive penalty curvature and deterministic root bracket are mathematically consistent.",
+      "Rounded saved probabilities establish replay identity; they are explicitly distinguished from the objective residual computed from finite logits.",
+      "Any future implementation must fix numerical controls and seed before registration; two additional hypotheses would increase the cumulative family from 129 to 131."
+    ],
+    "sha256": "8dc17f9701ebcdd05dfdaca219bb371d4c85fb432353c16d6fc777975e3d4106",
+    "status": "CONCEPTUALLY_REVIEWED_UNREGISTERED_UNRUN"
+  },
+  "protocol_sha256": "ff7b2a7fee497da11f1f88613a17314d3b92d683f506bc4cc51d5089d2bc16a3",
+  "repository_tests_passed": 1888,
+  "resolved_editorial_findings": [],
+  "reviewed_utc": "2026-09-07T14:19:49.154483+00:00",
+  "scope": [
+    "Final report interpretation against current independently VERIFIED metrics and reconstruction record.",
+    "Literal four phase rows, two multiplicity rows, two stability/MDE rows, four support rows and six calibration rows checked against the saved metrics.",
+    "Actual scored date coverage and the retained unscored application checked using hash-bound saved date/state metadata.",
+    "All current registration pins, ten verified output snapshots and the 19-prior-manifest source/code/preserved union rehashed without changing files.",
+    "Visual inspection of the actual published PNG and review of its units, literal intervals, two separate scales and promotion-rule wording.",
+    "Prospective next-direction note reviewed as adaptive, unregistered and unrun; its mathematical and causal proposal is not a completed experiment."
+  ],
+  "sequence_count_audit": {
+    "completed_verified_waves_new_rows": 152184,
+    "cumulative_hypotheses": 129,
+    "initial_enumerated_hypotheses": 54,
+    "new_registrations": 75,
+    "retained_unverified_wave16_rows": 6297,
+    "scope": "Published seventeen-wave sequence metadata plus independently verified wave18 newly generated rows; reused/rescored rows are not counted again. Not repository-lifetime totals.",
+    "total_generated_new_rows": 158481
+  },
+  "status": "APPROVED_VERIFIED_INTERPRETATION",
+  "summary_sha256": "51a5408bf13c4e10bebb8e8d67c237fb4a4c069f282bba4d4abceb436e266e35",
+  "unresolved_material_findings": [],
+  "verified_output_pins_rehashed": 10,
+  "writes": [
+    "reports/range_alert/publication_review.json"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "status": "NO_REMAINING_MATERIAL_FINDINGS",
+  "reviewed_utc": "2026-09-13T22:24:09.660303+00:00",
+  "scope": "Independent narrative, units, retained-case and receipt review; no fits, sampling, hypothesis tests, or accounting reruns.",
+  "presentation_hashes": {
+    "FINDINGS.md": "0ef75ce83aca4ba5e439fa50f04ed6b39469cf0eb9aad36b8aad87c546544cfa",
+    "ALL_CASES.md": "50aba1cc918456351c8106b217b85e058e3655acdcc7a7a9f15c32de6c47d2f9",
+    "FIGURE_DATA.json": "df48c0d1c799ba0648d6ff9ffba2652b96ea8b6b0c3a1204110c432d79f34825",
+    "FIGURE_RECEIPT.json": "0bb99b965d295a24e08b69f48ff88fefb330a179711411037154cb0ff8250af8",
+    "spread_safety.png": "2b8cfc3c590701155a6f844f1addfc6c3612de7477cda7520dd00b0e6a41c865",
+    "spread_safety.pdf": "58a2dac41e35f14e7123f9b6859014e8e6b9115a8889e92960e4a7f8ad01b06c"
+  },
+  "authenticated_empirical_outputs": {
+    "reports/copula_spread_replay/started.json": "e0aa3b225c9f450ae12d601ac73bebc14a00acabac9201fb59421c4378475594",
+    "data/model_memory_study/copula_spread_replay/positions.parquet": "562ad6fa0346808506e2d2b0859d839ea025dfeeb1e449f51195ab1c65d9a704",
+    "data/model_memory_study/copula_spread_replay/path.parquet": "28803e5739398b18858b09ddc21936d899cdf8cfac91161af16a8756a730733b",
+    "data/model_memory_study/copula_spread_replay/summary.parquet": "4232bba71551ba96bc7ae1893c65af28cc7cf11b6d4f04d2cc263fe53e2ff00e",
+    "data/model_memory_study/copula_spread_replay/outcomes.parquet": "266c8bcd0424618713354b280356b246e040e1c68447da6b49846ba8d0184df7",
+    "reports/copula_spread_replay/accounting_verification.json": "6af44a802906b20c3b407d29e81024c07820b0c053d12d2501cfa3c937feeecf",
+    "data/model_memory_study/copula_spread_replay/safety_summary.parquet": "0574957139b8d004e1271128d1e81722290f27160cb953a28c8b9acac3984bef",
+    "reports/copula_spread_replay/density_descriptions.json": "6a8bb53c7f340f4e53ea4436a3ce9f0a37121b199ce22d780c6dd00b59b968b4"
+  },
+  "original_failed_terminal_sha256": "9f7a1ef5d19c16305f708aaa9bf8ce832c6de8d8e13ca73b9c4899a66e385a0c",
+  "original_unevaluable_six_p1_preserved": true,
+  "rendered_detail_row_counts": {
+    "probability_rows": 324,
+    "account_rows": 378,
+    "density_rows": 12
+  },
+  "resolved_findings": [
+    "Qualified opening safety comparison to the primary 2% distance; development 3% put filters do not improve every accepted-day measure.",
+    "Qualified Brier direction to the primary 2% distance and affine comparison; other strike distances have mixed directions.",
+    "Distinguished 105 monthly fits from 2191 issued applications."
+  ],
+  "review_conclusions": [
+    "Primary participation, breach and normalized-liability tables agree with saved summaries; no material transcription issue found.",
+    "Strike breach is explicitly separated from net losing trades, intraday touches and full-width loss.",
+    "Liability and credit percentages use wing width; return and drawdown percentages use account equity; summed daily attribution is not compounded-wealth attribution.",
+    "Constant credits and costs are hypothetical and credit-sensitive wealth rankings are disclosed; no attainable option profit or safety guarantee is claimed.",
+    "All nine cases, six probability models plus always-sell control, both phases and three credit scenarios remain reported.",
+    "Original numerical failure is preserved; the separate replay reports no new fits, resampling, inference, hypotheses or promoted signal.",
+    "The 1% condor small-sample breach warning and finite-sampling limitations are disclosed.",
+    "Prospective ledger scope is accurately described as implemented scaffolding without active collection, option adapters or calibrated joint-density scoring."
+  ],
+  "limitations": "This review interprets saved verified output and checks receipt hashes; it does not certify live option availability, execution, future calibration, or inferential significance."
+}

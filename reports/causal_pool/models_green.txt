@@ -1,0 +1,23 @@
+test_entire_unscored_month_retains_every_application_state (tests.test_causal_pool_models.CausalPoolModels.test_entire_unscored_month_retains_every_application_state) ... ok
+test_exact_application_index_fit_counts_and_first_cutoffs_required (tests.test_causal_pool_models.CausalPoolModels.test_exact_application_index_fit_counts_and_first_cutoffs_required) ... ok
+test_first_update_has_one_minus_decay_weight_and_two_session_maturity (tests.test_causal_pool_models.CausalPoolModels.test_first_update_has_one_minus_decay_weight_and_two_session_maturity) ... ok
+test_future_labels_cannot_change_prior_cutoff_state (tests.test_causal_pool_models.CausalPoolModels.test_future_labels_cannot_change_prior_cutoff_state) ... ok
+test_initial_prior_mass_exactly_one_and_no_cold_start_deletion (tests.test_causal_pool_models.CausalPoolModels.test_initial_prior_mass_exactly_one_and_no_cold_start_deletion) ... ok
+test_invalid_full_calendar_and_label_alignment_reject (tests.test_causal_pool_models.CausalPoolModels.test_invalid_full_calendar_and_label_alignment_reject) ... ok
+test_labels_from_feature_gap_and_development_boundary_are_consumed (tests.test_causal_pool_models.CausalPoolModels.test_labels_from_feature_gap_and_development_boundary_are_consumed) ... ok
+test_missing_labels_decay_mass_without_becoming_zero_observations (tests.test_causal_pool_models.CausalPoolModels.test_missing_labels_decay_mass_without_becoming_zero_observations) ... ok
+test_nonzero_underflow_and_bad_probability_inputs_reject (tests.test_causal_pool_models.CausalPoolModels.test_nonzero_underflow_and_bad_probability_inputs_reject) ... ok
+test_original_baseline_metadata_probability_loss_and_inputs_preserved (tests.test_causal_pool_models.CausalPoolModels.test_original_baseline_metadata_probability_loss_and_inputs_preserved) ... ok
+test_original_panel_tampering_rejects_before_new_state (tests.test_causal_pool_models.CausalPoolModels.test_original_panel_tampering_rejects_before_new_state) ... ok
+test_output_validator_rejects_unknown_models_and_changed_brier (tests.test_causal_pool_models.CausalPoolModels.test_output_validator_rejects_unknown_models_and_changed_brier) ... ok
+test_pool_is_exact_separate_half_products_and_endpoints_are_valid (tests.test_causal_pool_models.CausalPoolModels.test_pool_is_exact_separate_half_products_and_endpoints_are_valid) ... ok
+test_preseed_labels_are_never_refed (tests.test_causal_pool_models.CausalPoolModels.test_preseed_labels_are_never_refed) ... ok
+test_seed_consumed_availability_is_distinct_from_state_cutoff (tests.test_causal_pool_models.CausalPoolModels.test_seed_consumed_availability_is_distinct_from_state_cutoff) ... ok
+test_states_match_independent_explicit_full_calendar_weights (tests.test_causal_pool_models.CausalPoolModels.test_states_match_independent_explicit_full_calendar_weights) ... ok
+test_unscored_first_application_seeds_before_first_scored_origin (tests.test_causal_pool_models.CausalPoolModels.test_unscored_first_application_seeds_before_first_scored_origin) ... ok
+test_zero_binary_label_adds_denominator_weight (tests.test_causal_pool_models.CausalPoolModels.test_zero_binary_label_adds_denominator_weight) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 1.947s
+
+OK

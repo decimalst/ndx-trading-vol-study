@@ -1,0 +1,894 @@
+E701 Multiple statements on one line (colon)
+  --> src/peak_age_pipeline.py:80:35
+   |
+78 |         raise ValueError('Finite squared losses and literal training counts required')
+79 |     residual=panel.y.to_numpy(float)-panel.prediction.to_numpy(float)
+80 |     with np.errstate(all='ignore'): expected=residual*residual
+   |                                   ^
+81 |     if (not np.isfinite(expected).all() or ((residual!=0)&(expected==0)).any()
+82 |         or not np.array_equal(panel.loss.to_numpy(float),expected)):
+   |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/peak_age_pipeline.py:106:50
+    |
+104 |     dates=features.index
+105 |     start,end=pd.Timestamp(config['origin_start']),pd.Timestamp(config['origin_end'])
+106 |     ds,de=map(pd.Timestamp,config['development']); es,ee=map(pd.Timestamp,config['evaluation'])
+    |                                                  ^
+107 |     latest=pd.Timestamp(config['latest_target'])
+108 |     if (not start<=ds<=de<es<=ee<=end<=latest or config['development_target_available_by']!=config['development'][1]
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/peak_age_pipeline.py:115:24
+    |
+113 |     phase=((dates>=ds)&(dates<=de))|((dates>=es)&(dates<=ee))
+114 |     entries=dates[complete&phase&(dates>=start)&(dates<=end)]
+115 |     if not len(entries):raise ValueError('INSUFFICIENT_DATA: no complete applications')
+    |                        ^
+116 |     ready=np.isfinite(targets.y)&(targets.available_date<=latest)&((dates>de)|(targets.available_date<=de))
+117 |     states,rows,fits=[],[],[]
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/peak_age_pipeline.py:123:51
+    |
+121 | …     mask=training_mask(features,targets,fit_origin,config['minimum_train'])
+122 | …     fitted=models.fit_predict(features.loc[mask],targets.loc[mask,'y'],features.loc[application])
+123 | …     if set(fitted['predictions'])!=set(MODELS):raise ValueError('All four fitted model predictions required')
+    |                                                 ^
+124 | …     cutoff=features.loc[fit_origin,'feature_cutoff_date']
+125 | …     fits.append({'horizon':21,'fit_origin':str(fit_origin.date()),'feature_cutoff_date':str(cutoff.date()),'train_n':int(mask.sum()…
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/peak_age_pipeline.py:127:51
+    |
+125 | …     fits.append({'horizon':21,'fit_origin':str(fit_origin.date()),'feature_cutoff_date':str(cutoff.date()),'train_n':int(mask.sum()…
+126 | …     state=pd.DataFrame({'origin':application,'fit_origin':fit_origin,'feature_cutoff_date':features.loc[application,'feature_cutoff…
+127 | …     selected=ready.loc[application].to_numpy(); scored=application[selected]
+    |                                                 ^
+128 | …     for name in MODELS:
+129 | …         prediction=np.asarray(fitted['predictions'][name],float)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/peak_age_pipeline.py:130:90
+    |
+128 | …     for name in MODELS:
+129 | …         prediction=np.asarray(fitted['predictions'][name],float)
+130 | …         if prediction.shape!=(len(application),) or not np.isfinite(prediction).all():raise ValueError('Finite predictions for ever…
+    |                                                                                        ^
+131 | …         state['pred_'+name]=prediction
+132 | …         one=pd.DataFrame({'origin':scored,'fit_origin':fit_origin,'feature_cutoff_date':features.loc[scored,'feature_cutoff_date'].…
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/peak_age_pipeline.py:133:62
+    |
+131 | …     state['pred_'+name]=prediction
+132 | …     one=pd.DataFrame({'origin':scored,'fit_origin':fit_origin,'feature_cutoff_date':features.loc[scored,'feature_cutoff_date'].to_n…
+133 | …     for column in ('y','target_end','available_date'):one[column]=targets.loc[scored,column].to_numpy()
+    |                                                        ^
+134 | …     residual=one.y.to_numpy(float)-one.prediction.to_numpy(float)
+135 | …     with np.errstate(all='ignore'):loss=residual*residual
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/peak_age_pipeline.py:135:43
+    |
+133 | …     for column in ('y','target_end','available_date'):one[column]=targets.loc[scored,column].to_numpy()
+134 | …     residual=one.y.to_numpy(float)-one.prediction.to_numpy(float)
+135 | …     with np.errstate(all='ignore'):loss=residual*residual
+    |                                     ^
+136 | …     if not np.isfinite(loss).all() or ((residual!=0)&(loss==0)).any():raise ValueError('Nonfinite or underflowed required squared l…
+137 | …     one['loss']=loss; rows.append(one.loc[:,list(PANEL_COLUMNS)])
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/peak_age_pipeline.py:136:78
+    |
+134 | …         residual=one.y.to_numpy(float)-one.prediction.to_numpy(float)
+135 | …         with np.errstate(all='ignore'):loss=residual*residual
+136 | …         if not np.isfinite(loss).all() or ((residual!=0)&(loss==0)).any():raise ValueError('Nonfinite or underflowed required squar…
+    |                                                                            ^
+137 | …         one['loss']=loss; rows.append(one.loc[:,list(PANEL_COLUMNS)])
+138 | …     states.append(state.loc[:,list(STATE_COLUMNS)])
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/peak_age_pipeline.py:137:29
+    |
+135 |             with np.errstate(all='ignore'):loss=residual*residual
+136 |             if not np.isfinite(loss).all() or ((residual!=0)&(loss==0)).any():raise ValueError('Nonfinite or underflowed required squ…
+137 |             one['loss']=loss; rows.append(one.loc[:,list(PANEL_COLUMNS)])
+    |                             ^
+138 |         states.append(state.loc[:,list(STATE_COLUMNS)])
+139 |     full=pd.concat(states,ignore_index=True).sort_values('origin').reset_index(drop=True)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/peak_age_search.py:333:37
+    |
+331 | def evaluate(panel,calendar,p,monthly_schedules,application_n,*,prior=None):
+332 |     pipeline.validate_panel(panel)
+333 |     dates=pd.DatetimeIndex(calendar);pipeline._dates(dates)
+    |                                     ^
+334 |     n=int(panel.origin.nunique())
+335 |     if (type(monthly_schedules) is not int or monthly_schedules<=0 or type(application_n) is not int
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/peak_age_search.py:344:57
+    |
+342 |         if not np.array_equal(panel[name].to_numpy(),clock.shift(shift).loc[panel.origin].to_numpy()):
+343 |             raise ValueError('Exact previous-session and21-session scored clocks required')
+344 |     dev=panel.origin.between(*p['index']['development']); ev=panel.origin.between(*p['index']['evaluation'])
+    |                                                         ^
+345 |     if (not (dev|ev).all() or not np.array_equal(panel.phase,np.where(dev,'development','evaluation'))
+346 |         or not panel.train_n.ge(p['index']['minimum_train']).all()
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/peak_age_search.py:393:26
+    |
+391 |     lines=['# Trailing peak age and SPX21-session returns','','Positive relative MSE gain means improvement; all three controls and b…
+392 |     for row in metrics['rows']:
+393 |         d,e=row['phases'];lines.append(f"| {row['control']} | {d['gain_relative']:.4%} | {e['gain_relative']:.4%} | {row['p_holm_wave…
+    |                          ^
+394 |     lines+=['','Passing horizons: '+json.dumps(metrics['leads']),'','Sequential age correction may retune ridge shrinkage; this is no…
+395 |     (REPORT/'results.md').write_text('\n'.join(lines))
+    |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_peak_age_pipeline.py:19:18
+   |
+17 |     rng=np.random.default_rng(731)
+18 |     f=pd.DataFrame(rng.uniform(.1,.8,(len(dates),len(p['index']['common']))),index=dates,columns=p['index']['common'])
+19 |     f['const']=1.; f['drawdown_sq']=f.drawdown**2
+   |                  ^
+20 |     f['feature_cutoff_date']=pd.Series(dates,index=dates).shift(1)
+21 |     f.loc[dates[0],p['index']['common']]=np.nan
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_peak_age_pipeline.py:25:17
+   |
+23 |     t.loc[t.target_end.isna(),'y']=np.nan
+24 |     s=pd.DataFrame({'feature_cutoff_date':f.feature_cutoff_date},index=dates)
+25 |     i=p['index']; i.update(origin_start=str(dates[70].date()),origin_end=str(dates[-1].date()),source_end=str(dates[-1].date()),latest…
+   |                 ^
+26 |     return f,t,s,p
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_peak_age_pipeline.py:39:26
+   |
+38 |     def test_full_applications_precede_scoring_and_all_controls_match(self):
+39 |         f,t,s,p=fixture(); panel,fits,states,support=self.run_panel(f,t,s,p)
+   |                          ^
+40 |         self.assertEqual(set(panel.model),set(pipeline.MODELS))
+41 |         self.assertEqual(set(panel.horizon),{21})
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_peak_age_pipeline.py:50:51
+   |
+48 |         self.assertEqual(len(fits),len(states.origin.dt.to_period('M').unique()))
+49 |         for fit in fits:
+50 |             origin=pd.Timestamp(fit['fit_origin']); cutoff=pd.Timestamp(fit['feature_cutoff_date'])
+   |                                                   ^
+51 |             expected=f.index[(f.index<origin)&(t.available_date<=cutoff)&t.y.notna()&f.feature_cutoff_date.notna()]
+52 |             self.assertEqual(fit['train_origins'],[str(x.date()) for x in expected])
+   |
+
+RUF059 Unpacked variable `s` is never used
+  --> tests/test_peak_age_pipeline.py:59:13
+   |
+58 |     def test_training_availability_inclusive_boundary(self):
+59 |         f,t,s,p=fixture(); entry=f.index[70]
+   |             ^
+60 |         mask=pipeline.training_mask(f,t,entry,40)
+61 |         self.assertTrue(mask.iloc[48]); self.assertFalse(mask.iloc[49])
+   |
+help: Prefix it with an underscore or any other dummy variable pattern
+
+RUF059 Unpacked variable `p` is never used
+  --> tests/test_peak_age_pipeline.py:59:15
+   |
+58 |     def test_training_availability_inclusive_boundary(self):
+59 |         f,t,s,p=fixture(); entry=f.index[70]
+   |               ^
+60 |         mask=pipeline.training_mask(f,t,entry,40)
+61 |         self.assertTrue(mask.iloc[48]); self.assertFalse(mask.iloc[49])
+   |
+help: Prefix it with an underscore or any other dummy variable pattern
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_peak_age_pipeline.py:59:26
+   |
+58 |     def test_training_availability_inclusive_boundary(self):
+59 |         f,t,s,p=fixture(); entry=f.index[70]
+   |                          ^
+60 |         mask=pipeline.training_mask(f,t,entry,40)
+61 |         self.assertTrue(mask.iloc[48]); self.assertFalse(mask.iloc[49])
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_peak_age_pipeline.py:61:39
+   |
+59 |         f,t,s,p=fixture(); entry=f.index[70]
+60 |         mask=pipeline.training_mask(f,t,entry,40)
+61 |         self.assertTrue(mask.iloc[48]); self.assertFalse(mask.iloc[49])
+   |                                       ^
+62 |         self.assertTrue((t.loc[mask,'available_date']<=f.loc[entry,'feature_cutoff_date']).all())
+63 |         with self.assertRaisesRegex(ValueError,'INSUFFICIENT_DATA'):
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_peak_age_pipeline.py:67:26
+   |
+66 |     def test_query_missing_label_never_moves_fit_date(self):
+67 |         f,t,s,p=fixture(); original=self.run_panel(f,t,s,p)
+   |                          ^
+68 |         changed=t.copy(); changed.loc[f.index[70],'y']=np.nan
+69 |         panel,fits,states,_=self.run_panel(f,changed,s,p)
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_peak_age_pipeline.py:68:25
+   |
+66 |     def test_query_missing_label_never_moves_fit_date(self):
+67 |         f,t,s,p=fixture(); original=self.run_panel(f,t,s,p)
+68 |         changed=t.copy(); changed.loc[f.index[70],'y']=np.nan
+   |                         ^
+69 |         panel,fits,states,_=self.run_panel(f,changed,s,p)
+70 |         self.assertEqual(fits[0]['fit_origin'],original[1][0]['fit_origin'])
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_peak_age_pipeline.py:79:26
+   |
+78 |     def test_feature_incomplete_origin_never_enters_any_arm(self):
+79 |         f,t,s,p=fixture(); f.loc[f.index[70],'peak_age']=np.nan
+   |                          ^
+80 |         panel,fits,states,_=self.run_panel(f,t,s,p)
+81 |         self.assertNotIn(f.index[70],set(states.origin)); self.assertNotIn(f.index[70],set(panel.origin))
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_peak_age_pipeline.py:81:57
+   |
+79 |         f,t,s,p=fixture(); f.loc[f.index[70],'peak_age']=np.nan
+80 |         panel,fits,states,_=self.run_panel(f,t,s,p)
+81 |         self.assertNotIn(f.index[70],set(states.origin)); self.assertNotIn(f.index[70],set(panel.origin))
+   |                                                         ^
+82 |         self.assertEqual(fits[0]['fit_origin'],str(f.index[71].date()))
+83 |         self.assertTrue(all(str(f.index[70].date()) not in one['train_origins'] for one in fits))
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_peak_age_pipeline.py:86:26
+   |
+85 |     def test_future_label_mutation_preserves_earlier_issuance(self):
+86 |         f,t,s,p=fixture(); before=self.run_panel(f,t,s,p)
+   |                          ^
+87 |         t.loc[t.index[70:],'y']+=10
+88 |         after=self.run_panel(f,t,s,p)
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_peak_age_pipeline.py:93:26
+   |
+92 |     def test_unscored_final_month_still_has_fit_and_predictions(self):
+93 |         f,t,s,p=fixture(); t.loc[t.index[-35:],'y']=np.nan
+   |                          ^
+94 |         panel,fits,states,support=self.run_panel(f,t,s,p)
+95 |         last_month=f.index[-1].to_period('M')
+   |
+
+RUF059 Unpacked variable `states` is never used
+   --> tests/test_peak_age_pipeline.py:104:24
+    |
+102 |         outcomes=[]
+103 |         for unit in ('ms','us','ns'):
+104 |             panel,fits,states,support=self.run_panel(*fixture(unit))
+    |                        ^^^^^^
+105 |             outcomes.append(([str(x.date()) for x in panel.origin],fits,support))
+106 |         self.assertEqual(outcomes[0],outcomes[1]); self.assertEqual(outcomes[1],outcomes[2])
+    |
+help: Prefix it with an underscore or any other dummy variable pattern
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_pipeline.py:106:50
+    |
+104 |             panel,fits,states,support=self.run_panel(*fixture(unit))
+105 |             outcomes.append(([str(x.date()) for x in panel.origin],fits,support))
+106 |         self.assertEqual(outcomes[0],outcomes[1]); self.assertEqual(outcomes[1],outcomes[2])
+    |                                                  ^
+107 |
+108 |     def test_changed_date_clocks_and_misalignment_reject(self):
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_pipeline.py:111:30
+    |
+109 |         for kind in ('cutoff','end','available','target_index','state_index','duplicate'):
+110 |             f,t,s,p=fixture()
+111 |             if kind=='cutoff':f.loc[f.index[70],'feature_cutoff_date']=f.index[70]
+    |                              ^
+112 |             elif kind=='end':t.loc[t.index[70],'target_end']=t.index[92]
+113 |             elif kind=='available':t.loc[t.index[70],'available_date']=t.index[92]
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_pipeline.py:112:29
+    |
+110 |             f,t,s,p=fixture()
+111 |             if kind=='cutoff':f.loc[f.index[70],'feature_cutoff_date']=f.index[70]
+112 |             elif kind=='end':t.loc[t.index[70],'target_end']=t.index[92]
+    |                             ^
+113 |             elif kind=='available':t.loc[t.index[70],'available_date']=t.index[92]
+114 |             elif kind=='target_index':t=t.iloc[::-1]
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_pipeline.py:113:35
+    |
+111 |             if kind=='cutoff':f.loc[f.index[70],'feature_cutoff_date']=f.index[70]
+112 |             elif kind=='end':t.loc[t.index[70],'target_end']=t.index[92]
+113 |             elif kind=='available':t.loc[t.index[70],'available_date']=t.index[92]
+    |                                   ^
+114 |             elif kind=='target_index':t=t.iloc[::-1]
+115 |             elif kind=='state_index':s=s.iloc[::-1]
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_pipeline.py:114:38
+    |
+112 |             elif kind=='end':t.loc[t.index[70],'target_end']=t.index[92]
+113 |             elif kind=='available':t.loc[t.index[70],'available_date']=t.index[92]
+114 |             elif kind=='target_index':t=t.iloc[::-1]
+    |                                      ^
+115 |             elif kind=='state_index':s=s.iloc[::-1]
+116 |             else:f.index=list(f.index[:-1])+[f.index[-2]]
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_pipeline.py:115:37
+    |
+113 |             elif kind=='available':t.loc[t.index[70],'available_date']=t.index[92]
+114 |             elif kind=='target_index':t=t.iloc[::-1]
+115 |             elif kind=='state_index':s=s.iloc[::-1]
+    |                                     ^
+116 |             else:f.index=list(f.index[:-1])+[f.index[-2]]
+117 |             with self.subTest(kind=kind),self.assertRaises(ValueError):self.run_panel(f,t,s,p)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_pipeline.py:116:17
+    |
+114 |             elif kind=='target_index':t=t.iloc[::-1]
+115 |             elif kind=='state_index':s=s.iloc[::-1]
+116 |             else:f.index=list(f.index[:-1])+[f.index[-2]]
+    |                 ^
+117 |             with self.subTest(kind=kind),self.assertRaises(ValueError):self.run_panel(f,t,s,p)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_pipeline.py:117:71
+    |
+115 |             elif kind=='state_index':s=s.iloc[::-1]
+116 |             else:f.index=list(f.index[:-1])+[f.index[-2]]
+117 |             with self.subTest(kind=kind),self.assertRaises(ValueError):self.run_panel(f,t,s,p)
+    |                                                                       ^
+118 |
+119 |     def test_panel_rejects_partial_family_wrong_losses_and_pairing(self):
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_pipeline.py:123:31
+    |
+121 |         for kind in ('missing','duplicate','label','loss','horizon','nonfinite','train_n'):
+122 |             q=panel.copy()
+123 |             if kind=='missing':q=q.iloc[1:]
+    |                               ^
+124 |             elif kind=='duplicate':q=pd.concat([q,q.iloc[:1]])
+125 |             elif kind=='label':q.loc[0,'y']+=.1
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_pipeline.py:124:35
+    |
+122 |             q=panel.copy()
+123 |             if kind=='missing':q=q.iloc[1:]
+124 |             elif kind=='duplicate':q=pd.concat([q,q.iloc[:1]])
+    |                                   ^
+125 |             elif kind=='label':q.loc[0,'y']+=.1
+126 |             elif kind=='loss':q.loc[0,'loss']+=.1
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_pipeline.py:125:31
+    |
+123 |             if kind=='missing':q=q.iloc[1:]
+124 |             elif kind=='duplicate':q=pd.concat([q,q.iloc[:1]])
+125 |             elif kind=='label':q.loc[0,'y']+=.1
+    |                               ^
+126 |             elif kind=='loss':q.loc[0,'loss']+=.1
+127 |             elif kind=='horizon':q.loc[0,'horizon']=63
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_pipeline.py:126:30
+    |
+124 |             elif kind=='duplicate':q=pd.concat([q,q.iloc[:1]])
+125 |             elif kind=='label':q.loc[0,'y']+=.1
+126 |             elif kind=='loss':q.loc[0,'loss']+=.1
+    |                              ^
+127 |             elif kind=='horizon':q.loc[0,'horizon']=63
+128 |             elif kind=='nonfinite':q.loc[0,'prediction']=np.inf
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_pipeline.py:127:33
+    |
+125 |             elif kind=='label':q.loc[0,'y']+=.1
+126 |             elif kind=='loss':q.loc[0,'loss']+=.1
+127 |             elif kind=='horizon':q.loc[0,'horizon']=63
+    |                                 ^
+128 |             elif kind=='nonfinite':q.loc[0,'prediction']=np.inf
+129 |             else:q.loc[0,'train_n']+=1
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_pipeline.py:128:35
+    |
+126 |             elif kind=='loss':q.loc[0,'loss']+=.1
+127 |             elif kind=='horizon':q.loc[0,'horizon']=63
+128 |             elif kind=='nonfinite':q.loc[0,'prediction']=np.inf
+    |                                   ^
+129 |             else:q.loc[0,'train_n']+=1
+130 |             with self.subTest(kind=kind),self.assertRaises(ValueError):pipeline.validate_panel(q)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_pipeline.py:129:17
+    |
+127 |             elif kind=='horizon':q.loc[0,'horizon']=63
+128 |             elif kind=='nonfinite':q.loc[0,'prediction']=np.inf
+129 |             else:q.loc[0,'train_n']+=1
+    |                 ^
+130 |             with self.subTest(kind=kind),self.assertRaises(ValueError):pipeline.validate_panel(q)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_pipeline.py:130:71
+    |
+128 |             elif kind=='nonfinite':q.loc[0,'prediction']=np.inf
+129 |             else:q.loc[0,'train_n']+=1
+130 |             with self.subTest(kind=kind),self.assertRaises(ValueError):pipeline.validate_panel(q)
+    |                                                                       ^
+131 |
+132 |     def test_fixed_models_and_horizon_reject(self):
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_pipeline.py:134:30
+    |
+132 |     def test_fixed_models_and_horizon_reject(self):
+133 |         for key,value in [('models',['mean','baseline','depth']),('horizons',[21,63]),('market_lag',0)]:
+134 |             f,t,s,p=fixture(); p['index'][key]=value
+    |                              ^
+135 |             with self.subTest(key=key),self.assertRaises(ValueError):self.run_panel(f,t,s,p)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_pipeline.py:135:69
+    |
+133 |         for key,value in [('models',['mean','baseline','depth']),('horizons',[21,63]),('market_lag',0)]:
+134 |             f,t,s,p=fixture(); p['index'][key]=value
+135 |             with self.subTest(key=key),self.assertRaises(ValueError):self.run_panel(f,t,s,p)
+    |                                                                     ^
+136 |
+137 |     def test_input_frames_remain_unchanged(self):
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_pipeline.py:138:26
+    |
+137 |     def test_input_frames_remain_unchanged(self):
+138 |         f,t,s,p=fixture(); snapshots=[x.copy(deep=True) for x in (f,t,s)]
+    |                          ^
+139 |         self.run_panel(f,t,s,p)
+140 |         for x,y in zip((f,t,s),snapshots,strict=True):pd.testing.assert_frame_equal(x,y)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_pipeline.py:140:54
+    |
+138 |         f,t,s,p=fixture(); snapshots=[x.copy(deep=True) for x in (f,t,s)]
+139 |         self.run_panel(f,t,s,p)
+140 |         for x,y in zip((f,t,s),snapshots,strict=True):pd.testing.assert_frame_equal(x,y)
+    |                                                      ^
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_pipeline.py:143:24
+    |
+143 | if __name__=='__main__':unittest.main()
+    |                        ^
+
+E701 Multiple statements on one line (colon)
+  --> tests/test_peak_age_search.py:44:37
+   |
+42 |         def leaves(x,path=()):
+43 |             if isinstance(x,dict):
+44 |                 for k,v in x.items():yield from leaves(v,path+(k,))
+   |                                     ^
+45 |             elif isinstance(x,list):
+46 |                 for k,v in enumerate(x):yield from leaves(v,path+(k,))
+   |
+
+E701 Multiple statements on one line (colon)
+  --> tests/test_peak_age_search.py:46:40
+   |
+44 |                 for k,v in x.items():yield from leaves(v,path+(k,))
+45 |             elif isinstance(x,list):
+46 |                 for k,v in enumerate(x):yield from leaves(v,path+(k,))
+   |                                        ^
+47 |             else:yield path,x
+48 |         for path,value in leaves(run.CONTRACT):
+   |
+
+E701 Multiple statements on one line (colon)
+  --> tests/test_peak_age_search.py:47:17
+   |
+45 |             elif isinstance(x,list):
+46 |                 for k,v in enumerate(x):yield from leaves(v,path+(k,))
+47 |             else:yield path,x
+   |                 ^
+48 |         for path,value in leaves(run.CONTRACT):
+49 |             p=copy.deepcopy(run.CONTRACT); node=p
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_peak_age_search.py:49:42
+   |
+47 |             else:yield path,x
+48 |         for path,value in leaves(run.CONTRACT):
+49 |             p=copy.deepcopy(run.CONTRACT); node=p
+   |                                          ^
+50 |             for key in path[:-1]:node=node[key]
+51 |             node[path[-1]]=value+' changed' if isinstance(value,str) else 'changed'
+   |
+
+E701 Multiple statements on one line (colon)
+  --> tests/test_peak_age_search.py:50:33
+   |
+48 |         for path,value in leaves(run.CONTRACT):
+49 |             p=copy.deepcopy(run.CONTRACT); node=p
+50 |             for key in path[:-1]:node=node[key]
+   |                                 ^
+51 |             node[path[-1]]=value+' changed' if isinstance(value,str) else 'changed'
+52 |             with self.subTest(path=path),self.assertRaises(ValueError):run.validate(p)
+   |
+
+E701 Multiple statements on one line (colon)
+  --> tests/test_peak_age_search.py:52:71
+   |
+50 |             for key in path[:-1]:node=node[key]
+51 |             node[path[-1]]=value+' changed' if isinstance(value,str) else 'changed'
+52 |             with self.subTest(path=path),self.assertRaises(ValueError):run.validate(p)
+   |                                                                       ^
+53 |         p=copy.deepcopy(run.CONTRACT);p['unregistered_variant']=True
+54 |         with self.assertRaises(ValueError):run.validate(p)
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_peak_age_search.py:53:38
+   |
+51 |             node[path[-1]]=value+' changed' if isinstance(value,str) else 'changed'
+52 |             with self.subTest(path=path),self.assertRaises(ValueError):run.validate(p)
+53 |         p=copy.deepcopy(run.CONTRACT);p['unregistered_variant']=True
+   |                                      ^
+54 |         with self.assertRaises(ValueError):run.validate(p)
+55 |         p=copy.deepcopy(run.CONTRACT);p['index']['market_lag']=True
+   |
+
+E701 Multiple statements on one line (colon)
+  --> tests/test_peak_age_search.py:54:43
+   |
+52 |             with self.subTest(path=path),self.assertRaises(ValueError):run.validate(p)
+53 |         p=copy.deepcopy(run.CONTRACT);p['unregistered_variant']=True
+54 |         with self.assertRaises(ValueError):run.validate(p)
+   |                                           ^
+55 |         p=copy.deepcopy(run.CONTRACT);p['index']['market_lag']=True
+56 |         with self.assertRaises(ValueError):run.validate(p)
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_peak_age_search.py:55:38
+   |
+53 |         p=copy.deepcopy(run.CONTRACT);p['unregistered_variant']=True
+54 |         with self.assertRaises(ValueError):run.validate(p)
+55 |         p=copy.deepcopy(run.CONTRACT);p['index']['market_lag']=True
+   |                                      ^
+56 |         with self.assertRaises(ValueError):run.validate(p)
+   |
+
+E701 Multiple statements on one line (colon)
+  --> tests/test_peak_age_search.py:56:43
+   |
+54 |         with self.assertRaises(ValueError):run.validate(p)
+55 |         p=copy.deepcopy(run.CONTRACT);p['index']['market_lag']=True
+56 |         with self.assertRaises(ValueError):run.validate(p)
+   |                                           ^
+57 |
+58 |     def test_all_three_controls_and_single_horizon_required(self):
+   |
+
+E701 Multiple statements on one line (colon)
+  --> tests/test_peak_age_search.py:64:47
+   |
+62 |         self.assertEqual(run.candidate_leads(rows),[])
+63 |         for partial in (rows[:2],rows+[row()],rows[:2]+[row('unknown')]):
+64 |             with self.assertRaises(ValueError):run.candidate_leads(partial)
+   |                                               ^
+65 |
+66 |     def test_every_offset_and_each_joint_gate_required(self):
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_peak_age_search.py:69:20
+   |
+67 | …     mutations=[lambda r:r.update(p_holm_wave=run.WAVE_ALPHA),lambda r:r.update(p_holm_cumulative=.05),lambda r:r['phases'][0].update…
+68 | …     for mutation in mutations:
+69 | …         r=row();mutation(r)
+   |                  ^
+70 | …         with self.subTest(mutation=mutation):self.assertFalse(run.passes(r))
+   |
+
+E701 Multiple statements on one line (colon)
+  --> tests/test_peak_age_search.py:70:49
+   |
+68 |         for mutation in mutations:
+69 |             r=row();mutation(r)
+70 |             with self.subTest(mutation=mutation):self.assertFalse(run.passes(r))
+   |                                                 ^
+71 |
+72 |     def test_failure_keeps_all_three_and_family140(self):
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_peak_age_search.py:74:50
+   |
+72 |     def test_failure_keeps_all_three_and_family140(self):
+73 |         m=run.failure_metrics(ValueError('broken'),'abc')
+74 |         self.assertEqual(m['hypothesis_count'],3);self.assertEqual(m['cumulative_hypothesis_count'],140)
+   |                                                  ^
+75 |         self.assertEqual(m['leads'],[]);self.assertEqual(m['status'],'UNEVALUABLE')
+76 |         for r in m['rows']:
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_peak_age_search.py:75:40
+   |
+73 |         m=run.failure_metrics(ValueError('broken'),'abc')
+74 |         self.assertEqual(m['hypothesis_count'],3);self.assertEqual(m['cumulative_hypothesis_count'],140)
+75 |         self.assertEqual(m['leads'],[]);self.assertEqual(m['status'],'UNEVALUABLE')
+   |                                        ^
+76 |         for r in m['rows']:
+77 |             self.assertEqual(r['phases'],[])
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_peak_age_search.py:82:28
+   |
+80 |     def test_inherited_count_and_hashes_fail_closed(self):
+81 |         with tempfile.TemporaryDirectory() as temp:
+82 |             root=Path(temp);file=root/'prior.json';file.write_text(json.dumps({'rows':[{'candidate':str(i),'control':'baseline','horiz…
+   |                            ^
+83 |             p=copy.deepcopy(run.CONTRACT);p['comparisons']['inherited_sources']=['prior.json']
+84 |             with patch.object(run,'ROOT',root):
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_peak_age_search.py:82:51
+   |
+80 |     def test_inherited_count_and_hashes_fail_closed(self):
+81 |         with tempfile.TemporaryDirectory() as temp:
+82 |             root=Path(temp);file=root/'prior.json';file.write_text(json.dumps({'rows':[{'candidate':str(i),'control':'baseline','horiz…
+   |                                                   ^
+83 |             p=copy.deepcopy(run.CONTRACT);p['comparisons']['inherited_sources']=['prior.json']
+84 |             with patch.object(run,'ROOT',root):
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_peak_age_search.py:83:42
+   |
+81 | …     with tempfile.TemporaryDirectory() as temp:
+82 | …         root=Path(temp);file=root/'prior.json';file.write_text(json.dumps({'rows':[{'candidate':str(i),'control':'baseline','horizon…
+83 | …         p=copy.deepcopy(run.CONTRACT);p['comparisons']['inherited_sources']=['prior.json']
+   |                                        ^
+84 | …         with patch.object(run,'ROOT',root):
+85 | …             self.assertEqual(len(run.inherited(p,{'prior.json':run.inference.digest(file)})),137)
+   |
+
+E701 Multiple statements on one line (colon)
+  --> tests/test_peak_age_search.py:86:51
+   |
+84 |             with patch.object(run,'ROOT',root):
+85 |                 self.assertEqual(len(run.inherited(p,{'prior.json':run.inference.digest(file)})),137)
+86 |                 with self.assertRaises(ValueError):run.inherited(p,{'prior.json':'0'*64})
+   |                                                   ^
+87 |                 file.write_text(json.dumps({'rows':[]}))
+88 |                 with self.assertRaises(ValueError):run.inherited(p)
+   |
+
+E701 Multiple statements on one line (colon)
+  --> tests/test_peak_age_search.py:88:51
+   |
+86 |                 with self.assertRaises(ValueError):run.inherited(p,{'prior.json':'0'*64})
+87 |                 file.write_text(json.dumps({'rows':[]}))
+88 |                 with self.assertRaises(ValueError):run.inherited(p)
+   |                                                   ^
+89 |
+90 |     def test_generated_inference_has_all_controls_phases_offsets_and_counts(self):
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_peak_age_search.py:91:45
+   |
+90 |     def test_generated_inference_has_all_controls_phases_offsets_and_counts(self):
+91 |         panel,calendar,p=inference_fixture(); prior=[{'p_conservative':1.} for _ in range(137)]
+   |                                             ^
+92 |         m=run.evaluate(panel,calendar,p,10,1205,prior=prior)
+93 |         self.assertEqual(len(m['rows']),3);self.assertEqual(m['newly_generated_forecasts'],4800)
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_peak_age_search.py:93:43
+   |
+91 |         panel,calendar,p=inference_fixture(); prior=[{'p_conservative':1.} for _ in range(137)]
+92 |         m=run.evaluate(panel,calendar,p,10,1205,prior=prior)
+93 |         self.assertEqual(len(m['rows']),3);self.assertEqual(m['newly_generated_forecasts'],4800)
+   |                                           ^
+94 |         self.assertEqual(m['full_application_predictions'],4820)
+95 |         self.assertEqual(m['ridge_models_fitted'],20);self.assertEqual(m['scalar_models_fitted'],10)
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_peak_age_search.py:95:54
+   |
+93 |         self.assertEqual(len(m['rows']),3);self.assertEqual(m['newly_generated_forecasts'],4800)
+94 |         self.assertEqual(m['full_application_predictions'],4820)
+95 |         self.assertEqual(m['ridge_models_fitted'],20);self.assertEqual(m['scalar_models_fitted'],10)
+   |                                                      ^
+96 |         for r in m['rows']:
+97 |             self.assertEqual(r['horizon'],21)
+   |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_search.py:99:49
+    |
+ 97 |             self.assertEqual(r['horizon'],21)
+ 98 |             for phase in r['phases']:
+ 99 |                 self.assertEqual(phase['n'],600);self.assertLess(phase['delta'],0)
+    |                                                 ^
+100 |                 self.assertEqual({x['phase'] for x in phase['nonoverlap_phases']},set(range(21)))
+101 |                 self.assertEqual(set(phase['block_inference']),{'126','252','504'})
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_search.py:104:45
+    |
+103 |     def test_short_phase_and_mismatched_or_future_rows_reject(self):
+104 |         panel,calendar,p=inference_fixture();prior=[{'p_conservative':1.} for _ in range(137)]
+    |                                             ^
+105 |         for kind in ('short','label','calendar','count'):
+106 |             q=panel.copy();cal=calendar
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_search.py:106:27
+    |
+104 |         panel,calendar,p=inference_fixture();prior=[{'p_conservative':1.} for _ in range(137)]
+105 |         for kind in ('short','label','calendar','count'):
+106 |             q=panel.copy();cal=calendar
+    |                           ^
+107 |             if kind=='short':q=q.loc[~q.origin.isin(q.loc[q.phase=='development','origin'].unique()[:100])].reset_index(drop=True)
+108 |             elif kind=='label':q.loc[0,'y']+=1
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_search.py:107:29
+    |
+105 |         for kind in ('short','label','calendar','count'):
+106 |             q=panel.copy();cal=calendar
+107 |             if kind=='short':q=q.loc[~q.origin.isin(q.loc[q.phase=='development','origin'].unique()[:100])].reset_index(drop=True)
+    |                             ^
+108 |             elif kind=='label':q.loc[0,'y']+=1
+109 |             elif kind=='calendar':cal=calendar[1:]
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_search.py:108:31
+    |
+106 |             q=panel.copy();cal=calendar
+107 |             if kind=='short':q=q.loc[~q.origin.isin(q.loc[q.phase=='development','origin'].unique()[:100])].reset_index(drop=True)
+108 |             elif kind=='label':q.loc[0,'y']+=1
+    |                               ^
+109 |             elif kind=='calendar':cal=calendar[1:]
+110 |             else:prior=prior[:-1]
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_search.py:109:34
+    |
+107 |             if kind=='short':q=q.loc[~q.origin.isin(q.loc[q.phase=='development','origin'].unique()[:100])].reset_index(drop=True)
+108 |             elif kind=='label':q.loc[0,'y']+=1
+109 |             elif kind=='calendar':cal=calendar[1:]
+    |                                  ^
+110 |             else:prior=prior[:-1]
+111 |             if kind=='calendar':cal=calendar.delete(100)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_search.py:110:17
+    |
+108 |             elif kind=='label':q.loc[0,'y']+=1
+109 |             elif kind=='calendar':cal=calendar[1:]
+110 |             else:prior=prior[:-1]
+    |                 ^
+111 |             if kind=='calendar':cal=calendar.delete(100)
+112 |             with self.subTest(kind=kind),self.assertRaises(ValueError):run.evaluate(q,cal,p,10,1205,prior=prior)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_search.py:111:32
+    |
+109 |             elif kind=='calendar':cal=calendar[1:]
+110 |             else:prior=prior[:-1]
+111 |             if kind=='calendar':cal=calendar.delete(100)
+    |                                ^
+112 |             with self.subTest(kind=kind),self.assertRaises(ValueError):run.evaluate(q,cal,p,10,1205,prior=prior)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_search.py:112:71
+    |
+110 |             else:prior=prior[:-1]
+111 |             if kind=='calendar':cal=calendar.delete(100)
+112 |             with self.subTest(kind=kind),self.assertRaises(ValueError):run.evaluate(q,cal,p,10,1205,prior=prior)
+    |                                                                       ^
+113 |
+114 |     def test_literal_fit_application_counts_required(self):
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_peak_age_search.py:115:45
+    |
+114 |     def test_literal_fit_application_counts_required(self):
+115 |         panel,calendar,p=inference_fixture();prior=[{'p_conservative':1.} for _ in range(137)]
+    |                                             ^
+116 |         for k,a in ((True,1205),(0,1205),(10,True),(10,100)):
+117 |             with self.subTest(k=k,a=a),self.assertRaises(ValueError):run.evaluate(panel,calendar,p,k,a,prior=prior)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_search.py:117:69
+    |
+115 |         panel,calendar,p=inference_fixture();prior=[{'p_conservative':1.} for _ in range(137)]
+116 |         for k,a in ((True,1205),(0,1205),(10,True),(10,100)):
+117 |             with self.subTest(k=k,a=a),self.assertRaises(ValueError):run.evaluate(panel,calendar,p,k,a,prior=prior)
+    |                                                                     ^
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_peak_age_search.py:120:24
+    |
+120 | if __name__=='__main__':unittest.main()
+    |                        ^
+
+Found 84 errors.
+No fixes available (3 hidden fixes can be enabled with the `--unsafe-fixes` option).

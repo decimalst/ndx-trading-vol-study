@@ -1,0 +1,9 @@
+{
+  "status": "VERIFIED",
+  "contrasts_verified": 7,
+  "phases_verified": 2,
+  "common_scored_origins": 2190,
+  "inherited_hypotheses_verified": 151,
+  "density_scope": "independent normalized marginals and seven contrast identities; full joint fits covered by forecast verifier",
+  "inference": "independent explicit circular-index tables and Bartlett HAC; shared phase streams; Holm7/Holm158"
+}

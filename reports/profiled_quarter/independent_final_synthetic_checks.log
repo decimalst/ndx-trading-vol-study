@@ -1,0 +1,11 @@
+
+Fontconfig error: No writable cache directories
+	/opt/homebrew/var/cache/fontconfig
+	/Users/byrons/.cache/fontconfig
+	/Users/byrons/.fontconfig
+Matplotlib is building the font cache; this may take a moment.
+..............
+----------------------------------------------------------------------
+Ran 14 tests in 48.879s
+
+OK

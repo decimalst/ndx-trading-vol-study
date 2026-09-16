@@ -1,0 +1,37 @@
+test_application_inputs_cannot_change_training_parameters (tests.test_tail_shape_models.TestTailShapeModels.test_application_inputs_cannot_change_training_parameters) ... ERROR
+test_bound_projection_has_correct_sign (tests.test_tail_shape_models.TestTailShapeModels.test_bound_projection_has_correct_sign) ... ok
+test_common_moments_and_fitted_frequency_are_exact (tests.test_tail_shape_models.TestTailShapeModels.test_common_moments_and_fitted_frequency_are_exact) ... ERROR
+test_constant_and_candidate_start_rules_and_kkt (tests.test_tail_shape_models.TestTailShapeModels.test_constant_and_candidate_start_rules_and_kkt) ... ok
+test_event_definition_and_alignment_are_validated (tests.test_tail_shape_models.TestTailShapeModels.test_event_definition_and_alignment_are_validated) ... ok
+test_likelihood_includes_scale_jacobian (tests.test_tail_shape_models.TestTailShapeModels.test_likelihood_includes_scale_jacobian) ... ok
+test_optimizer_failure_and_false_success_are_not_retried (tests.test_tail_shape_models.TestTailShapeModels.test_optimizer_failure_and_false_success_are_not_retried) ... ok
+test_shape_objective_matches_analytic_chain_gradient (tests.test_tail_shape_models.TestTailShapeModels.test_shape_objective_matches_analytic_chain_gradient) ... ok
+
+======================================================================
+ERROR: test_application_inputs_cannot_change_training_parameters (tests.test_tail_shape_models.TestTailShapeModels.test_application_inputs_cannot_change_training_parameters)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_tail_shape_models.py", line 73, in test_application_inputs_cannot_change_training_parameters
+    before=model.fit_predict(train,t.loc[train.index],apply)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/tail_shape_models.py", line 100, in fit_predict
+    skew_mean=float(tr.skew.mean());skew_scale=float(tr.skew.std(ddof=0))
+                    ^^^^^^^^^^^^
+AttributeError: 'function' object has no attribute 'mean'
+
+======================================================================
+ERROR: test_common_moments_and_fitted_frequency_are_exact (tests.test_tail_shape_models.TestTailShapeModels.test_common_moments_and_fitted_frequency_are_exact)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_tail_shape_models.py", line 59, in test_common_moments_and_fitted_frequency_are_exact
+    fit=model.fit_predict(train,t.loc[train.index],apply)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/tail_shape_models.py", line 100, in fit_predict
+    skew_mean=float(tr.skew.mean());skew_scale=float(tr.skew.std(ddof=0))
+                    ^^^^^^^^^^^^
+AttributeError: 'function' object has no attribute 'mean'
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.034s
+
+FAILED (errors=2)

@@ -1,0 +1,24 @@
+PREIMPLEMENTATION RED: src/precision_gate.py absent
+Command: .venv/bin/python -m unittest tests.test_precision_gate -v
+tests/test_precision_gate.py SHA256 0c60c0e292b8e5f5d1b56c1f1eec42f507ccec14d8aafa4de948142b5ca0ffba
+reports/precision_gate/CORE_CONTRACT.md SHA256 2aade7a32724d5fb929311b89c30b9a5ae100158d73a3736de0760adc1a75c16
+Exit status: 1
+test_precision_gate (unittest.loader._FailedTest.test_precision_gate) ... ERROR
+
+======================================================================
+ERROR: test_precision_gate (unittest.loader._FailedTest.test_precision_gate)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_precision_gate
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_precision_gate.py", line 9, in <module>
+    from src.precision_gate import _objective_gradient, fit_gate, predict_gate
+ModuleNotFoundError: No module named 'src.precision_gate'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

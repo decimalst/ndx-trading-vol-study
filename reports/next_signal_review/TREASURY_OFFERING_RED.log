@@ -1,0 +1,55 @@
+UTC 2026-09-09T01:38:28.279411+00:00
+Source absent before tests: true
+Command: .venv/bin/python -m unittest tests.test_treasury_offering_amounts -v
+
+test_treasury_offering_amounts (unittest.loader._FailedTest.test_treasury_offering_amounts) ... ERROR
+
+======================================================================
+ERROR: test_treasury_offering_amounts (unittest.loader._FailedTest.test_treasury_offering_amounts)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_treasury_offering_amounts
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_offering_amounts.py", line 8, in <module>
+    from src import treasury_offering_amounts as offering
+ImportError: cannot import name 'treasury_offering_amounts' from 'src' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/__init__.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+
+Exit code: 1
+
+PREFREEZE EMPTY-DUPLICATE REGRESSION, before correction, UTC 2026-09-09T01:42:18.670762+00:00
+Command: .venv/bin/python -m unittest tests.test_treasury_offering_amounts.TreasuryOfferingAmountsTests.test_empty_duplicate_pdf_labels_cannot_hide_beside_valid_rows -v
+
+test_empty_duplicate_pdf_labels_cannot_hide_beside_valid_rows (tests.test_treasury_offering_amounts.TreasuryOfferingAmountsTests.test_empty_duplicate_pdf_labels_cannot_hide_beside_valid_rows) ... 
+  test_empty_duplicate_pdf_labels_cannot_hide_beside_valid_rows (tests.test_treasury_offering_amounts.TreasuryOfferingAmountsTests.test_empty_duplicate_pdf_labels_cannot_hide_beside_valid_rows) (label='Offering Amount') ... FAIL
+  test_empty_duplicate_pdf_labels_cannot_hide_beside_valid_rows (tests.test_treasury_offering_amounts.TreasuryOfferingAmountsTests.test_empty_duplicate_pdf_labels_cannot_hide_beside_valid_rows) (label='Auction Date') ... FAIL
+
+======================================================================
+FAIL: test_empty_duplicate_pdf_labels_cannot_hide_beside_valid_rows (tests.test_treasury_offering_amounts.TreasuryOfferingAmountsTests.test_empty_duplicate_pdf_labels_cannot_hide_beside_valid_rows) (label='Offering Amount')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_offering_amounts.py", line 281, in test_empty_duplicate_pdf_labels_cannot_hide_beside_valid_rows
+    with self.subTest(label=label), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_empty_duplicate_pdf_labels_cannot_hide_beside_valid_rows (tests.test_treasury_offering_amounts.TreasuryOfferingAmountsTests.test_empty_duplicate_pdf_labels_cannot_hide_beside_valid_rows) (label='Auction Date')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_offering_amounts.py", line 281, in test_empty_duplicate_pdf_labels_cannot_hide_beside_valid_rows
+    with self.subTest(label=label), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=2)
+
+Exit code: 1

@@ -1,0 +1,44 @@
+GENERATED ENTRY REGRESSIONS; ABSENT PENDING SPREAD VERIFIER IS EXPLICITLY STUBBED
+['.venv/bin/python', '-m', 'unittest', 'tests.test_copula_shape_run.ShapeRunContracts.test_actual_entry_rejects_freeze_change_before_any_model_work', 'tests.test_copula_shape_run.ShapeRunContracts.test_actual_entry_reloads_outputs_projects_risks_and_binds_started', '-v']
+test_actual_entry_rejects_freeze_change_before_any_model_work (tests.test_copula_shape_run.ShapeRunContracts.test_actual_entry_rejects_freeze_change_before_any_model_work) ... Fitting the frozen monthly shape correction...
+ERROR
+test_actual_entry_reloads_outputs_projects_risks_and_binds_started (tests.test_copula_shape_run.ShapeRunContracts.test_actual_entry_reloads_outputs_projects_risks_and_binds_started) ... Fitting the frozen monthly shape correction...
+Independently verifying shape forecasts and fit certificates...
+Evaluating six registered density comparisons...
+Generating bounded spread-risk forecasts with two fixed integrations...
+Scoring all fixed spread filters and conditional-premium scenarios...
+FAIL
+
+======================================================================
+ERROR: test_actual_entry_rejects_freeze_change_before_any_model_work (tests.test_copula_shape_run.ShapeRunContracts.test_actual_entry_rejects_freeze_change_before_any_model_work)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_shape_run.py", line 302, in test_actual_entry_rejects_freeze_change_before_any_model_work
+    run.run(root)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/copula_shape_run.py", line 447, in run
+    produced = run_shape(archive, baseline_app, baseline_panel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1183, in _execute_mock_call
+    raise effect
+RuntimeError: MODEL_WORK_MUST_NOT_START
+
+======================================================================
+FAIL: test_actual_entry_reloads_outputs_projects_risks_and_binds_started (tests.test_copula_shape_run.ShapeRunContracts.test_actual_entry_reloads_outputs_projects_risks_and_binds_started)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_shape_run.py", line 322, in test_actual_entry_reloads_outputs_projects_risks_and_binds_started
+    self.assertIn(started,terminal["output_hashes"])
+AssertionError: 'reports/copula_shape/predictive/started.json' not found in {'data/model_memory_study/copula_shape_wave29/snapshot.zip': '556191cd4f7dfb890bd7fffd83f0391d3801596eeb76cd1cc068b83f593e10c7', 'data/model_memory_study/copula_shape_wave29/applications.parquet': '338d01c25574188ee0a9968407d8b609e56488687e4234818e863b26702b4b5f', 'data/model_memory_study/copula_shape_wave29/panel.parquet': '338d01c25574188ee0a9968407d8b609e56488687e4234818e863b26702b4b5f', 'data/model_memory_study/copula_shape_wave29/fits.json': '37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570', 'reports/copula_shape/predictive/forecast_verification.json': 'abf9cd925bb49a8c2c1d220922b19b945b1d00e2e10e8271f35b4352216c5369', 'reports/copula_shape/predictive/score_verification.json': 'abf9cd925bb49a8c2c1d220922b19b945b1d00e2e10e8271f35b4352216c5369', 'data/model_memory_study/copula_shape_wave29/spread_risks.parquet': '0ccf5bc6ce2a62c69b8cd124fe3e16338da979f11afaa365c7d462abc7b234a9', 'data/model_memory_study/copula_shape_wave29/integration_diagnostics.json': '768bda0bf9a639278ff409165e77f3648b6d006f42cf5c199de646acbdffce80', 'reports/copula_shape/predictive/integration_verification.json': 'f997bf3cbe6af99470993e1f07e4658d3c505eb501c3157d631629a82722ac8d', 'data/model_memory_study/copula_shape_wave29/spread_positions.parquet': '40b98f98a9ef11546cf680a99f9eedd7bd080deb1caa1a120bcecc4814462d10', 'data/model_memory_study/copula_shape_wave29/spread_path.parquet': '3b36dce659dcc788978c6a1f6c9cea830494873ba55dccac4d6c2167fce3dd7b', 'data/model_memory_study/copula_shape_wave29/spread_summary.parquet': 'f7bfb7b3a55ecb7f11825b00843307bd0dcd8dbaaf19984bbd71360b931fd798', 'data/model_memory_study/copula_shape_wave29/spread_outcomes.parquet': 'c73a6bbceefdb8f5348d09f7a40692874448062383cc1fb3fd61556d7f082953', 'reports/copula_shape/predictive/spread_verification.json': 'abf9cd925bb49a8c2c1d220922b19b945b1d00e2e10e8271f35b4352216c5369', 'data/model_memory_study/copula_shape_wave29/spread_safety.parquet': '0039859fe1cf1fe24c84cd2331fa30d8f35c250909bcf52489cbb6e4abd5d52b', 'reports/copula_shape/predictive/metrics.json': 'b25b37fc215d481adac35fcecb019b8cec9705882515eec676065c2cc6345a11'}
+
+----------------------------------------------------------------------
+Ran 2 tests in 1.254s
+
+FAILED (failures=1, errors=1)
+
+exit_code=1

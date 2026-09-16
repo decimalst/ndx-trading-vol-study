@@ -1,0 +1,52 @@
+{
+  "status": "UNEVALUABLE",
+  "whole_wave_aborted": true,
+  "leads": [],
+  "hypothesis_count": 3,
+  "cumulative_hypothesis_count": 134,
+  "protocol_sha256": "824a9beda7cf293568dd2d16bbd3b76a8235f359a78c764147d75731c22b734c",
+  "rows": [
+    {
+      "study": "event_cluster",
+      "candidate": "cluster",
+      "control": "baseline",
+      "score": "brier",
+      "horizon": 1,
+      "phases": [],
+      "p_conservative": 1.0,
+      "p_holm_wave": 1.0,
+      "p_holm_cumulative": 1.0,
+      "status": "INVALID_RUN",
+      "verdict": "UNEVALUABLE",
+      "error": "Independent verification failed: AssertionError: every saved application state differs from independent reconstruction"
+    },
+    {
+      "study": "event_cluster",
+      "candidate": "cluster",
+      "control": "nuisance",
+      "score": "brier",
+      "horizon": 1,
+      "phases": [],
+      "p_conservative": 1.0,
+      "p_holm_wave": 1.0,
+      "p_holm_cumulative": 1.0,
+      "status": "INVALID_RUN",
+      "verdict": "UNEVALUABLE",
+      "error": "Independent verification failed: AssertionError: every saved application state differs from independent reconstruction"
+    },
+    {
+      "study": "event_cluster",
+      "candidate": "cluster",
+      "control": "recent_frequency",
+      "score": "brier",
+      "horizon": 1,
+      "phases": [],
+      "p_conservative": 1.0,
+      "p_holm_wave": 1.0,
+      "p_holm_cumulative": 1.0,
+      "status": "INVALID_RUN",
+      "verdict": "UNEVALUABLE",
+      "error": "Independent verification failed: AssertionError: every saved application state differs from independent reconstruction"
+    }
+  ]
+}

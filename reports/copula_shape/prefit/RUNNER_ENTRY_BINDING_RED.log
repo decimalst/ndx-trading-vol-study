@@ -1,0 +1,48 @@
+TWO PREWRITTEN ACTUAL-ENTRY BINDING REGRESSIONS; GENERATED DATA ONLY
+['.venv/bin/python', '-m', 'unittest', 'tests.test_copula_shape_run.ShapeRunContracts.test_actual_entry_rejects_freeze_change_before_any_model_work', 'tests.test_copula_shape_run.ShapeRunContracts.test_actual_entry_reloads_outputs_projects_risks_and_binds_started', '-v']
+test_actual_entry_rejects_freeze_change_before_any_model_work (tests.test_copula_shape_run.ShapeRunContracts.test_actual_entry_rejects_freeze_change_before_any_model_work) ... Fitting the frozen monthly shape correction...
+ERROR
+test_actual_entry_reloads_outputs_projects_risks_and_binds_started (tests.test_copula_shape_run.ShapeRunContracts.test_actual_entry_reloads_outputs_projects_risks_and_binds_started) ... ERROR
+
+======================================================================
+ERROR: test_actual_entry_rejects_freeze_change_before_any_model_work (tests.test_copula_shape_run.ShapeRunContracts.test_actual_entry_rejects_freeze_change_before_any_model_work)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_shape_run.py", line 300, in test_actual_entry_rejects_freeze_change_before_any_model_work
+    run.run(root)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/copula_shape_run.py", line 447, in run
+    produced = run_shape(archive, baseline_app, baseline_panel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1183, in _execute_mock_call
+    raise effect
+RuntimeError: MODEL_WORK_MUST_NOT_START
+
+======================================================================
+ERROR: test_actual_entry_reloads_outputs_projects_risks_and_binds_started (tests.test_copula_shape_run.ShapeRunContracts.test_actual_entry_reloads_outputs_projects_risks_and_binds_started)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_shape_run.py", line 313, in test_actual_entry_reloads_outputs_projects_risks_and_binds_started
+    stack.enter_context(patch("src.verify_copula_spreads.verify",return_value={"status":"VERIFIED"}))
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 517, in enter_context
+    result = _enter(cm)
+             ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1427, in __enter__
+    self.target = self.getter()
+                  ^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pkgutil.py", line 715, in resolve_name
+    result = getattr(result, p)
+             ^^^^^^^^^^^^^^^^^^
+AttributeError: module 'src' has no attribute 'verify_copula_spreads'
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.500s
+
+FAILED (errors=2)
+
+exit_code=1

@@ -1,0 +1,65 @@
+[
+  {
+    "structure": "put",
+    "model": "always_sell",
+    "sold_sessions": 1457,
+    "coverage": 1.0,
+    "breach_rate": 0.06108442004118051
+  },
+  {
+    "structure": "put",
+    "model": "orig_t8",
+    "sold_sessions": 1252,
+    "coverage": 0.8592999313658202,
+    "breach_rate": 0.04472843450479233
+  },
+  {
+    "structure": "put",
+    "model": "shape_t8",
+    "sold_sessions": 1175,
+    "coverage": 0.8064516129032258,
+    "breach_rate": 0.0451063829787234
+  },
+  {
+    "structure": "call",
+    "model": "always_sell",
+    "sold_sessions": 1457,
+    "coverage": 1.0,
+    "breach_rate": 0.03912148249828414
+  },
+  {
+    "structure": "call",
+    "model": "orig_t8",
+    "sold_sessions": 1215,
+    "coverage": 0.8339052848318462,
+    "breach_rate": 0.014814814814814815
+  },
+  {
+    "structure": "call",
+    "model": "shape_t8",
+    "sold_sessions": 1248,
+    "coverage": 0.8565545641729582,
+    "breach_rate": 0.01842948717948718
+  },
+  {
+    "structure": "condor",
+    "model": "always_sell",
+    "sold_sessions": 1457,
+    "coverage": 1.0,
+    "breach_rate": 0.10020590253946465
+  },
+  {
+    "structure": "condor",
+    "model": "orig_t8",
+    "sold_sessions": 964,
+    "coverage": 0.6616334934797529,
+    "breach_rate": 0.03423236514522822
+  },
+  {
+    "structure": "condor",
+    "model": "shape_t8",
+    "sold_sessions": 917,
+    "coverage": 0.6293754289636239,
+    "breach_rate": 0.03162486368593239
+  }
+]

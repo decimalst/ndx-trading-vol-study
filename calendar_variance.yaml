@@ -1,0 +1,199 @@
+study_id: calendar_variance_wave08
+specified_on: '2026-09-07'
+status: specified_before_empirical_scores
+objective: Replicate full-session calendar risk forecasting with documentary original plans and stronger matched SPX controls
+evidence_class: exploratory_reused_history_original_plan_replication_archival_daily_OHLC_risk_proxy
+wave: 8
+wave_alpha: 0.0006944444444444445
+sources:
+  daily: data/research_paths/spx_daily.parquet
+  vix: data/free_sources/raw/cboe/VIX_History.csv
+  vix9d: data/free_sources/raw/cboe/VIX9D_History.csv
+  vvix: data/free_sources/raw/cboe/VVIX_History.csv
+  cpi: data/source_discovery/macro_plans/cpi/ledger.json
+  nfp: data/source_discovery/macro_plans/nfp/ledger_verified.json
+  fomc: data/source_discovery/macro_plans/calendar/fomc_original_annual_plans.csv
+  fomc_coverage: data/source_discovery/macro_plans/calendar/fomc_annual_coverage.json
+index:
+  asset: SPX
+  source_end: '2025-10-20'
+  sealed_start: '2025-11-03'
+  origin_start: '2016-01-04'
+  origin_end: '2025-10-17'
+  latest_target: '2025-10-20'
+  development:
+  - '2016-01-04'
+  - '2019-12-31'
+  development_target_available_by: '2019-12-31'
+  evaluation:
+  - '2020-01-02'
+  - '2025-10-17'
+  evaluation_stability:
+  - - '2020-01-02'
+    - '2022-12-31'
+  - - '2023-01-01'
+    - '2025-10-17'
+  horizons:
+  - 1
+  models:
+  - mean
+  - baseline
+  - calendar
+  baseline:
+  - const
+  - lrv_d
+  - lrv_w
+  - lrv_m
+  - neg_d
+  - neg_w
+  - neg_m
+  - lvix
+  - term
+  - lvvix
+  - entry_dow_1
+  - entry_dow_2
+  - entry_dow_3
+  - entry_dow_4
+  - nominal_hours
+  baseline_description: log strict1/5/22means GK-plus-raw-overnight risk; strict1/5/22means max(-raw close logreturn,0); logVIX,log(VIX9D/VIX),logVVIX;
+    entryweekday and nominal elapsed hours
+  market_lag: 1
+  target: max(Garman-Klass[next],1e-10)+log(raw_open[next]/raw_close[entry])^2
+  target_interpretation: next observed full-session daily OHLC risk proxy; not measured high-frequency integrated variance
+    or causal announcement contribution
+  label_availability: actual next observed SPX close; target_end and available_date equal next observed session
+  minimum_train: 1000
+  common_sample: All three models share all18complete features and mature finite positive labels; no event-specific samples
+  fit_schedule: Monthly first FEATURE-complete entry in fixed window before checking future query labels; expanding training
+    with labels mature by preceding observed session
+  objective: mean(log(h)+q/h) plus0.01times standardized slope squared norm; intercept unpenalized
+  target_scaling: divide training q by positive training mean for optimization; transform forecast units back exactly
+  feature_scaling: Training-only population mean/std; any17nonintercept scale<=1e-12 aborts entire wave; no dropping or zeroing
+  optimizer: deterministic Newton with Armijo backtracking; initial relative-intercept and slopes zero
+  penalty: 0.01
+  optimizer_max_iter: 200
+  gradient_tolerance: 1.0e-08
+  armijo: 0.0001
+  maximum_backtracks: 60
+  effect_threshold_absolute: 0.005
+  effect_rationale: fixed before event outcomes; paired natural-log score improvement, not percentage of negative raw score
+  all_features:
+  - const
+  - lrv_d
+  - lrv_w
+  - lrv_m
+  - neg_d
+  - neg_w
+  - neg_m
+  - lvix
+  - term
+  - lvvix
+  - entry_dow_1
+  - entry_dow_2
+  - entry_dow_3
+  - entry_dow_4
+  - nominal_hours
+  - cpi_plan
+  - nfp_plan
+  - fomc_plan
+calendar:
+  source_publication_start: '2010-01-01'
+  source_publication_end: '2025-10-20'
+  bls_policy: next plan printed in preceding monthly release; original planned dates retained even if later canceled or changed
+  bls_revision_policy: current archives with explicit this-release reissue notices remain unadmitted for both CPI and payroll;
+    retain original source ledger and separate pre-fit admission correction
+  source_eligibility: publication civil date strictly before preceding observed market-session date
+  nominal_start: entry civil date1600America/New_York
+  nominal_end: next Monday-through-Friday civil date1600America/New_York; skip weekends only
+  duration: nominal endpoint UTC difference in hours; includes DST elapsed-time change
+  cpi: eligible original CPI planned timestamp falls in open-left closed-right nominal window
+  nfp: eligible original payroll planned timestamp falls in open-left closed-right nominal window
+  fomc: eligible original annual meeting final DATE equals nominal ending date; date-only timing control, no invented statement
+    time
+  fomc_annual: exactly8original planned meetings per year from selected full annual announcement published before covered
+    year
+  coverage: each nominal-window calendar month requires its eligible explicit original BLS plan; full eligible annual FOMC
+    plan required
+  missing: pending retrieval blocks execution; intrinsically absent or ambiguous source statements remain unknown and enter
+    all-arm complete-sample mask; no date/year inference or zero fill
+  limitations: nominal window ignores holidays and early closes; neither actual nor historically planned exchange holding
+    interval; no actual next market date enters a predictor
+  provenance: exact currently captured official-document tool text and extraction hashes; raw provider bytes and immutable
+    historical web vintages unverified
+  replication: Legacy repository calendars already forecast next-session variance; this tests original-plan admission with
+    stronger matched SPX controls, not a first calendar mechanism
+measurement:
+  gk_floor: 1.0e-10
+  target: daily raw index OHLC variance proxy; no adjusted-price or dividend fields
+  risk_scale: native squared-log-return units; no annualization in risk history or target
+  zero_targets: GK floor makes finite target strictly positive; missing target remains missing
+  claims: No execution, allocation, cash-profit or announcement-causation claims
+comparisons:
+  new_hypotheses: 2
+  inherited_hypotheses: 106
+  cumulative_hypotheses: 108
+  inherited_sources:
+  - reports/orthogonal_round2/metrics.json
+  - reports/model_memory_study/combined_metrics.json
+  - reports/iterative_signal_search/metrics.json
+  - reports/international_volatility/metrics.json
+  - reports/overnight_index/metrics.json
+  - reports/macro_overnight/metrics.json
+  - reports/measurement_memory/metrics.json
+  - reports/index_hinge/metrics.json
+  - reports/tail_shape/metrics.json
+  controls:
+  - baseline
+  - mean
+  candidate_gate: joint calendar block must pass both controls; no independent event claims
+  contrasts:
+  - - calendar
+    - baseline
+    - qlike
+  - - calendar
+    - mean
+    - qlike
+inference:
+  loss: log(predicted daily OHLC risk proxy) plus observed daily OHLC risk proxy divided by prediction
+  blocks:
+  - 21
+  - 63
+  - 126
+  block_units: consecutive retained paired-forecast observations in chronological order; missing calendar dates are reported
+    and not imputed
+  bootstrap_draws: 99999
+  seed: 20260914
+  seed_rule: seed+phase_code*10000+block;development0,evaluation1
+  p_phase: maximum two-sided centered-null circular bootstrap p across allblocks and Bartlett HAC126 p
+  p_hypothesis: maximum development/evaluation p
+  multiplicity: Holm2 at0.05/(8*9), and separately Holm108 at0.05
+  gate: absolute mean paired loss gap<=-0.005 both phases; negative gap in both evaluation slices; waveHolm<0.05/(8*9) and
+    cumulativeHolm<0.05
+  reporting: All2 absolute proper-loss gaps, uncertainty, nominal MDE, annual and fixed-period coverage and diagnostics; no
+    percentage QLIKE gains
+  failure_rule: Any registered fitting scoring verification or output failure retains all2hypotheses as UNEVALUABLEp1; no
+    post-result repair tuning or dropping
+  caveat: inference corrections do not reverse adaptive historical reuse, proxy uncertainty, or current-document vintage limitations
+  hac_lags: 126
+  minimum_phase_observations: 127
+  resolution: 1/100000 less than one tenth of strictest waveHolm cutoff1/2880
+outputs:
+  data: data/calendar_variance
+  reports: reports/calendar_variance
+source_contract:
+  price: raw SPX OHLC; Yahoo price index, no dividends or risk-free subtraction; no fund execution claim
+  vintage: existing archival Yahoo and Cboe extracts; historical revisions and exact release latency unverified
+  vix9d: January2011-October2013 back-calculated archival training values; not available at original observation dates
+  missing: preserve observed SPX reference calendar before rolling; no filling; strict complete windows
+  reference_calendar: Observed bounded SPX source dates; vendor preprocessing dropped incomplete OHLC rows; exchange-calendar
+    completeness unverified
+  timing: Every market predictor ends at previous observed SPX session; civil calendar plans use stricter publication-date
+    cutoff; no certified previous1600 Cboe snapshot
+verification:
+  producer_gradient_tolerance: 1.0e-08
+  independent_gradient_tolerance: 2.0e-08
+  coefficient_absolute_tolerance: 1.0e-06
+  forecast_relative_tolerance: 1.0e-06
+  forecast_absolute_tolerance: 1.0e-12
+  independent_fit: Separate BFGS optimizer and independently reconstructed predictors sources training rows scores and accounting;
+    fixed tolerances before any fit

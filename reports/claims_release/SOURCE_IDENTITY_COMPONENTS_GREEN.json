@@ -1,0 +1,17 @@
+{
+  "completed_utc": "2026-09-08T21:07:40.889435+00:00",
+  "exit_code": 0,
+  "code_test_sha256": {
+    "src/claims_release_archive.py": "a2ab878ea7d0599a39146e4b21f0e5d0e93e936d6759f316fea896181519dc39",
+    "src/claims_release_reconcile.py": "de1a7236a5e28ed2175783e8c209d656239bf13b68e63a42708935113dc0aa38",
+    "src/claims_release_source.py": "9c0a0cc409bfac6989bb5a3c9207e02ea03d448d7ef7ed6c56c23484b8ad285f",
+    "tests/test_claims_release_archive.py": "44e9e40e41d9be15698bff648937d9bd146113561fcb093b1b4e81d74981ef2d",
+    "tests/test_claims_release_reconcile.py": "3db2ad43f2cc7e3a077dca7284af92e91e87728f40f71e71af0e45e12588f0fd",
+    "tests/test_claims_release_reconcile_identity.py": "bcae4c31f325ba52bf495799947218aead7f6602a8e5045882ebd58569a67e9a",
+    "tests/test_claims_release_source.py": "0ba7f577f09acc26a3f7ca8379579f49e97cb28b141e29983b90e144e8e1ca42",
+    "tests/test_claims_release_source_attributes.py": "b6d512a9a098675a732715561731e56cb064fe2ac5d69e3ae92a20c65f0be8b7"
+  },
+  "log_path": "reports/claims_release/SOURCE_IDENTITY_COMPONENTS_GREEN.log",
+  "log_sha256": "e60498cb82923b445cd4f3c5322ae0bef2410b7d3d470abcca773e89c7c5fdf8",
+  "unchanged": true
+}

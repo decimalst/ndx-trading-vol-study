@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "started_utc": "2026-09-13T22:46:29.813107+00:00",
+  "completed_utc": "2026-09-13T22:46:41.668559+00:00",
+  "selected": 38,
+  "run": 38,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "source_unchanged": true,
+  "log_sha256": "7cb6ea766c1d12c3d22f390119bb6c08a26651dcc6f093938ca322c67da00688",
+  "code_pins": {
+    "spread_geometry_hindsight.yaml": "9e0bc3259fd3f5c40ab1aa60d00fffcdefad86a4c78ceea91e1215a6dfdb5aa7",
+    "src/spread_geometry_hindsight.py": "7baa64d86740eddb53743b58d78f86b62687f681717e735b6fa5088830af12b8",
+    "src/spread_geometry_hindsight_run.py": "00d0a8e2967843849aa7e4be34d490fe538a400a7a8cad3dc711a11342aa15d4",
+    "src/verify_spread_geometry_hindsight.py": "aea6eca2320e47b5b4aba5a15e075eb73ed1bb59694d63d962a18b2fd1353c74",
+    "src/copula_spread_backtest.py": "eaad0a1d1b25e6cf56363c49ba3b838a088a9174696e41fb465ed674f34e1da9",
+    "tests/test_spread_geometry_hindsight.py": "eba97e71e9c2cb0d6b8b967e5f70742c521a4a33220cd21457ee7a667d4fc2a7",
+    "tests/test_spread_geometry_hindsight_run.py": "69e544f0478cbbaa51fde5277d2f5272620eafda474e3e02da70860989faf270",
+    "tests/test_verify_spread_geometry_hindsight.py": "118d77706693e2d06d2ee79a87e2bcd60e243ec3ffc3d82cfc03cdc8bcfe4211",
+    "tests/test_copula_spread_backtest.py": "f20120b874db9989698172c2f0023a6d53139387c5b85c1ba9189135f25505cb"
+  }
+}

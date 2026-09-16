@@ -1,0 +1,10 @@
+{
+  "status": "VERIFIED",
+  "comparisons_verified": 3,
+  "endpoints_verified": 6,
+  "bootstrap_runs_verified": 18,
+  "hac_runs_verified": 6,
+  "inherited_comparisons_verified": 146,
+  "common_scored_origins": 2454,
+  "fitted_gate_scored_origins": 2415
+}

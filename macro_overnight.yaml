@@ -1,0 +1,97 @@
+study_id: macro_overnight_wave04
+specified_on: '2026-09-07'
+status: specified_before_empirical_scores
+objective: Test original advance announcement plans for incremental prediction of overnight second moments
+evidence_class: exploratory_reused_history_official_documentary_plans_adjusted_proxy
+wave: 4
+wave_alpha: 0.0025
+sources:
+  daily: data/raw/daily_ohlc.parquet
+  vxn: data/free_sources/raw/cboe/VXN_History.csv
+  vix: data/free_sources/raw/cboe/VIX_History.csv
+  cpi: data/source_discovery/macro_plans/cpi/ledger.json
+  nfp: data/source_discovery/macro_plans/nfp/ledger_verified.json
+  fomc: data/source_discovery/macro_plans/calendar/fomc_original_annual_plans.csv
+  fomc_coverage: data/source_discovery/macro_plans/calendar/fomc_annual_coverage.json
+index:
+  asset: QQQ
+  source_end: '2025-10-20'
+  sealed_start: '2025-11-03'
+  origin_start: '2016-01-04'
+  origin_end: '2025-10-17'
+  latest_target: '2025-10-20'
+  development: ['2016-01-04', '2019-12-31']
+  development_target_available_by: '2019-12-31'
+  evaluation: ['2020-01-02', '2025-10-17']
+  evaluation_stability: [['2020-01-02', '2022-12-31'], ['2023-01-01', '2025-10-17']]
+  horizons: [1]
+  models: [mean, baseline, cpi, nfp, fomc]
+  baseline: [const, on_rms_d, on_rms_w, on_rms_m, day_rms_d, day_rms_w, day_rms_m, lrv_d, lrv_w, lrv_m, liv, lvix, entry_dow_1, entry_dow_2, entry_dow_3, entry_dow_4, nominal_hours]
+  baseline_description: square roots of strict mean adjusted overnight logreturn squares and daytime logreturn squares1/5/22; logmean GK-plus-raw-overnight variance1/5/22; logVXN/logVIX; entryweekday; nominal elapsed hours
+  market_lag: all market features use previous completed session daily measurements available before the entry closing auction; not a certified previous1600 Cboe snapshot
+  target: (log(adjusted_close_next/adjusted_close_entry) minus log(close_next/open_next)) squared
+  target_interpretation: conditional second moment of vendor-adjusted overnight logreturn proxy; not integrated variance or exact cash profit
+  label_availability: actual next session close, even though price move ends at opening
+  minimum_train: 1000
+  common_sample: all five models share complete feature and mature-label training rows and every scored origin
+  fit_schedule: monthly expanding fit at first FEATURE-complete entry in the fixed origin window; future query-label availability never chooses refit date
+  objective: mean(log(h)+q/h) plus0.01times standardized slope squared norm; intercept unpenalized
+  target_scaling: divide training q by positive training mean for optimization; transform forecast units back exactly
+  feature_scaling: historical training-only population mean and standard deviation; reject zero-scale inputs
+  optimizer: deterministic Newton with Armijo backtracking; initial relative-intercept and slopes zero
+  penalty: 0.01
+  optimizer_max_iter: 200
+  gradient_tolerance: 0.00000001
+  armijo: 0.0001
+  maximum_backtracks: 60
+  effect_threshold_absolute: 0.005
+  effect_rationale: fixed before event outcomes; paired natural-log score improvement, not percentage of negative raw score
+calendar:
+  source_publication_start: '2010-01-01'
+  source_publication_end: '2025-10-20'
+  bls_policy: next plan printed in preceding monthly release; original planned dates retained even if later canceled or changed
+  bls_revision_policy: current archives with explicit this-release reissue notices remain unadmitted for both CPI and payroll; retain original source ledger and separate pre-fit admission correction
+  source_eligibility: publication civil date strictly before preceding observed market-session date
+  nominal_start: entry civil date1600America/New_York
+  nominal_end: next Monday-through-Friday civil date0930America/New_York; skip weekends only
+  duration: nominal endpoint UTC difference in hours; includes DST elapsed-time change
+  cpi: eligible original CPI planned timestamp falls in open-left closed-right nominal window
+  nfp: eligible original payroll planned timestamp falls in open-left closed-right nominal window
+  fomc: eligible original annual meeting final DATE equals nominal ending date; date-only timing control, no invented statement time
+  fomc_annual: exactly8original planned meetings per year from selected full annual announcement published before covered year
+  coverage: each nominal-window calendar month requires its eligible explicit original BLS plan; full eligible annual FOMC plan required
+  missing: pending retrieval blocks execution; intrinsically absent or ambiguous source statements remain unknown and enter all-arm complete-sample mask; no date/year inference or zero fill
+  limitations: nominal window ignores holidays and early closes; neither actual nor historically planned exchange holding interval; no actual next market date enters a predictor
+  provenance: exact currently captured official-document tool text and extraction hashes; raw provider bytes and immutable historical web vintages unverified
+measurement:
+  adjustment_factor: adjusted_close dividedby close
+  event_threshold: 0.00001
+  event_flag: absolute log ratio of next-versus-entry adjustment factor exceeds threshold; retrospective only
+  sensitivity: same frozen forecasts on unflagged origins, negative paired loss gap in both phases; retain all flagged observations in primary and training
+  zero_targets: retained without floor, log transform or removal; proper score log(h)+q/h is finite at qzero
+  baseline_gk_floor: 0.0000000001
+  claims: no execution, capital allocation or cash-profit claims
+comparisons:
+  new_hypotheses: 6
+  inherited_hypotheses: 78
+  cumulative_hypotheses: 84
+  inherited_sources: [reports/orthogonal_round2/metrics.json, reports/model_memory_study/combined_metrics.json, reports/iterative_signal_search/metrics.json, reports/international_volatility/metrics.json, reports/overnight_index/metrics.json]
+  controls: [baseline, mean]
+  candidate_gate: each substantive candidate must pass both controls; FOMC retained as timing-control arm in full family
+inference:
+  loss: log(predicted second moment) plus observed squared logreturn dividedby prediction
+  blocks: [21, 63, 126]
+  block_units: consecutive retained paired-forecast observations in chronological order; missing calendar dates are reported and not imputed
+  bootstrap_draws: 49999
+  seed: 20260910
+  seed_rule: seed+phase_code*10000+block;development0,evaluation1
+  p_phase: maximum two-sided centered-null circular bootstrap p across allblocks and Bartlett HAC126 p
+  p_hypothesis: maximum development/evaluation p
+  multiplicity: Holm6at0.0025 and separately Holm84at0.05
+  gate: absolute mean paired lossgap<=-0.005inbothphases, negativegap both evaluation stability slices and both unflagged phase sensitivities, waveHolm<0.0025andcumulativeHolm<0.05
+  reporting: absolute loss gaps, uncertainty, MDE, all annual and fixed-period diagnostics, primary and adjustment sensitivity; no percentage QLIKE gains
+  failure_rule: any fit/scoring/output failure retains all6hypotheses as unevaluablep1; no post-result tuning or dropping arms
+  caveat: inference corrections do not reverse adaptive historical reuse, proxy uncertainty, or current-document vintage limitations
+outputs:
+  data: data/macro_overnight
+  reports: reports/macro_overnight

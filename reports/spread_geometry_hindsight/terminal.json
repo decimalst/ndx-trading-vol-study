@@ -1,0 +1,23 @@
+{
+  "status": "COMPLETED_VERIFIED_HINDSIGHT_SEARCH",
+  "completed_utc": "2026-09-13T22:47:14.550679+00:00",
+  "new_formal_hypotheses": 0,
+  "existing_formal_hypotheses": 164,
+  "descriptive_combinations_per_period": 13440,
+  "geometry_rows": 10080,
+  "account_rows": 40320,
+  "winner_rows": 252,
+  "anchors": {
+    "reports/spread_geometry_hindsight/freeze.json": "53c052ec37836f9c13ffa509f6464dae77e2f93b701391c6198db15eefe5e548",
+    "reports/spread_geometry_hindsight/registration.json": "e7733abe4459f6179f01d96321a1145070419158d3732b9bac37ebfe855a4be3"
+  },
+  "outputs": {
+    "data/model_memory_study/spread_geometry_hindsight/returns.parquet": "fbe2fb5424af2822127679b44646f5fbfa3d637de5025b03ab76c0b2b6f5cedd",
+    "data/model_memory_study/spread_geometry_hindsight/selections.parquet": "d8bc7d9d4d9438c36f981c5f6b847f9f11d09c3020ccdb1d34573160d90167bf",
+    "data/model_memory_study/spread_geometry_hindsight/geometry.parquet": "7a099c00530ad63516db15b55faad04a034b98a5d72015a76fb63e0592b64c4d",
+    "data/model_memory_study/spread_geometry_hindsight/accounts.parquet": "805c8b5dc2833eb618ede23629d913f67986dbbdc349c1f7b19af741d1f90a9c",
+    "data/model_memory_study/spread_geometry_hindsight/winners.parquet": "6ead95fd239cfa70dcc4f1568e82d440fd64ffb6f63466279bbd76b71684e810",
+    "reports/spread_geometry_hindsight/verification.json": "21f55124994d6a4c200e7fd3cd29c3c374ccf5b29b24413820b9b98160408725"
+  },
+  "scope": "Hindsight geometry selection under hypothetical premiums; no new breach forecasts, quotes, inference or promotion."
+}

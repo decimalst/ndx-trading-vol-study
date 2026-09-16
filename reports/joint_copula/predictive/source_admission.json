@@ -1,0 +1,71 @@
+{
+  "status": "VERIFIED_BOUNDED_SOURCE_BUFFERS",
+  "source_end": "2025-10-20",
+  "source_sha256": {
+    "data/research_paths/spx_daily.parquet": "3958fbb1eb36689df1596c26b9f0e02e3f1d4fa3b0032381e5287a2a03697bf0",
+    "data/raw/daily_ohlc.parquet": "710290d8ad8569172559334b23e423b50ecf7cd10f0fd8ec24a9fc29608bca4d",
+    "data/free_sources/raw/cboe/VIX_History.csv": "a34aabce269632f30904cf482986dd50b6d4cf51f2203dc51a0a9f460f3c90b2",
+    "data/free_sources/raw/cboe/VIX9D_History.csv": "0d6f600ee71bf6ffb5069d0c583cbe0b1ec97df6da4e4e439d5f0f22f5616abe",
+    "data/free_sources/raw/cboe/VVIX_History.csv": "f6bc726455fa3859c662875a005e97ba656b9536ae58fa6977ad24c6228e4f6a",
+    "data/free_sources/raw/cboe/VXN_History.csv": "753b5a406a7a888a9e4ca1a3e37a71fbb415a3883bc4b02ff20dbf0c5bdc6c98"
+  },
+  "source_metadata": {
+    "qqq": {
+      "raw_dates": 6898,
+      "bounded_dates": 6696,
+      "excluded_after_ceiling_dates": 202
+    },
+    "spx": {
+      "raw_dates": 4227,
+      "bounded_dates": 4226,
+      "excluded_after_ceiling_dates": 1
+    },
+    "vxn": {
+      "raw_dates": 4255,
+      "bounded_dates": 4053,
+      "excluded_after_ceiling_dates": 202
+    },
+    "vix": {
+      "raw_dates": 9248,
+      "bounded_dates": 9040,
+      "excluded_after_ceiling_dates": 208
+    },
+    "vix9d": {
+      "raw_dates": 3923,
+      "bounded_dates": 3721,
+      "excluded_after_ceiling_dates": 202
+    },
+    "vvix": {
+      "raw_dates": 5080,
+      "bounded_dates": 4878,
+      "excluded_after_ceiling_dates": 202
+    }
+  },
+  "numerical_columns": {
+    "qqq": [
+      "open",
+      "high",
+      "low",
+      "close"
+    ],
+    "spx": [
+      "open",
+      "high",
+      "low",
+      "close"
+    ],
+    "vxn": [
+      "vxn"
+    ],
+    "vix": [
+      "vix"
+    ],
+    "vix9d": [
+      "vix9d"
+    ],
+    "vvix": [
+      "vvix"
+    ]
+  },
+  "snapshot_semantics": "Every hash then every full date column precedes numerical decoding from the same checked bytes"
+}

@@ -1,0 +1,19 @@
+test_calendar_variance_search (unittest.loader._FailedTest.test_calendar_variance_search) ... ERROR
+
+======================================================================
+ERROR: test_calendar_variance_search (unittest.loader._FailedTest.test_calendar_variance_search)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_calendar_variance_search
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_calendar_variance_search.py", line 10, in <module>
+    from src import calendar_variance_search as study
+ImportError: cannot import name 'calendar_variance_search' from 'src' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/__init__.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

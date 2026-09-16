@@ -1,0 +1,24 @@
+EF
+======================================================================
+ERROR: test_exact_empty_cmb_bucket_is_preserved_without_a_tenor_and_filtered (tests.test_treasury_history_acquire.TreasuryHistoryAcquireTests.test_exact_empty_cmb_bucket_is_preserved_without_a_tenor_and_filtered)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_history_acquire.py", line 223, in test_exact_empty_cmb_bucket_is_preserved_without_a_tenor_and_filtered
+    selected = acquire.build_history_selection(self.root, self.pins)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/treasury_history_acquire.py", line 74, in build_history_selection
+    raise ValueError("metadata identity fields must be nonempty strings")
+ValueError: metadata identity fields must be nonempty strings
+
+======================================================================
+FAIL: test_no_other_blank_identity_or_nonliteral_empty_bucket_is_admitted (tests.test_treasury_history_acquire.TreasuryHistoryAcquireTests.test_no_other_blank_identity_or_nonliteral_empty_bucket_is_admitted) (key='term_bucket', value=' ')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_treasury_history_acquire.py", line 256, in test_no_other_blank_identity_or_nonliteral_empty_bucket_is_admitted
+    with self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.034s
+
+FAILED (failures=1, errors=1)

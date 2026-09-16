@@ -1,0 +1,52 @@
+/Users/byrons/.matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /var/folders/jn/2wqppgv57cx3k54l_dqt9sl00000gn/T/matplotlib-c3nw2fgz because there was an issue with the default path ({configdir}); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+
+Fontconfig error: No writable cache directories
+	/opt/homebrew/var/cache/fontconfig
+	/Users/byrons/.cache/fontconfig
+	/Users/byrons/.fontconfig
+Matplotlib is building the font cache; this may take a moment.
+E
+======================================================================
+ERROR: test_plot_causal_pool (unittest.loader._FailedTest.test_plot_causal_pool)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_plot_causal_pool
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_plot_causal_pool.py", line 14, in <module>
+    from src import plot_causal_pool as plot
+ImportError: cannot import name 'plot_causal_pool' from 'src' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/__init__.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+/Users/byrons/.matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /var/folders/jn/2wqppgv57cx3k54l_dqt9sl00000gn/T/matplotlib-bb17wa7d because there was an issue with the default path ({configdir}); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+
+Fontconfig error: No writable cache directories
+	/opt/homebrew/var/cache/fontconfig
+	/Users/byrons/.cache/fontconfig
+	/Users/byrons/.fontconfig
+Matplotlib is building the font cache; this may take a moment.
+E
+======================================================================
+ERROR: test_plot_causal_pool (unittest.loader._FailedTest.test_plot_causal_pool)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_plot_causal_pool
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_plot_causal_pool.py", line 14, in <module>
+    from src import plot_causal_pool as plot
+ImportError: cannot import name 'plot_causal_pool' from 'src' (/Users/byrons/code/trading-vol/ndx-vol-experiment/src/__init__.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

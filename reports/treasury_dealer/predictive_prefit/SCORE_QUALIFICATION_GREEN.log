@@ -1,0 +1,26 @@
+COMMAND: .venv/bin/python -m unittest tests.test_verify_treasury_dealer_scores -v
+test_changed_panel_activity_and_protocol_cannot_reuse_old_proof (tests.test_verify_treasury_dealer_scores.VerifyTreasuryDealerScoresTests.test_changed_panel_activity_and_protocol_cannot_reuse_old_proof) ... ok
+test_every_inference_family_gate_and_diagnostic_group_corruption_rejected (tests.test_verify_treasury_dealer_scores.VerifyTreasuryDealerScoresTests.test_every_inference_family_gate_and_diagnostic_group_corruption_rejected) ... ok
+test_generated_end_to_end_verifies_both_masks_phases_controls (tests.test_verify_treasury_dealer_scores.VerifyTreasuryDealerScoresTests.test_generated_end_to_end_verifies_both_masks_phases_controls) ... ok
+test_indexed_bootstrap_and_hac_match_literal_calendar_oracle (tests.test_verify_treasury_dealer_scores.VerifyTreasuryDealerScoresTests.test_indexed_bootstrap_and_hac_match_literal_calendar_oracle) ... ok
+test_partial_or_changed_clock_qualification_is_rejected (tests.test_verify_treasury_dealer_scores.VerifyTreasuryDealerScoresTests.test_partial_or_changed_clock_qualification_is_rejected) ... ok
+test_published_exact_clock_qualification_is_verified (tests.test_verify_treasury_dealer_scores.VerifyTreasuryDealerScoresTests.test_published_exact_clock_qualification_is_verified) ... ok
+test_separate_indexed_implementation_matches_frozen_prefix_inference (tests.test_verify_treasury_dealer_scores.VerifyTreasuryDealerScoresTests.test_separate_indexed_implementation_matches_frozen_prefix_inference) ... ok
+test_zero_support_replicate_is_fatal_without_redraw (tests.test_verify_treasury_dealer_scores.VerifyTreasuryDealerScoresTests.test_zero_support_replicate_is_fatal_without_redraw) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 5.547s
+
+OK
+
+exit_code=0
+
+COMMAND: .venv/bin/ruff check src/verify_treasury_dealer_scores.py tests/test_verify_treasury_dealer_scores.py
+All checks passed!
+
+exit_code=0
+
+COMMAND: .venv/bin/ruff format --check src/verify_treasury_dealer_scores.py tests/test_verify_treasury_dealer_scores.py
+2 files already formatted
+
+exit_code=0

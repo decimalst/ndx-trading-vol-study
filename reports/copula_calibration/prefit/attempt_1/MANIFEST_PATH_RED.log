@@ -1,0 +1,25 @@
+E
+======================================================================
+ERROR: test_old_terminal_report_hashes_resolve_in_old_report_directory (tests.test_copula_calibration_run.RunContracts.test_old_terminal_report_hashes_resolve_in_old_report_directory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_copula_calibration_run.py", line 34, in test_old_terminal_report_hashes_resolve_in_old_report_directory
+    pins = run.source_pins(root)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/copula_calibration_run.py", line 210, in source_pins
+    verify_pins(root, pins)
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/copula_calibration_run.py", line 185, in verify_pins
+    if sha(Path(root) / name) != expected:
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/copula_calibration_run.py", line 31, in sha
+    with Path(path).open("rb") as source:
+         ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/folders/jn/2wqppgv57cx3k54l_dqt9sl00000gn/T/tmpu9aoq1cl/metrics.json'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+FAILED (errors=1)

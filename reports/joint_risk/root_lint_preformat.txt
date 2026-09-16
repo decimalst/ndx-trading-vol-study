@@ -1,0 +1,384 @@
+E701 Multiple statements on one line (colon)
+  --> src/joint_risk_models.py:39:23
+   |
+37 |         raise ValueError('Invalid fit origin or minimum sample')
+38 |     cutoff = features.loc[fit_entry, 'feature_cutoff_date']
+39 |     if pd.isna(cutoff): raise ValueError('INSUFFICIENT_DATA: no previous session')
+   |                       ^
+40 |     mask = (np.isfinite(features.loc[:, ALL_FEATURES]).all(axis=1)
+41 |             & np.isfinite(targets[TARGETS]).all(axis=1)
+   |
+
+E701 Multiple statements on one line (colon)
+  --> src/joint_risk_models.py:54:26
+   |
+52 |         raise ValueError('Finite aligned common input designs and unit intercept required')
+53 |     center = float(tr.corr22.mean())
+54 |     for frame in [tr, ap]: frame['corr22_centered_sq'] = (frame.corr22-center)**2
+   |                          ^
+55 |     scales = tr.iloc[:, 1:].std(ddof=0).to_numpy()
+56 |     if not np.isfinite(scales).all() or (scales <= 1e-12).any():
+   |
+
+E701 Multiple statements on one line (colon)
+  --> src/joint_risk_models.py:84:45
+   |
+83 | def fit_predict(train, targets, apply):
+84 |     if not train.index.equals(targets.index): raise ValueError('Training label row ordering differs')
+   |                                             ^
+85 |     y = targets[TARGETS].to_numpy(float)
+86 |     if y.shape != (len(train), 2) or not np.isfinite(y).all():
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> src/joint_risk_models.py:97:27
+   |
+95 |         variance_audit = fit_second_moment(x, e**2, np.concatenate([x, query]))
+96 |         all_h = variance_audit.pop('prediction')
+97 |         residual.append(e); innovations.append(e/np.sqrt(all_h[:len(x)]))
+   |                           ^
+98 |         mu.append(prediction); h.append(all_h[len(x):])
+99 |         moment_audit[asset] = {'mean': mean_audit,
+   |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/joint_risk_models.py:98:30
+    |
+ 96 |         all_h = variance_audit.pop('prediction')
+ 97 |         residual.append(e); innovations.append(e/np.sqrt(all_h[:len(x)]))
+ 98 |         mu.append(prediction); h.append(all_h[len(x):])
+    |                              ^
+ 99 |         moment_audit[asset] = {'mean': mean_audit,
+100 |             'variance': {'columns': list(MARGINAL_COLUMNS), **_serializable(variance_audit)}}
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/joint_risk_models.py:146:24
+    |
+144 |     ready = np.isfinite(features.loc[:, ALL_FEATURES]).all(axis=1)
+145 |     entries = dates[ready & phases & (dates >= start) & (dates <= end)]
+146 |     if not len(entries): raise ValueError('INSUFFICIENT_DATA: no common complete features')
+    |                        ^
+147 |     labels = (np.isfinite(targets[TARGETS]).all(axis=1) & (targets.available_date <= latest)
+148 |               & ((dates > dev_end) | (targets.available_date <= dev_end)))
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> src/joint_risk_models.py:162:56
+    |
+160 |             'train_last_available': str(last_target.date()), 'application_n': len(application_dates),
+161 |             'model_audit': result['audit']})
+162 |         keep = labels.loc[application_dates].to_numpy(); scored = application_dates[keep]
+    |                                                        ^
+163 |         actual = targets.loc[scored, TARGETS].to_numpy()
+164 |         for name in MODELS:
+    |
+
+E701 Multiple statements on one line (colon)
+   --> src/joint_risk_models.py:178:19
+    |
+176 |                 'phase': np.where(scored <= dev_end, 'development', 'evaluation')}))
+177 |     panel = pd.concat(rows, ignore_index=True).sort_values(['origin', 'model']).reset_index(drop=True)
+178 |     if panel.empty: raise ValueError('INSUFFICIENT_DATA: no scoreable common labels')
+    |                   ^
+179 |     return panel, fits
+    |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_joint_risk_models.py:47:39
+   |
+45 |         f, t = sample()
+46 |         mask = model.training_mask(f, t, f.index[60], 20)
+47 |         self.assertTrue(mask.iloc[58]); self.assertFalse(mask.iloc[59])
+   |                                       ^
+48 |         t.loc[f.index[30], 'y_spx'] = np.nan
+49 |         f.loc[f.index[31], 'qqq_day_d'] = np.nan
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_joint_risk_models.py:54:24
+   |
+53 |     def test_zero_and_signed_returns_valid(self):
+54 |         f, t = sample(); t.loc[f.index[30], ['y_qqq', 'y_spx']] = [0., -.01]
+   |                        ^
+55 |         self.assertTrue(model.training_mask(f, t, f.index[60], 20).iloc[30])
+   |
+
+E701 Multiple statements on one line (colon)
+  --> tests/test_joint_risk_models.py:65:33
+   |
+63 |         for fault in ['cutoff', 'maturity', 'infinite', 'order']:
+64 |             f, t = sample()
+65 |             if fault == 'cutoff': f.loc[f.index[40], 'feature_cutoff_date'] = f.index[38]
+   |                                 ^
+66 |             if fault == 'maturity': t.loc[f.index[40], 'available_date'] = f.index[42]
+67 |             if fault == 'infinite': t.loc[f.index[40], 'y_spx'] = np.inf
+   |
+
+E701 Multiple statements on one line (colon)
+  --> tests/test_joint_risk_models.py:66:35
+   |
+64 |             f, t = sample()
+65 |             if fault == 'cutoff': f.loc[f.index[40], 'feature_cutoff_date'] = f.index[38]
+66 |             if fault == 'maturity': t.loc[f.index[40], 'available_date'] = f.index[42]
+   |                                   ^
+67 |             if fault == 'infinite': t.loc[f.index[40], 'y_spx'] = np.inf
+68 |             if fault == 'order': t = t.iloc[::-1]
+   |
+
+E701 Multiple statements on one line (colon)
+  --> tests/test_joint_risk_models.py:67:35
+   |
+65 |             if fault == 'cutoff': f.loc[f.index[40], 'feature_cutoff_date'] = f.index[38]
+66 |             if fault == 'maturity': t.loc[f.index[40], 'available_date'] = f.index[42]
+67 |             if fault == 'infinite': t.loc[f.index[40], 'y_spx'] = np.inf
+   |                                   ^
+68 |             if fault == 'order': t = t.iloc[::-1]
+69 |             with self.subTest(fault=fault), self.assertRaises(ValueError):
+   |
+
+E701 Multiple statements on one line (colon)
+  --> tests/test_joint_risk_models.py:68:32
+   |
+66 |             if fault == 'maturity': t.loc[f.index[40], 'available_date'] = f.index[42]
+67 |             if fault == 'infinite': t.loc[f.index[40], 'y_spx'] = np.inf
+68 |             if fault == 'order': t = t.iloc[::-1]
+   |                                ^
+69 |             with self.subTest(fault=fault), self.assertRaises(ValueError):
+70 |                 model.training_mask(f, t, f.index[60], 20)
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_joint_risk_models.py:80:41
+   |
+78 |         np.testing.assert_allclose(b.corr22_centered_sq, (f.corr22.iloc[100:110]-center)**2)
+79 |         self.assertEqual(audit['corr22_mean'], center)
+80 |         altered = f.iloc[100:110].copy(); altered['corr22'] = .99
+   |                                         ^
+81 |         c, _, other = model.transform(f.iloc[:100], altered)
+82 |         pd.testing.assert_frame_equal(a, c); self.assertEqual(audit, other)
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_joint_risk_models.py:82:44
+   |
+80 |         altered = f.iloc[100:110].copy(); altered['corr22'] = .99
+81 |         c, _, other = model.transform(f.iloc[:100], altered)
+82 |         pd.testing.assert_frame_equal(a, c); self.assertEqual(audit, other)
+   |                                            ^
+83 |
+84 |     def test_all_means_shared_and_dependence_diagonals_identical(self):
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_joint_risk_models.py:94:55
+   |
+92 |             p = out['forecasts'][name]
+93 |             np.testing.assert_array_equal(p['mu'], constant['mu'])
+94 |             self.assertTrue(np.isfinite(p['h']).all()); self.assertTrue((p['h'] > 0).all())
+   |                                                       ^
+95 |             self.assertTrue((np.abs(p['rho']) <= 1-1e-6).all())
+96 |         for asset in ['qqq', 'spx']:
+   |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_joint_risk_models.py:105:24
+    |
+104 |     def test_constant_matrix_is_uncentered_training_residual_second_moment(self):
+105 |         f, t = sample(); out = model.fit_predict(f.iloc[:120], t.iloc[:120], f.iloc[120:130])
+    |                        ^
+106 |         transformed, _, _ = model.transform(f.iloc[:120], f.iloc[120:130])
+107 |         residuals = []
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_joint_risk_models.py:113:39
+    |
+111 |             z = (x-np.asarray(a['means']))/np.asarray(a['scales'])
+112 |             residuals.append(t['y_'+asset].iloc[:120].to_numpy()-z@np.asarray(a['beta']))
+113 |         e = np.column_stack(residuals); matrix = e.T@e/len(e)
+    |                                       ^
+114 |         np.testing.assert_allclose(out['audit']['constant_matrix']['matrix'], matrix, rtol=1e-12)
+115 |         p = out['forecasts']['constant_matrix']
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_joint_risk_models.py:123:32
+    |
+121 |         for fault in ['scale', 'zero', 'collinear']:
+122 |             x, y = f.copy(), t.copy()
+123 |             if fault == 'scale': x['spx_day_w'] = 0.
+    |                                ^
+124 |             if fault == 'zero': y[['y_qqq', 'y_spx']] = 0.
+125 |             if fault == 'collinear': y['y_spx'] = y.y_qqq
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_joint_risk_models.py:124:31
+    |
+122 |             x, y = f.copy(), t.copy()
+123 |             if fault == 'scale': x['spx_day_w'] = 0.
+124 |             if fault == 'zero': y[['y_qqq', 'y_spx']] = 0.
+    |                               ^
+125 |             if fault == 'collinear': y['y_spx'] = y.y_qqq
+126 |             with self.subTest(fault=fault), self.assertRaises(ValueError):
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_joint_risk_models.py:125:36
+    |
+123 |             if fault == 'scale': x['spx_day_w'] = 0.
+124 |             if fault == 'zero': y[['y_qqq', 'y_spx']] = 0.
+125 |             if fault == 'collinear': y['y_spx'] = y.y_qqq
+    |                                    ^
+126 |             with self.subTest(fault=fault), self.assertRaises(ValueError):
+127 |                 model.fit_predict(x.iloc[:120], y.iloc[:120], x.iloc[120:130])
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_joint_risk_models.py:133:35
+    |
+131 |         with self.assertRaises(ValueError):
+132 |             model.fit_predict(f.iloc[:120], t.iloc[:120].iloc[::-1], f.iloc[120:130])
+133 |         q = f.iloc[120:130].copy(); q.iloc[0, 1] = np.inf
+    |                                   ^
+134 |         with self.assertRaises(ValueError): model.fit_predict(f.iloc[:120], t.iloc[:120], q)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_joint_risk_models.py:134:43
+    |
+132 |             model.fit_predict(f.iloc[:120], t.iloc[:120].iloc[::-1], f.iloc[120:130])
+133 |         q = f.iloc[120:130].copy(); q.iloc[0, 1] = np.inf
+134 |         with self.assertRaises(ValueError): model.fit_predict(f.iloc[:120], t.iloc[:120], q)
+    |                                           ^
+135 |
+136 |     def test_units_and_asset_order_preserve_dependence(self):
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_joint_risk_models.py:139:25
+    |
+137 |         f, t = sample()
+138 |         a = model.fit_predict(f.iloc[:120], t.iloc[:120], f.iloc[120:130])
+139 |         other = t.copy(); other['y_qqq'] *= 10; other['y_spx'] *= 100
+    |                         ^
+140 |         b = model.fit_predict(f.iloc[:120], other.iloc[:120], f.iloc[120:130])
+141 |         swapped = t.copy(); swapped[['y_qqq', 'y_spx']] = t[['y_spx', 'y_qqq']].to_numpy()
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_joint_risk_models.py:139:47
+    |
+137 |         f, t = sample()
+138 |         a = model.fit_predict(f.iloc[:120], t.iloc[:120], f.iloc[120:130])
+139 |         other = t.copy(); other['y_qqq'] *= 10; other['y_spx'] *= 100
+    |                                               ^
+140 |         b = model.fit_predict(f.iloc[:120], other.iloc[:120], f.iloc[120:130])
+141 |         swapped = t.copy(); swapped[['y_qqq', 'y_spx']] = t[['y_spx', 'y_qqq']].to_numpy()
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_joint_risk_models.py:141:27
+    |
+139 |         other = t.copy(); other['y_qqq'] *= 10; other['y_spx'] *= 100
+140 |         b = model.fit_predict(f.iloc[:120], other.iloc[:120], f.iloc[120:130])
+141 |         swapped = t.copy(); swapped[['y_qqq', 'y_spx']] = t[['y_spx', 'y_qqq']].to_numpy()
+    |                           ^
+142 |         c = model.fit_predict(f.iloc[:120], swapped.iloc[:120], f.iloc[120:130])
+143 |         for name in MODELS:
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_joint_risk_models.py:152:24
+    |
+151 |     def test_application_does_not_change_any_fit(self):
+152 |         f, t = sample(); query = f.iloc[120:130].copy()
+    |                        ^
+153 |         before = model.fit_predict(f.iloc[:120], t.iloc[:120], query)
+154 |         query['qqq_lg_d'] += .1; query['corr22'] = .1
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_joint_risk_models.py:154:32
+    |
+152 |         f, t = sample(); query = f.iloc[120:130].copy()
+153 |         before = model.fit_predict(f.iloc[:120], t.iloc[:120], query)
+154 |         query['qqq_lg_d'] += .1; query['corr22'] = .1
+    |                                ^
+155 |         after = model.fit_predict(f.iloc[:120], t.iloc[:120], query)
+156 |         self.assertEqual(before['audit'], after['audit'])
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_joint_risk_models.py:159:24
+    |
+158 |     def test_query_label_filter_cannot_move_monthly_refit(self):
+159 |         f, t = sample(); c = config(f.index)
+    |                        ^
+160 |         with patch.object(model, 'fit_predict', side_effect=fake_fit):
+161 |             panel, fits = model.forecast_panel(f, t, c)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_joint_risk_models.py:166:60
+    |
+164 |         self.assertEqual(fits[0]['fit_origin'], str(f.index[60].date()))
+165 |         self.assertEqual(fits[0]['fit_origin'], after[0]['fit_origin'])
+166 |         self.assertTrue(panel.origin.eq(f.index[60]).any()); self.assertFalse(other.origin.eq(f.index[60]).any())
+    |                                                            ^
+167 |         self.assertFalse(panel.loc[panel.phase.eq('development'), 'origin'].eq(f.index[94]).any())
+168 |         self.assertTrue(panel.groupby('origin').model.nunique().eq(3).all())
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_joint_risk_models.py:171:24
+    |
+170 |     def test_future_label_perturbation_leaves_first_fit_unchanged(self):
+171 |         f, t = sample(); c = config(f.index)
+    |                        ^
+172 |         with patch.object(model, 'fit_predict', side_effect=fake_fit):
+173 |             a, _ = model.forecast_panel(f, t, c)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_joint_risk_models.py:181:26
+    |
+181 | if __name__ == '__main__': unittest.main()
+    |                          ^
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_joint_risk_search.py:221:23
+    |
+220 |     def test_negative_and_zero_raw_scores_are_valid(self):
+221 |         p = protocol(); p['inference']['bootstrap_draws'] = 19
+    |                       ^
+222 |         out = study.paired_inference(-np.ones(140), np.zeros(140), p, 1)
+223 |         self.assertEqual(out['delta'], -1.)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_joint_risk_search.py:240:27
+    |
+238 |                            ('maximum_splits', 100000), ('projected_gradient_tolerance', 1e-4),
+239 |                            ('minimum_correlation_eigenvalue', 0.)]:
+240 |             p = protocol(); p['dependence'][key] = value
+    |                           ^
+241 |             with self.subTest(key=key), self.assertRaises(ValueError): study.validate(p)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_joint_risk_search.py:241:70
+    |
+239 |                            ('minimum_correlation_eigenvalue', 0.)]:
+240 |             p = protocol(); p['dependence'][key] = value
+241 |             with self.subTest(key=key), self.assertRaises(ValueError): study.validate(p)
+    |                                                                      ^
+
+E701 Multiple statements on one line (colon)
+   --> tests/test_joint_risk_search.py:244:26
+    |
+244 | if __name__ == '__main__': unittest.main()
+    |                          ^
+
+Found 42 errors (5 fixed, 37 remaining).

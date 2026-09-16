@@ -1,0 +1,153 @@
+{
+  "status": "REPRODUCED_ADMISSION_FAILURE",
+  "started_utc": "2026-09-07T11:47:35.674378+00:00",
+  "finished_utc": "2026-09-07T11:48:29.071246+00:00",
+  "reproduction_entrypoint": "src.verify_civil_quarter.validate_upstream(root)",
+  "entrypoint_read_only": true,
+  "producer_restarted": false,
+  "verification_guard_called": false,
+  "frozen_specification_changed": false,
+  "protocol_sha256": "8b9fdabcbaf3eae80116cc1efa02e7d32372d9a628faf74996fceefe142da109",
+  "exception": {
+    "type": "FileNotFoundError",
+    "message": "[Errno 2] No such file or directory: '/var/folders/jn/2wqppgv57cx3k54l_dqt9sl00000gn/T/civil-quarter-old-source-lbznq_1j/data/source_discovery/bls_plan_capture/cpi_12152015.web-extract.txt'",
+    "filename": "/var/folders/jn/2wqppgv57cx3k54l_dqt9sl00000gn/T/civil-quarter-old-source-lbznq_1j/data/source_discovery/bls_plan_capture/cpi_12152015.web-extract.txt"
+  },
+  "failure_stage": "Direct wave8 raw-source reconstruction in immutable temporary input tree; before wave15 civil features, support, optimization or scores",
+  "terminal_publication": {
+    "status": "UNEVALUABLE",
+    "hypothesis_count": 2,
+    "cumulative_hypothesis_count": 123,
+    "all_new_pvalues": 1.0,
+    "leads": [],
+    "phase_scores": 0,
+    "ledger_events": {
+      "inherited": 121,
+      "registered": 2,
+      "unevaluable": 2
+    },
+    "ledger_total": 125,
+    "terminal_files_sha256_before": {
+      "metrics.json": "67eb0c458001b726f1456453388283a99f22a2508424da4fdf56d535e9b0d159",
+      "failure.json": "67eb0c458001b726f1456453388283a99f22a2508424da4fdf56d535e9b0d159",
+      "trial_ledger.jsonl": "d44aa0c1b9480cbc9dafae5cea26c0cbfaf1edfb584dcac41f856f8f417591a5",
+      "results.md": "cc0b87e9dad63569583accb2b559acb6e39c9deda5c45ab4813bac4adbeec478",
+      "manifest.json": "212578e5418c5f10e8e4847bbebf335bc3dcbd7b0db63aac853a4902a5605156",
+      "freeze_record.json": "55eefd0f50d3486034e72c2cdc5ba4d4ed8b0015f39f1d92257c911ce99021ce"
+    },
+    "terminal_files_sha256_after": {
+      "metrics.json": "67eb0c458001b726f1456453388283a99f22a2508424da4fdf56d535e9b0d159",
+      "failure.json": "67eb0c458001b726f1456453388283a99f22a2508424da4fdf56d535e9b0d159",
+      "trial_ledger.jsonl": "d44aa0c1b9480cbc9dafae5cea26c0cbfaf1edfb584dcac41f856f8f417591a5",
+      "results.md": "cc0b87e9dad63569583accb2b559acb6e39c9deda5c45ab4813bac4adbeec478",
+      "manifest.json": "212578e5418c5f10e8e4847bbebf335bc3dcbd7b0db63aac853a4902a5605156",
+      "freeze_record.json": "55eefd0f50d3486034e72c2cdc5ba4d4ed8b0015f39f1d92257c911ce99021ce"
+    }
+  },
+  "new_data_outputs": [],
+  "new_forecasts": 0,
+  "new_monthly_fits": 0,
+  "prior_preservation": {
+    "manifests_checked": 14,
+    "unique_prior_pins_checked": 1567,
+    "all_prior_pins_match": true,
+    "manifest_records": {
+      "iterative_signal_search": {
+        "manifest_sha256": "5515fc5aea433d9e743bcd31d9bfdb284ebca23005ac3c0fdd6184ab5a15b61f",
+        "entries": 148
+      },
+      "international_volatility": {
+        "manifest_sha256": "530b8439d7b8dcd209d967a90d3affe1ec002a7dc0e4b824deb44c37285ea757",
+        "entries": 166
+      },
+      "overnight_index": {
+        "manifest_sha256": "49c84753c1589ac7c01e4e3d90e250eca1df6341a30420a8e9d9a766c6e241fd",
+        "entries": 187
+      },
+      "macro_overnight": {
+        "manifest_sha256": "d50b2523a84c139e87861e2468c829606e6c1a41f8fb17be68e5f4d8da5ab614",
+        "entries": 1011
+      },
+      "measurement_memory": {
+        "manifest_sha256": "c53329dbbc94dc0d8e83aca30284c41e3e0b9e35a3156817837bcadc647625b7",
+        "entries": 369
+      },
+      "index_hinge": {
+        "manifest_sha256": "7d3c458c255b0d4ee9278a4844269b68249426aeacbeeb436e6350c7b1c4204b",
+        "entries": 385
+      },
+      "tail_shape": {
+        "manifest_sha256": "136cfa954874231d305af552d3f89d7e77bee76d3638a9152f764b425509644d",
+        "entries": 420
+      },
+      "calendar_variance": {
+        "manifest_sha256": "521deb0c053c3eb724f2cd84c4644688863ec263ecce62d00c8ea129580bb4c8",
+        "entries": 1249
+      },
+      "relative_risk": {
+        "manifest_sha256": "15e5319a2c66e64dfc3692f71d7da279b9d901ec8ed4a43869024a90d27c8e0f",
+        "entries": 489
+      },
+      "joint_risk": {
+        "manifest_sha256": "c80e77d076cefd98c0e6d7df6c9dd213638ec486e718a9713055552575dc7848",
+        "entries": 529
+      },
+      "cross_moment": {
+        "manifest_sha256": "28a3fa3975bd58789d6859850579a472671443937e4de641351eb8f8217c969a",
+        "entries": 583
+      },
+      "target_aligned": {
+        "manifest_sha256": "996e9f8f081a69a66dad9c4c611feb6775fc69c5ad9e3630230d55ad97b426d9",
+        "entries": 634
+      },
+      "sign_memory": {
+        "manifest_sha256": "47c6bc32556a30ae444a80380a2cd3a0076aa2df511d6814c5cec359cf1dcb0c",
+        "entries": 684
+      },
+      "causal_pool": {
+        "manifest_sha256": "a775d4491b3dab27f2c36c037090d37a094dfad85c5ff67256acfa262d40f4c2",
+        "entries": 747
+      }
+    },
+    "wave15_manifest_group_counts": {
+      "code": 247,
+      "inputs": 1074,
+      "preserved": 290
+    },
+    "all_wave15_pins_match": true,
+    "frozen_code_pins_checked": 247,
+    "all_frozen_code_pins_match": true
+  },
+  "first_missing_staged_dependency": {
+    "path": "data/source_discovery/bls_plan_capture/cpi_12152015.web-extract.txt",
+    "exists_in_original_root": true,
+    "actual_sha256": "a29d4c780e626d86167de0584172b9e84c730cf2b91815372ebdba54dea40c00",
+    "declared_snapshot_sha256": "a29d4c780e626d86167de0584172b9e84c730cf2b91815372ebdba54dea40c00",
+    "source_url": "https://www.bls.gov/news.release/archives/cpi_12152015.htm",
+    "parse_status": "VERIFIED_EXPLICIT_PLAN",
+    "referring_ledger": "data/source_discovery/macro_plans/cpi/ledger.json",
+    "manifest_membership": {
+      "calendar_variance": {
+        "direct_groups": [],
+        "ledger_groups": [
+          "inputs"
+        ],
+        "ledger_sha256": "a263e318edf6a6233b44ac8c141a33c9389e7b90e131c0ea9e26678842b5256a"
+      },
+      "causal_pool": {
+        "direct_groups": [],
+        "ledger_groups": [],
+        "ledger_sha256": "a263e318edf6a6233b44ac8c141a33c9389e7b90e131c0ea9e26678842b5256a"
+      },
+      "civil_quarter": {
+        "direct_groups": [],
+        "ledger_groups": [
+          "inputs"
+        ],
+        "ledger_sha256": "a263e318edf6a6233b44ac8c141a33c9389e7b90e131c0ea9e26678842b5256a"
+      }
+    },
+    "provenance": "The exact current source bytes match the selected-source digest inside a pinned original CPI ledger. They were not separately inventoried in any of the three staged-input manifests. This is a dependency-closure failure, not missing on-disk source evidence; provider-raw bytes and historical web vintage remain uncertified."
+  },
+  "scientific_conclusion": "The attempted wave15 experiment is unevaluable. No evidence for or against civil quarter-end predictive value was produced; the p1 values retain failed hypotheses in multiplicity accounting and are not null-result measurements."
+}

@@ -1,0 +1,14 @@
+test_failed20_marker_is_retained_but_original18_19_markers_block (tests.test_verify_event_cluster_replay.AdmissionAndFailureContracts.test_failed20_marker_is_retained_but_original18_19_markers_block) ... ok
+test_guard_preserves_old_bytes_and_invalidates_three_even_nonfinite_json (tests.test_verify_event_cluster_replay.AdmissionAndFailureContracts.test_guard_preserves_old_bytes_and_invalidates_three_even_nonfinite_json) ... ok
+test_inherited_failed_three_are_canonical_p1_and_hashed (tests.test_verify_event_cluster_replay.AdmissionAndFailureContracts.test_inherited_failed_three_are_canonical_p1_and_hashed) ... ok
+test_snapshot_hash_checked_before_json_decode (tests.test_verify_event_cluster_replay.AdmissionAndFailureContracts.test_snapshot_hash_checked_before_json_decode) ... ok
+test_all_six_phases_eighteen_bootstraps_and137_family (tests.test_verify_event_cluster_replay.InferenceContracts.test_all_six_phases_eighteen_bootstraps_and137_family) ... ok
+test_counts_support_coeffless_identity_uncertainty_mutations_reject (tests.test_verify_event_cluster_replay.InferenceContracts.test_counts_support_coeffless_identity_uncertainty_mutations_reject) ... ok
+test_exact140_event_ledger_and_hash_before_decode (tests.test_verify_event_cluster_replay.InferenceContracts.test_exact140_event_ledger_and_hash_before_decode) ... ok
+test_literal_prospective_protocol_and_frozen_inference (tests.test_verify_event_cluster_replay.InferenceContracts.test_literal_prospective_protocol_and_frozen_inference) ... ok
+test_stricter_wave21_gate_is_used_not_wave20 (tests.test_verify_event_cluster_replay.InferenceContracts.test_stricter_wave21_gate_is_used_not_wave20) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.341s
+
+OK

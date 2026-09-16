@@ -1,0 +1,24 @@
+test_all_four_phase_scores_and_114_holm_family (tests.test_cross_moment_search.CrossMomentSearch.test_all_four_phase_scores_and_114_holm_family) ... ok
+test_both_controls_effect_stability_and_corrections_required (tests.test_cross_moment_search.CrossMomentSearch.test_both_controls_effect_stability_and_corrections_required) ... ok
+test_constant_units_conversion_preserves_probabilities (tests.test_cross_moment_search.CrossMomentSearch.test_constant_units_conversion_preserves_probabilities) ... ok
+test_evaluate_rejects_changed_products_or_incomplete_cohorts (tests.test_cross_moment_search.CrossMomentSearch.test_evaluate_rejects_changed_products_or_incomplete_cohorts) ... ok
+test_failed_wave_keeps_all_new_trials_without_changing_upstream (tests.test_cross_moment_search.CrossMomentSearch.test_failed_wave_keeps_all_new_trials_without_changing_upstream) ... ok
+test_fixed_contract_cannot_be_relaxed (tests.test_cross_moment_search.CrossMomentSearch.test_fixed_contract_cannot_be_relaxed) ... ok
+test_full_inherited_family_includes_both_joint_contrasts (tests.test_cross_moment_search.CrossMomentSearch.test_full_inherited_family_includes_both_joint_contrasts) ... ok
+test_inconsistent_difference_and_invalid_arithmetic_rejected (tests.test_cross_moment_search.CrossMomentSearch.test_inconsistent_difference_and_invalid_arithmetic_rejected) ... ok
+test_literal_protocol_and_both_hypotheses (tests.test_cross_moment_search.CrossMomentSearch.test_literal_protocol_and_both_hypotheses) ... ok
+test_scaled_inference_and_original_units (tests.test_cross_moment_search.CrossMomentSearch.test_scaled_inference_and_original_units) ... ok
+test_zero_scores_and_equal_predictions_are_valid (tests.test_cross_moment_search.CrossMomentSearch.test_zero_scores_and_equal_predictions_are_valid) ... ok
+test_admission_failure_records_trials_and_never_scores (tests.test_cross_moment_publication.CrossMomentPublication.test_admission_failure_records_trials_and_never_scores) ... ok
+test_calendar_changed_after_admission_never_reaches_scorer (tests.test_cross_moment_publication.CrossMomentPublication.test_calendar_changed_after_admission_never_reaches_scorer) ... ok
+test_forecast_changed_after_admission_never_reaches_scorer (tests.test_cross_moment_publication.CrossMomentPublication.test_forecast_changed_after_admission_never_reaches_scorer) ... ok
+test_nonfinite_score_payload_cannot_skip_terminal_ledger (tests.test_cross_moment_publication.CrossMomentPublication.test_nonfinite_score_payload_cannot_skip_terminal_ledger) ... ok
+test_partial_evaluated_ledger_retains_all_failed_trials (tests.test_cross_moment_publication.CrossMomentPublication.test_partial_evaluated_ledger_retains_all_failed_trials) ... ok
+test_partial_registration_retains_all_hypotheses (tests.test_cross_moment_publication.CrossMomentPublication.test_partial_registration_retains_all_hypotheses) ... ok
+test_protocol_mutation_invalidates_new_scores_only (tests.test_cross_moment_publication.CrossMomentPublication.test_protocol_mutation_invalidates_new_scores_only) ... ok
+test_report_failure_preserves_diagnostics (tests.test_cross_moment_publication.CrossMomentPublication.test_report_failure_preserves_diagnostics) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.327s
+
+OK

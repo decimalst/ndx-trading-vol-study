@@ -1,0 +1,17 @@
+{
+  "status": "METADATA_CLOSURE_READY_BEFORE_FREEZE",
+  "files": 2123,
+  "anchors": {
+    "event_cluster_replay.yaml": "b3eeea877c536a25cde0edca69cd7cc1474a425a2458ac36978adfeacee7e76f",
+    "reports/event_cluster_replay/publication_audit.json": "1e962011d0ccf66776a05a09ba09e8420f5d48f4c646e6bc8616ec07c81bdac5"
+  },
+  "source_hashes": {
+    "daily": "3958fbb1eb36689df1596c26b9f0e02e3f1d4fa3b0032381e5287a2a03697bf0",
+    "vix": "a34aabce269632f30904cf482986dd50b6d4cf51f2203dc51a0a9f460f3c90b2",
+    "vix9d": "0d6f600ee71bf6ffb5069d0c583cbe0b1ec97df6da4e4e439d5f0f22f5616abe",
+    "vvix": "f6bc726455fa3859c662875a005e97ba656b9536ae58fa6977ad24c6228e4f6a"
+  },
+  "numeric_tables_decoded": 0,
+  "model_fits": 0,
+  "empirical_scores": 0
+}

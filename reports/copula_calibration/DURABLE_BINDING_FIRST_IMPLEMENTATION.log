@@ -1,0 +1,17 @@
+First implementation of generated durable-binding helpers plus existing runner contracts.
+test_exclusive_first_save_and_checked_reload_preserve_expected_bytes (tests.test_copula_calibration_run.DurableBindingContracts.test_exclusive_first_save_and_checked_reload_preserve_expected_bytes) ... ok
+test_metrics_mutation_during_terminal_write_cannot_receive_success (tests.test_copula_calibration_run.DurableBindingContracts.test_metrics_mutation_during_terminal_write_cannot_receive_success) ... ok
+test_mutation_during_first_write_cannot_be_adopted_as_expected_hash (tests.test_copula_calibration_run.DurableBindingContracts.test_mutation_during_first_write_cannot_be_adopted_as_expected_hash) ... ok
+test_mutation_during_metrics_write_invalidates_all_seven_and_preserves_provisional_metrics (tests.test_copula_calibration_run.DurableBindingContracts.test_mutation_during_metrics_write_invalidates_all_seven_and_preserves_provisional_metrics) ... ok
+test_successful_terminal_uses_verified_data_and_proof_hashes (tests.test_copula_calibration_run.DurableBindingContracts.test_successful_terminal_uses_verified_data_and_proof_hashes) ... ok
+test_archive_retains_issued_but_phase_unscored_target (tests.test_copula_calibration_run.RunContracts.test_archive_retains_issued_but_phase_unscored_target) ... ok
+test_archive_shared_marginals_and_clock_are_bound (tests.test_copula_calibration_run.RunContracts.test_archive_shared_marginals_and_clock_are_bound) ... ok
+test_failure_retains_all_comparisons (tests.test_copula_calibration_run.RunContracts.test_failure_retains_all_comparisons) ... ok
+test_hash_pin_detects_mutated_input (tests.test_copula_calibration_run.RunContracts.test_hash_pin_detects_mutated_input) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.050s
+
+OK
+
+exit_code=0

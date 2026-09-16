@@ -1,0 +1,64 @@
+E.E..FE....E..
+======================================================================
+ERROR: test_exact_compensated_mean_and_threshold_overflow (tests.test_verify_range_alert.MeasurementContracts.test_exact_compensated_mean_and_threshold_overflow)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_range_alert.py", line 85, in test_exact_compensated_mean_and_threshold_overflow
+    with self.assertRaises(ValueError):v.event_targets(x)
+                                       ^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_range_alert.py", line 135, in event_targets
+    average=reference_mean(risk)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_range_alert.py", line 126, in reference_mean
+    total=math.fsum(map(float,window))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: intermediate overflow in fsum
+
+======================================================================
+ERROR: test_labels_do_not_depend_on_E_or_IV_completeness (tests.test_verify_range_alert.MeasurementContracts.test_labels_do_not_depend_on_E_or_IV_completeness)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_range_alert.py", line 69, in test_labels_do_not_depend_on_E_or_IV_completeness
+    d,iv=bars();_,t=v.feature_target_tables(d,iv)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_range_alert.py", line 168, in feature_target_tables
+    result['skew']=aligned.skew.shift()
+                   ^^^^^^^^^^^^^^^^^^
+AttributeError: 'function' object has no attribute 'shift'
+
+======================================================================
+ERROR: test_units_and_no_future_mutation (tests.test_verify_range_alert.MeasurementContracts.test_units_and_no_future_mutation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_range_alert.py", line 46, in test_units_and_no_future_mutation
+    d,iv=bars(); f,t=v.feature_target_tables(d,iv)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_range_alert.py", line 168, in feature_target_tables
+    result['skew']=aligned.skew.shift()
+                   ^^^^^^^^^^^^^^^^^^
+AttributeError: 'function' object has no attribute 'shift'
+
+======================================================================
+ERROR: test_transform_training_only_and_constant_E (tests.test_verify_range_alert.NumericalContracts.test_transform_training_only_and_constant_E)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_range_alert.py", line 93, in test_transform_training_only_and_constant_E
+    d,iv=bars(180);f,_=v.feature_target_tables(d,iv);f=f.dropna()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/verify_range_alert.py", line 168, in feature_target_tables
+    result['skew']=aligned.skew.shift()
+                   ^^^^^^^^^^^^^^^^^^
+AttributeError: 'function' object has no attribute 'shift'
+
+======================================================================
+FAIL: test_strict_event_window_ties_and_missing (tests.test_verify_range_alert.MeasurementContracts.test_strict_event_window_ties_and_missing)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_verify_range_alert.py", line 66, in test_strict_event_window_ties_and_missing
+    self.assertTrue(t.y.iloc[:23].isna().all())
+AssertionError: np.False_ is not true
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.038s
+
+FAILED (failures=1, errors=4)

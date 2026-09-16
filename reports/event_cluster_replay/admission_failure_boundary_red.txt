@@ -1,0 +1,13 @@
+F
+======================================================================
+FAIL: test_required_failed_marker_is_rehashed_at_final_boundary (tests.test_event_cluster_replay_admission.AdmissionTests.test_required_failed_marker_is_rehashed_at_final_boundary)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_event_cluster_replay_admission.py", line 333, in test_required_failed_marker_is_rehashed_at_final_boundary
+    with patch.object(source._Closure, "read", read), self.assertRaises(ValueError):
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.122s
+
+FAILED (failures=1)

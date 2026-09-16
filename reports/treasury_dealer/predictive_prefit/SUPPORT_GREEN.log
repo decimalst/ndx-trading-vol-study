@@ -1,0 +1,31 @@
+COMMAND: .venv/bin/python -m unittest tests.test_treasury_dealer_support -v
+test_config_floors_and_windows_must_be_typed_and_ordered (tests.test_treasury_dealer_support.TreasuryDealerSupportTests.test_config_floors_and_windows_must_be_typed_and_ordered) ... ok
+test_default_production_floors_and_empty_requested_months (tests.test_treasury_dealer_support.TreasuryDealerSupportTests.test_default_production_floors_and_empty_requested_months) ... ok
+test_event_identity_membership_and_tenor_counts_cannot_be_fabricated (tests.test_treasury_dealer_support.TreasuryDealerSupportTests.test_event_identity_membership_and_tenor_counts_cannot_be_fabricated) ... ok
+test_every_failure_retained_without_fitting_or_short_circuit (tests.test_treasury_dealer_support.TreasuryDealerSupportTests.test_every_failure_retained_without_fitting_or_short_circuit) ... ok
+test_exact_prior_session_label_maturity_and_future_label_independence (tests.test_treasury_dealer_support.TreasuryDealerSupportTests.test_exact_prior_session_label_maturity_and_future_label_independence) ... ok
+test_input_preservation_and_date_units (tests.test_treasury_dealer_support.TreasuryDealerSupportTests.test_input_preservation_and_date_units) ... ok
+test_invalid_calendar_target_cutoff_numeric_or_future_audit_fails (tests.test_treasury_dealer_support.TreasuryDealerSupportTests.test_invalid_calendar_target_cutoff_numeric_or_future_audit_fails) ... ok
+test_literal_counts_common_maturity_and_full_calendar_offsets (tests.test_treasury_dealer_support.TreasuryDealerSupportTests.test_literal_counts_common_maturity_and_full_calendar_offsets) ... ok
+test_masked_current_event_cannot_be_relabelled_certified_zero (tests.test_treasury_dealer_support.TreasuryDealerSupportTests.test_masked_current_event_cannot_be_relabelled_certified_zero) ... ok
+test_missing_common_market_feature_keeps_original_offset_and_event_mask (tests.test_treasury_dealer_support.TreasuryDealerSupportTests.test_missing_common_market_feature_keeps_original_offset_and_event_mask) ... ok
+test_no_complete_month_retains_honest_no_fit_record (tests.test_treasury_dealer_support.TreasuryDealerSupportTests.test_no_complete_month_retains_honest_no_fit_record) ... ok
+test_supported_event_on_masked_origin_is_not_counted (tests.test_treasury_dealer_support.TreasuryDealerSupportTests.test_supported_event_on_masked_origin_is_not_counted) ... ok
+test_target_blind_schedule_keeps_unscored_first_query (tests.test_treasury_dealer_support.TreasuryDealerSupportTests.test_target_blind_schedule_keeps_unscored_first_query) ... ok
+test_unknown_and_excluded_audits_are_retained_without_donating_support (tests.test_treasury_dealer_support.TreasuryDealerSupportTests.test_unknown_and_excluded_audits_are_retained_without_donating_support) ... ok
+test_zero_and_cancelling_surprises_count_dates_once_and_events_six_times (tests.test_treasury_dealer_support.TreasuryDealerSupportTests.test_zero_and_cancelling_surprises_count_dates_once_and_events_six_times) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 1.187s
+
+OK
+EXIT: 0
+
+COMMAND: .venv/bin/ruff check src/treasury_dealer_support.py tests/test_treasury_dealer_support.py
+All checks passed!
+EXIT: 0
+
+COMMAND: .venv/bin/ruff format --check src/treasury_dealer_support.py tests/test_treasury_dealer_support.py
+2 files already formatted
+EXIT: 0
+

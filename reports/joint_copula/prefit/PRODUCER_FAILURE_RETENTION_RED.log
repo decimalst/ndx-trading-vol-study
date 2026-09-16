@@ -1,0 +1,64 @@
+test_feature_construction_and_alignment_failures_retain_available_outputs (tests.test_joint_copula_pipeline.JointCopulaPipelineTests.test_feature_construction_and_alignment_failures_retain_available_outputs) ... ERROR
+test_final_coverage_or_panel_failure_retains_all_issued_months (tests.test_joint_copula_pipeline.JointCopulaPipelineTests.test_final_coverage_or_panel_failure_retains_all_issued_months) ... 
+  test_final_coverage_or_panel_failure_retains_all_issued_months (tests.test_joint_copula_pipeline.JointCopulaPipelineTests.test_final_coverage_or_panel_failure_retains_all_issued_months) (columns=('origin', 'phase', 'feature_complete', 'missing_features', 'feature_cutoff_date', 'offset', 'target_end', 'available_date', 'target_observed', 'target_within_phase', 'issued', 'scored', 'status', 'fit_origin', 'training_cutoff')) ... ERROR
+test_final_coverage_or_panel_failure_retains_all_issued_months (tests.test_joint_copula_pipeline.JointCopulaPipelineTests.test_final_coverage_or_panel_failure_retains_all_issued_months) ... ERROR
+
+======================================================================
+ERROR: test_feature_construction_and_alignment_failures_retain_available_outputs (tests.test_joint_copula_pipeline.JointCopulaPipelineTests.test_feature_construction_and_alignment_failures_retain_available_outputs)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_joint_copula_pipeline.py", line 143, in test_feature_construction_and_alignment_failures_retain_available_outputs
+    pipeline.produce(q, s, iv, config(s.index))
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/joint_copula_pipeline.py", line 184, in produce
+    features, targets = build_features(qqq, spx, iv)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1183, in _execute_mock_call
+    raise effect
+RuntimeError: invented builder failure
+
+======================================================================
+ERROR: test_final_coverage_or_panel_failure_retains_all_issued_months (tests.test_joint_copula_pipeline.JointCopulaPipelineTests.test_final_coverage_or_panel_failure_retains_all_issued_months) (columns=('origin', 'phase', 'feature_complete', 'missing_features', 'feature_cutoff_date', 'offset', 'target_end', 'available_date', 'target_observed', 'target_within_phase', 'issued', 'scored', 'status', 'fit_origin', 'training_cutoff'))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_joint_copula_pipeline.py", line 174, in test_final_coverage_or_panel_failure_retains_all_issued_months
+    pipeline.produce(q, s, iv, config(s.index))
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/joint_copula_pipeline.py", line 377, in produce
+    out = result()
+          ^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/src/joint_copula_pipeline.py", line 278, in result
+    "coverage": _frame(rows, COVERAGE_COLUMNS),
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1189, in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_joint_copula_pipeline.py", line 166, in fail
+    raise RuntimeError("invented final assembly failure")
+RuntimeError: invented final assembly failure
+
+======================================================================
+ERROR: test_final_coverage_or_panel_failure_retains_all_issued_months (tests.test_joint_copula_pipeline.JointCopulaPipelineTests.test_final_coverage_or_panel_failure_retains_all_issued_months)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_joint_copula_pipeline.py", line 175, in test_final_coverage_or_panel_failure_retains_all_issued_months
+    partial = caught.exception.produced
+              ^^^^^^^^^^^^^^^^
+AttributeError: '_AssertRaisesContext' object has no attribute 'exception'
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.113s
+
+FAILED (errors=3)
+
+EXIT_CODE=1

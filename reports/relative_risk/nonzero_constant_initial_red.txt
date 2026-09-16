@@ -1,0 +1,35 @@
+Command: /Users/byrons/code/trading-vol/ndx-vol-experiment/.venv/bin/python -m unittest tests.test_relative_risk_features.TestRelativeFeatures.test_nonzero_exact_constant_window_is_unknown_for_either_or_both_assets -v
+Exit code: 1
+test_nonzero_exact_constant_window_is_unknown_for_either_or_both_assets (tests.test_relative_risk_features.TestRelativeFeatures.test_nonzero_exact_constant_window_is_unknown_for_either_or_both_assets) ... 
+  test_nonzero_exact_constant_window_is_unknown_for_either_or_both_assets (tests.test_relative_risk_features.TestRelativeFeatures.test_nonzero_exact_constant_window_is_unknown_for_either_or_both_assets) (first_constant=True, second_constant=True) ... FAIL
+  test_nonzero_exact_constant_window_is_unknown_for_either_or_both_assets (tests.test_relative_risk_features.TestRelativeFeatures.test_nonzero_exact_constant_window_is_unknown_for_either_or_both_assets) (first_constant=True, second_constant=False) ... FAIL
+  test_nonzero_exact_constant_window_is_unknown_for_either_or_both_assets (tests.test_relative_risk_features.TestRelativeFeatures.test_nonzero_exact_constant_window_is_unknown_for_either_or_both_assets) (first_constant=False, second_constant=True) ... FAIL
+
+======================================================================
+FAIL: test_nonzero_exact_constant_window_is_unknown_for_either_or_both_assets (tests.test_relative_risk_features.TestRelativeFeatures.test_nonzero_exact_constant_window_is_unknown_for_either_or_both_assets) (first_constant=True, second_constant=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_relative_risk_features.py", line 226, in test_nonzero_exact_constant_window_is_unknown_for_either_or_both_assets
+    self.assertTrue(rr._correlation22(a, b).isna().all())
+AssertionError: np.False_ is not true
+
+======================================================================
+FAIL: test_nonzero_exact_constant_window_is_unknown_for_either_or_both_assets (tests.test_relative_risk_features.TestRelativeFeatures.test_nonzero_exact_constant_window_is_unknown_for_either_or_both_assets) (first_constant=True, second_constant=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_relative_risk_features.py", line 226, in test_nonzero_exact_constant_window_is_unknown_for_either_or_both_assets
+    self.assertTrue(rr._correlation22(a, b).isna().all())
+AssertionError: np.False_ is not true
+
+======================================================================
+FAIL: test_nonzero_exact_constant_window_is_unknown_for_either_or_both_assets (tests.test_relative_risk_features.TestRelativeFeatures.test_nonzero_exact_constant_window_is_unknown_for_either_or_both_assets) (first_constant=False, second_constant=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byrons/code/trading-vol/ndx-vol-experiment/tests/test_relative_risk_features.py", line 226, in test_nonzero_exact_constant_window_is_unknown_for_either_or_both_assets
+    self.assertTrue(rr._correlation22(a, b).isna().all())
+AssertionError: np.False_ is not true
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+FAILED (failures=3)

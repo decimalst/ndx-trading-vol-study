@@ -1,0 +1,55 @@
+COMMAND: .venv/bin/python -m unittest tests.test_precision_gate_models tests.test_precision_gate_pipeline -v
+test_exact_log_linear_reconstruction_and_no_application_fit_influence (tests.test_precision_gate_models.PrecisionExpertTests.test_exact_log_linear_reconstruction_and_no_application_fit_influence) ... ok
+test_rank_scale_and_position_failures_have_no_fallback (tests.test_precision_gate_models.PrecisionExpertTests.test_rank_scale_and_position_failures_have_no_fallback) ... ok
+test_typed_and_aligned_inputs_and_immutability (tests.test_precision_gate_models.PrecisionExpertTests.test_typed_and_aligned_inputs_and_immutability) ... ok
+test_weighted_raw_normal_equations_and_exact_separate_smearing (tests.test_precision_gate_models.PrecisionExpertTests.test_weighted_raw_normal_equations_and_exact_separate_smearing) ... ok
+test_full_calendar_dates_and_target_schema_validated (tests.test_precision_gate_pipeline.PrecisionPipelineTests.test_full_calendar_dates_and_target_schema_validated) ... ok
+test_full_issued_membership_maturity_and_global_offsets (tests.test_precision_gate_pipeline.PrecisionPipelineTests.test_full_issued_membership_maturity_and_global_offsets) ... ok
+test_future_target_permutation_cannot_change_earlier_forecasts (tests.test_precision_gate_pipeline.PrecisionPipelineTests.test_future_target_permutation_cannot_change_earlier_forecasts) ... ok
+test_insufficient_scoring_month_aborts_and_retains_diagnostics (tests.test_precision_gate_pipeline.PrecisionPipelineTests.test_insufficient_scoring_month_aborts_and_retains_diagnostics) ... ok
+test_issued_state_is_saved_and_frozen_gate_gets_only_issued_mature_pairs (tests.test_precision_gate_pipeline.PrecisionPipelineTests.test_issued_state_is_saved_and_frozen_gate_gets_only_issued_mature_pairs) ... ok
+test_no_complete_month_and_input_immutability (tests.test_precision_gate_pipeline.PrecisionPipelineTests.test_no_complete_month_and_input_immutability) ... ok
+test_rank_failure_does_not_become_warmup_or_fallback (tests.test_precision_gate_pipeline.PrecisionPipelineTests.test_rank_failure_does_not_become_warmup_or_fallback) ... ok
+test_scoring_phase_endpoint_and_common_cohort (tests.test_precision_gate_pipeline.PrecisionPipelineTests.test_scoring_phase_endpoint_and_common_cohort) ... ok
+test_target_blind_month_start_and_previous_full_session (tests.test_precision_gate_pipeline.PrecisionPipelineTests.test_target_blind_month_start_and_previous_full_session) ... ok
+test_warmup_does_not_issue_or_refill_and_cold_start_is_baseline (tests.test_precision_gate_pipeline.PrecisionPipelineTests.test_warmup_does_not_issue_or_refill_and_cold_start_is_baseline) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.505s
+
+OK
+
+exit_code=0
+COMMAND: .venv/bin/ruff check src/precision_gate_models.py src/precision_gate_pipeline.py tests/test_precision_gate_models.py tests/test_precision_gate_pipeline.py
+I001 [*] Import block is un-sorted or un-formatted
+  --> tests/test_precision_gate_pipeline.py:3:1
+   |
+ 1 |   """Generated temporal membership contracts written before implementation."""
+ 2 |
+ 3 | / import copy
+ 4 | | import unittest
+ 5 | | from unittest.mock import patch
+ 6 | |
+ 7 | | import numpy as np
+ 8 | | import pandas as pd
+ 9 | |
+10 | | from src.precision_gate_pipeline import build_panel, InsufficientDataError
+11 | | from src.claims_release_models import MARKET
+   | |____________________________________________^
+help: Organize imports
+   |
+9  |
+   - from src.precision_gate_pipeline import build_panel, InsufficientDataError
+10 | from src.claims_release_models import MARKET
+11 + from src.precision_gate_pipeline import InsufficientDataError, build_panel
+12 |
+   |
+
+Found 1 error.
+[*] 1 fixable with the `--fix` option.
+
+exit_code=1
+COMMAND: .venv/bin/ruff format --check src/precision_gate_models.py src/precision_gate_pipeline.py tests/test_precision_gate_models.py tests/test_precision_gate_pipeline.py
+4 files already formatted
+
+exit_code=0
