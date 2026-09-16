@@ -20,7 +20,6 @@ from src.spread_geometry_hindsight import (
     select_winners,
 )
 
-
 MODELS = ("orig_gaussian", "orig_t8", "cal_gaussian", "cal_t8", "shape_gaussian", "shape_t8")
 EXPECTED_POLICIES = ("always_sell",) + tuple("fixed_2pct_" + model for model in MODELS)
 DISTANCES = (100, 200, 300)
@@ -316,9 +315,8 @@ class SpreadGeometryHindsightTests(unittest.TestCase):
         bad.loc[7, "target_end"] = pd.Timestamp("2025-10-21")
         bad_cases.append(bad)
         for index, bad in enumerate(bad_cases):
-            with self.subTest(index=index):
-                with self.assertRaises(ValueError):
-                    run_search(bad, self.selections, (200,), (100,))
+            with self.subTest(index=index), self.assertRaises(ValueError):
+                run_search(bad, self.selections, (200,), (100,))
 
     def test_strict_complete_selections_and_actual_boolean_masks(self):
         bad_cases = [self.selections.iloc[1:], pd.concat([self.selections, self.selections.iloc[[0]]]), self.selections.assign(extra=0), self.selections.drop(columns="sell")]
@@ -337,18 +335,16 @@ class SpreadGeometryHindsightTests(unittest.TestCase):
         bad.loc[0, "origin"] = pd.Timestamp("2019-12-20")
         bad_cases.append(bad)
         for index, bad in enumerate(bad_cases):
-            with self.subTest(index=index):
-                with self.assertRaises(ValueError):
-                    run_search(self.returns, bad, (200,), (100,))
+            with self.subTest(index=index), self.assertRaises(ValueError):
+                run_search(self.returns, bad, (200,), (100,))
 
     def test_grid_requires_finite_unique_positive_integer_basis_points(self):
         for grid in [(), (0,), (-1,), (True,), (100.5,), (np.nan,), (np.inf,), ("100",), (100, 100), (200, 100)]:
             for parameter in ("distance_bps", "width_bps"):
                 arguments = dict(distance_bps=(200,), width_bps=(100,))
                 arguments[parameter] = grid
-                with self.subTest(parameter=parameter, grid=grid):
-                    with self.assertRaises(ValueError):
-                        run_search(self.returns, self.selections, **arguments)
+                with self.subTest(parameter=parameter, grid=grid), self.assertRaises(ValueError):
+                    run_search(self.returns, self.selections, **arguments)
         for width in (1, 5):
             with self.assertRaises(ValueError):
                 run_search(self.returns, self.selections, (200,), (width,))

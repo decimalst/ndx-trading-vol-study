@@ -102,10 +102,10 @@ def select_winners(accounts):
         eligible = group[group.sold_sessions > 0]
         if eligible.empty:
             first = group.iloc[0]
-            row = {name: np.nan for name in ACCOUNT_COLUMNS}
+            row = dict.fromkeys(ACCOUNT_COLUMNS, np.nan)
             row.update({name: first[name] for name in GROUP})
             row.update(sessions=int(first.sessions), sold_sessions=0, status="NO_TRADES", tie_count=0)
-            row.update({name: np.nan for name in TIE_FIELDS})
+            row.update(dict.fromkeys(TIE_FIELDS, np.nan))
         else:
             if not np.isfinite(eligible.total_log_growth.to_numpy(float)).all():
                 raise ValueError("Finite ranking objective required")

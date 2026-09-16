@@ -5,14 +5,13 @@ earlier accounting module is imported by this test module.
 """
 from __future__ import annotations
 
-from itertools import product
 import unittest
+from itertools import product
 
 import numpy as np
 import pandas as pd
 
 from src.verify_spread_geometry_hindsight import verify_search
-
 
 POLICIES = ("always_sell",) + tuple("fixed_2pct_" + name for name in (
     "orig_gaussian", "orig_t8", "cal_gaussian", "cal_t8", "shape_gaussian", "shape_t8"))
@@ -88,7 +87,7 @@ def fixture(quiet=False, distances=(100,), widths=(100,)):
             for field in set(row) - set(GROUP) - {"sessions", "sold_sessions"}:
                 row[field] = np.nan
             row.update(status="NO_TRADES", tie_count=0)
-            row.update({field: np.nan for field in TIE_FIELDS})
+            row.update(dict.fromkeys(TIE_FIELDS, np.nan))
         else:
             tied = group[np.abs(group.total_log_growth - group.total_log_growth.max()) <= 1e-10]
             row = tied.sort_values(["distance_bps", "width_bps"]).iloc[0].to_dict()

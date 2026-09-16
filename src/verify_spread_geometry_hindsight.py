@@ -11,7 +11,6 @@ from itertools import product
 import numpy as np
 import pandas as pd
 
-
 _STRUCTURES = ("put", "call", "condor")
 _POLICIES = ("always_sell",) + tuple("fixed_2pct_" + name for name in (
     "orig_gaussian", "orig_t8", "cal_gaussian", "cal_t8", "shape_gaussian", "shape_t8"))
@@ -160,7 +159,7 @@ def _reconstruct(log_returns, masks, phases, distances, widths):
             winner = {column: first[column] if column in _WINNER_GROUP + ["sessions", "sold_sessions"]
                       else np.nan for column in accounts.columns}
             winner.update(status="NO_TRADES", tie_count=0)
-            winner.update({field: np.nan for field in _TIE_FIELDS})
+            winner.update(dict.fromkeys(_TIE_FIELDS, np.nan))
         else:
             best = eligible.total_log_growth.max()
             tied = eligible.loc[np.abs(eligible.total_log_growth - best) <= 1e-10]

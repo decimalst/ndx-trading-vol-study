@@ -116,9 +116,8 @@ class SpreadGeometryHindsightRunTests(unittest.TestCase):
         bad.loc[bad.model == "always_sell", "sell"] = False
         cases.append(bad)
         for index, bad in enumerate(cases):
-            with self.subTest(index=index):
-                with self.assertRaises(ValueError):
-                    extract_inputs(panel, bad)
+            with self.subTest(index=index), self.assertRaises(ValueError):
+                extract_inputs(panel, bad)
 
     def test_every_anchor_clock_and_phase_must_match_panel_without_join_expansion(self):
         _, _, panel, positions = source_fixtures()
@@ -136,9 +135,8 @@ class SpreadGeometryHindsightRunTests(unittest.TestCase):
             bad.loc[0, column] += pd.Timedelta(hours=1)
             cases.append(bad)
         for index, bad in enumerate(cases):
-            with self.subTest(index=index):
-                with self.assertRaises(ValueError):
-                    extract_inputs(panel, bad)
+            with self.subTest(index=index), self.assertRaises(ValueError):
+                extract_inputs(panel, bad)
         for bad_panel in [panel.drop(columns="y_spx"), pd.concat([panel, panel.iloc[[0]]]), panel.iloc[:-1]]:
             with self.assertRaises(ValueError):
                 extract_inputs(bad_panel, anchor)

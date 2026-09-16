@@ -2,22 +2,28 @@
 from __future__ import annotations
 
 import argparse
-from datetime import datetime, timezone
 import hashlib
 import io
 import json
 import os
-from pathlib import Path
 import unittest
 import zipfile
+from datetime import UTC, datetime
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
 import yaml
 
 from src.spread_geometry_hindsight import (
-    DEFAULT_DISTANCE_BPS, DEFAULT_WIDTH_BPS, MODELS, POLICIES, STRUCTURES,
-    _dates, _inputs, run_search,
+    DEFAULT_DISTANCE_BPS,
+    DEFAULT_WIDTH_BPS,
+    MODELS,
+    POLICIES,
+    STRUCTURES,
+    _dates,
+    _inputs,
+    run_search,
 )
 from src.verify_spread_geometry_hindsight import verify_search
 
@@ -77,7 +83,7 @@ def extract_inputs(panel, positions):
 
 
 def now():
-    return datetime.now(timezone.utc).isoformat()
+    return datetime.now(UTC).isoformat()
 
 
 def write_json(path, value):

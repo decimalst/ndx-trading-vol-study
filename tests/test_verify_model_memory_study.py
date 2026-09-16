@@ -1,6 +1,6 @@
 """Pre-score synthetic contracts for the independent model-memory verifier."""
-import unittest
 import copy
+import unittest
 
 import numpy as np
 import pandas as pd
