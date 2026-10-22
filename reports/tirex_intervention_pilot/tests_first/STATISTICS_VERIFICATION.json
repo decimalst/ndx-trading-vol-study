@@ -1,0 +1,10 @@
+{
+  "recorded_at_utc": "2026-10-21T22:22:32.610361+00:00",
+  "status": "12_TESTS_PASSED",
+  "ruff": "PASSED_REPOSITORY_CONFIGURATION",
+  "hashes": {
+    "src/tirex_intervention_statistics.py": "50448f0b1fafecb5b1021e5579cece1bbecf7549cca0e7b63c84446e7eec11f8",
+    "tests/test_tirex_intervention_statistics.py": "516926b2db87287db18d9da2d81cd309d306ee4114d38118e25577129e0d0b3b",
+    "results/STATISTICS_GREEN.log": "82adb39f3f004f3da2a3e2b92ee58de14410468dacbe880fa0bc7d442ee007fd"
+  }
+}

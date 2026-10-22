@@ -1,0 +1,85 @@
+{
+  "title": "TiRex native-unit synthetic activation-swap pilot",
+  "version": 1,
+  "checkpoint_revision": "05e5b26db52bfb256f1ae1bdf785589850482de3",
+  "layers": [
+    0,
+    5,
+    11
+  ],
+  "token_index": 63,
+  "context_length": 2048,
+  "forecast_horizon": 1,
+  "quantiles": [
+    0.1,
+    0.5,
+    0.9
+  ],
+  "execution": "CPU, 4 threads, compile and flex attention disabled; public wrapper including uncertainty postprocessing; both TTA disabled",
+  "batch_size": 8,
+  "discovery_pairs_per_family": 12,
+  "validation_pairs_per_family": 24,
+  "seeds": {
+    "discovery": 73129,
+    "validation": 298613,
+    "bootstrap": 20261021
+  },
+  "families": [
+    "persistence",
+    "recency",
+    "recovery"
+  ],
+  "generator": {
+    "matching": "Same full multiset and last observation within each pair; shared normalization to mean -9 and SD 0.6 in log-variance units.",
+    "background": "AR(1) coefficient .92, innovation SD .3; independent across pairs, shared within pair.",
+    "persistence": "Recipient alternating low/high; donor same low/high values grouped into two runs, ending high before common last point.",
+    "recency": "Recipient positive burst early in motif; donor same burst later, followed by common quiet tail.",
+    "recovery": "Recipient noisy rising ramp; donor same values in reverse order before common last point.",
+    "discovery": "124-point motif, amplitude1.8, noiseSD.08.",
+    "validation": "Independently draw76 or180-point motifs with probability .5 each; amplitudes uniform .8..2.8, noiseSD uniform .04...3; recency tail window//6 rather than //8.",
+    "limit": "Global matching does not match recent means, slopes, autocorrelation, or all alternatives to named concepts. No real-market inputs or targets."
+  },
+  "selection": "Unique top absolute standardized donor-recipient activation contrast per family, pooled discovery SD across all pairs and sides, layers0/5/11 only, tie by layer then unit; family order persistence,recency,recovery.",
+  "controls": "Four same-layer nearest squared Euclidean distances in log pooled-activation-SD ratio and log outgoing-weight-column-L2-norm ratio. Exclude candidate and zero scales/norms; tie by unit. Freeze before validation. Other candidates may be controls if selected by this rule.",
+  "swap": "Replace one gated-FFN scalar at token63 with corresponding paired donor scalar, in both directions; all other components unchanged. Natural scalar does not guarantee hybrid state is on-manifold.",
+  "direction": "For each selected unit freeze sign of discovery own-family mean((delta_recipient_median-delta_donor_median)/2); exact zero => +1. Freeze candidate and controls before validation model evaluation.",
+  "instrumentation": {
+    "histories": "First pair from each discovery family; interleaved recipient/donor, six contexts total.",
+    "positive_affine_transforms": [
+      [
+        1.0,
+        1.3
+      ],
+      [
+        1.7,
+        0.4
+      ]
+    ],
+    "checks": [
+      "unhooked public wrapper equals capture-only",
+      "same-value patch equals baseline at each selected layer",
+      "batch reversal",
+      "single-series vs batched",
+      "positive affine activation invariance and forecast equivariance",
+      "quantile order",
+      "exactly one hook call; temporary hook cleanup; token-to-output index arithmetic"
+    ],
+    "max_forecast_abs_error": 0.0001,
+    "max_activation_relative_error": 0.0001,
+    "relative_error_formula": "max(abs(new-old))/max(1,max(abs(old))) for each activation layer and residual"
+  },
+  "inference": {
+    "unit": "independent synthetic pair",
+    "own_family_pairs": 24,
+    "floor_log_variance": 0.001,
+    "influence_effect": "discovery-frozen direction * (delta_recipient_median-delta_donor_median)/2",
+    "influence_null": "At most half the generator's pairs exceed +0.001 oriented log-variance shift.",
+    "advantage_effect": "mean absolute candidate median shift over both directions minus mean absolute shift over four controls and both directions",
+    "advantage_null": "At most half the generator's pairs exceed +0.001 advantage.",
+    "test": "Exact one-sided binomial test against p=.5; strict exceedance, ties fail; Holm across all six claims at alpha .05.",
+    "descriptive": "5000 paired bootstrap draws for mean intervals. All families and short/long variants reported; no secondary significance declarations. Baseline-contrast-oriented summaries descriptive only.",
+    "quantile_crossings": "Flag and report without rearrangement; no mechanism promotion if any own-family candidate or control crossings.",
+    "interpretation": "Numerical influence floor is not economic materiality. Passing influence only demonstrates local model influence on this synthetic generator. Passing control advantage adds comparative evidence; neither proves concept exclusivity, forecast skill, calibration, or trading value."
+  },
+  "failure_policy": "Stop before selection if instrumentation fails. Never silently relax gates or search additional layers/units after validation. Record corrections and reruns separately."
+}

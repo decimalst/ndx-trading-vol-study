@@ -1,0 +1,36 @@
+{
+  "recorded_at_utc": "2026-10-22T12:49:32.030314+00:00",
+  "status": "INDEPENDENT_CORE_REVIEW_PASSED",
+  "source_sha256": "c685b5023b4037f829d04915e0b5e7757a4a604655e71da9a5d0ddf5188a408b",
+  "generator_ast": "Exact match after function-name/default-count/pair-ID-prefix normalization; separate fresh seed constant only",
+  "fresh_seeds": {
+    "discovery": 641203,
+    "validation": 908117
+  },
+  "prior_seed_mapping_unchanged": true,
+  "numerical_generator_checks": [
+    "discovery/128/recipient: exact equality to old code with isolated fresh seeds",
+    "discovery/128/donor: exact equality to old code with isolated fresh seeds",
+    "discovery/128/family: exact equality to old code with isolated fresh seeds",
+    "discovery/128/variant: exact equality to old code with isolated fresh seeds",
+    "discovery/128/pair_id: only group prefix differs",
+    "validation/128/recipient: exact equality to old code with isolated fresh seeds",
+    "validation/128/donor: exact equality to old code with isolated fresh seeds",
+    "validation/128/family: exact equality to old code with isolated fresh seeds",
+    "validation/128/variant: exact equality to old code with isolated fresh seeds",
+    "validation/128/pair_id: only group prefix differs",
+    "discovery/2048/recipient: exact equality to old code with isolated fresh seeds",
+    "discovery/2048/donor: exact equality to old code with isolated fresh seeds",
+    "discovery/2048/family: exact equality to old code with isolated fresh seeds",
+    "discovery/2048/variant: exact equality to old code with isolated fresh seeds",
+    "discovery/2048/pair_id: only group prefix differs",
+    "validation/2048/recipient: exact equality to old code with isolated fresh seeds",
+    "validation/2048/donor: exact equality to old code with isolated fresh seeds",
+    "validation/2048/family: exact equality to old code with isolated fresh seeds",
+    "validation/2048/variant: exact equality to old code with isolated fresh seeds",
+    "validation/2048/pair_id: only group prefix differs"
+  ],
+  "control_review": "Pooled population SD, own-family means and RMS; positive eligible SD/norm/RMS; top8 rank abs(mean/SD); Hungarian squared log SD/norm/RMS costs, ordered candidates, disjoint controls, nested prefixes are consistent with protocol",
+  "statistics_review": "Own-pair maximum singleton absolute median shift applied before averaging; strict floor successes; exact one-sided binomial; 5000 paired bootstrap draws; signed Nx2 joint-minus-summed-singletons retained; crossings counted without correction",
+  "blocking_findings": []
+}

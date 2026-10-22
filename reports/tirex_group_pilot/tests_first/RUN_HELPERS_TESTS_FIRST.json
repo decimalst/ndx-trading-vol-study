@@ -1,0 +1,9 @@
+{
+  "recorded_at_utc": "2026-10-22T12:48:09.403087+00:00",
+  "test_file": "tests/test_tirex_group_run_helpers.py",
+  "sha256": "f6c45aec1822013fa371a924f2e37c930974e4ec7898e2da503f685fdf441b5f",
+  "test_count": 6,
+  "implementation_present": false,
+  "status": "EXPECTED_IMPORT_FAILURE_BEFORE_IMPLEMENTATION",
+  "red_log_sha256": "30de5df03d8c46a3bb00b38d37787cbe36ef0671f6abb3662ccb3f62a5d5187f"
+}

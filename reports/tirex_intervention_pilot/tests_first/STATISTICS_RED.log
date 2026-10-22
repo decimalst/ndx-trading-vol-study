@@ -1,0 +1,19 @@
+test_tirex_intervention_statistics (unittest.loader._FailedTest.test_tirex_intervention_statistics) ... ERROR
+
+======================================================================
+ERROR: test_tirex_intervention_statistics (unittest.loader._FailedTest.test_tirex_intervention_statistics)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_tirex_intervention_statistics
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/tirex_pilot_20261021/tests/test_tirex_intervention_statistics.py", line 7, in <module>
+    from src.tirex_intervention_statistics import analyze_candidate, holm_adjust
+ModuleNotFoundError: No module named 'src.tirex_intervention_statistics'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

@@ -1,0 +1,9 @@
+{
+  "time_utc": "2026-10-21T22:20:56.598863+00:00",
+  "return_code": 0,
+  "test_sha256": "1d8815dafa13b570474c333857ce46b8ef3baee1b1b84d313ea04116c1444bf1",
+  "adapter_sha256": "b39a828a591c74d443fd70fdd53c3d5ef2f39f72205e0d523be21d10a1d84826",
+  "log_sha256": "c8c5e58c0cb11e2df665d1465505966b60e1aaf7c30dd0e8fd5946a8aee8d963",
+  "real_checkpoint_loaded": false,
+  "implementation_correction": "Column weight norms accumulated in float64 to satisfy original numeric test."
+}

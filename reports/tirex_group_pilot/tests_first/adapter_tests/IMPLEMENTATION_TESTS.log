@@ -1,0 +1,20 @@
+test_cardinality_one_matches_original_scalar_adapter_bit_exactly (test_tirex_group_adapter.GroupAdapterTests.test_cardinality_one_matches_original_scalar_adapter_bit_exactly) ... ok
+test_contexts_donors_units_and_original_tensors_are_not_mutated (test_tirex_group_adapter.GroupAdapterTests.test_contexts_donors_units_and_original_tensors_are_not_mutated) ... ok
+test_donor_rows_align_when_batch_is_split_into_chunks (test_tirex_group_adapter.GroupAdapterTests.test_donor_rows_align_when_batch_is_split_into_chunks) ... ok
+test_group_can_replace_all_channels_without_other_token_changes (test_tirex_group_adapter.GroupAdapterTests.test_group_can_replace_all_channels_without_other_token_changes) ... ok
+test_group_capture_false_preserves_forecast (test_tirex_group_adapter.GroupAdapterTests.test_group_capture_false_preserves_forecast) ... ok
+test_group_changes_only_selected_channels_at_token63 (test_tirex_group_adapter.GroupAdapterTests.test_group_changes_only_selected_channels_at_token63) ... ok
+test_group_cleanup_after_model_exception_then_reusable (test_tirex_group_adapter.GroupAdapterTests.test_group_cleanup_after_model_exception_then_reusable) ... ok
+test_group_eval_nograd_and_tta_disabled (test_tirex_group_adapter.GroupAdapterTests.test_group_eval_nograd_and_tta_disabled) ... ok
+test_group_repeated_and_missing_hook_calls_fail_closed (test_tirex_group_adapter.GroupAdapterTests.test_group_repeated_and_missing_hook_calls_fail_closed) ... ok
+test_group_values_require_exact_N_by_K_shape_without_broadcast (test_tirex_group_adapter.GroupAdapterTests.test_group_values_require_exact_N_by_K_shape_without_broadcast) ... ok
+test_invalid_layers_and_keys_fail_before_model_calls (test_tirex_group_adapter.GroupAdapterTests.test_invalid_layers_and_keys_fail_before_model_calls) ... ok
+test_invalid_unit_groups_fail_before_model_calls (test_tirex_group_adapter.GroupAdapterTests.test_invalid_unit_groups_fail_before_model_calls) ... ok
+test_no_patch_matches_original_adapter (test_tirex_group_adapter.GroupAdapterTests.test_no_patch_matches_original_adapter) ... ok
+test_permuting_units_and_corresponding_columns_is_equivalent (test_tirex_group_adapter.GroupAdapterTests.test_permuting_units_and_corresponding_columns_is_equivalent) ... ok
+test_same_value_group_swap_is_bit_exact (test_tirex_group_adapter.GroupAdapterTests.test_same_value_group_swap_is_bit_exact) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.134s
+
+OK

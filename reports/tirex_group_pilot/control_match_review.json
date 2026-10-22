@@ -1,0 +1,254 @@
+{
+  "reviewed_at_utc": "2026-10-22T12:56:08.993199+00:00",
+  "status": "DISCOVERY_CONTROL_MATCH_DIAGNOSTIC",
+  "inputs_sha256": {
+    "group_lock.json": "7daf5ccd9f4f66cb4920c0acbd8facd1361402a8e651bcd36651058383c5da42",
+    "discovery.npz": "199fea27303fa50788499630e34025f3feedb27291b8f7a86f04601feec4ba2f",
+    "weight_norms.npz": "25637c0568dc631ad4b514f35d04f60c51f472ece6699a2bd9c4f7e13327f998"
+  },
+  "raw_reconstruction": "All recorded slot ratios and matching costs independently agree with saved discovery activations and weight norms to 1e-12.",
+  "diagnostic_threshold_note": "Twofold and 25percent multiplicative bands are descriptive review flags selected after matching, not protocol gates. No control or candidate excluded or changed. The 4-unit groups duplicate prefixes of 8-unit groups; use 8-unit groups to count unique matches.",
+  "groups": [
+    {
+      "group_id": "persistence_k4",
+      "layer": 11,
+      "size": 4,
+      "slot_count": 16,
+      "metrics": {
+        "activation_sd": {
+          "min_control_over_candidate": 0.9398681868702371,
+          "max_control_over_candidate": 2.0667571264623836,
+          "median_control_over_candidate": 1.1189313906971963,
+          "slot_count_outside_twofold": 1,
+          "slot_count_outside_25percent_multiplicative_band": 4
+        },
+        "outgoing_norm": {
+          "min_control_over_candidate": 0.6124159480456541,
+          "max_control_over_candidate": 1.0980033905553217,
+          "median_control_over_candidate": 0.9533434511282983,
+          "slot_count_outside_twofold": 0,
+          "slot_count_outside_25percent_multiplicative_band": 3
+        },
+        "own_family_delta_rms": {
+          "min_control_over_candidate": 0.8486303332520725,
+          "max_control_over_candidate": 1.2808508486732377,
+          "median_control_over_candidate": 0.9217862636619683,
+          "slot_count_outside_twofold": 0,
+          "slot_count_outside_25percent_multiplicative_band": 1
+        }
+      },
+      "group_input_perturbation_l2_rms_ratios": [
+        0.9723791851082452,
+        0.9667735411487903,
+        0.8928232921236658,
+        0.8904312317367169
+      ],
+      "twofold_flagged_slots": [
+        {
+          "control_group_index": 3,
+          "candidate_unit": 790,
+          "control_unit": 655,
+          "sd_ratio": 2.0667571264623836,
+          "norm_ratio": 0.7330361127305685,
+          "rms_ratio": 1.0707899031838946
+        }
+      ]
+    },
+    {
+      "group_id": "persistence_k8",
+      "layer": 11,
+      "size": 8,
+      "slot_count": 32,
+      "metrics": {
+        "activation_sd": {
+          "min_control_over_candidate": 0.9202501876637598,
+          "max_control_over_candidate": 2.0667571264623836,
+          "median_control_over_candidate": 1.0828662277946892,
+          "slot_count_outside_twofold": 1,
+          "slot_count_outside_25percent_multiplicative_band": 4
+        },
+        "outgoing_norm": {
+          "min_control_over_candidate": 0.6124159480456541,
+          "max_control_over_candidate": 1.146913117003369,
+          "median_control_over_candidate": 1.0094905953280482,
+          "slot_count_outside_twofold": 0,
+          "slot_count_outside_25percent_multiplicative_band": 3
+        },
+        "own_family_delta_rms": {
+          "min_control_over_candidate": 0.8035205046060485,
+          "max_control_over_candidate": 1.2808508486732377,
+          "median_control_over_candidate": 0.8991733955461385,
+          "slot_count_outside_twofold": 0,
+          "slot_count_outside_25percent_multiplicative_band": 1
+        }
+      },
+      "group_input_perturbation_l2_rms_ratios": [
+        0.956383791674839,
+        0.9502056162694961,
+        0.8810249369717447,
+        0.8654319262893793
+      ],
+      "twofold_flagged_slots": [
+        {
+          "control_group_index": 3,
+          "candidate_unit": 790,
+          "control_unit": 655,
+          "sd_ratio": 2.0667571264623836,
+          "norm_ratio": 0.7330361127305685,
+          "rms_ratio": 1.0707899031838946
+        }
+      ]
+    },
+    {
+      "group_id": "recency_k4",
+      "layer": 0,
+      "size": 4,
+      "slot_count": 16,
+      "metrics": {
+        "activation_sd": {
+          "min_control_over_candidate": 0.9460785819154199,
+          "max_control_over_candidate": 1.3443141389279216,
+          "median_control_over_candidate": 1.187858218599177,
+          "slot_count_outside_twofold": 0,
+          "slot_count_outside_25percent_multiplicative_band": 4
+        },
+        "outgoing_norm": {
+          "min_control_over_candidate": 0.9311994424912343,
+          "max_control_over_candidate": 1.2220804168529988,
+          "median_control_over_candidate": 1.067508165020827,
+          "slot_count_outside_twofold": 0,
+          "slot_count_outside_25percent_multiplicative_band": 0
+        },
+        "own_family_delta_rms": {
+          "min_control_over_candidate": 0.7379528230531811,
+          "max_control_over_candidate": 1.1228398998255862,
+          "median_control_over_candidate": 0.9422703263209844,
+          "slot_count_outside_twofold": 0,
+          "slot_count_outside_25percent_multiplicative_band": 3
+        }
+      },
+      "group_input_perturbation_l2_rms_ratios": [
+        0.9768973684251371,
+        0.9338370151646406,
+        0.9637438403292242,
+        0.8634852439002173
+      ],
+      "twofold_flagged_slots": []
+    },
+    {
+      "group_id": "recency_k8",
+      "layer": 0,
+      "size": 8,
+      "slot_count": 32,
+      "metrics": {
+        "activation_sd": {
+          "min_control_over_candidate": 0.8821987276773113,
+          "max_control_over_candidate": 1.472806263840297,
+          "median_control_over_candidate": 1.144255459542319,
+          "slot_count_outside_twofold": 0,
+          "slot_count_outside_25percent_multiplicative_band": 6
+        },
+        "outgoing_norm": {
+          "min_control_over_candidate": 0.7769804744586499,
+          "max_control_over_candidate": 1.2220804168529988,
+          "median_control_over_candidate": 1.016406854338383,
+          "slot_count_outside_twofold": 0,
+          "slot_count_outside_25percent_multiplicative_band": 2
+        },
+        "own_family_delta_rms": {
+          "min_control_over_candidate": 0.7076172185433488,
+          "max_control_over_candidate": 1.1693952989446779,
+          "median_control_over_candidate": 0.9422703263209844,
+          "slot_count_outside_twofold": 0,
+          "slot_count_outside_25percent_multiplicative_band": 5
+        }
+      },
+      "group_input_perturbation_l2_rms_ratios": [
+        0.9758390271623102,
+        0.9725774098098479,
+        0.9784439027987097,
+        0.9438685516003992
+      ],
+      "twofold_flagged_slots": []
+    },
+    {
+      "group_id": "recovery_k4",
+      "layer": 5,
+      "size": 4,
+      "slot_count": 16,
+      "metrics": {
+        "activation_sd": {
+          "min_control_over_candidate": 0.7837996707510685,
+          "max_control_over_candidate": 1.5593420338377932,
+          "median_control_over_candidate": 1.0555871182512826,
+          "slot_count_outside_twofold": 0,
+          "slot_count_outside_25percent_multiplicative_band": 3
+        },
+        "outgoing_norm": {
+          "min_control_over_candidate": 0.9206334601677363,
+          "max_control_over_candidate": 1.0421087698161835,
+          "median_control_over_candidate": 0.9862020641133027,
+          "slot_count_outside_twofold": 0,
+          "slot_count_outside_25percent_multiplicative_band": 0
+        },
+        "own_family_delta_rms": {
+          "min_control_over_candidate": 0.6177175207337188,
+          "max_control_over_candidate": 1.176957412465155,
+          "median_control_over_candidate": 0.8973059357026164,
+          "slot_count_outside_twofold": 0,
+          "slot_count_outside_25percent_multiplicative_band": 2
+        }
+      },
+      "group_input_perturbation_l2_rms_ratios": [
+        0.9266375974268557,
+        0.7376016643281499,
+        1.0903859412499002,
+        0.7104731964228722
+      ],
+      "twofold_flagged_slots": []
+    },
+    {
+      "group_id": "recovery_k8",
+      "layer": 5,
+      "size": 8,
+      "slot_count": 32,
+      "metrics": {
+        "activation_sd": {
+          "min_control_over_candidate": 0.7837996707510685,
+          "max_control_over_candidate": 1.5593420338377932,
+          "median_control_over_candidate": 1.0610725123795701,
+          "slot_count_outside_twofold": 0,
+          "slot_count_outside_25percent_multiplicative_band": 3
+        },
+        "outgoing_norm": {
+          "min_control_over_candidate": 0.9206334601677363,
+          "max_control_over_candidate": 1.1604459132093277,
+          "median_control_over_candidate": 0.9921345392240453,
+          "slot_count_outside_twofold": 0,
+          "slot_count_outside_25percent_multiplicative_band": 0
+        },
+        "own_family_delta_rms": {
+          "min_control_over_candidate": 0.6177175207337188,
+          "max_control_over_candidate": 1.176957412465155,
+          "median_control_over_candidate": 0.9228120578434892,
+          "slot_count_outside_twofold": 0,
+          "slot_count_outside_25percent_multiplicative_band": 2
+        }
+      },
+      "group_input_perturbation_l2_rms_ratios": [
+        0.9350078407366649,
+        0.7947567147401854,
+        1.0575718973557684,
+        0.7574913908078628
+      ],
+      "twofold_flagged_slots": []
+    }
+  ],
+  "interpretation": [
+    "Controls match three marginal scales approximately, not perfectly. Report match ranges instead of describing controls as identical in magnitude.",
+    "Outgoing weight directions, covariance among patched channels, and downstream nonlinear sensitivity remain unmatched. Thus a group-versus-control difference is comparative sensitivity under this specified control construction, not unique causal identification of a named concept.",
+    "Group input perturbation L2 RMS is an energy diagnostic, not projected residual perturbation or forecast effect.",
+    "Keep every locked group and matched control. No postselection exclusion, rematching, threshold adjustment, or favorable-size selection is justified by these diagnostics.",
+    "Use the family of all18 planned claims for significance. Any sharing should report all6 group outcomes, paired-singleton comparison, and no test of forecast accuracy, calibration, or economic returns."
+  ]
+}

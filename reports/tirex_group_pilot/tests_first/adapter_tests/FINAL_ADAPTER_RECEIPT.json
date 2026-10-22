@@ -1,0 +1,21 @@
+{
+  "timestamp_utc": "2026-10-22T12:44:31.551615+00:00",
+  "records": [
+    {
+      "name": "COMBINED_ADAPTER_TESTS",
+      "return_code": 0,
+      "log_sha256": "4f5439528269198b05bc60f07d1f3197f0939fd4e0cd230526f09b37e489e135"
+    },
+    {
+      "name": "GROUP_ADAPTER_LINT",
+      "return_code": 0,
+      "log_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    }
+  ],
+  "source_hashes": {
+    "src/tirex_group_adapter.py": "71f92a03d39df7d69be0a4ba50ac2953c4d3503eb891a218bda717db432f6a0f",
+    "tests/test_tirex_group_adapter.py": "5c5b57caab3315a8ea048782fd30d547005747ccefb99c47cbf25afef1ebcd14",
+    "src/tirex_intervention_adapter.py": "7dcc97e932c42fa17954b5e9ed28da715d9b7d51a24c2d85f653c9a6f9396a19"
+  },
+  "real_model_loaded": false
+}

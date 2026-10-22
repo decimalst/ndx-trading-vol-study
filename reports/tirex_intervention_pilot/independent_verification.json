@@ -1,0 +1,2392 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-10-21T22:29:24.771634+00:00",
+  "max_gate_forecast_abs_error": 3.814697265625e-06,
+  "max_gate_activation_relative_error": 1.0386109352111816e-05,
+  "validation_variant_counts": {
+    "persistence": {
+      "short": 14,
+      "long": 10
+    },
+    "recency": {
+      "short": 8,
+      "long": 16
+    },
+    "recovery": {
+      "short": 14,
+      "long": 10
+    }
+  },
+  "candidate_lock_sha256": "44fe40a488897e1a223b0587afa50d8c05abb40d04028f86b154ea65cb7f329b",
+  "check_count": 579,
+  "checks": [
+    {
+      "check": "protocol equals pre-execution hash",
+      "passed": true
+    },
+    {
+      "check": "frozen source: src/tirex_intervention_pilot.py",
+      "passed": true
+    },
+    {
+      "check": "frozen source: src/tirex_intervention_adapter.py",
+      "passed": true
+    },
+    {
+      "check": "frozen source: src/tirex_intervention_run.py",
+      "passed": true
+    },
+    {
+      "check": "frozen source: src/tirex_intervention_statistics.py",
+      "passed": true
+    },
+    {
+      "check": "frozen source: tests/test_tirex_intervention_statistics.py",
+      "passed": true
+    },
+    {
+      "check": "frozen source: tests/test_tirex_intervention_adapter.py",
+      "passed": true
+    },
+    {
+      "check": "frozen source: tests/test_tirex_intervention_pilot.py",
+      "passed": true
+    },
+    {
+      "check": "discovery lock hash",
+      "passed": true
+    },
+    {
+      "check": "protocol lock hash",
+      "passed": true
+    },
+    {
+      "check": "candidate lock unchanged since independent first observation",
+      "passed": true
+    },
+    {
+      "check": "pinned revision",
+      "passed": true
+    },
+    {
+      "check": "native model 0.2.1",
+      "passed": true
+    },
+    {
+      "check": "zero based token endpoint mapping",
+      "passed": true
+    },
+    {
+      "check": "both augmentation paths disabled",
+      "passed": true
+    },
+    {
+      "check": "installed package available for optional source validation",
+      "passed": true
+    },
+    {
+      "check": "installed source: __init__.py",
+      "passed": true
+    },
+    {
+      "check": "installed source: api_adapter/__init__.py",
+      "passed": true
+    },
+    {
+      "check": "installed source: api_adapter/forecast.py",
+      "passed": true
+    },
+    {
+      "check": "installed source: api_adapter/gluon.py",
+      "passed": true
+    },
+    {
+      "check": "installed source: api_adapter/standard_adapter.py",
+      "passed": true
+    },
+    {
+      "check": "installed source: base.py",
+      "passed": true
+    },
+    {
+      "check": "installed source: demo.py",
+      "passed": true
+    },
+    {
+      "check": "installed source: model/__init__.py",
+      "passed": true
+    },
+    {
+      "check": "installed source: model/component/__init__.py",
+      "passed": true
+    },
+    {
+      "check": "installed source: model/component/attention_block.py",
+      "passed": true
+    },
+    {
+      "check": "installed source: model/component/bi_xlstm.py",
+      "passed": true
+    },
+    {
+      "check": "installed source: model/component/flashrnn_slstm.py",
+      "passed": true
+    },
+    {
+      "check": "installed source: model/component/layernorm.py",
+      "passed": true
+    },
+    {
+      "check": "installed source: model/component/mlp.py",
+      "passed": true
+    },
+    {
+      "check": "installed source: model/component/mlstm_block.py",
+      "passed": true
+    },
+    {
+      "check": "installed source: model/component/patch_tokenizer.py",
+      "passed": true
+    },
+    {
+      "check": "installed source: model/component/postprocessor.py",
+      "passed": true
+    },
+    {
+      "check": "installed source: model/component/residual_block.py",
+      "passed": true
+    },
+    {
+      "check": "installed source: model/component/scaler.py",
+      "passed": true
+    },
+    {
+      "check": "installed source: model/component/variate_mixing_block.py",
+      "passed": true
+    },
+    {
+      "check": "installed source: model/component/xlstm_mixed_config.py",
+      "passed": true
+    },
+    {
+      "check": "installed source: model/tirex2.py",
+      "passed": true
+    },
+    {
+      "check": "installed source: model/types.py",
+      "passed": true
+    },
+    {
+      "check": "installed source: plotting.py",
+      "passed": true
+    },
+    {
+      "check": "discovery shape",
+      "passed": true
+    },
+    {
+      "check": "discovery finite histories",
+      "passed": true
+    },
+    {
+      "check": "discovery exact paired multiset",
+      "passed": true
+    },
+    {
+      "check": "discovery exact terminal value",
+      "passed": true
+    },
+    {
+      "check": "discovery recipient mean",
+      "passed": true
+    },
+    {
+      "check": "discovery donor mean",
+      "passed": true
+    },
+    {
+      "check": "discovery recipient SD",
+      "passed": true
+    },
+    {
+      "check": "discovery donor SD",
+      "passed": true
+    },
+    {
+      "check": "discovery exact IDs",
+      "passed": true
+    },
+    {
+      "check": "discovery unique contexts",
+      "passed": true
+    },
+    {
+      "check": "discovery zero baseline crossings",
+      "passed": true
+    },
+    {
+      "check": "discovery family count persistence",
+      "passed": true
+    },
+    {
+      "check": "discovery family count recency",
+      "passed": true
+    },
+    {
+      "check": "discovery family count recovery",
+      "passed": true
+    },
+    {
+      "check": "validation shape",
+      "passed": true
+    },
+    {
+      "check": "validation finite histories",
+      "passed": true
+    },
+    {
+      "check": "validation exact paired multiset",
+      "passed": true
+    },
+    {
+      "check": "validation exact terminal value",
+      "passed": true
+    },
+    {
+      "check": "validation recipient mean",
+      "passed": true
+    },
+    {
+      "check": "validation donor mean",
+      "passed": true
+    },
+    {
+      "check": "validation recipient SD",
+      "passed": true
+    },
+    {
+      "check": "validation donor SD",
+      "passed": true
+    },
+    {
+      "check": "validation exact IDs",
+      "passed": true
+    },
+    {
+      "check": "validation unique contexts",
+      "passed": true
+    },
+    {
+      "check": "validation zero baseline crossings",
+      "passed": true
+    },
+    {
+      "check": "validation family count persistence",
+      "passed": true
+    },
+    {
+      "check": "validation family count recency",
+      "passed": true
+    },
+    {
+      "check": "validation family count recovery",
+      "passed": true
+    },
+    {
+      "check": "disjoint IDs",
+      "passed": true
+    },
+    {
+      "check": "disjoint contexts",
+      "passed": true
+    },
+    {
+      "check": "gate includes first pair of every family",
+      "passed": true
+    },
+    {
+      "check": "gate qerror unhooked",
+      "passed": true
+    },
+    {
+      "check": "gate forecast threshold unhooked",
+      "passed": true
+    },
+    {
+      "check": "gate qerror self_swap_layer0",
+      "passed": true
+    },
+    {
+      "check": "gate forecast threshold self_swap_layer0",
+      "passed": true
+    },
+    {
+      "check": "gate activation error self_swap_layer0/0",
+      "passed": true
+    },
+    {
+      "check": "gate activation threshold self_swap_layer0/0",
+      "passed": true
+    },
+    {
+      "check": "gate activation error self_swap_layer0/5",
+      "passed": true
+    },
+    {
+      "check": "gate activation threshold self_swap_layer0/5",
+      "passed": true
+    },
+    {
+      "check": "gate activation error self_swap_layer0/11",
+      "passed": true
+    },
+    {
+      "check": "gate activation threshold self_swap_layer0/11",
+      "passed": true
+    },
+    {
+      "check": "gate activation error self_swap_layer0/residual",
+      "passed": true
+    },
+    {
+      "check": "gate activation threshold self_swap_layer0/residual",
+      "passed": true
+    },
+    {
+      "check": "gate qerror self_swap_layer5",
+      "passed": true
+    },
+    {
+      "check": "gate forecast threshold self_swap_layer5",
+      "passed": true
+    },
+    {
+      "check": "gate activation error self_swap_layer5/0",
+      "passed": true
+    },
+    {
+      "check": "gate activation threshold self_swap_layer5/0",
+      "passed": true
+    },
+    {
+      "check": "gate activation error self_swap_layer5/5",
+      "passed": true
+    },
+    {
+      "check": "gate activation threshold self_swap_layer5/5",
+      "passed": true
+    },
+    {
+      "check": "gate activation error self_swap_layer5/11",
+      "passed": true
+    },
+    {
+      "check": "gate activation threshold self_swap_layer5/11",
+      "passed": true
+    },
+    {
+      "check": "gate activation error self_swap_layer5/residual",
+      "passed": true
+    },
+    {
+      "check": "gate activation threshold self_swap_layer5/residual",
+      "passed": true
+    },
+    {
+      "check": "gate qerror self_swap_layer11",
+      "passed": true
+    },
+    {
+      "check": "gate forecast threshold self_swap_layer11",
+      "passed": true
+    },
+    {
+      "check": "gate activation error self_swap_layer11/0",
+      "passed": true
+    },
+    {
+      "check": "gate activation threshold self_swap_layer11/0",
+      "passed": true
+    },
+    {
+      "check": "gate activation error self_swap_layer11/5",
+      "passed": true
+    },
+    {
+      "check": "gate activation threshold self_swap_layer11/5",
+      "passed": true
+    },
+    {
+      "check": "gate activation error self_swap_layer11/11",
+      "passed": true
+    },
+    {
+      "check": "gate activation threshold self_swap_layer11/11",
+      "passed": true
+    },
+    {
+      "check": "gate activation error self_swap_layer11/residual",
+      "passed": true
+    },
+    {
+      "check": "gate activation threshold self_swap_layer11/residual",
+      "passed": true
+    },
+    {
+      "check": "gate qerror batch_reversal",
+      "passed": true
+    },
+    {
+      "check": "gate forecast threshold batch_reversal",
+      "passed": true
+    },
+    {
+      "check": "gate activation error batch_reversal/0",
+      "passed": true
+    },
+    {
+      "check": "gate activation threshold batch_reversal/0",
+      "passed": true
+    },
+    {
+      "check": "gate activation error batch_reversal/5",
+      "passed": true
+    },
+    {
+      "check": "gate activation threshold batch_reversal/5",
+      "passed": true
+    },
+    {
+      "check": "gate activation error batch_reversal/11",
+      "passed": true
+    },
+    {
+      "check": "gate activation threshold batch_reversal/11",
+      "passed": true
+    },
+    {
+      "check": "gate activation error batch_reversal/residual",
+      "passed": true
+    },
+    {
+      "check": "gate activation threshold batch_reversal/residual",
+      "passed": true
+    },
+    {
+      "check": "gate qerror singleton_vs_batch",
+      "passed": true
+    },
+    {
+      "check": "gate forecast threshold singleton_vs_batch",
+      "passed": true
+    },
+    {
+      "check": "gate activation error singleton_vs_batch/0",
+      "passed": true
+    },
+    {
+      "check": "gate activation threshold singleton_vs_batch/0",
+      "passed": true
+    },
+    {
+      "check": "gate activation error singleton_vs_batch/5",
+      "passed": true
+    },
+    {
+      "check": "gate activation threshold singleton_vs_batch/5",
+      "passed": true
+    },
+    {
+      "check": "gate activation error singleton_vs_batch/11",
+      "passed": true
+    },
+    {
+      "check": "gate activation threshold singleton_vs_batch/11",
+      "passed": true
+    },
+    {
+      "check": "gate activation error singleton_vs_batch/residual",
+      "passed": true
+    },
+    {
+      "check": "gate activation threshold singleton_vs_batch/residual",
+      "passed": true
+    },
+    {
+      "check": "gate qerror affine_0",
+      "passed": true
+    },
+    {
+      "check": "gate forecast threshold affine_0",
+      "passed": true
+    },
+    {
+      "check": "gate activation error affine_0/0",
+      "passed": true
+    },
+    {
+      "check": "gate activation threshold affine_0/0",
+      "passed": true
+    },
+    {
+      "check": "gate activation error affine_0/5",
+      "passed": true
+    },
+    {
+      "check": "gate activation threshold affine_0/5",
+      "passed": true
+    },
+    {
+      "check": "gate activation error affine_0/11",
+      "passed": true
+    },
+    {
+      "check": "gate activation threshold affine_0/11",
+      "passed": true
+    },
+    {
+      "check": "gate activation error affine_0/residual",
+      "passed": true
+    },
+    {
+      "check": "gate activation threshold affine_0/residual",
+      "passed": true
+    },
+    {
+      "check": "gate qerror affine_1",
+      "passed": true
+    },
+    {
+      "check": "gate forecast threshold affine_1",
+      "passed": true
+    },
+    {
+      "check": "gate activation error affine_1/0",
+      "passed": true
+    },
+    {
+      "check": "gate activation threshold affine_1/0",
+      "passed": true
+    },
+    {
+      "check": "gate activation error affine_1/5",
+      "passed": true
+    },
+    {
+      "check": "gate activation threshold affine_1/5",
+      "passed": true
+    },
+    {
+      "check": "gate activation error affine_1/11",
+      "passed": true
+    },
+    {
+      "check": "gate activation threshold affine_1/11",
+      "passed": true
+    },
+    {
+      "check": "gate activation error affine_1/residual",
+      "passed": true
+    },
+    {
+      "check": "gate activation threshold affine_1/residual",
+      "passed": true
+    },
+    {
+      "check": "instrumentation passed declaration",
+      "passed": true
+    },
+    {
+      "check": "three candidates",
+      "passed": true
+    },
+    {
+      "check": "winner persistence",
+      "passed": true
+    },
+    {
+      "check": "zero based candidate limits persistence",
+      "passed": true
+    },
+    {
+      "check": "winner effect persistence",
+      "passed": true
+    },
+    {
+      "check": "winner scale persistence",
+      "passed": true
+    },
+    {
+      "check": "activation direction persistence",
+      "passed": true
+    },
+    {
+      "check": "control identities persistence",
+      "passed": true
+    },
+    {
+      "check": "discovery swap ID alignment persistence",
+      "passed": true
+    },
+    {
+      "check": "discovery swap direction mean persistence",
+      "passed": true
+    },
+    {
+      "check": "forecast direction frozen from discovery persistence",
+      "passed": true
+    },
+    {
+      "check": "winner recency",
+      "passed": true
+    },
+    {
+      "check": "zero based candidate limits recency",
+      "passed": true
+    },
+    {
+      "check": "winner effect recency",
+      "passed": true
+    },
+    {
+      "check": "winner scale recency",
+      "passed": true
+    },
+    {
+      "check": "activation direction recency",
+      "passed": true
+    },
+    {
+      "check": "control identities recency",
+      "passed": true
+    },
+    {
+      "check": "discovery swap ID alignment recency",
+      "passed": true
+    },
+    {
+      "check": "discovery swap direction mean recency",
+      "passed": true
+    },
+    {
+      "check": "forecast direction frozen from discovery recency",
+      "passed": true
+    },
+    {
+      "check": "winner recovery",
+      "passed": true
+    },
+    {
+      "check": "zero based candidate limits recovery",
+      "passed": true
+    },
+    {
+      "check": "winner effect recovery",
+      "passed": true
+    },
+    {
+      "check": "winner scale recovery",
+      "passed": true
+    },
+    {
+      "check": "activation direction recovery",
+      "passed": true
+    },
+    {
+      "check": "control identities recovery",
+      "passed": true
+    },
+    {
+      "check": "discovery swap ID alignment recovery",
+      "passed": true
+    },
+    {
+      "check": "discovery swap direction mean recovery",
+      "passed": true
+    },
+    {
+      "check": "forecast direction frozen from discovery recovery",
+      "passed": true
+    },
+    {
+      "check": "recorded execution chronology",
+      "passed": true
+    },
+    {
+      "check": "execution log covers every intervention exactly once",
+      "passed": true
+    },
+    {
+      "check": "execution log counters",
+      "passed": true
+    },
+    {
+      "check": "first validation intervention completed after candidate freeze",
+      "passed": true
+    },
+    {
+      "check": "all intervention completions ordered before finish",
+      "passed": true
+    },
+    {
+      "check": "summary candidate lock hash",
+      "passed": true
+    },
+    {
+      "check": "summary candidate equals lock persistence",
+      "passed": true
+    },
+    {
+      "check": "validation IDs L11 U283",
+      "passed": true
+    },
+    {
+      "check": "validation IDs L11 U766",
+      "passed": true
+    },
+    {
+      "check": "validation IDs L11 U308",
+      "passed": true
+    },
+    {
+      "check": "validation IDs L11 U202",
+      "passed": true
+    },
+    {
+      "check": "validation IDs L11 U978",
+      "passed": true
+    },
+    {
+      "check": "persistence bootstrap count",
+      "passed": true
+    },
+    {
+      "check": "persistence bootstrap seed",
+      "passed": true
+    },
+    {
+      "check": "persistence/influence effects",
+      "passed": true
+    },
+    {
+      "check": "persistence/influence mean",
+      "passed": true
+    },
+    {
+      "check": "persistence/influence successes",
+      "passed": true
+    },
+    {
+      "check": "persistence/influence binomial p",
+      "passed": true
+    },
+    {
+      "check": "persistence/influence bootstrap interval",
+      "passed": true
+    },
+    {
+      "check": "persistence/advantage effects",
+      "passed": true
+    },
+    {
+      "check": "persistence/advantage mean",
+      "passed": true
+    },
+    {
+      "check": "persistence/advantage successes",
+      "passed": true
+    },
+    {
+      "check": "persistence/advantage binomial p",
+      "passed": true
+    },
+    {
+      "check": "persistence/advantage bootstrap interval",
+      "passed": true
+    },
+    {
+      "check": "persistence raw pair count",
+      "passed": true
+    },
+    {
+      "check": "persistence crossing counts",
+      "passed": true
+    },
+    {
+      "check": "persistence recipient shift",
+      "passed": true
+    },
+    {
+      "check": "persistence donor shift",
+      "passed": true
+    },
+    {
+      "check": "persistence absolute median shift",
+      "passed": true
+    },
+    {
+      "check": "persistence native forecast contrast",
+      "passed": true
+    },
+    {
+      "check": "persistence both swap directions",
+      "passed": true
+    },
+    {
+      "check": "persistence control absolute median shift",
+      "passed": true
+    },
+    {
+      "check": "persistence width shifts",
+      "passed": true
+    },
+    {
+      "check": "persistence control width shifts",
+      "passed": true
+    },
+    {
+      "check": "persistence count/direction/floor",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive field inventory persistence/all",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive persistence/all/mean_signed_median_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive persistence/all/mean_abs_median_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive persistence/all/mean_abs_width_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive persistence/all/directional_agreement",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive persistence/all/both_direction_effect",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive persistence/all/near_zero_contrast_count",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive persistence/all/directional_pair_count",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive persistence/all/n_pairs",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive persistence/all/frozen_direction_mean_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive field inventory persistence/short",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive persistence/short/mean_signed_median_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive persistence/short/mean_abs_median_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive persistence/short/mean_abs_width_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive persistence/short/directional_agreement",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive persistence/short/both_direction_effect",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive persistence/short/near_zero_contrast_count",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive persistence/short/directional_pair_count",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive persistence/short/n_pairs",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive persistence/short/frozen_direction_mean_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive field inventory persistence/long",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive persistence/long/mean_signed_median_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive persistence/long/mean_abs_median_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive persistence/long/mean_abs_width_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive persistence/long/directional_agreement",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive persistence/long/both_direction_effect",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive persistence/long/near_zero_contrast_count",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive persistence/long/directional_pair_count",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive persistence/long/n_pairs",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive persistence/long/frozen_direction_mean_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive field inventory recency/all",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recency/all/mean_signed_median_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recency/all/mean_abs_median_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recency/all/mean_abs_width_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recency/all/directional_agreement",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recency/all/both_direction_effect",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recency/all/near_zero_contrast_count",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recency/all/directional_pair_count",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recency/all/n_pairs",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recency/all/frozen_direction_mean_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive field inventory recency/short",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recency/short/mean_signed_median_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recency/short/mean_abs_median_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recency/short/mean_abs_width_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recency/short/directional_agreement",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recency/short/both_direction_effect",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recency/short/near_zero_contrast_count",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recency/short/directional_pair_count",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recency/short/n_pairs",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recency/short/frozen_direction_mean_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive field inventory recency/long",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recency/long/mean_signed_median_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recency/long/mean_abs_median_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recency/long/mean_abs_width_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recency/long/directional_agreement",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recency/long/both_direction_effect",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recency/long/near_zero_contrast_count",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recency/long/directional_pair_count",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recency/long/n_pairs",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recency/long/frozen_direction_mean_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive field inventory recovery/all",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recovery/all/mean_signed_median_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recovery/all/mean_abs_median_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recovery/all/mean_abs_width_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recovery/all/directional_agreement",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recovery/all/both_direction_effect",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recovery/all/near_zero_contrast_count",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recovery/all/directional_pair_count",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recovery/all/n_pairs",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recovery/all/frozen_direction_mean_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive field inventory recovery/short",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recovery/short/mean_signed_median_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recovery/short/mean_abs_median_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recovery/short/mean_abs_width_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recovery/short/directional_agreement",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recovery/short/both_direction_effect",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recovery/short/near_zero_contrast_count",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recovery/short/directional_pair_count",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recovery/short/n_pairs",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recovery/short/frozen_direction_mean_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive field inventory recovery/long",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recovery/long/mean_signed_median_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recovery/long/mean_abs_median_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recovery/long/mean_abs_width_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recovery/long/directional_agreement",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recovery/long/both_direction_effect",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recovery/long/near_zero_contrast_count",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recovery/long/directional_pair_count",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recovery/long/n_pairs",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive recovery/long/frozen_direction_mean_shift",
+      "passed": true
+    },
+    {
+      "check": "persistence descriptive group inventory",
+      "passed": true
+    },
+    {
+      "check": "summary candidate equals lock recency",
+      "passed": true
+    },
+    {
+      "check": "validation IDs L0 U103",
+      "passed": true
+    },
+    {
+      "check": "validation IDs L0 U336",
+      "passed": true
+    },
+    {
+      "check": "validation IDs L0 U454",
+      "passed": true
+    },
+    {
+      "check": "validation IDs L0 U895",
+      "passed": true
+    },
+    {
+      "check": "validation IDs L0 U22",
+      "passed": true
+    },
+    {
+      "check": "recency bootstrap count",
+      "passed": true
+    },
+    {
+      "check": "recency bootstrap seed",
+      "passed": true
+    },
+    {
+      "check": "recency/influence effects",
+      "passed": true
+    },
+    {
+      "check": "recency/influence mean",
+      "passed": true
+    },
+    {
+      "check": "recency/influence successes",
+      "passed": true
+    },
+    {
+      "check": "recency/influence binomial p",
+      "passed": true
+    },
+    {
+      "check": "recency/influence bootstrap interval",
+      "passed": true
+    },
+    {
+      "check": "recency/advantage effects",
+      "passed": true
+    },
+    {
+      "check": "recency/advantage mean",
+      "passed": true
+    },
+    {
+      "check": "recency/advantage successes",
+      "passed": true
+    },
+    {
+      "check": "recency/advantage binomial p",
+      "passed": true
+    },
+    {
+      "check": "recency/advantage bootstrap interval",
+      "passed": true
+    },
+    {
+      "check": "recency raw pair count",
+      "passed": true
+    },
+    {
+      "check": "recency crossing counts",
+      "passed": true
+    },
+    {
+      "check": "recency recipient shift",
+      "passed": true
+    },
+    {
+      "check": "recency donor shift",
+      "passed": true
+    },
+    {
+      "check": "recency absolute median shift",
+      "passed": true
+    },
+    {
+      "check": "recency native forecast contrast",
+      "passed": true
+    },
+    {
+      "check": "recency both swap directions",
+      "passed": true
+    },
+    {
+      "check": "recency control absolute median shift",
+      "passed": true
+    },
+    {
+      "check": "recency width shifts",
+      "passed": true
+    },
+    {
+      "check": "recency control width shifts",
+      "passed": true
+    },
+    {
+      "check": "recency count/direction/floor",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive field inventory persistence/all",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive persistence/all/mean_signed_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive persistence/all/mean_abs_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive persistence/all/mean_abs_width_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive persistence/all/directional_agreement",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive persistence/all/both_direction_effect",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive persistence/all/near_zero_contrast_count",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive persistence/all/directional_pair_count",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive persistence/all/n_pairs",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive persistence/all/frozen_direction_mean_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive field inventory persistence/short",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive persistence/short/mean_signed_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive persistence/short/mean_abs_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive persistence/short/mean_abs_width_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive persistence/short/directional_agreement",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive persistence/short/both_direction_effect",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive persistence/short/near_zero_contrast_count",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive persistence/short/directional_pair_count",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive persistence/short/n_pairs",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive persistence/short/frozen_direction_mean_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive field inventory persistence/long",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive persistence/long/mean_signed_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive persistence/long/mean_abs_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive persistence/long/mean_abs_width_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive persistence/long/directional_agreement",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive persistence/long/both_direction_effect",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive persistence/long/near_zero_contrast_count",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive persistence/long/directional_pair_count",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive persistence/long/n_pairs",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive persistence/long/frozen_direction_mean_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive field inventory recency/all",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recency/all/mean_signed_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recency/all/mean_abs_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recency/all/mean_abs_width_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recency/all/directional_agreement",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recency/all/both_direction_effect",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recency/all/near_zero_contrast_count",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recency/all/directional_pair_count",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recency/all/n_pairs",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recency/all/frozen_direction_mean_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive field inventory recency/short",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recency/short/mean_signed_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recency/short/mean_abs_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recency/short/mean_abs_width_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recency/short/directional_agreement",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recency/short/both_direction_effect",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recency/short/near_zero_contrast_count",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recency/short/directional_pair_count",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recency/short/n_pairs",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recency/short/frozen_direction_mean_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive field inventory recency/long",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recency/long/mean_signed_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recency/long/mean_abs_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recency/long/mean_abs_width_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recency/long/directional_agreement",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recency/long/both_direction_effect",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recency/long/near_zero_contrast_count",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recency/long/directional_pair_count",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recency/long/n_pairs",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recency/long/frozen_direction_mean_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive field inventory recovery/all",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recovery/all/mean_signed_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recovery/all/mean_abs_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recovery/all/mean_abs_width_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recovery/all/directional_agreement",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recovery/all/both_direction_effect",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recovery/all/near_zero_contrast_count",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recovery/all/directional_pair_count",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recovery/all/n_pairs",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recovery/all/frozen_direction_mean_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive field inventory recovery/short",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recovery/short/mean_signed_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recovery/short/mean_abs_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recovery/short/mean_abs_width_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recovery/short/directional_agreement",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recovery/short/both_direction_effect",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recovery/short/near_zero_contrast_count",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recovery/short/directional_pair_count",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recovery/short/n_pairs",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recovery/short/frozen_direction_mean_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive field inventory recovery/long",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recovery/long/mean_signed_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recovery/long/mean_abs_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recovery/long/mean_abs_width_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recovery/long/directional_agreement",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recovery/long/both_direction_effect",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recovery/long/near_zero_contrast_count",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recovery/long/directional_pair_count",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recovery/long/n_pairs",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive recovery/long/frozen_direction_mean_shift",
+      "passed": true
+    },
+    {
+      "check": "recency descriptive group inventory",
+      "passed": true
+    },
+    {
+      "check": "summary candidate equals lock recovery",
+      "passed": true
+    },
+    {
+      "check": "validation IDs L5 U1095",
+      "passed": true
+    },
+    {
+      "check": "validation IDs L5 U317",
+      "passed": true
+    },
+    {
+      "check": "validation IDs L5 U727",
+      "passed": true
+    },
+    {
+      "check": "validation IDs L5 U1347",
+      "passed": true
+    },
+    {
+      "check": "validation IDs L5 U1195",
+      "passed": true
+    },
+    {
+      "check": "recovery bootstrap count",
+      "passed": true
+    },
+    {
+      "check": "recovery bootstrap seed",
+      "passed": true
+    },
+    {
+      "check": "recovery/influence effects",
+      "passed": true
+    },
+    {
+      "check": "recovery/influence mean",
+      "passed": true
+    },
+    {
+      "check": "recovery/influence successes",
+      "passed": true
+    },
+    {
+      "check": "recovery/influence binomial p",
+      "passed": true
+    },
+    {
+      "check": "recovery/influence bootstrap interval",
+      "passed": true
+    },
+    {
+      "check": "recovery/advantage effects",
+      "passed": true
+    },
+    {
+      "check": "recovery/advantage mean",
+      "passed": true
+    },
+    {
+      "check": "recovery/advantage successes",
+      "passed": true
+    },
+    {
+      "check": "recovery/advantage binomial p",
+      "passed": true
+    },
+    {
+      "check": "recovery/advantage bootstrap interval",
+      "passed": true
+    },
+    {
+      "check": "recovery raw pair count",
+      "passed": true
+    },
+    {
+      "check": "recovery crossing counts",
+      "passed": true
+    },
+    {
+      "check": "recovery recipient shift",
+      "passed": true
+    },
+    {
+      "check": "recovery donor shift",
+      "passed": true
+    },
+    {
+      "check": "recovery absolute median shift",
+      "passed": true
+    },
+    {
+      "check": "recovery native forecast contrast",
+      "passed": true
+    },
+    {
+      "check": "recovery both swap directions",
+      "passed": true
+    },
+    {
+      "check": "recovery control absolute median shift",
+      "passed": true
+    },
+    {
+      "check": "recovery width shifts",
+      "passed": true
+    },
+    {
+      "check": "recovery control width shifts",
+      "passed": true
+    },
+    {
+      "check": "recovery count/direction/floor",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive field inventory persistence/all",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive persistence/all/mean_signed_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive persistence/all/mean_abs_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive persistence/all/mean_abs_width_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive persistence/all/directional_agreement",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive persistence/all/both_direction_effect",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive persistence/all/near_zero_contrast_count",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive persistence/all/directional_pair_count",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive persistence/all/n_pairs",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive persistence/all/frozen_direction_mean_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive field inventory persistence/short",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive persistence/short/mean_signed_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive persistence/short/mean_abs_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive persistence/short/mean_abs_width_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive persistence/short/directional_agreement",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive persistence/short/both_direction_effect",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive persistence/short/near_zero_contrast_count",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive persistence/short/directional_pair_count",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive persistence/short/n_pairs",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive persistence/short/frozen_direction_mean_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive field inventory persistence/long",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive persistence/long/mean_signed_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive persistence/long/mean_abs_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive persistence/long/mean_abs_width_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive persistence/long/directional_agreement",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive persistence/long/both_direction_effect",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive persistence/long/near_zero_contrast_count",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive persistence/long/directional_pair_count",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive persistence/long/n_pairs",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive persistence/long/frozen_direction_mean_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive field inventory recency/all",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recency/all/mean_signed_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recency/all/mean_abs_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recency/all/mean_abs_width_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recency/all/directional_agreement",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recency/all/both_direction_effect",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recency/all/near_zero_contrast_count",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recency/all/directional_pair_count",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recency/all/n_pairs",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recency/all/frozen_direction_mean_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive field inventory recency/short",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recency/short/mean_signed_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recency/short/mean_abs_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recency/short/mean_abs_width_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recency/short/directional_agreement",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recency/short/both_direction_effect",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recency/short/near_zero_contrast_count",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recency/short/directional_pair_count",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recency/short/n_pairs",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recency/short/frozen_direction_mean_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive field inventory recency/long",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recency/long/mean_signed_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recency/long/mean_abs_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recency/long/mean_abs_width_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recency/long/directional_agreement",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recency/long/both_direction_effect",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recency/long/near_zero_contrast_count",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recency/long/directional_pair_count",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recency/long/n_pairs",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recency/long/frozen_direction_mean_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive field inventory recovery/all",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recovery/all/mean_signed_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recovery/all/mean_abs_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recovery/all/mean_abs_width_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recovery/all/directional_agreement",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recovery/all/both_direction_effect",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recovery/all/near_zero_contrast_count",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recovery/all/directional_pair_count",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recovery/all/n_pairs",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recovery/all/frozen_direction_mean_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive field inventory recovery/short",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recovery/short/mean_signed_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recovery/short/mean_abs_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recovery/short/mean_abs_width_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recovery/short/directional_agreement",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recovery/short/both_direction_effect",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recovery/short/near_zero_contrast_count",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recovery/short/directional_pair_count",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recovery/short/n_pairs",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recovery/short/frozen_direction_mean_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive field inventory recovery/long",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recovery/long/mean_signed_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recovery/long/mean_abs_median_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recovery/long/mean_abs_width_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recovery/long/directional_agreement",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recovery/long/both_direction_effect",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recovery/long/near_zero_contrast_count",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recovery/long/directional_pair_count",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recovery/long/n_pairs",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive recovery/long/frozen_direction_mean_shift",
+      "passed": true
+    },
+    {
+      "check": "recovery descriptive group inventory",
+      "passed": true
+    },
+    {
+      "check": "persistence/influence Holm6",
+      "passed": true
+    },
+    {
+      "check": "persistence/influence final pass",
+      "passed": true
+    },
+    {
+      "check": "persistence/advantage Holm6",
+      "passed": true
+    },
+    {
+      "check": "persistence/advantage final pass",
+      "passed": true
+    },
+    {
+      "check": "recency/influence Holm6",
+      "passed": true
+    },
+    {
+      "check": "recency/influence final pass",
+      "passed": true
+    },
+    {
+      "check": "recency/advantage Holm6",
+      "passed": true
+    },
+    {
+      "check": "recency/advantage final pass",
+      "passed": true
+    },
+    {
+      "check": "recovery/influence Holm6",
+      "passed": true
+    },
+    {
+      "check": "recovery/influence final pass",
+      "passed": true
+    },
+    {
+      "check": "recovery/advantage Holm6",
+      "passed": true
+    },
+    {
+      "check": "recovery/advantage final pass",
+      "passed": true
+    },
+    {
+      "check": "run manifest: discovery_swap_L0_U103.npz",
+      "passed": true
+    },
+    {
+      "check": "run manifest: discovery_swap_L5_U1095.npz",
+      "passed": true
+    },
+    {
+      "check": "run manifest: summary.json",
+      "passed": true
+    },
+    {
+      "check": "run manifest: validation_swap_L5_U1347.npz",
+      "passed": true
+    },
+    {
+      "check": "run manifest: validation_swap_L5_U727.npz",
+      "passed": true
+    },
+    {
+      "check": "run manifest: validation_swap_L0_U895.npz",
+      "passed": true
+    },
+    {
+      "check": "run manifest: model_metadata.json",
+      "passed": true
+    },
+    {
+      "check": "run manifest: validation_swap_L0_U103.npz",
+      "passed": true
+    },
+    {
+      "check": "run manifest: validation_swap_L5_U1195.npz",
+      "passed": true
+    },
+    {
+      "check": "run manifest: pre_execution.json",
+      "passed": true
+    },
+    {
+      "check": "run manifest: validation_swap_L0_U22.npz",
+      "passed": true
+    },
+    {
+      "check": "run manifest: validation_swap_L11_U978.npz",
+      "passed": true
+    },
+    {
+      "check": "run manifest: validation_swap_L5_U1095.npz",
+      "passed": true
+    },
+    {
+      "check": "run manifest: validation_swap_L11_U766.npz",
+      "passed": true
+    },
+    {
+      "check": "run manifest: validation_swap_L11_U202.npz",
+      "passed": true
+    },
+    {
+      "check": "run manifest: instrumentation.json",
+      "passed": true
+    },
+    {
+      "check": "run manifest: discovery.npz",
+      "passed": true
+    },
+    {
+      "check": "run manifest: discovery_swap_L11_U283.npz",
+      "passed": true
+    },
+    {
+      "check": "run manifest: candidate_lock.json",
+      "passed": true
+    },
+    {
+      "check": "run manifest: instrumentation.npz",
+      "passed": true
+    },
+    {
+      "check": "run manifest: protocol.json",
+      "passed": true
+    },
+    {
+      "check": "run manifest: progress.json",
+      "passed": true
+    },
+    {
+      "check": "run manifest: validation_swap_L0_U454.npz",
+      "passed": true
+    },
+    {
+      "check": "run manifest: validation.npz",
+      "passed": true
+    },
+    {
+      "check": "run manifest: weight_norms.npz",
+      "passed": true
+    },
+    {
+      "check": "run manifest: validation_swap_L5_U317.npz",
+      "passed": true
+    },
+    {
+      "check": "run manifest: validation_swap_L0_U336.npz",
+      "passed": true
+    },
+    {
+      "check": "run manifest: validation_swap_L11_U283.npz",
+      "passed": true
+    },
+    {
+      "check": "run manifest: validation_swap_L11_U308.npz",
+      "passed": true
+    }
+  ],
+  "execution_log_sha256": "27f299c76bdc8017e57711848351ae47908aae50b6b006492825f62fff0ac848",
+  "primary": [
+    {
+      "family": "persistence",
+      "layer": 11,
+      "unit": 283,
+      "influence_successes": 0,
+      "advantage_successes": 0,
+      "mean_influence": 0.00018157561620076498,
+      "mean_advantage": -0.0013741130630175273,
+      "mean_abs_median_shift": 0.00018157561620076498,
+      "mean_abs_width_shift": 8.768836657206218e-05
+    },
+    {
+      "family": "recency",
+      "layer": 0,
+      "unit": 103,
+      "influence_successes": 0,
+      "advantage_successes": 0,
+      "mean_influence": 2.165635426839193e-06,
+      "mean_advantage": 6.4621369043986005e-06,
+      "mean_abs_median_shift": 9.397665659586588e-06,
+      "mean_abs_width_shift": 3.47296396891276e-05
+    },
+    {
+      "family": "recovery",
+      "layer": 5,
+      "unit": 1095,
+      "influence_successes": 5,
+      "advantage_successes": 4,
+      "mean_influence": 0.000556031862894694,
+      "mean_advantage": 0.0005616694688796997,
+      "mean_abs_median_shift": 0.0013936758041381836,
+      "mean_abs_width_shift": 0.004912147919336955
+    }
+  ],
+  "raw_pvalues": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.9992280602455139,
+    0.9998614192008972
+  ],
+  "holm6_pvalues": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ]
+}

@@ -1,0 +1,1823 @@
+{
+  "timestamp_before_validation": "2026-10-22T12:53:48.362787+00:00",
+  "groups": [
+    {
+      "group_id": "persistence_k4",
+      "family": "persistence",
+      "layer": 11,
+      "size": 4,
+      "units": [
+        283,
+        790,
+        169,
+        1231
+      ],
+      "control_groups": [
+        [
+          1209,
+          1096,
+          614,
+          64
+        ],
+        [
+          4,
+          448,
+          1019,
+          549
+        ],
+        [
+          1361,
+          660,
+          468,
+          254
+        ],
+        [
+          800,
+          655,
+          1292,
+          1011
+        ]
+      ],
+      "members": [
+        {
+          "unit": 283,
+          "activation_scale": 0.13174120913895881,
+          "outgoing_norm": 3.661098647323109,
+          "rms_difference": 0.4299090643533394,
+          "standardized_effect": -3.243584729456491,
+          "orientation": -1
+        },
+        {
+          "unit": 790,
+          "activation_scale": 0.002055899252569954,
+          "outgoing_norm": 4.113185210645343,
+          "rms_difference": 0.006644218342580162,
+          "standardized_effect": -3.195206859597416,
+          "orientation": -1
+        },
+        {
+          "unit": 169,
+          "activation_scale": 0.8113645846362048,
+          "outgoing_norm": 3.3483115651974167,
+          "rms_difference": 2.5669535300261144,
+          "standardized_effect": -3.1459761368976116,
+          "orientation": -1
+        },
+        {
+          "unit": 1231,
+          "activation_scale": 0.8647000051023521,
+          "outgoing_norm": 3.429408469183301,
+          "rms_difference": 2.733963976147865,
+          "standardized_effect": -3.138086463056417,
+          "orientation": -1
+        }
+      ],
+      "control_matching": [
+        [
+          {
+            "candidate_unit": 283,
+            "control_unit": 1209,
+            "sd_ratio": 1.1262336980946028,
+            "norm_ratio": 1.0243186272250522,
+            "rms_difference_ratio": 0.899085430670787,
+            "squared_log_cost": 0.02602567020204155
+          },
+          {
+            "candidate_unit": 790,
+            "control_unit": 1096,
+            "sd_ratio": 1.3380543677179233,
+            "norm_ratio": 0.9894943863747011,
+            "rms_difference_ratio": 1.009928553792261,
+            "squared_log_cost": 0.08501624984722292
+          },
+          {
+            "candidate_unit": 169,
+            "control_unit": 614,
+            "sd_ratio": 1.012960134417458,
+            "norm_ratio": 1.0282456716366244,
+            "rms_difference_ratio": 0.9180677282386138,
+            "squared_log_cost": 0.008249199304377288
+          },
+          {
+            "candidate_unit": 1231,
+            "control_unit": 64,
+            "sd_ratio": 1.057553669360166,
+            "norm_ratio": 0.9889125736548274,
+            "rms_difference_ratio": 1.0195217385395219,
+            "squared_log_cost": 0.00362943788740951
+          }
+        ],
+        [
+          {
+            "candidate_unit": 283,
+            "control_unit": 4,
+            "sd_ratio": 1.0566913729838694,
+            "norm_ratio": 0.8836123738786227,
+            "rms_difference_ratio": 0.8861817366177259,
+            "squared_log_cost": 0.03295218100618686
+          },
+          {
+            "candidate_unit": 790,
+            "control_unit": 448,
+            "sd_ratio": 1.5812681882745432,
+            "norm_ratio": 0.7307501918089331,
+            "rms_difference_ratio": 1.0067405750468987,
+            "squared_log_cost": 0.3084146844562527
+          },
+          {
+            "candidate_unit": 169,
+            "control_unit": 1019,
+            "sd_ratio": 1.11162908329979,
+            "norm_ratio": 0.9206321969461783,
+            "rms_difference_ratio": 0.9969174361711963,
+            "squared_log_cost": 0.01804720619611988
+          },
+          {
+            "candidate_unit": 1231,
+            "control_unit": 549,
+            "sd_ratio": 1.0652511162453902,
+            "norm_ratio": 0.9022099917131865,
+            "rms_difference_ratio": 0.9413611799039701,
+            "squared_log_cost": 0.018237217253314748
+          }
+        ],
+        [
+          {
+            "candidate_unit": 283,
+            "control_unit": 1361,
+            "sd_ratio": 1.1415446028272511,
+            "norm_ratio": 0.9603127788059256,
+            "rms_difference_ratio": 0.8663878641626223,
+            "squared_log_cost": 0.03973504743788947
+          },
+          {
+            "candidate_unit": 790,
+            "control_unit": 660,
+            "sd_ratio": 1.5704024785136173,
+            "norm_ratio": 0.6124159480456541,
+            "rms_difference_ratio": 1.2808508486732377,
+            "squared_log_cost": 0.505405761327121
+          },
+          {
+            "candidate_unit": 169,
+            "control_unit": 468,
+            "sd_ratio": 0.9665749569473908,
+            "norm_ratio": 0.9463741234506711,
+            "rms_difference_ratio": 0.865303595862566,
+            "squared_log_cost": 0.025124488751029756
+          },
+          {
+            "candidate_unit": 1231,
+            "control_unit": 254,
+            "sd_ratio": 1.1622041831425185,
+            "norm_ratio": 0.9616468389637918,
+            "rms_difference_ratio": 0.9170228247265444,
+            "squared_log_cost": 0.03162857520127402
+          }
+        ],
+        [
+          {
+            "candidate_unit": 283,
+            "control_unit": 800,
+            "sd_ratio": 1.1022201094469193,
+            "norm_ratio": 0.8579999276208247,
+            "rms_difference_ratio": 0.8992613604214902,
+            "squared_log_cost": 0.04420226741472427
+          },
+          {
+            "candidate_unit": 790,
+            "control_unit": 655,
+            "sd_ratio": 2.0667571264623836,
+            "norm_ratio": 0.7330361127305685,
+            "rms_difference_ratio": 1.0707899031838946,
+            "squared_log_cost": 0.6281738854918992
+          },
+          {
+            "candidate_unit": 169,
+            "control_unit": 1292,
+            "sd_ratio": 0.9398681868702371,
+            "norm_ratio": 1.047398908372493,
+            "rms_difference_ratio": 0.8486303332520725,
+            "squared_log_cost": 0.03292972554141123
+          },
+          {
+            "candidate_unit": 1231,
+            "control_unit": 1011,
+            "sd_ratio": 1.1915683944278592,
+            "norm_ratio": 1.0980033905553217,
+            "rms_difference_ratio": 0.9255047990853227,
+            "squared_log_cost": 0.04545397212981753
+          }
+        ]
+      ],
+      "forecast_direction": -1,
+      "discovery_mean_bidirectional_shift": -0.00021756688753763834
+    },
+    {
+      "group_id": "persistence_k8",
+      "family": "persistence",
+      "layer": 11,
+      "size": 8,
+      "units": [
+        283,
+        790,
+        169,
+        1231,
+        609,
+        865,
+        581,
+        926
+      ],
+      "control_groups": [
+        [
+          1209,
+          1096,
+          614,
+          64,
+          158,
+          1351,
+          380,
+          187
+        ],
+        [
+          4,
+          448,
+          1019,
+          549,
+          847,
+          988,
+          1337,
+          850
+        ],
+        [
+          1361,
+          660,
+          468,
+          254,
+          1343,
+          478,
+          945,
+          329
+        ],
+        [
+          800,
+          655,
+          1292,
+          1011,
+          831,
+          334,
+          1144,
+          434
+        ]
+      ],
+      "members": [
+        {
+          "unit": 283,
+          "activation_scale": 0.13174120913895881,
+          "outgoing_norm": 3.661098647323109,
+          "rms_difference": 0.4299090643533394,
+          "standardized_effect": -3.243584729456491,
+          "orientation": -1
+        },
+        {
+          "unit": 790,
+          "activation_scale": 0.002055899252569954,
+          "outgoing_norm": 4.113185210645343,
+          "rms_difference": 0.006644218342580162,
+          "standardized_effect": -3.195206859597416,
+          "orientation": -1
+        },
+        {
+          "unit": 169,
+          "activation_scale": 0.8113645846362048,
+          "outgoing_norm": 3.3483115651974167,
+          "rms_difference": 2.5669535300261144,
+          "standardized_effect": -3.1459761368976116,
+          "orientation": -1
+        },
+        {
+          "unit": 1231,
+          "activation_scale": 0.8647000051023521,
+          "outgoing_norm": 3.429408469183301,
+          "rms_difference": 2.733963976147865,
+          "standardized_effect": -3.138086463056417,
+          "orientation": -1
+        },
+        {
+          "unit": 609,
+          "activation_scale": 0.8534850192595024,
+          "outgoing_norm": 3.505759101342616,
+          "rms_difference": 2.654895555412073,
+          "standardized_effect": 3.095372291864386,
+          "orientation": 1
+        },
+        {
+          "unit": 865,
+          "activation_scale": 0.05165397343194767,
+          "outgoing_norm": 3.1937086667547194,
+          "rms_difference": 0.1596780417832758,
+          "standardized_effect": 3.0550010919032986,
+          "orientation": 1
+        },
+        {
+          "unit": 581,
+          "activation_scale": 0.6764019590765769,
+          "outgoing_norm": 2.8998480536882494,
+          "rms_difference": 2.0737362840788176,
+          "standardized_effect": 3.051108424561728,
+          "orientation": 1
+        },
+        {
+          "unit": 926,
+          "activation_scale": 0.824181139021926,
+          "outgoing_norm": 3.4615557900728295,
+          "rms_difference": 2.522290093124481,
+          "standardized_effect": 3.037949727068128,
+          "orientation": 1
+        }
+      ],
+      "control_matching": [
+        [
+          {
+            "candidate_unit": 283,
+            "control_unit": 1209,
+            "sd_ratio": 1.1262336980946028,
+            "norm_ratio": 1.0243186272250522,
+            "rms_difference_ratio": 0.899085430670787,
+            "squared_log_cost": 0.02602567020204155
+          },
+          {
+            "candidate_unit": 790,
+            "control_unit": 1096,
+            "sd_ratio": 1.3380543677179233,
+            "norm_ratio": 0.9894943863747011,
+            "rms_difference_ratio": 1.009928553792261,
+            "squared_log_cost": 0.08501624984722292
+          },
+          {
+            "candidate_unit": 169,
+            "control_unit": 614,
+            "sd_ratio": 1.012960134417458,
+            "norm_ratio": 1.0282456716366244,
+            "rms_difference_ratio": 0.9180677282386138,
+            "squared_log_cost": 0.008249199304377288
+          },
+          {
+            "candidate_unit": 1231,
+            "control_unit": 64,
+            "sd_ratio": 1.057553669360166,
+            "norm_ratio": 0.9889125736548274,
+            "rms_difference_ratio": 1.0195217385395219,
+            "squared_log_cost": 0.00362943788740951
+          },
+          {
+            "candidate_unit": 609,
+            "control_unit": 158,
+            "sd_ratio": 1.0803071046803456,
+            "norm_ratio": 1.0150092181535681,
+            "rms_difference_ratio": 0.9781167038685743,
+            "squared_log_cost": 0.006678359034902427
+          },
+          {
+            "candidate_unit": 865,
+            "control_unit": 1351,
+            "sd_ratio": 0.9546488908794636,
+            "norm_ratio": 1.0757168101905925,
+            "rms_difference_ratio": 0.8618313365783073,
+            "squared_log_cost": 0.029591588309405552
+          },
+          {
+            "candidate_unit": 581,
+            "control_unit": 380,
+            "sd_ratio": 1.116627010392604,
+            "norm_ratio": 0.9779256317764183,
+            "rms_difference_ratio": 0.9400397789949,
+            "squared_log_cost": 0.016490444025429367
+          },
+          {
+            "candidate_unit": 926,
+            "control_unit": 187,
+            "sd_ratio": 1.0142133463221779,
+            "norm_ratio": 1.0040455421455092,
+            "rms_difference_ratio": 0.9058886582063111,
+            "squared_log_cost": 0.009984608296624335
+          }
+        ],
+        [
+          {
+            "candidate_unit": 283,
+            "control_unit": 4,
+            "sd_ratio": 1.0566913729838694,
+            "norm_ratio": 0.8836123738786227,
+            "rms_difference_ratio": 0.8861817366177259,
+            "squared_log_cost": 0.03295218100618686
+          },
+          {
+            "candidate_unit": 790,
+            "control_unit": 448,
+            "sd_ratio": 1.5812681882745432,
+            "norm_ratio": 0.7307501918089331,
+            "rms_difference_ratio": 1.0067405750468987,
+            "squared_log_cost": 0.3084146844562527
+          },
+          {
+            "candidate_unit": 169,
+            "control_unit": 1019,
+            "sd_ratio": 1.11162908329979,
+            "norm_ratio": 0.9206321969461783,
+            "rms_difference_ratio": 0.9969174361711963,
+            "squared_log_cost": 0.01804720619611988
+          },
+          {
+            "candidate_unit": 1231,
+            "control_unit": 549,
+            "sd_ratio": 1.0652511162453902,
+            "norm_ratio": 0.9022099917131865,
+            "rms_difference_ratio": 0.9413611799039701,
+            "squared_log_cost": 0.018237217253314748
+          },
+          {
+            "candidate_unit": 609,
+            "control_unit": 847,
+            "sd_ratio": 0.9766372735507659,
+            "norm_ratio": 1.1068158030652753,
+            "rms_difference_ratio": 0.9547777326916478,
+            "squared_log_cost": 0.01300004261666608
+          },
+          {
+            "candidate_unit": 865,
+            "control_unit": 988,
+            "sd_ratio": 1.0854253509090328,
+            "norm_ratio": 1.146913117003369,
+            "rms_difference_ratio": 0.8666515782296795,
+            "squared_log_cost": 0.04599153861329461
+          },
+          {
+            "candidate_unit": 581,
+            "control_unit": 1337,
+            "sd_ratio": 1.15686712739496,
+            "norm_ratio": 1.0546395691161174,
+            "rms_difference_ratio": 0.9967239508404531,
+            "squared_log_cost": 0.0240739444585051
+          },
+          {
+            "candidate_unit": 926,
+            "control_unit": 850,
+            "sd_ratio": 0.9749369326401064,
+            "norm_ratio": 1.064875628516743,
+            "rms_difference_ratio": 0.8726378935609174,
+            "squared_log_cost": 0.023155265036253647
+          }
+        ],
+        [
+          {
+            "candidate_unit": 283,
+            "control_unit": 1361,
+            "sd_ratio": 1.1415446028272511,
+            "norm_ratio": 0.9603127788059256,
+            "rms_difference_ratio": 0.8663878641626223,
+            "squared_log_cost": 0.03973504743788947
+          },
+          {
+            "candidate_unit": 790,
+            "control_unit": 660,
+            "sd_ratio": 1.5704024785136173,
+            "norm_ratio": 0.6124159480456541,
+            "rms_difference_ratio": 1.2808508486732377,
+            "squared_log_cost": 0.505405761327121
+          },
+          {
+            "candidate_unit": 169,
+            "control_unit": 468,
+            "sd_ratio": 0.9665749569473908,
+            "norm_ratio": 0.9463741234506711,
+            "rms_difference_ratio": 0.865303595862566,
+            "squared_log_cost": 0.025124488751029756
+          },
+          {
+            "candidate_unit": 1231,
+            "control_unit": 254,
+            "sd_ratio": 1.1622041831425185,
+            "norm_ratio": 0.9616468389637918,
+            "rms_difference_ratio": 0.9170228247265444,
+            "squared_log_cost": 0.03162857520127402
+          },
+          {
+            "candidate_unit": 609,
+            "control_unit": 1343,
+            "sd_ratio": 1.1332178570921703,
+            "norm_ratio": 1.0149356485105874,
+            "rms_difference_ratio": 0.8904170832603281,
+            "squared_log_cost": 0.029331254617978544
+          },
+          {
+            "candidate_unit": 865,
+            "control_unit": 478,
+            "sd_ratio": 1.101452172462231,
+            "norm_ratio": 0.9640151343557611,
+            "rms_difference_ratio": 0.8249730187543659,
+            "squared_log_cost": 0.04769987970419364
+          },
+          {
+            "candidate_unit": 581,
+            "control_unit": 945,
+            "sd_ratio": 0.9263507537753495,
+            "norm_ratio": 1.0491038605335044,
+            "rms_difference_ratio": 0.8561246282153248,
+            "squared_log_cost": 0.03228080317743488
+          },
+          {
+            "candidate_unit": 926,
+            "control_unit": 329,
+            "sd_ratio": 0.9549467933447694,
+            "norm_ratio": 1.0367954226357827,
+            "rms_difference_ratio": 0.8605352726933605,
+            "squared_log_cost": 0.02599113193454781
+          }
+        ],
+        [
+          {
+            "candidate_unit": 283,
+            "control_unit": 800,
+            "sd_ratio": 1.1022201094469193,
+            "norm_ratio": 0.8579999276208247,
+            "rms_difference_ratio": 0.8992613604214902,
+            "squared_log_cost": 0.04420226741472427
+          },
+          {
+            "candidate_unit": 790,
+            "control_unit": 655,
+            "sd_ratio": 2.0667571264623836,
+            "norm_ratio": 0.7330361127305685,
+            "rms_difference_ratio": 1.0707899031838946,
+            "squared_log_cost": 0.6281738854918992
+          },
+          {
+            "candidate_unit": 169,
+            "control_unit": 1292,
+            "sd_ratio": 0.9398681868702371,
+            "norm_ratio": 1.047398908372493,
+            "rms_difference_ratio": 0.8486303332520725,
+            "squared_log_cost": 0.03292972554141123
+          },
+          {
+            "candidate_unit": 1231,
+            "control_unit": 1011,
+            "sd_ratio": 1.1915683944278592,
+            "norm_ratio": 1.0980033905553217,
+            "rms_difference_ratio": 0.9255047990853227,
+            "squared_log_cost": 0.04545397212981753
+          },
+          {
+            "candidate_unit": 609,
+            "control_unit": 831,
+            "sd_ratio": 1.1477457791494574,
+            "norm_ratio": 0.8990563415974678,
+            "rms_difference_ratio": 0.8509900236911083,
+            "squared_log_cost": 0.05634718509608775
+          },
+          {
+            "candidate_unit": 865,
+            "control_unit": 334,
+            "sd_ratio": 1.0762884523705532,
+            "norm_ratio": 1.0424394615236274,
+            "rms_difference_ratio": 0.8035205046060485,
+            "squared_log_cost": 0.05498519259545237
+          },
+          {
+            "candidate_unit": 581,
+            "control_unit": 1144,
+            "sd_ratio": 0.9202501876637598,
+            "norm_ratio": 1.065318803505064,
+            "rms_difference_ratio": 0.8629625275315296,
+            "squared_log_cost": 0.03263288088443844
+          },
+          {
+            "candidate_unit": 926,
+            "control_unit": 434,
+            "sd_ratio": 1.034556909893852,
+            "norm_ratio": 1.0722471387036545,
+            "rms_difference_ratio": 0.8254839129996557,
+            "squared_log_cost": 0.04280183946223402
+          }
+        ]
+      ],
+      "forecast_direction": 1,
+      "discovery_mean_bidirectional_shift": 0.0014313956101735432
+    },
+    {
+      "group_id": "recency_k4",
+      "family": "recency",
+      "layer": 0,
+      "size": 4,
+      "units": [
+        666,
+        495,
+        366,
+        943
+      ],
+      "control_groups": [
+        [
+          1301,
+          317,
+          545,
+          708
+        ],
+        [
+          515,
+          338,
+          320,
+          1288
+        ],
+        [
+          325,
+          872,
+          571,
+          619
+        ],
+        [
+          838,
+          636,
+          132,
+          833
+        ]
+      ],
+      "members": [
+        {
+          "unit": 666,
+          "activation_scale": 0.1196667166514977,
+          "outgoing_norm": 2.6980966586419974,
+          "rms_difference": 0.3736728811086435,
+          "standardized_effect": 3.120149207193139,
+          "orientation": 1
+        },
+        {
+          "unit": 495,
+          "activation_scale": 0.029940120503446594,
+          "outgoing_norm": 2.1998455560484977,
+          "rms_difference": 0.0949246792845249,
+          "standardized_effect": 3.0132899631846732,
+          "orientation": 1
+        },
+        {
+          "unit": 366,
+          "activation_scale": 0.055100221634393494,
+          "outgoing_norm": 2.5217996031479126,
+          "rms_difference": 0.16588434257702947,
+          "standardized_effect": 2.992695042698682,
+          "orientation": 1
+        },
+        {
+          "unit": 943,
+          "activation_scale": 0.0006065670583704465,
+          "outgoing_norm": 1.214250674269044,
+          "rms_difference": 0.001814983802198077,
+          "standardized_effect": 2.9716546185821637,
+          "orientation": 1
+        }
+      ],
+      "control_matching": [
+        [
+          {
+            "candidate_unit": 666,
+            "control_unit": 1301,
+            "sd_ratio": 1.1774944648207557,
+            "norm_ratio": 0.9658488724889084,
+            "rms_difference_ratio": 0.9841532870669316,
+            "squared_log_cost": 0.02815848820556306
+          },
+          {
+            "candidate_unit": 495,
+            "control_unit": 317,
+            "sd_ratio": 1.0894457933604662,
+            "norm_ratio": 1.2220804168529988,
+            "rms_difference_ratio": 0.8820033382948116,
+            "squared_log_cost": 0.06332654480873498
+          },
+          {
+            "candidate_unit": 366,
+            "control_unit": 545,
+            "sd_ratio": 1.0829654556117618,
+            "norm_ratio": 0.945405729072618,
+            "rms_difference_ratio": 0.9694950299418884,
+            "squared_log_cost": 0.010464158753113975
+          },
+          {
+            "candidate_unit": 943,
+            "control_unit": 708,
+            "sd_ratio": 1.0752375835743089,
+            "norm_ratio": 1.0196814210489862,
+            "rms_difference_ratio": 0.8247079877046744,
+            "squared_log_cost": 0.04278543620803533
+          }
+        ],
+        [
+          {
+            "candidate_unit": 666,
+            "control_unit": 515,
+            "sd_ratio": 1.1604234586574809,
+            "norm_ratio": 1.0258198392592441,
+            "rms_difference_ratio": 0.9189447307101596,
+            "squared_log_cost": 0.029932024383638067
+          },
+          {
+            "candidate_unit": 495,
+            "control_unit": 338,
+            "sd_ratio": 1.1982219723775984,
+            "norm_ratio": 1.1959806680730203,
+            "rms_difference_ratio": 0.9655959219318093,
+            "squared_log_cost": 0.0659573536118513
+          },
+          {
+            "candidate_unit": 366,
+            "control_unit": 320,
+            "sd_ratio": 1.211628893374975,
+            "norm_ratio": 1.0757047289420305,
+            "rms_difference_ratio": 0.9961539994244423,
+            "squared_log_cost": 0.04219115633718516
+          },
+          {
+            "candidate_unit": 943,
+            "control_unit": 1288,
+            "sd_ratio": 1.240261232905844,
+            "norm_ratio": 1.1280760014938416,
+            "rms_difference_ratio": 0.8653394946812452,
+            "squared_log_cost": 0.08180589827876031
+          }
+        ],
+        [
+          {
+            "candidate_unit": 666,
+            "control_unit": 325,
+            "sd_ratio": 1.2161418698419892,
+            "norm_ratio": 1.0131322876277797,
+            "rms_difference_ratio": 1.0111596597366708,
+            "squared_log_cost": 0.03858539248809536
+          },
+          {
+            "candidate_unit": 495,
+            "control_unit": 872,
+            "sd_ratio": 1.020079231064854,
+            "norm_ratio": 1.1728579092734002,
+            "rms_difference_ratio": 0.7379528230531811,
+            "squared_log_cost": 0.11815768077086718
+          },
+          {
+            "candidate_unit": 366,
+            "control_unit": 571,
+            "sd_ratio": 0.956566795126636,
+            "norm_ratio": 1.0593116010996233,
+            "rms_difference_ratio": 0.7611943128171794,
+            "squared_log_cost": 0.07974794295307631
+          },
+          {
+            "candidate_unit": 943,
+            "control_unit": 619,
+            "sd_ratio": 1.2675014160210996,
+            "norm_ratio": 1.1855689019066327,
+            "rms_difference_ratio": 1.1228398998255862,
+            "squared_log_cost": 0.0985911299190326
+          }
+        ],
+        [
+          {
+            "candidate_unit": 666,
+            "control_unit": 838,
+            "sd_ratio": 0.9460785819154199,
+            "norm_ratio": 0.963450401130361,
+            "rms_difference_ratio": 0.7886963072488276,
+            "squared_log_cost": 0.060805224222895686
+          },
+          {
+            "candidate_unit": 495,
+            "control_unit": 636,
+            "sd_ratio": 1.3440331611977128,
+            "norm_ratio": 1.1484832265506375,
+            "rms_difference_ratio": 1.1187863187004823,
+            "squared_log_cost": 0.11918869861318415
+          },
+          {
+            "candidate_unit": 366,
+            "control_unit": 132,
+            "sd_ratio": 1.3443141389279216,
+            "norm_ratio": 0.9311994424912343,
+            "rms_difference_ratio": 1.098580594750365,
+            "squared_log_cost": 0.10146797470602395
+          },
+          {
+            "candidate_unit": 943,
+            "control_unit": 833,
+            "sd_ratio": 1.3266966448715292,
+            "norm_ratio": 1.2112419390078484,
+            "rms_difference_ratio": 0.9188929629114873,
+            "squared_log_cost": 0.12379784539369192
+          }
+        ]
+      ],
+      "forecast_direction": -1,
+      "discovery_mean_bidirectional_shift": -0.0053710540135701495
+    },
+    {
+      "group_id": "recency_k8",
+      "family": "recency",
+      "layer": 0,
+      "size": 8,
+      "units": [
+        666,
+        495,
+        366,
+        943,
+        456,
+        992,
+        478,
+        656
+      ],
+      "control_groups": [
+        [
+          1301,
+          317,
+          545,
+          708,
+          69,
+          198,
+          911,
+          765
+        ],
+        [
+          515,
+          338,
+          320,
+          1288,
+          925,
+          818,
+          966,
+          289
+        ],
+        [
+          325,
+          872,
+          571,
+          619,
+          1322,
+          1027,
+          103,
+          1244
+        ],
+        [
+          838,
+          636,
+          132,
+          833,
+          368,
+          1397,
+          384,
+          1140
+        ]
+      ],
+      "members": [
+        {
+          "unit": 666,
+          "activation_scale": 0.1196667166514977,
+          "outgoing_norm": 2.6980966586419974,
+          "rms_difference": 0.3736728811086435,
+          "standardized_effect": 3.120149207193139,
+          "orientation": 1
+        },
+        {
+          "unit": 495,
+          "activation_scale": 0.029940120503446594,
+          "outgoing_norm": 2.1998455560484977,
+          "rms_difference": 0.0949246792845249,
+          "standardized_effect": 3.0132899631846732,
+          "orientation": 1
+        },
+        {
+          "unit": 366,
+          "activation_scale": 0.055100221634393494,
+          "outgoing_norm": 2.5217996031479126,
+          "rms_difference": 0.16588434257702947,
+          "standardized_effect": 2.992695042698682,
+          "orientation": 1
+        },
+        {
+          "unit": 943,
+          "activation_scale": 0.0006065670583704465,
+          "outgoing_norm": 1.214250674269044,
+          "rms_difference": 0.001814983802198077,
+          "standardized_effect": 2.9716546185821637,
+          "orientation": 1
+        },
+        {
+          "unit": 456,
+          "activation_scale": 0.0005518654087452393,
+          "outgoing_norm": 1.7694109382047807,
+          "rms_difference": 0.0016583753216583446,
+          "standardized_effect": 2.9669019124042113,
+          "orientation": 1
+        },
+        {
+          "unit": 992,
+          "activation_scale": 0.07969106070624221,
+          "outgoing_norm": 2.718632001541141,
+          "rms_difference": 0.2341611148450736,
+          "standardized_effect": -2.9330040248391707,
+          "orientation": -1
+        },
+        {
+          "unit": 478,
+          "activation_scale": 0.003200502784127607,
+          "outgoing_norm": 3.07651178592833,
+          "rms_difference": 0.009362549101222695,
+          "standardized_effect": 2.880410044964064,
+          "orientation": 1
+        },
+        {
+          "unit": 656,
+          "activation_scale": 0.027081138529440083,
+          "outgoing_norm": 2.775123546076011,
+          "rms_difference": 0.07870570319706514,
+          "standardized_effect": -2.86042428241942,
+          "orientation": -1
+        }
+      ],
+      "control_matching": [
+        [
+          {
+            "candidate_unit": 666,
+            "control_unit": 1301,
+            "sd_ratio": 1.1774944648207557,
+            "norm_ratio": 0.9658488724889084,
+            "rms_difference_ratio": 0.9841532870669316,
+            "squared_log_cost": 0.02815848820556306
+          },
+          {
+            "candidate_unit": 495,
+            "control_unit": 317,
+            "sd_ratio": 1.0894457933604662,
+            "norm_ratio": 1.2220804168529988,
+            "rms_difference_ratio": 0.8820033382948116,
+            "squared_log_cost": 0.06332654480873498
+          },
+          {
+            "candidate_unit": 366,
+            "control_unit": 545,
+            "sd_ratio": 1.0829654556117618,
+            "norm_ratio": 0.945405729072618,
+            "rms_difference_ratio": 0.9694950299418884,
+            "squared_log_cost": 0.010464158753113975
+          },
+          {
+            "candidate_unit": 943,
+            "control_unit": 708,
+            "sd_ratio": 1.0752375835743089,
+            "norm_ratio": 1.0196814210489862,
+            "rms_difference_ratio": 0.8247079877046744,
+            "squared_log_cost": 0.04278543620803533
+          },
+          {
+            "candidate_unit": 456,
+            "control_unit": 69,
+            "sd_ratio": 1.2089665701942207,
+            "norm_ratio": 0.7769804744586499,
+            "rms_difference_ratio": 0.8527533808955683,
+            "squared_log_cost": 0.12505828674058808
+          },
+          {
+            "candidate_unit": 992,
+            "control_unit": 198,
+            "sd_ratio": 1.0879643384873754,
+            "norm_ratio": 0.9846214367434739,
+            "rms_difference_ratio": 0.9720800768334021,
+            "squared_log_cost": 0.008149948453581878
+          },
+          {
+            "candidate_unit": 478,
+            "control_unit": 911,
+            "sd_ratio": 1.0073175281281301,
+            "norm_ratio": 0.8686199506154686,
+            "rms_difference_ratio": 0.9172518087126194,
+            "squared_log_cost": 0.027352101385894705
+          },
+          {
+            "candidate_unit": 656,
+            "control_unit": 765,
+            "sd_ratio": 0.9975630256976448,
+            "norm_ratio": 0.9066761196124792,
+            "rms_difference_ratio": 0.9797810520711998,
+            "squared_log_cost": 0.010021298338683602
+          }
+        ],
+        [
+          {
+            "candidate_unit": 666,
+            "control_unit": 515,
+            "sd_ratio": 1.1604234586574809,
+            "norm_ratio": 1.0258198392592441,
+            "rms_difference_ratio": 0.9189447307101596,
+            "squared_log_cost": 0.029932024383638067
+          },
+          {
+            "candidate_unit": 495,
+            "control_unit": 338,
+            "sd_ratio": 1.1982219723775984,
+            "norm_ratio": 1.1959806680730203,
+            "rms_difference_ratio": 0.9655959219318093,
+            "squared_log_cost": 0.0659573536118513
+          },
+          {
+            "candidate_unit": 366,
+            "control_unit": 320,
+            "sd_ratio": 1.211628893374975,
+            "norm_ratio": 1.0757047289420305,
+            "rms_difference_ratio": 0.9961539994244423,
+            "squared_log_cost": 0.04219115633718516
+          },
+          {
+            "candidate_unit": 943,
+            "control_unit": 1288,
+            "sd_ratio": 1.240261232905844,
+            "norm_ratio": 1.1280760014938416,
+            "rms_difference_ratio": 0.8653394946812452,
+            "squared_log_cost": 0.08180589827876031
+          },
+          {
+            "candidate_unit": 456,
+            "control_unit": 925,
+            "sd_ratio": 0.8821987276773113,
+            "norm_ratio": 0.8031077734791189,
+            "rms_difference_ratio": 0.750271125901473,
+            "squared_log_cost": 0.14634048262720184
+          },
+          {
+            "candidate_unit": 992,
+            "control_unit": 818,
+            "sd_ratio": 1.1427547565934564,
+            "norm_ratio": 1.0198400449587588,
+            "rms_difference_ratio": 1.0964934826326418,
+            "squared_log_cost": 0.026678276731132614
+          },
+          {
+            "candidate_unit": 478,
+            "control_unit": 966,
+            "sd_ratio": 1.145756162491182,
+            "norm_ratio": 1.0469613057884604,
+            "rms_difference_ratio": 0.8916444602405673,
+            "squared_log_cost": 0.03377300378103605
+          },
+          {
+            "candidate_unit": 656,
+            "control_unit": 289,
+            "sd_ratio": 1.0396484467738492,
+            "norm_ratio": 0.9919476310074498,
+            "rms_difference_ratio": 0.8826526871345821,
+            "squared_log_cost": 0.01715812839891486
+          }
+        ],
+        [
+          {
+            "candidate_unit": 666,
+            "control_unit": 325,
+            "sd_ratio": 1.2161418698419892,
+            "norm_ratio": 1.0131322876277797,
+            "rms_difference_ratio": 1.0111596597366708,
+            "squared_log_cost": 0.03858539248809536
+          },
+          {
+            "candidate_unit": 495,
+            "control_unit": 872,
+            "sd_ratio": 1.020079231064854,
+            "norm_ratio": 1.1728579092734002,
+            "rms_difference_ratio": 0.7379528230531811,
+            "squared_log_cost": 0.11815768077086718
+          },
+          {
+            "candidate_unit": 366,
+            "control_unit": 571,
+            "sd_ratio": 0.956566795126636,
+            "norm_ratio": 1.0593116010996233,
+            "rms_difference_ratio": 0.7611943128171794,
+            "squared_log_cost": 0.07974794295307631
+          },
+          {
+            "candidate_unit": 943,
+            "control_unit": 619,
+            "sd_ratio": 1.2675014160210996,
+            "norm_ratio": 1.1855689019066327,
+            "rms_difference_ratio": 1.1228398998255862,
+            "squared_log_cost": 0.0985911299190326
+          },
+          {
+            "candidate_unit": 456,
+            "control_unit": 1322,
+            "sd_ratio": 1.0765434628950608,
+            "norm_ratio": 0.8482374364109502,
+            "rms_difference_ratio": 0.7076172185433488,
+            "squared_log_cost": 0.15214486588392956
+          },
+          {
+            "candidate_unit": 992,
+            "control_unit": 1027,
+            "sd_ratio": 1.1949214588889496,
+            "norm_ratio": 1.0331628381579174,
+            "rms_difference_ratio": 1.0328805177379627,
+            "squared_log_cost": 0.033823648886400486
+          },
+          {
+            "candidate_unit": 478,
+            "control_unit": 103,
+            "sd_ratio": 0.957850342723899,
+            "norm_ratio": 0.7971473248157537,
+            "rms_difference_ratio": 0.9988874997584526,
+            "squared_log_cost": 0.053255763511732696
+          },
+          {
+            "candidate_unit": 656,
+            "control_unit": 1244,
+            "sd_ratio": 1.095224072261118,
+            "norm_ratio": 0.9344102923023435,
+            "rms_difference_ratio": 0.8942894527388747,
+            "squared_log_cost": 0.02535840415943818
+          }
+        ],
+        [
+          {
+            "candidate_unit": 666,
+            "control_unit": 838,
+            "sd_ratio": 0.9460785819154199,
+            "norm_ratio": 0.963450401130361,
+            "rms_difference_ratio": 0.7886963072488276,
+            "squared_log_cost": 0.060805224222895686
+          },
+          {
+            "candidate_unit": 495,
+            "control_unit": 636,
+            "sd_ratio": 1.3440331611977128,
+            "norm_ratio": 1.1484832265506375,
+            "rms_difference_ratio": 1.1187863187004823,
+            "squared_log_cost": 0.11918869861318415
+          },
+          {
+            "candidate_unit": 366,
+            "control_unit": 132,
+            "sd_ratio": 1.3443141389279216,
+            "norm_ratio": 0.9311994424912343,
+            "rms_difference_ratio": 1.098580594750365,
+            "squared_log_cost": 0.10146797470602395
+          },
+          {
+            "candidate_unit": 943,
+            "control_unit": 833,
+            "sd_ratio": 1.3266966448715292,
+            "norm_ratio": 1.2112419390078484,
+            "rms_difference_ratio": 0.9188929629114873,
+            "squared_log_cost": 0.12379784539369192
+          },
+          {
+            "candidate_unit": 456,
+            "control_unit": 368,
+            "sd_ratio": 1.4391401077256951,
+            "norm_ratio": 0.9842717465084454,
+            "rms_difference_ratio": 1.153638753486916,
+            "squared_log_cost": 0.1532070965675947
+          },
+          {
+            "candidate_unit": 992,
+            "control_unit": 1397,
+            "sd_ratio": 1.1851287360946527,
+            "norm_ratio": 1.0402703164243547,
+            "rms_difference_ratio": 1.1693952989446779,
+            "squared_log_cost": 0.05489632935078079
+          },
+          {
+            "candidate_unit": 478,
+            "control_unit": 384,
+            "sd_ratio": 1.472806263840297,
+            "norm_ratio": 0.8422472083871689,
+            "rms_difference_ratio": 1.0061255955033583,
+            "squared_log_cost": 0.17941220652134998
+          },
+          {
+            "candidate_unit": 656,
+            "control_unit": 1140,
+            "sd_ratio": 1.137097171772892,
+            "norm_ratio": 1.0875331825162131,
+            "rms_difference_ratio": 0.8954907371825458,
+            "squared_log_cost": 0.03573248815848567
+          }
+        ]
+      ],
+      "forecast_direction": -1,
+      "discovery_mean_bidirectional_shift": -0.00679941972096761
+    },
+    {
+      "group_id": "recovery_k4",
+      "family": "recovery",
+      "layer": 5,
+      "size": 4,
+      "units": [
+        1095,
+        594,
+        530,
+        743
+      ],
+      "control_groups": [
+        [
+          727,
+          522,
+          233,
+          996
+        ],
+        [
+          564,
+          359,
+          18,
+          312
+        ],
+        [
+          1014,
+          707,
+          215,
+          685
+        ],
+        [
+          981,
+          238,
+          664,
+          640
+        ]
+      ],
+      "members": [
+        {
+          "unit": 1095,
+          "activation_scale": 0.05555982396733291,
+          "outgoing_norm": 3.3987409108269575,
+          "rms_difference": 0.18176902343219467,
+          "standardized_effect": -3.2339440379234436,
+          "orientation": -1
+        },
+        {
+          "unit": 594,
+          "activation_scale": 0.11298314889095758,
+          "outgoing_norm": 3.3931230602560896,
+          "rms_difference": 0.37460279720023737,
+          "standardized_effect": 3.22276881813167,
+          "orientation": 1
+        },
+        {
+          "unit": 530,
+          "activation_scale": 0.044527049323051134,
+          "outgoing_norm": 3.4063684658867355,
+          "rms_difference": 0.1436991219089397,
+          "standardized_effect": 3.1683151102181504,
+          "orientation": 1
+        },
+        {
+          "unit": 743,
+          "activation_scale": 0.02808352602429211,
+          "outgoing_norm": 3.2924024954841005,
+          "rms_difference": 0.08879411688720593,
+          "standardized_effect": 3.096998937641744,
+          "orientation": 1
+        }
+      ],
+      "control_matching": [
+        [
+          {
+            "candidate_unit": 1095,
+            "control_unit": 727,
+            "sd_ratio": 1.0994917541898126,
+            "norm_ratio": 1.0041287352411843,
+            "rms_difference_ratio": 0.9586769282774282,
+            "squared_log_cost": 0.0107940620215788
+          },
+          {
+            "candidate_unit": 594,
+            "control_unit": 522,
+            "sd_ratio": 1.3289640854917633,
+            "norm_ratio": 1.017578567566645,
+            "rms_difference_ratio": 0.9141394605106411,
+            "squared_log_cost": 0.08924591782449529
+          },
+          {
+            "candidate_unit": 530,
+            "control_unit": 233,
+            "sd_ratio": 1.0900649905491495,
+            "norm_ratio": 0.9684813586056543,
+            "rms_difference_ratio": 0.9398507934080084,
+            "squared_log_cost": 0.012310778013782482
+          },
+          {
+            "candidate_unit": 743,
+            "control_unit": 996,
+            "sd_ratio": 1.0415207148424006,
+            "norm_ratio": 0.9810499858820174,
+            "rms_difference_ratio": 0.9748882741814718,
+            "squared_log_cost": 0.0026678501787169265
+          }
+        ],
+        [
+          {
+            "candidate_unit": 1095,
+            "control_unit": 564,
+            "sd_ratio": 1.0150867020084786,
+            "norm_ratio": 1.0421087698161835,
+            "rms_difference_ratio": 0.8780115798423591,
+            "squared_log_cost": 0.01885031898526482
+          },
+          {
+            "candidate_unit": 594,
+            "control_unit": 359,
+            "sd_ratio": 0.8260337393070362,
+            "norm_ratio": 0.9870036859501871,
+            "rms_difference_ratio": 0.6616415721527079,
+            "squared_log_cost": 0.20729270607996755
+          },
+          {
+            "candidate_unit": 530,
+            "control_unit": 18,
+            "sd_ratio": 1.0040495842424402,
+            "norm_ratio": 0.9438839888731075,
+            "rms_difference_ratio": 0.8848259091826312,
+            "squared_log_cost": 0.018324666129589388
+          },
+          {
+            "candidate_unit": 743,
+            "control_unit": 312,
+            "sd_ratio": 1.0702153777805654,
+            "norm_ratio": 0.986403449147198,
+            "rms_difference_ratio": 0.9271219384047059,
+            "squared_log_cost": 0.010518355957786722
+          }
+        ],
+        [
+          {
+            "candidate_unit": 1095,
+            "control_unit": 1014,
+            "sd_ratio": 1.0469562071271534,
+            "norm_ratio": 1.0231264727669458,
+            "rms_difference_ratio": 0.8348263242662465,
+            "squared_log_cost": 0.0352199960537471
+          },
+          {
+            "candidate_unit": 594,
+            "control_unit": 707,
+            "sd_ratio": 1.5593420338377932,
+            "norm_ratio": 1.0268201636761518,
+            "rms_difference_ratio": 1.176957412465155,
+            "squared_log_cost": 0.22461800389179476
+          },
+          {
+            "candidate_unit": 530,
+            "control_unit": 215,
+            "sd_ratio": 1.0462037220426594,
+            "norm_ratio": 0.9206334601677363,
+            "rms_difference_ratio": 0.8832839122583079,
+            "squared_log_cost": 0.02428128461046408
+          },
+          {
+            "candidate_unit": 743,
+            "control_unit": 685,
+            "sd_ratio": 1.0642180293754115,
+            "norm_ratio": 0.9860006790794075,
+            "rms_difference_ratio": 0.9097859622226017,
+            "squared_log_cost": 0.013011543051693431
+          }
+        ],
+        [
+          {
+            "candidate_unit": 1095,
+            "control_unit": 981,
+            "sd_ratio": 1.1403635775436294,
+            "norm_ratio": 0.930252868007211,
+            "rms_difference_ratio": 0.8752805262834619,
+            "squared_log_cost": 0.04022432018672885
+          },
+          {
+            "candidate_unit": 594,
+            "control_unit": 238,
+            "sd_ratio": 0.7837996707510685,
+            "norm_ratio": 0.9315649108693419,
+            "rms_difference_ratio": 0.6177175207337188,
+            "squared_log_cost": 0.2964251754196213
+          },
+          {
+            "candidate_unit": 530,
+            "control_unit": 664,
+            "sd_ratio": 1.0183401452759306,
+            "norm_ratio": 0.9635767232307306,
+            "rms_difference_ratio": 0.8425490506263218,
+            "squared_log_cost": 0.03105864559647648
+          },
+          {
+            "candidate_unit": 743,
+            "control_unit": 640,
+            "sd_ratio": 1.1185638304408247,
+            "norm_ratio": 0.9910895340926876,
+            "rms_difference_ratio": 1.032021016905667,
+            "squared_log_cost": 0.013627768426578694
+          }
+        ]
+      ],
+      "forecast_direction": -1,
+      "discovery_mean_bidirectional_shift": -3.119309743245443e-05
+    },
+    {
+      "group_id": "recovery_k8",
+      "family": "recovery",
+      "layer": 5,
+      "size": 8,
+      "units": [
+        1095,
+        594,
+        530,
+        743,
+        344,
+        38,
+        1255,
+        1273
+      ],
+      "control_groups": [
+        [
+          727,
+          522,
+          233,
+          996,
+          1334,
+          1118,
+          169,
+          25
+        ],
+        [
+          564,
+          359,
+          18,
+          312,
+          472,
+          1126,
+          334,
+          600
+        ],
+        [
+          1014,
+          707,
+          215,
+          685,
+          858,
+          1148,
+          1406,
+          85
+        ],
+        [
+          981,
+          238,
+          664,
+          640,
+          687,
+          49,
+          598,
+          998
+        ]
+      ],
+      "members": [
+        {
+          "unit": 1095,
+          "activation_scale": 0.05555982396733291,
+          "outgoing_norm": 3.3987409108269575,
+          "rms_difference": 0.18176902343219467,
+          "standardized_effect": -3.2339440379234436,
+          "orientation": -1
+        },
+        {
+          "unit": 594,
+          "activation_scale": 0.11298314889095758,
+          "outgoing_norm": 3.3931230602560896,
+          "rms_difference": 0.37460279720023737,
+          "standardized_effect": 3.22276881813167,
+          "orientation": 1
+        },
+        {
+          "unit": 530,
+          "activation_scale": 0.044527049323051134,
+          "outgoing_norm": 3.4063684658867355,
+          "rms_difference": 0.1436991219089397,
+          "standardized_effect": 3.1683151102181504,
+          "orientation": 1
+        },
+        {
+          "unit": 743,
+          "activation_scale": 0.02808352602429211,
+          "outgoing_norm": 3.2924024954841005,
+          "rms_difference": 0.08879411688720593,
+          "standardized_effect": 3.096998937641744,
+          "orientation": 1
+        },
+        {
+          "unit": 344,
+          "activation_scale": 0.04992555837623554,
+          "outgoing_norm": 3.2606993307765535,
+          "rms_difference": 0.15380152578779008,
+          "standardized_effect": 2.992162320087144,
+          "orientation": 1
+        },
+        {
+          "unit": 38,
+          "activation_scale": 0.035027667207032466,
+          "outgoing_norm": 2.9544382066861385,
+          "rms_difference": 0.10687842323114186,
+          "standardized_effect": 2.9694093975626057,
+          "orientation": 1
+        },
+        {
+          "unit": 1255,
+          "activation_scale": 0.037299609632984475,
+          "outgoing_norm": 3.1982448296062693,
+          "rms_difference": 0.11287510339201155,
+          "standardized_effect": -2.9312463716998494,
+          "orientation": -1
+        },
+        {
+          "unit": 1273,
+          "activation_scale": 0.016997406713100915,
+          "outgoing_norm": 3.240292061977914,
+          "rms_difference": 0.050474721457398744,
+          "standardized_effect": -2.8942034527388776,
+          "orientation": -1
+        }
+      ],
+      "control_matching": [
+        [
+          {
+            "candidate_unit": 1095,
+            "control_unit": 727,
+            "sd_ratio": 1.0994917541898126,
+            "norm_ratio": 1.0041287352411843,
+            "rms_difference_ratio": 0.9586769282774282,
+            "squared_log_cost": 0.0107940620215788
+          },
+          {
+            "candidate_unit": 594,
+            "control_unit": 522,
+            "sd_ratio": 1.3289640854917633,
+            "norm_ratio": 1.017578567566645,
+            "rms_difference_ratio": 0.9141394605106411,
+            "squared_log_cost": 0.08924591782449529
+          },
+          {
+            "candidate_unit": 530,
+            "control_unit": 233,
+            "sd_ratio": 1.0900649905491495,
+            "norm_ratio": 0.9684813586056543,
+            "rms_difference_ratio": 0.9398507934080084,
+            "squared_log_cost": 0.012310778013782482
+          },
+          {
+            "candidate_unit": 743,
+            "control_unit": 996,
+            "sd_ratio": 1.0415207148424006,
+            "norm_ratio": 0.9810499858820174,
+            "rms_difference_ratio": 0.9748882741814718,
+            "squared_log_cost": 0.0026678501787169265
+          },
+          {
+            "candidate_unit": 344,
+            "control_unit": 1334,
+            "sd_ratio": 1.057926995383729,
+            "norm_ratio": 0.9643978936237481,
+            "rms_difference_ratio": 0.964061251449961,
+            "squared_log_cost": 0.005824716457343353
+          },
+          {
+            "candidate_unit": 38,
+            "control_unit": 1118,
+            "sd_ratio": 0.9905071921982099,
+            "norm_ratio": 0.993179544355403,
+            "rms_difference_ratio": 0.8997448094680347,
+            "squared_log_cost": 0.011298490281983433
+          },
+          {
+            "candidate_unit": 1255,
+            "control_unit": 169,
+            "sd_ratio": 1.0648323125072634,
+            "norm_ratio": 1.0515439228576628,
+            "rms_difference_ratio": 1.0249389935862463,
+            "squared_log_cost": 0.007078822679377366
+          },
+          {
+            "candidate_unit": 1273,
+            "control_unit": 25,
+            "sd_ratio": 1.0669113518372701,
+            "norm_ratio": 1.0217410526659243,
+            "rms_difference_ratio": 1.0027288521580864,
+            "squared_log_cost": 0.00466490336074365
+          }
+        ],
+        [
+          {
+            "candidate_unit": 1095,
+            "control_unit": 564,
+            "sd_ratio": 1.0150867020084786,
+            "norm_ratio": 1.0421087698161835,
+            "rms_difference_ratio": 0.8780115798423591,
+            "squared_log_cost": 0.01885031898526482
+          },
+          {
+            "candidate_unit": 594,
+            "control_unit": 359,
+            "sd_ratio": 0.8260337393070362,
+            "norm_ratio": 0.9870036859501871,
+            "rms_difference_ratio": 0.6616415721527079,
+            "squared_log_cost": 0.20729270607996755
+          },
+          {
+            "candidate_unit": 530,
+            "control_unit": 18,
+            "sd_ratio": 1.0040495842424402,
+            "norm_ratio": 0.9438839888731075,
+            "rms_difference_ratio": 0.8848259091826312,
+            "squared_log_cost": 0.018324666129589388
+          },
+          {
+            "candidate_unit": 743,
+            "control_unit": 312,
+            "sd_ratio": 1.0702153777805654,
+            "norm_ratio": 0.986403449147198,
+            "rms_difference_ratio": 0.9271219384047059,
+            "squared_log_cost": 0.010518355957786722
+          },
+          {
+            "candidate_unit": 344,
+            "control_unit": 472,
+            "sd_ratio": 1.0763016593638373,
+            "norm_ratio": 1.0762776535158416,
+            "rms_difference_ratio": 1.0101179176659119,
+            "squared_log_cost": 0.010911616130069269
+          },
+          {
+            "candidate_unit": 38,
+            "control_unit": 1126,
+            "sd_ratio": 0.9595644523552357,
+            "norm_ratio": 1.0278401566704705,
+            "rms_difference_ratio": 0.9036906326610548,
+            "squared_log_cost": 0.012712972161038647
+          },
+          {
+            "candidate_unit": 1255,
+            "control_unit": 334,
+            "sd_ratio": 1.0825306745591243,
+            "norm_ratio": 1.0468596318108732,
+            "rms_difference_ratio": 1.0423371456106576,
+            "squared_log_cost": 0.0101052827798281
+          },
+          {
+            "candidate_unit": 1273,
+            "control_unit": 600,
+            "sd_ratio": 0.9981581768880993,
+            "norm_ratio": 0.9753271715211411,
+            "rms_difference_ratio": 0.9269605402251259,
+            "squared_log_cost": 0.006379869107457865
+          }
+        ],
+        [
+          {
+            "candidate_unit": 1095,
+            "control_unit": 1014,
+            "sd_ratio": 1.0469562071271534,
+            "norm_ratio": 1.0231264727669458,
+            "rms_difference_ratio": 0.8348263242662465,
+            "squared_log_cost": 0.0352199960537471
+          },
+          {
+            "candidate_unit": 594,
+            "control_unit": 707,
+            "sd_ratio": 1.5593420338377932,
+            "norm_ratio": 1.0268201636761518,
+            "rms_difference_ratio": 1.176957412465155,
+            "squared_log_cost": 0.22461800389179476
+          },
+          {
+            "candidate_unit": 530,
+            "control_unit": 215,
+            "sd_ratio": 1.0462037220426594,
+            "norm_ratio": 0.9206334601677363,
+            "rms_difference_ratio": 0.8832839122583079,
+            "squared_log_cost": 0.02428128461046408
+          },
+          {
+            "candidate_unit": 743,
+            "control_unit": 685,
+            "sd_ratio": 1.0642180293754115,
+            "norm_ratio": 0.9860006790794075,
+            "rms_difference_ratio": 0.9097859622226017,
+            "squared_log_cost": 0.013011543051693431
+          },
+          {
+            "candidate_unit": 344,
+            "control_unit": 858,
+            "sd_ratio": 1.1007442017788291,
+            "norm_ratio": 1.0040398399771948,
+            "rms_difference_ratio": 0.926124499617933,
+            "squared_log_cost": 0.015119703749159708
+          },
+          {
+            "candidate_unit": 38,
+            "control_unit": 1148,
+            "sd_ratio": 0.9541117929182702,
+            "norm_ratio": 1.110736094953553,
+            "rms_difference_ratio": 0.8653461126432755,
+            "squared_log_cost": 0.034153015391912886
+          },
+          {
+            "candidate_unit": 1255,
+            "control_unit": 1406,
+            "sd_ratio": 1.094967598637316,
+            "norm_ratio": 1.0761971253232487,
+            "rms_difference_ratio": 0.9336119675771319,
+            "squared_log_cost": 0.01834240260964013
+          },
+          {
+            "candidate_unit": 1273,
+            "control_unit": 85,
+            "sd_ratio": 1.0660045370512246,
+            "norm_ratio": 0.983446443002086,
+            "rms_difference_ratio": 0.9194996160690454,
+            "squared_log_cost": 0.011407598558417942
+          }
+        ],
+        [
+          {
+            "candidate_unit": 1095,
+            "control_unit": 981,
+            "sd_ratio": 1.1403635775436294,
+            "norm_ratio": 0.930252868007211,
+            "rms_difference_ratio": 0.8752805262834619,
+            "squared_log_cost": 0.04022432018672885
+          },
+          {
+            "candidate_unit": 594,
+            "control_unit": 238,
+            "sd_ratio": 0.7837996707510685,
+            "norm_ratio": 0.9315649108693419,
+            "rms_difference_ratio": 0.6177175207337188,
+            "squared_log_cost": 0.2964251754196213
+          },
+          {
+            "candidate_unit": 530,
+            "control_unit": 664,
+            "sd_ratio": 1.0183401452759306,
+            "norm_ratio": 0.9635767232307306,
+            "rms_difference_ratio": 0.8425490506263218,
+            "squared_log_cost": 0.03105864559647648
+          },
+          {
+            "candidate_unit": 743,
+            "control_unit": 640,
+            "sd_ratio": 1.1185638304408247,
+            "norm_ratio": 0.9910895340926876,
+            "rms_difference_ratio": 1.032021016905667,
+            "squared_log_cost": 0.013627768426578694
+          },
+          {
+            "candidate_unit": 344,
+            "control_unit": 687,
+            "sd_ratio": 1.0432017945338647,
+            "norm_ratio": 0.9734195199908928,
+            "rms_difference_ratio": 0.8698653933655307,
+            "squared_log_cost": 0.021951650450630834
+          },
+          {
+            "candidate_unit": 38,
+            "control_unit": 49,
+            "sd_ratio": 0.9403346271735382,
+            "norm_ratio": 1.1604459132093277,
+            "rms_difference_ratio": 0.9101728666168455,
+            "squared_log_cost": 0.03478609047496865
+          },
+          {
+            "candidate_unit": 1255,
+            "control_unit": 598,
+            "sd_ratio": 1.1598508602001483,
+            "norm_ratio": 1.020522049122586,
+            "rms_difference_ratio": 0.9891965932699223,
+            "squared_log_cost": 0.022521005907636935
+          },
+          {
+            "candidate_unit": 1273,
+            "control_unit": 998,
+            "sd_ratio": 1.0486957993045374,
+            "norm_ratio": 0.9394974405739936,
+            "rms_difference_ratio": 1.0863153093395772,
+            "squared_log_cost": 0.013010212187342631
+          }
+        ]
+      ],
+      "forecast_direction": 1,
+      "discovery_mean_bidirectional_shift": 9.967883427937825e-05
+    }
+  ],
+  "discovery_sha256": "199fea27303fa50788499630e34025f3feedb27291b8f7a86f04601feec4ba2f",
+  "protocol_sha256": "26e27158bf2e1aedd55a388197fb04d66ddff6d6d2ca6e05903ff30f0d63dad4",
+  "prior_run_hashes": {
+    "discovery.npz": "98b1a2327ebf6227aacf04ed7cfe8ee7f6745ac493d037fdcd73d31470aaa637",
+    "validation.npz": "c1560ae818c9731bfed128f926c3ec86e658935a48fb6c28fe88f29f2b65f73c"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "title": "TiRex native-unit groups: held-out synthetic activation swaps",
+  "version": 1,
+  "date": "2026-10-22",
+  "checkpoint_revision": "05e5b26db52bfb256f1ae1bdf785589850482de3",
+  "layers": [
+    0,
+    5,
+    11
+  ],
+  "family_layers": {
+    "persistence": 11,
+    "recency": 0,
+    "recovery": 5
+  },
+  "layer_choice": "Fixed from the preceding single-unit pilot. Its validation outcomes informed this follow-up; none of its contexts are reused for selection or evaluation.",
+  "sizes": [
+    4,
+    8
+  ],
+  "n_controls": 4,
+  "context_length": 2048,
+  "token_index": 63,
+  "forecast_horizon": 1,
+  "quantiles": [
+    0.1,
+    0.5,
+    0.9
+  ],
+  "execution": "CPU, 4 threads, compile and flex attention disabled; public wrapper including uncertainty postprocessing; both TTA disabled",
+  "batch_size": 8,
+  "discovery_pairs_per_family": 24,
+  "validation_pairs_per_family": 32,
+  "seeds": {
+    "discovery": 641203,
+    "validation": 908117,
+    "bootstrap": 20261022
+  },
+  "generator": {
+    "matching": "Same full multiset and last observation within each pair; shared normalization to mean -9 and SD 0.6 in log-variance units.",
+    "background": "AR(1) coefficient .92, innovation SD .3; independent across pairs, shared within pair.",
+    "persistence": "Recipient alternating low/high; donor same low/high values grouped into two runs, ending high before common last point.",
+    "recency": "Recipient positive burst early in motif; donor same burst later, followed by common quiet tail.",
+    "recovery": "Recipient noisy rising ramp; donor same values in reverse order before common last point.",
+    "discovery": "124-point motif, amplitude1.8, noiseSD.08.",
+    "validation": "Independently draw76 or180-point motifs with probability .5 each; amplitudes uniform .8..2.8, noiseSD uniform .04...3; recency tail window//6 rather than //8.",
+    "limit": "Global matching does not match recent means, slopes, autocorrelation, or all alternatives to named concepts. No real-market inputs or targets."
+  },
+  "selection": "Within each fixed family layer, rank units by absolute mean own-family donor-recipient activation difference divided by pooled discovery activation SD across all families/sides. Exclude zero SD, outgoing norm, or own-family RMS difference. Tie by ascending unit. Top8 fixed; size4 is its first4, in rank order. No forecast effects enter unit ranking.",
+  "controls": "For each family top8, perform four sequential Hungarian assignments using candidate rank order and ascending remaining control-unit order. Cost is sum of squared log ratios of pooled SD, outgoing column L2 norm, and own-family RMS paired activation difference. Exclude all top8 and prior control groups. scipy.optimize.linear_sum_assignment determines deterministic ties on these ordered arrays. Size4 control groups are corresponding first4 slots, with no rematching. Save each matching ratio/cost. Matching proxies do not equalize covariance, aggregate displacement or downstream influence.",
+  "swap": "Simultaneously replace all selected coordinates at token63 with the corresponding paired original donor coordinates. All come from the same untouched baseline donor state. Both directions. No sequential re-extraction or intervention composition.",
+  "direction": "Each of six group directions is sign of its own-family discovery mean((delta_recipient_median-delta_donor_median)/2); exact zero=>+1. Freeze identities, controls, directions and source hashes before generating or forecasting validation.",
+  "instrumentation": {
+    "histories": "First recipient/donor pair from each of three fresh discovery families, six contexts.",
+    "positive_affine_transforms": [
+      [
+        1.0,
+        1.3
+      ],
+      [
+        1.7,
+        0.4
+      ]
+    ],
+    "checks": [
+      "unhooked public wrapper equals capture-only",
+      "same-value patch equals baseline at each selected layer",
+      "batch reversal",
+      "single-series vs batched",
+      "positive affine activation invariance and forecast equivariance",
+      "quantile order",
+      "exactly one hook call; temporary hook cleanup; token-to-output index arithmetic"
+    ],
+    "max_forecast_abs_error": 0.0001,
+    "max_activation_relative_error": 0.0001,
+    "relative_error_formula": "max(abs(new-old))/max(1,max(abs(old))) for each activation layer and residual",
+    "group_checks": [
+      "one-member group equals frozen scalar adapter",
+      "size8 same-value patch each layer",
+      "unit/column joint permutation equivalence",
+      "patched singleton-vs-batch equivalence",
+      "patch cleanup returns baseline",
+      "full base positive affine and no-op gates"
+    ],
+    "fixed_gate_units": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "inference": {
+    "unit": "Independent synthetic pair; 32 per own family, no exclusions.",
+    "floor_log_variance": 0.001,
+    "alpha": 0.05,
+    "claims": 18,
+    "influence_effect": "discovery-frozen direction*(delta_recipient_median-delta_donor_median)/2",
+    "control_advantage": "mean absolute candidate median shift over both sides minus average absolute shift across four matched groups and both sides",
+    "singleton_advantage": "mean absolute candidate median shift over both sides minus maximum, over its constituent singleton units, of each singleton mean absolute shift over both sides for that same pair. The maximum is a conservative per-pair comparator, not selection of a favorable singleton.",
+    "test": "For each of six family/size groups, exact one-sided binomial probability that >half the generator pairs exceed strict +.001 for each of the three effects. Ties fail. Holm across all18 claims, family-major/sizesascending/claim order influence,control,singleton.",
+    "distributed_influence_label": "Require all three corrected tests to pass and zero crossings in own-family baseline, group, controls, and singleton predictions. This supports influence aggregated across this selected group under this intervention, not unique semantic concepts or a globally distributed model.",
+    "nonadditivity": "Descriptive only: group median delta minus sum of original-baseline singleton median deltas per pair and side. Additive aggregation is compatible with distributed influence; nonadditivity is neither required nor sufficient.",
+    "descriptive": "5000 paired bootstrap draws with seed20261022+groupindex; all families, both swap directions, short/long variants, group and singleton magnitudes, q90-q10 width, activation contrasts and control-match quality. No secondary significance claims.",
+    "quantile_crossings": "Never rearrange; report and block qualifying label if any primary own-family baseline, joint, matched control or constituent singleton crossing.",
+    "limitations": "No financial outcomes or targets. Synthetic histories match histogram and terminal value but do not match HAR summaries or every temporal feature. Donor values are natural but hybrid states can be off manifold. No accuracy, calibration, trading value, or proof of Goodfire working hypothesis. Threshold is numerical influence, not economic materiality."
+  },
+  "failure_policy": "Fail closed on instrumentation, insufficient controls or nonfinite outputs. Never alter group sizes, unit rankings, selection metrics or inference after validation. Any fixes or reruns disclosed separately.",
+  "literature": [
+    {
+      "url": "https://already-clean.goodfire.com/",
+      "role": "Motivation from an informal working-hypothesis essay, not a replicated theorem."
+    },
+    {
+      "url": "https://arxiv.org/abs/2309.16042",
+      "role": "Activation-patching methodological choices can change conclusions; language-model findings motivate explicit controls rather than validating this TiRex experiment."
+    }
+  ]
+}

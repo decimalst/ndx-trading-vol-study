@@ -1,0 +1,90 @@
+{
+  "checks": [
+    {
+      "check": "unhooked",
+      "max_forecast_abs_error": 0.0,
+      "activation_relative_errors": {},
+      "passed": true
+    },
+    {
+      "check": "self_swap_layer0",
+      "max_forecast_abs_error": 0.0,
+      "activation_relative_errors": {
+        "0": 0.0,
+        "5": 0.0,
+        "11": 0.0,
+        "residual": 0.0
+      },
+      "passed": true
+    },
+    {
+      "check": "self_swap_layer5",
+      "max_forecast_abs_error": 0.0,
+      "activation_relative_errors": {
+        "0": 0.0,
+        "5": 0.0,
+        "11": 0.0,
+        "residual": 0.0
+      },
+      "passed": true
+    },
+    {
+      "check": "self_swap_layer11",
+      "max_forecast_abs_error": 0.0,
+      "activation_relative_errors": {
+        "0": 0.0,
+        "5": 0.0,
+        "11": 0.0,
+        "residual": 0.0
+      },
+      "passed": true
+    },
+    {
+      "check": "batch_reversal",
+      "max_forecast_abs_error": 0.0,
+      "activation_relative_errors": {
+        "0": 0.0,
+        "5": 0.0,
+        "11": 0.0,
+        "residual": 0.0
+      },
+      "passed": true
+    },
+    {
+      "check": "singleton_vs_batch",
+      "max_forecast_abs_error": 0.0,
+      "activation_relative_errors": {
+        "0": 0.0,
+        "5": 0.0,
+        "11": 0.0,
+        "residual": 0.0
+      },
+      "passed": true
+    },
+    {
+      "check": "affine_0",
+      "max_forecast_abs_error": 3.337860107421875e-06,
+      "activation_relative_errors": {
+        "0": 5.421741775535338e-07,
+        "5": 7.748603820800781e-07,
+        "11": 2.6754730697575724e-06,
+        "residual": 9.402632713317871e-06
+      },
+      "passed": true
+    },
+    {
+      "check": "affine_1",
+      "max_forecast_abs_error": 3.814697265625e-06,
+      "activation_relative_errors": {
+        "0": 1.0456216159582254e-06,
+        "5": 1.3709068298339844e-06,
+        "11": 2.948657538581756e-06,
+        "residual": 1.0386109352111816e-05
+      },
+      "passed": true
+    }
+  ],
+  "base_quantile_crossings": 0,
+  "passed": true,
+  "timestamp": "2026-10-21T22:25:22.550195+00:00"
+}

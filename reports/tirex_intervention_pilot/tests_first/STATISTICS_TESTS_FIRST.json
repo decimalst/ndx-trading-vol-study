@@ -1,0 +1,9 @@
+{
+  "recorded_at_utc": "2026-10-21T22:21:36.410889+00:00",
+  "test_file": "tests/test_tirex_intervention_statistics.py",
+  "sha256": "516926b2db87287db18d9da2d81cd309d306ee4114d38118e25577129e0d0b3b",
+  "test_count": 12,
+  "status": "EXPECTED_IMPORT_FAILURE_BEFORE_IMPLEMENTATION",
+  "red_log_sha256": "3e38328caf4ef6a83317eb5f1475c131ca3e56588b021104ab053233f526c939",
+  "implementation_present": false
+}

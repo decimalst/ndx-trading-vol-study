@@ -1,0 +1,8 @@
+{
+  "time_utc": "2026-10-21T22:19:28.135485+00:00",
+  "test_path": "/tmp/tirex_pilot_20261021/tests/test_tirex_intervention_adapter.py",
+  "test_sha256": "1d8815dafa13b570474c333857ce46b8ef3baee1b1b84d313ea04116c1444bf1",
+  "adapter_implementation_exists": false,
+  "return_code": 1,
+  "log_sha256": "6f0ae3df98035766c2c643bb54a9e5c8fe0da267c9abc0a42274571011c7b1aa"
+}

@@ -1,0 +1,21 @@
+test_tirex_group_adapter (unittest.loader._FailedTest.test_tirex_group_adapter) ... ERROR
+
+======================================================================
+ERROR: test_tirex_group_adapter (unittest.loader._FailedTest.test_tirex_group_adapter)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_tirex_group_adapter
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 419, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 362, in _get_module_from_name
+    __import__(name)
+  File "/private/tmp/tirex_group_pilot_20261022/tests/test_tirex_group_adapter.py", line 8, in <module>
+    from src.tirex_group_adapter import GroupTirexAdapter
+ModuleNotFoundError: No module named 'src.tirex_group_adapter'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

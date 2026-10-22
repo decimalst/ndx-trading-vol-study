@@ -1,0 +1,21 @@
+test_declared_fresh_seeds_do_not_mutate_prior_seed_mapping (tests.test_tirex_group_pilot.FreshPairTests.test_declared_fresh_seeds_do_not_mutate_prior_seed_mapping) ... ok
+test_malformed_generation_arguments_reject (tests.test_tirex_group_pilot.FreshPairTests.test_malformed_generation_arguments_reject) ... ok
+test_new_splits_reproduce_and_are_disjoint_from_both_old_splits (tests.test_tirex_group_pilot.FreshPairTests.test_new_splits_reproduce_and_are_disjoint_from_both_old_splits) ... ok
+test_pair_matching_distribution_and_shape (tests.test_tirex_group_pilot.FreshPairTests.test_pair_matching_distribution_and_shape) ... ok
+test_additive_joint_has_zero_joint_minus_sum_residual (tests.test_tirex_group_pilot.GroupAnalysisTests.test_additive_joint_has_zero_joint_minus_sum_residual) ... ok
+test_invalid_singleton_inputs_and_parameters_reject (tests.test_tirex_group_pilot.GroupAnalysisTests.test_invalid_singleton_inputs_and_parameters_reject) ... ok
+test_member_and_control_permutation_do_not_change_summary (tests.test_tirex_group_pilot.GroupAnalysisTests.test_member_and_control_permutation_do_not_change_summary) ... ok
+test_nonadditivity_preserves_recipient_and_donor_signs (tests.test_tirex_group_pilot.GroupAnalysisTests.test_nonadditivity_preserves_recipient_and_donor_signs) ... ok
+test_singleton_advantage_uses_pairwise_max_before_aggregation (tests.test_tirex_group_pilot.GroupAnalysisTests.test_singleton_advantage_uses_pairwise_max_before_aggregation) ... ok
+test_strict_floor_and_zero_swaps_do_not_count_as_success (tests.test_tirex_group_pilot.GroupAnalysisTests.test_strict_floor_and_zero_swaps_do_not_count_as_success) ... ok
+test_controls_exclude_all_candidates_and_all_prior_controls (tests.test_tirex_group_pilot.GroupSelectionTests.test_controls_exclude_all_candidates_and_all_prior_controls) ... ok
+test_degenerate_units_excluded_and_insufficient_controls_reject (tests.test_tirex_group_pilot.GroupSelectionTests.test_degenerate_units_excluded_and_insufficient_controls_reject) ... ok
+test_fixed_layer_records_and_nested_sizes (tests.test_tirex_group_pilot.GroupSelectionTests.test_fixed_layer_records_and_nested_sizes) ... ok
+test_hungarian_controls_minimize_all_three_matching_costs (tests.test_tirex_group_pilot.GroupSelectionTests.test_hungarian_controls_minimize_all_three_matching_costs) ... ok
+test_standardized_ranking_and_deterministic_ties (tests.test_tirex_group_pilot.GroupSelectionTests.test_standardized_ranking_and_deterministic_ties) ... ok
+test_validation_selection_and_malformed_arrays_reject (tests.test_tirex_group_pilot.GroupSelectionTests.test_validation_selection_and_malformed_arrays_reject) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.011s
+
+OK

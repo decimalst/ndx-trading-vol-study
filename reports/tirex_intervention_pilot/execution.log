@@ -1,0 +1,19 @@
+Loading pinned cached checkpoint; protocol and source hashes frozen.
+Instrumentation passed after 4.6s. Starting discovery.
+Candidate identities, controls, and effect directions locked: [(11, 283), (0, 103), (5, 1095)]
+{"completed_interventions": 1, "total_interventions": 15, "layer": 0, "unit": 22, "elapsed_seconds": 26.990430499979993, "timestamp": "2026-10-21T22:25:44.993791+00:00"}
+{"completed_interventions": 2, "total_interventions": 15, "layer": 0, "unit": 103, "elapsed_seconds": 34.790220416995, "timestamp": "2026-10-21T22:25:52.793611+00:00"}
+{"completed_interventions": 3, "total_interventions": 15, "layer": 0, "unit": 336, "elapsed_seconds": 42.24224058398977, "timestamp": "2026-10-21T22:26:00.245660+00:00"}
+{"completed_interventions": 4, "total_interventions": 15, "layer": 0, "unit": 454, "elapsed_seconds": 49.839272458979394, "timestamp": "2026-10-21T22:26:07.842722+00:00"}
+{"completed_interventions": 5, "total_interventions": 15, "layer": 0, "unit": 895, "elapsed_seconds": 57.1772876669711, "timestamp": "2026-10-21T22:26:15.180767+00:00"}
+{"completed_interventions": 6, "total_interventions": 15, "layer": 5, "unit": 317, "elapsed_seconds": 64.57246262498666, "timestamp": "2026-10-21T22:26:22.575969+00:00"}
+{"completed_interventions": 7, "total_interventions": 15, "layer": 5, "unit": 727, "elapsed_seconds": 72.15555354199023, "timestamp": "2026-10-21T22:26:30.159090+00:00"}
+{"completed_interventions": 8, "total_interventions": 15, "layer": 5, "unit": 1095, "elapsed_seconds": 79.7095251249848, "timestamp": "2026-10-21T22:26:37.713090+00:00"}
+{"completed_interventions": 9, "total_interventions": 15, "layer": 5, "unit": 1195, "elapsed_seconds": 86.98529158398742, "timestamp": "2026-10-21T22:26:44.988886+00:00"}
+{"completed_interventions": 10, "total_interventions": 15, "layer": 5, "unit": 1347, "elapsed_seconds": 94.43277566699544, "timestamp": "2026-10-21T22:26:52.436399+00:00"}
+{"completed_interventions": 11, "total_interventions": 15, "layer": 11, "unit": 202, "elapsed_seconds": 101.7865978339978, "timestamp": "2026-10-21T22:26:59.790250+00:00"}
+{"completed_interventions": 12, "total_interventions": 15, "layer": 11, "unit": 283, "elapsed_seconds": 109.27665404198342, "timestamp": "2026-10-21T22:27:07.280335+00:00"}
+{"completed_interventions": 13, "total_interventions": 15, "layer": 11, "unit": 308, "elapsed_seconds": 116.72978641698137, "timestamp": "2026-10-21T22:27:14.733497+00:00"}
+{"completed_interventions": 14, "total_interventions": 15, "layer": 11, "unit": 766, "elapsed_seconds": 124.11918095898, "timestamp": "2026-10-21T22:27:22.122920+00:00"}
+{"completed_interventions": 15, "total_interventions": 15, "layer": 11, "unit": 978, "elapsed_seconds": 131.64531174997683, "timestamp": "2026-10-21T22:27:29.649080+00:00"}
+Pilot complete: results/run_v1/summary.json

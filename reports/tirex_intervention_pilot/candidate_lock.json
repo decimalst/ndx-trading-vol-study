@@ -1,0 +1,124 @@
+{
+  "timestamp_before_validation": "2026-10-21T22:25:29.762454+00:00",
+  "candidates": [
+    {
+      "layer": 11,
+      "unit": 283,
+      "family": "persistence",
+      "orientation": -1,
+      "activation_scale": 0.12569521101314324,
+      "standardized_effect": -3.2359333094482836,
+      "controls": [
+        766,
+        308,
+        202,
+        978
+      ],
+      "forecast_direction": -1,
+      "discovery_mean_bidirectional_shift": -0.00022379557776730508,
+      "control_matching": [
+        {
+          "unit": 766,
+          "activation_scale": 0.1264976432278661,
+          "outgoing_norm": 3.668846578442453
+        },
+        {
+          "unit": 308,
+          "activation_scale": 0.12090498851867618,
+          "outgoing_norm": 3.6627961758616943
+        },
+        {
+          "unit": 202,
+          "activation_scale": 0.1217897345929724,
+          "outgoing_norm": 3.5587062804974656
+        },
+        {
+          "unit": 978,
+          "activation_scale": 0.12021532287806679,
+          "outgoing_norm": 3.5474781507357713
+        }
+      ],
+      "outgoing_norm": 3.661098647323109
+    },
+    {
+      "layer": 0,
+      "unit": 103,
+      "family": "recency",
+      "orientation": 1,
+      "activation_scale": 0.0026237232553243213,
+      "standardized_effect": 3.2049380954424374,
+      "controls": [
+        336,
+        454,
+        895,
+        22
+      ],
+      "forecast_direction": -1,
+      "discovery_mean_bidirectional_shift": -2.4636585749249207e-06,
+      "control_matching": [
+        {
+          "unit": 336,
+          "activation_scale": 0.002647263718560616,
+          "outgoing_norm": 2.4432786257819332
+        },
+        {
+          "unit": 454,
+          "activation_scale": 0.0027445778651720605,
+          "outgoing_norm": 2.460777773694518
+        },
+        {
+          "unit": 895,
+          "activation_scale": 0.0025407465190389763,
+          "outgoing_norm": 2.6099560607515495
+        },
+        {
+          "unit": 22,
+          "activation_scale": 0.00278407183585285,
+          "outgoing_norm": 2.355277481014517
+        }
+      ],
+      "outgoing_norm": 2.452433139916905
+    },
+    {
+      "layer": 5,
+      "unit": 1095,
+      "family": "recovery",
+      "orientation": -1,
+      "activation_scale": 0.06049012837653728,
+      "standardized_effect": -3.2834064494488966,
+      "controls": [
+        317,
+        727,
+        1347,
+        1195
+      ],
+      "forecast_direction": -1,
+      "discovery_mean_bidirectional_shift": -0.0005060831899754703,
+      "control_matching": [
+        {
+          "unit": 317,
+          "activation_scale": 0.06020077704746396,
+          "outgoing_norm": 3.3837915543858745
+        },
+        {
+          "unit": 727,
+          "activation_scale": 0.05978038678625248,
+          "outgoing_norm": 3.4127734122011435
+        },
+        {
+          "unit": 1347,
+          "activation_scale": 0.05946999221469008,
+          "outgoing_norm": 3.4125328713085774
+        },
+        {
+          "unit": 1195,
+          "activation_scale": 0.0604077119737097,
+          "outgoing_norm": 3.331951309954736
+        }
+      ],
+      "outgoing_norm": 3.3987409108269575
+    }
+  ],
+  "discovery_sha256": "98b1a2327ebf6227aacf04ed7cfe8ee7f6745ac493d037fdcd73d31470aaa637",
+  "protocol_sha256": "a373067c5554277b448b7cd0eaf6409d26786b07bc5defc84dcb8a0b4f34ca3f"
+}

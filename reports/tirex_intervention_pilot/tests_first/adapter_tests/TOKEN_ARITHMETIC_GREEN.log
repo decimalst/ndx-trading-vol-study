@@ -1,0 +1,24 @@
+test_capture_false_can_patch_without_retaining_activations (test_tirex_intervention_adapter.AdapterTests.test_capture_false_can_patch_without_retaining_activations) ... ok
+test_capture_is_token63_not_last_future_token (test_tirex_intervention_adapter.AdapterTests.test_capture_is_token63_not_last_future_token) ... ok
+test_duplicate_layers_and_unsupported_indices_rejected (test_tirex_intervention_adapter.AdapterTests.test_duplicate_layers_and_unsupported_indices_rejected) ... ok
+test_eval_no_grad_one_batch_and_tta_disabled (test_tirex_intervention_adapter.AdapterTests.test_eval_no_grad_one_batch_and_tta_disabled) ... ok
+test_first_forecast_token_matches_output_window_slicing (test_tirex_intervention_adapter.AdapterTests.test_first_forecast_token_matches_output_window_slicing) ... ok
+test_first_forecast_token_rejects_unsupported_geometry (test_tirex_intervention_adapter.AdapterTests.test_first_forecast_token_rejects_unsupported_geometry) ... ok
+test_forecast_requires_explicit_load (test_tirex_intervention_adapter.AdapterTests.test_forecast_requires_explicit_load) ... ok
+test_hook_cleanup_after_model_exception (test_tirex_intervention_adapter.AdapterTests.test_hook_cleanup_after_model_exception) ... ok
+test_invalid_contexts_do_not_call_model (test_tirex_intervention_adapter.AdapterTests.test_invalid_contexts_do_not_call_model) ... ok
+test_invalid_patch_rejected_before_model (test_tirex_intervention_adapter.AdapterTests.test_invalid_patch_rejected_before_model) ... ok
+test_missing_hook_call_is_rejected_and_cleaned (test_tirex_intervention_adapter.AdapterTests.test_missing_hook_call_is_rejected_and_cleaned) ... ok
+test_nonfinite_output_rejected_after_cleanup (test_tirex_intervention_adapter.AdapterTests.test_nonfinite_output_rejected_after_cleanup) ... ok
+test_noop_swap_reproduces_output_exactly (test_tirex_intervention_adapter.AdapterTests.test_noop_swap_reproduces_output_exactly) ... ok
+test_patch_changes_exact_channel_token_and_matching_batch_rows (test_tirex_intervention_adapter.AdapterTests.test_patch_changes_exact_channel_token_and_matching_batch_rows) ... ok
+test_quantile_metadata_and_native_units (test_tirex_intervention_adapter.AdapterTests.test_quantile_metadata_and_native_units) ... ok
+test_repeated_hook_call_is_rejected_and_cleaned (test_tirex_intervention_adapter.AdapterTests.test_repeated_hook_call_is_rejected_and_cleaned) ... ok
+test_weight_norms_are_down_projection_column_norms (test_tirex_intervention_adapter.AdapterTests.test_weight_norms_are_down_projection_column_norms) ... ok
+test_wrong_activation_shape_rejected_and_cleaned (test_tirex_intervention_adapter.AdapterTests.test_wrong_activation_shape_rejected_and_cleaned) ... ok
+test_wrong_output_shape_rejected_after_cleanup (test_tirex_intervention_adapter.AdapterTests.test_wrong_output_shape_rejected_after_cleanup) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.127s
+
+OK

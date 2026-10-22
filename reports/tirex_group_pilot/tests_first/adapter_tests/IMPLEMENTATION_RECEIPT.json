@@ -1,0 +1,9 @@
+{
+  "timestamp_utc": "2026-10-22T12:44:01.856906+00:00",
+  "return_code": 0,
+  "test_sha256": "5c5b57caab3315a8ea048782fd30d547005747ccefb99c47cbf25afef1ebcd14",
+  "adapter_sha256": "71f92a03d39df7d69be0a4ba50ac2953c4d3503eb891a218bda717db432f6a0f",
+  "frozen_parent_adapter_sha256": "7dcc97e932c42fa17954b5e9ed28da715d9b7d51a24c2d85f653c9a6f9396a19",
+  "log_sha256": "b05ba71ae0e0fc9f2c19db605a6b13587f4a3651c7508f95aec72a5d66cd2ab8",
+  "real_model_loaded": false
+}

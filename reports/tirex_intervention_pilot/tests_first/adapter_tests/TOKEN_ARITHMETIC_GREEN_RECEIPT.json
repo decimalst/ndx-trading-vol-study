@@ -1,0 +1,12 @@
+{
+  "time_utc": "2026-10-21T22:22:43.698619+00:00",
+  "return_code": 0,
+  "test_sha256": "23bde70da72e3b3bd9923fb7db8c8e28345ca1523c581597bfb39a6493b588d6",
+  "adapter_sha256": "7dcc97e932c42fa17954b5e9ed28da715d9b7d51a24c2d85f653c9a6f9396a19",
+  "log_sha256": "555beb7fbc495466d15342fd1163cfad9e2ba1173cfe1d1b5b474109e15b6da5",
+  "real_checkpoint_loaded": false,
+  "installed_tirex_distribution": [
+    "tirex-2"
+  ],
+  "installed_tirex_version": "0.2.1"
+}

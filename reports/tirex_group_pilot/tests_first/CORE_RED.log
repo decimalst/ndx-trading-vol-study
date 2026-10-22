@@ -1,0 +1,19 @@
+test_tirex_group_pilot (unittest.loader._FailedTest.test_tirex_group_pilot) ... ERROR
+
+======================================================================
+ERROR: test_tirex_group_pilot (unittest.loader._FailedTest.test_tirex_group_pilot)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_tirex_group_pilot
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/tirex_group_pilot_20261022/tests/test_tirex_group_pilot.py", line 12, in <module>
+    from src.tirex_group_pilot import analyze_group, make_group_pairs, select_groups
+ModuleNotFoundError: No module named 'src.tirex_group_pilot'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

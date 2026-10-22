@@ -1,0 +1,11 @@
+test_bidirectional_interleaving_preserves_unsorted_member_order (tests.test_tirex_group_run_helpers.DonorValuesTests.test_bidirectional_interleaving_preserves_unsorted_member_order) ... ok
+test_input_values_and_member_and_mask_arrays_are_not_mutated (tests.test_tirex_group_run_helpers.DonorValuesTests.test_input_values_and_member_and_mask_arrays_are_not_mutated) ... ok
+test_malformed_or_nonfinite_activations_and_bad_members_reject (tests.test_tirex_group_run_helpers.DonorValuesTests.test_malformed_or_nonfinite_activations_and_bad_members_reject) ... ok
+test_mask_requires_boolean_shape_and_at_least_one_pair (tests.test_tirex_group_run_helpers.DonorValuesTests.test_mask_requires_boolean_shape_and_at_least_one_pair) ... ok
+test_no_unrequested_pair_filtering_occurs (tests.test_tirex_group_run_helpers.DonorValuesTests.test_no_unrequested_pair_filtering_occurs) ... ok
+test_pair_mask_selects_both_directions_in_original_pair_order (tests.test_tirex_group_run_helpers.DonorValuesTests.test_pair_mask_selects_both_directions_in_original_pair_order) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.000s
+
+OK

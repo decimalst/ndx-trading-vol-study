@@ -1,0 +1,16 @@
+{
+  "report_generator_sha256": "8b7bd9e392c8ec22cc93797c4867f505a9278d7b33ff94af3bcb04833e83d784",
+  "inputs": {
+    "protocol.json": "a373067c5554277b448b7cd0eaf6409d26786b07bc5defc84dcb8a0b4f34ca3f",
+    "model_metadata.json": "1edb7bd0f908fdc55fd67559f9e858a87f7ccdff7c39a7b73116bdc333e1f869",
+    "instrumentation.json": "8d0f2f49d9cede1ffb89e9bebb8ba3da6098f841d9984e61221b805b54e2a1e7",
+    "candidate_lock.json": "44fe40a488897e1a223b0587afa50d8c05abb40d04028f86b154ea65cb7f329b",
+    "summary.json": "a77fc61a90c740a798c12cbfab0c0968c49fc5afeb810e8734122a5fb0a56534",
+    "validation.npz": "c1560ae818c9731bfed128f926c3ec86e658935a48fb6c28fe88f29f2b65f73c"
+  },
+  "outputs": {
+    "REPORT.md": "705864f1e8253cdee0926608527e959cc0a004622e1215f36ed4bcdceea57a2d",
+    "comparison_intervals.png": "f3970d867fe7517d2a15a93c166023232e1c2cd4d63ca9c43b6e7d540b2c1733",
+    "activation_counterexamples.json": "c619ba9eddb9af780e8e8c10dc14eb35ce00f82d850e73a57e6b84f1f92c23a2"
+  }
+}

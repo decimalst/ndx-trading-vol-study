@@ -1,6 +1,6 @@
 # Follow-up research index
 
-Status reviewed **2026-09-16**. This index is additive: original protocols,
+Predictive-study status reviewed **2026-09-16**; synthetic interpretability follow-ups through **2026-10-22**. This index is additive: original protocols,
 failed runs, corrections and frozen findings retain their recorded bytes and
 verdicts. Intermediate plans can predate completed results; the links below
 point to the latest relevant outcome.
@@ -9,6 +9,49 @@ No new standalone volatility predictor has cleared the relevant study gates.
 Wave 27 produced an exploratory joint-density lead under shared marginals.
 The subsequent attribution experiments did not establish its mechanism, and
 the spread replays did not establish executable options profitability.
+
+## TiRex native-unit interpretability pilot (2026-10-21)
+
+The [synthetic activation-swap pilot](../reports/tirex_intervention_pilot/REPORT.md)
+tested normalization, counterexamples and bidirectional interventions in native
+feed-forward units. Tests were written first; discovery fixed three units and
+matched controls before evaluation on 72 new synthetic pairs.
+
+Two units preserved their activation-response direction on all 24 own-family
+evaluation pairs. Their forecast influence was small or context-dependent:
+**none of three units passed** either the predeclared influence test or the
+matched-control advantage test after the six-claim adjustment. Normalization
+and instrumentation checks passed. The recovery candidate's mean forecast
+effect reversed between short and long motifs despite stable activation contrast.
+
+This provides evidence about model sensitivity under synthetic interventions.
+It does not test future volatility accuracy, calibration or trading performance.
+The synthetic protocol, raw arrays, tests-first receipts and independent
+verification are saved with the report. Historical predictive results below
+retain their original scope and verdicts.
+
+## TiRex small-group intervention follow-up (2026-10-22)
+
+The [group-swap pilot](../reports/tirex_group_pilot/REPORT.md) tested nested
+four- and eight-unit groups for persistence, recency and recovery patterns.
+Layer choices came from the earlier pilot, but group selection, comparison
+groups and forecast directions were frozen on fresh discovery data before
+evaluation on **96 new synthetic pairs** (32 per family).
+
+**None of six groups passed all three predeclared comparisons** after adjusting
+18 claims: consistent directional influence, advantage over four approximately
+matched groups, and advantage over the strongest constituent on each pair.
+The swaps produced nonzero forecast changes, but the recency groups were close
+to their strongest constituent, and the eight-unit recovery effect reversed
+its discovery direction. Persistence comparison groups had larger effects.
+Joint effects were generally close to sums of individual effects; additivity
+is compatible with distributed coding and does not rule it out.
+
+Normalization and intervention checks passed, with 37 new contract tests and
+19 prior-adapter regression tests. The report includes raw results, tests-first
+receipts, matching limitations and an independent internal numerical audit.
+This is a reproducible interpretability case study, not evidence of improved
+volatility forecasts or trading returns.
 
 ## Models, signals and data
 

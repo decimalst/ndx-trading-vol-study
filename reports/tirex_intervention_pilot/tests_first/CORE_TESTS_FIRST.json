@@ -1,0 +1,10 @@
+{
+  "recorded_at_utc": "2026-10-21T22:19:03.111012+00:00",
+  "test_file": "tests/test_tirex_intervention_pilot.py",
+  "sha256": "5f590ae6292413ea1765bb185cd98733606c628a2bea39e11518d33a92162b58",
+  "test_count": 16,
+  "status": "EXPECTED_IMPORT_FAILURE_BEFORE_IMPLEMENTATION",
+  "red_log_sha256": "500c0df2c67c2f7f7a97bb51fdc02ec8c892c554f61535e752101e5342a24c17",
+  "implementation_present": false,
+  "assertion_note": "standardized_effect is signed; rank uses its absolute value; population activation SD pooled across all discovery pairs and both sides"
+}

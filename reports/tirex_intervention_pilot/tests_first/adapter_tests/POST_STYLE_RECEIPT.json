@@ -1,0 +1,21 @@
+{
+  "timestamp_utc": "2026-10-21T22:24:58.718317+00:00",
+  "changes": "Style-only import ordering/unused import removal and equivalent merged context managers after initial red/green stage. No test assertions changed. Root global ruff fixes preserved.",
+  "source_hashes": {
+    "src/tirex_intervention_adapter.py": "7dcc97e932c42fa17954b5e9ed28da715d9b7d51a24c2d85f653c9a6f9396a19",
+    "tests/test_tirex_intervention_adapter.py": "adbeef65696d77cb79b9869b999f332893780b89a8692906b87764273f7f950f"
+  },
+  "results": [
+    {
+      "name": "ADAPTER_POST_STYLE_TESTS",
+      "return_code": 0,
+      "log_sha256": "03a25aa15e128babdd444558e0cf842319396999d2cb615d811d1a591fb32c1e"
+    },
+    {
+      "name": "ADAPTER_POST_STYLE_LINT",
+      "return_code": 0,
+      "log_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    }
+  ],
+  "real_checkpoint_loaded_by_this_agent": false
+}

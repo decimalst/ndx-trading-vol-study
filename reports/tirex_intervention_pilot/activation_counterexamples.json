@@ -1,0 +1,185 @@
+[
+  {
+    "layer": 11,
+    "unit": 283,
+    "selection_family": "persistence",
+    "descriptive_by_family_variant": {
+      "persistence/all": {
+        "n_pairs": 24,
+        "mean_oriented_standardized_activation_contrast": 2.7051160800763454,
+        "positive_contrast_count": 24,
+        "positive_contrast_fraction": 1.0
+      },
+      "persistence/short": {
+        "n_pairs": 14,
+        "mean_oriented_standardized_activation_contrast": 2.9799822955725164,
+        "positive_contrast_count": 14,
+        "positive_contrast_fraction": 1.0
+      },
+      "persistence/long": {
+        "n_pairs": 10,
+        "mean_oriented_standardized_activation_contrast": 2.3203033783817046,
+        "positive_contrast_count": 10,
+        "positive_contrast_fraction": 1.0
+      },
+      "recency/all": {
+        "n_pairs": 24,
+        "mean_oriented_standardized_activation_contrast": 0.027699801061311324,
+        "positive_contrast_count": 17,
+        "positive_contrast_fraction": 0.7083333333333334
+      },
+      "recency/short": {
+        "n_pairs": 8,
+        "mean_oriented_standardized_activation_contrast": -0.03158763619193415,
+        "positive_contrast_count": 4,
+        "positive_contrast_fraction": 0.5
+      },
+      "recency/long": {
+        "n_pairs": 16,
+        "mean_oriented_standardized_activation_contrast": 0.05734351968793406,
+        "positive_contrast_count": 13,
+        "positive_contrast_fraction": 0.8125
+      },
+      "recovery/all": {
+        "n_pairs": 24,
+        "mean_oriented_standardized_activation_contrast": -0.0917574376773469,
+        "positive_contrast_count": 9,
+        "positive_contrast_fraction": 0.375
+      },
+      "recovery/short": {
+        "n_pairs": 14,
+        "mean_oriented_standardized_activation_contrast": 0.005286749964179902,
+        "positive_contrast_count": 7,
+        "positive_contrast_fraction": 0.5
+      },
+      "recovery/long": {
+        "n_pairs": 10,
+        "mean_oriented_standardized_activation_contrast": -0.22761930037548442,
+        "positive_contrast_count": 2,
+        "positive_contrast_fraction": 0.2
+      }
+    }
+  },
+  {
+    "layer": 0,
+    "unit": 103,
+    "selection_family": "recency",
+    "descriptive_by_family_variant": {
+      "persistence/all": {
+        "n_pairs": 24,
+        "mean_oriented_standardized_activation_contrast": 0.10367898488460998,
+        "positive_contrast_count": 12,
+        "positive_contrast_fraction": 0.5
+      },
+      "persistence/short": {
+        "n_pairs": 14,
+        "mean_oriented_standardized_activation_contrast": -0.014541435296476732,
+        "positive_contrast_count": 7,
+        "positive_contrast_fraction": 0.5
+      },
+      "persistence/long": {
+        "n_pairs": 10,
+        "mean_oriented_standardized_activation_contrast": 0.2691875731381314,
+        "positive_contrast_count": 5,
+        "positive_contrast_fraction": 0.5
+      },
+      "recency/all": {
+        "n_pairs": 24,
+        "mean_oriented_standardized_activation_contrast": 0.7287599401057486,
+        "positive_contrast_count": 15,
+        "positive_contrast_fraction": 0.625
+      },
+      "recency/short": {
+        "n_pairs": 8,
+        "mean_oriented_standardized_activation_contrast": 2.4240399868160947,
+        "positive_contrast_count": 7,
+        "positive_contrast_fraction": 0.875
+      },
+      "recency/long": {
+        "n_pairs": 16,
+        "mean_oriented_standardized_activation_contrast": -0.11888008324942445,
+        "positive_contrast_count": 8,
+        "positive_contrast_fraction": 0.5
+      },
+      "recovery/all": {
+        "n_pairs": 24,
+        "mean_oriented_standardized_activation_contrast": 0.06762656707230567,
+        "positive_contrast_count": 11,
+        "positive_contrast_fraction": 0.4583333333333333
+      },
+      "recovery/short": {
+        "n_pairs": 14,
+        "mean_oriented_standardized_activation_contrast": 0.3987971308418476,
+        "positive_contrast_count": 8,
+        "positive_contrast_fraction": 0.5714285714285714
+      },
+      "recovery/long": {
+        "n_pairs": 10,
+        "mean_oriented_standardized_activation_contrast": -0.3960122222050529,
+        "positive_contrast_count": 3,
+        "positive_contrast_fraction": 0.3
+      }
+    }
+  },
+  {
+    "layer": 5,
+    "unit": 1095,
+    "selection_family": "recovery",
+    "descriptive_by_family_variant": {
+      "persistence/all": {
+        "n_pairs": 24,
+        "mean_oriented_standardized_activation_contrast": 0.11234785710755418,
+        "positive_contrast_count": 14,
+        "positive_contrast_fraction": 0.5833333333333334
+      },
+      "persistence/short": {
+        "n_pairs": 14,
+        "mean_oriented_standardized_activation_contrast": -0.07355362953698588,
+        "positive_contrast_count": 4,
+        "positive_contrast_fraction": 0.2857142857142857
+      },
+      "persistence/long": {
+        "n_pairs": 10,
+        "mean_oriented_standardized_activation_contrast": 0.3726099384099103,
+        "positive_contrast_count": 10,
+        "positive_contrast_fraction": 1.0
+      },
+      "recency/all": {
+        "n_pairs": 24,
+        "mean_oriented_standardized_activation_contrast": -0.27926142792114544,
+        "positive_contrast_count": 9,
+        "positive_contrast_fraction": 0.375
+      },
+      "recency/short": {
+        "n_pairs": 8,
+        "mean_oriented_standardized_activation_contrast": -0.9502942248019094,
+        "positive_contrast_count": 0,
+        "positive_contrast_fraction": 0.0
+      },
+      "recency/long": {
+        "n_pairs": 16,
+        "mean_oriented_standardized_activation_contrast": 0.0562549705192365,
+        "positive_contrast_count": 9,
+        "positive_contrast_fraction": 0.5625
+      },
+      "recovery/all": {
+        "n_pairs": 24,
+        "mean_oriented_standardized_activation_contrast": 2.805908895342395,
+        "positive_contrast_count": 24,
+        "positive_contrast_fraction": 1.0
+      },
+      "recovery/short": {
+        "n_pairs": 14,
+        "mean_oriented_standardized_activation_contrast": 3.1232157225439496,
+        "positive_contrast_count": 14,
+        "positive_contrast_fraction": 1.0
+      },
+      "recovery/long": {
+        "n_pairs": 10,
+        "mean_oriented_standardized_activation_contrast": 2.3616793372602194,
+        "positive_contrast_count": 10,
+        "positive_contrast_fraction": 1.0
+      }
+    }
+  }
+]

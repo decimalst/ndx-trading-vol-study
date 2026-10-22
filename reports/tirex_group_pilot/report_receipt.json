@@ -1,0 +1,15 @@
+{
+  "generated_utc": "2026-10-22T13:09:54.219302+00:00",
+  "input_sha256": {
+    "summary.json": "7466ee6f882cadb7b5580ea610a3c41d01f8539311ea8eba16a6e263e97b57c5",
+    "protocol.json": "26e27158bf2e1aedd55a388197fb04d66ddff6d6d2ca6e05903ff30f0d63dad4"
+  },
+  "report_source_sha256": "83148bb6c749b1c31f6b169df1c5aa7b6ca51a74b7795e4e63ad82eda4b3da10",
+  "output_sha256": {
+    "REPORT.md": "660fee4c4c5ba8d33926858a771ee321e4a8ee0a2e78c8f0b2e105d0e6f31d08",
+    "comparison_intervals.png": "055b757113488de9930ad466e2b0ac7750d825666ae73bc1e5e0f29c3b7ff9a0"
+  },
+  "qualification_count": 0,
+  "plot_scale": "native log-variance quantities multiplied by 1000",
+  "raw_measurements_modified": false
+}

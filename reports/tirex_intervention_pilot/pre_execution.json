@@ -1,0 +1,13 @@
+{
+  "timestamp_before_model_load": "2026-10-21T22:25:18.002843+00:00",
+  "protocol_sha256": "a373067c5554277b448b7cd0eaf6409d26786b07bc5defc84dcb8a0b4f34ca3f",
+  "source_hashes": {
+    "src/tirex_intervention_pilot.py": "d165c2800710181f4b5e47b93c870035d2cb49adeac0ca39e713397ab9df863f",
+    "src/tirex_intervention_adapter.py": "7dcc97e932c42fa17954b5e9ed28da715d9b7d51a24c2d85f653c9a6f9396a19",
+    "src/tirex_intervention_run.py": "e8e52927c8f3673896a8941716394b9b58519c40421c29fa5e2de5f5cf764c43",
+    "src/tirex_intervention_statistics.py": "50448f0b1fafecb5b1021e5579cece1bbecf7549cca0e7b63c84446e7eec11f8",
+    "tests/test_tirex_intervention_statistics.py": "516926b2db87287db18d9da2d81cd309d306ee4114d38118e25577129e0d0b3b",
+    "tests/test_tirex_intervention_adapter.py": "adbeef65696d77cb79b9869b999f332893780b89a8692906b87764273f7f950f",
+    "tests/test_tirex_intervention_pilot.py": "5f590ae6292413ea1765bb185cd98733606c628a2bea39e11518d33a92162b58"
+  }
+}
