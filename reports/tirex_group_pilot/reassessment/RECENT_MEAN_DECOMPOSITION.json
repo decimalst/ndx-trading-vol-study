@@ -1,0 +1,265 @@
+{
+  "created_utc": "2026-10-22T13:41:31.235617+00:00",
+  "source": "Saved validation recency archives; no refit or reselection. This descriptive decomposition is post-result.",
+  "frozen_coefficients": [
+    3.115933555710773,
+    0.3720674103627681
+  ],
+  "cells": [
+    {
+      "variant": "short",
+      "recent32_mean": {
+        "n": 640,
+        "mean": -8.597273628452758,
+        "sd_population": 0.4648382609191087,
+        "sd_sample": 0.46520184193747904,
+        "min": -9.179016718104151,
+        "max": -7.631548346983569
+      },
+      "actual_level": {
+        "n": 640,
+        "mean": -0.07931572753059299,
+        "sd_population": 0.17617177278142185,
+        "sd_sample": 0.17630956847928317,
+        "min": -0.3173162639141083,
+        "max": 0.16459651291370392
+      },
+      "predicted_level": {
+        "n": 640,
+        "mean": -0.08283177940776279,
+        "sd_population": 0.17295116797770546,
+        "sd_sample": 0.17308644462566758,
+        "min": -0.299279424270793,
+        "max": 0.276483125190333
+      },
+      "level_residual_actual_minus_predicted": {
+        "n": 640,
+        "mean": 0.0035160518771697943,
+        "sd_population": 0.054424806465261606,
+        "sd_sample": 0.05446737573767935,
+        "min": -0.14095400334965236,
+        "max": 0.17831067400879608
+      },
+      "actual_paired_difference": {
+        "n": 320,
+        "mean": 0.3445437799196952,
+        "sd_population": 0.050677504200438685,
+        "sd_sample": 0.05075687387193869,
+        "min": 0.19975191727280617,
+        "max": 0.46119776368141174
+      },
+      "predicted_paired_difference": {
+        "n": 320,
+        "mean": 0.3136676333444993,
+        "sd_population": 0.09895145777407514,
+        "sd_sample": 0.0991064327441706,
+        "min": 0.12925866977366107,
+        "max": 0.4946481038568189
+      },
+      "difference_residual_actual_minus_predicted": {
+        "n": 320,
+        "mean": 0.030876146575195884,
+        "sd_population": 0.059978475789163654,
+        "sd_sample": 0.0600724123788905,
+        "min": -0.11976638331059863,
+        "max": 0.14331904920307315
+      },
+      "level_correlation": 0.9515626336174461,
+      "difference_correlation": 0.8736649283467102,
+      "saved_metrics": {
+        "n_pairs": 320,
+        "level_r2": 0.9041637169098011,
+        "paired_difference_r2": -0.771955950572959,
+        "level_rmse": 0.05453826344488914,
+        "paired_difference_rmse": 0.06745927649570718
+      },
+      "recipient": {
+        "recent32_mean": {
+          "n": 320,
+          "mean": -9.018793525934063,
+          "sd_population": 0.06246116174050148,
+          "sd_sample": 0.06255898664263644,
+          "min": -9.179016718104151,
+          "max": -8.728820668652405
+        },
+        "activation": {
+          "n": 320,
+          "mean": -0.2515876174904406,
+          "sd_population": 0.02566205666691127,
+          "sd_sample": 0.02570224785311514,
+          "min": -0.3173162639141083,
+          "max": -0.15286314487457275
+        },
+        "predicted_activation": {
+          "n": 320,
+          "mean": -0.23966559608001248,
+          "sd_population": 0.023239762697038393,
+          "sd_sample": 0.02327616015504474,
+          "min": -0.299279424270793,
+          "max": -0.13177614599573317
+        }
+      },
+      "donor": {
+        "recent32_mean": {
+          "n": 320,
+          "mean": -8.175753730971447,
+          "sd_population": 0.26998106036780645,
+          "sd_sample": 0.27040389705660356,
+          "min": -8.76469889964476,
+          "max": -7.631548346983569
+        },
+        "activation": {
+          "n": 320,
+          "mean": 0.09295616242925461,
+          "sd_population": 0.04537882498309529,
+          "sd_sample": 0.04544989601330465,
+          "min": -0.05579906329512596,
+          "max": 0.16459651291370392
+        },
+        "predicted_activation": {
+          "n": 320,
+          "mean": 0.07400203726448688,
+          "sd_population": 0.1004511539780439,
+          "sd_sample": 0.100608477729851,
+          "min": -0.14512526648945556,
+          "max": 0.276483125190333
+        }
+      }
+    },
+    {
+      "variant": "long",
+      "recent32_mean": {
+        "n": 640,
+        "mean": -9.008154820194028,
+        "sd_population": 0.06724933046531227,
+        "sd_sample": 0.06730193065361639,
+        "min": -9.187934340720465,
+        "max": -8.798763334309266
+      },
+      "actual_level": {
+        "n": 640,
+        "mean": -0.24350523867178708,
+        "sd_population": 0.026716570249587058,
+        "sd_sample": 0.02673746706173738,
+        "min": -0.3183315694332123,
+        "max": -0.15816770493984222
+      },
+      "predicted_level": {
+        "n": 640,
+        "mean": -0.23570728038570526,
+        "sd_population": 0.02502128423485874,
+        "sd_sample": 0.025040855050705652,
+        "min": -0.3025973810242375,
+        "max": -0.15779953248055012
+      },
+      "level_residual_actual_minus_predicted": {
+        "n": 640,
+        "mean": -0.007797958286081855,
+        "sd_population": 0.036641037338804396,
+        "sd_sample": 0.03666969673883625,
+        "min": -0.11122389303211788,
+        "max": 0.10507642110280635
+      },
+      "actual_paired_difference": {
+        "n": 320,
+        "mean": 0.019464275101199746,
+        "sd_population": 0.0057087445568192036,
+        "sd_sample": 0.005717685430828312,
+        "min": 0.0033958256244659424,
+        "max": 0.030731961131095886
+      },
+      "predicted_paired_difference": {
+        "n": 320,
+        "mean": 0.016057854272733287,
+        "sd_population": 0.005309079423742689,
+        "sd_sample": 0.00531739435354198,
+        "min": 0.003010244500790016,
+        "max": 0.030588470542473267
+      },
+      "difference_residual_actual_minus_predicted": {
+        "n": 320,
+        "mean": 0.003406420828466458,
+        "sd_population": 0.0021735934616389685,
+        "sd_sample": 0.002176997682145616,
+        "min": -0.006077331722314394,
+        "max": 0.006836995083572717
+      },
+      "level_correlation": -0.002038815509806528,
+      "difference_correlation": 0.9246939839402344,
+      "saved_metrics": {
+        "n_pairs": 320,
+        "level_r2": -0.9661287144510848,
+        "paired_difference_r2": 0.49897731112263,
+        "level_rmse": 0.037461630646504575,
+        "paired_difference_rmse": 0.004040818159369434
+      },
+      "recipient": {
+        "recent32_mean": {
+          "n": 320,
+          "mean": -9.029734047271557,
+          "sd_population": 0.06443825581279695,
+          "sd_sample": 0.06453917718366137,
+          "min": -9.187934340720465,
+          "max": -8.857320997036675
+        },
+        "activation": {
+          "n": 320,
+          "mean": -0.25323737622238696,
+          "sd_population": 0.024294343114957904,
+          "sd_sample": 0.024332392226940926,
+          "min": -0.3183315694332123,
+          "max": -0.18118378520011902
+        },
+        "predicted_activation": {
+          "n": 320,
+          "mean": -0.24373620752207187,
+          "sd_population": 0.02397537496856095,
+          "sd_sample": 0.024012924521668734,
+          "min": -0.3025973810242375,
+          "max": -0.17958693040843388
+        }
+      },
+      "donor": {
+        "recent32_mean": {
+          "n": 320,
+          "mean": -8.986575593116495,
+          "sd_population": 0.06293909755742373,
+          "sd_sample": 0.06303767098909634,
+          "min": -9.157347905048615,
+          "max": -8.798763334309266
+        },
+        "activation": {
+          "n": 320,
+          "mean": -0.2337731011211872,
+          "sd_population": 0.025454000506940865,
+          "sd_sample": 0.02549386584148075,
+          "min": -0.30944183468818665,
+          "max": -0.15816770493984222
+        },
+        "predicted_activation": {
+          "n": 320,
+          "mean": -0.22767835324933858,
+          "sd_population": 0.023417587038760266,
+          "sd_sample": 0.02345426300021326,
+          "min": -0.2912171651115849,
+          "max": -0.15779953248055012
+        }
+      }
+    }
+  ],
+  "paired_difference_variance_decomposition": {
+    "total_ss": 17.740525255334273,
+    "within_motif_ss": 0.8322557428481578,
+    "between_motif_ss": 16.908269512486115,
+    "between_motif_fraction": 0.9530873110649352
+  },
+  "level_variance_decomposition": {
+    "total_ss": 28.946794518555002,
+    "within_motif_ss": 20.320171936544032,
+    "between_motif_fraction": 0.29801650668025687
+  },
+  "short_level_variance_decomposition": {
+    "between_recipient_donor_fraction": 0.9562163988171302,
+    "interpretation": "Most pooled short-motif activation-level variance is the separation between recipient and donor means; this is descriptive and does not refit the surrogate."
+  }
+}

@@ -1,0 +1,22 @@
+test_calibration_inputs_reject_missing_nonfinite_or_mismatched_nulls (tests.test_tirex_stratified_core.CalibrationTests.test_calibration_inputs_reject_missing_nonfinite_or_mismatched_nulls) ... ok
+test_deadband_covers_repeat_noop_batch_jitter_and_float32_spacing (tests.test_tirex_stratified_core.CalibrationTests.test_deadband_covers_repeat_noop_batch_jitter_and_float32_spacing) ... ok
+test_normal_approximation_mde_uses_calibration_sd_and_two_sided_bonferroni (tests.test_tirex_stratified_core.CalibrationTests.test_normal_approximation_mde_uses_calibration_sd_and_two_sided_bonferroni) ... ok
+test_exact_balance_fixed_windows_and_unique_ids (tests.test_tirex_stratified_core.StratifiedGeneratorTests.test_exact_balance_fixed_windows_and_unique_ids) ... ok
+test_histogram_last_point_and_affine_moments_are_conditioned (tests.test_tirex_stratified_core.StratifiedGeneratorTests.test_histogram_last_point_and_affine_moments_are_conditioned) ... ok
+test_invalid_arguments_reject (tests.test_tirex_stratified_core.StratifiedGeneratorTests.test_invalid_arguments_reject) ... ok
+test_new_seeds_and_unchanged_old_seed_mappings (tests.test_tirex_stratified_core.StratifiedGeneratorTests.test_new_seeds_and_unchanged_old_seed_mappings) ... ok
+test_reproducible_disjoint_from_both_previous_pilots (tests.test_tirex_stratified_core.StratifiedGeneratorTests.test_reproducible_disjoint_from_both_previous_pilots) ... ok
+test_splits_use_same_parameter_law_and_recency_quiet_tail (tests.test_tirex_stratified_core.StratifiedGeneratorTests.test_splits_use_same_parameter_law_and_recency_quiet_tail) ... ok
+test_bootstrap_resamples_pairs_preserving_sides_quantiles_and_seed (tests.test_tirex_stratified_core.StratifiedSummaryTests.test_bootstrap_resamples_pairs_preserving_sides_quantiles_and_seed) ... ok
+test_degenerate_cases_and_exact_deadband_boundaries (tests.test_tirex_stratified_core.StratifiedSummaryTests.test_degenerate_cases_and_exact_deadband_boundaries) ... ok
+test_malformed_statistics_inputs_reject (tests.test_tirex_stratified_core.StratifiedSummaryTests.test_malformed_statistics_inputs_reject) ... ok
+test_primary_t_test_against_band_reconstructs_exactly (tests.test_tirex_stratified_core.StratifiedSummaryTests.test_primary_t_test_against_band_reconstructs_exactly) ... ok
+test_quantiles_width_crossings_and_separate_side_metrics (tests.test_tirex_stratified_core.StratifiedSummaryTests.test_quantiles_width_crossings_and_separate_side_metrics) ... ok
+test_raw_sign_and_bidirectional_effects_have_no_frozen_orientation (tests.test_tirex_stratified_core.StratifiedSummaryTests.test_raw_sign_and_bidirectional_effects_have_no_frozen_orientation) ... ok
+test_reversed_effect_has_same_primary_pvalue_opposite_estimate (tests.test_tirex_stratified_core.StratifiedSummaryTests.test_reversed_effect_has_same_primary_pvalue_opposite_estimate) ... ok
+test_strata_kept_separate_even_with_unequal_counts (tests.test_tirex_stratified_core.StratifiedSummaryTests.test_strata_kept_separate_even_with_unequal_counts) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.046s
+
+OK

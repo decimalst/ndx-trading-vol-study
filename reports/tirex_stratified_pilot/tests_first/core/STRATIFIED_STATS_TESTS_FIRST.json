@@ -1,0 +1,10 @@
+{
+  "recorded_at": "2026-10-22T13:30:09.292541+00:00",
+  "hashes": {
+    "src/tirex_stratified_core.py": "c857c16edff015e376ddfa50e0c0344197839c5f0fc79fa422c6922e68601609",
+    "tests/test_tirex_stratified_core.py": "289c83a9bca06cd50acd3913d432fe980ce6e1442c391eacf5aa86e9724b5ab3",
+    "test_evidence/STRATIFIED_STATS_RED.log": "3ed6568a5eab72135761bdb7dca3a84681aa514ae61843a3cd16fffe1bb608c9"
+  },
+  "expected_failure": "ImportError: cannot import name calibrate_deadband",
+  "scope": "11 numerical summary/calibration contracts written before statistics implementation; generator already implemented."
+}

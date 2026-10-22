@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "checks": 12664,
+  "verification_scope": "Internal numerical check by second implementation; no independent scientific replication or peer review",
+  "tau": 9.5367431640625e-06,
+  "n_primary_claims": 18,
+  "n_primary_detected": 17,
+  "checked": [
+    "all manifest/source hashes",
+    "frozen identities and threshold chronology",
+    "all fresh contexts and paired histograms",
+    "tau from saved no-op/repeat/batch arrays",
+    "all primary and calibration statistics with bootstrap intervals",
+    "calibration MDE",
+    "recent-mean surrogate fit and held-out scores",
+    "Holm18 labels",
+    "seeded random reference identities and raw descriptions",
+    "dose curvature and joint-minus-singleton calculations"
+  ],
+  "limitations": [
+    "Does not rerun the model",
+    "Does not by itself verify all inference code paths"
+  ]
+}

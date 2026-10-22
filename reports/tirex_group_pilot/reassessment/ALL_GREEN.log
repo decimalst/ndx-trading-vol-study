@@ -1,0 +1,25 @@
+test_binomial_cutoff_exact_tail_and_power (test_tirex_pilot_diagnostics.DiagnosticTests.test_binomial_cutoff_exact_tail_and_power) ... ok
+test_both_opposite_is_not_complement_of_both_expected (test_tirex_pilot_diagnostics.DiagnosticTests.test_both_opposite_is_not_complement_of_both_expected) ... ok
+test_direction_is_only_frozen_orientation_not_raw_sign (test_tirex_pilot_diagnostics.DiagnosticTests.test_direction_is_only_frozen_orientation_not_raw_sign) ... ok
+test_float32_is_cast_before_subtraction (test_tirex_pilot_diagnostics.DiagnosticTests.test_float32_is_cast_before_subtraction) ... ok
+test_floor_is_strict_and_binary_test_not_mean_test (test_tirex_pilot_diagnostics.DiagnosticTests.test_floor_is_strict_and_binary_test_not_mean_test) ... ok
+test_ids_align_and_reject_missing_or_duplicate (test_tirex_pilot_diagnostics.DiagnosticTests.test_ids_align_and_reject_missing_or_duplicate) ... ok
+test_shape_and_direction_guards (test_tirex_pilot_diagnostics.DiagnosticTests.test_shape_and_direction_guards) ... ok
+test_singleton_component_sums_and_envelope_are_distinct (test_tirex_pilot_diagnostics.DiagnosticTests.test_singleton_component_sums_and_envelope_are_distinct) ... ok
+test_largest_absolute_exclusion_is_named_as_descriptive (test_tirex_stratified_postdiagnostics.PostdiagnosticTests.test_largest_absolute_exclusion_is_named_as_descriptive) ... ok
+test_negative_paired_effect_does_not_mean_both_swap_directions (test_tirex_stratified_postdiagnostics.PostdiagnosticTests.test_negative_paired_effect_does_not_mean_both_swap_directions) ... ok
+test_tau_boundary_is_neutral (test_tirex_stratified_postdiagnostics.PostdiagnosticTests.test_tau_boundary_is_neutral) ... ok
+test_closed_form_affine_fit_and_paired_scoring (test_tirex_stratified_verifier.ReadoutVerifierTests.test_closed_form_affine_fit_and_paired_scoring) ... ok
+test_heldout_shift_is_not_refitted (test_tirex_stratified_verifier.ReadoutVerifierTests.test_heldout_shift_is_not_refitted) ... ok
+test_effect_raw_sign_no_orientation (test_tirex_stratified_verifier.VerifierTests.test_effect_raw_sign_no_orientation) ... ok
+test_holm_dependency_agnostic_and_order_preserved (test_tirex_stratified_verifier.VerifierTests.test_holm_dependency_agnostic_and_order_preserved) ... ok
+test_inside_band_is_one (test_tirex_stratified_verifier.VerifierTests.test_inside_band_is_one) ... ok
+test_invalid_inputs_fail (test_tirex_stratified_verifier.VerifierTests.test_invalid_inputs_fail) ... ok
+test_reference_two_sided_student_probability (test_tirex_stratified_verifier.VerifierTests.test_reference_two_sided_student_probability) ... ok
+test_tau_largest_absolute_jitter_or_float32_spacing (test_tirex_stratified_verifier.VerifierTests.test_tau_largest_absolute_jitter_or_float32_spacing) ... ok
+test_zero_variance_convention (test_tirex_stratified_verifier.VerifierTests.test_zero_variance_convention) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.002s
+
+OK

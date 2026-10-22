@@ -1,0 +1,111 @@
+{
+  "timestamp_before_calibration": "2026-10-22T13:35:31.715462+00:00",
+  "interventions": [
+    {
+      "group_id": "persistence_k4",
+      "family": "persistence",
+      "layer": 11,
+      "units": [
+        283,
+        790,
+        169,
+        1231
+      ]
+    },
+    {
+      "group_id": "persistence_k8",
+      "family": "persistence",
+      "layer": 11,
+      "units": [
+        283,
+        790,
+        169,
+        1231,
+        609,
+        865,
+        581,
+        926
+      ]
+    },
+    {
+      "group_id": "recency_k4",
+      "family": "recency",
+      "layer": 0,
+      "units": [
+        666,
+        495,
+        366,
+        943
+      ]
+    },
+    {
+      "group_id": "recency_k8",
+      "family": "recency",
+      "layer": 0,
+      "units": [
+        666,
+        495,
+        366,
+        943,
+        456,
+        992,
+        478,
+        656
+      ]
+    },
+    {
+      "group_id": "recovery_k4",
+      "family": "recovery",
+      "layer": 5,
+      "units": [
+        1095,
+        594,
+        530,
+        743
+      ]
+    },
+    {
+      "group_id": "recovery_k8",
+      "family": "recovery",
+      "layer": 5,
+      "units": [
+        1095,
+        594,
+        530,
+        743,
+        344,
+        38,
+        1255,
+        1273
+      ]
+    },
+    {
+      "group_id": "recency_U666",
+      "family": "recency",
+      "layer": 0,
+      "units": [
+        666
+      ]
+    },
+    {
+      "group_id": "recency_U103",
+      "family": "recency",
+      "layer": 0,
+      "units": [
+        103
+      ]
+    },
+    {
+      "group_id": "recovery_tail4",
+      "family": "recovery",
+      "layer": 5,
+      "units": [
+        344,
+        38,
+        1255,
+        1273
+      ]
+    }
+  ],
+  "protocol_sha256": "ea87030f51a336257cd3c39806f08317634f5a2a32ba8811ffa25513fb93c253"
+}

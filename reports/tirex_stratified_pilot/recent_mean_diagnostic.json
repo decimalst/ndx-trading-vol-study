@@ -1,0 +1,35 @@
+{
+  "frozen_model": {
+    "coefficients": [
+      3.115933555710773,
+      0.3720674103627681
+    ],
+    "rank": 2,
+    "calibration_pairs": 64,
+    "window": 32
+  },
+  "validation": {
+    "all": {
+      "n_pairs": 640,
+      "level_r2": 0.9032089924021546,
+      "paired_difference_r2": 0.9176198967101384,
+      "level_rmse": 0.04678565993057735,
+      "paired_difference_rmse": 0.04778641123123477
+    },
+    "short": {
+      "n_pairs": 320,
+      "level_r2": 0.9041637169098011,
+      "paired_difference_r2": -0.771955950572959,
+      "level_rmse": 0.05453826344488914,
+      "paired_difference_rmse": 0.06745927649570718
+    },
+    "long": {
+      "n_pairs": 320,
+      "level_r2": -0.9661287144510848,
+      "paired_difference_r2": 0.49897731112263,
+      "level_rmse": 0.037461630646504575,
+      "paired_difference_rmse": 0.004040818159369434
+    }
+  },
+  "interpretation": "One-feature activation surrogate; not an identified forecast mechanism or a proof of linearity."
+}

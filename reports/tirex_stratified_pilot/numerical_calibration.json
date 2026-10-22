@@ -1,0 +1,23 @@
+{
+  "deadband": 9.5367431640625e-06,
+  "multiplier": 10,
+  "observed_max_jitter": 0.0,
+  "max_float32_spacing": 9.5367431640625e-07,
+  "null_maxima": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "n_null_evaluations": 6,
+  "null_max_abs_errors": {
+    "repeat": 0.0,
+    "reversed_batch": 0.0,
+    "singleton_fixed_first_pair_per_cell": 0.0,
+    "self_value_L11": 0.0,
+    "self_value_L0": 0.0,
+    "self_value_L5": 0.0
+  }
+}

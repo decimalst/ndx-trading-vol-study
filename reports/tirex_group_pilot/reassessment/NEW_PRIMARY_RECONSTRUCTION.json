@@ -1,0 +1,979 @@
+{
+  "passed": true,
+  "checks": 684,
+  "scope": "Preflight full18primary stats and bootstrap intervals,Holm,andreadout; manifest/source/finalreference checks deferred untilcomplete",
+  "rows": [
+    {
+      "group_id": "persistence_k4",
+      "variant": "short",
+      "n": 320,
+      "mean_e": -0.00022721067070961,
+      "median_e": -0.0002218484878540039,
+      "both_negative_raw_orientation_beyond_tau": 92,
+      "both_positive_raw_orientation_beyond_tau": 0,
+      "mixed_or_one_neutral_beyond_tau": 228,
+      "both_recipient_negative_donor_positive_strict_zero": 115,
+      "quantiles_e": {
+        "min": -0.0004754066467285156,
+        "q01": -0.00040887832641601563,
+        "q05": -0.0003614902496337891,
+        "q25": -0.00027549266815185547,
+        "median": -0.0002218484878540039,
+        "q75": -0.0001717209815979004,
+        "q95": -0.00012334585189819334,
+        "q99": -5.649328231811523e-05,
+        "max": 1.1920928955078125e-06
+      },
+      "recipient_quantiles": [
+        -0.001049041748046875,
+        -0.0007916450500488281,
+        -0.0004737377166748047,
+        -0.00024826526641845697,
+        -0.00011968612670898438
+      ],
+      "donor_quantiles": [
+        -0.00023365020751953125,
+        -0.00014019012451171875,
+        -3.528594970703125e-05,
+        6.113052368164065e-05,
+        0.00014591217041015625
+      ],
+      "largest_abs_pair_ids": [
+        "stratified-validation-persistence-short-0017",
+        "stratified-validation-persistence-short-0162",
+        "stratified-validation-persistence-short-0319",
+        "stratified-validation-persistence-short-0113",
+        "stratified-validation-persistence-short-0003"
+      ],
+      "largest_abs_pair_effects": [
+        -0.0004754066467285156,
+        -0.0004589557647705078,
+        -0.0004334449768066406,
+        -0.0004096031188964844,
+        -0.0004057884216308594
+      ],
+      "mean_without_one_largest_abs": -0.0002264326268976385,
+      "mean_without_five_largest_abs": -0.0002238863990420387,
+      "mean_without_sixteen_largest_abs": -0.0002181279031853927,
+      "descriptive_note": "Post-result robustness diagnostics only; registered mean includes all320pairs. Dropped-largest means are sensitivity descriptions, not revised tests."
+    },
+    {
+      "group_id": "persistence_k4",
+      "variant": "long",
+      "n": 320,
+      "mean_e": -0.00013462603092193604,
+      "median_e": -0.00013589859008789062,
+      "both_negative_raw_orientation_beyond_tau": 63,
+      "both_positive_raw_orientation_beyond_tau": 0,
+      "mixed_or_one_neutral_beyond_tau": 257,
+      "both_recipient_negative_donor_positive_strict_zero": 78,
+      "quantiles_e": {
+        "min": -0.0002639293670654297,
+        "q01": -0.00023224592208862305,
+        "q05": -0.0002062678337097168,
+        "q25": -0.00016045570373535156,
+        "median": -0.00013589859008789062,
+        "q75": -0.00010675191879272461,
+        "q95": -6.864070892333984e-05,
+        "q99": -3.5793781280517563e-05,
+        "max": -4.76837158203125e-07
+      },
+      "recipient_quantiles": [
+        -0.0005755424499511719,
+        -0.0004712343215942383,
+        -0.0002987384796142578,
+        -0.0001586198806762695,
+        -8.344650268554688e-05
+      ],
+      "donor_quantiles": [
+        -0.000164031982421875,
+        -0.0001072406768798828,
+        -3.337860107421875e-05,
+        4.773139953613282e-05,
+        0.0001125335693359375
+      ],
+      "largest_abs_pair_ids": [
+        "stratified-validation-persistence-long-0044",
+        "stratified-validation-persistence-long-0108",
+        "stratified-validation-persistence-long-0023",
+        "stratified-validation-persistence-long-0112",
+        "stratified-validation-persistence-long-0191"
+      ],
+      "largest_abs_pair_effects": [
+        -0.0002639293670654297,
+        -0.00025463104248046875,
+        -0.00023555755615234375,
+        -0.00023365020751953125,
+        -0.0002262592315673828
+      ],
+      "mean_without_one_largest_abs": -0.00013422069131020095,
+      "mean_without_five_largest_abs": -0.00013290889679439484,
+      "mean_without_sixteen_largest_abs": -0.00012993890988199333,
+      "descriptive_note": "Post-result robustness diagnostics only; registered mean includes all320pairs. Dropped-largest means are sensitivity descriptions, not revised tests."
+    },
+    {
+      "group_id": "persistence_k8",
+      "variant": "short",
+      "n": 320,
+      "mean_e": 0.0020710714161396027,
+      "median_e": 0.0021239519119262695,
+      "both_negative_raw_orientation_beyond_tau": 0,
+      "both_positive_raw_orientation_beyond_tau": 320,
+      "mixed_or_one_neutral_beyond_tau": 0,
+      "both_recipient_negative_donor_positive_strict_zero": 0,
+      "quantiles_e": {
+        "min": 0.00023126602172851562,
+        "q01": 0.0005666971206665039,
+        "q05": 0.0007791996002197266,
+        "q25": 0.0013636350631713867,
+        "median": 0.0021239519119262695,
+        "q75": 0.0026983022689819336,
+        "q95": 0.0033879637718200687,
+        "q99": 0.0036171340942382814,
+        "max": 0.0038995742797851562
+      },
+      "recipient_quantiles": [
+        0.0001964569091796875,
+        0.0009121417999267579,
+        0.002997159957885742,
+        0.0051972150802612315,
+        0.006007671356201172
+      ],
+      "donor_quantiles": [
+        -0.0018472671508789062,
+        -0.0016416072845458984,
+        -0.0012392997741699219,
+        -0.0006335735321044921,
+        -0.00026607513427734375
+      ],
+      "largest_abs_pair_ids": [
+        "stratified-validation-persistence-short-0028",
+        "stratified-validation-persistence-short-0229",
+        "stratified-validation-persistence-short-0058",
+        "stratified-validation-persistence-short-0047",
+        "stratified-validation-persistence-short-0255"
+      ],
+      "largest_abs_pair_effects": [
+        0.0038995742797851562,
+        0.0038688182830810547,
+        0.0036346912384033203,
+        0.0036242008209228516,
+        0.003587007522583008
+      ],
+      "mean_without_one_largest_abs": 0.002065339432241027,
+      "mean_without_five_largest_abs": 0.002044852574666341,
+      "mean_without_sixteen_largest_abs": 0.001992282898802506,
+      "descriptive_note": "Post-result robustness diagnostics only; registered mean includes all320pairs. Dropped-largest means are sensitivity descriptions, not revised tests."
+    },
+    {
+      "group_id": "persistence_k8",
+      "variant": "long",
+      "n": 320,
+      "mean_e": 0.0006500750780105591,
+      "median_e": 0.0006837844848632812,
+      "both_negative_raw_orientation_beyond_tau": 2,
+      "both_positive_raw_orientation_beyond_tau": 280,
+      "mixed_or_one_neutral_beyond_tau": 38,
+      "both_recipient_negative_donor_positive_strict_zero": 2,
+      "quantiles_e": {
+        "min": -0.0007817745208740234,
+        "q01": -0.0002581644058227539,
+        "q05": -9.429454803466784e-06,
+        "q25": 0.0004366636276245117,
+        "median": 0.0006837844848632812,
+        "q75": 0.0009132623672485352,
+        "q95": 0.001220846176147461,
+        "q99": 0.0014145803451538087,
+        "max": 0.00150299072265625
+      },
+      "recipient_quantiles": [
+        -0.0015759468078613281,
+        -0.00029435157775878904,
+        0.0007913112640380859,
+        0.0016935825347900392,
+        0.0021238327026367188
+      ],
+      "donor_quantiles": [
+        -0.0010547637939453125,
+        -0.0008078575134277344,
+        -0.0005764961242675781,
+        -0.00028405189514160153,
+        0.0002841949462890625
+      ],
+      "largest_abs_pair_ids": [
+        "stratified-validation-persistence-long-0079",
+        "stratified-validation-persistence-long-0002",
+        "stratified-validation-persistence-long-0070",
+        "stratified-validation-persistence-long-0153",
+        "stratified-validation-persistence-long-0034"
+      ],
+      "largest_abs_pair_effects": [
+        0.00150299072265625,
+        0.0014710426330566406,
+        0.0014681816101074219,
+        0.0014181137084960938,
+        0.0013995170593261719
+      ],
+      "mean_without_one_largest_abs": 0.0006474013612561839,
+      "mean_without_five_largest_abs": 0.0006373466007293217,
+      "mean_without_sixteen_largest_abs": 0.000613929409729807,
+      "descriptive_note": "Post-result robustness diagnostics only; registered mean includes all320pairs. Dropped-largest means are sensitivity descriptions, not revised tests."
+    },
+    {
+      "group_id": "recency_k4",
+      "variant": "short",
+      "n": 320,
+      "mean_e": -0.004659044742584229,
+      "median_e": -0.004684925079345703,
+      "both_negative_raw_orientation_beyond_tau": 320,
+      "both_positive_raw_orientation_beyond_tau": 0,
+      "mixed_or_one_neutral_beyond_tau": 0,
+      "both_recipient_negative_donor_positive_strict_zero": 320,
+      "quantiles_e": {
+        "min": -0.00702667236328125,
+        "q01": -0.006535062789916992,
+        "q05": -0.005882525444030761,
+        "q25": -0.005243182182312012,
+        "median": -0.004684925079345703,
+        "q75": -0.004126191139221191,
+        "q95": -0.0031666040420532224,
+        "q99": -0.0025299596786499024,
+        "max": -0.00206756591796875
+      },
+      "recipient_quantiles": [
+        -0.007382392883300781,
+        -0.006094503402709961,
+        -0.0045108795166015625,
+        -0.0026338100433349605,
+        -0.0014629364013671875
+      ],
+      "donor_quantiles": [
+        0.0021352767944335938,
+        0.003033304214477539,
+        0.004827976226806641,
+        0.006495141983032227,
+        0.007506370544433594
+      ],
+      "largest_abs_pair_ids": [
+        "stratified-validation-recency-short-0259",
+        "stratified-validation-recency-short-0285",
+        "stratified-validation-recency-short-0180",
+        "stratified-validation-recency-short-0025",
+        "stratified-validation-recency-short-0024"
+      ],
+      "largest_abs_pair_effects": [
+        -0.00702667236328125,
+        -0.006774425506591797,
+        -0.006670951843261719,
+        -0.006538867950439453,
+        -0.006518840789794922
+      ],
+      "mean_without_one_largest_abs": -0.004651622712425304,
+      "mean_without_five_largest_abs": -0.004626554156106616,
+      "mean_without_sixteen_largest_abs": -0.004571131969753064,
+      "descriptive_note": "Post-result robustness diagnostics only; registered mean includes all320pairs. Dropped-largest means are sensitivity descriptions, not revised tests."
+    },
+    {
+      "group_id": "recency_k4",
+      "variant": "long",
+      "n": 320,
+      "mean_e": -0.00019153505563735963,
+      "median_e": -0.00018644332885742188,
+      "both_negative_raw_orientation_beyond_tau": 310,
+      "both_positive_raw_orientation_beyond_tau": 0,
+      "mixed_or_one_neutral_beyond_tau": 10,
+      "both_recipient_negative_donor_positive_strict_zero": 312,
+      "quantiles_e": {
+        "min": -0.0005078315734863281,
+        "q01": -0.00037395477294921875,
+        "q05": -0.00033969879150390624,
+        "q25": -0.00025391578674316406,
+        "median": -0.00018644332885742188,
+        "q75": -0.00012755393981933594,
+        "q95": -5.38349151611328e-05,
+        "q99": -4.51564788818358e-06,
+        "max": 4.291534423828125e-06
+      },
+      "recipient_quantiles": [
+        -0.0006055831909179688,
+        -0.0003607749938964844,
+        -0.00017642974853515625,
+        -2.6655197143554677e-05,
+        0.00013637542724609375
+      ],
+      "donor_quantiles": [
+        -2.956390380859375e-05,
+        6.570816040039063e-05,
+        0.00019884109497070312,
+        0.0003424644470214844,
+        0.00043010711669921875
+      ],
+      "largest_abs_pair_ids": [
+        "stratified-validation-recency-long-0272",
+        "stratified-validation-recency-long-0213",
+        "stratified-validation-recency-long-0025",
+        "stratified-validation-recency-long-0006",
+        "stratified-validation-recency-long-0152"
+      ],
+      "largest_abs_pair_effects": [
+        -0.0005078315734863281,
+        -0.0004000663757324219,
+        -0.0003790855407714844,
+        -0.0003743171691894531,
+        -0.0003724098205566406
+      ],
+      "mean_without_one_largest_abs": -0.00019054353050303684,
+      "mean_without_five_largest_abs": -0.00018811907087053572,
+      "mean_without_sixteen_largest_abs": -0.00018194160963359632,
+      "descriptive_note": "Post-result robustness diagnostics only; registered mean includes all320pairs. Dropped-largest means are sensitivity descriptions, not revised tests."
+    },
+    {
+      "group_id": "recency_k8",
+      "variant": "short",
+      "n": 320,
+      "mean_e": -0.004860702157020569,
+      "median_e": -0.004857301712036133,
+      "both_negative_raw_orientation_beyond_tau": 320,
+      "both_positive_raw_orientation_beyond_tau": 0,
+      "mixed_or_one_neutral_beyond_tau": 0,
+      "both_recipient_negative_donor_positive_strict_zero": 320,
+      "quantiles_e": {
+        "min": -0.00732421875,
+        "q01": -0.006957087516784668,
+        "q05": -0.006234073638916015,
+        "q25": -0.00549769401550293,
+        "median": -0.004857301712036133,
+        "q75": -0.004291534423828125,
+        "q95": -0.0032346487045288082,
+        "q99": -0.00260594367980957,
+        "max": -0.002105712890625
+      },
+      "recipient_quantiles": [
+        -0.008074760437011719,
+        -0.006375598907470703,
+        -0.004729747772216797,
+        -0.002898502349853515,
+        -0.001644134521484375
+      ],
+      "donor_quantiles": [
+        0.002140045166015625,
+        0.0031057357788085937,
+        0.004970073699951172,
+        0.006690502166748048,
+        0.007875442504882812
+      ],
+      "largest_abs_pair_ids": [
+        "stratified-validation-recency-short-0259",
+        "stratified-validation-recency-short-0180",
+        "stratified-validation-recency-short-0025",
+        "stratified-validation-recency-short-0031",
+        "stratified-validation-recency-short-0285"
+      ],
+      "largest_abs_pair_effects": [
+        -0.00732421875,
+        -0.007089138031005859,
+        -0.007023334503173828,
+        -0.006961345672607422,
+        -0.006938934326171875
+      ],
+      "mean_without_one_largest_abs": -0.004852979534472044,
+      "mean_without_five_largest_abs": -0.004825675298297216,
+      "mean_without_sixteen_largest_abs": -0.004765974847893966,
+      "descriptive_note": "Post-result robustness diagnostics only; registered mean includes all320pairs. Dropped-largest means are sensitivity descriptions, not revised tests."
+    },
+    {
+      "group_id": "recency_k8",
+      "variant": "long",
+      "n": 320,
+      "mean_e": -0.00013887882232666016,
+      "median_e": -0.00013327598571777344,
+      "both_negative_raw_orientation_beyond_tau": 267,
+      "both_positive_raw_orientation_beyond_tau": 10,
+      "mixed_or_one_neutral_beyond_tau": 43,
+      "both_recipient_negative_donor_positive_strict_zero": 275,
+      "quantiles_e": {
+        "min": -0.0004229545593261719,
+        "q01": -0.00036603927612304687,
+        "q05": -0.0002776145935058594,
+        "q25": -0.0002130270004272461,
+        "median": -0.00013327598571777344,
+        "q75": -7.104873657226562e-05,
+        "q95": 2.9563903808593967e-06,
+        "q99": 4.7140121459960944e-05,
+        "max": 9.1552734375e-05
+      },
+      "recipient_quantiles": [
+        -0.0004930496215820312,
+        -0.00031213760375976564,
+        -0.00012731552124023438,
+        2.4843215942382823e-05,
+        0.00024127960205078125
+      ],
+      "donor_quantiles": [
+        -7.82012939453125e-05,
+        -1.530647277832031e-05,
+        0.00013971328735351562,
+        0.0002708911895751953,
+        0.0003528594970703125
+      ],
+      "largest_abs_pair_ids": [
+        "stratified-validation-recency-long-0272",
+        "stratified-validation-recency-long-0152",
+        "stratified-validation-recency-long-0226",
+        "stratified-validation-recency-long-0213",
+        "stratified-validation-recency-long-0077"
+      ],
+      "largest_abs_pair_effects": [
+        -0.0004229545593261719,
+        -0.0003972053527832031,
+        -0.00037670135498046875,
+        -0.000370025634765625,
+        -0.0003490447998046875
+      ],
+      "mean_without_one_largest_abs": -0.00013798830277493755,
+      "mean_without_five_largest_abs": -0.0001350009252154638,
+      "mean_without_sixteen_largest_abs": -0.00012894837479842338,
+      "descriptive_note": "Post-result robustness diagnostics only; registered mean includes all320pairs. Dropped-largest means are sensitivity descriptions, not revised tests."
+    },
+    {
+      "group_id": "recovery_k4",
+      "variant": "short",
+      "n": 320,
+      "mean_e": -0.0014841288328170776,
+      "median_e": -0.0010449886322021484,
+      "both_negative_raw_orientation_beyond_tau": 193,
+      "both_positive_raw_orientation_beyond_tau": 8,
+      "mixed_or_one_neutral_beyond_tau": 119,
+      "both_recipient_negative_donor_positive_strict_zero": 195,
+      "quantiles_e": {
+        "min": -0.014245033264160156,
+        "q01": -0.005776810646057129,
+        "q05": -0.004438972473144531,
+        "q25": -0.0023114681243896484,
+        "median": -0.0010449886322021484,
+        "q75": -0.0003057718276977539,
+        "q95": 0.0002009630203247073,
+        "q99": 0.0007066917419433595,
+        "max": 0.0019593238830566406
+      },
+      "recipient_quantiles": [
+        -0.029811859130859375,
+        -0.007621955871582031,
+        -0.0015654563903808594,
+        1.2493133544921897e-05,
+        0.00087738037109375
+      ],
+      "donor_quantiles": [
+        -0.0064239501953125,
+        -0.0016901969909667968,
+        0.00023889541625976562,
+        0.0034547328948974715,
+        0.010364532470703125
+      ],
+      "largest_abs_pair_ids": [
+        "stratified-validation-recovery-short-0276",
+        "stratified-validation-recovery-short-0259",
+        "stratified-validation-recovery-short-0240",
+        "stratified-validation-recovery-short-0309",
+        "stratified-validation-recovery-short-0099"
+      ],
+      "largest_abs_pair_effects": [
+        -0.014245033264160156,
+        -0.007723331451416016,
+        -0.007575035095214844,
+        -0.005802631378173828,
+        -0.0056667327880859375
+      ],
+      "mean_without_one_largest_abs": -0.0014441259976091057,
+      "mean_without_five_largest_abs": -0.0013774871826171876,
+      "mean_without_sixteen_largest_abs": -0.0012484161477339896,
+      "descriptive_note": "Post-result robustness diagnostics only; registered mean includes all320pairs. Dropped-largest means are sensitivity descriptions, not revised tests."
+    },
+    {
+      "group_id": "recovery_k4",
+      "variant": "long",
+      "n": 320,
+      "mean_e": -0.0010392636060714722,
+      "median_e": -0.0006136894226074219,
+      "both_negative_raw_orientation_beyond_tau": 121,
+      "both_positive_raw_orientation_beyond_tau": 48,
+      "mixed_or_one_neutral_beyond_tau": 151,
+      "both_recipient_negative_donor_positive_strict_zero": 121,
+      "quantiles_e": {
+        "min": -0.03952503204345703,
+        "q01": -0.01566169261932373,
+        "q05": -0.0075472831726074215,
+        "q25": -0.0016024112701416016,
+        "median": -0.0006136894226074219,
+        "q75": 0.0009002685546875,
+        "q95": 0.0034349679946899425,
+        "q99": 0.005002198219299317,
+        "max": 0.0059871673583984375
+      },
+      "recipient_quantiles": [
+        -0.09198284149169922,
+        -0.019612550735473633,
+        -0.0013051033020019531,
+        0.0019792556762695318,
+        0.0045928955078125
+      ],
+      "donor_quantiles": [
+        -0.017147064208984375,
+        -0.009777545928955078,
+        -0.0010137557983398438,
+        0.00265750885009766,
+        0.005850791931152344
+      ],
+      "largest_abs_pair_ids": [
+        "stratified-validation-recovery-long-0119",
+        "stratified-validation-recovery-long-0158",
+        "stratified-validation-recovery-long-0032",
+        "stratified-validation-recovery-long-0023",
+        "stratified-validation-recovery-long-0289"
+      ],
+      "largest_abs_pair_effects": [
+        -0.03952503204345703,
+        -0.038861751556396484,
+        -0.03208494186401367,
+        -0.015960216522216797,
+        -0.0143890380859375
+      ],
+      "mean_without_one_largest_abs": -0.0009186185639480065,
+      "mean_without_five_largest_abs": -0.0006087091233995226,
+      "mean_without_sixteen_largest_abs": -0.00030348959722016985,
+      "descriptive_note": "Post-result robustness diagnostics only; registered mean includes all320pairs. Dropped-largest means are sensitivity descriptions, not revised tests."
+    },
+    {
+      "group_id": "recovery_k8",
+      "variant": "short",
+      "n": 320,
+      "mean_e": -0.0016620248556137086,
+      "median_e": -0.0012097358703613281,
+      "both_negative_raw_orientation_beyond_tau": 205,
+      "both_positive_raw_orientation_beyond_tau": 6,
+      "mixed_or_one_neutral_beyond_tau": 109,
+      "both_recipient_negative_donor_positive_strict_zero": 207,
+      "quantiles_e": {
+        "min": -0.015231132507324219,
+        "q01": -0.00612485408782959,
+        "q05": -0.005000805854797364,
+        "q25": -0.002488374710083008,
+        "median": -0.0012097358703613281,
+        "q75": -0.00039577484130859375,
+        "q95": 0.0002070426940917969,
+        "q99": 0.0007532739639282228,
+        "max": 0.0018343925476074219
+      },
+      "recipient_quantiles": [
+        -0.03170299530029297,
+        -0.007857036590576173,
+        -0.0013685226440429688,
+        0.00023341178894042985,
+        0.0013170242309570312
+      ],
+      "donor_quantiles": [
+        -0.006384849548339844,
+        -0.0014997482299804687,
+        0.0006957054138183594,
+        0.004666852951049805,
+        0.012089729309082031
+      ],
+      "largest_abs_pair_ids": [
+        "stratified-validation-recovery-short-0276",
+        "stratified-validation-recovery-short-0259",
+        "stratified-validation-recovery-short-0240",
+        "stratified-validation-recovery-short-0099",
+        "stratified-validation-recovery-short-0263"
+      ],
+      "largest_abs_pair_effects": [
+        -0.015231132507324219,
+        -0.01036834716796875,
+        -0.007427692413330078,
+        -0.006140708923339844,
+        -0.006057262420654297
+      ],
+      "mean_without_one_largest_abs": -0.0016194884679907916,
+      "mean_without_five_largest_abs": -0.0015448343186151414,
+      "mean_without_sixteen_largest_abs": -0.001402387493535092,
+      "descriptive_note": "Post-result robustness diagnostics only; registered mean includes all320pairs. Dropped-largest means are sensitivity descriptions, not revised tests."
+    },
+    {
+      "group_id": "recovery_k8",
+      "variant": "long",
+      "n": 320,
+      "mean_e": -0.0011782407760620116,
+      "median_e": -0.0007009506225585938,
+      "both_negative_raw_orientation_beyond_tau": 101,
+      "both_positive_raw_orientation_beyond_tau": 52,
+      "mixed_or_one_neutral_beyond_tau": 167,
+      "both_recipient_negative_donor_positive_strict_zero": 102,
+      "quantiles_e": {
+        "min": -0.04314994812011719,
+        "q01": -0.01941033363342285,
+        "q05": -0.007205605506896972,
+        "q25": -0.0019720792770385742,
+        "median": -0.0007009506225585938,
+        "q75": 0.0011408329010009766,
+        "q95": 0.0036463260650634777,
+        "q99": 0.005491576194763184,
+        "max": 0.006430149078369141
+      },
+      "recipient_quantiles": [
+        -0.09722900390625,
+        -0.01874880790710449,
+        -0.0007686614990234375,
+        0.0027657985687255878,
+        0.0054531097412109375
+      ],
+      "donor_quantiles": [
+        -0.016500473022460938,
+        -0.009931087493896484,
+        -0.00011968612670898438,
+        0.004443979263305665,
+        0.008068084716796875
+      ],
+      "largest_abs_pair_ids": [
+        "stratified-validation-recovery-long-0158",
+        "stratified-validation-recovery-long-0119",
+        "stratified-validation-recovery-long-0032",
+        "stratified-validation-recovery-long-0023",
+        "stratified-validation-recovery-long-0193"
+      ],
+      "largest_abs_pair_effects": [
+        -0.04314994812011719,
+        -0.04187726974487305,
+        -0.03535938262939453,
+        -0.020405292510986328,
+        -0.01516866683959961
+      ],
+      "mean_without_one_largest_abs": -0.0010466680257671679,
+      "mean_without_five_largest_abs": -0.0007018301222059462,
+      "mean_without_sixteen_largest_abs": -0.0003860169335415489,
+      "descriptive_note": "Post-result robustness diagnostics only; registered mean includes all320pairs. Dropped-largest means are sensitivity descriptions, not revised tests."
+    },
+    {
+      "group_id": "recency_U666",
+      "variant": "short",
+      "n": 320,
+      "mean_e": -0.004477240145206451,
+      "median_e": -0.004520893096923828,
+      "both_negative_raw_orientation_beyond_tau": 320,
+      "both_positive_raw_orientation_beyond_tau": 0,
+      "mixed_or_one_neutral_beyond_tau": 0,
+      "both_recipient_negative_donor_positive_strict_zero": 320,
+      "quantiles_e": {
+        "min": -0.006597042083740234,
+        "q01": -0.006430134773254394,
+        "q05": -0.005805063247680664,
+        "q25": -0.005021214485168457,
+        "median": -0.004520893096923828,
+        "q75": -0.003937721252441406,
+        "q95": -0.002979183197021484,
+        "q99": -0.002442946434020996,
+        "max": -0.001964569091796875
+      },
+      "recipient_quantiles": [
+        -0.006976127624511719,
+        -0.005864095687866211,
+        -0.004436969757080078,
+        -0.0025831699371337883,
+        -0.0015115737915039062
+      ],
+      "donor_quantiles": [
+        0.002010345458984375,
+        0.002942180633544922,
+        0.004548072814941406,
+        0.006200838088989258,
+        0.007115364074707031
+      ],
+      "largest_abs_pair_ids": [
+        "stratified-validation-recency-short-0259",
+        "stratified-validation-recency-short-0285",
+        "stratified-validation-recency-short-0024",
+        "stratified-validation-recency-short-0025",
+        "stratified-validation-recency-short-0290"
+      ],
+      "largest_abs_pair_effects": [
+        -0.006597042083740234,
+        -0.006558418273925781,
+        -0.006478309631347656,
+        -0.006451606750488281,
+        -0.006338596343994141
+      ],
+      "mean_without_one_largest_abs": -0.004470594998063712,
+      "mean_without_five_largest_abs": -0.004445374201214503,
+      "mean_without_sixteen_largest_abs": -0.004390633419940346,
+      "descriptive_note": "Post-result robustness diagnostics only; registered mean includes all320pairs. Dropped-largest means are sensitivity descriptions, not revised tests."
+    },
+    {
+      "group_id": "recency_U666",
+      "variant": "long",
+      "n": 320,
+      "mean_e": -0.0002282455563545227,
+      "median_e": -0.00022840499877929688,
+      "both_negative_raw_orientation_beyond_tau": 318,
+      "both_positive_raw_orientation_beyond_tau": 0,
+      "mixed_or_one_neutral_beyond_tau": 2,
+      "both_recipient_negative_donor_positive_strict_zero": 319,
+      "quantiles_e": {
+        "min": -0.0004496574401855469,
+        "q01": -0.0004058122634887695,
+        "q05": -0.00036289691925048826,
+        "q25": -0.000286102294921875,
+        "median": -0.00022840499877929688,
+        "q75": -0.00017070770263671875,
+        "q95": -9.937286376953118e-05,
+        "q99": -5.41543960571289e-05,
+        "max": -4.1961669921875e-05
+      },
+      "recipient_quantiles": [
+        -0.0005092620849609375,
+        -0.00035190582275390625,
+        -0.00019550323486328125,
+        -6.670951843261718e-05,
+        1.9073486328125e-06
+      ],
+      "donor_quantiles": [
+        3.4332275390625e-05,
+        0.00011334419250488282,
+        0.0002560615539550781,
+        0.0003844261169433594,
+        0.0004482269287109375
+      ],
+      "largest_abs_pair_ids": [
+        "stratified-validation-recency-long-0272",
+        "stratified-validation-recency-long-0025",
+        "stratified-validation-recency-long-0057",
+        "stratified-validation-recency-long-0024",
+        "stratified-validation-recency-long-0075"
+      ],
+      "largest_abs_pair_effects": [
+        -0.0004496574401855469,
+        -0.0004191398620605469,
+        -0.00041484832763671875,
+        -0.0004062652587890625,
+        -0.0004038810729980469
+      ],
+      "mean_without_one_largest_abs": -0.0002275514752139866,
+      "mean_without_five_largest_abs": -0.00022522154308500744,
+      "mean_without_sixteen_largest_abs": -0.00021964782162716515,
+      "descriptive_note": "Post-result robustness diagnostics only; registered mean includes all320pairs. Dropped-largest means are sensitivity descriptions, not revised tests."
+    },
+    {
+      "group_id": "recency_U103",
+      "variant": "short",
+      "n": 320,
+      "mean_e": -1.713186502456665e-05,
+      "median_e": -8.106231689453125e-06,
+      "both_negative_raw_orientation_beyond_tau": 71,
+      "both_positive_raw_orientation_beyond_tau": 4,
+      "mixed_or_one_neutral_beyond_tau": 245,
+      "both_recipient_negative_donor_positive_strict_zero": 190,
+      "quantiles_e": {
+        "min": -0.0002574920654296875,
+        "q01": -0.00011521339416503906,
+        "q05": -7.646083831787109e-05,
+        "q25": -2.1457672119140625e-05,
+        "median": -8.106231689453125e-06,
+        "q75": -2.2649765014648438e-06,
+        "q95": 5.745887756347662e-06,
+        "q99": 1.8506050109863282e-05,
+        "max": 2.384185791015625e-05
+      },
+      "recipient_quantiles": [
+        -0.000186920166015625,
+        -5.440711975097656e-05,
+        -1.9073486328125e-06,
+        1.6260147094726573e-05,
+        4.38690185546875e-05
+      ],
+      "donor_quantiles": [
+        -2.956390380859375e-05,
+        -4.76837158203125e-06,
+        1.4781951904296875e-05,
+        0.00011067390441894532,
+        0.00032806396484375
+      ],
+      "largest_abs_pair_ids": [
+        "stratified-validation-recency-short-0182",
+        "stratified-validation-recency-short-0018",
+        "stratified-validation-recency-short-0232",
+        "stratified-validation-recency-short-0157",
+        "stratified-validation-recency-short-0200"
+      ],
+      "largest_abs_pair_effects": [
+        -0.0002574920654296875,
+        -0.00011968612670898438,
+        -0.00011777877807617188,
+        -0.00011539459228515625,
+        -0.00011444091796875
+      ],
+      "mean_without_one_largest_abs": -1.637838477251298e-05,
+      "mean_without_five_largest_abs": -1.510287088061136e-05,
+      "mean_without_sixteen_largest_abs": -1.2339730011789421e-05,
+      "descriptive_note": "Post-result robustness diagnostics only; registered mean includes all320pairs. Dropped-largest means are sensitivity descriptions, not revised tests."
+    },
+    {
+      "group_id": "recency_U103",
+      "variant": "long",
+      "n": 320,
+      "mean_e": -1.531839370727539e-06,
+      "median_e": 0.0,
+      "both_negative_raw_orientation_beyond_tau": 29,
+      "both_positive_raw_orientation_beyond_tau": 20,
+      "mixed_or_one_neutral_beyond_tau": 271,
+      "both_recipient_negative_donor_positive_strict_zero": 94,
+      "quantiles_e": {
+        "min": -0.0001678466796875,
+        "q01": -6.135463714599609e-05,
+        "q05": -2.8800964355468746e-05,
+        "q25": -5.7220458984375e-06,
+        "median": 0.0,
+        "q75": 4.76837158203125e-06,
+        "q95": 1.6713142395019537e-05,
+        "q99": 3.5696029663085944e-05,
+        "max": 0.00015544891357421875
+      },
+      "recipient_quantiles": [
+        -0.0001850128173828125,
+        -3.2567977905273436e-05,
+        -9.5367431640625e-07,
+        2.193450927734375e-05,
+        0.00017833709716796875
+      ],
+      "donor_quantiles": [
+        -0.00013256072998046875,
+        -2.288818359375e-05,
+        -9.5367431640625e-07,
+        2.7751922607421897e-05,
+        0.0001926422119140625
+      ],
+      "largest_abs_pair_ids": [
+        "stratified-validation-recency-long-0019",
+        "stratified-validation-recency-long-0212",
+        "stratified-validation-recency-long-0269",
+        "stratified-validation-recency-long-0005",
+        "stratified-validation-recency-long-0153"
+      ],
+      "largest_abs_pair_effects": [
+        -0.0001678466796875,
+        0.00015544891357421875,
+        -0.00014734268188476562,
+        -6.866455078125e-05,
+        -6.198883056640625e-05
+      ],
+      "mean_without_one_largest_abs": -1.0104762349382837e-06,
+      "mean_without_five_largest_abs": -6.342691088479662e-07,
+      "mean_without_sixteen_largest_abs": 1.1920928955078125e-07,
+      "descriptive_note": "Post-result robustness diagnostics only; registered mean includes all320pairs. Dropped-largest means are sensitivity descriptions, not revised tests."
+    },
+    {
+      "group_id": "recovery_tail4",
+      "variant": "short",
+      "n": 320,
+      "mean_e": -0.00017712116241455078,
+      "median_e": -0.0001308917999267578,
+      "both_negative_raw_orientation_beyond_tau": 58,
+      "both_positive_raw_orientation_beyond_tau": 17,
+      "mixed_or_one_neutral_beyond_tau": 245,
+      "both_recipient_negative_donor_positive_strict_zero": 60,
+      "quantiles_e": {
+        "min": -0.0026636123657226562,
+        "q01": -0.0012797403335571289,
+        "q05": -0.0008880615234374999,
+        "q25": -0.0003266334533691406,
+        "median": -0.0001308917999267578,
+        "q75": -1.811981201171875e-05,
+        "q95": 0.0002296924591064454,
+        "q99": 0.0013426733016967782,
+        "max": 0.0037555694580078125
+      },
+      "recipient_quantiles": [
+        -0.005631446838378906,
+        -0.0007183074951171874,
+        0.000152587890625,
+        0.0006957054138183595,
+        0.0020046234130859375
+      ],
+      "donor_quantiles": [
+        -0.006897926330566406,
+        -0.0004547595977783203,
+        0.00039196014404296875,
+        0.0015428543090820316,
+        0.004250526428222656
+      ],
+      "largest_abs_pair_ids": [
+        "stratified-validation-recovery-short-0217",
+        "stratified-validation-recovery-short-0259",
+        "stratified-validation-recovery-short-0031",
+        "stratified-validation-recovery-short-0172",
+        "stratified-validation-recovery-short-0115"
+      ],
+      "largest_abs_pair_effects": [
+        0.0037555694580078125,
+        -0.0026636123657226562,
+        0.002105236053466797,
+        -0.0019183158874511719,
+        0.0017228126525878906
+      ],
+      "mean_without_one_largest_abs": -0.0001894493461776303,
+      "mean_without_five_largest_abs": -0.00018946178375728548,
+      "mean_without_sixteen_largest_abs": -0.00016157250655324837,
+      "descriptive_note": "Post-result robustness diagnostics only; registered mean includes all320pairs. Dropped-largest means are sensitivity descriptions, not revised tests."
+    },
+    {
+      "group_id": "recovery_tail4",
+      "variant": "long",
+      "n": 320,
+      "mean_e": -0.00013643503189086914,
+      "median_e": -0.00010371208190917969,
+      "both_negative_raw_orientation_beyond_tau": 35,
+      "both_positive_raw_orientation_beyond_tau": 37,
+      "mixed_or_one_neutral_beyond_tau": 248,
+      "both_recipient_negative_donor_positive_strict_zero": 38,
+      "quantiles_e": {
+        "min": -0.005042076110839844,
+        "q01": -0.003129129409790039,
+        "q05": -0.0010371685028076171,
+        "q25": -0.0003508329391479492,
+        "median": -0.00010371208190917969,
+        "q75": 0.00018131732940673828,
+        "q95": 0.0007710218429565445,
+        "q99": 0.0015337371826171875,
+        "max": 0.0027923583984375
+      },
+      "recipient_quantiles": [
+        -0.010684967041015625,
+        -0.0008308887481689452,
+        0.00042629241943359375,
+        0.0019120216369628916,
+        0.0049533843994140625
+      ],
+      "donor_quantiles": [
+        -0.001789093017578125,
+        -0.0006906986236572265,
+        0.0005745887756347656,
+        0.002131175994873047,
+        0.004082679748535156
+      ],
+      "largest_abs_pair_ids": [
+        "stratified-validation-recovery-long-0158",
+        "stratified-validation-recovery-long-0023",
+        "stratified-validation-recovery-long-0020",
+        "stratified-validation-recovery-long-0032",
+        "stratified-validation-recovery-long-0200"
+      ],
+      "largest_abs_pair_effects": [
+        -0.005042076110839844,
+        -0.004754066467285156,
+        -0.0035381317138671875,
+        -0.003296375274658203,
+        0.0027923583984375
+      ],
+      "mean_without_one_largest_abs": -0.00012105684669040213,
+      "mean_without_five_largest_abs": -9.466958424401662e-05,
+      "mean_without_sixteen_largest_abs": -8.76454930556448e-05,
+      "descriptive_note": "Post-result robustness diagnostics only; registered mean includes all320pairs. Dropped-largest means are sensitivity descriptions, not revised tests."
+    }
+  ]
+}

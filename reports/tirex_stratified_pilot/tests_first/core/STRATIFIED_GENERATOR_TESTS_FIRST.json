@@ -1,0 +1,8 @@
+{
+  "recorded_at": "2026-10-22T13:28:02.170099+00:00",
+  "implementation_exists": false,
+  "tests_sha256": "695d949eab0d16d0eb801b0b86ff9a188fdb0a4b302dc72892a9e3b7e649bed8",
+  "red_log_sha256": "a6cd34f683fdc31bf0865ef191199ce720d41f896e74e943409970f376c0cda8",
+  "expected_failure": "ModuleNotFoundError: No module named src.tirex_stratified_core",
+  "scope": "Six generator contracts exist before implementation."
+}

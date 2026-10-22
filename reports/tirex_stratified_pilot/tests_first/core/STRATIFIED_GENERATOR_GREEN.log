@@ -1,0 +1,11 @@
+test_exact_balance_fixed_windows_and_unique_ids (tests.test_tirex_stratified_core.StratifiedGeneratorTests.test_exact_balance_fixed_windows_and_unique_ids) ... ok
+test_histogram_last_point_and_affine_moments_are_conditioned (tests.test_tirex_stratified_core.StratifiedGeneratorTests.test_histogram_last_point_and_affine_moments_are_conditioned) ... ok
+test_invalid_arguments_reject (tests.test_tirex_stratified_core.StratifiedGeneratorTests.test_invalid_arguments_reject) ... ok
+test_new_seeds_and_unchanged_old_seed_mappings (tests.test_tirex_stratified_core.StratifiedGeneratorTests.test_new_seeds_and_unchanged_old_seed_mappings) ... ok
+test_reproducible_disjoint_from_both_previous_pilots (tests.test_tirex_stratified_core.StratifiedGeneratorTests.test_reproducible_disjoint_from_both_previous_pilots) ... ok
+test_splits_use_same_parameter_law_and_recency_quiet_tail (tests.test_tirex_stratified_core.StratifiedGeneratorTests.test_splits_use_same_parameter_law_and_recency_quiet_tail) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.040s
+
+OK

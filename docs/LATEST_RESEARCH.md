@@ -15,43 +15,71 @@ the spread replays did not establish executable options profitability.
 The [synthetic activation-swap pilot](../reports/tirex_intervention_pilot/REPORT.md)
 tested normalization, counterexamples and bidirectional interventions in native
 feed-forward units. Tests were written first; discovery fixed three units and
-matched controls before evaluation on 72 new synthetic pairs.
+approximately matched reference units before evaluation on 72 new synthetic pairs.
 
 Two units preserved their activation-response direction on all 24 own-family
 evaluation pairs. Their forecast influence was small or context-dependent:
-**none of three units passed** either the predeclared influence test or the
-matched-control advantage test after the six-claim adjustment. Normalization
+the original thresholded probability test did not qualify any selected unit.
+That result does not establish zero influence; its threshold and power are
+examined in the [later reassessment](../reports/tirex_group_pilot/REASSESSMENT.md). Normalization
 and instrumentation checks passed. The recovery candidate's mean forecast
 effect reversed between short and long motifs despite stable activation contrast.
 
 This provides evidence about model sensitivity under synthetic interventions.
 It does not test future volatility accuracy, calibration or trading performance.
-The synthetic protocol, raw arrays, tests-first receipts and independent
-verification are saved with the report. Historical predictive results below
+The synthetic protocol, raw arrays, tests-first receipts and
+numerical checking by a second implementation are saved with the report.
+These are internal AI-assisted checks, not independent replication. Historical predictive results below
 retain their original scope and verdicts.
 
-## TiRex small-group intervention follow-up (2026-10-22)
+## TiRex group-pilot reassessment and fresh stratified follow-up (2026-10-22)
 
-The [group-swap pilot](../reports/tirex_group_pilot/REPORT.md) tested nested
-four- and eight-unit groups for persistence, recency and recovery patterns.
-Layer choices came from the earlier pilot, but group selection, comparison
-groups and forecast directions were frozen on fresh discovery data before
-evaluation on **96 new synthetic pairs** (32 per family).
+The [original group pilot](../reports/tirex_group_pilot/REPORT.md) and its raw
+artifacts remain unchanged. Its headline “0/6” summarized a restrictive pooled
+criterion, not absence of forecast influence. The [retrospective reassessment](../reports/tirex_group_pilot/REASSESSMENT.md)
+reports all raw p-values and counts, discovery-versus-validation effects,
+stratified results, and power. At the strictest Holm step the original test
+needed 25/32 threshold exceedances; 80% power required a true exceedance
+probability of about 82%. Pooling the short recency cases (16/16 exceedances)
+with long cases (0/16) hid their different behavior.
 
-**None of six groups passed all three predeclared comparisons** after adjusting
-18 claims: consistent directional influence, advantage over four approximately
-matched groups, and advantage over the strongest constituent on each pair.
-The swaps produced nonzero forecast changes, but the recency groups were close
-to their strongest constituent, and the eight-unit recovery effect reversed
-its discovery direction. Persistence comparison groups had larger effects.
-Joint effects were generally close to sums of individual effects; additivity
-is compatible with distributed coding and does not rule it out.
+The recency result concentrates in **L0/U666**, a different unit from **U103**
+in the earlier pilot. Recovery’s four- and eight-unit raw validation effects
+are both negative; the apparent sign flip used different discovery-frozen
+orientations. The eight-unit group did reverse its small, unstable discovery
+mean. Persistence reference groups moved forecasts more than the selected
+groups, but this does not establish global layer sensitivity or irrelevance
+of the selected units. Additivity alone does not diagnose superposition.
 
-Normalization and intervention checks passed, with 37 new contract tests and
-19 prior-adapter regression tests. The report includes raw results, tests-first
-receipts, matching limitations and an independent internal numerical audit.
-This is a reproducible interpretability case study, not evidence of improved
-volatility forecasts or trading returns.
+The [fresh stratified study](../reports/tirex_stratified_pilot/REPORT.md) fixes
+those nine intervention identities before new data, uses matching calibration
+and validation motif laws, and estimates effects separately for **320 pairs
+per family/motif cell**. It calibrates a numerical resolution band, reports
+mean-effect sensitivity, uses random-group references on a disclosed smaller
+subset, and examines recovery dose response and a recent-mean surrogate for
+U666. These are intervention diagnostics, not prediction-accuracy tests.
+
+Across **1,920 fresh validation pairs**, U666's raw mean effect is −4.477 milli
+log-variance for short motifs and −0.228 for long motifs. Its paired effect is
+negative on all 320 cases in each stratum; both individual swap directions
+agree on 320 short and 319 long cases using zero as the sign boundary. The
+short-motif groups add little mean magnitude; the long-motif groups attenuate
+the singleton effect. Recovery's prefix, added four and full eight all have
+negative means in both strata, with heterogeneous and tail-sensitive responses.
+
+On the fixed 16-pair-per-motif reference subset, every random four-unit
+persistence group and most random eight-unit groups move forecasts more than
+the selected groups. The recency and recovery groups move forecasts more than
+most random references. These are descriptive ranks, not exchangeability-based
+tests. Dose-dependent recovery residuals are compatible with ordinary local
+curvature. A recent-mean surrogate fits broad contrasts but has negative R²
+in two within-stratum diagnostics, so it does not establish a general linear
+mechanism. **75 tests and 12,664 internal numerical checks passed.**
+
+All new numerical audits are described as **internal checks by a second
+implementation**. Neither AI assistance nor separate code constitutes
+independent scientific replication. See the new report for results and
+limitations; the earlier protocols and saved results are preserved.
 
 ## Models, signals and data
 
@@ -189,7 +217,7 @@ Use Python 3.11 in the project environment. `make test-fast` runs the original
 methodology contracts and smoke check; `make test` discovers the broader
 contract suite; `make lint` checks source and tests. Environment-dependent
 checks are separate (`make test-env`). Study-specific pre-run tests and
-independent verification receipts sit alongside the relevant reports.
+numerical verification receipts sit alongside the relevant reports.
 
 **Historical access:** `make test` and `make test-fast` include tests that read
 and reconstruct forecasts over previously evaluated market history. They are

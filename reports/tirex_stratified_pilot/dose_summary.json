@@ -1,0 +1,2285 @@
+{
+  "interpretation": "Joint-minus-sum and deviations from alpha times unit-dose response, recipient/donor separately. Descriptive only; alpha2 is an extrapolation and does not guarantee leaving the local linear regime. Neither additivity nor nonadditivity establishes superposition.",
+  "results": [
+    {
+      "group_id": "recovery_k4",
+      "alpha": 0.25,
+      "filename": "validation_dose_recovery_k4_a0p25.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 3.670528531074524e-05,
+      "mean_recipient_median_curvature": -4.0397047996520996e-05,
+      "mean_donor_median_curvature": -2.755969762802124e-05,
+      "mean_abs_joint_minus_sum_median": 6.794929504394531e-06,
+      "mean_recipient_joint_minus_sum_median": 3.814697265625e-06,
+      "mean_donor_joint_minus_sum_median": 8.761882781982422e-06,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -0.0004113614559173584,
+          "mean_abs_median_shift": 0.000448077917098999,
+          "mean_recipient_quantile_change": [
+            3.975629806518555e-05,
+            -0.0006663799285888672,
+            -0.0015965700149536133
+          ],
+          "mean_donor_quantile_change": [
+            0.0002116560935974121,
+            0.0001563429832458496,
+            -8.89897346496582e-05
+          ],
+          "mean_abs_width_change": 0.0009840428829193115,
+          "input_displacement_rms": 0.2369705701850443,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -0.0007331669330596924,
+          "mean_abs_median_shift": 0.0013830959796905518,
+          "mean_recipient_quantile_change": [
+            0.00031751394271850586,
+            -0.0019466280937194824,
+            -0.005433887243270874
+          ],
+          "mean_donor_quantile_change": [
+            -0.00017642974853515625,
+            -0.00048029422760009766,
+            -0.0016808509826660156
+          ],
+          "mean_abs_width_change": 0.003630712628364563,
+          "input_displacement_rms": 0.37658082460739656,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_k4",
+      "alpha": 0.5,
+      "filename": "validation_dose_recovery_k4_a0p5.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 4.910677671432495e-05,
+      "mean_recipient_median_curvature": -5.424022674560547e-05,
+      "mean_donor_median_curvature": -3.676116466522217e-05,
+      "mean_abs_joint_minus_sum_median": 2.682209014892578e-05,
+      "mean_recipient_joint_minus_sum_median": 1.5527009963989258e-05,
+      "mean_donor_joint_minus_sum_median": 3.477931022644043e-05,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -0.0008220374584197998,
+          "mean_abs_median_shift": 0.0008918941020965576,
+          "mean_recipient_quantile_change": [
+            8.45193862915039e-05,
+            -0.001326441764831543,
+            -0.003183305263519287
+          ],
+          "mean_donor_quantile_change": [
+            0.00042748451232910156,
+            0.00031763315200805664,
+            -0.0001710057258605957
+          ],
+          "mean_abs_width_change": 0.001964092254638672,
+          "input_displacement_rms": 0.2369705701850443,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -0.0014588236808776855,
+          "mean_abs_median_shift": 0.0027303695678710938,
+          "mean_recipient_quantile_change": [
+            0.0007066726684570312,
+            -0.003846466541290283,
+            -0.010848373174667358
+          ],
+          "mean_donor_quantile_change": [
+            -0.000307619571685791,
+            -0.0009288191795349121,
+            -0.0033262968063354492
+          ],
+          "mean_abs_width_change": 0.00729234516620636,
+          "input_displacement_rms": 0.37658082460739656,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_k4",
+      "alpha": 1.0,
+      "filename": "validation_dose_recovery_k4_a1p0.npz",
+      "reused_primary": true,
+      "mean_abs_median_curvature": 0.0,
+      "mean_recipient_median_curvature": 0.0,
+      "mean_donor_median_curvature": 0.0,
+      "mean_abs_joint_minus_sum_median": 0.00010764598846435547,
+      "mean_recipient_joint_minus_sum_median": 6.532669067382812e-05,
+      "mean_donor_joint_minus_sum_median": 0.00013774633407592773,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -0.0016408562660217285,
+          "mean_abs_median_shift": 0.0017660260200500488,
+          "mean_recipient_quantile_change": [
+            0.0001894235610961914,
+            -0.002627074718475342,
+            -0.006327986717224121
+          ],
+          "mean_donor_quantile_change": [
+            0.0008720159530639648,
+            0.0006546378135681152,
+            -0.0003147721290588379
+          ],
+          "mean_abs_width_change": 0.003914624452590942,
+          "input_displacement_rms": 0.2369705701850443,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -0.0028859078884124756,
+          "mean_abs_median_shift": 0.005313843488693237,
+          "mean_recipient_quantile_change": [
+            0.001698315143585205,
+            -0.007501780986785889,
+            -0.021609753370285034
+          ],
+          "mean_donor_quantile_change": [
+            -0.00043463706970214844,
+            -0.0017299652099609375,
+            -0.0065059661865234375
+          ],
+          "mean_abs_width_change": 0.014700964093208313,
+          "input_displacement_rms": 0.37658082460739656,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_k4",
+      "alpha": 2.0,
+      "filename": "validation_dose_recovery_k4_a2p0.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 0.00039696693420410156,
+      "mean_recipient_median_curvature": 0.00045228004455566406,
+      "mean_donor_median_curvature": 0.0002925395965576172,
+      "mean_abs_joint_minus_sum_median": 0.0004297792911529541,
+      "mean_recipient_joint_minus_sum_median": 0.00029146671295166016,
+      "mean_donor_joint_minus_sum_median": 0.0005335807800292969,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -0.0032673180103302,
+          "mean_abs_median_shift": 0.003460437059402466,
+          "mean_recipient_quantile_change": [
+            0.00046122074127197266,
+            -0.005147278308868408,
+            -0.012496411800384521
+          ],
+          "mean_donor_quantile_change": [
+            0.001817464828491211,
+            0.0013873577117919922,
+            -0.0005263090133666992
+          ],
+          "mean_abs_width_change": 0.007783681154251099,
+          "input_displacement_rms": 0.2369705701850443,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -0.005626469850540161,
+          "mean_abs_median_shift": 0.010017424821853638,
+          "mean_recipient_quantile_change": [
+            0.00451505184173584,
+            -0.014205873012542725,
+            -0.04277774691581726
+          ],
+          "mean_donor_quantile_change": [
+            -0.00014293193817138672,
+            -0.0029529333114624023,
+            -0.012399494647979736
+          ],
+          "mean_abs_width_change": 0.029797807335853577,
+          "input_displacement_rms": 0.37658082460739656,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_k8",
+      "alpha": 0.25,
+      "filename": "validation_dose_recovery_k8_a0p25.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 4.6797096729278564e-05,
+      "mean_recipient_median_curvature": -4.9717724323272705e-05,
+      "mean_donor_median_curvature": -3.3758580684661865e-05,
+      "mean_abs_joint_minus_sum_median": 9.715557098388672e-06,
+      "mean_recipient_joint_minus_sum_median": 5.27501106262207e-06,
+      "mean_donor_joint_minus_sum_median": 1.1235475540161133e-05,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -0.00047528743743896484,
+          "mean_abs_median_shift": 0.0005065798759460449,
+          "mean_recipient_quantile_change": [
+            4.6133995056152344e-05,
+            -0.0006532073020935059,
+            -0.0015714764595031738
+          ],
+          "mean_donor_quantile_change": [
+            0.0005837678909301758,
+            0.00029736757278442383,
+            -0.00016635656356811523
+          ],
+          "mean_abs_width_change": 0.0011895298957824707,
+          "input_displacement_rms": 0.25841157710783824,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -0.0007874071598052979,
+          "mean_abs_median_shift": 0.0014473497867584229,
+          "mean_recipient_quantile_change": [
+            0.0004737973213195801,
+            -0.0018976330757141113,
+            -0.005403608083724976
+          ],
+          "mean_donor_quantile_change": [
+            0.0007818341255187988,
+            -0.0003228187561035156,
+            -0.0021143555641174316
+          ],
+          "mean_abs_width_change": 0.004396095871925354,
+          "input_displacement_rms": 0.403819702201497,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_k8",
+      "alpha": 0.5,
+      "filename": "validation_dose_recovery_k8_a0p5.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 6.248056888580322e-05,
+      "mean_recipient_median_curvature": -6.659328937530518e-05,
+      "mean_donor_median_curvature": -4.507601261138916e-05,
+      "mean_abs_joint_minus_sum_median": 3.8757920265197754e-05,
+      "mean_recipient_joint_minus_sum_median": 2.238154411315918e-05,
+      "mean_donor_joint_minus_sum_median": 4.464387893676758e-05,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -0.0009492039680480957,
+          "mean_abs_median_shift": 0.0010089874267578125,
+          "mean_recipient_quantile_change": [
+            0.00010037422180175781,
+            -0.001297593116760254,
+            -0.003131091594696045
+          ],
+          "mean_donor_quantile_change": [
+            0.0011739730834960938,
+            0.0006008148193359375,
+            -0.00032508373260498047
+          ],
+          "mean_abs_width_change": 0.002376645803451538,
+          "input_displacement_rms": 0.25841157710783824,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -0.001565784215927124,
+          "mean_abs_median_shift": 0.002851039171218872,
+          "mean_recipient_quantile_change": [
+            0.0010396242141723633,
+            -0.0037384033203125,
+            -0.010794132947921753
+          ],
+          "mean_donor_quantile_change": [
+            0.0016131401062011719,
+            -0.000606834888458252,
+            -0.004163265228271484
+          ],
+          "mean_abs_width_change": 0.008823797106742859,
+          "input_displacement_rms": 0.403819702201497,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_k8",
+      "alpha": 1.0,
+      "filename": "validation_dose_recovery_k8_a1p0.npz",
+      "reused_primary": true,
+      "mean_abs_median_curvature": 0.0,
+      "mean_recipient_median_curvature": 0.0,
+      "mean_donor_median_curvature": 0.0,
+      "mean_abs_joint_minus_sum_median": 0.00015516579151153564,
+      "mean_recipient_joint_minus_sum_median": 9.316205978393555e-05,
+      "mean_donor_joint_minus_sum_median": 0.00017693638801574707,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -0.0018929839134216309,
+          "mean_abs_median_shift": 0.0020015835762023926,
+          "mean_recipient_quantile_change": [
+            0.0002333521842956543,
+            -0.002560555934906006,
+            -0.006213843822479248
+          ],
+          "mean_donor_quantile_change": [
+            0.0023738741874694824,
+            0.0012254118919372559,
+            -0.0006207823753356934
+          ],
+          "mean_abs_width_change": 0.004744112491607666,
+          "input_displacement_rms": 0.25841157710783824,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -0.0030939579010009766,
+          "mean_abs_median_shift": 0.005536794662475586,
+          "mean_recipient_quantile_change": [
+            0.0024434924125671387,
+            -0.007245063781738281,
+            -0.021525591611862183
+          ],
+          "mean_donor_quantile_change": [
+            0.003429412841796875,
+            -0.0010571479797363281,
+            -0.008062183856964111
+          ],
+          "mean_abs_width_change": 0.017768248915672302,
+          "input_displacement_rms": 0.403819702201497,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_k8",
+      "alpha": 2.0,
+      "filename": "validation_dose_recovery_k8_a2p0.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 0.0004975348711013794,
+      "mean_recipient_median_curvature": 0.0005520880222320557,
+      "mean_donor_median_curvature": 0.0003527998924255371,
+      "mean_abs_joint_minus_sum_median": 0.0006201267242431641,
+      "mean_recipient_joint_minus_sum_median": 0.0004037916660308838,
+      "mean_donor_joint_minus_sum_median": 0.0006842315196990967,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -0.0037626922130584717,
+          "mean_abs_median_shift": 0.003936082124710083,
+          "mean_recipient_quantile_change": [
+            0.0005934238433837891,
+            -0.004980802536010742,
+            -0.012231409549713135
+          ],
+          "mean_donor_quantile_change": [
+            0.0048558712005615234,
+            0.002544581890106201,
+            -0.0011295080184936523
+          ],
+          "mean_abs_width_change": 0.009452909231185913,
+          "input_displacement_rms": 0.25841157710783824,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -0.006011903285980225,
+          "mean_abs_median_shift": 0.01041346788406372,
+          "mean_recipient_quantile_change": [
+            0.006293594837188721,
+            -0.01352626085281372,
+            -0.04269573092460632
+          ],
+          "mean_donor_quantile_change": [
+            0.007686913013458252,
+            -0.0015024542808532715,
+            -0.015049874782562256
+          ],
+          "mean_abs_width_change": 0.03594084084033966,
+          "input_displacement_rms": 0.403819702201497,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_tail4",
+      "alpha": 0.25,
+      "filename": "validation_dose_recovery_tail4_a0p25.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 1.8738210201263428e-06,
+      "mean_recipient_median_curvature": 1.9371509552001953e-07,
+      "mean_donor_median_curvature": 1.5869736671447754e-06,
+      "mean_abs_joint_minus_sum_median": 1.4454126358032227e-06,
+      "mean_recipient_joint_minus_sum_median": -1.519918441772461e-06,
+      "mean_donor_joint_minus_sum_median": -5.960464477539063e-08,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -6.42538070678711e-05,
+          "mean_abs_median_shift": 9.918212890625e-05,
+          "mean_recipient_quantile_change": [
+            5.0067901611328125e-06,
+            1.2099742889404297e-05,
+            2.390146255493164e-05
+          ],
+          "mean_donor_quantile_change": [
+            0.0003705024719238281,
+            0.00014060735702514648,
+            -7.796287536621094e-05
+          ],
+          "mean_abs_width_change": 0.0002733170986175537,
+          "input_displacement_rms": 0.10306062317653251,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -5.435943603515625e-05,
+          "mean_abs_median_shift": 0.0002745985984802246,
+          "mean_recipient_quantile_change": [
+            0.0001468658447265625,
+            4.410743713378906e-05,
+            3.17990779876709e-05
+          ],
+          "mean_donor_quantile_change": [
+            0.0009528994560241699,
+            0.00015282630920410156,
+            -0.0004476308822631836
+          ],
+          "mean_abs_width_change": 0.000987038016319275,
+          "input_displacement_rms": 0.14579860912957615,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_tail4",
+      "alpha": 0.5,
+      "filename": "validation_dose_recovery_tail4_a0p5.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 2.346932888031006e-06,
+      "mean_recipient_median_curvature": 3.2782554626464844e-07,
+      "mean_donor_median_curvature": 1.8924474716186523e-06,
+      "mean_abs_joint_minus_sum_median": 3.7550926208496094e-06,
+      "mean_recipient_joint_minus_sum_median": -5.453824996948242e-06,
+      "mean_donor_joint_minus_sum_median": -5.662441253662109e-07,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -0.00012803077697753906,
+          "mean_abs_median_shift": 0.00019806623458862305,
+          "mean_recipient_quantile_change": [
+            1.0013580322265625e-05,
+            2.4378299713134766e-05,
+            4.762411117553711e-05
+          ],
+          "mean_donor_quantile_change": [
+            0.0007402300834655762,
+            0.0002804398536682129,
+            -0.0001563429832458496
+          ],
+          "mean_abs_width_change": 0.0005464255809783936,
+          "input_displacement_rms": 0.10306062317653251,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -0.00010797381401062012,
+          "mean_abs_median_shift": 0.0005479156970977783,
+          "mean_recipient_quantile_change": [
+            0.00029647350311279297,
+            8.791685104370117e-05,
+            6.145238876342773e-05
+          ],
+          "mean_donor_quantile_change": [
+            0.0018993616104125977,
+            0.0003038644790649414,
+            -0.0008934140205383301
+          ],
+          "mean_abs_width_change": 0.0019715428352355957,
+          "input_displacement_rms": 0.14579860912957615,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_tail4",
+      "alpha": 1.0,
+      "filename": "validation_dose_recovery_tail4_a1p0.npz",
+      "reused_primary": true,
+      "mean_abs_median_curvature": 0.0,
+      "mean_recipient_median_curvature": 0.0,
+      "mean_donor_median_curvature": 0.0,
+      "mean_abs_joint_minus_sum_median": 1.3932585716247559e-05,
+      "mean_recipient_joint_minus_sum_median": -2.2143125534057617e-05,
+      "mean_donor_joint_minus_sum_median": -2.086162567138672e-06,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -0.0002556443214416504,
+          "mean_abs_median_shift": 0.00039517879486083984,
+          "mean_recipient_quantile_change": [
+            1.9669532775878906e-05,
+            4.839897155761719e-05,
+            9.512901306152344e-05
+          ],
+          "mean_donor_quantile_change": [
+            0.0014777183532714844,
+            0.000559687614440918,
+            -0.00031375885009765625
+          ],
+          "mean_abs_width_change": 0.0010924339294433594,
+          "input_displacement_rms": 0.10306062317653251,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -0.00021323561668395996,
+          "mean_abs_median_shift": 0.001091092824935913,
+          "mean_recipient_quantile_change": [
+            0.0006039738655090332,
+            0.0001748800277709961,
+            0.00011262297630310059
+          ],
+          "mean_donor_quantile_change": [
+            0.0037761330604553223,
+            0.000601351261138916,
+            -0.0017799735069274902
+          ],
+          "mean_abs_width_change": 0.003934726119041443,
+          "input_displacement_rms": 0.14579860912957615,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_tail4",
+      "alpha": 2.0,
+      "filename": "validation_dose_recovery_tail4_a2p0.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 1.9147992134094238e-05,
+      "mean_recipient_median_curvature": -2.175569534301758e-06,
+      "mean_donor_median_curvature": -1.4781951904296875e-05,
+      "mean_abs_joint_minus_sum_median": 5.626678466796875e-05,
+      "mean_recipient_joint_minus_sum_median": -8.96155834197998e-05,
+      "mean_donor_joint_minus_sum_median": -6.943941116333008e-06,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -0.000509411096572876,
+          "mean_abs_median_shift": 0.0007856190204620361,
+          "mean_recipient_quantile_change": [
+            3.9458274841308594e-05,
+            9.500980377197266e-05,
+            0.0001881122589111328
+          ],
+          "mean_donor_quantile_change": [
+            0.0029422640800476074,
+            0.0011138319969177246,
+            -0.0006321072578430176
+          ],
+          "mean_abs_width_change": 0.002181828022003174,
+          "input_displacement_rms": 0.10306062317653251,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -0.0004157423973083496,
+          "mean_abs_median_shift": 0.0021632909774780273,
+          "mean_recipient_quantile_change": [
+            0.0012497305870056152,
+            0.0003471970558166504,
+            0.00018766522407531738
+          ],
+          "mean_donor_quantile_change": [
+            0.007463812828063965,
+            0.0011786818504333496,
+            -0.0035314559936523438
+          ],
+          "mean_abs_width_change": 0.007835105061531067,
+          "input_displacement_rms": 0.14579860912957615,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U1095",
+      "alpha": 0.25,
+      "filename": "validation_dose_recovery_U1095_a0p25.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 5.967915058135986e-06,
+      "mean_recipient_median_curvature": -6.2659382820129395e-06,
+      "mean_donor_median_curvature": -4.880130290985107e-06,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -0.00018292665481567383,
+          "mean_abs_median_shift": 0.0002353191375732422,
+          "mean_recipient_quantile_change": [
+            8.749961853027344e-05,
+            -0.0003380775451660156,
+            -0.0008792877197265625
+          ],
+          "mean_donor_quantile_change": [
+            0.00027817487716674805,
+            2.777576446533203e-05,
+            -0.00038677453994750977
+          ],
+          "mean_abs_width_change": 0.0008158683776855469,
+          "input_displacement_rms": 0.16329218917613836,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -0.000164031982421875,
+          "mean_abs_median_shift": 0.0004493594169616699,
+          "mean_recipient_quantile_change": [
+            0.0002086162567138672,
+            -0.0005778670310974121,
+            -0.001567840576171875
+          ],
+          "mean_donor_quantile_change": [
+            0.0002601742744445801,
+            -0.0002498030662536621,
+            -0.0011181831359863281
+          ],
+          "mean_abs_width_change": 0.0015774071216583252,
+          "input_displacement_rms": 0.17504190936627695,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U1095",
+      "alpha": 0.5,
+      "filename": "validation_dose_recovery_U1095_a0p5.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 8.07642936706543e-06,
+      "mean_recipient_median_curvature": -8.508563041687012e-06,
+      "mean_donor_median_curvature": -6.571412086486816e-06,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -0.0003654956817626953,
+          "mean_abs_median_shift": 0.0004690885543823242,
+          "mean_recipient_quantile_change": [
+            0.0001760721206665039,
+            -0.0006731152534484863,
+            -0.0017527937889099121
+          ],
+          "mean_donor_quantile_change": [
+            0.0005592703819274902,
+            5.78761100769043e-05,
+            -0.0007710456848144531
+          ],
+          "mean_abs_width_change": 0.0016295909881591797,
+          "input_displacement_rms": 0.16329218917613836,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -0.0003275871276855469,
+          "mean_abs_median_shift": 0.0008946657180786133,
+          "mean_recipient_quantile_change": [
+            0.00042372941970825195,
+            -0.0011507272720336914,
+            -0.0031329095363616943
+          ],
+          "mean_donor_quantile_change": [
+            0.0005280971527099609,
+            -0.0004955530166625977,
+            -0.002231597900390625
+          ],
+          "mean_abs_width_change": 0.003158167004585266,
+          "input_displacement_rms": 0.17504190936627695,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U1095",
+      "alpha": 1.0,
+      "filename": "validation_dose_recovery_U1095_a1p0.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 0.0,
+      "mean_recipient_median_curvature": 0.0,
+      "mean_donor_median_curvature": 0.0,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -0.0007298886775970459,
+          "mean_abs_median_shift": 0.00093117356300354,
+          "mean_recipient_quantile_change": [
+            0.0003566145896911621,
+            -0.0013336539268493652,
+            -0.0034819841384887695
+          ],
+          "mean_donor_quantile_change": [
+            0.0011303424835205078,
+            0.00012612342834472656,
+            -0.0015315413475036621
+          ],
+          "mean_abs_width_change": 0.0032502412796020508,
+          "input_displacement_rms": 0.16329218917613836,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -0.0006524026393890381,
+          "mean_abs_median_shift": 0.001772552728652954,
+          "mean_recipient_quantile_change": [
+            0.0008750557899475098,
+            -0.002279996871948242,
+            -0.006254225969314575
+          ],
+          "mean_donor_quantile_change": [
+            0.001087963581085205,
+            -0.000975191593170166,
+            -0.0044435858726501465
+          ],
+          "mean_abs_width_change": 0.006330415606498718,
+          "input_displacement_rms": 0.17504190936627695,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U1095",
+      "alpha": 2.0,
+      "filename": "validation_dose_recovery_U1095_a2p0.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 6.461143493652344e-05,
+      "mean_recipient_median_curvature": 6.759166717529297e-05,
+      "mean_donor_median_curvature": 5.346536636352539e-05,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -0.0014561712741851807,
+          "mean_abs_median_shift": 0.0018350183963775635,
+          "mean_recipient_quantile_change": [
+            0.0007322430610656738,
+            -0.00261843204498291,
+            -0.006870925426483154
+          ],
+          "mean_donor_quantile_change": [
+            0.0023065805435180664,
+            0.00029391050338745117,
+            -0.003021061420440674
+          ],
+          "mean_abs_width_change": 0.006465405225753784,
+          "input_displacement_rms": 0.16329218917613836,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -0.0012942850589752197,
+          "mean_abs_median_shift": 0.0034767091274261475,
+          "mean_recipient_quantile_change": [
+            0.001854240894317627,
+            -0.004473686218261719,
+            -0.012454718351364136
+          ],
+          "mean_donor_quantile_change": [
+            0.0023035407066345215,
+            -0.0018851161003112793,
+            -0.008801579475402832
+          ],
+          "mean_abs_width_change": 0.012707039713859558,
+          "input_displacement_rms": 0.17504190936627695,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U594",
+      "alpha": 0.25,
+      "filename": "validation_dose_recovery_U594_a0p25.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 1.767277717590332e-05,
+      "mean_recipient_median_curvature": -2.275407314300537e-05,
+      "mean_donor_median_curvature": 1.3113021850585938e-06,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -0.0002726614475250244,
+          "mean_abs_median_shift": 0.00027999281883239746,
+          "mean_recipient_quantile_change": [
+            1.6570091247558594e-05,
+            -0.0003654956817626953,
+            -0.0008497238159179688
+          ],
+          "mean_donor_quantile_change": [
+            0.00018715858459472656,
+            0.00017982721328735352,
+            8.90493392944336e-05
+          ],
+          "mean_abs_width_change": 0.0005037188529968262,
+          "input_displacement_rms": 0.12861416120385813,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -0.0005504786968231201,
+          "mean_abs_median_shift": 0.0009628236293792725,
+          "mean_recipient_quantile_change": [
+            0.00035071372985839844,
+            -0.0013050436973571777,
+            -0.003951281309127808
+          ],
+          "mean_donor_quantile_change": [
+            0.0001329183578491211,
+            -0.0002040863037109375,
+            -0.000922083854675293
+          ],
+          "mean_abs_width_change": 0.0027183741331100464,
+          "input_displacement_rms": 0.31444610438571563,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U594",
+      "alpha": 0.5,
+      "filename": "validation_dose_recovery_U594_a0p5.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 2.3409724235534668e-05,
+      "mean_recipient_median_curvature": -3.018975257873535e-05,
+      "mean_donor_median_curvature": 1.519918441772461e-06,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -0.0005432665348052979,
+          "mean_abs_median_shift": 0.0005581080913543701,
+          "mean_recipient_quantile_change": [
+            3.5881996154785156e-05,
+            -0.0007293224334716797,
+            -0.001697540283203125
+          ],
+          "mean_donor_quantile_change": [
+            0.00037026405334472656,
+            0.000357210636138916,
+            0.00017529726028442383
+          ],
+          "mean_abs_width_change": 0.0010064542293548584,
+          "input_displacement_rms": 0.12861416120385813,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -0.001086592674255371,
+          "mean_abs_median_shift": 0.0019068717956542969,
+          "mean_recipient_quantile_change": [
+            0.0007370710372924805,
+            -0.0025811195373535156,
+            -0.007877558469772339
+          ],
+          "mean_donor_quantile_change": [
+            0.0002683401107788086,
+            -0.00040793418884277344,
+            -0.0018472075462341309
+          ],
+          "mean_abs_width_change": 0.005439057946205139,
+          "input_displacement_rms": 0.31444610438571563,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U594",
+      "alpha": 1.0,
+      "filename": "validation_dose_recovery_U594_a1p0.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 0.0,
+      "mean_recipient_median_curvature": 0.0,
+      "mean_donor_median_curvature": 0.0,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -0.0010778307914733887,
+          "mean_abs_median_shift": 0.0011082291603088379,
+          "mean_recipient_quantile_change": [
+            8.13603401184082e-05,
+            -0.0014510750770568848,
+            -0.0033885836601257324
+          ],
+          "mean_donor_quantile_change": [
+            0.0007267594337463379,
+            0.0007045865058898926,
+            0.00033915042877197266
+          ],
+          "mean_abs_width_change": 0.0020118653774261475,
+          "input_displacement_rms": 0.12861416120385813,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -0.0021184682846069336,
+          "mean_abs_median_shift": 0.0037392377853393555,
+          "mean_recipient_quantile_change": [
+            0.0016142725944519043,
+            -0.0050490498542785645,
+            -0.01565292477607727
+          ],
+          "mean_donor_quantile_change": [
+            0.0005481839179992676,
+            -0.0008121132850646973,
+            -0.003702223300933838
+          ],
+          "mean_abs_width_change": 0.010885462164878845,
+          "input_displacement_rms": 0.31444610438571563,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U594",
+      "alpha": 2.0,
+      "filename": "validation_dose_recovery_U594_a2p0.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 0.0001850426197052002,
+      "mean_recipient_median_curvature": 0.00023597478866577148,
+      "mean_donor_median_curvature": -9.5367431640625e-07,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -0.0021219849586486816,
+          "mean_abs_median_shift": 0.0021848082542419434,
+          "mean_recipient_quantile_change": [
+            0.0002022385597229004,
+            -0.002873241901397705,
+            -0.006753087043762207
+          ],
+          "mean_donor_quantile_change": [
+            0.0013983845710754395,
+            0.0013707280158996582,
+            0.0006350874900817871
+          ],
+          "mean_abs_width_change": 0.004020601511001587,
+          "input_displacement_rms": 0.12861416120385813,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -0.004033684730529785,
+          "mean_abs_median_shift": 0.007174670696258545,
+          "mean_recipient_quantile_change": [
+            0.0037698745727539062,
+            -0.00965505838394165,
+            -0.030881136655807495
+          ],
+          "mean_donor_quantile_change": [
+            0.0011531710624694824,
+            -0.00158768892288208,
+            -0.0073975324630737305
+          ],
+          "mean_abs_width_change": 0.02177514135837555,
+          "input_displacement_rms": 0.31444610438571563,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U530",
+      "alpha": 0.25,
+      "filename": "validation_dose_recovery_U530_a0p25.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 1.475214958190918e-06,
+      "mean_recipient_median_curvature": 4.6193599700927734e-07,
+      "mean_donor_median_curvature": 1.6391277313232422e-06,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": 6.651878356933594e-05,
+          "mean_abs_median_shift": 8.040666580200195e-05,
+          "mean_recipient_quantile_change": [
+            -8.171796798706055e-05,
+            6.121397018432617e-05,
+            0.00020438432693481445
+          ],
+          "mean_donor_quantile_change": [
+            -0.00021725893020629883,
+            -7.18235969543457e-05,
+            0.00012022256851196289
+          ],
+          "mean_abs_width_change": 0.00032061338424682617,
+          "input_displacement_rms": 0.10031363223194344,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": 9.083747863769531e-05,
+          "mean_abs_median_shift": 0.00013846158981323242,
+          "mean_recipient_quantile_change": [
+            -0.0002135634422302246,
+            9.542703628540039e-05,
+            0.0003705918788909912
+          ],
+          "mean_donor_quantile_change": [
+            -0.00043642520904541016,
+            -8.624792098999023e-05,
+            0.00013643503189086914
+          ],
+          "mean_abs_width_change": 0.000579342246055603,
+          "input_displacement_rms": 0.08294617560278852,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U530",
+      "alpha": 0.5,
+      "filename": "validation_dose_recovery_U530_a0p5.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 1.9371509552001953e-06,
+      "mean_recipient_median_curvature": 7.152557373046875e-07,
+      "mean_donor_median_curvature": 2.175569534301758e-06,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": 0.00013384222984313965,
+          "mean_abs_median_shift": 0.00016120076179504395,
+          "mean_recipient_quantile_change": [
+            -0.000164031982421875,
+            0.0001227855682373047,
+            0.0004099607467651367
+          ],
+          "mean_donor_quantile_change": [
+            -0.000436246395111084,
+            -0.0001448988914489746,
+            0.00023978948593139648
+          ],
+          "mean_abs_width_change": 0.0006420612335205078,
+          "input_displacement_rms": 0.10031363223194344,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": 0.0001817643642425537,
+          "mean_abs_median_shift": 0.00027754902839660645,
+          "mean_recipient_quantile_change": [
+            -0.0004273056983947754,
+            0.0001900792121887207,
+            0.0007412135601043701
+          ],
+          "mean_donor_quantile_change": [
+            -0.0008741021156311035,
+            -0.00017344951629638672,
+            0.00027239322662353516
+          ],
+          "mean_abs_width_change": 0.001159176230430603,
+          "input_displacement_rms": 0.08294617560278852,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U530",
+      "alpha": 1.0,
+      "filename": "validation_dose_recovery_U530_a1p0.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 0.0,
+      "mean_recipient_median_curvature": 0.0,
+      "mean_donor_median_curvature": 0.0,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": 0.0002703070640563965,
+          "mean_abs_median_shift": 0.00032460689544677734,
+          "mean_recipient_quantile_change": [
+            -0.0003292560577392578,
+            0.00024640560150146484,
+            0.0008213520050048828
+          ],
+          "mean_donor_quantile_change": [
+            -0.0008774995803833008,
+            -0.0002942085266113281,
+            0.000478208065032959
+          ],
+          "mean_abs_width_change": 0.0012874305248260498,
+          "input_displacement_rms": 0.10031363223194344,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": 0.0003638267517089844,
+          "mean_abs_median_shift": 0.0005575418472290039,
+          "mean_recipient_quantile_change": [
+            -0.0008580684661865234,
+            0.0003764629364013672,
+            0.0014812946319580078
+          ],
+          "mean_donor_quantile_change": [
+            -0.0017549991607666016,
+            -0.00035119056701660156,
+            0.0005423426628112793
+          ],
+          "mean_abs_width_change": 0.0023218095302581787,
+          "input_displacement_rms": 0.08294617560278852,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U530",
+      "alpha": 2.0,
+      "filename": "validation_dose_recovery_U530_a2p0.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 1.4856457710266113e-05,
+      "mean_recipient_median_curvature": -5.066394805908203e-06,
+      "mean_donor_median_curvature": -1.7076730728149414e-05,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": 0.0005513429641723633,
+          "mean_abs_median_shift": 0.0006569027900695801,
+          "mean_recipient_quantile_change": [
+            -0.0006616711616516113,
+            0.0004968047142028809,
+            0.001651465892791748
+          ],
+          "mean_donor_quantile_change": [
+            -0.001776278018951416,
+            -0.0006058812141418457,
+            0.0009511113166809082
+          ],
+          "mean_abs_width_change": 0.0025885701179504395,
+          "input_displacement_rms": 0.10031363223194344,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": 0.0007289350032806396,
+          "mean_abs_median_shift": 0.0011241137981414795,
+          "mean_recipient_quantile_change": [
+            -0.0017276406288146973,
+            0.0007387995719909668,
+            0.002959311008453369
+          ],
+          "mean_donor_quantile_change": [
+            -0.003535747528076172,
+            -0.0007190704345703125,
+            0.0010737180709838867
+          ],
+          "mean_abs_width_change": 0.004655301570892334,
+          "input_displacement_rms": 0.08294617560278852,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U743",
+      "alpha": 0.25,
+      "filename": "validation_dose_recovery_U743_a0p25.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 7.562339305877686e-07,
+      "mean_recipient_median_curvature": 6.780028343200684e-07,
+      "mean_donor_median_curvature": 4.470348358154297e-08,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -2.1338462829589844e-05,
+          "mean_abs_median_shift": 3.7550926208496094e-05,
+          "mean_recipient_quantile_change": [
+            1.6927719116210938e-05,
+            -2.491474151611328e-05,
+            -7.30752944946289e-05
+          ],
+          "mean_donor_quantile_change": [
+            -3.9577484130859375e-05,
+            1.7762184143066406e-05,
+            8.51750373840332e-05
+          ],
+          "mean_abs_width_change": 0.00012436509132385254,
+          "input_displacement_rms": 0.05372415484818391,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -0.0001055002212524414,
+          "mean_abs_median_shift": 0.00011873245239257812,
+          "mean_recipient_quantile_change": [
+            -4.374980926513672e-05,
+            -0.0001658797264099121,
+            -0.00028190016746520996
+          ],
+          "mean_donor_quantile_change": [
+            -0.0001512765884399414,
+            4.51207160949707e-05,
+            0.00020486116409301758
+          ],
+          "mean_abs_width_change": 0.0003302842378616333,
+          "input_displacement_rms": 0.07360045391785205,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U743",
+      "alpha": 0.5,
+      "filename": "validation_dose_recovery_U743_a0p5.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 9.164214134216309e-07,
+      "mean_recipient_median_curvature": 8.791685104370117e-07,
+      "mean_donor_median_curvature": 2.086162567138672e-07,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -4.2766332626342773e-05,
+          "mean_abs_median_shift": 7.513165473937988e-05,
+          "mean_recipient_quantile_change": [
+            3.314018249511719e-05,
+            -5.0008296966552734e-05,
+            -0.00014638900756835938
+          ],
+          "mean_donor_quantile_change": [
+            -7.87973403930664e-05,
+            3.552436828613281e-05,
+            0.00017017126083374023
+          ],
+          "mean_abs_width_change": 0.00024840235710144043,
+          "input_displacement_rms": 0.05372415484818391,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -0.00021150708198547363,
+          "mean_abs_median_shift": 0.0002378523349761963,
+          "mean_recipient_quantile_change": [
+            -8.726119995117188e-05,
+            -0.0003325343132019043,
+            -0.000564873218536377
+          ],
+          "mean_donor_quantile_change": [
+            -0.00030225515365600586,
+            9.047985076904297e-05,
+            0.00040966272354125977
+          ],
+          "mean_abs_width_change": 0.0006603896617889404,
+          "input_displacement_rms": 0.07360045391785205,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U743",
+      "alpha": 1.0,
+      "filename": "validation_dose_recovery_U743_a1p0.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 0.0,
+      "mean_recipient_median_curvature": 0.0,
+      "mean_donor_median_curvature": 0.0,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -8.562207221984863e-05,
+          "mean_abs_median_shift": 0.00015112757682800293,
+          "mean_recipient_quantile_change": [
+            6.508827209472656e-05,
+            -0.0001004934310913086,
+            -0.0002930164337158203
+          ],
+          "mean_donor_quantile_change": [
+            -0.00015783309936523438,
+            7.075071334838867e-05,
+            0.00034052133560180664
+          ],
+          "mean_abs_width_change": 0.0004961788654327393,
+          "input_displacement_rms": 0.05372415484818391,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -0.00042426586151123047,
+          "mean_abs_median_shift": 0.00047713518142700195,
+          "mean_recipient_quantile_change": [
+            -0.0001761317253112793,
+            -0.0006681084632873535,
+            -0.0011352002620697021
+          ],
+          "mean_donor_quantile_change": [
+            -0.000604093074798584,
+            0.00018042325973510742,
+            0.000817716121673584
+          ],
+          "mean_abs_width_change": 0.001320675015449524,
+          "input_displacement_rms": 0.07360045391785205,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U743",
+      "alpha": 2.0,
+      "filename": "validation_dose_recovery_U743_a2p0.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 6.303191184997559e-06,
+      "mean_recipient_median_curvature": -7.033348083496094e-06,
+      "mean_donor_median_curvature": -9.834766387939453e-07,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -0.0001722872257232666,
+          "mean_abs_median_shift": 0.0003046691417694092,
+          "mean_recipient_quantile_change": [
+            0.00012344121932983398,
+            -0.00020444393157958984,
+            -0.0005866289138793945
+          ],
+          "mean_donor_quantile_change": [
+            -0.00031638145446777344,
+            0.00014013051986694336,
+            0.0006807446479797363
+          ],
+          "mean_abs_width_change": 0.0009891986846923828,
+          "input_displacement_rms": 0.05372415484818391,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -0.0008535385131835938,
+          "mean_abs_median_shift": 0.0009600520133972168,
+          "mean_recipient_quantile_change": [
+            -0.00035774707794189453,
+            -0.0013468265533447266,
+            -0.0022923052310943604
+          ],
+          "mean_donor_quantile_change": [
+            -0.001204073429107666,
+            0.00036025047302246094,
+            0.0016304254531860352
+          ],
+          "mean_abs_width_change": 0.0026426762342453003,
+          "input_displacement_rms": 0.07360045391785205,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U344",
+      "alpha": 0.25,
+      "filename": "validation_dose_recovery_U344_a0p25.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 1.7657876014709473e-06,
+      "mean_recipient_median_curvature": -1.0654330253601074e-06,
+      "mean_donor_median_curvature": 4.246830940246582e-07,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -2.5928020477294922e-05,
+          "mean_abs_median_shift": 4.6253204345703125e-05,
+          "mean_recipient_quantile_change": [
+            6.395578384399414e-05,
+            -1.8835067749023438e-05,
+            -0.00011533498764038086
+          ],
+          "mean_donor_quantile_change": [
+            0.00011593103408813477,
+            3.3020973205566406e-05,
+            -3.796815872192383e-05
+          ],
+          "mean_abs_width_change": 0.00016921758651733398,
+          "input_displacement_rms": 0.05988258103528149,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -0.00023424625396728516,
+          "mean_abs_median_shift": 0.00026023387908935547,
+          "mean_recipient_quantile_change": [
+            0.00020873546600341797,
+            -0.0003445744514465332,
+            -0.0007846057415008545
+          ],
+          "mean_donor_quantile_change": [
+            0.00045806169509887695,
+            0.0001239180564880371,
+            -9.554624557495117e-05
+          ],
+          "mean_abs_width_change": 0.0007985681295394897,
+          "input_displacement_rms": 0.11524043539230905,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U344",
+      "alpha": 0.5,
+      "filename": "validation_dose_recovery_U344_a0p5.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 2.339482307434082e-06,
+      "mean_recipient_median_curvature": -1.564621925354004e-06,
+      "mean_donor_median_curvature": 4.6193599700927734e-07,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -5.21242618560791e-05,
+          "mean_abs_median_shift": 9.271502494812012e-05,
+          "mean_recipient_quantile_change": [
+            0.00012832880020141602,
+            -3.784894943237305e-05,
+            -0.00023043155670166016
+          ],
+          "mean_donor_quantile_change": [
+            0.00023233890533447266,
+            6.639957427978516e-05,
+            -7.593631744384766e-05
+          ],
+          "mean_abs_width_change": 0.000338822603225708,
+          "input_displacement_rms": 0.05988258103528149,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -0.0004672706127166748,
+          "mean_abs_median_shift": 0.0005194246768951416,
+          "mean_recipient_quantile_change": [
+            0.00042068958282470703,
+            -0.0006878376007080078,
+            -0.001571744680404663
+          ],
+          "mean_donor_quantile_change": [
+            0.0009129643440246582,
+            0.0002467036247253418,
+            -0.00019031763076782227
+          ],
+          "mean_abs_width_change": 0.0015987604856491089,
+          "input_displacement_rms": 0.11524043539230905,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U344",
+      "alpha": 1.0,
+      "filename": "validation_dose_recovery_U344_a1p0.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 0.0,
+      "mean_recipient_median_curvature": 0.0,
+      "mean_donor_median_curvature": 0.0,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -0.00010472536087036133,
+          "mean_abs_median_shift": 0.00018554925918579102,
+          "mean_recipient_quantile_change": [
+            0.0002574920654296875,
+            -7.534027099609375e-05,
+            -0.0004610419273376465
+          ],
+          "mean_donor_quantile_change": [
+            0.0004665255546569824,
+            0.0001341104507446289,
+            -0.00015205144882202148
+          ],
+          "mean_abs_width_change": 0.0006791651248931885,
+          "input_displacement_rms": 0.05988258103528149,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -0.0009300112724304199,
+          "mean_abs_median_shift": 0.0010342597961425781,
+          "mean_recipient_quantile_change": [
+            0.0008549094200134277,
+            -0.001369774341583252,
+            -0.0031539499759674072
+          ],
+          "mean_donor_quantile_change": [
+            0.0018129348754882812,
+            0.0004902482032775879,
+            -0.0003783106803894043
+          ],
+          "mean_abs_width_change": 0.0032034069299697876,
+          "input_displacement_rms": 0.11524043539230905,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U344",
+      "alpha": 2.0,
+      "filename": "validation_dose_recovery_U344_a2p0.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 1.806020736694336e-05,
+      "mean_recipient_median_curvature": 1.3530254364013672e-05,
+      "mean_donor_median_curvature": -3.159046173095703e-06,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -0.00021135807037353516,
+          "mean_abs_median_shift": 0.00037175416946411133,
+          "mean_recipient_quantile_change": [
+            0.0005181431770324707,
+            -0.00014930963516235352,
+            -0.0009226799011230469
+          ],
+          "mean_donor_quantile_change": [
+            0.0009404420852661133,
+            0.0002734065055847168,
+            -0.00030535459518432617
+          ],
+          "mean_abs_width_change": 0.0013646483421325684,
+          "input_displacement_rms": 0.05988258103528149,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -0.001841425895690918,
+          "mean_abs_median_shift": 0.0020501017570495605,
+          "mean_recipient_quantile_change": [
+            0.0017612576484680176,
+            -0.0027138590812683105,
+            -0.006348103284835815
+          ],
+          "mean_donor_quantile_change": [
+            0.00357741117477417,
+            0.0009689927101135254,
+            -0.0007453560829162598
+          ],
+          "mean_abs_width_change": 0.006426587700843811,
+          "input_displacement_rms": 0.11524043539230905,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U38",
+      "alpha": 0.25,
+      "filename": "validation_dose_recovery_U38_a0p25.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 3.8370490074157715e-07,
+      "mean_recipient_median_curvature": -1.043081283569336e-07,
+      "mean_donor_median_curvature": -8.195638656616211e-08,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": 4.589557647705078e-06,
+          "mean_abs_median_shift": 3.987550735473633e-05,
+          "mean_recipient_quantile_change": [
+            1.5139579772949219e-05,
+            -2.2292137145996094e-05,
+            -6.645917892456055e-05
+          ],
+          "mean_donor_quantile_change": [
+            -5.8710575103759766e-05,
+            -3.147125244140625e-05,
+            1.633167266845703e-05
+          ],
+          "mean_abs_width_change": 8.863210678100586e-05,
+          "input_displacement_rms": 0.05192598305223895,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -1.3113021850585938e-05,
+          "mean_abs_median_shift": 4.416704177856445e-05,
+          "mean_recipient_quantile_change": [
+            2.3543834686279297e-05,
+            -1.8537044525146484e-05,
+            -0.00013384222984313965
+          ],
+          "mean_donor_quantile_change": [
+            -5.936622619628906e-05,
+            7.68899917602539e-06,
+            5.1081180572509766e-05
+          ],
+          "mean_abs_width_change": 0.00018863379955291748,
+          "input_displacement_rms": 0.03126115457850784,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U38",
+      "alpha": 0.5,
+      "filename": "validation_dose_recovery_U38_a0p5.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 4.0978193283081055e-07,
+      "mean_recipient_median_curvature": -1.4901161193847656e-07,
+      "mean_donor_median_curvature": -1.6391277313232422e-07,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": 9.149312973022461e-06,
+          "mean_abs_median_shift": 7.94827938079834e-05,
+          "mean_recipient_quantile_change": [
+            2.9921531677246094e-05,
+            -4.45246696472168e-05,
+            -0.00013244152069091797
+          ],
+          "mean_donor_quantile_change": [
+            -0.00011754035949707031,
+            -6.282329559326172e-05,
+            3.248453140258789e-05
+          ],
+          "mean_abs_width_change": 0.00017699599266052246,
+          "input_displacement_rms": 0.05192598305223895,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -2.613663673400879e-05,
+          "mean_abs_median_shift": 8.83638858795166e-05,
+          "mean_recipient_quantile_change": [
+            4.750490188598633e-05,
+            -3.701448440551758e-05,
+            -0.0002669394016265869
+          ],
+          "mean_donor_quantile_change": [
+            -0.00011867284774780273,
+            1.52587890625e-05,
+            0.0001024007797241211
+          ],
+          "mean_abs_width_change": 0.00037695467472076416,
+          "input_displacement_rms": 0.03126115457850784,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U38",
+      "alpha": 1.0,
+      "filename": "validation_dose_recovery_U38_a1p0.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 0.0,
+      "mean_recipient_median_curvature": 0.0,
+      "mean_donor_median_curvature": 0.0,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": 1.7940998077392578e-05,
+          "mean_abs_median_shift": 0.00015848875045776367,
+          "mean_recipient_quantile_change": [
+            5.9723854064941406e-05,
+            -8.916854858398438e-05,
+            -0.00026488304138183594
+          ],
+          "mean_donor_quantile_change": [
+            -0.00023359060287475586,
+            -0.00012505054473876953,
+            6.496906280517578e-05
+          ],
+          "mean_abs_width_change": 0.0003536045551300049,
+          "input_displacement_rms": 0.05192598305223895,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -5.194544792175293e-05,
+          "mean_abs_median_shift": 0.00017699599266052246,
+          "mean_recipient_quantile_change": [
+            9.566545486450195e-05,
+            -7.331371307373047e-05,
+            -0.000532686710357666
+          ],
+          "mean_donor_quantile_change": [
+            -0.0002372264862060547,
+            3.057718276977539e-05,
+            0.00020456314086914062
+          ],
+          "mean_abs_width_change": 0.0007537603378295898,
+          "input_displacement_rms": 0.03126115457850784,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U38",
+      "alpha": 2.0,
+      "filename": "validation_dose_recovery_U38_a2p0.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 1.6540288925170898e-06,
+      "mean_recipient_median_curvature": 7.152557373046875e-07,
+      "mean_donor_median_curvature": 7.450580596923828e-07,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": 3.477931022644043e-05,
+          "mean_abs_median_shift": 0.0003154575824737549,
+          "mean_recipient_quantile_change": [
+            0.00011974573135375977,
+            -0.00017881393432617188,
+            -0.000530540943145752
+          ],
+          "mean_donor_quantile_change": [
+            -0.00046449899673461914,
+            -0.00024837255477905273,
+            0.00012940168380737305
+          ],
+          "mean_abs_width_change": 0.0007070302963256836,
+          "input_displacement_rms": 0.05192598305223895,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -0.00010281801223754883,
+          "mean_abs_median_shift": 0.00035393238067626953,
+          "mean_recipient_quantile_change": [
+            0.00019371509552001953,
+            -0.00014472007751464844,
+            -0.0010621249675750732
+          ],
+          "mean_donor_quantile_change": [
+            -0.00047451257705688477,
+            6.091594696044922e-05,
+            0.0004067420959472656
+          ],
+          "mean_abs_width_change": 0.001505628228187561,
+          "input_displacement_rms": 0.03126115457850784,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U1255",
+      "alpha": 0.25,
+      "filename": "validation_dose_recovery_U1255_a0p25.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 1.9706785678863525e-06,
+      "mean_recipient_median_curvature": -2.905726432800293e-06,
+      "mean_donor_median_curvature": 6.631016731262207e-07,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -2.193450927734375e-05,
+          "mean_abs_median_shift": 0.00010716915130615234,
+          "mean_recipient_quantile_change": [
+            -8.940696716308594e-07,
+            8.505582809448242e-05,
+            0.0001792311668395996
+          ],
+          "mean_donor_quantile_change": [
+            0.0002671480178833008,
+            0.00012892484664916992,
+            -3.832578659057617e-05
+          ],
+          "mean_abs_width_change": 0.0002427995204925537,
+          "input_displacement_rms": 0.04724582817877213,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": 0.000202864408493042,
+          "mean_abs_median_shift": 0.0002738535404205322,
+          "mean_recipient_quantile_change": [
+            -3.427267074584961e-05,
+            0.00045478343963623047,
+            0.0010035037994384766
+          ],
+          "mean_donor_quantile_change": [
+            0.0005738139152526855,
+            4.9054622650146484e-05,
+            -0.0003553628921508789
+          ],
+          "mean_abs_width_change": 0.0009834766387939453,
+          "input_displacement_rms": 0.07103542417785325,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U1255",
+      "alpha": 0.5,
+      "filename": "validation_dose_recovery_U1255_a0p5.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 2.5257468223571777e-06,
+      "mean_recipient_median_curvature": -3.844499588012695e-06,
+      "mean_donor_median_curvature": 8.195638656616211e-07,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -4.354119300842285e-05,
+          "mean_abs_median_shift": 0.00021412968635559082,
+          "mean_recipient_quantile_change": [
+            -1.9669532775878906e-06,
+            0.00017017126083374023,
+            0.00035887956619262695
+          ],
+          "mean_donor_quantile_change": [
+            0.0005335211753845215,
+            0.00025725364685058594,
+            -7.700920104980469e-05
+          ],
+          "mean_abs_width_change": 0.0004856884479522705,
+          "input_displacement_rms": 0.04724582817877213,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": 0.00040787458419799805,
+          "mean_abs_median_shift": 0.0005495548248291016,
+          "mean_recipient_quantile_change": [
+            -6.681680679321289e-05,
+            0.0009134411811828613,
+            0.0020114779472351074
+          ],
+          "mean_donor_quantile_change": [
+            0.0011461973190307617,
+            9.769201278686523e-05,
+            -0.0007101893424987793
+          ],
+          "mean_abs_width_change": 0.0019673407077789307,
+          "input_displacement_rms": 0.07103542417785325,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U1255",
+      "alpha": 1.0,
+      "filename": "validation_dose_recovery_U1255_a1p0.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 0.0,
+      "mean_recipient_median_curvature": 0.0,
+      "mean_donor_median_curvature": 0.0,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -8.571147918701172e-05,
+          "mean_abs_median_shift": 0.0004277229309082031,
+          "mean_recipient_quantile_change": [
+            -4.5299530029296875e-06,
+            0.00034105777740478516,
+            0.0007194280624389648
+          ],
+          "mean_donor_quantile_change": [
+            0.0010641813278198242,
+            0.0005124807357788086,
+            -0.00015497207641601562
+          ],
+          "mean_abs_width_change": 0.0009715557098388672,
+          "input_displacement_rms": 0.04724582817877213,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": 0.0008237063884735107,
+          "mean_abs_median_shift": 0.0011054575443267822,
+          "mean_recipient_quantile_change": [
+            -0.00012630224227905273,
+            0.0018415451049804688,
+            0.004038900136947632
+          ],
+          "mean_donor_quantile_change": [
+            0.002284705638885498,
+            0.00019413232803344727,
+            -0.001417994499206543
+          ],
+          "mean_abs_width_change": 0.003933951258659363,
+          "input_displacement_rms": 0.07103542417785325,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U1255",
+      "alpha": 2.0,
+      "filename": "validation_dose_recovery_U1255_a2p0.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 1.9744038581848145e-05,
+      "mean_recipient_median_curvature": 3.0934810638427734e-05,
+      "mean_donor_median_curvature": -6.765127182006836e-06,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -0.00016561150550842285,
+          "mean_abs_median_shift": 0.0008529722690582275,
+          "mean_recipient_quantile_change": [
+            -8.463859558105469e-06,
+            0.0006851553916931152,
+            0.001444697380065918
+          ],
+          "mean_donor_quantile_change": [
+            0.0021170973777770996,
+            0.001016378402709961,
+            -0.0003140568733215332
+          ],
+          "mean_abs_width_change": 0.0019421577453613281,
+          "input_displacement_rms": 0.04724582817877213,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": 0.0016793012619018555,
+          "mean_abs_median_shift": 0.00223696231842041,
+          "mean_recipient_quantile_change": [
+            -0.00022453069686889648,
+            0.003741919994354248,
+            0.008141666650772095
+          ],
+          "mean_donor_quantile_change": [
+            0.004538595676422119,
+            0.0003833174705505371,
+            -0.0028281211853027344
+          ],
+          "mean_abs_width_change": 0.007866457104682922,
+          "input_displacement_rms": 0.07103542417785325,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U1273",
+      "alpha": 0.25,
+      "filename": "validation_dose_recovery_U1273_a0p25.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 4.3213367462158203e-07,
+      "mean_recipient_median_curvature": 2.5331974029541016e-07,
+      "mean_donor_median_curvature": 1.1920928955078125e-07,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -2.0742416381835938e-05,
+          "mean_abs_median_shift": 3.0279159545898438e-05,
+          "mean_recipient_quantile_change": [
+            -7.2479248046875e-05,
+            -3.141164779663086e-05,
+            2.6047229766845703e-05
+          ],
+          "mean_donor_quantile_change": [
+            4.661083221435547e-05,
+            1.0073184967041016e-05,
+            -1.7523765563964844e-05
+          ],
+          "mean_abs_width_change": 0.00010022521018981934,
+          "input_displacement_rms": 0.04590307769473316,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -8.64267349243164e-06,
+          "mean_abs_median_shift": 5.459785461425781e-05,
+          "mean_recipient_quantile_change": [
+            -5.042552947998047e-05,
+            -4.494190216064453e-05,
+            -5.194544792175293e-05
+          ],
+          "mean_donor_quantile_change": [
+            -2.0384788513183594e-05,
+            -2.765655517578125e-05,
+            -4.857778549194336e-05
+          ],
+          "mean_abs_width_change": 0.00016017258167266846,
+          "input_displacement_rms": 0.044199380097475024,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U1273",
+      "alpha": 0.5,
+      "filename": "validation_dose_recovery_U1273_a0p5.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 4.470348358154297e-07,
+      "mean_recipient_median_curvature": 2.682209014892578e-07,
+      "mean_donor_median_curvature": 2.980232238769531e-07,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -4.1544437408447266e-05,
+          "mean_abs_median_shift": 6.031990051269531e-05,
+          "mean_recipient_quantile_change": [
+            -0.00014519691467285156,
+            -6.29425048828125e-05,
+            5.173683166503906e-05
+          ],
+          "mean_donor_quantile_change": [
+            9.274482727050781e-05,
+            2.014636993408203e-05,
+            -3.540515899658203e-05
+          ],
+          "mean_abs_width_change": 0.00020003318786621094,
+          "input_displacement_rms": 0.04590307769473316,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -1.7523765563964844e-05,
+          "mean_abs_median_shift": 0.00010913610458374023,
+          "mean_recipient_quantile_change": [
+            -0.00010019540786743164,
+            -9.02414321899414e-05,
+            -0.00010523200035095215
+          ],
+          "mean_donor_quantile_change": [
+            -4.100799560546875e-05,
+            -5.519390106201172e-05,
+            -9.697675704956055e-05
+          ],
+          "mean_abs_width_change": 0.00032024085521698,
+          "input_displacement_rms": 0.044199380097475024,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U1273",
+      "alpha": 1.0,
+      "filename": "validation_dose_recovery_U1273_a1p0.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 0.0,
+      "mean_recipient_median_curvature": 0.0,
+      "mean_donor_median_curvature": 0.0,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -8.296966552734375e-05,
+          "mean_abs_median_shift": 0.00012063980102539062,
+          "mean_recipient_quantile_change": [
+            -0.0002906322479248047,
+            -0.00012612342834472656,
+            0.00010311603546142578
+          ],
+          "mean_donor_quantile_change": [
+            0.00018519163131713867,
+            3.981590270996094e-05,
+            -7.128715515136719e-05
+          ],
+          "mean_abs_width_change": 0.00040009617805480957,
+          "input_displacement_rms": 0.04590307769473316,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -3.510713577270508e-05,
+          "mean_abs_median_shift": 0.00021845102310180664,
+          "mean_recipient_quantile_change": [
+            -0.0001995563507080078,
+            -0.00018131732940673828,
+            -0.00021150708198547363
+          ],
+          "mean_donor_quantile_change": [
+            -8.463859558105469e-05,
+            -0.00011110305786132812,
+            -0.0001939535140991211
+          ],
+          "mean_abs_width_change": 0.0006406456232070923,
+          "input_displacement_rms": 0.044199380097475024,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    },
+    {
+      "group_id": "recovery_U1273",
+      "alpha": 2.0,
+      "filename": "validation_dose_recovery_U1273_a2p0.npz",
+      "reused_primary": false,
+      "mean_abs_median_curvature": 2.7865171432495117e-06,
+      "mean_recipient_median_curvature": -2.0265579223632812e-06,
+      "mean_donor_median_curvature": -2.8312206268310547e-06,
+      "by_variant": {
+        "short": {
+          "n_pairs": 16,
+          "mean_e": -0.0001659095287322998,
+          "mean_abs_median_shift": 0.0002416074275970459,
+          "mean_recipient_quantile_change": [
+            -0.0005824565887451172,
+            -0.00025403499603271484,
+            0.0002040863037109375
+          ],
+          "mean_donor_quantile_change": [
+            0.0003674030303955078,
+            7.778406143188477e-05,
+            -0.00014322996139526367
+          ],
+          "mean_abs_width_change": 0.0007992684841156006,
+          "input_displacement_rms": 0.04590307769473316,
+          "mean_native_median_contrast": -0.09944826364517212,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        },
+        "long": {
+          "n_pairs": 16,
+          "mean_e": -6.943941116333008e-05,
+          "mean_abs_median_shift": 0.00043720006942749023,
+          "mean_recipient_quantile_change": [
+            -0.0003961920738220215,
+            -0.0003648996353149414,
+            -0.0004310905933380127
+          ],
+          "mean_donor_quantile_change": [
+            -0.00017774105072021484,
+            -0.00022602081298828125,
+            -0.00038951635360717773
+          ],
+          "mean_abs_width_change": 0.0012823492288589478,
+          "input_displacement_rms": 0.044199380097475024,
+          "mean_native_median_contrast": -0.1240268349647522,
+          "forecast_crossing_count": 0,
+          "base_crossing_count": 0
+        }
+      }
+    }
+  ]
+}

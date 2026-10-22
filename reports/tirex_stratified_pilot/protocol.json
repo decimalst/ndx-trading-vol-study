@@ -1,0 +1,271 @@
+{
+  "title": "TiRex stratified intervention follow-up after critique",
+  "version": 1,
+  "date": "2026-10-22",
+  "prior_commit": "61c26150e49e901e40287b0f6a088bf8fd8dcbeb",
+  "status": "Prospective protocol for new synthetic data, informed by prior outcomes; retrospective diagnostics remain labeled as such.",
+  "checkpoint_revision": "05e5b26db52bfb256f1ae1bdf785589850482de3",
+  "layers": [
+    0,
+    5,
+    11
+  ],
+  "context_length": 2048,
+  "token_index": 63,
+  "forecast_horizon": 1,
+  "quantiles": [
+    0.1,
+    0.5,
+    0.9
+  ],
+  "batch_size": 32,
+  "threads": 4,
+  "execution": "CPU, 4 threads, compile and flex attention disabled; public wrapper including uncertainty postprocessing; both TTA disabled",
+  "calibration_pairs_per_cell": 32,
+  "validation_pairs_per_cell": 320,
+  "seeds": {
+    "calibration": 837194,
+    "validation": 529086,
+    "random_groups": 715204,
+    "bootstrap": 20261023
+  },
+  "generator": {
+    "strata": [
+      "short",
+      "long"
+    ],
+    "motif_lengths": [
+      76,
+      180
+    ],
+    "same_law_both_splits": true,
+    "amplitude": [
+      0.8,
+      2.8
+    ],
+    "noise_sd": [
+      0.04,
+      0.3
+    ],
+    "recency_quiet_tail": "window//6",
+    "background": "AR1 .92, innovations SD .3",
+    "pair_matching": "Exactly same value multiset and last observation, one shared affine transformation to mean -9 and SD .6.",
+    "freshness": "Disjoint contexts and IDs from BOTH splits of BOTH original pilots and from fresh calibration.",
+    "limitations": "Synthetic histories may differ in many temporal summaries; labels are constructions, not identified exclusive concepts."
+  },
+  "interventions": [
+    {
+      "group_id": "persistence_k4",
+      "family": "persistence",
+      "layer": 11,
+      "units": [
+        283,
+        790,
+        169,
+        1231
+      ]
+    },
+    {
+      "group_id": "persistence_k8",
+      "family": "persistence",
+      "layer": 11,
+      "units": [
+        283,
+        790,
+        169,
+        1231,
+        609,
+        865,
+        581,
+        926
+      ]
+    },
+    {
+      "group_id": "recency_k4",
+      "family": "recency",
+      "layer": 0,
+      "units": [
+        666,
+        495,
+        366,
+        943
+      ]
+    },
+    {
+      "group_id": "recency_k8",
+      "family": "recency",
+      "layer": 0,
+      "units": [
+        666,
+        495,
+        366,
+        943,
+        456,
+        992,
+        478,
+        656
+      ]
+    },
+    {
+      "group_id": "recovery_k4",
+      "family": "recovery",
+      "layer": 5,
+      "units": [
+        1095,
+        594,
+        530,
+        743
+      ]
+    },
+    {
+      "group_id": "recovery_k8",
+      "family": "recovery",
+      "layer": 5,
+      "units": [
+        1095,
+        594,
+        530,
+        743,
+        344,
+        38,
+        1255,
+        1273
+      ]
+    },
+    {
+      "group_id": "recency_U666",
+      "family": "recency",
+      "layer": 0,
+      "units": [
+        666
+      ]
+    },
+    {
+      "group_id": "recency_U103",
+      "family": "recency",
+      "layer": 0,
+      "units": [
+        103
+      ]
+    },
+    {
+      "group_id": "recovery_tail4",
+      "family": "recovery",
+      "layer": 5,
+      "units": [
+        344,
+        38,
+        1255,
+        1273
+      ]
+    }
+  ],
+  "selection": "All nine identities fixed from the prior run before calibration. No re-ranking or exclusion after new outputs. U666 is the dominant group-run singleton; it is not U103 selected in the earlier single-unit pilot.",
+  "primary": {
+    "unit": "Independent synthetic pair within family and motif length;320 percell.",
+    "effect": "e=(recipient median change - donor median change)/2 in restored log-variance units. Raw sign, no discovery-direction gate.",
+    "estimand": "Mean numerical influence for each of nine interventions separately in each motif stratum.",
+    "claims": 18,
+    "alpha": 0.05,
+    "test": "Two-sided Student t mean test against [-tau,tau]; p=min(1,2*min(t.sf((mean-tau)/SE,n-1),t.sf((-mean-tau)/SE,n-1))); Holm18. Degenerate variance: p1 insideband,p0 outside.",
+    "uncertainty": "Pointwise 95% paired bootstrap mean intervals from5000 resamples; descriptive, not simultaneous.",
+    "meaning": "Mean numerical influence under this intervention/generator only; not semantic selectivity, superiority, forecast accuracy or economic importance.",
+    "quantile_gate": "Record every crossing, do not rearrange. Mark primary numerical interpretation invalid on crossings or nonfinite forecasts.",
+    "assumptions": "Independent pairs within stratum; Student t inference is approximate for the sampling distribution of the mean at n320, not an exact distribution-free test. Zero-variance p0 outside the numerical band is an explicit deterministic convention."
+  },
+  "numerical_calibration": {
+    "method": "tau=max(10*maximum absolute difference from repeated/no-op/batch-invariance calibration forecasts,10*maximum absolute float32 spacing of calibration baseline quantiles). Freeze before validation.",
+    "null_runs": "Repeated baseline, self-value group replacement and reversed/singleton batching on fixed calibration contexts. Include original scalar/group instrumentation.",
+    "materiality": "The factor10 is a predeclared conservative numerical multiplier, not an economic or scientific materiality margin. Deterministic repetition is not stochastic seed uncertainty.",
+    "mde80": "tau+(normal_quantile(1-alpha/(2*18))+normal_quantile(.8))*calibration_SD(e)/sqrt(320). Normal approximation using calibration variance; Bonferroni first-step bound, assumptions stated, report per intervention/stratum."
+  },
+  "random_reference": {
+    "draws": 19,
+    "sizes": [
+      4,
+      8
+    ],
+    "units_per_layer": 1408,
+    "sampling": "Uniform without replacement within each eight-unit draw; four-unit prefix. Draws independently sampled so may overlap each other. Exclude original top8 perlayer and U103 inL0.",
+    "evaluation": "Fixed first16 validationpairs per motif/family,32pairs perfamily. Reuse exact contexts across references and candidates.",
+    "interpretation": "Descriptive empirical distribution and rank only. Candidate selected by prior activation outcomes is not exchangeable with random sets; no randomization p-value or causal specificity claim.",
+    "matching": "No hand-matching or tolerance implied. Report input displacement and output magnitude together. No post-result removal.",
+    "rank_resolution": "Nineteen draws provide a coarse reference; any rank fraction has denominator20 and is descriptive, never a p-value.",
+    "pairs_per_cell": 16
+  },
+  "dose_response": {
+    "family": "recovery",
+    "pairs_per_cell": 16,
+    "alphas": [
+      0.25,
+      0.5,
+      1.0,
+      2.0
+    ],
+    "interventions": "Eight individual recovery units, original prefix4, suffix4, full8; original donor interpolation a_recipient+alpha*(a_donor-a_recipient) simultaneously, bothdirections.",
+    "analysis": "Joint-minus-sum and deviations from alpha times unit-dose response, recipient/donor separately. Descriptive only; alpha2 is an extrapolation and does not guarantee leaving the local linear regime. Neither additivity nor nonadditivity establishes superposition.",
+    "reuse": "At alpha1 reuse primary subgroup outputs; no new selection."
+  },
+  "secondary": "Report q10/q50/q90 and q90-q10 changes and both donor/recipient shifts. Exact sign counts/test with numerical neutral band descriptive only, no additional qualification. Report recent-mean correlations only as optional post-result descriptions, never identify a linear readout without direct test.",
+  "instrumentation": {
+    "histories": "Fixed first recipient/donor calibration pair in each family/motif cell; twelve contexts.",
+    "positive_affine_transforms": [
+      [
+        1.0,
+        1.3
+      ],
+      [
+        1.7,
+        0.4
+      ]
+    ],
+    "checks": [
+      "unhooked public wrapper equals capture-only",
+      "same-value patch equals baseline at each selected layer",
+      "batch reversal",
+      "single-series vs batched",
+      "positive affine activation invariance and forecast equivariance",
+      "quantile order",
+      "exactly one hook call; temporary hook cleanup; token-to-output index arithmetic"
+    ],
+    "max_forecast_abs_error": 0.0001,
+    "max_activation_relative_error": 0.0001,
+    "relative_error_formula": "max(abs(new-old))/max(1,max(abs(old))) for each activation layer and residual",
+    "group_checks": [
+      "one-member group equals frozen scalar adapter",
+      "size8 same-value patch each layer",
+      "unit/column joint permutation equivalence",
+      "patched singleton-vs-batch equivalence",
+      "patch cleanup returns baseline",
+      "full base positive affine and no-op gates"
+    ],
+    "fixed_gate_units": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "failure_policy": "Fail closed before validation if instrumentation fails. Preserve failed runs and original output hashes. No criteria changes after new validation. Any new scientific analyses clearly labeled post-result.",
+  "verification_language": "A separately implemented numerical audit in the same AI-assisted project is internal verification by a second implementation; not independent replication or peer review.",
+  "literature": [
+    {
+      "url": "https://already-clean.goodfire.com/",
+      "role": "Motivation from an informal working-hypothesis essay, not a replicated theorem."
+    },
+    {
+      "url": "https://arxiv.org/abs/2309.16042",
+      "role": "Activation-patching methodological choices can change conclusions; language-model findings motivate explicit controls rather than validating this TiRex experiment."
+    }
+  ],
+  "recent_mean_diagnostic": {
+    "unit": "L0/U666",
+    "fit": "OLS intercept plus arithmetic mean of the last32 raw history observations, fit only on calibration recency contexts (both motifs and both sides).",
+    "evaluation": "Frozen fit predicts activation666 on validation recency histories; report levelR2 and paired donor-minus-recipient-differenceR2 separately by motif and pooled.",
+    "interpretation": "Descriptive one-feature surrogate only. High R2 within this generator supports approximate linear predictability from this recentmean; it does not identify the unit mechanism or prove a globally linear model. No threshold or inferential claim."
+  }
+}

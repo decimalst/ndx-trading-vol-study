@@ -1,0 +1,19 @@
+{
+  "timestamp_before_model_load": "2026-10-22T13:35:31.713976+00:00",
+  "protocol_sha256": "ea87030f51a336257cd3c39806f08317634f5a2a32ba8811ffa25513fb93c253",
+  "source_hashes": {
+    "src/tirex_stratified_run.py": "c52d6c24c1145e39fca8dff27b8eb5bdb3f5a26e8ecf7cf8b25ebf032fb9ec3d",
+    "src/tirex_stratified_core.py": "84ecf204da2214e9d3707b098a62c9f38997fe38d4d6c37c6214fc3f3db022b5",
+    "src/tirex_recent_mean.py": "ccc381f8a4aceb84f77f5da0931fe29aa3476e174de88b6ce844ae44df46463c",
+    "src/tirex_group_adapter.py": "71f92a03d39df7d69be0a4ba50ac2953c4d3503eb891a218bda717db432f6a0f",
+    "src/tirex_group_run.py": "9b4979d89d4a093c552f18dba15a9640ad0788bcaff374a1ed6d86b4579acbff",
+    "src/tirex_group_pilot.py": "c685b5023b4037f829d04915e0b5e7757a4a604655e71da9a5d0ddf5188a408b",
+    "src/tirex_intervention_adapter.py": "7dcc97e932c42fa17954b5e9ed28da715d9b7d51a24c2d85f653c9a6f9396a19",
+    "src/tirex_intervention_run.py": "e8e52927c8f3673896a8941716394b9b58519c40421c29fa5e2de5f5cf764c43",
+    "src/tirex_intervention_pilot.py": "d165c2800710181f4b5e47b93c870035d2cb49adeac0ca39e713397ab9df863f",
+    "src/tirex_intervention_statistics.py": "50448f0b1fafecb5b1021e5579cece1bbecf7549cca0e7b63c84446e7eec11f8",
+    "tests/test_tirex_stratified_core.py": "289c83a9bca06cd50acd3913d432fe980ce6e1442c391eacf5aa86e9724b5ab3",
+    "tests/test_tirex_stratified_run.py": "9b2b8748170f996b87c358e88e8f9d3320700587e33075a068cab4ad7667bb87",
+    "tests/test_tirex_recent_mean.py": "ba40e300d6fa52f2d78c46fee234acb957e77bd64a9a02a650b410739b272381"
+  }
+}

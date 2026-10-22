@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-10-22T13:52:40.442334+00:00",
+  "description": "Internal numerical check by second implementation. Verifier source not part of original inference run; no frozen output changed.",
+  "verifier_sha256": "52ba268d8a7757e0ce5c8ed78efc4d539c9a2fbb9b7c49693597f0a42e6b70e1",
+  "verifier_tests_sha256": "a9213285438354f9bd50b7c734a971e6d631b4c9869222866807d518d2c88f9f",
+  "protocol_sha256": "ea87030f51a336257cd3c39806f08317634f5a2a32ba8811ffa25513fb93c253",
+  "manifest_sha256": "f2316c00f767b70a5fc8b346ac49433d86abb1d9e48b8bd4d09fc6b9607b1ecb",
+  "internal_verification_sha256": "1481f521466da2ef6faafca962de7be098179d823cff6f0130a74c95ff4ec626",
+  "audit_side_tests": 20,
+  "all_tests_log_sha256": "c9d8e91035fbc4c531f2843a0881c58b94e2957ed4a1bb8469bc364714e6c5b1",
+  "scoped_lint_passed": true
+}

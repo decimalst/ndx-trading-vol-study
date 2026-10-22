@@ -1,0 +1,10 @@
+{
+  "recorded_at": "2026-10-22T13:31:50.882902+00:00",
+  "hashes": {
+    "src/tirex_stratified_core.py": "84ecf204da2214e9d3707b098a62c9f38997fe38d4d6c37c6214fc3f3db022b5",
+    "tests/test_tirex_stratified_core.py": "289c83a9bca06cd50acd3913d432fe980ce6e1442c391eacf5aa86e9724b5ab3",
+    "test_evidence/STRATIFIED_STATS_GREEN.log": "16156118494e6e6d31724be9e6f8d1ba06ccabc73e1830805d3e20299ff4cbf0"
+  },
+  "tests_passed": 17,
+  "lint": "ruff check --no-cache passed"
+}

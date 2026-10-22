@@ -1,0 +1,8 @@
+test_largest_absolute_exclusion_is_named_as_descriptive (test_tirex_stratified_postdiagnostics.PostdiagnosticTests.test_largest_absolute_exclusion_is_named_as_descriptive) ... ok
+test_negative_paired_effect_does_not_mean_both_swap_directions (test_tirex_stratified_postdiagnostics.PostdiagnosticTests.test_negative_paired_effect_does_not_mean_both_swap_directions) ... ok
+test_tau_boundary_is_neutral (test_tirex_stratified_postdiagnostics.PostdiagnosticTests.test_tau_boundary_is_neutral) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.005s
+
+OK

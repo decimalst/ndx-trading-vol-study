@@ -1,0 +1,19 @@
+test_tirex_stratified_core (unittest.loader._FailedTest.test_tirex_stratified_core) ... ERROR
+
+======================================================================
+ERROR: test_tirex_stratified_core (unittest.loader._FailedTest.test_tirex_stratified_core)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_tirex_stratified_core
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/loader.py", line 162, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/tirex_revision_20261022/tests/test_tirex_stratified_core.py", line 13, in <module>
+    from src.tirex_stratified_core import (
+ImportError: cannot import name 'calibrate_deadband' from 'src.tirex_stratified_core' (/private/tmp/tirex_revision_20261022/src/tirex_stratified_core.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

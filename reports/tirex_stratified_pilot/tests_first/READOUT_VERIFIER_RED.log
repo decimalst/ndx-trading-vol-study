@@ -1,0 +1,30 @@
+test_closed_form_affine_fit_and_paired_scoring (test_tirex_stratified_verifier.ReadoutVerifierTests.test_closed_form_affine_fit_and_paired_scoring) ... ERROR
+test_heldout_shift_is_not_refitted (test_tirex_stratified_verifier.ReadoutVerifierTests.test_heldout_shift_is_not_refitted) ... ERROR
+test_effect_raw_sign_no_orientation (test_tirex_stratified_verifier.VerifierTests.test_effect_raw_sign_no_orientation) ... ok
+test_holm_dependency_agnostic_and_order_preserved (test_tirex_stratified_verifier.VerifierTests.test_holm_dependency_agnostic_and_order_preserved) ... ok
+test_inside_band_is_one (test_tirex_stratified_verifier.VerifierTests.test_inside_band_is_one) ... ok
+test_invalid_inputs_fail (test_tirex_stratified_verifier.VerifierTests.test_invalid_inputs_fail) ... ok
+test_reference_two_sided_student_probability (test_tirex_stratified_verifier.VerifierTests.test_reference_two_sided_student_probability) ... ok
+test_tau_largest_absolute_jitter_or_float32_spacing (test_tirex_stratified_verifier.VerifierTests.test_tau_largest_absolute_jitter_or_float32_spacing) ... ok
+test_zero_variance_convention (test_tirex_stratified_verifier.VerifierTests.test_zero_variance_convention) ... ok
+
+======================================================================
+ERROR: test_closed_form_affine_fit_and_paired_scoring (test_tirex_stratified_verifier.ReadoutVerifierTests.test_closed_form_affine_fit_and_paired_scoring)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/tirex_revision_20261022/audit/tests/test_tirex_stratified_verifier.py", line 66, in test_closed_form_affine_fit_and_paired_scoring
+    from scripts.verify_tirex_stratified_pilot import independent_readout
+ImportError: cannot import name 'independent_readout' from 'scripts.verify_tirex_stratified_pilot' (/private/tmp/tirex_revision_20261022/audit/scripts/verify_tirex_stratified_pilot.py)
+
+======================================================================
+ERROR: test_heldout_shift_is_not_refitted (test_tirex_stratified_verifier.ReadoutVerifierTests.test_heldout_shift_is_not_refitted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/tirex_revision_20261022/audit/tests/test_tirex_stratified_verifier.py", line 77, in test_heldout_shift_is_not_refitted
+    from scripts.verify_tirex_stratified_pilot import independent_readout
+ImportError: cannot import name 'independent_readout' from 'scripts.verify_tirex_stratified_pilot' (/private/tmp/tirex_revision_20261022/audit/scripts/verify_tirex_stratified_pilot.py)
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.001s
+
+FAILED (errors=2)

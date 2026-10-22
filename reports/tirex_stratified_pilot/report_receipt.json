@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-10-22T13:58:16.627774+00:00",
+  "source_sha256": "524e855db5f30085d03f02fb3f50ca7d6ce3c1baacc734e91e6c19dcb0de43ce",
+  "input_sha256": {
+    "summary.json": "102d5701d4ec787543866f84a028f9edc0b0319631c346353d46be2bacacc9bc",
+    "protocol.json": "ea87030f51a336257cd3c39806f08317634f5a2a32ba8811ffa25513fb93c253",
+    "random_reference_summary.json": "fa1e6ba9096b68002a9c9509a263a7206a84dbb48cf45fcf65990cdc80cc894c",
+    "dose_summary.json": "0098b785a5c7bbb092c6f996d3dc0426ca5f693bf537d436684c6a9b5eceb555",
+    "recent_mean_diagnostic.json": "dfc842ca38d803492db55d6f8ac3c9e25212042792acca70e84e66eba2e39d93",
+    "numerical_calibration.json": "52933f4210be666baff909edbe8e140659952cecc9657ede8562e9e09a1389df"
+  },
+  "output_sha256": {
+    "REPORT.md": "87e38bdeede02e2d0bcb97f34fc6df1ab2997b1ff77cf52c1bf45215638cbbf7",
+    "stratified_effects.png": "88c614449673d95ee163da774b51ebd73e431e9cb3492bc72f8159e15d909697"
+  }
+}

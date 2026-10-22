@@ -1,0 +1,18 @@
+test_boolean_pair_mask_preserves_bidirectional_and_member_order (tests.test_tirex_stratified_run.DoseValuesTests.test_boolean_pair_mask_preserves_bidirectional_and_member_order) ... ok
+test_half_and_two_are_recipient_relative_doses_not_scaled_donors (tests.test_tirex_stratified_run.DoseValuesTests.test_half_and_two_are_recipient_relative_doses_not_scaled_donors) ... ok
+test_never_mutates_original_values_or_reuses_output_view (tests.test_tirex_stratified_run.DoseValuesTests.test_never_mutates_original_values_or_reuses_output_view) ... ok
+test_rejects_nonfinite_negative_and_nonnumeric_dose (tests.test_tirex_stratified_run.DoseValuesTests.test_rejects_nonfinite_negative_and_nonnumeric_dose) ... ok
+test_zero_is_same_value_and_one_is_original_donor (tests.test_tirex_stratified_run.DoseValuesTests.test_zero_is_same_value_and_one_is_original_donor) ... ok
+test_rejects_invalid_count_seed_or_missing_top8 (tests.test_tirex_stratified_run.ReferenceTests.test_rejects_invalid_count_seed_or_missing_top8) ... ok
+test_rng_is_uniform_choice_without_replacement_from_allowed_units (tests.test_tirex_stratified_run.ReferenceTests.test_rng_is_uniform_choice_without_replacement_from_allowed_units) ... ok
+test_seed_changes_reference_and_no_source_mutation (tests.test_tirex_stratified_run.ReferenceTests.test_seed_changes_reference_and_no_source_mutation) ... ok
+test_uniform_reference_is_reproducible_nested_and_excludes_fixed_candidates (tests.test_tirex_stratified_run.ReferenceTests.test_uniform_reference_is_reproducible_nested_and_excludes_fixed_candidates) ... ok
+test_cell_archives_keep_every_baseline_row_and_matching_metadata (tests.test_tirex_stratified_run.SelectionAndRunTests.test_cell_archives_keep_every_baseline_row_and_matching_metadata) ... ok
+test_cell_selection_rejects_insufficient_pairs_and_bad_count (tests.test_tirex_stratified_run.SelectionAndRunTests.test_cell_selection_rejects_insufficient_pairs_and_bad_count) ... ok
+test_first_per_cell_never_uses_forecast_or_activation_values (tests.test_tirex_stratified_run.SelectionAndRunTests.test_first_per_cell_never_uses_forecast_or_activation_values) ... ok
+test_forecast_swap_uses_original_pair_rows_and_slice_matched_patches (tests.test_tirex_stratified_run.SelectionAndRunTests.test_forecast_swap_uses_original_pair_rows_and_slice_matched_patches) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.005s
+
+OK

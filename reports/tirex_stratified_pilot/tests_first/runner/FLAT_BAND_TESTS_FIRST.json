@@ -1,0 +1,7 @@
+{
+  "timestamp_before_corrected_tests": "2026-10-22T13:35:09.487342+00:00",
+  "test_sha256": "9b2b8748170f996b87c358e88e8f9d3320700587e33075a068cab4ad7667bb87",
+  "red_log_sha256": "7e758f5fbf5368536242168f410608bb9288e3528fb91a3b5158a5dad14fbe0d",
+  "reason": "Audited flat-wrapper to paired-statistics API bug, regression test failed before helper added",
+  "original_13_tests_preserved": true
+}

@@ -1,0 +1,156 @@
+{
+  "recorded_at": "2026-10-22T13:33:52.581435+00:00",
+  "checks": [
+    {
+      "case": "sign_reversal_symmetry",
+      "passed": true,
+      "effect": [
+        0.125,
+        0.125,
+        0.125,
+        0.125,
+        0.125,
+        0.125,
+        0.125,
+        0.125
+      ],
+      "deadband": 0.125,
+      "pvalue": 1.0
+    },
+    {
+      "case": "sign_reversal_symmetry",
+      "passed": true,
+      "effect": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "deadband": 0.125,
+      "pvalue": 0.0
+    },
+    {
+      "case": "sign_reversal_symmetry",
+      "passed": true,
+      "effect": [
+        -0.25,
+        -0.25,
+        -0.25,
+        -0.25,
+        -0.25,
+        -0.25,
+        -0.25,
+        -0.25
+      ],
+      "deadband": 0.125,
+      "pvalue": 0.0
+    },
+    {
+      "case": "sign_reversal_symmetry",
+      "passed": true,
+      "effect": [
+        0.2,
+        0.3,
+        -0.1,
+        0.02
+      ],
+      "deadband": 0.01,
+      "pvalue": 0.3667435655534388
+    },
+    {
+      "case": "affine_forecast_unit_invariance",
+      "passed": true,
+      "original_pvalue": 0.3667435655534388,
+      "transformed_pvalue": 0.3667435655534388
+    }
+  ],
+  "normal_interval_null_simulations": [
+    {
+      "n": 32,
+      "true_mean": -0.01,
+      "null_band": [
+        -0.01,
+        0.01
+      ],
+      "replicates": 20000,
+      "rejection_fraction_alpha_05": 0.0264
+    },
+    {
+      "n": 32,
+      "true_mean": 0.0,
+      "null_band": [
+        -0.01,
+        0.01
+      ],
+      "replicates": 20000,
+      "rejection_fraction_alpha_05": 0.0132
+    },
+    {
+      "n": 32,
+      "true_mean": 0.01,
+      "null_band": [
+        -0.01,
+        0.01
+      ],
+      "replicates": 20000,
+      "rejection_fraction_alpha_05": 0.02535
+    },
+    {
+      "n": 320,
+      "true_mean": -0.01,
+      "null_band": [
+        -0.01,
+        0.01
+      ],
+      "replicates": 20000,
+      "rejection_fraction_alpha_05": 0.02515
+    },
+    {
+      "n": 320,
+      "true_mean": 0.0,
+      "null_band": [
+        -0.01,
+        0.01
+      ],
+      "replicates": 20000,
+      "rejection_fraction_alpha_05": 5e-05
+    },
+    {
+      "n": 320,
+      "true_mean": 0.01,
+      "null_band": [
+        -0.01,
+        0.01
+      ],
+      "replicates": 20000,
+      "rejection_fraction_alpha_05": 0.0262
+    }
+  ],
+  "adversarial_rare_outlier_limitation": {
+    "purpose": "Adversarial true-zero-mean two-point population; not the experimental generator or an observed result",
+    "probability_positive": 0.001,
+    "positive_value": 0.0999,
+    "negative_value": -0.0001,
+    "n": 320,
+    "rejection_fraction_alpha_05": 0.72825,
+    "implication": "Student t mean inference is not distribution-free; report descriptive sign counts and effect distributions alongside the model-based pvalues."
+  },
+  "mde_example": {
+    "calibration_sd": 0.003,
+    "n": 320,
+    "tau": 1e-05,
+    "claims": 18,
+    "normal_approx_mde80": 0.0006528031348988342
+  },
+  "source_files_unchanged": true,
+  "notes": [
+    "The primary test rejects mean inside a numerical band; it is not a TOST equivalence test.",
+    "Zero sample variance outside band uses the explicitly registered deterministic p0 convention, not a universal inference guarantee.",
+    "Bootstrap draws pair indices once and shares them across both sides and every quantile.",
+    "A mean effect can be detectable while most pair effects have the opposite sign; never equate this estimand with per-pair consistency."
+  ]
+}

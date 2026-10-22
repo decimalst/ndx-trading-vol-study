@@ -1,0 +1,24 @@
+{
+  "created_utc": "2026-10-22T13:52:40.442645+00:00",
+  "tests_passed": 20,
+  "test_formatting_after_red": "Ruff formatting/import sorting only after initial red receipt; final test bytes hashed here",
+  "files": {
+    "scripts/tirex_pilot_diagnostics.py": "5408eb7677dd674d088d4b1766cb410a65670af3170cffda3df8a67dbf0e573e",
+    "tests/test_tirex_pilot_diagnostics.py": "fce295a21b7db9e070b920cdc9d0a9005272a2bcd161c69b153bec0522bc473e",
+    "RED.log": "66f3dae79fc14498ab86747c6320290dcb0bac59da12a76e44a561033b13c310",
+    "TESTS_FIRST.json": "16c9d6b242dc96abc1e8c692361e06d3d4b06f81e2ac3660562e70c68132be36",
+    "GREEN.log": "e6cf84d7c1287a4f55871f24942cdceb8f5046b00a8efe4d627683e1cb035be7",
+    "LINT.log": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "diagnostics.json": "676c9edb7ab179629c7e07c7b448bb5de1ab5b266dc6d2c13d0bd45a0e557ae1",
+    "AUDIT.md": "ba6f34563b68941b046ce0a9c687086edd55470003a8b845b420475a00de89c8",
+    "scripts/verify_tirex_stratified_pilot.py": "52ba268d8a7757e0ce5c8ed78efc4d539c9a2fbb9b7c49693597f0a42e6b70e1",
+    "tests/test_tirex_stratified_verifier.py": "a9213285438354f9bd50b7c734a971e6d631b4c9869222866807d518d2c88f9f",
+    "scripts/tirex_stratified_postdiagnostics.py": "430b76571749bb884289606164bff37b70b6073c4b8fc17bf6244c6e62a475a6",
+    "tests/test_tirex_stratified_postdiagnostics.py": "d9296f3809fdfcfecf763d4e02384e7adb331db5fe021ec3d1b52ed99b3381d6",
+    "ALL_GREEN.log": "c9d8e91035fbc4c531f2843a0881c58b94e2957ed4a1bb8469bc364714e6c5b1",
+    "ALL_LINT.log": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "POSTRESULT_SENSITIVITY.json": "08a80e1adbf5611b0b9d2f573aa6a35d041b8e1d99909e5a8c24e211a29020be",
+    "POSTRESULT_SENSITIVITY.md": "21407aa033c71ddde7d7a1ca203707be68453b15d8d0a13d88faea027716ac88",
+    "NEW_PRIMARY_RECONSTRUCTION.json": "312f273a9656f405ccf37a4796ff5c26dae886a248af33a3622d6ea31bde2c06"
+  }
+}
